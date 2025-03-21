@@ -1,0 +1,56 @@
+<label class="control-label">Stock Consumptions</label>
+<div class="form-grid-container">
+    <div class="form-grid">
+        <div class="grid-heading-row">
+            <div class="grid-row">
+                <div class="data-row row m-0">
+                    <div class="col grid-static-col col-xs-1">
+                        <span>No.</span>
+                    </div>
+                    <div class="col grid-static-col col-xs-3">
+                        <div class="static-area ellipsis">Stock Entry</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-2">
+                        <div class="static-area ellipsis">Date</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-2" >
+                        <div class="static-area ellipsis">Job Number</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-2  text-right">
+                        <div class="static-area ellipsis">Amount</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-body">
+            <div class="rows">
+                {% for item in items %}
+                <div class="grid-row" data-name="{{item.name}}" data-idx="{{item.idx}}">
+                    <div class="data-row row m-0">
+                        <div class="col grid-static-col col-xs-1">
+                            <span>{{item.idx}}</span>
+                        </div>
+                        <div class="col grid-static-col col-xs-3 " style="" data-fieldname="name"
+                            data-fieldtype="Link">
+                            <div class="field-area" style="display: none;"></div>
+                            <div class="static-area ellipsis"><a href="/app/stock-entry/{{item.name}}" data-doctype="Stock Entry"
+                                    data-name="{{item.name}}" data-value="{{item.name}}">{{item.name}}</a></div>
+                        </div>
+                        <div class="col grid-static-col col-xs-2 ">
+                            {{item.posting_date}}
+                        </div>
+                        <div class="col grid-static-col col-xs-2 ">
+                            {{item.job_number}}
+                        </div>
+                        <div class="col grid-static-col col-xs-2 ">
+                            {{item.total_amt}}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+  
+</div>

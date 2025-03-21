@@ -1,0 +1,64 @@
+<label class="control-label">Delivery Notes</label>
+<div class="form-grid-container">
+    <div class="form-grid">
+        <div class="grid-heading-row">
+            <div class="grid-row">
+                <div class="data-row row m-0">
+                    <div class="col grid-static-col col-xs-1">
+                        <span>No.</span>
+                    </div>
+                    <div class="col grid-static-col col-xs-3 " style="" data-fieldname="name" data-fieldtype="Data"
+                        title="Delivery Note #">
+                        <div class="field-area" style="display: none;"></div>
+                        <div class="static-area ellipsis">Delivery Note #</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-2 " style="" data-fieldname="creation" data-fieldtype="Date"
+                        title="Date">
+                        <div class="field-area" style="display: none;"></div>
+                        <div class="static-area ellipsis">Delivery Date</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-2 " style="" data-fieldname="job_number"
+                        data-fieldtype="Data" title="Job Number">
+                        <div class="field-area" style="display: none;"></div>
+                        <div class="static-area ellipsis">Job Number</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-2  text-right" style="" data-fieldname="total_qty"
+                        data-fieldtype="Float" title="Qty">
+                        <div class="field-area" style="display: none;"></div>
+                        <div class="static-area ellipsis">Qty</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-body">
+            <div class="rows">
+                {% for item in items %}
+                <div class="grid-row" data-name="{{item.name}}" data-idx="{{item.idx}}">
+                    <div class="data-row row m-0">
+                        <div class="col grid-static-col col-xs-1">
+                            <span>{{item.idx}}</span>
+                        </div>
+                        <div class="col grid-static-col col-xs-3 " style="" data-fieldname="name"
+                            data-fieldtype="Link">
+                            <div class="field-area" style="display: none;"></div>
+                            <div class="static-area ellipsis"><a href="/app/delivery-note/{{item.name}}" data-doctype="Delivery Note"
+                                    data-name="{{item.name}}" data-value="{{item.name}}">{{item.name}}</a></div>
+                        </div>
+                        <div class="col grid-static-col col-xs-2 " style="" data-fieldname="creation">
+                            {{item.posting_date}}
+                        </div>
+                        <div class="col grid-static-col col-xs-2 " style="" data-fieldname="job_number">
+                            {{item.job_number}}
+                        </div>
+                        <div class="col grid-static-col col-xs-2 " style="" data-fieldname="total_qty">
+                            {{item.total_qty}}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+  
+</div>
