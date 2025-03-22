@@ -111,7 +111,7 @@ def get_ordered_items(sales_order_number: str, opr_name: str):
         join `tabOrder Processing Request` opr on qt.parent = opr.name
         where opr.sales_order = '{sales_order_number}'
         and opr.name != '{opr_name}'
-        and opr.workflow_state != 'Delivery Completed' and opr.docstatus != 2
+        and opr.workflow_state != 'Completed' and opr.docstatus != 2
         group by qt.so_detail
         
         union all
@@ -121,7 +121,7 @@ def get_ordered_items(sales_order_number: str, opr_name: str):
         join `tabOrder Processing Request` opr on acc.parent = opr.name
         where opr.sales_order = '{sales_order_number}'
         and opr.name != '{opr_name}'
-        and opr.workflow_state != 'Delivery Completed' and opr.docstatus != 2
+        and opr.workflow_state != 'Completed' and opr.docstatus != 2
         group by acc.so_detail
     """
     items = frappe.db.sql(sql, as_dict=1)
@@ -147,7 +147,7 @@ def get_delivered_items(sales_order_number: str):
         join `tabDelivery Note` dn on dni.parent = dn.name
         join `tabOrder Processing Request` opr on dn.opr_no = opr.name
         where dn.sales_order_no = '{sales_order_number}'
-        and (opr.workflow_state = 'Delivery Completed' or opr.docstatus = 2)
+        and (opr.workflow_state = 'Completed' or opr.docstatus = 2)
         group by dni.so_detail
     """
     items = frappe.db.sql(sql, as_dict=1)
