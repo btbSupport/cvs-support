@@ -89,10 +89,12 @@ def get_stock_consumption_summary(opr_name: str):
     """
     items = frappe.db.sql(sql, as_dict=1)
     count = 1
+    total = 0
     for item in items: 
         item["idx"] = count
         count += 1
-    return frappe.frappe.render_template("btb_cvs_support/api/stock_consumption_summary.html", {"items": items})
+        total += item["total_amount"]
+    return frappe.frappe.render_template("btb_cvs_support/api/stock_consumption_summary.html", {"items": items, "total_consumption": total})
 
 
 def get_items(sales_order_number: str):
