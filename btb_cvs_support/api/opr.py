@@ -132,7 +132,7 @@ def get_ordered_items(sales_order_number: str, opr_name: str):
     for item in items:
         qty = item["qty"]
         if(item["so_detail"] in delivered_items):
-            qty -= delivered_items[item["so_detail"]]
+            qty += delivered_items[item["so_detail"]]
         output[item["so_detail"]] = qty
     
     #loop through delivery item which does not exist in OPR (All OPR are cancelled or completed) and add to output 
