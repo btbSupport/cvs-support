@@ -23,12 +23,14 @@ def get_mapped_delivery_note(source_name, target_doc = None):
         }
     }, target_doc)
     sql = f"""
-        select sales_order, customer_name from `tabOrder Processing Request` where name = '{source_name}'
+        select sales_order, customer_name, customer_reference, payment_term from `tabOrder Processing Request` where name = '{source_name}'
     """
     items = frappe.db.sql(sql, as_dict=1)
     target_doc.sales_order_no = items[0].get("sales_order")
     target_doc.customer =  items[0].get("customer_name")
     target_doc.customer_name =  items[0].get("customer_name")
+    target_doc.job_reference = items[0].get("customer_reference")
+    target_doc.payment_terms = items[0].get("payment_term")
     return target_doc
 
 @frappe.whitelist()
