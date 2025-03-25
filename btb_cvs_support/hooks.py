@@ -145,6 +145,16 @@ app_license = "mit"
 # 	}
 # }
 
+doc_events = {
+    "Delivery Note": {
+        "after_insert": "btb_cvs_support.events.delivery_note.after_upsert",
+        "on_update": "btb_cvs_support.events.delivery_note.after_upsert"
+    },
+    "Stock Entry": {
+        "after_insert": "btb_cvs_support.events.stock_entry.after_upsert",
+        "on_update": "btb_cvs_support.events.stock_entry.after_upsert"
+    }
+}
 # Scheduled Tasks
 # ---------------
 

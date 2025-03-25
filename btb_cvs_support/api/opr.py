@@ -69,9 +69,9 @@ def get_pending_quantities(sales_order_number: str, opr_name: str):
 @frappe.whitelist()
 def get_delivery_note_summary(opr_name: str):
     sql = f"""
-        select dn.name, dn.posting_date, dn.job_number, dn.total_sqm, dn.total_qty
+        select dn.name, dn.posting_date, dn.job_number, dn.sales_order_no, dn.total_sqm1, dn.total_pcs1, dn.net_total
         from `tabDelivery Note` dn
-        where dn.opr_no = '{opr_name}'
+        where dn.opr_no = '{opr_name}' and dn.docstatus != 2
     """
     items = frappe.db.sql(sql, as_dict=1)
     count = 1
@@ -83,9 +83,10 @@ def get_delivery_note_summary(opr_name: str):
 @frappe.whitelist()
 def get_stock_consumption_summary(opr_name: str):
     sql = f"""
-        select se.name, se.posting_date, se.job_number, se.total_amount 
+        select se.name, se.posting_date, se.job_number, se.value_difference 
         from  `tabStock Entry` se 
-        where se.opr_no = '{opr_name}'
+        where se.opr_no = '{opr_name}' and se.stock_entry_type = 'Material Issue'
+        and se.docstatus != 2
     """
     items = frappe.db.sql(sql, as_dict=1)
     count = 1
@@ -93,7 +94,7 @@ def get_stock_consumption_summary(opr_name: str):
     for item in items: 
         item["idx"] = count
         count += 1
-        total += item["total_amount"]
+        total += item["value_difference"]
     return frappe.frappe.render_template("btb_cvs_support/api/stock_consumption_summary.html", {"items": items, "total_consumption": total})
 
 
@@ -152,6 +153,7 @@ def get_delivered_items(sales_order_number: str):
         join `tabOrder Processing Request` opr on dn.opr_no = opr.name
         where dn.sales_order_no = '{sales_order_number}'
         and (opr.workflow_state = 'Completed' or opr.docstatus = 2)
+        and dn.docstatus = 1
         group by dni.so_detail
     """
     items = frappe.db.sql(sql, as_dict=1)

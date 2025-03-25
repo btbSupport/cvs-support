@@ -7,7 +7,7 @@
                     <div class="col grid-static-col col-xs-1">
                         <span>No.</span>
                     </div>
-                    <div class="col grid-static-col col-xs-3 " style="" data-fieldname="name" data-fieldtype="Data"
+                    <div class="col grid-static-col col-xs-2 " style="" data-fieldname="name" data-fieldtype="Data"
                         title="Delivery Note #">
                         <div class="field-area" style="display: none;"></div>
                         <div class="static-area ellipsis">Delivery Note #</div>
@@ -17,15 +17,22 @@
                         <div class="field-area" style="display: none;"></div>
                         <div class="static-area ellipsis">Delivery Date</div>
                     </div>
-                    <div class="col grid-static-col col-xs-2 " style="" data-fieldname="job_number"
+                    <div class="col grid-static-col col-xs-1 " style="" data-fieldname="job_number"
                         data-fieldtype="Data" title="Job Number">
                         <div class="field-area" style="display: none;"></div>
                         <div class="static-area ellipsis">Job Number</div>
                     </div>
-                    <div class="col grid-static-col col-xs-2  text-right" style="" data-fieldname="total_qty"
-                        data-fieldtype="Float" title="Qty">
-                        <div class="field-area" style="display: none;"></div>
-                        <div class="static-area ellipsis">Qty</div>
+                    <div class="col grid-static-col col-xs-2 ">
+                        <div class="static-area ellipsis">Sales Order</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-1  text-right" >
+                        <div class="static-area ellipsis">Sqm Delivered</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-1  text-right" >
+                        <div class="static-area ellipsis">Nos Delivered</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-1  text-right" >
+                        <div class="static-area ellipsis">Amount</div>
                     </div>
                 </div>
             </div>
@@ -38,20 +45,29 @@
                         <div class="col grid-static-col col-xs-1">
                             <span>{{item.idx}}</span>
                         </div>
-                        <div class="col grid-static-col col-xs-3 " style="" data-fieldname="name"
+                        <div class="col grid-static-col col-xs-2 " style="" data-fieldname="name"
                             data-fieldtype="Link">
                             <div class="field-area" style="display: none;"></div>
                             <div class="static-area ellipsis"><a href="/app/delivery-note/{{item.name}}" data-doctype="Delivery Note"
                                     data-name="{{item.name}}" data-value="{{item.name}}">{{item.name}}</a></div>
                         </div>
-                        <div class="col grid-static-col col-xs-2 " style="" data-fieldname="creation">
+                        <div class="col grid-static-col col-xs-2" style="" data-fieldname="creation">
                             {{item.posting_date}}
                         </div>
-                        <div class="col grid-static-col col-xs-2 " style="" data-fieldname="job_number">
+                        <div class="col grid-static-col col-xs-1" style="" data-fieldname="job_number">
                             {{item.job_number}}
                         </div>
-                        <div class="col grid-static-col col-xs-2 " style="" data-fieldname="total_qty">
-                            {{item.total_qty}}
+                        <div class="col grid-static-col col-xs-2">
+                            {{item.sales_order_no}}
+                        </div>
+                        <div class="col grid-static-col col-xs-1 ">
+                            {{item.total_sqm1}}
+                        </div>
+                        <div class="col grid-static-col col-xs-1 ">
+                            {{item.total_pcs1}}
+                        </div>
+                        <div class="col grid-static-col col-xs-1 ">
+                            {{item.net_total}}
                         </div>
                     </div>
                 </div>
