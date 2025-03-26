@@ -12,11 +12,17 @@ def after_upsert(doc, method = None):
         and docstatus = 1
     """
     print("Calling update")
-    item = frappe.db.sql(sql, as_dict=1)[0]
-    print(doc.opr_no, item.net_total, item.total_sqm)
+    net_total = 0
+    total_sqm = 0
+    total_pcs = 0
+    items = frappe.db.sql(sql, as_dict=1)
+    if(len(items) > 0):
+        net_total = items[0].net_total
+        total_sqm = items[0].total_sqm
+        total_pcs = items[0].total_pcs
     frappe.db.set_value('Order Processing Request', doc.opr_no, {
-        "invoiced_value": item.net_total,
-        "total_sqm_delivered": item.total_sqm,
-        "total_nos_delivered": item.total_pcs
+        "invoiced_value": net_total,
+        "total_sqm_delivered": total_sqm,
+        "total_nos_delivered": total_pcs
     })
     return doc
