@@ -9,7 +9,7 @@ def after_upsert(doc, method = None):
             return
     sql = f"""
         select sum(net_total) net_total, sum(total_sqm1) total_sqm, sum(total_pcs1) total_pcs from `tabDelivery Note` where opr_no='{doc.opr_no}'
-        and docstatus != 2
+        and docstatus = 1
     """
     print("Calling update")
     item = frappe.db.sql(sql, as_dict=1)[0]

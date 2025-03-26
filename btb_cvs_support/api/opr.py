@@ -71,7 +71,7 @@ def get_delivery_note_summary(opr_name: str):
     sql = f"""
         select dn.name, dn.posting_date, dn.job_number, dn.sales_order_no, dn.total_sqm1, dn.total_pcs1, dn.net_total
         from `tabDelivery Note` dn
-        where dn.opr_no = '{opr_name}' and dn.docstatus != 2
+        where dn.opr_no = '{opr_name}' and dn.docstatus = 1
     """
     items = frappe.db.sql(sql, as_dict=1)
     count = 1
@@ -86,7 +86,7 @@ def get_stock_consumption_summary(opr_name: str):
         select se.name, se.posting_date, se.job_number, se.value_difference 
         from  `tabStock Entry` se 
         where se.opr_no = '{opr_name}' and se.stock_entry_type = 'Material Issue'
-        and se.docstatus != 2
+        and se.docstatus = 1
     """
     items = frappe.db.sql(sql, as_dict=1)
     count = 1
