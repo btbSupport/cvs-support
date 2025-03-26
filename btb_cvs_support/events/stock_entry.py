@@ -5,7 +5,8 @@ def after_upsert(doc, method = None):
     #if(doc.docstatus != 1):
         #return;
     sql = f"""
-        select sum(value_difference) total from `tabStock Entry` where opr_no='{doc.opr_no}' and docstatus != 2
+        select sum(value_difference) total from `tabStock Entry` where opr_no='{doc.opr_no}' and docstatus != 2 
+        and stock_entry_type = 'Material Issue'
     """
     print("Calling update")
     item = frappe.db.sql(sql, as_dict=1)[0]
