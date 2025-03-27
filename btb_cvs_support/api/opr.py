@@ -50,6 +50,14 @@ def get_mapped_stock_consumption(source_name, target_doc = None):
     return target_doc
 
 @frappe.whitelist()
+def get_sales_order_details(sales_order_number: str):
+    sql = f"""
+        select  so.conversion_rate, so.additional_discount_percentage 
+        from `tabSales Order` so where so.name = '{sales_order_number}'
+    """
+    return frappe.db.sql(sql, as_dict = 1)[0]
+
+@frappe.whitelist()
 def get_pending_quantities(sales_order_number: str, opr_name: str):
     items = get_items(sales_order_number)
     ordered_items = get_ordered_items(sales_order_number, opr_name)
@@ -78,7 +86,8 @@ def get_delivery_note_summary(opr_name: str):
     for item in items: 
         item["idx"] = count
         count += 1
-    return frappe.frappe.render_template("btb_cvs_support/api/delivery_note_summary.html", {"items": items})
+    show_amount = "Accounts User" in frappe.get_roles()
+    return frappe.frappe.render_template("btb_cvs_support/api/delivery_note_summary.html", {"items": items, "show_amount": show_amount})
 
 @frappe.whitelist()
 def get_stock_consumption_summary(opr_name: str):
@@ -95,7 +104,8 @@ def get_stock_consumption_summary(opr_name: str):
         item["idx"] = count
         count += 1
         total += item["value_difference"]
-    return frappe.frappe.render_template("btb_cvs_support/api/stock_consumption_summary.html", {"items": items, "total_consumption": total})
+    show_amount = "Accounts User" in frappe.get_roles()
+    return frappe.frappe.render_template("btb_cvs_support/api/stock_consumption_summary.html", {"items": items, "total_consumption": total, "show_amount": show_amount})
 
 
 def get_items(sales_order_number: str):

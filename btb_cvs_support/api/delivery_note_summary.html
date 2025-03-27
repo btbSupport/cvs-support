@@ -31,9 +31,11 @@
                     <div class="col grid-static-col col-xs-1  text-right" >
                         <div class="static-area ellipsis">Nos Delivered</div>
                     </div>
+                    {% if show_amount %}
                     <div class="col grid-static-col col-xs-1  text-right" >
                         <div class="static-area ellipsis">Amount</div>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -67,9 +69,11 @@
                         <div class="col grid-static-col col-xs-1 text-right">
                             {{item.total_pcs1}}
                         </div>
+                        {% if show_amount %}
                         <div class="col grid-static-col col-xs-1 text-right">
                             {{item.net_total}}
                         </div>
+                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}

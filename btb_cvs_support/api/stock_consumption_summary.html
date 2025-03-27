@@ -16,9 +16,11 @@
                     <div class="col grid-static-col col-xs-2" >
                         <div class="static-area ellipsis">Job Number</div>
                     </div>
+                    {% if show_amount %}
                     <div class="col grid-static-col col-xs-2  text-right">
                         <div class="static-area ellipsis">Amount</div>
                     </div>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -42,9 +44,11 @@
                         <div class="col grid-static-col col-xs-2 ">
                             {{item.job_number}}
                         </div>
+                        {% if show_amount %}
                         <div class="col grid-static-col col-xs-2 text-right">
                             {{item.value_difference}}
                         </div>
+                        {% endif %}
                     </div>
                 </div>
                 {% endfor %}
