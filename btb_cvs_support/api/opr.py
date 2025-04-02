@@ -27,6 +27,7 @@ def get_mapped_delivery_note(source_name, target_doc = None):
     """
     items = frappe.db.sql(sql, as_dict=1)
     target_doc.sales_order_no = items[0].get("sales_order")
+    target_doc.custom_sales_order = items[0].get("sales_order")
     target_doc.customer =  items[0].get("customer_name")
     target_doc.customer_name =  items[0].get("customer_name")
     target_doc.job_reference = items[0].get("customer_reference")
@@ -46,6 +47,7 @@ def get_mapped_stock_consumption(source_name, target_doc = None):
     """
     items = frappe.db.sql(sql, as_dict=1)
     target_doc.sales_order = items[0].get("sales_order")
+    target_doc.custom_sales_order = items[0].get("sales_order")
     target_doc.customer_name =  items[0].get("customer_name")
     return target_doc
 
@@ -79,7 +81,7 @@ def get_delivery_note_summary(opr_name: str):
     sql = f"""
         select dn.name, dn.posting_date, dn.job_number, dn.sales_order_no, dn.total_sqm1, dn.total_pcs1, dn.net_total
         from `tabDelivery Note` dn
-        where dn.opr_no = '{opr_name}' and dn.docstatus = 1
+        where dn.custom_opr = '{opr_name}' and dn.docstatus = 1
     """
     items = frappe.db.sql(sql, as_dict=1)
     count = 1
@@ -94,7 +96,7 @@ def get_stock_consumption_summary(opr_name: str):
     sql = f"""
         select se.name, se.posting_date, se.job_number, se.value_difference 
         from  `tabStock Entry` se 
-        where se.opr_no = '{opr_name}' and se.stock_entry_type = 'Material Issue'
+        where se.custom_opr = '{opr_name}' and se.stock_entry_type = 'Material Issue'
         and se.docstatus = 1
     """
     items = frappe.db.sql(sql, as_dict=1)
@@ -160,8 +162,8 @@ def get_delivered_items(sales_order_number: str):
         select dni.so_detail, sum(dni.qty) as qty
         from `tabDelivery Note Item` dni
         join `tabDelivery Note` dn on dni.parent = dn.name
-        join `tabOrder Processing Request` opr on dn.opr_no = opr.name
-        where dn.sales_order_no = '{sales_order_number}'
+        join `tabOrder Processing Request` opr on dn.custom_opr = opr.name
+        where dn.custom_sales_order = '{sales_order_number}'
         and (opr.workflow_state = 'Completed' or opr.docstatus = 2)
         and dn.docstatus = 1
         group by dni.so_detail

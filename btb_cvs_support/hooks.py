@@ -146,7 +146,18 @@ app_license = "mit"
 # }
 
 doc_events = {
-    
+    "Version": {
+        "after_insert": "btb_cvs_support.events.version.after_upsert",
+        "on_update": "btb_cvs_support.events.version.after_upsert"
+    },
+    "Delivery Note": {
+        "after_insert": "btb_cvs_support.events.delivery_note.after_upsert",
+        "on_update": "btb_cvs_support.events.delivery_note.after_upsert"
+    },
+    "Stock Entry": {
+        "after_insert": "btb_cvs_support.events.stock_entry.after_upsert",
+        "on_update": "btb_cvs_support.events.stock_entry.after_upsert"
+    }
 }
 # Scheduled Tasks
 # ---------------
@@ -250,7 +261,7 @@ fixtures = [
         "doctype": "Client Script",
         "filters": [
             ["name", "in", [
-                "opr_controller"
+                "opr_controller", "Order Processing Request-Client", "Delivery Note-Client", "Sales Order-Client"
             ]]
         ]
     },
@@ -258,7 +269,7 @@ fixtures = [
         "doctype": "Custom Field",
         "filters": [
             ["fieldname", "in", [
-                "custom_manufactured_item"
+                "custom_manufactured_item", "custom_opr", "custom_sales_order", "custom_total_sqm", "custom_total_pcs", 
             ]]
         ]
     }
