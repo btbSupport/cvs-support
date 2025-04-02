@@ -79,7 +79,7 @@ def get_pending_quantities(sales_order_number: str, opr_name: str):
 @frappe.whitelist()
 def get_delivery_note_summary(opr_name: str):
     sql = f"""
-        select dn.name, dn.posting_date, dn.job_number, dn.sales_order_no, dn.total_sqm1, dn.total_pcs1, dn.net_total
+        select dn.name, dn.posting_date, dn.job_number, dn.sales_order_no, dn.custom_total_sqm, dn.custom_total_pcs, dn.net_total
         from `tabDelivery Note` dn
         where dn.custom_opr = '{opr_name}' and dn.docstatus = 1
     """
