@@ -8,7 +8,7 @@ def after_upsert(doc, method = None):
         else:
             return
     sql = f"""
-        select sum(net_total) net_total, sum(total_sqm1) total_sqm, sum(total_pcs1) total_pcs from `tabDelivery Note` where opr_no='{doc.opr_no}'
+        select sum(net_total) net_total, sum(total_sqm) total_sqm, sum(total_pcs) total_pcs from `tabDelivery Note` where custom_opr='{doc.custom_opr}'
         and docstatus = 1
     """
     print("Calling update")
@@ -16,7 +16,7 @@ def after_upsert(doc, method = None):
     net_total = item.net_total or 0
     total_sqm = item.total_sqm or 0
     total_pcs = item.total_pcs or 0
-    frappe.db.set_value('Order Processing Request', doc.opr_no, {
+    frappe.db.set_value('Order Processing Request', doc.custom_opr, {
         "invoiced_value": net_total,
         "total_sqm_delivered": total_sqm,
         "total_nos_delivered": total_pcs
