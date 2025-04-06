@@ -78,12 +78,12 @@ def get_pending_quantities(sales_order_number: str, opr_name: str):
 
 @frappe.whitelist()
 def get_delivery_note_summary(opr_name: str):
-    sql = f"""
-        select dn.name, dn.posting_date, dn.job_number, dn.sales_order_no, dn.custom_total_sqm, dn.custom_total_pcs, dn.net_total
-        from `tabDelivery Note` dn
-        where dn.custom_opr = '{opr_name}' and dn.docstatus = 1
-    """
-    items = frappe.db.sql(sql, as_dict=1)
+    # sql = f"""
+    #     select dn.name, dn.posting_date, dn.job_number, dn.sales_order_no, dn.custom_total_sqm, dn.custom_total_pcs, dn.net_total
+    #     from `tabDelivery Note` dn
+    #     where dn.custom_opr = '{opr_name}' and dn.docstatus = 1
+    # """
+    items = get_delivery_note_data(opr_name)
     count = 1
     for item in items: 
         item["idx"] = count
@@ -92,14 +92,24 @@ def get_delivery_note_summary(opr_name: str):
     return frappe.frappe.render_template("btb_cvs_support/api/delivery_note_summary.html", {"items": items, "show_amount": show_amount})
 
 @frappe.whitelist()
-def get_stock_consumption_summary(opr_name: str):
+def get_delivery_note_data(opr_name: str):
     sql = f"""
-        select se.name, se.posting_date, se.job_number, se.value_difference 
-        from  `tabStock Entry` se 
-        where se.custom_opr = '{opr_name}' and se.stock_entry_type = 'Material Issue'
-        and se.docstatus = 1
+        select dn.name, dn.posting_date, dn.job_number, dn.sales_order_no, dn.custom_total_sqm, dn.custom_total_pcs, dn.net_total
+        from `tabDelivery Note` dn
+        where dn.custom_opr = '{opr_name}' and dn.docstatus = 1
     """
     items = frappe.db.sql(sql, as_dict=1)
+    return items;
+
+@frappe.whitelist()
+def get_stock_consumption_summary(opr_name: str):
+    # sql = f"""
+    #     select se.name, se.posting_date, se.job_number, se.value_difference 
+    #     from  `tabStock Entry` se 
+    #     where se.custom_opr = '{opr_name}' and se.stock_entry_type = 'Material Issue'
+    #     and se.docstatus = 1
+    # """
+    items = get_stock_consumption_data(opr_name)
     count = 1
     total = 0
     for item in items: 
@@ -109,6 +119,17 @@ def get_stock_consumption_summary(opr_name: str):
     show_amount = "Accounts User" in frappe.get_roles()
     return frappe.frappe.render_template("btb_cvs_support/api/stock_consumption_summary.html", {"items": items, "total_consumption": total, "show_amount": show_amount})
 
+@frappe.whitelist()
+def get_stock_consumption_data(opr_name: str):
+    sql = f"""
+        select se.name, se.posting_date, se.job_number, se.value_difference 
+        from  `tabStock Entry` se 
+        where se.custom_opr = '{opr_name}' and se.stock_entry_type = 'Material Issue'
+        and se.docstatus = 1
+    """
+    items = frappe.db.sql(sql, as_dict=1)
+    return items;
+ 
 
 def get_items(sales_order_number: str):
     sql = f"""
