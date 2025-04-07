@@ -78,11 +78,6 @@ def get_pending_quantities(sales_order_number: str, opr_name: str):
 
 @frappe.whitelist()
 def get_delivery_note_summary(opr_name: str):
-    # sql = f"""
-    #     select dn.name, dn.posting_date, dn.job_number, dn.sales_order_no, dn.custom_total_sqm, dn.custom_total_pcs, dn.net_total
-    #     from `tabDelivery Note` dn
-    #     where dn.custom_opr = '{opr_name}' and dn.docstatus = 1
-    # """
     items = get_delivery_note_data(opr_name)
     count = 1
     for item in items: 
@@ -103,12 +98,6 @@ def get_delivery_note_data(opr_name: str):
 
 @frappe.whitelist()
 def get_stock_consumption_summary(opr_name: str):
-    # sql = f"""
-    #     select se.name, se.posting_date, se.job_number, se.value_difference 
-    #     from  `tabStock Entry` se 
-    #     where se.custom_opr = '{opr_name}' and se.stock_entry_type = 'Material Issue'
-    #     and se.docstatus = 1
-    # """
     items = get_stock_consumption_data(opr_name)
     count = 1
     total = 0
