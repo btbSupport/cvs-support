@@ -274,3 +274,10 @@ fixtures = [
         ]
     }
 ]
+
+jinja = {
+    "methods": [
+        "btb_cvs_support.api.opr.get_stock_consumption_data",
+        "btb_cvs_support.api.opr.get_delivery_note_data"
+    ]
+}

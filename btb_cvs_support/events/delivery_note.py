@@ -8,7 +8,7 @@ def after_upsert(doc, method = None):
         else:
             return
     sql = f"""
-        select sum(net_total) net_total, sum(custom_total_sqm) custom_total_sqm, sum(custom_total_pcs) custom_total_pcs from `tabDelivery Note` where custom_opr='{doc.custom_opr}'
+        select sum(base_net_total) net_total, sum(custom_total_sqm) custom_total_sqm, sum(custom_total_pcs) custom_total_pcs from `tabDelivery Note` where custom_opr='{doc.custom_opr}'
         and docstatus = 1
     """
     print("Calling update")
