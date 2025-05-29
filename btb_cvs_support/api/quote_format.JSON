@@ -1,0 +1,181 @@
+{
+    "SKU35": {
+      "headerKey": "materialType,frameThickness,sleeveSelection,sleeveThickness,rating,leakageClass,classTemperature,maxSingleSectionWidth,maxSingleSectionHeight,mounting,maxMultiSectionWidth,maxMultiSectionHeight,storOrDtorOption,linkTemperature,actuatorBrand,actuatorPower,actuatorMounting,auxSwitch,bladeSwitchPackage,smokeDetector,bladeOperations,transition,transitionThickness",
+      "header": {
+        "Material": "materialType",
+        "Frame Thickness": "CONCAT(frameThickness,string mm)",
+        "Sleeve Length": "sleeveSelection",
+        "Sleeve Thickness": "CONCAT(sleeveThickness,string mm)",
+        "Rating": "rating",
+        "Leakage Class": "CONCAT(leakageClass,string-,classTemperature)",
+        "UL Single Section Max": "CONCAT(mounting,string-,maxSingleSectionWidth,string X ,maxSingleSectionHeight)",
+        "UL Assembly Max": "CONCAT(mounting,string-,maxMultiSectionWidth,string X ,maxMultiSectionHeight)",
+        "Heat Response Type": "storOrDtorOption",
+        "Heat Response": "linkTemperature",
+        "Actuator Brand": "actuatorBrand",
+        "Actuator Voltage": "actuatorPower",
+        "Actuator Mounting": "actuatorMounting",
+        "Actuator Aux Switch": "auxSwitch",
+        "Blade Switch Package": "bladeSwitchPackage",
+        "Smoke Detector": "smokeDetector",
+        "Blade Operations": "bladeOperations",
+        "Transition": "CONCAT(transition,string - ,transitionThickness,string mm)"
+      },
+      "detail": "width,height,tag,qty,rate,amount,diameter,transition,unitPrice,beforeDiscount",
+      "summary": "qty,rate,amount,beforeDiscount"
+    },
+    "CFD29": {
+      "headerKey": "materialType,frameThickness,sleeveType,sleeveThickness,sleeveLength,rating,fittingType,fittingThickness,maxSingleSectionWidth,maxSingleSectionHeight,mounting,maxMultiSectionWidth,maxMultiSectionHeight,limitSwitchRequired,fusibleLinkTemp",
+      "header": {
+        "Material": "materialType",
+        "Frame Thickness": "CONCAT(frameThickness,string mm)",
+        "Sleeve Type": "sleeveType",
+        "Sleeve Thickness": "CONCAT(sleeveThickness,string mm)",
+        "Sleeve Length": "CONCAT(sleeveLength,string mm)",
+        "Rating": "rating",
+        "Transition Type": "fittingType",
+        "Transition Thickness": "CONCAT(fittingThickness,string mm)",
+        "UL Single Section Max": "CONCAT(mounting,string-,maxSingleSectionWidth,string X ,maxSingleSectionHeight)",
+        "UL Assembly Max": "CONCAT(mounting,string-,maxMultiSectionWidth,string X ,maxMultiSectionHeight)",
+        "Micro Switch Indicator Package": "limitSwitchRequired",
+        "Heat Response": "fusibleLinkTemp"
+      },
+      "detail": "width,height,tag,qty,rate,amount,diameter,fittingType,unitPrice,beforeDiscount",
+      "summary": "qty,rate,amount,beforeDiscount"
+    },
+    "SKU37": {
+      "headerKey": "materialType,frameThickness,sleeveType,sleeveThickness,sleeveLength,rating,fittingType,fittingThickness,maxUlSingleSectionWidth,maxUlSingleSectionHeight,mounting,maxMultiSectionWidth,maxMultiSectionWidth2,maxMultiSectionHeight,limitSwitchRequired,fusibleLinkTemp",
+      "header": {
+        "Material": "materialType",
+        "Frame Thickness": "CONCAT(frameThickness,string mm)",
+        "Sleeve Type": "sleeveType",
+        "Sleeve Thickness": "CONCAT(sleeveThickness,string mm)",
+        "Sleeve Length": "CONCAT(sleeveLength,string mm)",
+        "Rating": "rating",
+        "Transition Type": "fittingType",
+        "Transition Thickness": "CONCAT(fittingThickness,string mm)",
+        "UL Single Section Max": "CONCAT(mounting,string-,maxUlSingleSectionWidth,string X ,maxUlSingleSectionHeight)",
+        "UL Assembly Max": "CONCAT(mounting,string-,CFDmaxMultiSectioneWidth,string X ,maxMultiSectionHeight)",
+        "Micro Switch Indicator Package": "limitSwitchRequired",
+        "Heat Response": "fusibleLinkTemp"
+      },
+      "detail": "width,height,tag,qty,rate,amount,diameter,fittingType,unitPrice,beforeDiscount",
+      "summary": "qty,rate,amount,beforeDiscount"
+    },
+    "ULRD34": {
+      "headerKey": "frameMaterialType,transitionType,frameThicknessLookup,bladeThicknessLookup,rating,retainingPlate,leakageClass,fuseLinkOptions,damperOperator,actuatorBrand,linkTemperature,actuatorPower,auxSwitch,actuatorMounting,bladeSwitchPackage,maxDiameter,junctionBox,mtsOption",
+      "header": {
+        "Material Type": "frameMaterialType",
+        "Transition Type": "transitionType",
+        "Frame Thickness (mm)": "frameThicknessLookup",
+        "Blade Thickness (mm)":"bladeThicknessLookup",
+        "Mounting & Rating":"CONCAT(string Vertical- ,rating)",
+        "Retaining Plate":"retainingPlate",
+        "Leakage Class & Temperature":"leakageClass",
+        "Heat Response Device":"fuseLinkOptions",
+        "Operator Type":"CONCAT(damperOperator,string - ,actuatorBrand)",
+        "Response Temperature":"linkTemperature",
+        "Actuator Power":"actuatorPower",
+        "Actuator Aux":"auxSwitch",
+        "Actuator Mounting":"actuatorMounting",
+        "Smoke Detector":"CONCAT(string No)",
+        "Blade Switch Package":"bladeSwitchPackage",
+        "Max UL Size":"CONCAT(maxDiameter,string mm)",
+        "Junction Box":"junctionBox",
+        "MTS Option":"mtsOption"
+      },
+      "detail": "tag,diameter,frameDepth,qty,rate,amount,unitPrice,beforeDiscount,transitionType,transitionDiameter,transitionLength,transitionDiameter2,transitionLength2",
+      "summary": "qty,rate,amount,beforeDiscount"
+    },
+    "MSFD-AC": {
+      "headerKey": "materialType,frameThickness,sleeveSelection,sleeveThickness,rating,leakageClass,classTemperature,maxSingleSectionWidth,maxSingleSectionHeight,mounting,maxMultiSectionWidth,maxMultiSectionHeight,storOrDtorOption,linkTemperature,actuatorBrand,actuatorPower,actuatorMounting,auxSwitch,bladeSwitchPackage,smokeDetector,bladeOperations,transition,transitionThickness",
+      "header": {
+        "Material": "materialType",
+        "Frame Thickness": "CONCAT(frameThickness,string mm)",
+        "Sleeve Length": "sleeveSelection",
+        "Sleeve Thickness": "CONCAT(sleeveThickness,string mm)",
+        "Rating": "rating",
+        "Leakage Class": "CONCAT(leakageClass,string-,classTemperature)",
+        "UL Single Section Max": "CONCAT(mounting,string-,maxSingleSectionWidth,string X ,maxSingleSectionHeight)",
+        "UL Assembly Max": "CONCAT(mounting,string-,maxMultiSectionWidth,string X ,maxMultiSectionHeight)",
+        "Heat Response Type": "storOrDtorOption",
+        "Heat Response": "linkTemperature",
+        "Actuator Brand": "actuatorBrand",
+        "Actuator Voltage": "actuatorPower",
+        "Actuator Mounting": "actuatorMounting",
+        "Actuator Aux Switch": "auxSwitch",
+        "Blade Switch Package": "bladeSwitchPackage",
+        "Smoke Detector": "smokeDetector",
+        "Blade Operations": "bladeOperations",
+        "Transition": "CONCAT(transition,string - ,transitionThickness,string mm)"
+      },
+      "detail": "width,height,tag,qty,rate,amount,diameter,transition,unitPrice,beforeDiscount",
+      "summary": "qty,rate,amount,beforeDiscount"
+    },
+    "SKU36": {
+      "headerKey": "model,materialType,subCategory,infillType,constructionStandard,airTightness,casingThickness,perfThickness,orientation,infillProtection,removableBaffle,accessPanel",
+      "header": {
+        "Model": "model",
+        "Material": "materialType",
+        "Specification": "specification",
+        "Infill Type":"infillType",
+        "Construction":"constructionStandard",
+        "Air tightness":"airTightness",
+        "Casing Thickness":"CONCAT(casingThickness,string mm)",
+        "Perforated Protection":"CONCAT(perfThickness,string mm)",
+        "Mounting Position":"orientation",
+        "Infill Protection":"infillProtection",
+        "Panel Type":"panelType",
+        "Access Panel":"accessPanel"
+      },
+      "detail": "tagRef,widthWi,heightHi,lengthLi,optionFlangeangle,assemblyType,qty,rate,amount,unitPrice,beforeDiscount",
+      "summary": "qty,rate,amount,beforeDiscount"
+    },
+    "VCD-A38": {
+      "headerKey": "modelName,subCategory,frameMaterialType,frameThicknessLookup,bladeMaterialType,bladeThicknessLookup,transitionType,bladeOperations,bladeAxleType,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,damperOperator,actuatorBrand,actuatorControls,auxSwitch,powerSupply",
+      "header": {
+        "Frame Material": "frameMaterialType",
+        "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
+        "Blade Material": "bladeMaterialType",
+        "Blade Thickness":"CONCAT(bladeThicknessLookup,string mm)",
+        "Transition Type":"transitionType",
+        "Blade Operation":"bladeOperations",
+        "Blade Axle Type":"bladeAxleType",
+        "Blade Bush Option":"bladeBushOption",
+        "Blade Seal":"bladeSealInput",
+        "Jamb Side Seal":"jambSideSeal",
+        "AMCA Label":"amcaLabelSelect",
+        "Damper Operator":"damperOperator",
+        "Actuator Model":"actuatorBrand",
+        "Actuator Controls":"actuatorControls",
+        "Aux Switch":"auxSwitch",
+        "Power Supply":"powerSupply"
+      },
+      "detail": "tagRef,width,height,qty,rate,amount,unitPrice,beforeDiscount",
+      "summary": "qty,rate,amount,beforeDiscount"
+    },
+
+    "VCD-R39": {
+      "headerKey": "modelName,subCategory,materialType,frameThicknessLookup,frameClosure,bladeThickness,staticPressureClass,velocityRating,axleType,axleBearing,bladeSeal,amcaLabel,operator,actuatorMounting,actuatorBrand,actuatorControls,actuatorAuxSwitch,actuatorPowerSupply",
+      "header": {
+        "Frame Material": "materialType",
+        "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
+        "Frame Closure":"frameClosure",
+        "Blade Thickness":"CONCAT(bladeThickness,string mm)",
+        "Static Pressure Class":"staticPressureClass",
+        "Velocity Rating":"velocityRating",
+        "Axle Type":"axleType",
+        "Axle Bearing":"axleBearing",
+        "Blade Seal":"bladeSeal",
+        "AMCA Label":"amcaLabel",
+        "Damper Operator":"operator",
+        "Actuator Mounting":"actuatorMounting",
+        "Actuator Model":"actuatorBrand",
+        "Actuator Controls":"actuatorControls",
+        "Aux Switch":"actuatorAuxSwitch",
+        "Power Supply":"actuatorPowerSupply"
+      },
+      "detail": "tagRef,diameter,frameDepth,qty,rate,amount,unitPrice,beforeDiscount",
+      "summary": "qty,rate,amount,beforeDiscount"
+    }
+  }

@@ -157,6 +157,10 @@ doc_events = {
     "Stock Entry": {
         "after_insert": "btb_cvs_support.events.stock_entry.after_upsert",
         "on_update": "btb_cvs_support.events.stock_entry.after_upsert"
+    },
+    "Quotation Item": {
+        "after_insert": "btb_cvs_support.events.quotation_item.after_upsert",
+        "on_update": "btb_cvs_support.events.quotation_item.after_upsert"
     }
 }
 # Scheduled Tasks
@@ -278,6 +282,7 @@ fixtures = [
 jinja = {
     "methods": [
         "btb_cvs_support.api.opr.get_stock_consumption_data",
-        "btb_cvs_support.api.opr.get_delivery_note_data"
+        "btb_cvs_support.api.opr.get_delivery_note_data",
+        "btb_cvs_support.api.quotation_format.populate_cart_detail"
     ]
 }
