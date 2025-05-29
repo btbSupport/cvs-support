@@ -1,177 +1,237 @@
 {
-    "allow_import": 1,
-    "allow_rename": 1,
-    "autoname": "format:FTO{#}",
-    "creation": "2025-04-10 20:13:53.8913",
-    "doctype": "DocType",
-    "engine": "InnoDB",
-    "fields": [
-        {
-            "fieldname": "currency_iso_code",
-            "fieldtype": "Select",
-            "label": "CurrencyIsoCode"
-        },
-        {
-            "fieldname": "blade_type",
-            "fieldtype": "Data",
-            "label": "Blade_Type__c"
-        },
-        {
-            "fieldname": "flow",
-            "fieldtype": "Data",
-            "label": "Flow__c"
-        },
-        {
-            "fieldname": "frameoil_width",
-            "fieldtype": "Float",
-            "label": "Frame_Coil_Width__c"
-        },
-        {
-            "fieldname": "frame_thickness",
-            "fieldtype": "Float",
-            "label": "Frame_Thickness__c"
-        },
-        {
-            "fieldname": "frame_width",
-            "fieldtype": "Float",
-            "label": "Frame_Width__c"
-        },
-        {
-            "fieldname": "max_height",
-            "fieldtype": "Float",
-            "label": "Max_Height__c"
-        },
-        {
-            "fieldname": "max_single_section_height",
-            "fieldtype": "Float",
-            "label": "Max_Single_Section_Height__c"
-        },
-        {
-            "fieldname": "max_single_section_width",
-            "fieldtype": "Float",
-            "label": "Max_Single_Section_Width__c"
-        },
-        {
-            "fieldname": "max_width",
-            "fieldtype": "Float",
-            "label": "Max_Width__c"
-        },
-        {
-            "fieldname": "min_height",
-            "fieldtype": "Float",
-            "label": "Min_Height__c"
-        },
-        {
-            "fieldname": "min_width",
-            "fieldtype": "Float",
-            "label": "MinWidth__c"
-        },
-        {
-            "fieldname": "no_of_brackets",
-            "fieldtype": "Float",
-            "label": "No_of_Brackets__c"
-        },
-        {
-            "fieldname": "no_of_springs",
-            "fieldtype": "Float",
-            "label": "No_Of_Springs__c"
-        },
-        {
-            "fieldname": "sleeve_option",
-            "fieldtype": "Data",
-            "label": "Sleeve_Option__c"
-        },
-        {
-            "fieldname": "product_family",
-            "fieldtype": "Select",
-            "label": "ProductFamily__c"
-        },
-        {
-            "fieldname": "min_diameter",
-            "fieldtype": "Float",
-            "label": "MinDiameter__c"
-        },
-        {
-            "fieldname": "max_multi_section_diameter1",
-            "fieldtype": "Float",
-            "label": "MaxMultiSectionDiameter1__c"
-        },
-        {
-            "fieldname": "max_multi_section_width2",
-            "fieldtype": "Float",
-            "label": "MaxMultiSectionWidth2__c"
-        },
-        {
-            "fieldname": "blade_movement",
-            "fieldtype": "Data",
-            "label": "Blade_Movement__c"
-        },
-        {
-            "fieldname": "blade_thickness",
-            "fieldtype": "Float",
-            "label": "Blade_Thickness__c"
-        },
-        {
-            "fieldname": "sleeve_thickness",
-            "fieldtype": "Float",
-            "label": "Sleeve_Thickness__c"
-        },
-        {
-            "fieldname": "max_multi_section_height2",
-            "fieldtype": "Float",
-            "label": "MaxMultiSectionHeight2__c"
-        },
-        {
-            "fieldname": "jackshafting_sections",
-            "fieldtype": "Select",
-            "label": "Jackshafting_Sections__c"
-        },
-        {
-            "fieldname": "max_single_section_diameter",
-            "fieldtype": "Float",
-            "label": "MaxSingleSectionDiameter__c"
-        },
-        {
-            "fieldname": "max_damper_section_width1",
-            "fieldtype": "Float",
-            "label": "MaxDamperSectionWidth1__c"
-        },
-        {
-            "fieldname": "max_damper_section_height1",
-            "fieldtype": "Float",
-            "label": "MaxDamperSectionHeight1__c"
-        },
-        {
-            "fieldname": "max_damper_section_width2",
-            "fieldtype": "Float",
-            "label": "MaxDamperSectionWidth2__c"
-        },
-        {
-            "fieldname": "max_damper_section_height2",
-            "fieldtype": "Float",
-            "label": "MaxDamperSectionHeight2__c"
-        }
-    ],
-    "modified": "2025-04-10 20:13:53.8913",
-    "modified_by": "Administrator",
-    "module": "Btb Cvs Support",
-    "name": "FTOCVSUnique",
-    "naming_rule": "Expression",
-    "owner": "Administrator",
-    "permissions": [
-        {
-            "create": 1,
-            "delete": 1,
-            "email": 1,
-            "export": 1,
-            "print": 1,
-            "read": 1,
-            "report": 1,
-            "role": "System Manager",
-            "share": 1,
-            "write": 1
-        }
-    ],
-    "sort_field": "modified",
-    "sort_order": "DESC"
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:FTO{#}",
+ "creation": "2025-04-10 20:13:53.891300",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "currency_iso_code",
+  "blade_type",
+  "flow",
+  "frameoil_width",
+  "frame_thickness",
+  "frame_width",
+  "column_break_vuzw",
+  "max_height",
+  "max_single_section_height",
+  "max_single_section_width",
+  "max_width",
+  "min_height",
+  "min_width",
+  "column_break_tjzy",
+  "no_of_brackets",
+  "no_of_springs",
+  "sleeve_option",
+  "product_family",
+  "min_diameter",
+  "max_multi_section_diameter1",
+  "column_break_pexw",
+  "max_multi_section_width2",
+  "blade_movement",
+  "blade_thickness",
+  "sleeve_thickness",
+  "max_multi_section_height2",
+  "jackshafting_sections",
+  "column_break_htxl",
+  "max_single_section_diameter",
+  "max_damper_section_width1",
+  "max_damper_section_height1",
+  "max_damper_section_width2",
+  "max_damper_section_height2"
+ ],
+ "fields": [
+  {
+   "fieldname": "currency_iso_code",
+   "fieldtype": "Select",
+   "label": "CurrencyIsoCode"
+  },
+  {
+   "fieldname": "blade_type",
+   "fieldtype": "Data",
+   "label": "Blade_Type__c"
+  },
+  {
+   "fieldname": "flow",
+   "fieldtype": "Data",
+   "label": "Flow__c"
+  },
+  {
+   "fieldname": "frameoil_width",
+   "fieldtype": "Float",
+   "label": "Frame_Coil_Width__c"
+  },
+  {
+   "fieldname": "frame_thickness",
+   "fieldtype": "Float",
+   "label": "Frame_Thickness__c"
+  },
+  {
+   "fieldname": "frame_width",
+   "fieldtype": "Float",
+   "label": "Frame_Width__c"
+  },
+  {
+   "fieldname": "max_height",
+   "fieldtype": "Float",
+   "label": "Max_Height__c"
+  },
+  {
+   "fieldname": "max_single_section_height",
+   "fieldtype": "Float",
+   "label": "Max_Single_Section_Height__c"
+  },
+  {
+   "fieldname": "max_single_section_width",
+   "fieldtype": "Float",
+   "label": "Max_Single_Section_Width__c"
+  },
+  {
+   "fieldname": "max_width",
+   "fieldtype": "Float",
+   "label": "Max_Width__c"
+  },
+  {
+   "fieldname": "min_height",
+   "fieldtype": "Float",
+   "label": "Min_Height__c"
+  },
+  {
+   "fieldname": "min_width",
+   "fieldtype": "Float",
+   "label": "MinWidth__c"
+  },
+  {
+   "fieldname": "no_of_brackets",
+   "fieldtype": "Float",
+   "label": "No_of_Brackets__c"
+  },
+  {
+   "fieldname": "no_of_springs",
+   "fieldtype": "Float",
+   "label": "No_Of_Springs__c"
+  },
+  {
+   "fieldname": "sleeve_option",
+   "fieldtype": "Data",
+   "label": "Sleeve_Option__c"
+  },
+  {
+   "fieldname": "product_family",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "ProductFamily__c",
+   "options": "Silencer\nCurtain Dampers"
+  },
+  {
+   "fieldname": "min_diameter",
+   "fieldtype": "Float",
+   "label": "MinDiameter__c"
+  },
+  {
+   "fieldname": "max_multi_section_diameter1",
+   "fieldtype": "Float",
+   "label": "MaxMultiSectionDiameter1__c"
+  },
+  {
+   "fieldname": "max_multi_section_width2",
+   "fieldtype": "Float",
+   "label": "MaxMultiSectionWidth2__c"
+  },
+  {
+   "fieldname": "blade_movement",
+   "fieldtype": "Data",
+   "label": "Blade_Movement__c"
+  },
+  {
+   "fieldname": "blade_thickness",
+   "fieldtype": "Float",
+   "label": "Blade_Thickness__c"
+  },
+  {
+   "fieldname": "sleeve_thickness",
+   "fieldtype": "Float",
+   "label": "Sleeve_Thickness__c"
+  },
+  {
+   "fieldname": "max_multi_section_height2",
+   "fieldtype": "Float",
+   "label": "MaxMultiSectionHeight2__c"
+  },
+  {
+   "fieldname": "jackshafting_sections",
+   "fieldtype": "Select",
+   "label": "Jackshafting_Sections__c"
+  },
+  {
+   "fieldname": "max_single_section_diameter",
+   "fieldtype": "Float",
+   "label": "MaxSingleSectionDiameter__c"
+  },
+  {
+   "fieldname": "max_damper_section_width1",
+   "fieldtype": "Float",
+   "label": "MaxDamperSectionWidth1__c"
+  },
+  {
+   "fieldname": "max_damper_section_height1",
+   "fieldtype": "Float",
+   "label": "MaxDamperSectionHeight1__c"
+  },
+  {
+   "fieldname": "max_damper_section_width2",
+   "fieldtype": "Float",
+   "label": "MaxDamperSectionWidth2__c"
+  },
+  {
+   "fieldname": "max_damper_section_height2",
+   "fieldtype": "Float",
+   "label": "MaxDamperSectionHeight2__c"
+  },
+  {
+   "fieldname": "column_break_vuzw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_tjzy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pexw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_htxl",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2025-05-18 14:47:38.840024",
+ "modified_by": "Administrator",
+ "module": "Btb Cvs Support",
+ "name": "FTOCVSUnique",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
 }

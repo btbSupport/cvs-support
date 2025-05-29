@@ -1,1 +1,117 @@
-{"allow_import":1,"allow_rename":1,"autoname":"format:FTO{#}","creation":"2025-04-10 20:12:07.5404","doctype":"DocType","engine":"InnoDB","fields":[{"fieldname":"currency_iso_code","fieldtype":"Select","label":"CurrencyIsoCode"},{"fieldname":"unit","fieldtype":"Select","label":"Unit__c"},{"fieldname":"country_name","fieldtype":"Select","label":"Country_Name__c"},{"fieldname":"cost","fieldtype":"Float","label":"Cost__c"},{"fieldname":"product_family","fieldtype":"Select","label":"ProductFamily__c"},{"fieldname":"qatar","fieldtype":"Float","label":"Qatar__c"},{"fieldname":"uae","fieldtype":"Float","label":"UAE__c"},{"fieldname":"ksa","fieldtype":"Float","label":"KSA__c"},{"fieldname":"egypt","fieldtype":"Float","label":"Egypt__c"},{"fieldname":"item_code","fieldtype":"Data","label":"ItemCode__c"},{"fieldname":"product_name","fieldtype":"Data","label":"ProductName__c"},{"fieldname":"category","fieldtype":"Select","label":"Category__c"}],"modified":"2025-04-10 20:12:07.5404","modified_by":"Administrator","module":"Btb Cvs Support","name":"FTOCountryWiseCost","naming_rule":"Expression","owner":"Administrator","permissions":[{"create":1,"delete":1,"email":1,"export":1,"print":1,"read":1,"report":1,"role":"System Manager","share":1,"write":1}],"sort_field":"modified","sort_order":"DESC"}
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:FTO{#}",
+ "creation": "2025-04-10 20:12:07.540400",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "currency_iso_code",
+  "unit",
+  "country_name",
+  "cost",
+  "product_family",
+  "qatar",
+  "uae",
+  "ksa",
+  "egypt",
+  "item_code",
+  "product_name",
+  "category",
+  "test"
+ ],
+ "fields": [
+  {
+   "fieldname": "currency_iso_code",
+   "fieldtype": "Select",
+   "label": "CurrencyIsoCode"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Select",
+   "label": "Unit__c"
+  },
+  {
+   "fieldname": "country_name",
+   "fieldtype": "Select",
+   "label": "Country_Name__c"
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Float",
+   "label": "Cost__c"
+  },
+  {
+   "fieldname": "product_family",
+   "fieldtype": "Select",
+   "label": "ProductFamily__c"
+  },
+  {
+   "fieldname": "qatar",
+   "fieldtype": "Float",
+   "label": "Qatar__c"
+  },
+  {
+   "fieldname": "uae",
+   "fieldtype": "Float",
+   "label": "UAE__c"
+  },
+  {
+   "fieldname": "ksa",
+   "fieldtype": "Float",
+   "label": "KSA__c"
+  },
+  {
+   "fieldname": "egypt",
+   "fieldtype": "Float",
+   "label": "Egypt__c"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "label": "ItemCode__c"
+  },
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "ProductName__c"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category__c"
+  },
+  {
+   "fieldname": "test",
+   "fieldtype": "Text",
+   "label": "test"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2025-05-15 14:20:47.888636",
+ "modified_by": "Administrator",
+ "module": "Btb Cvs Support",
+ "name": "FTOCountryWiseCost",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
