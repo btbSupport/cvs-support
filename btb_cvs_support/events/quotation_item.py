@@ -2,7 +2,6 @@ import frappe
 
 def after_upsert(doc, method = None):
     print("calling quote line item sync ",doc)
-    frappe.log(doc)
     sql = f"""
         select i.item_code,i.description,i.stock_uom from tabBtbCartItemFeature tbcif 
         join tabBtbFeature tbf  on tbf.name = tbcif.feature  and tbf.field ='modelItem'
@@ -16,4 +15,3 @@ def after_upsert(doc, method = None):
         doc.item_code = items[0].item_code
         doc.description = items[0].description
         doc.uom = items[0].stock_uom
-        frappe.log(doc)
