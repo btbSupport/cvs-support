@@ -160,8 +160,8 @@ doc_events = {
         "on_update": "btb_cvs_support.events.stock_entry.after_upsert"
     },
     "Quotation Item": {
-        "after_insert": "btb_cvs_support.events.quotation_item.after_upsert",
-        "on_update": "btb_cvs_support.events.quotation_item.after_upsert"
+        "before_insert": "btb_cvs_support.events.quotation_item.after_upsert",
+        "before_update": "btb_cvs_support.events.quotation_item.after_upsert"
     }
 }
 # Scheduled Tasks
