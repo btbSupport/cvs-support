@@ -161,7 +161,7 @@ doc_events = {
     },
     "Quotation Item": {
         "before_insert": "btb_cvs_support.events.quotation_item.after_upsert",
-        "before_update": "btb_cvs_support.events.quotation_item.after_upsert"
+        "before_save": "btb_cvs_support.events.quotation_item.after_upsert"
     }
 }
 # Scheduled Tasks
