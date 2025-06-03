@@ -36,13 +36,13 @@
                         <div class="col grid-static-col col-xs-1">
                             <span>{{item.idx}}</span>
                         </div>
-                        <div class="col grid-static-col col-xs-1 " style="" data-fieldname="item_code"
+                        <div  title="{{item.item_code}}" class="col grid-static-col col-xs-1 " style="" data-fieldname="item_code"
                             data-fieldtype="Link">
                             <div class="field-area" style="display: none;"></div>
                             <div class="static-area ellipsis"><a href="/app/item/{{item.item_code}}" data-doctype="Item"
                                     data-name="{{item.item_code}}" data-value="{{item.item_code}}">{{item.item_code}}</a></div>
                         </div>
-                        <div class="col grid-static-col col-xs-4 ">
+                        <div title="{{item.description}}" class="col grid-static-col col-xs-4 " data-fieldtype="Text Editor">
                             {{item.description}}
                         </div>
                         <div class="col grid-static-col col-xs-1 text-right bold" data-fieldname="qty" data-fieldtype="Float">
