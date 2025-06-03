@@ -3,15 +3,16 @@ import frappe
 
 
 @frappe.whitelist()
-def get_quotation_items(quote_name: str):
+def get_quotation_items(quote_name: str,currency:str):
     print('quote_name : ',quote_name)
+    print('quote_name currency : ',currency)
     items = get_items(quote_name)
     count = 1
     total = 0
     for item in items: 
         item["idx"] = count
         count += 1
-    return frappe.frappe.render_template("btb_cvs_support/api/onecpq_quote_item.html", {"items": items})
+    return frappe.frappe.render_template("btb_cvs_support/api/onecpq_quote_item.html", {"items": items,"currency":currency})
 
 @frappe.whitelist()
 def get_items(quote_name: str):

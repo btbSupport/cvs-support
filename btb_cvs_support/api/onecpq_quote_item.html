@@ -7,23 +7,23 @@
                     <div class="col grid-static-col col-xs-1">
                         <span>No.</span>
                     </div>
-                    <div class="col grid-static-col col-xs-2">
+                    <div class="col grid-static-col col-xs-1">
                         <div class="static-area ellipsis">Item Code</div>
                     </div>
-                    <div class="col grid-static-col col-xs-3">
+                    <div class="col grid-static-col col-xs-4">
                         <div class="static-area ellipsis">Description</div>
                     </div>
-                    <div class="col grid-static-col col-xs-2">
+                    <div class="col grid-static-col col-xs-1" >
+                        <div class="static-area ellipsis">Quantity</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-1">
                         <div class="static-area ellipsis">UOM</div>
                     </div>
                     <div class="col grid-static-col col-xs-2" >
-                        <div class="static-area ellipsis">Quantity</div>
+                        <div class="static-area ellipsis text-right">Rate ({{currency}})</div>
                     </div>
-                    <div class="col grid-static-col col-xs-2" >
-                        <div class="static-area ellipsis">Rate</div>
-                    </div>
-                    <div class="col grid-static-col col-xs-2" >
-                        <div class="static-area ellipsis">Amount</div>
+                    <div class="col grid-static-col col-xs-2" style="justify-content:right" >
+                        <div class="static-area ellipsis text-right">Amount ({{currency}})</div>
                     </div>
                 </div>
             </div>
@@ -36,26 +36,26 @@
                         <div class="col grid-static-col col-xs-1">
                             <span>{{item.idx}}</span>
                         </div>
-                        <div class="col grid-static-col col-xs-2 " style="" data-fieldname="item_code"
+                        <div class="col grid-static-col col-xs-1 " style="" data-fieldname="item_code"
                             data-fieldtype="Link">
                             <div class="field-area" style="display: none;"></div>
                             <div class="static-area ellipsis"><a href="/app/item/{{item.item_code}}" data-doctype="Item"
                                     data-name="{{item.item_code}}" data-value="{{item.item_code}}">{{item.item_code}}</a></div>
                         </div>
-                        <div class="col grid-static-col col-xs-3 ">
+                        <div class="col grid-static-col col-xs-4 ">
                             {{item.description}}
                         </div>
-                        <div class="col grid-static-col col-xs-2 ">
-                            {{item.stock_uom}}
+                        <div class="col grid-static-col col-xs-1 text-right bold" data-fieldname="qty" data-fieldtype="Float">
+                            {{"{0:0.0f}".format(item.stock_qty)}}
                         </div>
-                        <div class="col grid-static-col col-xs-2 ">
-                            {{item.stock_qty}}
+                        <div class="col grid-static-col col-xs-1 bold"  data-fieldname="uom">
+                            {{item.uom}}
                         </div>
-                        <div class="col grid-static-col col-xs-2 ">
-                            {{item.rate}}
+                        <div class="col grid-static-col col-xs-2 text-right bold"  data-fieldname="rate" data-fieldtype="Currency">
+                            {{"{0:0.2f}".format(item.rate)}}
                         </div>
-                        <div class="col grid-static-col col-xs-2 ">
-                            {{item.amount}}
+                        <div class="col grid-static-col col-xs-2 text-right"  style="justify-content:right" data-fieldname="amount" data-fieldtype="Currency">
+                            {{"{0:0.2f}".format(item.amount)}}
                         </div>
                     </div>
                 </div>
