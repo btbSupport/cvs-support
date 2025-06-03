@@ -1,0 +1,68 @@
+<label class="control-label">Items</label>
+<div class="form-grid-container">
+    <div class="form-grid">
+        <div class="grid-heading-row">
+            <div class="grid-row">
+                <div class="data-row row m-0">
+                    <div class="col grid-static-col col-xs-1">
+                        <span>No.</span>
+                    </div>
+                    <div class="col grid-static-col col-xs-2">
+                        <div class="static-area ellipsis">Item Code</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-3">
+                        <div class="static-area ellipsis">Description</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-2">
+                        <div class="static-area ellipsis">UOM</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-2" >
+                        <div class="static-area ellipsis">Quantity</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-2" >
+                        <div class="static-area ellipsis">Rate</div>
+                    </div>
+                    <div class="col grid-static-col col-xs-2" >
+                        <div class="static-area ellipsis">Amount</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-body">
+            <div class="rows">
+                {% for item in items %}
+                <div class="grid-row" data-name="{{item.name}}" data-idx="{{item.idx}}">
+                    <div class="data-row row m-0">
+                        <div class="col grid-static-col col-xs-1">
+                            <span>{{item.idx}}</span>
+                        </div>
+                        <div class="col grid-static-col col-xs-2 " style="" data-fieldname="item_code"
+                            data-fieldtype="Link">
+                            <div class="field-area" style="display: none;"></div>
+                            <div class="static-area ellipsis"><a href="/app/item/{{item.item_code}}" data-doctype="Item"
+                                    data-name="{{item.item_code}}" data-value="{{item.item_code}}">{{item.item_code}}</a></div>
+                        </div>
+                        <div class="col grid-static-col col-xs-3 ">
+                            {{item.description}}
+                        </div>
+                        <div class="col grid-static-col col-xs-2 ">
+                            {{item.stock_uom}}
+                        </div>
+                        <div class="col grid-static-col col-xs-2 ">
+                            {{item.stock_qty}}
+                        </div>
+                        <div class="col grid-static-col col-xs-2 ">
+                            {{item.rate}}
+                        </div>
+                        <div class="col grid-static-col col-xs-2 ">
+                            {{item.amount}}
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+  
+</div>
