@@ -16,3 +16,6 @@ def after_upsert(doc, method = None):
         doc.item_code = items[0].item_code
         doc.description = items[0].title
         doc.uom = items[0].stock_uom
+        
+def on_trash(doc, method = None):
+    print("calling quote line item delete ",doc)
