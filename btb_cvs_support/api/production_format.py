@@ -183,7 +183,7 @@ def getKey( features, key):
 
 def populate_product_family_map() -> Dict[str, 'ProductInfo']:
     base_path = os.path.dirname(__file__)  # Path to the current .py file
-    file_path = os.path.join(base_path, 'productionsheet_format.json')
+    file_path = os.path.join('../',base_path, 'productionsheet_format.json')
     with open(file_path, 'r') as f:
         setting_json = json.load(f)
     return json.loads(json.dumps(setting_json))
