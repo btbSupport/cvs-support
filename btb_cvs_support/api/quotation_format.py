@@ -60,7 +60,7 @@ def get_company_info() -> Dict:
 
 def populate_product_family_map() -> Dict[str, 'ProductInfo']:
     base_path = os.path.dirname(__file__)  # Path to the current .py file
-    file_path = os.path.join(base_path, 'quote_format.json')
+    file_path = os.path.join(base_path, 'quote_format.JSON')
     with open(file_path, 'r') as f:
         setting_json = json.load(f)
     # with open('./quote_format.JSON') as quote_format_file:
