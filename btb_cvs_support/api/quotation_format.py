@@ -1,4 +1,4 @@
-import json
+import simplejson as json
 import re
 from decimal import Decimal
 from typing import Dict, List, Union
@@ -6,29 +6,56 @@ import frappe
 import os
 import pandas as pd
 import numpy as np
+from ..document.generator import *
 
+
+def decimal_serializer(obj):
+    if isinstance(obj, Decimal):
+        return str(round(obj,2))
+    raise TypeError('Type not serializable + '+obj)
 # class quotation_format:
 fti_cache ={}
-def provide( params: Dict[str, str]) -> Dict:
-    quote_id = params.get("Id")
-    return populate_cart_items(quote_id)
-
-def populate_cart_items( quote_id: str) -> Dict:
-    output = {
-        "cartItem": populate_cart_detail(quote_id),
-        "companyInfo": get_company_info(quote_id)
+# def provide( params: Dict[str, str]) -> Dict:
+#     quote_id = params.get("Id")
+#     return populate_cart_items(quote_id)
+@frappe.whitelist()
+def provide( quote_name: str) -> Dict:
+    output = {"ci": {
+        "cartItem": populate_cart_detail(quote_name),
+        "companyInfo": get_company_info()
+    },
+    "qt": get_quote_details(quote_name)
     }
-    # print("result -", output)
-    return json.loads(json.dumps(output))
+    print("result -", output)
+    file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation.docx"
+    # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
+    generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".pdf")
 
-def get_company_info( quote_id: str) -> Dict:
-    country = "SampleCountry"  # Pretend fetched from Quote via ORM
+    return json.loads(json.dumps(output,default=decimal_serializer))
+
+def get_quote_details( quote_name: str) -> Dict:
+    sql = f""" select customer_name,address_display,contact_display,contact_designation,contact_mobile,contact_email,subject,project,name,terms,quotation_term_details,letter_details,standard_tc_details,grand_total,total_taxes_and_charges,net_total,discount_amount,additional_discount_percentage,total  from `tabQuotation` tqi where name ='{quote_name}'
+    """
+    items = frappe.db.sql(sql, as_dict=1)
+    items[0]["grand_total"]=get_decimal(items[0]["grand_total"])
+    items[0]["total_taxes_and_charges"]=get_decimal(items[0]["total_taxes_and_charges"])
+    items[0]["net_total"]=get_decimal(items[0]["net_total"])
+    items[0]["discount_amount"]=get_decimal(items[0]["discount_amount"])
+    items[0]["additional_discount_percentage"]=get_decimal(items[0]["additional_discount_percentage"])
+    items[0]["total"]=get_decimal(items[0]["total"])
+    return items[0]
+
+def get_company_info() -> Dict:
+    sql = f""" select name,default_currency ,email  from tabCompany tc 
+    """
+    items = frappe.db.sql(sql, as_dict=1)
     return {
-        "Name": "Company ABC",
-        "Country": country,
-        "City": "Sample City",
-        "Email": "info@example.com"
+        "Email": items[0].email,
+        "currency": items[0].default_currency,
+        "name": items[0].name
     }
+
+
 
 def populate_product_family_map() -> Dict[str, 'ProductInfo']:
     base_path = os.path.dirname(__file__)  # Path to the current .py file
@@ -50,8 +77,8 @@ class ProductRootNode:
     def __init__(self, prd_name: str, prd_code: str):
         self.productCode = prd_code
         self.productName = prd_name
-        self.productTotal = Decimal(0)
-        self.totalqty = Decimal(0)
+        self.productTotal = 0
+        self.totalqty = 0
         self.items = {}
 
 class ChildNode:
@@ -77,7 +104,7 @@ def get_key( features: Dict[str, Dict], key: str) -> str:
 
 def get_decimal( val) -> Decimal:
     try:
-        return Decimal(str(val))
+        return round(Decimal(str(val)),2)
     except:
         return Decimal(0)
 @frappe.whitelist()
@@ -100,38 +127,35 @@ def populate_cart_detail( quote_id: str) -> Dict[str, 'ProductRootNode']:
         if root_key not in keys:
             prefix = get_prefix(str(len(keys)))
             keys[root_key] = f"{prefix}{root_key}"
-            output[keys[root_key]] = ProductRootNode(sub_category, product_code)
+            output[keys[root_key]] = ProductRootNode(sub_category, product_code).__dict__
 
         prd_root_node = output[keys[root_key]]
-        model_group_node = prd_root_node.items
+        model_group_node = prd_root_node.get('items')
         group_key = get_key(cart_model, product_family_map[product_code]['headerKey'])
 
         if group_key not in child_keys:
             prefix = get_prefix(str(len(child_keys)))
             child_keys[group_key] = f"{prefix}{group_key}"
-            c_node = ChildNode()
-            c_node.modelName = get_key(cart_model, 'modelDescription')
-            c_node.headers = populate_header_values(cart_model, product_family_map[product_code]['header'])
-            c_node.headersDisplay = populate_header_display(c_node.headers)
-            c_node.details = []
-            c_node.summary = {}
+            c_node = ChildNode().__dict__
+            c_node["modelName"] = get_key(cart_model, 'modelDescription')
+            c_node["headers"] = populate_header_values(cart_model, product_family_map[product_code]['header'])
+            c_node["headersDisplay"] = populate_header_display(c_node.get("headers"))
+            c_node["details"] = []
+            c_node["summary"] = {}
             model_group_node[child_keys[group_key]] = c_node
 
-        model_group_node[child_keys[group_key]].details.append(
+        model_group_node[child_keys[group_key]]["details"].append(
             populate_detail(cart_model, product_family_map[product_code]['detail'])
         )
-        model_group_node[child_keys[group_key]].summary = populate_summary(
+        model_group_node[child_keys[group_key]]["summary"] = populate_summary(
             cart_model,
             product_family_map[product_code]['summary'],
-            model_group_node[child_keys[group_key]].summary
+            model_group_node[child_keys[group_key]]["summary"]
         )
-        prd_root_node.productTotal += get_decimal(get_key(cart_model, 'beforeDiscount'))
-        prd_root_node.totalqty += get_decimal(get_key(cart_model, 'qty'))
-        prd_root_node.items = model_group_node
-    # print(prd_root_node.__dict__)
-    # print('prdnode :',prd_root_node.__dict__.get('items').get('000000None-FTV55-FTV757-FTV441-FTV447-0.8-0.6-FTV49-FTV753-FTV246-FTV246').__dict__)
+        prd_root_node["productTotal"] += get_decimal(get_key(cart_model, 'beforeDiscount'))
+        prd_root_node["totalqty"] += round(get_decimal(get_key(cart_model, 'qty')),0)
+        prd_root_node["items"] = model_group_node
     return output
-    # return json.loads(json.dumps(output.__dict__,indent=4))
 
 def populate_header_values( features, header_map):
     output = []
@@ -144,7 +168,7 @@ def populate_header_display( headers: List[Dict]) -> List['Display']:
     output = []
     for i in range(0, len(headers), 2):
         if i+1 < len(headers):
-            output.append(Display(headers[i], headers[i+1]))
+            output.append(Display(headers[i], headers[i+1]).__dict__)
     return output
 
 def populate_detail( features, keys) -> Dict:
@@ -154,6 +178,7 @@ def populate_summary( features, keys, summ: Dict) -> Dict:
     for k in keys.split(","):
         if k in features:
             summ[k] = summ.get(k, Decimal(0)) + get_decimal(features[k]["value"])
+            if(k=='qty') : summ[k] = round(summ[k],0)
     return summ
 
 def populate_value( features, formula: str) -> Union[str, Decimal]:
@@ -172,10 +197,10 @@ def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
     output =[]
     # print('fti_cache : ',fti_cache)
     for group_name, df_group in cartItems:
-        print ('inside 1st loop')
+        # print ('inside 1st loop')
         item =  {}
         for row_index, row in df_group.iterrows():
-            print ('loop2')
+            # print ('loop2')
             if(item == {}):
                 item =  {
                 "cartProductName": {"value": row.itemName},
@@ -192,7 +217,7 @@ def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
             if(row.obj_type != None):value = fti_cache.get(row.cif_value)
             item[row.Field]={"label": row.label, "value": value}
         output.append(item)
-    print("output final - ",output)
+    # print("output final - ",output)
     return output   
 
 def get_cart_items( quote_id: str) -> List[Dict[str, any]]:
