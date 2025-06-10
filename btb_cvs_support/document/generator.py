@@ -18,7 +18,6 @@ def generate(template_path:str, datasource: dict, **kwargs):
         "file": open(template_path, "rb")
     }
     response = requests.post(url, data = data, files = files)
-    print(response.text)
     file_name =  kwargs.get("file_name", "output.pdf")
     file_url = '/private/files/'+file_name
     file_path = frappe.utils.get_bench_path()+'/sites/'+frappe.utils.get_site_base_path()[2:]+file_url
