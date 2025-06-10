@@ -1,5 +1,5 @@
 {
-    "SKU35": {
+    "MSFD-AC35": {
       "headerKey": "materialType,frameThickness,sleeveSelection,sleeveThickness,rating,leakageClass,classTemperature,maxSingleSectionWidth,maxSingleSectionHeight,mounting,maxMultiSectionWidth,maxMultiSectionHeight,storOrDtorOption,linkTemperature,actuatorBrand,actuatorPower,actuatorMounting,auxSwitch,bladeSwitchPackage,smokeDetector,bladeOperations,transition,transitionThickness",
       "header": {
         "Material": "materialType",
@@ -43,7 +43,7 @@
       "detail": "width,height,tag,qty,rate,amount,diameter,fittingType,unitPrice,beforeDiscount",
       "summary": "qty,rate,amount,beforeDiscount"
     },
-    "SKU37": {
+    "CFD-M37": {
       "headerKey": "materialType,frameThickness,sleeveType,sleeveThickness,sleeveLength,rating,fittingType,fittingThickness,maxUlSingleSectionWidth,maxUlSingleSectionHeight,mounting,maxMultiSectionWidth,maxMultiSectionWidth2,maxMultiSectionHeight,limitSwitchRequired,fusibleLinkTemp",
       "header": {
         "Material": "materialType",
@@ -112,7 +112,7 @@
       "detail": "width,height,tag,qty,rate,amount,diameter,transition,unitPrice,beforeDiscount",
       "summary": "qty,rate,amount,beforeDiscount"
     },
-    "SKU36": {
+    "SIL36": {
       "headerKey": "model,materialType,subCategory,infillType,constructionStandard,airTightness,casingThickness,perfThickness,orientation,infillProtection,removableBaffle,accessPanel",
       "header": {
         "Model": "model",
