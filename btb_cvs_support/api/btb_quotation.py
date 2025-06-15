@@ -69,7 +69,7 @@ def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
     return output  
 def get_featuretype_items( tabName:str, data_text_field:str, values: List[str],fti:str):
     sql = f"""
-    select * from `tab{tabName}` where name in ({"'","','".join(values),"'"})
+    select * from `tab{tabName}` where name in {'',''.join(values)})
     """
     frappe.log(sql)
     result = frappe.db.sql(sql, as_dict=1)
