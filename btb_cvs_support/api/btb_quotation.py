@@ -71,6 +71,7 @@ def get_featuretype_items( tabName:str, data_text_field:str, values: List[str],f
     sql = f"""
     select * from `tab{tabName}` where name in ({"'","','".join(values),"'"})
     """
+    frappe.log(sql)
     result = frappe.db.sql(sql, as_dict=1)
     for i in result:
         fti_cache[fti] = i[data_text_field]
