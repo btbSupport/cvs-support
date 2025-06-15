@@ -5,13 +5,13 @@ import pandas as pd
 fti_cache ={}
 
 def populate_cart_item_model( quote_name):
-    cartItems = get_cart_items(quote_name)
+    cartItems = get_synced_cart_items(quote_name)
     populate_featuretype_items(cartItems)
     return populate_cart_models(cartItems)
 
 
 @frappe.whitelist()
-def get_cart_items( quote_name: str) -> List[Dict[str, any]]:
+def get_synced_cart_items( quote_name: str) -> List[Dict[str, any]]:
     sql = f""" select tbc.name,tbc.Unit_Price,tbc.discount , tbc.Sequence, tbc.Quantity, tbc.Title,
         i.Name itemName, i.item_code, tbf.Field, tbf.label ,
         tbcif.value cif_value,tbfti.value fti_value,tbfti.`object` obj_value,tbft.object_type obj_type,tbft.data_text_field 
@@ -42,7 +42,7 @@ def populate_featuretype_items( cartItems):
             if(key == None): continue
             fti = ftis.get(key)
             obj = key.split("-")
-            get_featuretype_items(obj[0],obj[1],fti,obj[2])
+            if(obj[0] !='') : get_featuretype_items(obj[0],obj[1],fti,obj[2])
 
 def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
     output =[]
@@ -69,7 +69,7 @@ def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
     return output  
 def get_featuretype_items( tabName:str, data_text_field:str, values: List[str],fti:str):
     sql = f"""
-    select * from `tab{tabName}` where name in {'',''.join(values)}
+    select * from `tab{tabName}` where name in ({"'","','".join(values),"'"})
     """
     result = frappe.db.sql(sql, as_dict=1)
     for i in result:
@@ -82,3 +82,24 @@ def getQuoteById( quote_name):
 		select *  from `tabQuotation` tqi where name ='{quote_name}'
 	"""
     return frappe.db.sql(sql, as_dict=1)[0]
+
+
+@frappe.whitelist()
+def applyDiscount( quote_name: str,discount:float):
+    cartItems = get_cart_items(quote_name)
+    print(cartItems)
+    for item in cartItems:
+        item = frappe.frappe.get_doc("BtbCartItem", item.name)
+        item.discount = discount
+        item.save()
+
+@frappe.whitelist()
+def get_cart_items( quote_name: str) :
+    sql = f""" select name,discount
+    from tabBtbCartItem tbc where tbc.cart in (
+    select parent from `tabBtbCartLink` where entity='{quote_name}'
+    )
+    
+    """
+    items = frappe.db.sql(sql, as_dict=1)
+    return items
