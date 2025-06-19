@@ -21,7 +21,7 @@
         "Blade Operations": "bladeOperations",
         "Transition": "CONCAT(transition,string - ,transitionThickness,string mm)"
       },
-      "detail": "width,height,tag,qty,rate,amount,diameter,transition,unitPrice,beforeDiscount",
+      "detail": "width,height,tagref,notes,qty,rate,amount,diameter,transition,unitPrice,beforeDiscount",
       "summary": "qty,rate,amount,beforeDiscount"
     },
     "CFD29": {
@@ -40,7 +40,7 @@
         "Micro Switch Indicator Package": "limitSwitchRequired",
         "Heat Response": "fusibleLinkTemp"
       },
-      "detail": "width,height,tag,qty,rate,amount,diameter,fittingType,unitPrice,beforeDiscount",
+      "detail": "width,height,tagref,notes,qty,rate,amount,diameter,fittingType,unitPrice,beforeDiscount",
       "summary": "qty,rate,amount,beforeDiscount"
     },
     "CFD-M37": {
@@ -59,7 +59,7 @@
         "Micro Switch Indicator Package": "limitSwitchRequired",
         "Heat Response": "fusibleLinkTemp"
       },
-      "detail": "width,height,tag,qty,rate,amount,diameter,fittingType,unitPrice,beforeDiscount",
+      "detail": "width,height,tagref,notes,qty,rate,amount,diameter,fittingType,unitPrice,beforeDiscount",
       "summary": "qty,rate,amount,beforeDiscount"
     },
     "ULRD34": {
@@ -84,7 +84,7 @@
         "Junction Box":"junctionBox",
         "MTS Option":"mtsOption"
       },
-      "detail": "tag,diameter,frameDepth,qty,rate,amount,unitPrice,beforeDiscount,transitionType,transitionDiameter,transitionLength,transitionDiameter2,transitionLength2",
+      "detail": "tagref,notes,diameter,frameDepth,qty,rate,amount,unitPrice,beforeDiscount,transitionType,transitionDiameter,transitionLength,transitionDiameter2,transitionLength2",
       "summary": "qty,rate,amount,beforeDiscount"
     },
     "MSFD-AC": {
@@ -109,7 +109,7 @@
         "Blade Operations": "bladeOperations",
         "Transition": "CONCAT(transition,string - ,transitionThickness,string mm)"
       },
-      "detail": "width,height,tag,qty,rate,amount,diameter,transition,unitPrice,beforeDiscount",
+      "detail": "width,height,tagref,notes,qty,rate,amount,diameter,transition,unitPrice,beforeDiscount",
       "summary": "qty,rate,amount,beforeDiscount"
     },
     "SIL36": {
@@ -128,7 +128,7 @@
         "Panel Type":"panelType",
         "Access Panel":"accessPanel"
       },
-      "detail": "tagRef,widthWi,heightHi,lengthLi,optionFlangeangle,assemblyType,qty,rate,amount,unitPrice,beforeDiscount",
+      "detail": "tagref,notes,widthWi,heightHi,lengthLi,optionFlangeangle,assemblyType,qty,rate,amount,unitPrice,beforeDiscount",
       "summary": "qty,rate,amount,beforeDiscount"
     },
     "VCD-A38": {
@@ -151,7 +151,7 @@
         "Aux Switch":"auxSwitch",
         "Power Supply":"powerSupply"
       },
-      "detail": "tagRef,width,height,qty,rate,amount,unitPrice,beforeDiscount",
+      "detail": "tagref,notes,width,height,qty,rate,amount,unitPrice,beforeDiscount",
       "summary": "qty,rate,amount,beforeDiscount"
     },
 
@@ -175,7 +175,7 @@
         "Aux Switch":"actuatorAuxSwitch",
         "Power Supply":"actuatorPowerSupply"
       },
-      "detail": "tagRef,diameter,frameDepth,qty,rate,amount,unitPrice,beforeDiscount",
+      "detail": "tagref,notes,diameter,frameDepth,qty,rate,amount,unitPrice,beforeDiscount",
       "summary": "qty,rate,amount,beforeDiscount"
     }
   }
