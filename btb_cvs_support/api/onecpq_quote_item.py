@@ -33,6 +33,6 @@ def get_quotation_onecpq_total(quote_name: str,currency:str):
     for item in items: 
         quote["totalUnitPrice"] += item.unit_price
         quote["totalLineDiscount"] +=  ((item.unit_price) * item.ciDiscount/100)
-    if(items.len() >0) : quote["totalLineDiscountPercentage"] = (quote["totalLineDiscount"]/quote["totalUnitPrice"])*100
+    if(len(items) >0) : quote["totalLineDiscountPercentage"] = (quote["totalLineDiscount"]/quote["totalUnitPrice"])*100
     else : quote["totalLineDiscountPercentage"] = 0
     return frappe.frappe.render_template("btb_cvs_support/api/onecpq_quote_total.html", {"cpqTotal": quote,"currency":currency})
