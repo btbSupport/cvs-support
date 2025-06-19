@@ -160,11 +160,15 @@ doc_events = {
         "on_update": "btb_cvs_support.events.stock_entry.after_upsert"
     },
     "Quotation Item": {
-        "before_insert": "btb_cvs_support.events.quotation_item.after_upsert",
-        "before_save": "btb_cvs_support.events.quotation_item.after_upsert"
+        "before_insert": "btb_cvs_support.events.quotation_item.before_upsert",
+        "before_save": "btb_cvs_support.events.quotation_item.before_upsert"
     },
     "Quotation": {
-        "on_update": "btb_cvs_support.events.onecpq_quote.remove_quotation_items"
+        "on_update": "btb_cvs_support.events.onecpq_quote.remove_quotation_items",
+        "before_save": "btb_cvs_support.events.onecpq_quote.before_save_quote"
+    },
+    "BtbCartItem": {
+        "on_update": "btb_cvs_support.events.onecpq_quote.proceed_cart_item_link"
     }
 }
 # Scheduled Tasks

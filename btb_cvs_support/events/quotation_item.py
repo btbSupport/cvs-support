@@ -1,6 +1,6 @@
 import frappe
 
-def after_upsert(doc, method = None):
+def before_upsert(doc, method = None):
     print("calling quote line item sync ",doc)
     sql = f"""
          select i.item_code,i.description,i.stock_uom,tbci.title from tabBtbCartItemFeature tbcif 
