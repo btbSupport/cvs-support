@@ -7,23 +7,29 @@
                     <div class="col grid-static-col col-xs-1">
                         <span>No.</span>
                     </div>
-                    <div class="col grid-static-col col-xs-1">
+                    <div  title="Item Code" class="col grid-static-col col-xs-1">
                         <div class="static-area ellipsis">Item Code</div>
                     </div>
-                    <div class="col grid-static-col col-xs-4">
+                    <div  title="Description" class="col grid-static-col col-xs-4">
                         <div class="static-area ellipsis">Description</div>
                     </div>
-                    <div class="col grid-static-col col-xs-1" >
+                    <div  title="Quantity" class="col grid-static-col col-xs-1" >
                         <div class="static-area ellipsis">Quantity</div>
                     </div>
-                    <div class="col grid-static-col col-xs-1">
+                    <div  title="UOM" class="col grid-static-col col-xs-1">
                         <div class="static-area ellipsis">UOM</div>
                     </div>
-                    <div class="col grid-static-col col-xs-2" >
+                    <div  title="Rate ({{currency}})" class="col grid-static-col col-xs-1" >
                         <div class="static-area ellipsis text-right">Rate ({{currency}})</div>
                     </div>
-                    <div class="col grid-static-col col-xs-2" style="justify-content:right" >
+                    <div  title="Net Rate ({{currency}})" class="col grid-static-col col-xs-1" >
+                        <div class="static-area ellipsis text-right">Net Rate ({{currency}})</div>
+                    </div>
+                    <div  title="Amount ({{currency}})" class="col grid-static-col col-xs-1" style="justify-content:right" >
                         <div class="static-area ellipsis text-right">Amount ({{currency}})</div>
+                    </div>
+                    <div  title="Net Amount ({{currency}})" class="col grid-static-col col-xs-1" style="justify-content:right" >
+                        <div class="static-area ellipsis text-right">Net Amount ({{currency}})</div>
                     </div>
                 </div>
             </div>
@@ -51,11 +57,17 @@
                         <div class="col grid-static-col col-xs-1 bold"  data-fieldname="uom">
                             {{item.uom}}
                         </div>
-                        <div class="col grid-static-col col-xs-2 text-right bold"  data-fieldname="rate" data-fieldtype="Currency">
+                        <div class="col grid-static-col col-xs-1 text-right bold"  data-fieldname="rate" data-fieldtype="Currency">
                             {{"{0:0.2f}".format(item.rate)}}
                         </div>
-                        <div class="col grid-static-col col-xs-2 text-right"  style="justify-content:right" data-fieldname="amount" data-fieldtype="Currency">
+                        <div class="col grid-static-col col-xs-1 text-right bold"  data-fieldname="rate" data-fieldtype="Currency">
+                            {{"{0:0.2f}".format(item.net_rate)}}
+                        </div>
+                        <div class="col grid-static-col col-xs-1 text-right"  style="justify-content:right" data-fieldname="amount" data-fieldtype="Currency">
                             {{"{0:0.2f}".format(item.amount)}}
+                        </div>
+                        <div class="col grid-static-col col-xs-1 text-right"  style="justify-content:right" data-fieldname="amount" data-fieldtype="Currency">
+                            {{"{0:0.2f}".format(item.net_amount)}}
                         </div>
                     </div>
                 </div>
