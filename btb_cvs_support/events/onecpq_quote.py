@@ -50,6 +50,8 @@ def proceed_cart_item_link(doc, method = None):
 
 @frappe.whitelist()
 def before_save_quote(doc, method = None):
+    if(doc.custom_customizable):
+        doc.apply_discount_on = 'Net Total'
     if(doc.custom_customizable and doc.additional_discount_percentage != doc.custom_cart_discount):
         doc.additional_discount_percentage = doc.custom_cart_discount
         calculate_taxes_and_totals(doc)
