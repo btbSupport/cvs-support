@@ -2,6 +2,7 @@ import frappe
 import json
 from typing import Dict, List
 import pandas as pd
+from erpnext.controllers.taxes_and_totals import calculate_taxes_and_totals
 fti_cache ={}
 
 def populate_cart_item_model( quote_name):
@@ -76,6 +77,14 @@ def get_featuretype_items( tabName:str, data_text_field:str, values: List[str],f
     for i in result:
         fti_cache[fti] = i[data_text_field]
 
+@frappe.whitelist()
+def get_synced_items(quote_name: str):
+    sql = f"""
+        select tqi.*,tbci.idx,tbci.unit_price,tbci.discount ciDiscount,tbci.quantity ciQty  from `tabQuotation Item` tqi join tabBtbCartItem tbci on tbci.name=tqi.custom_cart_item  where tqi.parent ='{quote_name}'
+order by tbci.idx
+    """
+    items = frappe.db.sql(sql, as_dict=1)
+    return items
 
 @frappe.whitelist()
 def getQuoteById( quote_name):
@@ -93,6 +102,24 @@ def applyDiscount( quote_name: str,discount:float):
         item = frappe.frappe.get_doc("BtbCartItem", item.name)
         item.discount = discount
         item.save()
+    items = get_synced_items(quote_name)
+    doc = frappe.frappe.get_doc("Quotation", quote_name)
+    totalUnitPrice = 0
+    totalLineDiscount = 0
+    totalDiscountPercenatge = 0
+    totalLineDiscountPercentage = 0
+    for item in items: 
+        totalUnitPrice += (item.ciQty * item.unit_price)
+        totalLineDiscount +=  (item.ciQty * ((item.unit_price) * item.ciDiscount/100))
+    totalDiscount = totalLineDiscount + doc.discount_amount
+    if(totalUnitPrice>0) : 
+        totalDiscountPercenatge = (totalDiscount/totalUnitPrice) * 100
+        totalLineDiscountPercentage = (totalLineDiscount/totalUnitPrice) * 100
+    doc.custom_list_amount = totalUnitPrice
+    doc.custom_discount = totalLineDiscountPercentage
+    doc.custom_total_discount_amount = totalDiscount
+    doc.custom_total_discount = totalDiscountPercenatge
+    calculate_taxes_and_totals(doc)
 
 @frappe.whitelist()
 def get_cart_items( quote_name: str) :

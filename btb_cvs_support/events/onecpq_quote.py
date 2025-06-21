@@ -1,15 +1,8 @@
 import frappe
 from erpnext.controllers.taxes_and_totals import calculate_taxes_and_totals
+from ..api.onecpq_quote_item import *
 #DEV API Key = dd017c3d9d14afe:2aba5089f049917
 
-@frappe.whitelist()
-def get_synced_items(quote_name: str):
-    sql = f"""
-        select tqi.*,tbci.idx   from `tabQuotation Item` tqi join tabBtbCartItem tbci on tbci.name=tqi.custom_cart_item  where tqi.parent ='{quote_name}'
-order by tbci.idx
-    """
-    items = frappe.db.sql(sql, as_dict=1)
-    return items
 @frappe.whitelist()
 def get_cart_item_links(quote_name: str):
     sql = f"""select name from tabBtbCartItemLink where entity='{quote_name}'"""
@@ -50,11 +43,28 @@ def proceed_cart_item_link(doc, method = None):
 
 @frappe.whitelist()
 def before_save_quote(doc, method = None):
+    if(doc.custom_customizable != 1): return
     if(doc.custom_customizable):
         doc.apply_discount_on = 'Net Total'
     if(doc.custom_customizable and doc.additional_discount_percentage != doc.custom_cart_discount):
         doc.additional_discount_percentage = doc.custom_cart_discount
-        calculate_taxes_and_totals(doc)
+    items = get_synced_items(doc.name)
+    totalUnitPrice = 0
+    totalLineDiscount = 0
+    totalDiscountPercenatge = 0
+    totalLineDiscountPercentage = 0
+    for item in items: 
+        totalUnitPrice += (item.ciQty * item.unit_price)
+        totalLineDiscount +=  (item.ciQty * ((item.unit_price) * item.ciDiscount/100))
+    totalDiscount = totalLineDiscount + doc.discount_amount
+    if(totalUnitPrice>0) : 
+        totalDiscountPercenatge = (totalDiscount/totalUnitPrice) * 100
+        totalLineDiscountPercentage = (totalLineDiscount/totalUnitPrice) * 100
+    doc.custom_list_amount = totalUnitPrice
+    doc.custom_discount = totalLineDiscountPercentage
+    doc.custom_total_discount_amount = totalDiscount
+    doc.custom_total_discount = totalDiscountPercenatge
+    calculate_taxes_and_totals(doc)
 
 @frappe.whitelist()
 def remove_quotation_items(doc, method = None):
