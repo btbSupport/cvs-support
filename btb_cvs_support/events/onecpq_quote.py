@@ -55,6 +55,7 @@ def proceed_cart_item_link(doc, method = None):
 
 @frappe.whitelist()
 def before_save_quote(doc, method = None):
+    if(doc ==None): return
     remove_quotation_items(doc)
     if(doc.custom_customizable == 1): 
         doc.apply_discount_on = 'Net Total'
