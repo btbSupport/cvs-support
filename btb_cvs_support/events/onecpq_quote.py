@@ -33,7 +33,7 @@ def get_items(quote_name: str):
 
 def before_save_cart(doc, method = None):
     if(doc.unit_price == 0): doc.valid = 0
-    
+
 def proceed_cart_item_link(doc, method = None):
     print('doc.unit_price : ',doc.unit_price)
     print('doc.valid : ',doc.valid)
@@ -88,6 +88,7 @@ def before_save_quote(doc, method = None):
     doc.custom_discount = totalLineDiscountPercentage
     doc.custom_total_discount_amount = totalDiscount
     doc.custom_total_discount = totalDiscountPercenatge
+    if(doc.custom_total_discount>32):frappe.throw('Total Discount % exceeds the approved limit.')
     print('doc after calc - items : ',doc.items)
 
 @frappe.whitelist()
