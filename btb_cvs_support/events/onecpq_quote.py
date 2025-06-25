@@ -4,6 +4,13 @@ from ..api.onecpq_quote_item import *
 #DEV API Key = dd017c3d9d14afe:2aba5089f049917
 
 @frappe.whitelist()
+def delete_links(doc, method = None):
+    sql = f"""select name from tabBtbCartItemLink where parent='{doc}'"""
+    for item in frappe.db.sql(sql, as_dict=1): 
+            frappe.delete_doc("BtbCartItemLink",item.name) == None
+    return
+
+@frappe.whitelist()
 def get_cart_item_links(quote_name: str):
     sql = f"""select name from tabBtbCartItemLink where entity='{quote_name}'"""
     items = frappe.db.sql(sql, as_dict=1)
@@ -24,12 +31,17 @@ def get_items(quote_name: str):
     items = frappe.db.sql(sql, as_dict=1)
     return items
 
+def before_save_cart(doc, method = None):
+    if(doc.unit_price == 0): doc.valid = 0
+    
 def proceed_cart_item_link(doc, method = None):
-    print('inside proceed_cart_item_link , doc.valid', doc.valid )
-    if(doc.unit_price == 0 and doc.valid == 1):
+    print('doc.unit_price : ',doc.unit_price)
+    print('doc.valid : ',doc.valid)
+    if(doc.unit_price == 0):
         sqlcil = f"""select name,entity from tabBtbCartItemLink where parent='{doc.name}'"""
         for item in frappe.db.sql(sqlcil, as_dict=1): 
             frappe.delete_doc("BtbCartItemLink",item.name) == None
+        print('doc.valid after: ',doc.valid)
         return
     if(doc.valid == 1):
         sql = f"""select entity  from tabBtbCartLink tbcl where parent ='{doc.cart}'
@@ -43,19 +55,31 @@ def proceed_cart_item_link(doc, method = None):
 
 @frappe.whitelist()
 def before_save_quote(doc, method = None):
-    if(doc.custom_customizable != 1): return
-    if(doc.custom_customizable):
+    remove_quotation_items(doc)
+    if(doc.custom_customizable == 1): 
         doc.apply_discount_on = 'Net Total'
-    if(doc.custom_customizable and doc.additional_discount_percentage != doc.custom_cart_discount):
-        doc.additional_discount_percentage = doc.custom_cart_discount
-    items = get_synced_items(doc.name)
+        if(doc.additional_discount_percentage != doc.custom_cart_discount):
+            doc.additional_discount_percentage = doc.custom_cart_discount
+    doc.items = []
+    syncItems = get_synced_items(doc.name)
+    items = get_items(doc.name)
+
+    print('doc before calc - items : ',syncItems)
+    print('doc before calc - discount amount : ',doc.discount_amount)
+    print('doc after calc - discount amount : ',doc.discount_amount)
     totalUnitPrice = 0
     totalLineDiscount = 0
     totalDiscountPercenatge = 0
     totalLineDiscountPercentage = 0
+
     for item in items: 
+        doc.items.append(frappe.frappe.get_doc("Quotation Item", item.name))
+    
+    for item in syncItems: 
         totalUnitPrice += (item.ciQty * item.unit_price)
         totalLineDiscount +=  (item.ciQty * ((item.unit_price) * item.ciDiscount/100))
+        doc.items.append(frappe.frappe.get_doc("Quotation Item", item.name))
+    calculate_taxes_and_totals(doc)
     totalDiscount = totalLineDiscount + doc.discount_amount
     if(totalUnitPrice>0) : 
         totalDiscountPercenatge = (totalDiscount/totalUnitPrice) * 100
@@ -64,13 +88,17 @@ def before_save_quote(doc, method = None):
     doc.custom_discount = totalLineDiscountPercentage
     doc.custom_total_discount_amount = totalDiscount
     doc.custom_total_discount = totalDiscountPercenatge
-    calculate_taxes_and_totals(doc)
+    print('doc after calc - items : ',doc.items)
 
 @frappe.whitelist()
-def remove_quotation_items(doc, method = None):
+def remove_quotation_items(doc):
     quote_name = doc.name
     customizable = doc.custom_customizable
     print('inside remove quote_name :',quote_name,' customizable :',customizable)
+    beforequote = getQuoteById(doc.name)
+    old_customizable = beforequote.custom_customizable
+    print('inside remove quote_name :',quote_name,' old_customizable :',old_customizable)
+    if(customizable == old_customizable): return
     items = []
     cartItemLinks = []
     if(customizable == 1): 
@@ -85,10 +113,7 @@ def remove_quotation_items(doc, method = None):
         cartItemLinks = get_cart_item_links(quote_name)
         for item in cartItemLinks: 
             frappe.delete_doc("BtbCartItemLink",item.name) == None
-    quoteOld = frappe.frappe.get_doc("Quotation", quote_name)
-    quote = frappe.frappe.get_doc("Quotation", quote_name)
-    calculate_taxes_and_totals(quote)
-    if(quote.total != quoteOld.total): quote.save()
+    print("inside remove quote_name end 102",quote_name)
 
 def populate_cart_item_links(quote_name:str,item:any):
     ci = frappe.frappe.new_doc("BtbCartItemLink")
@@ -98,8 +123,6 @@ def populate_cart_item_links(quote_name:str,item:any):
     ci.parenttype = "BtbCartItem"
     ci.parentfield = "cart_item_links"
     return ci
-
-   
-    
-
-    
+@frappe.whitelist()
+def on_trash(doc, method = None):
+    print('deleting cart',method)

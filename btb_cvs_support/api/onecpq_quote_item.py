@@ -19,7 +19,8 @@ def get_quotation_onecpq_total(quote_name: str,currency:str):
     print('quote_name : ',quote_name)
     print('quote_name currency : ',currency)
     quote = getQuoteById(quote_name)
-    return frappe.frappe.render_template("btb_cvs_support/api/onecpq_quote_total.html", {"cpqTotal": quote,"currency":currency})
+    if(quote != None): return frappe.frappe.render_template("btb_cvs_support/api/onecpq_quote_total.html", {"cpqTotal": quote,"currency":currency})
+    return None
 
 # @frappe.whitelist()
 # def get_quotation_onecpq_total(quote_name: str,currency:str):

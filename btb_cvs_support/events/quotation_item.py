@@ -2,6 +2,8 @@ import frappe
 
 def before_upsert(doc, method = None):
     print("calling quote line item sync ",doc)
+    print("calling quote line item sync doc.custom_cart_item ",doc.custom_cart_item)
+
     sql = f"""
          select i.item_code,i.description,i.stock_uom,tbci.title from tabBtbCartItemFeature tbcif 
         join tabBtbFeature tbf  on tbf.name = tbcif.feature  and tbf.field ='modelItem'
@@ -10,6 +12,8 @@ def before_upsert(doc, method = None):
         join tabBtbCartItem tbci on tbci.name  = '{doc.custom_cart_item}'
         where tbcif.parent  = '{doc.custom_cart_item}'
     """
+    print("calling quote line item sync sql",sql)
+
     items = frappe.db.sql(sql, as_dict=1)
     if len(items) > 0 :
         print("items inside qli ",items)
