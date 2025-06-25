@@ -54,8 +54,10 @@ def proceed_cart_item_link(doc, method = None):
             ci.save()
 
 @frappe.whitelist()
-def before_save_quote(doc, method = None):
-    if(doc ==None): return
+def before_save_quote(doc = None, method = None):
+    beforequote = getQuoteById(doc.name)
+    if(beforequote == None): return
+    if(doc is None): return
     remove_quotation_items(doc)
     if(doc.custom_customizable == 1): 
         doc.apply_discount_on = 'Net Total'
@@ -98,9 +100,8 @@ def remove_quotation_items(doc):
     customizable = doc.custom_customizable
     print('inside remove quote_name :',quote_name,' customizable :',customizable)
     beforequote = getQuoteById(doc.name)
-    old_customizable = beforequote.custom_customizable
-    print('inside remove quote_name :',quote_name,' old_customizable :',old_customizable)
-    if(customizable == old_customizable): return
+    if(beforequote == None): return
+    if(customizable == beforequote.custom_customizable): return
     items = []
     cartItemLinks = []
     if(customizable == 1): 
