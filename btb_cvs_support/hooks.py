@@ -274,7 +274,7 @@ fixtures = [
         "doctype": "Client Script",
         "filters": [
             ["name", "in", [
-                "opr_controller", "Order Processing Request-Client", "Delivery Note-Client", "Sales Order-Client"
+                "opr_controller", "Order Processing Request-Client", "Delivery Note-Client", "Sales Order-Client","Quotation_controller"
             ]]
         ]
     },
@@ -282,7 +282,9 @@ fixtures = [
         "doctype": "Custom Field",
         "filters": [
             ["fieldname", "in", [
-                "custom_manufactured_item", "custom_opr", "custom_sales_order", "custom_total_sqm", "custom_total_pcs", 
+                "custom_manufactured_item", "custom_opr", "custom_sales_order", "custom_total_sqm", "custom_total_pcs","custom_total_discount",
+"custom_total_discount_amount", "custom_list_amount", "custom_discount", "custom_onecpq_total", "custom_cart_discount",
+"custom_apply_discount", "custom_customizable", "custom_onecpq_items", "custom_cart"
             ]]
         ]
     }
