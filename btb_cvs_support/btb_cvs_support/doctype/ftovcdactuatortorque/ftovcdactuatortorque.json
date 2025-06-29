@@ -1,1 +1,68 @@
-{"allow_import":1,"allow_rename":1,"autoname":"format:FTO{#}","creation":"2025-04-10 20:14:35.1649","doctype":"DocType","engine":"InnoDB","fields":[{"fieldname":"currency_iso_code","fieldtype":"Select","label":"CurrencyIsoCode"},{"fieldname":"torque1","fieldtype":"Select","label":"Torque1__c"},{"fieldname":"torque2","fieldtype":"Select","label":"Torque2__c"},{"fieldname":"torque3","fieldtype":"Select","label":"Torque3__c"},{"fieldname":"torque4","fieldtype":"Select","label":"Torque4__c"}],"modified":"2025-04-10 20:14:35.1649","modified_by":"Administrator","module":"Btb Cvs Support","name":"FTOVCDActuatorTorque","naming_rule":"Expression","owner":"Administrator","permissions":[{"create":1,"delete":1,"email":1,"export":1,"print":1,"read":1,"report":1,"role":"System Manager","share":1,"write":1}],"sort_field":"modified","sort_order":"DESC"}
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:FTO{#}",
+ "creation": "2025-04-10 20:14:35.164900",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "torque1",
+  "torque2",
+  "column_break_dljn",
+  "torque3",
+  "torque4"
+ ],
+ "fields": [
+  {
+   "fieldname": "torque1",
+   "fieldtype": "Select",
+   "label": "Torque1"
+  },
+  {
+   "fieldname": "torque2",
+   "fieldtype": "Select",
+   "label": "Torque2"
+  },
+  {
+   "fieldname": "torque3",
+   "fieldtype": "Select",
+   "label": "Torque3"
+  },
+  {
+   "fieldname": "torque4",
+   "fieldtype": "Select",
+   "label": "Torque4"
+  },
+  {
+   "fieldname": "column_break_dljn",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2025-06-13 10:13:23.682498",
+ "modified_by": "Administrator",
+ "module": "Btb Cvs Support",
+ "name": "FTOVCDActuatorTorque",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

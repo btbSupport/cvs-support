@@ -1,1 +1,80 @@
-{"allow_import":1,"allow_rename":1,"autoname":"format:FTO{#}","creation":"2025-04-10 20:13:03.8110","doctype":"DocType","engine":"InnoDB","fields":[{"fieldname":"currency_iso_code","fieldtype":"Select","label":"CurrencyIsoCode"},{"fieldname":"model","fieldtype":"Data","label":"Model__c"},{"fieldname":"model_width","fieldtype":"Float","label":"ModelWidth__c"},{"fieldname":"baffle","fieldtype":"Float","label":"Baffle__c"},{"fieldname":"aw","fieldtype":"Float","label":"AW__c"},{"fieldname":"max_dev","fieldtype":"Float","label":"MaxDev__c"},{"fieldname":"free_area","fieldtype":"Float","label":"FreeArea__c"}],"modified":"2025-04-10 20:13:03.8110","modified_by":"Administrator","module":"Btb Cvs Support","name":"FTOSilencerModel","naming_rule":"Expression","owner":"Administrator","permissions":[{"create":1,"delete":1,"email":1,"export":1,"print":1,"read":1,"report":1,"role":"System Manager","share":1,"write":1}],"sort_field":"modified","sort_order":"DESC"}
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:FTO{#}",
+ "creation": "2025-04-10 20:13:03.811000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "model",
+  "baffle",
+  "max_dev",
+  "column_break_qvyc",
+  "model_width",
+  "aw",
+  "free_area"
+ ],
+ "fields": [
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "model_width",
+   "fieldtype": "Float",
+   "label": "ModelWidth"
+  },
+  {
+   "fieldname": "baffle",
+   "fieldtype": "Float",
+   "label": "Baffle"
+  },
+  {
+   "fieldname": "aw",
+   "fieldtype": "Float",
+   "label": "AW"
+  },
+  {
+   "fieldname": "max_dev",
+   "fieldtype": "Float",
+   "label": "MaxDev"
+  },
+  {
+   "fieldname": "free_area",
+   "fieldtype": "Float",
+   "label": "FreeArea"
+  },
+  {
+   "fieldname": "column_break_qvyc",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2025-06-13 10:15:12.020282",
+ "modified_by": "Administrator",
+ "module": "Btb Cvs Support",
+ "name": "FTOSilencerModel",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,1 +1,93 @@
-{"allow_import":1,"allow_rename":1,"autoname":"format:FTO{#}","creation":"2025-04-10 20:14:37.6900","doctype":"DocType","engine":"InnoDB","fields":[{"fieldname":"currency_iso_code","fieldtype":"Select","label":"CurrencyIsoCode"},{"fieldname":"damper_height","fieldtype":"Float","label":"DamperHeight__c"},{"fieldname":"dynamic_damper_horizontal_spring","fieldtype":"Data","label":"DynamicDamperHorizontalSpring__c"},{"fieldname":"dynamic_damper_vertical_spring","fieldtype":"Data","label":"DynamicDamperVerticalSpring__c"},{"fieldname":"standard_noof_blades","fieldtype":"Float","label":"StandardNoofBlades__c"},{"fieldname":"static_damper_spring_size","fieldtype":"Data","label":"StaticDamperSpringSize__c"},{"fieldname":"usl_noof_blades","fieldtype":"Float","label":"USLNoofBlades__c"},{"fieldname":"af_blade_inch_1","fieldtype":"Float","label":"AF_Blade_Inch_1__c"},{"fieldname":"af_of_blades_1","fieldtype":"Float","label":"AF_of_Blades_1__c"},{"fieldname":"static_damper_vertical_spring","fieldtype":"Data","label":"StaticDamperVerticalSpring__c"}],"modified":"2025-04-10 20:14:37.6900","modified_by":"Administrator","module":"Btb Cvs Support","name":"FTOBlade","naming_rule":"Expression","owner":"Administrator","permissions":[{"create":1,"delete":1,"email":1,"export":1,"print":1,"read":1,"report":1,"role":"System Manager","share":1,"write":1}],"sort_field":"modified","sort_order":"DESC"}
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:FTO{#}",
+ "creation": "2025-04-10 20:14:37.690000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "damper_height",
+  "dynamic_damper_horizontal_spring",
+  "dynamic_damper_vertical_spring",
+  "standard_noof_blades",
+  "static_damper_spring_size",
+  "usl_noof_blades",
+  "af_blade_inch_1",
+  "af_of_blades_1",
+  "static_damper_vertical_spring"
+ ],
+ "fields": [
+  {
+   "fieldname": "damper_height",
+   "fieldtype": "Float",
+   "label": "DamperHeight__c"
+  },
+  {
+   "fieldname": "dynamic_damper_horizontal_spring",
+   "fieldtype": "Data",
+   "label": "DynamicDamperHorizontalSpring__c"
+  },
+  {
+   "fieldname": "dynamic_damper_vertical_spring",
+   "fieldtype": "Data",
+   "label": "DynamicDamperVerticalSpring__c"
+  },
+  {
+   "fieldname": "standard_noof_blades",
+   "fieldtype": "Float",
+   "label": "StandardNoofBlades__c"
+  },
+  {
+   "fieldname": "static_damper_spring_size",
+   "fieldtype": "Data",
+   "label": "StaticDamperSpringSize__c"
+  },
+  {
+   "fieldname": "usl_noof_blades",
+   "fieldtype": "Float",
+   "label": "USLNoofBlades__c"
+  },
+  {
+   "fieldname": "af_blade_inch_1",
+   "fieldtype": "Float",
+   "label": "AF_Blade_Inch_1__c"
+  },
+  {
+   "fieldname": "af_of_blades_1",
+   "fieldtype": "Float",
+   "label": "AF_of_Blades_1__c"
+  },
+  {
+   "fieldname": "static_damper_vertical_spring",
+   "fieldtype": "Data",
+   "label": "StaticDamperVerticalSpring__c"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2025-06-13 10:11:04.381006",
+ "modified_by": "Administrator",
+ "module": "Btb Cvs Support",
+ "name": "FTOBlade",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

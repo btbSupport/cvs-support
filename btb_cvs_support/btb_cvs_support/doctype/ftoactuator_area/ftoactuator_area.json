@@ -1,47 +1,56 @@
 {
-    "allow_import": 1,
-    "allow_rename": 1,
-    "autoname": "format:FTO{#}",
-    "creation": "2025-04-10 20:14:41.7037",
-    "doctype": "DocType",
-    "engine": "InnoDB",
-    "fields": [
-        {
-            "fieldname": "currency_iso_code",
-            "fieldtype": "Select",
-            "label": "CurrencyIsoCode"
-        },
-        {
-            "fieldname": "area",
-            "fieldtype": "Float",
-            "label": "Area__c"
-        },
-        {
-            "fieldname": "key",
-            "fieldtype": "Data",
-            "label": "Key__c"
-        }
-    ],
-    "modified": "2025-04-10 20:14:41.7037",
-    "modified_by": "Administrator",
-    "module": "Btb Cvs Support",
-    "name": "FTOActuator_Area",
-    "naming_rule": "Expression",
-    "owner": "Administrator",
-    "permissions": [
-        {
-            "create": 1,
-            "delete": 1,
-            "email": 1,
-            "export": 1,
-            "print": 1,
-            "read": 1,
-            "report": 1,
-            "role": "System Manager",
-            "share": 1,
-            "write": 1
-        }
-    ],
-    "sort_field": "modified",
-    "sort_order": "DESC"
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:FTO{#}",
+ "creation": "2025-04-10 20:14:41.703700",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "key",
+  "column_break_alll",
+  "area"
+ ],
+ "fields": [
+  {
+   "fieldname": "area",
+   "fieldtype": "Float",
+   "label": "Area"
+  },
+  {
+   "fieldname": "key",
+   "fieldtype": "Data",
+   "label": "Key"
+  },
+  {
+   "fieldname": "column_break_alll",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2025-06-13 10:11:26.434283",
+ "modified_by": "Administrator",
+ "module": "Btb Cvs Support",
+ "name": "FTOActuator_Area",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
 }

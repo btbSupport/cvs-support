@@ -1,1 +1,68 @@
-{"allow_import":1,"allow_rename":1,"autoname":"format:FTO{#}","creation":"2025-04-10 20:14:39.5182","doctype":"DocType","engine":"InnoDB","fields":[{"fieldname":"currency_iso_code","fieldtype":"Select","label":"CurrencyIsoCode"},{"fieldname":"unique_id","fieldtype":"Data","label":"UniqueId__c"},{"fieldname":"model","fieldtype":"Data","label":"Model__c"},{"fieldname":"ulrd_valuation_rate","fieldtype":"Float","label":"ULRDValuationRate__c"},{"fieldname":"item_code","fieldtype":"Data","label":"ItemCode__c"}],"modified":"2025-04-10 20:14:39.5182","modified_by":"Administrator","module":"Btb Cvs Support","name":"FTOCVSActuator","naming_rule":"Expression","owner":"Administrator","permissions":[{"create":1,"delete":1,"email":1,"export":1,"print":1,"read":1,"report":1,"role":"System Manager","share":1,"write":1}],"sort_field":"modified","sort_order":"DESC"}
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:FTO{#}",
+ "creation": "2025-04-10 20:14:39.518200",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "unique_id",
+  "model",
+  "column_break_ayxy",
+  "item_code",
+  "ulrd_valuation_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "unique_id",
+   "fieldtype": "Data",
+   "label": "UniqueId"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "ulrd_valuation_rate",
+   "fieldtype": "Float",
+   "label": "ULRDValuationRate"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "label": "ItemCode"
+  },
+  {
+   "fieldname": "column_break_ayxy",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2025-06-13 10:12:10.903831",
+ "modified_by": "Administrator",
+ "module": "Btb Cvs Support",
+ "name": "FTOCVSActuator",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

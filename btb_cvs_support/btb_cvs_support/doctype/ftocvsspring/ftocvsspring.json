@@ -7,84 +7,75 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "currency_iso_code",
   "erp_item_code",
-  "gbp_unit_cost",
-  "length",
+  "spring_force",
+  "column_break_kwcd",
   "width",
-  "btb_rounded_cost",
-  "qatar",
-  "uae",
-  "ksa",
-  "egypt",
+  "length",
+  "cost_info",
   "cost",
-  "spring_force"
+  "column_break_ucpw",
+  "btb_rounded_cost",
+  "column_break_jaci",
+  "gbp_unit_cost"
  ],
  "fields": [
   {
-   "fieldname": "currency_iso_code",
-   "fieldtype": "Select",
-   "label": "CurrencyIsoCode"
-  },
-  {
    "fieldname": "erp_item_code",
    "fieldtype": "Data",
-   "label": "ERPItemCode__c"
+   "label": "ERPItemCode"
   },
   {
    "fieldname": "gbp_unit_cost",
    "fieldtype": "Float",
-   "label": "GBPUnitCost__c"
+   "label": "GBPUnitCost"
   },
   {
    "fieldname": "length",
    "fieldtype": "Float",
-   "label": "Length__c"
+   "label": "Length"
   },
   {
    "fieldname": "width",
    "fieldtype": "Float",
-   "label": "Width__c"
+   "label": "Width"
   },
   {
    "fieldname": "btb_rounded_cost",
    "fieldtype": "Float",
-   "label": "BtbRoundedCost__c"
-  },
-  {
-   "fieldname": "qatar",
-   "fieldtype": "Float",
-   "label": "Qatar__c"
-  },
-  {
-   "fieldname": "uae",
-   "fieldtype": "Float",
-   "label": "UAE__c"
-  },
-  {
-   "fieldname": "ksa",
-   "fieldtype": "Float",
-   "label": "KSA__c"
-  },
-  {
-   "fieldname": "egypt",
-   "fieldtype": "Float",
-   "label": "Egypt__c"
+   "label": "BtbRoundedCost"
   },
   {
    "fieldname": "spring_force",
    "fieldtype": "Float",
-   "label": "SpringForce__c"
+   "label": "SpringForce"
   },
   {
    "fieldname": "cost",
    "fieldtype": "Float",
    "label": "Cost"
+  },
+  {
+   "fieldname": "column_break_kwcd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost_info",
+   "fieldtype": "Section Break",
+   "label": "Cost Info"
+  },
+  {
+   "fieldname": "column_break_ucpw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jaci",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-05-24 14:02:02.541103",
+ "modified": "2025-06-13 10:09:29.540541",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCVSSpring",

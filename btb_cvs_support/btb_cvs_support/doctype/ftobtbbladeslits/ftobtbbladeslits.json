@@ -1,1 +1,56 @@
-{"allow_import":1,"allow_rename":1,"autoname":"format:FTO{#}","creation":"2025-04-10 20:14:43.6816","doctype":"DocType","engine":"InnoDB","fields":[{"fieldname":"currency_iso_code","fieldtype":"Select","label":"CurrencyIsoCode"},{"fieldname":"af_slit_size","fieldtype":"Float","label":"AFSlitSize__c"},{"fieldname":"btb3_v_slit_size","fieldtype":"Float","label":"Btb3VSlitSize__c"}],"modified":"2025-04-10 20:14:43.6816","modified_by":"Administrator","module":"Btb Cvs Support","name":"FTOBtbBladeSlits","naming_rule":"Expression","owner":"Administrator","permissions":[{"create":1,"delete":1,"email":1,"export":1,"print":1,"read":1,"report":1,"role":"System Manager","share":1,"write":1}],"sort_field":"modified","sort_order":"DESC"}
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:FTO{#}",
+ "creation": "2025-04-10 20:14:43.681600",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "af_slit_size",
+  "column_break_dcmc",
+  "btb3_v_slit_size"
+ ],
+ "fields": [
+  {
+   "fieldname": "af_slit_size",
+   "fieldtype": "Float",
+   "label": "AFSlitSize"
+  },
+  {
+   "fieldname": "btb3_v_slit_size",
+   "fieldtype": "Float",
+   "label": "Btb3VSlitSize"
+  },
+  {
+   "fieldname": "column_break_dcmc",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2025-06-13 10:10:34.642660",
+ "modified_by": "Administrator",
+ "module": "Btb Cvs Support",
+ "name": "FTOBtbBladeSlits",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

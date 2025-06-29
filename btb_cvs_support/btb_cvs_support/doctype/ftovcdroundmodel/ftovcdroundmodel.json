@@ -1,1 +1,56 @@
-{"allow_import":1,"allow_rename":1,"autoname":"format:FTO{#}","creation":"2025-04-10 20:14:35.9874","doctype":"DocType","engine":"InnoDB","fields":[{"fieldname":"currency_iso_code","fieldtype":"Select","label":"CurrencyIsoCode"},{"fieldname":"min_frame_thickness","fieldtype":"Float","label":"MinFrameThickness__c"},{"fieldname":"min_blade_thickness","fieldtype":"Float","label":"MinBladeThickness__c"}],"modified":"2025-04-10 20:14:35.9874","modified_by":"Administrator","module":"Btb Cvs Support","name":"FTOVCDRoundModel","naming_rule":"Expression","owner":"Administrator","permissions":[{"create":1,"delete":1,"email":1,"export":1,"print":1,"read":1,"report":1,"role":"System Manager","share":1,"write":1}],"sort_field":"modified","sort_order":"DESC"}
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:FTO{#}",
+ "creation": "2025-04-10 20:14:35.987400",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "min_frame_thickness",
+  "column_break_onmx",
+  "min_blade_thickness"
+ ],
+ "fields": [
+  {
+   "fieldname": "min_frame_thickness",
+   "fieldtype": "Float",
+   "label": "MinFrameThickness"
+  },
+  {
+   "fieldname": "min_blade_thickness",
+   "fieldtype": "Float",
+   "label": "MinBladeThickness"
+  },
+  {
+   "fieldname": "column_break_onmx",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2025-06-13 10:12:30.373840",
+ "modified_by": "Administrator",
+ "module": "Btb Cvs Support",
+ "name": "FTOVCDRoundModel",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
