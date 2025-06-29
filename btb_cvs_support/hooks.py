@@ -160,8 +160,7 @@ doc_events = {
         "on_update": "btb_cvs_support.events.stock_entry.after_upsert"
     },
     "Quotation Item": {
-        "before_save": "btb_cvs_support.events.quotation_item.before_upsert",
-        "on_trash": "btb_cvs_support.events.quotation_item.on_trash"
+        "before_save": "btb_cvs_support.events.quotation_item.before_upsert"
     },
     "Quotation": {
         "before_save": "btb_cvs_support.events.onecpq_quote.before_save_quote"
@@ -169,7 +168,6 @@ doc_events = {
     "BtbCartItem": {
         "before_save": "btb_cvs_support.events.onecpq_quote.before_save_cart",
         "on_update": "btb_cvs_support.events.onecpq_quote.proceed_cart_item_link"
-        # "on_trash": "btb_cvs_support.events.onecpq_quote.delete_links"
     }
 }
 # Scheduled Tasks
@@ -284,7 +282,7 @@ fixtures = [
             ["fieldname", "in", [
                 "custom_manufactured_item", "custom_opr", "custom_sales_order", "custom_total_sqm", "custom_total_pcs","custom_total_discount",
 "custom_total_discount_amount", "custom_list_amount", "custom_discount", "custom_onecpq_total", "custom_cart_discount",
-"custom_apply_discount", "custom_customizable", "custom_onecpq_items", "custom_cart"
+"custom_apply_discount", "custom_customizable", "custom_onecpq_items", "custom_cart","custom_cart_item"
             ]]
         ]
     }

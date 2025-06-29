@@ -1,5 +1,5 @@
 import frappe
-
+@frappe.whitelist()
 def before_upsert(doc, method = None):
     print("calling quote line item sync ",doc)
     print("calling quote line item sync doc.custom_cart_item ",doc.custom_cart_item)

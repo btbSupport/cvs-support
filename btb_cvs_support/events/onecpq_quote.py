@@ -1,6 +1,7 @@
 import frappe
 from erpnext.controllers.taxes_and_totals import calculate_taxes_and_totals
 from ..api.onecpq_quote_item import *
+from ..api.site_info import *
 #DEV API Key = dd017c3d9d14afe:2aba5089f049917
 
 @frappe.whitelist()
@@ -31,12 +32,18 @@ def get_items(quote_name: str):
     items = frappe.db.sql(sql, as_dict=1)
     return items
 
+@frappe.whitelist()
 def before_save_cart(doc, method = None):
+    print('get_config allow_cpq before_save_cart',get_config('allow_cpq') )
+    if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     if(doc.unit_price == 0): doc.valid = 0
 
+@frappe.whitelist()
 def proceed_cart_item_link(doc, method = None):
+    print('get_config allow_cpq proceed_cart_item_link',get_config('allow_cpq') )
     print('doc.unit_price : ',doc.unit_price)
     print('doc.valid : ',doc.valid)
+    if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     if(doc.unit_price == 0):
         sqlcil = f"""select name,entity from tabBtbCartItemLink where parent='{doc.name}'"""
         for item in frappe.db.sql(sqlcil, as_dict=1): 
@@ -55,6 +62,8 @@ def proceed_cart_item_link(doc, method = None):
 
 @frappe.whitelist()
 def before_save_quote(doc = None, method = None):
+    print('get_config allow_cpq before save quote',get_config('allow_cpq') )
+    if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     beforequote = getQuoteById(doc.name)
     if(beforequote == None): return
     if(doc is None): return
@@ -96,6 +105,8 @@ def before_save_quote(doc = None, method = None):
 
 @frappe.whitelist()
 def remove_quotation_items(doc):
+    print('get_config allow_cpq remove_quotation_items',get_config('allow_cpq') )
+    if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     quote_name = doc.name
     customizable = doc.custom_customizable
     print('inside remove quote_name :',quote_name,' customizable :',customizable)
