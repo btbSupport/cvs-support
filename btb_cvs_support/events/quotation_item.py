@@ -1,6 +1,9 @@
 import frappe
+from ..api.site_info import *
 @frappe.whitelist()
 def before_upsert(doc, method = None):
+    print('get_config allow_cpq before save quote item',get_config('allow_cpq') )
+    if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     print("calling quote line item sync ",doc)
     print("calling quote line item sync doc.custom_cart_item ",doc.custom_cart_item)
 
