@@ -85,14 +85,14 @@ def before_save_quote(doc = None, method = None):
     totalLineDiscount = 0
     totalDiscountPercenatge = 0
     totalLineDiscountPercentage = 0
-
-    for item in items: 
-        doc.items.append(frappe.frappe.get_doc("Quotation Item", item.name))
-    
-    for item in syncItems: 
-        totalUnitPrice += (item.ciQty * item.unit_price)
-        totalLineDiscount +=  (item.ciQty * ((item.unit_price) * item.ciDiscount/100))
-        doc.items.append(frappe.frappe.get_doc("Quotation Item", item.name))
+    if(doc.custom_customizable != 1): 
+        for item in items: 
+            doc.items.append(frappe.frappe.get_doc("Quotation Item", item.name))
+    if(doc.custom_customizable == 1):
+        for item in syncItems: 
+            totalUnitPrice += (item.ciQty * item.unit_price)
+            totalLineDiscount +=  (item.ciQty * ((item.unit_price) * item.ciDiscount/100))
+            doc.items.append(frappe.frappe.get_doc("Quotation Item", item.name))
     calculate_taxes_and_totals(doc)
     totalDiscount = totalLineDiscount + doc.discount_amount
     if(totalUnitPrice>0) : 
@@ -122,9 +122,9 @@ def remove_quotation_items(doc):
         for item in cartItems: 
             ci = populate_cart_item_links(quote_name, item)
             ci.save()
-        items = get_items(quote_name)
-        for item in items: 
-            frappe.delete_doc("Quotation Item",item.name) == None
+        # items = get_items(quote_name)
+        # for item in items: 
+            # frappe.delete_doc("Quotation Item",item.name) == None
     if(customizable == 0) : 
         cartItemLinks = get_cart_item_links(quote_name)
         for item in cartItemLinks: 
