@@ -68,6 +68,7 @@ def before_save_quote(doc = None, method = None):
     if(beforequote == None): return
     if(doc is None): return
     remove_quotation_items(doc)
+    if(doc.custom_customizable == beforequote.custom_customizable and doc.custom_customizable ==0): return
     if(doc.custom_customizable == 1): 
         doc.apply_discount_on = 'Net Total'
         if(doc.additional_discount_percentage != doc.custom_cart_discount):
