@@ -76,8 +76,9 @@ def before_save_quote(doc = None, method = None):
     doc.items = []
     syncItems = get_synced_items(doc.name)
     items = get_items(doc.name)
-
-    print('doc before calc - items : ',syncItems)
+    frappe.log('doc before calc - items : ')
+    frappe.log(items)
+    print('doc before calc - sync items : ',syncItems)
     print('doc before calc - discount amount : ',doc.discount_amount)
     print('doc after calc - discount amount : ',doc.discount_amount)
     totalUnitPrice = 0
