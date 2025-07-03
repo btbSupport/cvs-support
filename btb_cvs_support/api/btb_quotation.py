@@ -25,6 +25,7 @@ def get_synced_cart_items( quote_name: str) -> List[Dict[str, any]]:
     join tabBtbFeature tbf  on tbf.name = tbcif.feature 
     left join tabBtbFeatureTypeItem tbfti on tbcif.value = tbfti.name
     left join tabBtbFeatureType tbft on tbft.name = tbfti.feature_type
+    order by tbc.idx
     """
     items = frappe.db.sql(sql, as_dict=1)
     df = pd.DataFrame(json.loads(json.dumps(items)))
@@ -132,6 +133,7 @@ def get_cart_items( quote_name: str) :
     from tabBtbCartItem tbc where tbc.cart in (
     select parent from `tabBtbCartLink` where entity='{quote_name}'
     )
+    order by tbc.idx
     
     """
     items = frappe.db.sql(sql, as_dict=1)

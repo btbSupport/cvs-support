@@ -20,7 +20,8 @@ def get_cart_item_links(quote_name: str):
 @frappe.whitelist()
 def get_cart_items(quote_name: str):
     sql = f"""select * from tabBtbCartItem tbci where cart in (select parent  from tabBtbCartLink tbcl where entity ='{quote_name}') and valid = 1 
-and name not in (select custom_cart_item from `tabQuotation Item` tqi where tqi.parent ='{quote_name}'  and custom_cart_item is not null)"""
+and name not in (select custom_cart_item from `tabQuotation Item` tqi where tqi.parent ='{quote_name}'  and custom_cart_item is not null)
+order by tbci.idx"""
     items = frappe.db.sql(sql, as_dict=1)
     return items
 
