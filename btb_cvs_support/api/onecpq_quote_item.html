@@ -4,31 +4,31 @@
         <div class="grid-heading-row">
             <div class="grid-row">
                 <div class="data-row row m-0">
-                    <div class="col grid-static-col col-xs-1">
+                    <div  style="max-width:5%"  class="col grid-static-col col-xs-1">
                         <span>No.</span>
                     </div>
                     <div  title="Item Code" class="col grid-static-col col-xs-1">
                         <div class="static-area ellipsis">Item Code</div>
                     </div>
-                    <div  title="Description" class="col grid-static-col col-xs-4">
+                    <div   style="max-width:30%" title="Description" class="col grid-static-col">
                         <div class="static-area ellipsis">Description</div>
                     </div>
                     <div  title="Quantity" class="col grid-static-col col-xs-1" >
                         <div class="static-area ellipsis">Quantity</div>
                     </div>
-                    <div  title="UOM" class="col grid-static-col col-xs-1">
+                    <div style="max-width:6%"  title="UOM" class="col grid-static-col col-xs-1">
                         <div class="static-area ellipsis">UOM</div>
                     </div>
-                    <div  title="Rate ({{currency}})" class="col grid-static-col col-xs-1" >
+                    <div style="max-width:12%"  title="Rate ({{currency}})" class="col grid-static-col" >
                         <div class="static-area ellipsis text-right">Rate ({{currency}})</div>
                     </div>
-                    <div  title="Net Rate ({{currency}})" class="col grid-static-col col-xs-1" >
+                    <div style="max-width:12%"  title="Net Rate ({{currency}})" class="col grid-static-col" >
                         <div class="static-area ellipsis text-right">Net Rate ({{currency}})</div>
                     </div>
-                    <div  title="Amount ({{currency}})" class="col grid-static-col col-xs-1" style="justify-content:right" >
+                    <div style="max-width:12%" title="Amount ({{currency}})" class="col grid-static-col" style="justify-content:right" >
                         <div class="static-area ellipsis text-right">Amount ({{currency}})</div>
                     </div>
-                    <div  title="Net Amount ({{currency}})" class="col grid-static-col col-xs-1" style="justify-content:right" >
+                    <div style="max-width:12%"  title="Net Amount ({{currency}})" class="col grid-static-col" style="justify-content:right" >
                         <div class="static-area ellipsis text-right">Net Amount ({{currency}})</div>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                 {% for item in items %}
                 <div class="grid-row" data-name="{{item.name}}" data-idx="{{item.idx}}">
                     <div class="data-row row m-0">
-                        <div class="col grid-static-col col-xs-1">
+                        <div style="max-width:5%" class="col grid-static-col col-xs-1">
                             <span>{{item.idx}}</span>
                         </div>
                         <div  title="{{item.item_code}}" class="col grid-static-col col-xs-1 " style="" data-fieldname="item_code"
@@ -48,26 +48,26 @@
                             <div class="static-area ellipsis"><a href="/app/item/{{item.item_code}}" data-doctype="Item"
                                     data-name="{{item.item_code}}" data-value="{{item.item_code}}">{{item.item_code}}</a></div>
                         </div>
-                        <div title="{{item.description}}" class="col grid-static-col col-xs-4 " data-fieldtype="Text Editor">
+                        <div  style="max-width:30%"  title="{{item.description}}" class="col grid-static-col" data-fieldtype="Text Editor">
                             {{item.description}}
                         </div>
-                        <div class="col grid-static-col col-xs-1 text-right bold" data-fieldname="qty" data-fieldtype="Float">
+                        <div class="col grid-static-col  col-xs-1 text-right bold" data-fieldname="qty" data-fieldtype="Float">
                             {{"{0:0.0f}".format(item.qty)}}
                         </div>
-                        <div class="col grid-static-col col-xs-1 bold"  data-fieldname="uom">
+                        <div style="max-width:6%" class="col grid-static-col  col-xs-1 bold"  data-fieldname="uom">
                             {{item.uom}}
                         </div>
-                        <div class="col grid-static-col col-xs-1 text-right bold"  data-fieldname="rate" data-fieldtype="Currency">
-                            {{"{0:0.2f}".format(item.rate)}}
+                        <div  style="max-width:12%" class="col grid-static-col text-right bold"  data-fieldname="rate" data-fieldtype="Currency">
+                            {{item.rate}}
                         </div>
-                        <div class="col grid-static-col col-xs-1 text-right bold"  data-fieldname="rate" data-fieldtype="Currency">
-                            {{"{0:0.2f}".format(item.net_rate)}}
+                        <div  style="max-width:12%" class="col grid-static-col text-right bold"  data-fieldname="net_rate" data-fieldtype="Currency">
+                            {{item.net_rate}}
                         </div>
-                        <div class="col grid-static-col col-xs-1 text-right"  style="justify-content:right" data-fieldname="amount" data-fieldtype="Currency">
-                            {{"{0:0.2f}".format(item.amount)}}
+                        <div  style="max-width:12%" class="col grid-static-col text-right bold"  data-fieldname="amount" data-fieldtype="Currency">
+                            {{item.amount}}
                         </div>
-                        <div class="col grid-static-col col-xs-1 text-right"  style="justify-content:right" data-fieldname="amount" data-fieldtype="Currency">
-                            {{"{0:0.2f}".format(item.net_amount)}}
+                        <div  style="max-width:12%" class="col grid-static-col text-right bold" data-fieldname="net_amount" data-fieldtype="Currency">
+                            {{item.net_amount}}
                         </div>
                     </div>
                 </div>

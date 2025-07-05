@@ -30,7 +30,7 @@
 					</div>
 					<div class="control-input-wrapper">
 						<div class="control-input" style="display: none;"></div>
-						<div class="control-value like-disabled-input" style="">{{"{0:0.2f}".format(cpqTotal.custom_list_amount)}}</div>
+						<div class="control-value like-disabled-input" style="">{{cpqTotal.custom_list_amount}}</div>
 						<p class="help-box small text-muted"></p>
 					</div>
 				</div>
@@ -43,12 +43,12 @@
 <div class="frappe-control input-max-width" data-fieldtype="Currency" data-fieldname="total">
 				<div class="form-group">
 					<div class="clearfix">
-						<label class="control-label" style="padding-right: 0px;">Discount({{"{0:0.2f}".format(cpqTotal.custom_discount)}}%)</label>
+						<label class="control-label" style="padding-right: 0px;">Discount({{cpqTotal.custom_discount}}%)</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
 						<div class="control-input" style="display: none;"></div>
-						<div class="control-value like-disabled-input" style="">{{"{0:0.2f}".format(cpqTotal.custom_list_amount - cpqTotal.total)}}</div>
+						<div class="control-value like-disabled-input" style="">{{cpqTotal.discountAmount}}</div>
 						<p class="help-box small text-muted"></p>
 					</div>
 				</div>
@@ -66,7 +66,7 @@
 					</div>
 					<div class="control-input-wrapper">
 						<div class="control-input" style="display: none;"></div>
-						<div class="control-value like-disabled-input" style="">{{"{0:0.2f}".format(cpqTotal.total)}}</div>
+						<div class="control-value like-disabled-input" style="">{{cpqTotal.total}}</div>
 						<p class="help-box small text-muted"></p>
 					</div>
 				</div>
@@ -78,12 +78,12 @@
  <div class="frappe-control input-max-width" data-fieldtype="Currency" data-fieldname="total">
 				<div class="form-group">
 					<div class="clearfix">
-						<label class="control-label" style="padding-right: 0px;">Cart Discount({{"{0:0.2f}".format(cpqTotal.additional_discount_percentage)}}%)</label>
+						<label class="control-label" style="padding-right: 0px;">Cart Discount({{cpqTotal.additional_discount_percentage}}%)</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
 						<div class="control-input" style="display: none;"></div>
-						<div class="control-value like-disabled-input" style="">{{"{0:0.2f}".format(cpqTotal.discount_amount)}}</div>
+						<div class="control-value like-disabled-input" style="">{{cpqTotal.discount_amount}}</div>
 						<p class="help-box small text-muted"></p>
 					</div>
 				</div>
@@ -100,7 +100,7 @@
 					</div>
 					<div class="control-input-wrapper">
 						<div class="control-input" style="display: none;"></div>
-						<div class="control-value like-disabled-input" style="">{{"{0:0.2f}".format(cpqTotal.net_total)}}</div>
+						<div class="control-value like-disabled-input" style="">{{cpqTotal.net_total}}</div>
 						<p class="help-box small text-muted"></p>
 					</div>
 				</div>
@@ -112,12 +112,12 @@
 <div class="frappe-control input-max-width" data-fieldtype="Currency" data-fieldname="total">
 				<div class="form-group">
 					<div class="clearfix">
-						<label class="control-label" style="padding-right: 0px;">Total Discount({{"{0:0.2f}".format(cpqTotal.custom_total_discount)}}%)</label>
+						<label class="control-label" style="padding-right: 0px;">Total Discount({{cpqTotal.custom_total_discount}}%)</label>
 						<span class="help"></span>
 					</div>
 					<div class="control-input-wrapper">
 						<div class="control-input" style="display: none;"></div>
-						<div class="control-value like-disabled-input" style="">{{"{0:0.2f}".format(cpqTotal.custom_total_discount_amount)}}</div>
+						<div class="control-value like-disabled-input" style="">{{cpqTotal.custom_total_discount_amount}}</div>
 						<p class="help-box small text-muted"></p>
 					</div>
 				</div>
