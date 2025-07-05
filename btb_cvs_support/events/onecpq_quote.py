@@ -74,6 +74,8 @@ def before_save_quote(doc = None, method = None):
         doc.apply_discount_on = 'Net Total'
         if(doc.additional_discount_percentage != doc.custom_cart_discount):
             doc.additional_discount_percentage = doc.custom_cart_discount
+            if(doc.custom_cart_discount ==0):
+                doc.discount_amount = 0
     doc.items = []
     syncItems = get_synced_items(doc.name)
     items = get_items(doc.name)
