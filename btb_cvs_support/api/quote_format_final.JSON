@@ -73,7 +73,7 @@
       "summary": "qty,rate,amount,beforeDiscount"
     },
     "AD": {
-      "headerKey": "frameThickness,doorThickness,ductOpeningUndersize,doorDepthSelect,finish,hingeType,hingeMaterial,insulation,gasket,safetyWireSelect",
+      "headerKey": "model,subcategory,frameThickness,doorThickness,ductOpeningUndersize,doorDepthSelect,finish,hingeType,hingeMaterial,insulation,gasket,safetyWireSelect",
       "header": {
         "Frame Thickness":"CONCAT(frameThickness,string mm)",
         "Door Thickness:":"CONCAT(doorThickness,string mm)",

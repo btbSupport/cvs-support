@@ -130,6 +130,7 @@ def populate_cart_detail( quote_id: str) -> Dict[str, 'ProductRootNode']:
             child_keys[group_key] = f"{prefix}{group_key}"
             c_node = ChildNode().__dict__
             c_node["modelName"] = get_key(cart_model, 'modelDescription')
+            c_node["subcategory"] = get_key(cart_model, 'subcategory')
             c_node["headers"] = populate_header_values(cart_model, product_family_map[product_code]['header'])
             c_node["headersDisplay"] = populate_header_display(c_node.get("headers"))
             c_node["details"] = []
