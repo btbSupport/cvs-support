@@ -1,5 +1,5 @@
 {
-  "SIL36": [
+  "SIL": [
     {
       "itemCode": "GI Casing 0.6",
       "description": "GI Casing 0.6",
@@ -4036,7 +4036,7 @@
       }
     }
   ],
-  "VCD-A38": [
+  "VCDA": [
     {
       "itemCode": "GI Frame 1.0 X 164",
       "description": "GI Frame 1.0 X 164",
@@ -13836,7 +13836,7 @@
       }
     }
   ],
-  "VCD-R39": [
+  "VCDR": [
     {
       "itemCode": "GI Frame 0.6",
       "description": "GI Frame 0.6",
@@ -21594,7 +21594,7 @@
       }
     }
   ],
-  "MSFD-AC35": [
+  "MSFD": [
     {
       "itemCode": "GI Frame 0.8 X 164",
       "description": "GI Frame 0.8 X 164",
@@ -29701,7 +29701,7 @@
       }
     }
   ],
-  "CFD-M37": [
+  "CFD": [
     {
       "itemCode": "GI Frame 0.8 X 145",
       "description": "GI Frame 0.8 X 145",
@@ -35072,7 +35072,7 @@
       }
     }
   ],
-  "ULRD34": [
+  "ULRD": [
     {
       "itemCode": "GI Frame 1.0",
       "description": "GI Frame 1.0",

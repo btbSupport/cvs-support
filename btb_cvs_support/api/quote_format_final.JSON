@@ -1,0 +1,131 @@
+{
+    "CFD": {
+      "headerKey": "frameThickness,sleeveThickness,fittingType,rating,mounting,limitSwitchRequired,fusibleLinkTemp",
+      "header": {
+        "Frame Thickness": "CONCAT(frameThickness,string mm)",
+        "Sleeve Thickness": "CONCAT(sleeveThickness,string mm)",
+        "Transition": "fittingType",
+        "Heat Response": "fusibleLinkTemp",
+        "Micro Switch Indicator Package": "limitSwitchRequired",
+        "Mounting & Rating":"CONCAT(mounting,string - ,rating)"
+      },
+      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
+      "summary": "qty,rate,amount,beforeDiscount"
+    },
+    "MSFD": {
+      "headerKey": "frameThickness,sleeveThickness,bladeThickness,rating,leakageClass,classTemperature,mounting,storOrDtorOption,linkTemperature,actuatorBrand,actuatorPower,actuatorMounting,auxSwitch,bladeSwitchPackage,smokeDetector,bladeOperations,transition,transitionThickness,externalJunctionBox,mtsOption",
+      "header": {
+        "Frame Thickness": "CONCAT(frameThickness,string mm)",
+        "Blade Thickness": "CONCAT(bladeThickness,string mm)",
+        "Sleeve Thickness": "CONCAT(sleeveThickness,string mm)",
+        "Leakage Class": "CONCAT(leakageClass,string-,classTemperature)",
+        "Heat Response": "CONCAT(storOrDtorOption,string - ,linkTemperature)",
+        "Mounting & Rating":"CONCAT(mounting,string - ,rating)",
+        "Actuator": "CONCAT(actuatorBrand,string - ,actuatorPower,string - ,auxSwitch)",
+        "Actuator Mounting": "actuatorMounting",
+        "Blade Switch Package": "bladeSwitchPackage",
+        "Smoke Detector": "smokeDetector",
+        "Blade Operations": "bladeOperations",
+        "Transition": "CONCAT(transition,string - ,transitionThickness,string mm)",
+        "External Junction Box": "externalJunctionBox",
+        "MTS Option": "mtsOption"
+      },
+      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
+      "summary": "qty,rate,amount,beforeDiscount"
+    },
+    "SIL": {
+      "headerKey": "subCategory,infillType,constructionStandard,airTightness,casingThickness,perfThickness,orientation,infillProtection,removableBaffle,accessPanel,optionFlangeangle",
+      "header": {
+        "Specification": "specification",
+        "Infill Type":"infillType",
+        "Construction":"constructionStandard",
+        "Air tightness":"airTightness",
+        "Casing Thickness":"CONCAT(casingThickness,string mm)",
+        "Perforated Thickness":"CONCAT(perfThickness,string mm)",
+        "Mounting Position":"orientation",
+        "Infill Protection":"infillProtection",
+        "Removable Baffle":"removableBaffle",
+        "Access Panel":"accessPanel",
+        "Cross Joint":"optionFlangeangle"
+      },
+      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
+      "summary": "qty,rate,amount,beforeDiscount"
+    },
+    "ULRD": {
+      "headerKey": "transitionType,frameThicknessLookup,bladeThicknessLookup,rating,retainingPlate,leakageClass,fuseLinkOptions,actuatorBrand,linkTemperature,actuatorPower,auxSwitch,actuatorMounting,bladeSwitchPackage,junctionBox,mtsOption",
+      "header": {
+        "Frame Thickness (mm)": "frameThicknessLookup",
+        "Blade Thickness (mm)":"bladeThicknessLookup",
+        "Mounting & Rating":"CONCAT(string V-,rating)",
+        "Transition": "transitionType",
+        "Leakage Class":"leakageClass",
+        "Heat Response":"CONCAT(fuseLinkOptions,string -,linkTemperature)",
+        "Retaining Plate":"retainingPlate",
+        "Smoke Detector":"CONCAT(string No)",
+        "Blade Switch Package":"bladeSwitchPackage",
+        "Actuator": "CONCAT(actuatorBrand,string - ,actuatorPower)",
+        "Aux Switch":"auxSwitch",
+        "Actuator Mounting":"actuatorMounting",
+        "External Junction Box":"junctionBox",
+        "MTS Option":"mtsOption"
+      },
+      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes,transitionType,transitionDiameter,transitionLength,transitionDiameter2,transitionLength2",
+      "summary": "qty,rate,amount,beforeDiscount"
+    },
+    "AD": {
+      "headerKey": "frameThickness,doorThickness,ductOpeningUndersize,doorDepthSelect,finish,hingeType,hingeMaterial,insulation,gasket,safetyWireSelect",
+      "header": {
+        "Frame Thickness":"CONCAT(frameThickness,string mm)",
+        "Door Thickness:":"CONCAT(doorThickness,string mm)",
+        "Duct Opening Undersize":"ductOpeningUndersize",
+        "Door Depth":"doorDepthSelect",
+        "Finish":"finish",
+        "Hinge":"hingeType",
+        "Hinge Material":"hingeMaterial",
+        "Insulation":"insulation",
+        "Gasket":"gasket",
+        "Safety Wire":"safetyWireSelect"
+      },
+      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
+      "summary": "qty,rate,amount,beforeDiscount"
+    },
+    "VCDA": {
+      "headerKey": "modelName,subCategory,frameThicknessLookup,bladeMaterialType,sleeveThicknessLookup,bladeThicknessLookup,bladeOperations,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,actuatorBrand,actuatorControls,auxSwitch,powerSupply,staticPressureCorrection,velocityCorrcetion,actuatorType",
+      "header": {
+        "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
+        "Blade Material": "bladeMaterialType",
+        "Sleeve Thickness":"CONCAT(sleeveThicknessLookup,string mm)",
+        "Blade Thickness":"CONCAT(bladeThicknessLookup,string mm)",
+        "Static Pressure Class":"staticPressureCorrection",
+        "Velocity Rating":"velocityCorrcetion",
+        "Blade Seal & Operation":"CONCAT(bladeSealInput,string -, bladeOperations)",
+        "Jamb Side Seal":"jambSideSeal",
+        "Blade Bush Option":"bladeBushOption",
+        "AMCA Label":"amcaLabelSelect",
+        "Actuator":"CONCAT(actuatorBrand,string - ,powerSupply)",
+        "Actuator Type & Control":"CONCAT(actuatorType,string - ,actuatorControls)",
+        "Aux Switch":"auxSwitch",
+        "Actuator Mounting":""
+      },
+      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes,transitionType",
+      "summary": "qty,rate,amount,beforeDiscount"
+    },
+    "VCDR": {
+      "headerKey": "modelName,subCategory,frameThicknessLookup,bladeThickness,staticPressureClass,velocityRating,axleBearing,bladeSeal,amcaLabel,actuatorMounting,actuatorBrand,actuatorControls,actuatorAuxSwitch,actuatorPowerSupply",
+      "header": {
+        "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
+        "Blade Seal":"bladeSeal",
+        "Blade Thickness":"CONCAT(bladeThickness,string mm)",
+        "Static Pressure Class":"staticPressureClass",
+        "Velocity Rating":"velocityRating",
+        "Axle Bearing":"axleBearing",
+        "AMCA Label":"amcaLabel",
+        "Actuator":"CONCAT(actuatorBrand,string - ,actuatorPowerSupply)",
+        "Actuator Type & Control":"CONCAT(actuatorType,string - ,actuatorControls)",
+        "Aux Switch":"actuatorAuxSwitch",
+        "Actuator Mounting":"actuatorMounting"
+      },
+      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
+      "summary": "qty,rate,amount,beforeDiscount"
+    }
+  }

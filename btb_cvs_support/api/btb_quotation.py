@@ -62,7 +62,8 @@ def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
                 "beforeDiscount": {"value":   round(Decimal(str(row.Quantity * row.Unit_Price)),2)},
                 "rate": {"value":  round(Decimal(str(row.Unit_Price*(1-(row.discount/100)))),2)},
                 "amount": {"value":  round(Decimal(str(row.Unit_Price*(1-(row.discount/100))*row.Quantity)),2)},
-                "seq": {"value": row.Sequence}
+                "seq": {"value": row.Sequence},
+                "cartTitle": {"value": row.Title},
                 }
             value = row.cif_value
             if(row.fti_value != None):value = row.fti_value

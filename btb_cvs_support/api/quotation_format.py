@@ -15,11 +15,8 @@ def decimal_serializer(obj):
     if isinstance(obj, Decimal):
         return str(round(obj,2))
     raise TypeError('Type not serializable + '+obj)
-# class quotation_format:
 fti_cache ={}
-# def provide( params: Dict[str, str]) -> Dict:
-#     quote_id = params.get("Id")
-#     return populate_cart_items(quote_id)
+
 @frappe.whitelist()
 def provide( quote_name: str) -> Dict:
     output = {"ci": {
@@ -29,10 +26,9 @@ def provide( quote_name: str) -> Dict:
     "qt": get_quote_details(quote_name)
     }
     print("result -", output)
-    file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation.docx"
+    file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format.docx"
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
     generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".pdf")
-
     return json.loads(json.dumps(output,default=decimal_serializer))
 
 def get_quote_details( quote_name: str) -> Dict:
@@ -59,11 +55,9 @@ def get_company_info() -> Dict:
 
 def populate_product_family_map() -> Dict[str, 'ProductInfo']:
     base_path = os.path.dirname(__file__)  # Path to the current .py file
-    file_path = os.path.join(base_path, 'quote_format.JSON')
+    file_path = os.path.join(base_path, 'quote_format_final.JSON')
     with open(file_path, 'r') as f:
         setting_json = json.load(f)
-    # with open('./quote_format.JSON') as quote_format_file:
-    #     setting_json = quote_format_file.read()
     return json.loads(json.dumps(setting_json))
 
 class ProductInfo:
@@ -114,10 +108,6 @@ def populate_cart_detail( quote_id: str) -> Dict[str, 'ProductRootNode']:
     product_family_map = populate_product_family_map()
     keys = {}
     child_keys = {}
-
-    # cartItems = get_cart_items(quote_id)
-    # populate_featuretype_items(cartItems)
-    # models = populate_cart_models(cartItems)
 
     models = populate_cart_item_model(quote_id)
     # print(models)
@@ -194,82 +184,3 @@ def exec( formula) -> List[str]:
     if match:
         return match.group(1).split(',')
     return []
-
-# def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
-#     output =[]
-#     # print('fti_cache : ',fti_cache)
-#     for group_name, df_group in cartItems:
-#         # print ('inside 1st loop')
-#         item =  {}
-#         for row_index, row in df_group.iterrows():
-#             # print ('loop2')
-#             if(item == {}):
-#                 item =  {
-#                 "cartProductName": {"value": row.itemName},
-#                 "cartProductCode": {"value": row.item_code},
-#                 "qty": {"value": row.Quantity},
-#                 "unitPrice": {"value": row.Unit_Price},
-#                 "beforeDiscount": {"value":  row.Quantity * row.Unit_Price },
-#                 "rate": {"value": row.Unit_Price*(1-(row.discount/100))},
-#                 "amount": {"value": row.Unit_Price*(1-(row.discount/100))*row.Quantity},
-#                 "seq": {"value": row.Sequence}
-#                 }
-#             value = row.cif_value
-#             if(row.fti_value != None):value = row.fti_value
-#             if(row.obj_type != None):value = fti_cache.get(row.cif_value)
-#             item[row.Field]={"label": row.label, "value": value}
-#         output.append(item)
-#     # print("output final - ",output)
-#     return output   
-
-# def get_cart_items( quote_id: str) -> List[Dict[str, any]]:
-#     # print('inside get cart items')
-#     sql = f""" select tbc.name,tbc.Unit_Price,tbc.discount , tbc.Sequence, tbc.Quantity, tbc.Title,
-#         i.Name itemName, i.item_code, tbf.Field, tbf.label ,
-#         tbcif.value cif_value,tbfti.value fti_value,tbfti.`object` obj_value,tbft.object_type obj_type,tbft.data_text_field 
-#     from tabBtbCartItem tbc
-#     join `tabItem` i on tbc.item  = i.name and   tbc.name in (
-#     select custom_cart_item from `tabQuotation Item` where parent='{quote_id}'
-#     )
-#     join tabBtbCartItemFeature tbcif on tbcif.parent = tbc.name
-#     join tabBtbFeature tbf  on tbf.name = tbcif.feature 
-#     left join tabBtbFeatureTypeItem tbfti on tbcif.value = tbfti.name
-#     left join tabBtbFeatureType tbft on tbft.name = tbfti.feature_type
-#     """
-#     items = frappe.db.sql(sql, as_dict=1)
-
-#     # with open('sample_cart_item.csv') as sample_file:
-#     #     items = sample_file.read()
-#     # print('result cart items ',items)
-#     df = pd.DataFrame(json.loads(json.dumps(items)))
-    
-#     # df = pd.read_csv('sample_cart_item.csv')
-#     res = df.groupby(["name","Unit_Price","discount","Sequence","Quantity","Title","itemName","item_code"], group_keys=False)
-#     # print(df.groupby(["name","Unit_Price","discount","Sequence","Quantity","Title","itemName","item_code"]))
-#     # print(items.get_group('CI30583'))
-#     return res
-
-# def populate_featuretype_items( cartItems):
-#     for group_name, df_group in cartItems:
-#         ftis =  {}
-#         for row_index, row in df_group.iterrows():
-#             if(row.obj_type != None):
-#                 key = str(row.obj_type)+'-'+str(row.data_text_field)+'-'+str(row.cif_value)
-#                 if( key not in ftis.keys()):ftis[key] = []
-#                 if( row.obj_value not in fti_cache.keys()):ftis[key].append(row.obj_value)
-#         for key in ftis.keys():
-#             # print("check ",key)
-#             if(key == None): continue
-#             fti = ftis.get(key)
-#             obj = key.split("-")
-#             get_featuretype_items(obj[0],obj[1],fti,obj[2])
-
-# def get_featuretype_items( tabName:str, data_text_field:str, values: List[str],fti:str):
-#     sql = f"""
-#     select * from `tab{tabName}` where name in {'',''.join(values)}
-#     """
-#     # print("sql - ",sql)
-#     result = frappe.db.sql(sql, as_dict=1)
-#     for i in result:
-#         fti_cache[fti] = i[data_text_field]
-#     # print('fti_cache : ',fti_cache)
