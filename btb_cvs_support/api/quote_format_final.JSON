@@ -1,6 +1,6 @@
 {
     "CFD": {
-      "headerKey": "frameThickness,sleeveThickness,fittingType,rating,mounting,limitSwitchRequired,fusibleLinkTemp",
+      "headerKey": "subcategory,modelDescription,frameThickness,sleeveThickness,fittingType,rating,mounting,limitSwitchRequired,fusibleLinkTemp",
       "header": {
         "Frame Thickness": "CONCAT(frameThickness,string mm)",
         "Sleeve Thickness": "CONCAT(sleeveThickness,string mm)",
@@ -13,7 +13,7 @@
       "summary": "qty,rate,amount,beforeDiscount"
     },
     "MSFD": {
-      "headerKey": "frameThickness,sleeveThickness,bladeThickness,rating,leakageClass,classTemperature,mounting,storOrDtorOption,linkTemperature,actuatorBrand,actuatorPower,actuatorMounting,auxSwitch,bladeSwitchPackage,smokeDetector,bladeOperations,transition,transitionThickness,externalJunctionBox,mtsOption",
+      "headerKey": "subcategory,modelDescription,frameThickness,sleeveThickness,bladeThickness,rating,leakageClass,classTemperature,mounting,storOrDtorOption,linkTemperature,actuatorBrand,actuatorPower,actuatorMounting,auxSwitch,bladeSwitchPackage,smokeDetector,bladeOperations,transition,transitionThickness,externalJunctionBox,mtsOption",
       "header": {
         "Frame Thickness": "CONCAT(frameThickness,string mm)",
         "Blade Thickness": "CONCAT(bladeThickness,string mm)",
@@ -34,7 +34,7 @@
       "summary": "qty,rate,amount,beforeDiscount"
     },
     "SIL": {
-      "headerKey": "subCategory,infillType,constructionStandard,airTightness,casingThickness,perfThickness,orientation,infillProtection,removableBaffle,accessPanel,optionFlangeangle",
+      "headerKey": "subcategory,infillType,constructionStandard,airTightness,casingThickness,perfThickness,orientation,infillProtection,removableBaffle,accessPanel,optionFlangeangle",
       "header": {
         "Specification": "specification",
         "Infill Type":"infillType",
@@ -52,7 +52,7 @@
       "summary": "qty,rate,amount,beforeDiscount"
     },
     "ULRD": {
-      "headerKey": "transitionType,frameThicknessLookup,bladeThicknessLookup,rating,retainingPlate,leakageClass,fuseLinkOptions,actuatorBrand,linkTemperature,actuatorPower,auxSwitch,actuatorMounting,bladeSwitchPackage,junctionBox,mtsOption",
+      "headerKey": "subcategory,modelDescription,transitionType,frameThicknessLookup,bladeThicknessLookup,rating,retainingPlate,leakageClass,fuseLinkOptions,actuatorBrand,linkTemperature,actuatorPower,auxSwitch,actuatorMounting,bladeSwitchPackage,junctionBox,mtsOption",
       "header": {
         "Frame Thickness (mm)": "frameThicknessLookup",
         "Blade Thickness (mm)":"bladeThicknessLookup",
@@ -73,7 +73,7 @@
       "summary": "qty,rate,amount,beforeDiscount"
     },
     "AD": {
-      "headerKey": "model,subcategory,frameThickness,doorThickness,ductOpeningUndersize,doorDepthSelect,finish,hingeType,hingeMaterial,insulation,gasket,safetyWireSelect",
+      "headerKey": "subcategory,modelDescription,frameThickness,doorThickness,ductOpeningUndersize,doorDepthSelect,finish,hingeType,hingeMaterial,insulation,gasket,safetyWireSelect",
       "header": {
         "Frame Thickness":"CONCAT(frameThickness,string mm)",
         "Door Thickness:":"CONCAT(doorThickness,string mm)",
@@ -90,7 +90,7 @@
       "summary": "qty,rate,amount,beforeDiscount"
     },
     "VCDA": {
-      "headerKey": "modelName,subCategory,frameThicknessLookup,bladeMaterialType,sleeveThicknessLookup,bladeThicknessLookup,bladeOperations,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,actuatorBrand,actuatorControls,auxSwitch,powerSupply,staticPressureCorrection,velocityCorrcetion,actuatorType",
+      "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeMaterialType,sleeveThicknessLookup,bladeThicknessLookup,bladeOperations,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,actuatorBrand,actuatorControls,auxSwitch,powerSupply,staticPressureCorrection,velocityCorrcetion,actuatorType",
       "header": {
         "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
         "Blade Material": "bladeMaterialType",
@@ -111,7 +111,7 @@
       "summary": "qty,rate,amount,beforeDiscount"
     },
     "VCDR": {
-      "headerKey": "modelName,subCategory,frameThicknessLookup,bladeThickness,staticPressureClass,velocityRating,axleBearing,bladeSeal,amcaLabel,actuatorMounting,actuatorBrand,actuatorControls,actuatorAuxSwitch,actuatorPowerSupply",
+      "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeThickness,staticPressureClass,velocityRating,axleBearing,bladeSeal,amcaLabel,actuatorMounting,actuatorBrand,actuatorControls,actuatorAuxSwitch,actuatorPowerSupply",
       "header": {
         "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
         "Blade Seal":"bladeSeal",
