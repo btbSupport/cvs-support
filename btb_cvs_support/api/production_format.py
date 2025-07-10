@@ -42,7 +42,8 @@ def populate_cart_detail( quote_name:str):
             pn = ProductNode()
             pn.productName = f"{qt.customer_name}-{qt.name} - {subCat}"
             pn.items = []
-            pn.items.append(populateHeader(qt, detail.get('header'), subCat))
+            for det in populateHeader(qt, detail.get('header'), subCat):
+                pn.items.append(det.split(','))
             pn.items.append(populateTotal(detail.get('total').split(','), features))
             pn.items.append(detail.get('tableHeader').split(','))
             for det in populateDetail(keys, features):
@@ -72,7 +73,7 @@ def populateHeader( qt, header, subCat):
     for key, value in replacements.items():
         if(value == None) : value =''
         header = header.replace(key, value)
-    return header.split(',')
+    return header.split('\n')
 
 def populateTotal( keys, features):
     row = []
@@ -142,6 +143,63 @@ def execFormula( formulae):
     return match.group(1).split(splitstring) if match else []
 
 def getValue( features, key):
+    if(key =='damperType'):
+        if(str(features['modelNo']['value']).startswith('FDD')): return 'Dynamic'
+        return 'Static'
+    if(key =='frameType'):
+        modelNo = features['modelNo']['value']
+        if( str(modelNo).endswith('-I')): return 'Slim Line'
+        return 'Double T'
+    if(key =='modelNoSplit'):
+        output = ''
+        if('modelName' in features):
+            output += features['modelName']['value'].split(' ')[0]
+        return output
+    if(key =='fuseLinkConcat') :
+        output = ''
+        if('storOrDtorOption' in features):
+            output += features['storOrDtorOption']['value']
+        if('linkTemperature' in features):
+            output += ' '+features['linkTemperature']['value']
+        return output
+    if(key =='fusibleLinkTempConcat') :
+        output = ''
+        if('fusibleLinkTemp' in features):
+            output += features['fusibleLinkTemp']['value']
+        if('linkType' in features):
+            output += features['linkType']['value']
+        return output
+    if(key =='microSwitch') :
+        output = ''
+        noOfSections = 0
+        qty = 0
+        if('noofSections' in features):
+            noOfSections = Decimal(features['noofSections']['value'])
+        if('limitSwitchRequired' in features and features['noofSections']['value'] == 'Yes'):
+            qty = Decimal(features['qty']['value'])
+        return str((noOfSections*qty))
+    if(key =='4Inch' or key =='5Inch' or key =='6Inch' or key =='7Inch' or key =='TotalBlades'):
+        output = 0
+        if(key =='TotalBlades' or ('bladeInch1' in features and features['bladeInch1'] != None and features['bladeInch1']['value'] != None and features['bladeInch1']['value']+'Inch' == key)):
+            output += Decimal(features['noOfBladesPerSection1']['value'])
+        
+        if(key =='TotalBlades' or ('bladeInch2' in features and features['bladeInch2'] != None and features['bladeInch2']['value'] != None and features['bladeInch2']['value']+'Inch' == key)):
+            output += Decimal(features['noOfBladesPerSection2']['value'])
+        return output
+    if(key =='actModelConcat1') :
+        output = ''
+        if('actModel1' in features):
+             output += features['actModel1']['value']
+        if('actuatorTorqueSize' in features and 'actModel2' in features and features['actuatorTorqueSize']['value'] != 'Optimize'):
+             output += ' '+features['actModel2']['value']
+        return output
+    if(key =='actModelConcat2') :
+        output = ''
+        if('actModel2' in features and 'actuatorTorqueSize' in features and features['actuatorTorqueSize']['value'] == 'Optimize'):
+            output += features['actModel2']['value']
+        return output
+    if(key =='bladeLengthMeter' and 'bladeLength' in features)  :      
+            return (Decimal(features['bladeLength']['value']))/1000
     if key in features:
         return features[key]['value']
     return '-'
