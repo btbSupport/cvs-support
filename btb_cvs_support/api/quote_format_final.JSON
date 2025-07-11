@@ -10,7 +10,7 @@
         "Mounting & Rating":"CONCAT(mounting,string - ,rating)"
       },
       "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "MSFD": {
       "headerKey": "subcategory,modelDescription,frameThickness,sleeveThickness,bladeThickness,rating,leakageClass,classTemperature,mounting,storOrDtorOption,linkTemperature,actuatorBrand,actuatorPower,actuatorMounting,auxSwitch,bladeSwitchPackage,smokeDetector,bladeOperations,transition,transitionThickness,externalJunctionBox,mtsOption",
@@ -31,7 +31,7 @@
         "MTS Option": "mtsOption"
       },
       "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "SIL": {
       "headerKey": "subcategory,infillType,constructionStandard,airTightness,casingThickness,perfThickness,orientation,infillProtection,removableBaffle,accessPanel,optionFlangeangle",
@@ -49,7 +49,7 @@
         "Cross Joint":"optionFlangeangle"
       },
       "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "ULRD": {
       "headerKey": "subcategory,modelDescription,transitionType,frameThicknessLookup,bladeThicknessLookup,rating,retainingPlate,leakageClass,fuseLinkOptions,actuatorBrand,linkTemperature,actuatorPower,auxSwitch,actuatorMounting,bladeSwitchPackage,junctionBox,mtsOption",
@@ -70,7 +70,7 @@
         "MTS Option":"mtsOption"
       },
       "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes,transitionType,transitionDiameter,transitionLength,transitionDiameter2,transitionLength2",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "AD": {
       "headerKey": "subcategory,modelDescription,frameThickness,doorThickness,ductOpeningUndersize,doorDepthSelect,finish,hingeType,hingeMaterial,insulation,gasket,safetyWireSelect",
@@ -87,7 +87,7 @@
         "Safety Wire":"safetyWireSelect"
       },
       "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "VCDA": {
       "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeMaterialType,sleeveThicknessLookup,bladeThicknessLookup,bladeOperations,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,actuatorBrand,actuatorControls,auxSwitch,powerSupply,staticPressureCorrection,velocityCorrcetion,actuatorType",
@@ -108,7 +108,7 @@
         "Actuator Mounting":""
       },
       "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes,transitionType",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "VCDR": {
       "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeThickness,staticPressureClass,velocityRating,axleBearing,bladeSeal,amcaLabel,actuatorMounting,actuatorBrand,actuatorControls,actuatorAuxSwitch,actuatorPowerSupply",
@@ -126,6 +126,6 @@
         "Actuator Mounting":"actuatorMounting"
       },
       "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     }
   }

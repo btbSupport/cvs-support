@@ -54,14 +54,26 @@ def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
         item =  {}
         for row_index, row in df_group.iterrows():
             if(item == {}):
+                # item =  {
+                # "cartProductName": {"value": row.itemName},
+                # "cartProductCode": {"value": row.item_code},
+                # "qty": {"value":  round(Decimal(str(row.Quantity)),0)},
+                # "unitPrice": {"value": round(Decimal(str(row.Unit_Price)),2)},
+                # "beforeDiscount": {"value":   round(Decimal(str(row.Quantity * row.Unit_Price)),2)},
+                # "rate": {"value":  round(Decimal(str(row.Unit_Price*(1-(row.discount/100)))),2)},
+                # "amount": {"value":  round(Decimal(str(row.Unit_Price*(1-(row.discount/100))*row.Quantity)),2)},
+                # "seq": {"value": row.Sequence},
+                # "cartTitle": {"value": row.Title},
+                # }
                 item =  {
                 "cartProductName": {"value": row.itemName},
                 "cartProductCode": {"value": row.item_code},
-                "qty": {"value":  round(Decimal(str(row.Quantity)),0)},
-                "unitPrice": {"value": round(Decimal(str(row.Unit_Price)),2)},
-                "beforeDiscount": {"value":   round(Decimal(str(row.Quantity * row.Unit_Price)),2)},
-                "rate": {"value":  round(Decimal(str(row.Unit_Price*(1-(row.discount/100)))),2)},
-                "amount": {"value":  round(Decimal(str(row.Unit_Price*(1-(row.discount/100))*row.Quantity)),2)},
+                "qty": {"value":   Decimal(f"{row.Quantity:,.0f}")},
+                "unitPrice": {"value": f"{row.Unit_Price:,.2f}"},
+                "beforeDiscount": {"value":   f"{(row.Quantity * row.Unit_Price):,.2f}"},
+                "rate": {"value":  f"{(row.Unit_Price*(1-(row.discount/100))):,.2f}"},
+                "cartAmount": {"value": (row.Unit_Price*(1-(row.discount/100))*row.Quantity)},
+                "amount": {"value": f"{(row.Unit_Price*(1-(row.discount/100))*row.Quantity):,.2f}"},
                 "seq": {"value": row.Sequence},
                 "cartTitle": {"value": row.Title},
                 }
@@ -103,7 +115,7 @@ def getQuoteById( quote_name):
 @frappe.whitelist()
 def applyDiscount( quote_name: str,discount:float):
     cartItems = get_cart_items(quote_name)
-    print(cartItems)
+    # print(cartItems)
     for item in cartItems:
         item = frappe.frappe.get_doc("BtbCartItem", item.name)
         item.discount = discount

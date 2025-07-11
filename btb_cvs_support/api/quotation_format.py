@@ -25,23 +25,26 @@ def provide( quote_name: str) -> Dict:
     },
     "qt": get_quote_details(quote_name)
     }
-    print("result -", output)
+    # print("result -", output)
     file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format.docx"
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
     generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".pdf")
+    # generate(file_path, output, format="original",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".docx")
+
     return json.loads(json.dumps(output,default=decimal_serializer))
 
 def get_quote_details( quote_name: str) -> Dict:
     sql = f""" select customer_name,address_display,contact_display,contact_designation,contact_mobile,contact_email,subject,project,name,terms,quotation_term_details,letter_details,standard_tc_details,grand_total,total_taxes_and_charges,net_total,discount_amount,additional_discount_percentage,total  from `tabQuotation` tqi where name ='{quote_name}'
     """
     items = frappe.db.sql(sql, as_dict=1)
-    items[0]["grand_total"]=get_decimal(items[0]["grand_total"])
-    items[0]["total_taxes_and_charges"]=get_decimal(items[0]["total_taxes_and_charges"])
-    items[0]["net_total"]=get_decimal(items[0]["net_total"])
-    items[0]["discount_amount"]=get_decimal(items[0]["discount_amount"])
-    items[0]["additional_discount_percentage"]=get_decimal(items[0]["additional_discount_percentage"])
-    items[0]["total"]=get_decimal(items[0]["total"])
-    return items[0]
+    item = items[0]
+    item["grand_total"]=f"{(item['grand_total']):,.2f}"
+    item["total_taxes_and_charges"]=f"{item['total_taxes_and_charges']:,.2f}"
+    item["net_total"]=f"{item['net_total']:,.2f}"
+    item["discount_amount"]=f"{item['discount_amount']:,.2f}"
+    item["additional_discount_percentage"]=f"{item['additional_discount_percentage']:,.2f}"
+    item["total"]=f"{item['total']:,.2f}"
+    return item
 
 def get_company_info() -> Dict:
     sql = f""" select name,default_currency ,email  from tabCompany tc 
@@ -145,7 +148,12 @@ def populate_cart_detail( quote_id: str) -> Dict[str, 'ProductRootNode']:
             product_family_map[product_code]['summary'],
             model_group_node[child_keys[group_key]]["summary"]
         )
-        prd_root_node["productTotal"] += get_decimal(get_key(cart_model, 'beforeDiscount'))
+        prdTotal =  Decimal(re.sub(r'[^\d.]', '', str(prd_root_node["productTotal"]))) + Decimal(get_decimal(get_key(cart_model, 'cartAmount')))
+       
+        print("check ",get_decimal(get_key(cart_model, 'cartAmount')))
+        print("check prdTotal ",prdTotal)
+
+        prd_root_node["productTotal"] = f"{prdTotal:,.2f}"
         prd_root_node["totalqty"] += round(get_decimal(get_key(cart_model, 'qty')),0)
         prd_root_node["items"] = model_group_node
     return output
@@ -170,15 +178,33 @@ def populate_detail( features, keys) -> Dict:
 def populate_summary( features, keys, summ: Dict) -> Dict:
     for k in keys.split(","):
         if k in features:
-            summ[k] = summ.get(k, Decimal(0)) + get_decimal(features[k]["value"])
-            if(k=='qty') : summ[k] = round(summ[k],0)
+            summ[k] = Decimal(re.sub(r'[^\d.]', '', summ.get(k, str(0)))) + get_decimal(features[k]["value"])
+            if(k=='qty') : summ[k] = f"{summ[k]:,.0f}"
+            else :
+                summ[k] = f"{summ[k]:,.2f}"
+    print('summ',summ)
     return summ
-
 def populate_value( features, formula: str) -> Union[str, Decimal]:
     if not formula.startswith("CONCAT"):
-        return features.get(formula, {}).get("value", "")
+            if(formula =='specification' and 'productCategory' in features) :
+                if('120' in features['productCategory']['value']) : return 'Fire Rated - 120 Min'
+                if('240' in features['productCategory']['value']) : return 'Fire Rated - 240 Min'
+                return 'Normal'
+            if(formula =='linkTemperature' and 'storOrDtorOption' in features) :
+                if(features['storOrDtorOption']['value']=='NA') : return 'NA'
+            if((formula =='sleeveThickness' and 'sleeveThickness' in features) or (formula =='frameThickness' and 'frameThickness' in features)) :
+                res = features['productCategory']['value']
+                if(res !=0) : return  f"{res:,.1f}"
+            if(formula in features): features.get(formula, {}).get("value", "")
+            return ''
     keys = exec(formula)
     return "".join([features.get(k, {}).get("value", "") if "string" not in k else k.replace("string", "") for k in keys])
+
+# def populate_value( features, formula: str) -> Union[str, Decimal]:
+#     if not formula.startswith("CONCAT"):
+#         return features.get(formula, {}).get("value", "")
+#     keys = exec(formula)
+#     return "".join([features.get(k, {}).get("value", "") if "string" not in k else k.replace("string", "") for k in keys])
 
 def exec( formula) -> List[str]:
     match = re.search(r'CONCAT\((.*?)\)', formula)
