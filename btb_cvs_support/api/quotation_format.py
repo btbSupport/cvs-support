@@ -90,8 +90,8 @@ class Display:
     def __init__( self,left, right):
         self.leftlabel = left["label"]
         self.rightlabel = right["label"]
-        self.leftValue = left.get("value", "N/A") or "N/A"
-        self.rightValue = right.get("value", "N/A") or "N/A"
+        self.leftValue = left["value"] or "N/A"
+        self.rightValue = right["value"] or "N/A"
 
 def get_prefix( val: str) -> str:
     return val.zfill(6)
@@ -186,6 +186,7 @@ def populate_summary( features, keys, summ: Dict) -> Dict:
     return summ
 def populate_value( features, formula: str) -> Union[str, Decimal]:
     if not formula.startswith("CONCAT"):
+            # print('formula :',formula)
             if(formula =='specification' and 'productCategory' in features) :
                 if('120' in features['productCategory']['value']) : return 'Fire Rated - 120 Min'
                 if('240' in features['productCategory']['value']) : return 'Fire Rated - 240 Min'
@@ -195,7 +196,7 @@ def populate_value( features, formula: str) -> Union[str, Decimal]:
             if((formula =='sleeveThickness' and 'sleeveThickness' in features) or (formula =='frameThickness' and 'frameThickness' in features)) :
                 res = features['productCategory']['value']
                 if(res !=0) : return  f"{res:,.1f}"
-            if(formula in features): features.get(formula, {}).get("value", "")
+            if(formula in features): return features[formula]['value']
             return ''
     keys = exec(formula)
     return "".join([features.get(k, {}).get("value", "") if "string" not in k else k.replace("string", "") for k in keys])
