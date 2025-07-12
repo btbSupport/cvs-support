@@ -90,6 +90,23 @@
       "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "VCDA": {
+      "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeMaterialType,sleeveThicknessLookup,bladeThicknessLookup,bladeOperations,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,staticPressureCorrection,velocityCorrcetion",
+      "header": {
+        "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
+        "Blade Material": "bladeMaterialType",
+        "Sleeve Thickness":"CONCAT(sleeveThicknessLookup,string mm)",
+        "Blade Thickness":"CONCAT(bladeThicknessLookup,string mm)",
+        "Static Pressure Class":"staticPressureCorrection",
+        "Velocity Rating":"velocityCorrcetion",
+        "Blade Seal & Operation":"CONCAT(bladeSealInput,string -,bladeOperations)",
+        "Jamb Side Seal":"jambSideSeal",
+        "Blade Bush Option":"bladeBushOption",
+        "AMCA Label":"amcaLabelSelect"
+      },
+      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes,transitionType",
+      "summary": "qty,rate,cartAmount,beforeDiscount"
+    },
+    "VCDA-ACT": {
       "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeMaterialType,sleeveThicknessLookup,bladeThicknessLookup,bladeOperations,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,actuatorBrand,actuatorControls,auxSwitch,powerSupply,staticPressureCorrection,velocityCorrcetion,actuatorType",
       "header": {
         "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
@@ -98,7 +115,7 @@
         "Blade Thickness":"CONCAT(bladeThicknessLookup,string mm)",
         "Static Pressure Class":"staticPressureCorrection",
         "Velocity Rating":"velocityCorrcetion",
-        "Blade Seal & Operation":"CONCAT(bladeSealInput,string -, bladeOperations)",
+        "Blade Seal & Operation":"CONCAT(bladeSealInput,string -,bladeOperations)",
         "Jamb Side Seal":"jambSideSeal",
         "Blade Bush Option":"bladeBushOption",
         "AMCA Label":"amcaLabelSelect",
@@ -111,6 +128,21 @@
       "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "VCDR": {
+      "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeThickness,staticPressureClass,velocityRating,axleBearing,bladeSeal,amcaLabel",
+      "header": {
+        "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
+        "Blade Seal":"bladeSeal",
+        "Blade Thickness":"CONCAT(bladeThickness,string mm)",
+        "Static Pressure Class":"staticPressureClass",
+        "Velocity Rating":"velocityRating",
+        "Axle Bearing":"axleBearing",
+        "AMCA Label":"amcaLabel",
+        "":"CONCAT(string )"
+      },
+      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
+      "summary": "qty,rate,cartAmount,beforeDiscount"
+    },
+    "VCDR-ACT": {
       "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeThickness,staticPressureClass,velocityRating,axleBearing,bladeSeal,amcaLabel,actuatorMounting,actuatorBrand,actuatorControls,actuatorAuxSwitch,actuatorPowerSupply",
       "header": {
         "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",

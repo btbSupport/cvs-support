@@ -44,6 +44,15 @@ def get_quote_details( quote_name: str) -> Dict:
     item["discount_amount"]=f"{item['discount_amount']:,.2f}"
     item["additional_discount_percentage"]=f"{item['additional_discount_percentage']:,.2f}"
     item["total"]=f"{item['total']:,.2f}"
+    item["quotation_term_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["quotation_term_details"]+"</div>"
+
+    item["standard_tc_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["standard_tc_details"]+"</div>"
+
+    item["terms"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["terms"]+"</div>"
+
+    item["letter_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["letter_details"]+"</div>"
+
+
     return item
 
 def get_company_info() -> Dict:
@@ -116,8 +125,11 @@ def populate_cart_detail( quote_id: str) -> Dict[str, 'ProductRootNode']:
     # print(models)
     for cart_model in models:
         product_code = get_key(cart_model, 'cartProductCode')
+        product_key = get_key(cart_model, 'cartProductCode')
         sub_category = get_key(cart_model, 'subcategory')
         root_key = f"{product_code}-{sub_category}"
+        if(product_code =='VCDR' and 'operator' in cart_model and cart_model['operator']['value'] == 'Motorized' ) : product_key = product_key+'-ACT'
+        if(product_code =='VCDA' and 'damperOperator' in cart_model and cart_model['damperOperator']['value'] == 'Motorized' ) : product_key = product_key+'-ACT'
 
         if root_key not in keys:
             prefix = get_prefix(str(len(keys)))
@@ -126,7 +138,7 @@ def populate_cart_detail( quote_id: str) -> Dict[str, 'ProductRootNode']:
 
         prd_root_node = output[keys[root_key]]
         model_group_node = prd_root_node.get('items')
-        group_key = get_key(cart_model, product_family_map[product_code]['headerKey'])
+        group_key = get_key(cart_model, product_family_map[product_key]['headerKey'])
 
         if group_key not in child_keys:
             prefix = get_prefix(str(len(child_keys)))
@@ -134,18 +146,18 @@ def populate_cart_detail( quote_id: str) -> Dict[str, 'ProductRootNode']:
             c_node = ChildNode().__dict__
             c_node["modelName"] = get_key(cart_model, 'modelDescription')
             c_node["subcategory"] = get_key(cart_model, 'subcategory')
-            c_node["headers"] = populate_header_values(cart_model, product_family_map[product_code]['header'])
+            c_node["headers"] = populate_header_values(cart_model, product_family_map[product_key]['header'])
             c_node["headersDisplay"] = populate_header_display(c_node.get("headers"))
             c_node["details"] = []
             c_node["summary"] = {}
             model_group_node[child_keys[group_key]] = c_node
 
         model_group_node[child_keys[group_key]]["details"].append(
-            populate_detail(cart_model, product_family_map[product_code]['detail'])
+            populate_detail(cart_model, product_family_map[product_key]['detail'])
         )
         model_group_node[child_keys[group_key]]["summary"] = populate_summary(
             cart_model,
-            product_family_map[product_code]['summary'],
+            product_family_map[product_key]['summary'],
             model_group_node[child_keys[group_key]]["summary"]
         )
         prdTotal =  Decimal(re.sub(r'[^\d.]', '', str(prd_root_node["productTotal"]))) + Decimal(get_decimal(get_key(cart_model, 'cartAmount')))
@@ -194,11 +206,12 @@ def populate_value( features, formula: str) -> Union[str, Decimal]:
             if(formula =='linkTemperature' and 'storOrDtorOption' in features) :
                 if(features['storOrDtorOption']['value']=='NA') : return 'NA'
             if((formula =='sleeveThickness' and 'sleeveThickness' in features) or (formula =='frameThickness' and 'frameThickness' in features)) :
-                res = features['productCategory']['value']
+                res = features[formula]['value']
                 if(res !=0) : return  f"{res:,.1f}"
             if(formula in features): return features[formula]['value']
             return ''
     keys = exec(formula)
+    print('keys - ',keys)
     return "".join([features.get(k, {}).get("value", "") if "string" not in k else k.replace("string", "") for k in keys])
 
 # def populate_value( features, formula: str) -> Union[str, Decimal]:
