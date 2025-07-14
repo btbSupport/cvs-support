@@ -195,7 +195,7 @@ def getValue( features, key):
         return output
     if(key =='actModelConcat2') :
         output = ''
-        if('actModel2' in features and 'actuatorTorqueSize' in features and features['actuatorTorqueSize']['value'] == 'Optimize'):
+        if('actModel2' in features and 'actuatorTorqueSize' in features and features['actModel2'] != None and features['actModel2']['value'] != None and features['actuatorTorqueSize']['value'] == 'Optimize'):
             output += features['actModel2']['value']
         return output
     if(key =='bladeLengthMeter' and 'bladeLength' in features)  :      
