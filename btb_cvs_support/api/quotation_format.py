@@ -44,13 +44,13 @@ def get_quote_details( quote_name: str) -> Dict:
     item["discount_amount"]=f"{item['discount_amount']:,.2f}"
     item["additional_discount_percentage"]=f"{item['additional_discount_percentage']:,.2f}"
     item["total"]=f"{item['total']:,.2f}"
-    item["quotation_term_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["quotation_term_details"]+"</div>"
+    if(item["quotation_term_details"] != None):item["quotation_term_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["quotation_term_details"]+"</div>"
 
-    item["standard_tc_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["standard_tc_details"]+"</div>"
+    if(item["standard_tc_details"] != None):item["standard_tc_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["standard_tc_details"]+"</div>"
 
-    item["terms"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["terms"]+"</div>"
+    if(item["terms"] != None):item["terms"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["terms"]+"</div>"
 
-    item["letter_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["letter_details"]+"</div>"
+    if(item["letter_details"] != None):item["letter_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["letter_details"]+"</div>"
 
 
     return item
