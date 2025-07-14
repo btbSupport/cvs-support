@@ -40938,7 +40938,7 @@
             {
               "logic": "MUL",
               "fields": [
-                "safetyWireSelect",
+                "safetyWire",
                 "qty"
               ]
             }
@@ -41498,7 +41498,7 @@
             {
               "logic": "MUL",
               "fields": [
-                "safetyWireSelect",
+                "safetyWire",
                 "qty"
               ]
             }
@@ -41527,7 +41527,7 @@
             {
               "logic": "MUL",
               "fields": [
-                "safetyWireSelect",
+                "safetyWire",
                 "qty"
               ]
             }
