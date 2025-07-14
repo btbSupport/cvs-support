@@ -69,7 +69,7 @@
         "External Junction Box":"junctionBox",
         "MTS Option":"mtsOption"
       },
-      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes,transitionType,transitionDiameter,transitionLength,transitionDiameter2,transitionLength2",
+      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
       "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "AD": {
@@ -103,7 +103,7 @@
         "Blade Bush Option":"bladeBushOption",
         "AMCA Label":"amcaLabelSelect"
       },
-      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes,transitionType",
+      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
       "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "VCDA-ACT": {
@@ -124,7 +124,7 @@
         "Aux Switch":"auxSwitch",
         "Actuator Mounting":""
       },
-      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes,transitionType",
+      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
       "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "VCDR": {
