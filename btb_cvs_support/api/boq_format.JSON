@@ -38059,5 +38059,3481 @@
         }
       }
     }
+  ],
+  "AD": [
+     {
+      "itemCode": "GI Door 0.55",
+      "description": "GI Door 0.55",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.55"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Door 0.6",
+      "description": "GI Door 0.6",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.6"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Door 0.7",
+      "description": "GI Door 0.7",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.7"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Door 0.8",
+      "description": "GI Door 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.8"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Door 0.9",
+      "description": "GI Door 0.9",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.9"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Door 1.0",
+      "description": "GI Door 1.0",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Door 1.2",
+      "description": "GI Door 1.2",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1.2"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Door 1.5",
+      "description": "GI Door 1.5",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1.5"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Door 0.55",
+      "description": "AL Door 0.55",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.55"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Door 0.6",
+      "description": "AL Door 0.6",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.6"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Door 0.7",
+      "description": "AL Door 0.7",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.7"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Door 0.8",
+      "description": "AL Door 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.8"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Door 0.9",
+      "description": "AL Door 0.9",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.9"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Door 1.0",
+      "description": "AL Door 1.0",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Door 1.2",
+      "description": "AL Door 1.2",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1.2"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Door 1.5",
+      "description": "AL Door 1.5",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1.5"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Door 0.55",
+      "description": "AZ Door 0.55",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.55"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Door 0.6",
+      "description": "AZ Door 0.6",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.6"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Door 0.7",
+      "description": "AZ Door 0.7",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.7"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Door 0.8",
+      "description": "AZ Door 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.8"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Door 0.9",
+      "description": "AZ Door 0.9",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.9"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Door 1.0",
+      "description": "AZ Door 1.0",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Door 1.2",
+      "description": "AZ Door 1.2",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1.2"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Door 1.5",
+      "description": "AZ Door 1.5",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1.5"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Door 0.55",
+      "description": "SS304L Door 0.55",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.55"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Door 0.6",
+      "description": "SS304L Door 0.6",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.6"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Door 0.7",
+      "description": "SS304L Door 0.7",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.7"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Door 0.8",
+      "description": "SS304L Door 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.8"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Door 0.9",
+      "description": "SS304L Door 0.9",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.9"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Door 1.0",
+      "description": "SS304L Door 1.0",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Door 1.2",
+      "description": "SS304L Door 1.2",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1.2"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Door 1.5",
+      "description": "SS304L Door 1.5",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1.5"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Door 0.55",
+      "description": "SS316L Door 0.55",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.55"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Door 0.6",
+      "description": "SS316L Door 0.6",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.6"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Door 0.7",
+      "description": "SS316L Door 0.7",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.7"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Door 0.8",
+      "description": "SS316L Door 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.8"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Door 0.9",
+      "description": "SS316L Door 0.9",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "0.9"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Door 1.0",
+      "description": "SS316L Door 1.0",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Door 1.2",
+      "description": "SS316L Door 1.2",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1.2"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Door 1.5",
+      "description": "SS316L Door 1.5",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "doorThickness",
+              "operator": "eq",
+              "value": "1.5"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "doorWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Frame 0.55",
+      "description": "GI Frame 0.55",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.55"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Frame 0.6",
+      "description": "GI Frame 0.6",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.6"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Frame 0.7",
+      "description": "GI Frame 0.7",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.7"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Frame 0.8",
+      "description": "GI Frame 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.8"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Frame 0.9",
+      "description": "GI Frame 0.9",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.9"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Frame 1.0",
+      "description": "GI Frame 1.0",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Frame 1.2",
+      "description": "GI Frame 1.2",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.2"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Frame 1.5",
+      "description": "GI Frame 1.5",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.5"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Frame 0.55",
+      "description": "AL Frame 0.55",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.55"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Frame 0.6",
+      "description": "AL Frame 0.6",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.6"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Frame 0.7",
+      "description": "AL Frame 0.7",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.7"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Frame 0.8",
+      "description": "AL Frame 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.8"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Frame 0.9",
+      "description": "AL Frame 0.9",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.9"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Frame 1.0",
+      "description": "AL Frame 1.0",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Frame 1.2",
+      "description": "AL Frame 1.2",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.2"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Frame 1.5",
+      "description": "AL Frame 1.5",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.5"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Frame 0.55",
+      "description": "AZ Frame 0.55",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.55"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Frame 0.6",
+      "description": "AZ Frame 0.6",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.6"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Frame 0.7",
+      "description": "AZ Frame 0.7",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.7"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Frame 0.8",
+      "description": "AZ Frame 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.8"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Frame 0.9",
+      "description": "AZ Frame 0.9",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.9"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Frame 1.0",
+      "description": "AZ Frame 1.0",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Frame 1.2",
+      "description": "AZ Frame 1.2",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.2"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Frame 1.5",
+      "description": "AZ Frame 1.5",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.5"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 0.55",
+      "description": "SS304L Frame 0.55",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.55"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 0.6",
+      "description": "SS304L Frame 0.6",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.6"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 0.7",
+      "description": "SS304L Frame 0.7",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.7"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 0.8",
+      "description": "SS304L Frame 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.8"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    { 
+      "itemCode": "SS304L Frame 0.9",
+      "description": "SS304L Frame 0.9",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.9"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 1.0",
+      "description": "SS304L Frame 1.0",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 1.2",
+      "description": "SS304L Frame 1.2",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.2"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 1.5",
+      "description": "SS304L Frame 1.5",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.5"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 0.55",
+      "description": "SS316L Frame 0.55",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.55"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 0.6",
+      "description": "SS316L Frame 0.6",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.6"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 0.7",
+      "description": "SS316L Frame 0.7",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.7"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 0.8",
+      "description": "SS316L Frame 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.8"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 0.9",
+      "description": "SS316L Frame 0.9",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "0.9"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 1.0",
+      "description": "SS316L Frame 1.0",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 1.2",
+      "description": "SS316L Frame 1.2",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.2"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 1.5",
+      "description": "SS316L Frame 1.5",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.5"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Round Fitting 0.8",
+      "description": "GI Round Fitting 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "roundFittingWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Round Fitting 0.8",
+      "description": "AL Round Fitting 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "roundFittingWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AZ Round Fitting 0.8",
+      "description": "AZ Round Fitting 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "roundFittingWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Round Fitting 0.8",
+      "description": "SS304L Round Fitting 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "roundFittingWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Round Fitting 0.8",
+      "description": "SS316L Round Fitting 0.8",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "roundFittingWeight",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "Safety Wire",
+      "description": "Safety Wire",
+      "uom": "Ea",
+      "formula": {
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "safetyWireSelect",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI & AZ Handle Cost (per PC)",
+      "description": "GI & AZ Handle Cost (per PC)",
+      "uom": "Ea",
+      "formula": {
+        "filter": {
+          "logic": "or",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+     {
+      "itemCode": "SS Handle Cost (per PC)",
+      "description": "SS Handle Cost (per PC)",
+      "uom": "Ea",
+      "formula": {
+        "filter": {
+          "logic": "or",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+     {
+      "itemCode": "AL Handle Cost (per PC)",
+      "description": "AL Handle Cost (per PC)",
+      "uom": "Ea",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+     {
+      "itemCode": "GI & AZ Cam Lock Cost (per PC)",
+      "description": "GI & AZ Cam Lock Cost (per PC)",
+      "uom": "Ea",
+      "formula": {
+        "filter": {
+          "logic": "or",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AZ"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "camLockQty",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+     {
+      "itemCode": "SS Cam Lock Cost (per PC)",
+      "description": "SS Cam Lock Cost (per PC)",
+      "uom": "Ea",
+      "formula": {
+        "filter": {
+          "logic": "or",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "SS316L"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "camLockQty",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Cam Lock Cost (per PC)",
+      "description": "AL Cam Lock Cost (per PC)",
+      "uom": "Ea",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "material",
+              "operator": "eq",
+              "value": "AL"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "camLockQty",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "Rockwool 1 Inch (25mm)",
+      "description": "Rockwool 1 (25mm)",
+      "uom": "sqm",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "insulation",
+              "operator": "eq",
+              "value": "Rockwool"
+            },
+            {
+              "field": "doorDepthSelect",
+              "operator": "eq",
+              "value": "1 Inch (25mm)"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "insulationArea",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "Rockwool 2 Inch (50mm)",
+      "description": "Rockwool 2 (50mm)",
+      "uom": "sqm",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "insulation",
+              "operator": "eq",
+              "value": "Rockwool"
+            },
+            {
+              "field": "doorDepthSelect",
+              "operator": "eq",
+              "value": "2 Inch (50mm)"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "insulationArea",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "Fiberglass 1 Inch (25mm)",
+      "description": "Fiberglass 1 (25mm)",
+      "uom": "sqm",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "insulation",
+              "operator": "eq",
+              "value": "Fiberglass"
+            },
+            {
+              "field": "doorDepthSelect",
+              "operator": "eq",
+              "value": "1 Inch (25mm)"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "insulationArea",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "Fiberglass 2 Inch (50mm)",
+      "description": "Fiberglass 2 (50mm)",
+      "uom": "sqm",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "insulation",
+              "operator": "eq",
+              "value": "Fiberglass"
+            },
+            {
+              "field": "doorDepthSelect",
+              "operator": "eq",
+              "value": "2 Inch (50mm)"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "insulationArea",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS Standard Hinge",
+      "description": "SS Standard Hinge",
+      "uom": "Ea",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "hingeType",
+              "operator": "eq",
+              "value": "Standard"
+            },
+            {
+              "field": "hingeMaterial",
+              "operator": "eq",
+              "value": "SS"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "hingeQty",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS Continuous Hinge",
+      "description": "SS Continuous Hinge",
+      "uom": "m",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "hingeType",
+              "operator": "eq",
+              "value": "Continuous"
+            },
+            {
+              "field": "hingeMaterial",
+              "operator": "eq",
+              "value": "SS"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "hingeQty",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "Brass Standard Hinge",
+      "description": "Brass Standard Hinge",
+      "uom": "Ea",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "hingeType",
+              "operator": "eq",
+              "value": "Standard"
+            },
+            {
+              "field": "hingeMaterial",
+              "operator": "eq",
+              "value": "Brass"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "hingeQty",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "Brass Continuous Hinge",
+      "description": "Brass Continuous Hinge",
+      "uom": "m",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "hingeType",
+              "operator": "eq",
+              "value": "Continuous"
+            },
+            {
+              "field": "hingeMaterial",
+              "operator": "eq",
+              "value": "Brass"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "hingeQty",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Standard Hinge",
+      "description": "AL Standard Hinge",
+      "uom": "Ea",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "hingeType",
+              "operator": "eq",
+              "value": "Standard"
+            },
+            {
+              "field": "hingeMaterial",
+              "operator": "eq",
+              "value": "AL"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "hingeQty",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Continuous Hinge",
+      "description": "AL Continuous Hinge",
+      "uom": "m",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "hingeType",
+              "operator": "eq",
+              "value": "Continuous"
+            },
+            {
+              "field": "hingeMaterial",
+              "operator": "eq",
+              "value": "AL"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "hingeQty",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "Neoprene Gasket",
+      "description": "Neoprene Gasket",
+      "uom": "m",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "gasket",
+              "operator": "eq",
+              "value": "Neoprene"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "safetyWireSelect",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "Polyurethane Gasket",
+      "description": "Polyurethane Gasket",
+      "uom": "m",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "gasket",
+              "operator": "eq",
+              "value": "Polyurethane"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "safetyWireSelect",
+                "qty"
+              ]
+            }
+          ]
+        }
+      }
+    }
   ]
 }
