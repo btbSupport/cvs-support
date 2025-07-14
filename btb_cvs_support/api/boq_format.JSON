@@ -10727,7 +10727,7 @@
     {
       "itemCode": "2290517-TF230",
       "description": "Belimo 22lbin-2.5Nm, 230V Spring Return-On/Off , Actuator w/o Aux TF230",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -10788,7 +10788,7 @@
     {
       "itemCode": "2290516-TF24",
       "description": "Belimo 22lbin-2.5Nm, 24V Spring Return-On/Off , Actuator w/o Aux TF24",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -10849,7 +10849,7 @@
     {
       "itemCode": "2290515-TF24-SR",
       "description": "Belimo 22lbin-2.5Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux TF24-SR",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -10910,7 +10910,7 @@
     {
       "itemCode": "2290514-LF230A",
       "description": "Belimo 35lbin-4Nm, 230V Spring Return-On/Off , Actuator w/o Aux LF230A",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -10971,7 +10971,7 @@
     {
       "itemCode": "2290513-LF24",
       "description": "Belimo 35lbin-4Nm, 24V Spring Return-On/Off , Actuator w/o Aux LF24",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11032,7 +11032,7 @@
     {
       "itemCode": "2290512-LF24-SR",
       "description": "Belimo 35lbin-4Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux LF24-SR",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11093,7 +11093,7 @@
     {
       "itemCode": "2290511-LM230A",
       "description": "Belimo 45lbin-5Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux LM230A",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11154,7 +11154,7 @@
     {
       "itemCode": "2290510-LM24A",
       "description": "Belimo 45lbin-5Nm, 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux LM24A",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11215,7 +11215,7 @@
     {
       "itemCode": "229096-LM230A -S",
       "description": "Belimo 45lbin-5Nm, 230V Non Spring Return-On/Off + Floating , Actuator 2 Aux LM230A -S",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11276,7 +11276,7 @@
     {
       "itemCode": "2290465-LM24A -S",
       "description": "Belimo 45lbin-5Nm, 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux LM24A -S",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11337,7 +11337,7 @@
     {
       "itemCode": "2290341-GDB341.1E",
       "description": "Siemens 45lbin-5Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GDB341.1E",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11398,7 +11398,7 @@
     {
       "itemCode": "2290495-GDB346.1E",
       "description": "Siemens 45lbin-5Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GDB346.1E",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11459,7 +11459,7 @@
     {
       "itemCode": "2290509-NF230A",
       "description": "Belimo 90lbin-10Nm, 230V Spring Return-On/Off , Actuator w/o Aux NF230A",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11520,7 +11520,7 @@
     {
       "itemCode": "2290508-NF24A",
       "description": "Belimo 90lbin-10Nm, 24V Spring Return-On/Off , Actuator w/o Aux NF24A",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11581,7 +11581,7 @@
     {
       "itemCode": "2290270-NM230A",
       "description": "Belimo 90lbin-10Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux NM230A",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11642,7 +11642,7 @@
     {
       "itemCode": "2290507-NM24A",
       "description": "Belimo 90lbin-10Nm, 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux NM24A",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11703,7 +11703,7 @@
     {
       "itemCode": "2290506-NF24A-SR",
       "description": "Belimo 90lbin-10Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux NF24A-SR",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11764,7 +11764,7 @@
     {
       "itemCode": "2290499-GLB341.1E",
       "description": "Siemens 90lbin-10Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GLB341.1E",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11825,7 +11825,7 @@
     {
       "itemCode": "2290496-GLB346.1E",
       "description": "Siemens 90lbin-10Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GLB346.1E",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11886,7 +11886,7 @@
     {
       "itemCode": "2290276-SM230A",
       "description": "Belimo 180lbin-20Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux SM230A",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -11947,7 +11947,7 @@
     {
       "itemCode": "2290505-SM24A",
       "description": "Belimo 180lbin-20Nm, 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux SM24A",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12008,7 +12008,7 @@
     {
       "itemCode": "229098-SM230A -S",
       "description": "Belimo 180lbin-20Nm, 230V Non Spring Return-On/Off + Floating , Actuator 2 Aux SM230A -S",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12069,7 +12069,7 @@
     {
       "itemCode": "2290504-SF24A-SR",
       "description": "Belimo 180lbin-20Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux SF24A-SR",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12130,7 +12130,7 @@
     {
       "itemCode": "2290500-GEB341.1E",
       "description": "Siemens 180lbin-20Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GEB341.1E",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12191,7 +12191,7 @@
     {
       "itemCode": "2290497-GEB346.1E",
       "description": "Siemens 180lbin-20Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GEB346.1E",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12252,7 +12252,7 @@
     {
       "itemCode": "229088-FSNF24-S US",
       "description": "Belimo 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSNF24-S US",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12313,7 +12313,7 @@
     {
       "itemCode": "229089-FSNF230-S US",
       "description": "Belimo 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSNF230-S US",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12374,7 +12374,7 @@
     {
       "itemCode": "229090-FSLF230-S US",
       "description": "Belimo 30lbin-3.5Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSLF230-S US",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12435,7 +12435,7 @@
     {
       "itemCode": "229091-FSLF24-S US",
       "description": "Belimo 30lbin-3.5Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSLF24-S US",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12496,7 +12496,7 @@
     {
       "itemCode": "229100-MS4604F1010/B",
       "description": "Honeywell 30lbin-3.4Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4604F1010/B",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12557,7 +12557,7 @@
     {
       "itemCode": "229101-MS4604F1210/B",
       "description": "Honeywell 30lbin-3.4Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4604F1210/B",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12618,7 +12618,7 @@
     {
       "itemCode": "229102-MS8104F1010/B",
       "description": "Honeywell 30lbin-3.4Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8104F1010/B",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12679,7 +12679,7 @@
     {
       "itemCode": "229103-MS8104F1210/B",
       "description": "Honeywell 30lbin-3.4Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8104F1210/B",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12740,7 +12740,7 @@
     {
       "itemCode": "229104-MS8109F1010/B",
       "description": "Honeywell 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8109F1010/B",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12801,7 +12801,7 @@
     {
       "itemCode": "229105-MS8109F1210/B",
       "description": "Honeywell 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8109F1210/B",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12862,7 +12862,7 @@
     {
       "itemCode": "229106-MS4609F1010/B",
       "description": "Honeywell 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4609F1010/B",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12923,7 +12923,7 @@
     {
       "itemCode": "229107-MS4609F1210/B",
       "description": "Honeywell 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4609F1210/B",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -12984,7 +12984,7 @@
     {
       "itemCode": "229108-MS8120F1002/B",
       "description": "Honeywell 175lbin-20Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8120F1002/B",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -13045,7 +13045,7 @@
     {
       "itemCode": "229109-MS8120F1200/B",
       "description": "Honeywell 175lbin-20Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8120F1200/B",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -13106,7 +13106,7 @@
     {
       "itemCode": "229110-MS4620F1203/B",
       "description": "Honeywell 175lbin-20Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4620F1203/B",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -13167,7 +13167,7 @@
     {
       "itemCode": "229111-MS4620F1005/B",
       "description": "Honeywell 175lbin-20Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4620F1005/B",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -13228,7 +13228,7 @@
     {
       "itemCode": "2290263-FSLF230 US",
       "description": "Belimo 30lbin-3.5Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSLF230 US",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -13289,7 +13289,7 @@
     {
       "itemCode": "2290280-FSNF230 US",
       "description": "Belimo 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSNF230 US",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -13350,7 +13350,7 @@
     {
       "itemCode": "2290281-FSNF24 US",
       "description": "Belimo 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSNF24 US",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -13411,7 +13411,7 @@
     {
       "itemCode": "2290283-FSLF24 US",
       "description": "Belimo 30lbin-3.5Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSLF24 US",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -13472,7 +13472,7 @@
     {
       "itemCode": "229093-FSTF24-S US",
       "description": "Belimo 18lbin-2.5Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSTF24-S US",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -13533,7 +13533,7 @@
     {
       "itemCode": "229092-FSTF230-S US",
       "description": "Belimo 18lbin-2.5Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSTF230-S US",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -13594,7 +13594,7 @@
     {
       "itemCode": "2290501-FSTF230 US",
       "description": "Belimo 18lbin-2.5Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSTF230 US",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -13655,7 +13655,7 @@
     {
       "itemCode": "2290502-FSTF24 US",
       "description": "Belimo 18lbin-2.5Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSTF24 US",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -13716,7 +13716,7 @@
     {
       "itemCode": "2290468-FSAFB24-SR-S",
       "description": "Belimo 180lbin-20Nm, 24V Fire & Smoke-Modulating 2-10V, Actuator 2 Aux FSAFB24-SR-S",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -13777,7 +13777,7 @@
     {
       "itemCode": "2290503-FSAFB24-SR",
       "description": "Belimo 180lbin-20Nm, 24V Fire & Smoke-Modulating 2-10V, Actuator w/o Aux FSAFB24-SR",
-      "uom": "kg",
+      "uom": "Ea",
       "formula": {
         "filter": {
           "logic": "or",
@@ -35089,7 +35089,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.0"
+              "value": "1.00"
             }
           ]
         },
@@ -35123,7 +35123,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -35157,7 +35157,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -35191,7 +35191,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.0"
+              "value": "1.00"
             }
           ]
         },
@@ -35225,7 +35225,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -35259,7 +35259,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -35293,7 +35293,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.0"
+              "value": "1.00"
             }
           ]
         },
@@ -35327,7 +35327,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -35361,7 +35361,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -35701,7 +35701,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.0"
+              "value": "1.00"
             }
           ]
         },
@@ -35735,7 +35735,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -35769,7 +35769,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -35803,7 +35803,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.0"
+              "value": "1.00"
             }
           ]
         },
@@ -35837,7 +35837,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -35871,7 +35871,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -35905,7 +35905,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.0"
+              "value": "1.00"
             }
           ]
         },
@@ -35939,7 +35939,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -35973,7 +35973,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -36007,7 +36007,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.0"
+              "value": "1.00"
             }
           ]
         },
@@ -36041,7 +36041,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -36075,7 +36075,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.0"
+              "value": "1.00"
             }
           ]
         },
@@ -36109,7 +36109,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -36143,7 +36143,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.0"
+              "value": "1.00"
             }
           ]
         },
@@ -36177,7 +36177,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -36298,7 +36298,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.0"
+              "value": "1.00"
             }
           ]
         },
@@ -36332,7 +36332,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -36366,7 +36366,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -36400,7 +36400,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.0"
+              "value": "1.00"
             }
           ]
         },
@@ -36434,7 +36434,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -36468,7 +36468,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -36502,7 +36502,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.0"
+              "value": "1.00"
             }
           ]
         },
@@ -36536,7 +36536,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -36570,7 +36570,7 @@
             {
               "field": "frameThicknessLookup",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -38112,7 +38112,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.6"
+              "value": "0.60"
             }
           ]
         },
@@ -38146,7 +38146,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.7"
+              "value": "0.70"
             }
           ]
         },
@@ -38180,7 +38180,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.8"
+              "value": "0.80"
             }
           ]
         },
@@ -38214,7 +38214,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.9"
+              "value": "0.90"
             }
           ]
         },
@@ -38248,7 +38248,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1"
+              "value": "1.00"
             }
           ]
         },
@@ -38282,7 +38282,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -38316,7 +38316,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -38384,7 +38384,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.6"
+              "value": "0.60"
             }
           ]
         },
@@ -38418,7 +38418,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.7"
+              "value": "0.70"
             }
           ]
         },
@@ -38452,7 +38452,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.8"
+              "value": "0.80"
             }
           ]
         },
@@ -38486,7 +38486,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.9"
+              "value": "0.90"
             }
           ]
         },
@@ -38520,7 +38520,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1"
+              "value": "1.00"
             }
           ]
         },
@@ -38554,7 +38554,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -38588,7 +38588,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -38656,7 +38656,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.6"
+              "value": "0.60"
             }
           ]
         },
@@ -38690,7 +38690,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.7"
+              "value": "0.70"
             }
           ]
         },
@@ -38724,7 +38724,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.8"
+              "value": "0.80"
             }
           ]
         },
@@ -38758,7 +38758,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.9"
+              "value": "0.90"
             }
           ]
         },
@@ -38792,7 +38792,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1"
+              "value": "1.00"
             }
           ]
         },
@@ -38826,7 +38826,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -38860,7 +38860,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -38928,7 +38928,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.6"
+              "value": "0.60"
             }
           ]
         },
@@ -38962,7 +38962,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.7"
+              "value": "0.70"
             }
           ]
         },
@@ -38996,7 +38996,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.8"
+              "value": "0.80"
             }
           ]
         },
@@ -39030,7 +39030,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.9"
+              "value": "0.90"
             }
           ]
         },
@@ -39064,7 +39064,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1"
+              "value": "1.00"
             }
           ]
         },
@@ -39098,7 +39098,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -39132,7 +39132,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -39200,7 +39200,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.6"
+              "value": "0.60"
             }
           ]
         },
@@ -39234,7 +39234,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.7"
+              "value": "0.70"
             }
           ]
         },
@@ -39268,7 +39268,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.8"
+              "value": "0.80"
             }
           ]
         },
@@ -39302,7 +39302,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "0.9"
+              "value": "0.90"
             }
           ]
         },
@@ -39336,7 +39336,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1"
+              "value": "1.00"
             }
           ]
         },
@@ -39370,7 +39370,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -39404,7 +39404,7 @@
             {
               "field": "doorThickness",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -39472,7 +39472,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.6"
+              "value": "0.60"
             }
           ]
         },
@@ -39506,7 +39506,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.7"
+              "value": "0.70"
             }
           ]
         },
@@ -39540,7 +39540,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.8"
+              "value": "0.80"
             }
           ]
         },
@@ -39574,7 +39574,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.9"
+              "value": "0.90"
             }
           ]
         },
@@ -39608,7 +39608,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1"
+              "value": "1.00"
             }
           ]
         },
@@ -39642,7 +39642,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -39676,7 +39676,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -39744,7 +39744,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.6"
+              "value": "0.60"
             }
           ]
         },
@@ -39778,7 +39778,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.7"
+              "value": "0.70"
             }
           ]
         },
@@ -39812,7 +39812,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.8"
+              "value": "0.80"
             }
           ]
         },
@@ -39846,7 +39846,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.9"
+              "value": "0.90"
             }
           ]
         },
@@ -39880,7 +39880,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1"
+              "value": "1.00"
             }
           ]
         },
@@ -39914,7 +39914,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -39948,7 +39948,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -40016,7 +40016,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.6"
+              "value": "0.60"
             }
           ]
         },
@@ -40050,7 +40050,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.7"
+              "value": "0.70"
             }
           ]
         },
@@ -40084,7 +40084,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.8"
+              "value": "0.80"
             }
           ]
         },
@@ -40118,7 +40118,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.9"
+              "value": "0.90"
             }
           ]
         },
@@ -40152,7 +40152,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1"
+              "value": "1.00"
             }
           ]
         },
@@ -40186,7 +40186,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -40220,7 +40220,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -40288,7 +40288,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.6"
+              "value": "0.60"
             }
           ]
         },
@@ -40322,7 +40322,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.7"
+              "value": "0.70"
             }
           ]
         },
@@ -40356,7 +40356,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.8"
+              "value": "0.80"
             }
           ]
         },
@@ -40390,7 +40390,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.9"
+              "value": "0.90"
             }
           ]
         },
@@ -40424,7 +40424,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1"
+              "value": "1.00"
             }
           ]
         },
@@ -40458,7 +40458,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -40492,7 +40492,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -40560,7 +40560,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.6"
+              "value": "0.60"
             }
           ]
         },
@@ -40594,7 +40594,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.7"
+              "value": "0.70"
             }
           ]
         },
@@ -40628,7 +40628,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.8"
+              "value": "0.80"
             }
           ]
         },
@@ -40662,7 +40662,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "0.9"
+              "value": "0.90"
             }
           ]
         },
@@ -40696,7 +40696,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1"
+              "value": "1.00"
             }
           ]
         },
@@ -40730,7 +40730,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1.2"
+              "value": "1.20"
             }
           ]
         },
@@ -40764,7 +40764,7 @@
             {
               "field": "frameThickness",
               "operator": "eq",
-              "value": "1.5"
+              "value": "1.50"
             }
           ]
         },
@@ -41207,7 +41207,7 @@
     },
     {
       "itemCode": "Fiberglass 1 Inch (25mm)",
-      "description": "Fiberglass 1 (25mm)",
+      "description": "Fiberglass 1 Inch (25mm)",
       "uom": "sqm",
       "formula": {
         "filter": {
