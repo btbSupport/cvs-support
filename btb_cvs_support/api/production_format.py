@@ -188,9 +188,9 @@ def getValue( features, key):
         return output
     if(key =='actModelConcat1') :
         output = ''
-        if('actModel1' in features):
+        if('actModel1' in features and features['actModel1'] != None and features['actModel1']['value'] != None ):
              output += features['actModel1']['value']
-        if('actuatorTorqueSize' in features and 'actModel2' in features and features['actuatorTorqueSize']['value'] != 'Optimize'):
+        if('actuatorTorqueSize' in features and 'actModel2' in features  and features['actModel2'] != None and features['actModel2']['value'] != None and features['actuatorTorqueSize']['value'] != 'Optimize'):
              output += ' '+features['actModel2']['value']
         return output
     if(key =='actModelConcat2') :
