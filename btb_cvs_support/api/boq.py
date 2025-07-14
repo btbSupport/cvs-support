@@ -10,7 +10,7 @@ subCategoryMap: Dict[str, str] = {}
 
 class ProductInfo:
     def __init__(self, descr="", val=0, u=""):
-        self.value = round(val,2) if val > 0 else "-"
+        self.value = f"{val:,.2f}" if val > 0 else "-"
         self.description = descr
         self.uom = u
         self.itemCode = None
