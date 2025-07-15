@@ -19,7 +19,7 @@ def get_synced_cart_items( quote_name: str) -> List[Dict[str, any]]:
         tbcif.value cif_value,tbfti.value fti_value,tbfti.`object` obj_value,tbft.object_type obj_type,tbft.data_text_field 
     from tabBtbCartItem tbc
     join `tabItem` i on tbc.item  = i.name and   tbc.name in (
-    select custom_cart_item from `tabQuotation Item` where parent='{quote_name}'
+    select parent from tabBtbCartItemLink tbcil where entity = '{quote_name}'
     )
     join tabBtbCartItemFeature tbcif on tbcif.parent = tbc.name
     join tabBtbFeature tbf  on tbf.name = tbcif.feature 
@@ -95,7 +95,7 @@ def get_featuretype_items( tabName:str, data_text_field:str, values: List[str],f
 @frappe.whitelist()
 def get_synced_items(quote_name: str):
     sql = f"""
-        select tqi.*,tbci.idx,tbci.unit_price,tbci.discount ciDiscount,tbci.quantity ciQty  from `tabQuotation Item` tqi 
+        select tqi.*,tbci.idx,tbci.unit_price,tbci.discount ciDiscount,tbci.quantity ciQty,tbci.name ciName  from `tabQuotation Item` tqi 
         join tabBtbCartItem tbci on tbci.name=tqi.custom_cart_item  where tqi.parent ='{quote_name}'
 order by tbci.idx
     """
@@ -151,3 +151,38 @@ def get_cart_items( quote_name: str) :
     """
     items = frappe.db.sql(sql, as_dict=1)
     return items
+
+
+@frappe.whitelist()
+def amendCPQ(quote_name: str,amended_from: str):
+    print('inside amendCPQ',quote_name)
+    print('inside amendCPQ amended_from',amended_from)
+    cart_name = create_cart(quote_name)
+    cartItems = get_synced_items(amended_from)
+    print('inside amendCPQ cartItems',cartItems)
+    # clonedItems=[]
+    for item in cartItems:
+        cartItem = frappe.frappe.get_doc("BtbCartItem", item.ciName)
+        cartItem.name = None
+        cartItem.cart = cart_name
+        ciLinks =[]
+        for cil in cartItem.cart_item_links:
+            cil.entity = quote_name
+            ciLinks.append(cil)
+        cartItem.cart_item_links = ciLinks
+        # cartItem.cart_item_links =[]
+        cartItem.save()
+    quot = frappe.frappe.get_doc("Quotation", quote_name)
+    quot.custom_cpq_amended = 1
+    quot.db_update()
+
+def create_cart(quote_name: str):
+    cartLink = frappe.new_doc("BtbCartLink")
+    cartLink.entity_type = "Quotation"
+    cartLink.entity = quote_name
+
+    cart = frappe.new_doc("BtbCart")
+    cart.append('cart_links', cartLink);
+    cart.insert()
+    return cart.name
+    
