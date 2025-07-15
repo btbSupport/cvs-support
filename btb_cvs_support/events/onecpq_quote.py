@@ -66,7 +66,11 @@ def before_save_quote(doc = None, method = None):
     print('get_config allow_cpq before save quote',get_config('allow_cpq') )
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     beforequote = getQuoteById(doc.name)
-    if(beforequote == None): return   
+    if(beforequote == None): 
+        doc.custom_cpq_amended=0
+        if(doc.custom_customizable == 1 and doc.amended_from != None) :
+            doc.items=[]
+        return   
     if(doc is None): return
 
     print('doc beforequote.base_total : ',beforequote.base_total)
@@ -117,6 +121,41 @@ def before_save_quote(doc = None, method = None):
     if(doc.custom_total_discount>32):frappe.throw('Total Discount % exceeds the approved limit.')
     print('doc after calc - items : ',doc.items)
 
+@frappe.whitelist()
+def amendCPQ(doc = None, method = None):
+    quote_name = doc.name
+    amended_from = doc.amended_from
+    print('inside amendCPQ',quote_name)
+    print('inside amendCPQ amended_from',amended_from)
+    if(doc.amended_from == None or doc.custom_customizable ==0 or doc.custom_cpq_amended!=0): return
+    cart_name = create_cart(quote_name)
+    cartItems = get_synced_items(amended_from)
+    print('inside amendCPQ cartItems',cartItems)
+    # clonedItems=[]
+    for item in cartItems:
+        cartItem = frappe.frappe.get_doc("BtbCartItem", item.ciName)
+        cartItem.name = None
+        cartItem.cart = cart_name
+        ciLinks =[]
+        for cil in cartItem.cart_item_links:
+            cil.entity = quote_name
+            ciLinks.append(cil)
+        cartItem.cart_item_links = ciLinks
+        # cartItem.cart_item_links =[]
+        cartItem.save()
+    quot = frappe.frappe.get_doc("Quotation", quote_name)
+    quot.custom_cpq_amended = 1
+    quot.db_update()
+
+def create_cart(quote_name: str):
+    cartLink = frappe.new_doc("BtbCartLink")
+    cartLink.entity_type = "Quotation"
+    cartLink.entity = quote_name
+
+    cart = frappe.new_doc("BtbCart")
+    cart.append('cart_links', cartLink)
+    cart.insert()
+    return cart.name
 @frappe.whitelist()
 def remove_quotation_items(doc):
     print('get_config allow_cpq remove_quotation_items',get_config('allow_cpq') )
