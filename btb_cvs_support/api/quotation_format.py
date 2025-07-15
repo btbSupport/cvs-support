@@ -34,7 +34,7 @@ def provide( quote_name: str) -> Dict:
     return json.loads(json.dumps(output,default=decimal_serializer))
 
 def get_quote_details( quote_name: str) -> Dict:
-    sql = f""" select customer_name,address_display,contact_display,contact_designation,contact_mobile,contact_email,subject,project,name,terms,quotation_term_details,letter_details,standard_tc_details,grand_total,total_taxes_and_charges,net_total,discount_amount,additional_discount_percentage,total  from `tabQuotation` tqi where name ='{quote_name}'
+    sql = f""" select customer_name,address_display,in_words,contact_display,contact_designation,contact_mobile,contact_email,subject,project,name,terms,quotation_term_details,letter_details,standard_tc_details,grand_total,total_taxes_and_charges,net_total,discount_amount,additional_discount_percentage,total  from `tabQuotation` tqi where name ='{quote_name}'
     """
     items = frappe.db.sql(sql, as_dict=1)
     item = items[0]
