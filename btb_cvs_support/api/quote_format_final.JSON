@@ -6,7 +6,7 @@
         "Sleeve Thickness": "CONCAT(sleeveThickness,string mm)",
         "Transition": "fittingType",
         "Heat Response": "fusibleLinkTemp",
-        "Micro Switch Indicator Package": "limitSwitchRequired",
+        "Indicator Switch": "limitSwitchRequired",
         "Mounting & Rating":"CONCAT(mounting,string - ,rating)"
       },
       "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
@@ -23,11 +23,11 @@
         "Mounting & Rating":"CONCAT(mounting,string - ,rating)",
         "Actuator": "CONCAT(actuatorBrand,string - ,actuatorPower,string - ,auxSwitch)",
         "Actuator Mounting": "actuatorMounting",
-        "Blade Switch Package": "bladeSwitchPackage",
+        "Blade Switch": "bladeSwitchPackage",
         "Smoke Detector": "smokeDetector",
         "Blade Operations": "bladeOperations",
         "Transition": "CONCAT(transition,string - ,transitionThickness,string mm)",
-        "External Junction Box": "externalJunctionBox",
+        "Ext. Junction Box": "externalJunctionBox",
         "MTS Option": "mtsOption"
       },
       "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
@@ -62,11 +62,11 @@
         "Heat Response":"CONCAT(fuseLinkOptions,string -,linkTemperature)",
         "Retaining Plate":"retainingPlate",
         "Smoke Detector":"CONCAT(string No)",
-        "Blade Switch Package":"bladeSwitchPackage",
+        "Blade Switch":"bladeSwitchPackage",
         "Actuator": "CONCAT(actuatorBrand,string - ,actuatorPower)",
         "Aux Switch":"auxSwitch",
         "Actuator Mounting":"actuatorMounting",
-        "External Junction Box":"junctionBox",
+        "Ext. Junction Box":"junctionBox",
         "MTS Option":"mtsOption"
       },
       "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
@@ -77,7 +77,7 @@
       "header": {
         "Frame Thickness":"CONCAT(frameThickness,string mm)",
         "Door Thickness:":"CONCAT(doorThickness,string mm)",
-        "Duct Opening Undersize":"ductOpeningUndersize",
+        "Duct Opening":"ductOpeningUndersize",
         "Door Depth":"doorDepthSelect",
         "Finish":"finish",
         "Hinge":"hingeType",
@@ -90,12 +90,12 @@
       "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "VCDA": {
-      "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeMaterialType,sleeveThicknessLookup,bladeThicknessLookup,bladeOperations,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,staticPressureCorrection,velocityCorrcetion",
+      "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeMaterialType,sleeveThicknessLookup,bladeThicknessForQuotePrint,bladeOperations,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,staticPressureCorrection,velocityCorrcetion",
       "header": {
         "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
         "Blade Material": "bladeMaterialType",
         "Sleeve Thickness":"CONCAT(sleeveThicknessLookup,string mm)",
-        "Blade Thickness":"CONCAT(bladeThicknessLookup,string mm)",
+        "Blade Thickness":"bladeThicknessForQuotePrint",
         "Static Pressure Class":"staticPressureCorrection",
         "Velocity Rating":"velocityCorrcetion",
         "Blade Seal & Operation":"CONCAT(bladeSealInput,string -,bladeOperations)",
@@ -107,12 +107,12 @@
       "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "VCDA-ACT": {
-      "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeMaterialType,sleeveThicknessLookup,bladeThicknessLookup,bladeOperations,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,actuatorBrand,actuatorControls,auxSwitch,powerSupply,staticPressureCorrection,velocityCorrcetion,actuatorType",
+      "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeMaterialType,sleeveThicknessLookup,bladeThicknessForQuotePrint,bladeOperations,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,actuatorBrand,actuatorControls,auxSwitch,powerSupply,staticPressureCorrection,velocityCorrcetion,actuatorType",
       "header": {
         "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
         "Blade Material": "bladeMaterialType",
         "Sleeve Thickness":"CONCAT(sleeveThicknessLookup,string mm)",
-        "Blade Thickness":"CONCAT(bladeThicknessLookup,string mm)",
+        "Blade Thickness":"bladeThicknessForQuotePrint",
         "Static Pressure Class":"staticPressureCorrection",
         "Velocity Rating":"velocityCorrcetion",
         "Blade Seal & Operation":"CONCAT(bladeSealInput,string -,bladeOperations)",
