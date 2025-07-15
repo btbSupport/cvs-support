@@ -182,7 +182,7 @@ def create_cart(quote_name: str):
     cartLink.entity = quote_name
 
     cart = frappe.new_doc("BtbCart")
-    cart.append('cart_links', cartLink);
+    cart.append('cart_links', cartLink)
     cart.insert()
     return cart.name
     
