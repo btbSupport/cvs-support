@@ -66,8 +66,15 @@ def before_save_quote(doc = None, method = None):
     print('get_config allow_cpq before save quote',get_config('allow_cpq') )
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     beforequote = getQuoteById(doc.name)
-    if(beforequote == None): return
+    if(beforequote == None): return   
     if(doc is None): return
+
+    print('doc beforequote.base_total : ',beforequote.base_total)
+    print('doc doc.base_total : ',doc.base_total)
+
+    if(beforequote.workflow_state != 'Draft' and doc.custom_customizable ==1 and
+       (beforequote.total_qty != doc.total_qty or beforequote.base_total != doc.base_total)):frappe.throw('You can only update the Quotation on Draft status.')
+
     remove_quotation_items(doc)
     if(doc.custom_customizable == beforequote.custom_customizable and doc.custom_customizable ==0): return
     if(doc.custom_customizable == 1): 
@@ -97,6 +104,8 @@ def before_save_quote(doc = None, method = None):
             totalLineDiscount +=  (item.ciQty * ((item.unit_price) * item.ciDiscount/100))
             doc.items.append(frappe.frappe.get_doc("Quotation Item", item.name))
     calculate_taxes_and_totals(doc)
+    if(beforequote.workflow_state != 'Draft' and  doc.custom_customizable ==1 and
+       (beforequote.total_qty != doc.total_qty or beforequote.base_total != doc.base_total)):frappe.throw('You can only update on Draft status.')
     totalDiscount = totalLineDiscount + doc.discount_amount
     if(totalUnitPrice>0) : 
         totalDiscountPercenatge = (totalDiscount/totalUnitPrice) * 100
