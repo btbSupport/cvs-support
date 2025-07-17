@@ -27,7 +27,7 @@ def populate_cart_detail( quote_name:str):
     output = {}
     productFamilyMap = populate_product_family_map()
     models = populateProductMap(quote_name)
-    file_name = quote_name+'.xlsx'
+    file_name = 'Production Sheet_'+quote_name+'.xlsx'
     file_url = '/private/files/'+file_name
     file_path = frappe.utils.get_bench_path()+'/sites/'+frappe.utils.get_site_base_path()[2:]+file_url
 
@@ -43,7 +43,7 @@ def populate_cart_detail( quote_name:str):
             pn.productName = f"{qt.customer_name}-{qt.name} - {subCat}"
             pn.items = []
             for det in populateHeader(qt, detail.get('header'), subCat):
-                pn.items.append(det.split(','))
+                pn.items.append(det.split('\t'))
             pn.items.append(populateTotal(detail.get('total').split(','), features))
             pn.items.append(detail.get('tableHeader').split(','))
             for det in populateDetail(keys, features):
@@ -70,6 +70,7 @@ def populateHeader( qt, header, subCat):
         '${subCat}': subCat,
         '${date}': datetime.now().strftime('%Y-%m-%d')
     }
+    header = header.replace(',', '\t')
     for key, value in replacements.items():
         if(value == None) : value =''
         header = header.replace(key, value)

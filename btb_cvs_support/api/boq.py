@@ -35,10 +35,14 @@ def provide( quote_name: str) -> Dict[str, ProductNode]:
     generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="BOQ_"+quote_name+".pdf")
 
 def get_quote_details( quote_name: str) -> Dict:
-    sql = f""" select customer_name,project,name  from `tabQuotation` tqi where name ='{quote_name}'
+    sql = f""" select customer_name,project,name,docstatus  from `tabQuotation` tqi where name ='{quote_name}'
     """
     items = frappe.db.sql(sql, as_dict=1)
-    return items[0]
+    item = items[0]
+    item["water_mark"]=" "
+    if(item["docstatus"] != 1):
+        item["water_mark"]="DRAFT"
+    return item
 
 def populate_cart_detail( quote_name: str) -> Dict[str, ProductNode]:
     # print(f'BOQ quoteId - {quote_name}')
