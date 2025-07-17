@@ -27,7 +27,7 @@ def populate_cart_detail( quote_name:str):
     output = {}
     productFamilyMap = populate_product_family_map()
     models = populateProductMap(quote_name)
-    file_name = quote_name+'.xlsx'
+    file_name = 'Production Sheet_'+quote_name+'.xlsx'
     file_url = '/private/files/'+file_name
     file_path = frappe.utils.get_bench_path()+'/sites/'+frappe.utils.get_site_base_path()[2:]+file_url
 
@@ -72,7 +72,7 @@ def populateHeader( qt, header, subCat):
     }
     for key, value in replacements.items():
         if(value == None) : value =''
-        header = header.replace(key, value)
+        header = header.replace(key, '"'+value+'"')
     return header.split('\n')
 
 def populateTotal( keys, features):

@@ -26,18 +26,21 @@ def provide( quote_name: str) -> Dict:
     "qt": get_quote_details(quote_name)
     }
     # print("result -", output)
-    file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format.docx"
+    file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_"+output["ci"]["companyInfo"]["code"]+".docx"
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
-    generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".pdf")
+    generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf")
     # generate(file_path, output, format="original",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".docx")
 
     return json.loads(json.dumps(output,default=decimal_serializer))
 
 def get_quote_details( quote_name: str) -> Dict:
-    sql = f""" select customer_name,address_display,in_words,contact_display,contact_designation,contact_mobile,contact_email,subject,project,name,terms,quotation_term_details,letter_details,standard_tc_details,grand_total,total_taxes_and_charges,net_total,discount_amount,additional_discount_percentage,total  from `tabQuotation` tqi where name ='{quote_name}'
+    sql = f""" select docstatus,customer_name,address_display,in_words,contact_display,contact_designation,contact_mobile,contact_email,subject,project,name,terms,quotation_term_details,letter_details,standard_tc_details,grand_total,total_taxes_and_charges,net_total,discount_amount,additional_discount_percentage,total  from `tabQuotation` tqi where name ='{quote_name}'
     """
     items = frappe.db.sql(sql, as_dict=1)
     item = items[0]
+    item["water_mark"]=" "
+    if(item["docstatus"] != 1):
+        item["water_mark"]="DRAFT"
     item["grand_total"]=f"{(item['grand_total']):,.2f}"
     item["total_taxes_and_charges"]=f"{item['total_taxes_and_charges']:,.2f}"
     item["net_total"]=f"{item['net_total']:,.2f}"
@@ -56,13 +59,14 @@ def get_quote_details( quote_name: str) -> Dict:
     return item
 
 def get_company_info() -> Dict:
-    sql = f""" select name,default_currency ,email  from tabCompany tc 
+    sql = f""" select tc.name,default_currency ,email,t.code  from tabCompany tc  join tabCountry t on tc.country = t.name
     """
     items = frappe.db.sql(sql, as_dict=1)
     return {
         "Email": items[0].email,
         "currency": items[0].default_currency,
-        "name": items[0].name
+        "name": items[0].name,
+        "code": items[0].code
     }
 
 def populate_product_family_map() -> Dict[str, 'ProductInfo']:
@@ -161,12 +165,10 @@ def populate_cart_detail( quote_id: str) -> Dict[str, 'ProductRootNode']:
             model_group_node[child_keys[group_key]]["summary"]
         )
         prdTotal =  Decimal(re.sub(r'[^\d.]', '', str(prd_root_node["productTotal"]))) + Decimal(get_decimal(get_key(cart_model, 'cartAmount')))
-       
-        print("check ",get_decimal(get_key(cart_model, 'cartAmount')))
-        print("check prdTotal ",prdTotal)
+        prdTotalQty =  Decimal(re.sub(r'[^\d.]', '', str(prd_root_node["totalqty"]))) + Decimal(get_decimal(get_key(cart_model, 'cartQty')))
 
         prd_root_node["productTotal"] = f"{prdTotal:,.2f}"
-        prd_root_node["totalqty"] += round(get_decimal(get_key(cart_model, 'qty')),0)
+        prd_root_node["totalqty"] = f"{prdTotalQty:,.2f}"
         prd_root_node["items"] = model_group_node
     return output
 
@@ -191,9 +193,7 @@ def populate_summary( features, keys, summ: Dict) -> Dict:
     for k in keys.split(","):
         if k in features:
             summ[k] = Decimal(re.sub(r'[^\d.]', '', summ.get(k, str(0)))) + get_decimal(features[k]["value"])
-            if(k=='qty') : summ[k] = f"{summ[k]:,.0f}"
-            else :
-                summ[k] = f"{summ[k]:,.2f}"
+            summ[k] = f"{summ[k]:,.2f}"
     print('summ',summ)
     return summ
 def populate_value( features, formula: str) -> Union[str, Decimal]:
@@ -205,14 +205,29 @@ def populate_value( features, formula: str) -> Union[str, Decimal]:
                 return 'Normal'
             if(formula =='linkTemperature' and 'storOrDtorOption' in features) :
                 if(features['storOrDtorOption']['value']=='NA') : return 'NA'
-            if((formula =='sleeveThickness' and 'sleeveThickness' in features) or (formula =='frameThickness' and 'frameThickness' in features)) :
-                res = features[formula]['value']
-                if(res !=0) : return  f"{res:,.1f}"
+            if(formula =='transitionThickness' and 'transition' in features) :
+                if(features['transition']['value']=='NA') : return 'NA'
+            if(formula =='bladeThicknessForQuotePrint' and 'bladeType' in features) :
+                if(features['bladeType']['value']!='AF') :
+                   return populateThickness(features['bladeThicknessLookup']['value'])
+            if(formula =='sleeveThickness' and 'sleeveType' in features) :
+                if(features['sleeveType']['value']=='Integral' and 'frameThickness' in features) :
+                   return populateThickness(features['frameThickness']['value'])
+            if((formula =='sleeveThickness' and 'sleeveThickness' in features) or (formula =='frameThickness' and 'frameThickness' in features) or (formula =='bladeThickness' and 'bladeThickness' in features) or (formula =='doorThickness' and 'doorThickness' in features) or (formula =='transitionThickness' and 'transitionThickness' in features)) :
+                return populateThickness(features[formula]['value'])
+                # res = Decimal(str(features[formula]['value']))
+                # if(res !=0 and res != '' and res != None) : return  f"{res:,.2f}"+' mm'
+                # else :'NA'
             if(formula in features): return features[formula]['value']
             return ''
     keys = exec(formula)
     print('keys - ',keys)
-    return "".join([features.get(k, {}).get("value", "") if "string" not in k else k.replace("string", "") for k in keys])
+    # return "".join([features.get(k, {}).get("value", "") if "string" not in k else k.replace("string", "") for k in keys])
+    return "".join([populate_value( features, k) if "string" not in k else k.replace("string", "") for k in keys])
+def populateThickness(val):
+    res = Decimal(str(val))
+    if(res !=0 and res != '' and res != None) : return  f"{res:,.2f}"+' mm'
+    else :'NA'
 
 # def populate_value( features, formula: str) -> Union[str, Decimal]:
 #     if not formula.startswith("CONCAT"):

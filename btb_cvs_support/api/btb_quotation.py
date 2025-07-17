@@ -68,7 +68,8 @@ def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
                 item =  {
                 "cartProductName": {"value": row.itemName},
                 "cartProductCode": {"value": row.item_code},
-                "qty": {"value":   Decimal(f"{row.Quantity:,.0f}")},
+                "qty": {"value":   f"{row.Quantity:,.2f}"},
+                "cartQty": {"value":   Decimal(f"{row.Quantity:,.2f}")},
                 "unitPrice": {"value": f"{row.Unit_Price:,.2f}"},
                 "beforeDiscount": {"value":   f"{(row.Quantity * row.Unit_Price):,.2f}"},
                 "rate": {"value":  f"{(row.Unit_Price*(1-(row.discount/100))):,.2f}"},
