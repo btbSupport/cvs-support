@@ -107,8 +107,11 @@ def populateValue( features, formula):
     if not formula.startswith(('MUL(', 'SUM(', 'SUB(', 'DIV(')):
         return getValue(features, formula)
     result = None
+    print("formula : ",formula)
     for k in execFormula(formula):
         val = str(getValue(features, k))
+        print("formula k : ",k)
+        print("formula val: ",val)
         if val == '-':
             val = '0'
         val = float(val)
@@ -123,6 +126,7 @@ def populateValue( features, formula):
                 result -= val
             elif formula.startswith('DIV('):
                 result /= val
+    print("formula result: ",result)
     return result
 
 def execFormula( formulae):
@@ -131,13 +135,13 @@ def execFormula( formulae):
         splitstring = ' x '
     elif formulae.startswith('SUM('):
         pattern = r'SUM\((.*)\)'
-        splitstring = r' \+ '
+        splitstring = r' + '
     elif formulae.startswith('SUB('):
         pattern = r'SUB\((.*)\)'
-        splitstring = r' \- '
+        splitstring = r' - '
     elif formulae.startswith('DIV('):
         pattern = r'DIV\((.*)\)'
-        splitstring = r' \/ '
+        splitstring = r' / '
     else:
         return []
     match = re.search(pattern, formulae)
@@ -148,13 +152,21 @@ def getValue( features, key):
         if(str(features['modelNo']['value']).startswith('FDD')): return 'Dynamic'
         return 'Static'
     if(key =='frameType'):
-        modelNo = features['modelNo']['value']
+        modelNo = ''
+        if('modelDescription' in features):
+            modelNo = features['modelDescription']['value'].split(' ')[0]
         if( str(modelNo).endswith('-I')): return 'Slim Line'
         return 'Double T'
+    if(key =='damperHeightTypeBC'):
+        if('type' in features and (features['type']['value'] == 'TypeB' or features['type']['value'] == 'TypeC')):
+            return features['damperHeight']['value']
+        return ''
     if(key =='modelNoSplit'):
         output = ''
         if('modelName' in features):
-            output += features['modelName']['value'].split(' ')[0]
+            return features['modelName']['value'].split(' ')[0]
+        if('modelDescription' in features):
+            return features['modelDescription']['value'].split(' ')[0]
         return output
     if(key =='fuseLinkConcat') :
         output = ''
