@@ -24,15 +24,18 @@ class ProductNode:
         self.items: List[ProductInfo] = []
 
 @frappe.whitelist()
-def provide( quote_name: str) -> Dict[str, ProductNode]:
+def provide( quote_name: str):
+    ciModels = populate_cart_item_model(quote_name)
+    if(ciModels == None): return None
     output = {
-        "ci": populate_cart_detail(quote_name),
+        "ci": populate_cart_detail(ciModels),
         "qt": get_quote_details(quote_name)
     }
     file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/boq.docx"
     print("output : ",output)
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
     generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="BOQ_"+quote_name+".pdf")
+    return 'Success'
 
 def get_quote_details( quote_name: str) -> Dict:
     sql = f""" select customer_name,project,name,docstatus  from `tabQuotation` tqi where name ='{quote_name}'
@@ -44,11 +47,13 @@ def get_quote_details( quote_name: str) -> Dict:
         item["water_mark"]="DRAFT"
     return item
 
-def populate_cart_detail( quote_name: str) -> Dict[str, ProductNode]:
+def populate_cart_detail( ciModels) -> Dict[str, ProductNode]:
     # print(f'BOQ quoteId - {quote_name}')
 
     output: Dict[str, ProductNode] = {}
-    models = populate_product_map(populate_cart_item_model(quote_name))
+    # ciModels = populate_cart_item_model(quote_name)
+    # if(ciModels == None): return ciModels
+    models = populate_product_map(ciModels)
     product_family_map = populate_product_family_map()
     sno = 1
 
