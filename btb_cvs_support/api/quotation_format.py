@@ -18,9 +18,11 @@ def decimal_serializer(obj):
 fti_cache ={}
 
 @frappe.whitelist()
-def provide( quote_name: str) -> Dict:
+def provide( quote_name: str):
+    models = populate_cart_item_model(quote_name)
+    if(models == None): return None
     output = {"ci": {
-        "cartItem": populate_cart_detail(quote_name),
+        "cartItem": populate_cart_detail(models),
         "companyInfo": get_company_info()
     },
     "qt": get_quote_details(quote_name)
@@ -30,8 +32,7 @@ def provide( quote_name: str) -> Dict:
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
     generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf")
     # generate(file_path, output, format="original",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".docx")
-
-    return json.loads(json.dumps(output,default=decimal_serializer))
+    return 'Success'
 
 def get_quote_details( quote_name: str) -> Dict:
     sql = f""" select docstatus,customer_name,address_display,in_words,contact_display,contact_designation,contact_mobile,contact_email,subject,project,name,terms,quotation_term_details,letter_details,standard_tc_details,grand_total,total_taxes_and_charges,net_total,discount_amount,additional_discount_percentage,total  from `tabQuotation` tqi where name ='{quote_name}'
@@ -39,8 +40,7 @@ def get_quote_details( quote_name: str) -> Dict:
     items = frappe.db.sql(sql, as_dict=1)
     item = items[0]
     item["water_mark"]=" "
-    if(item["docstatus"] != 1):
-        item["water_mark"]="DRAFT"
+    if(item["docstatus"] != 1): item["water_mark"]="DRAFT"
     item["grand_total"]=f"{(item['grand_total']):,.2f}"
     item["total_taxes_and_charges"]=f"{item['total_taxes_and_charges']:,.2f}"
     item["net_total"]=f"{item['net_total']:,.2f}"
@@ -48,14 +48,9 @@ def get_quote_details( quote_name: str) -> Dict:
     item["additional_discount_percentage"]=f"{item['additional_discount_percentage']:,.2f}"
     item["total"]=f"{item['total']:,.2f}"
     if(item["quotation_term_details"] != None):item["quotation_term_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["quotation_term_details"]+"</div>"
-
     if(item["standard_tc_details"] != None):item["standard_tc_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["standard_tc_details"]+"</div>"
-
     if(item["terms"] != None):item["terms"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["terms"]+"</div>"
-
     if(item["letter_details"] != None):item["letter_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["letter_details"]+"</div>"
-
-
     return item
 
 def get_company_info() -> Dict:
@@ -118,14 +113,12 @@ def get_decimal( val) -> Decimal:
     except:
         return Decimal(0)
 @frappe.whitelist()
-def populate_cart_detail( quote_id: str) -> Dict[str, 'ProductRootNode']:
+def populate_cart_detail(models) -> Dict[str, 'ProductRootNode']:
     # print('inside populate cart')
     output = {}
     product_family_map = populate_product_family_map()
     keys = {}
     child_keys = {}
-
-    models = populate_cart_item_model(quote_id)
     # print(models)
     for cart_model in models:
         product_code = get_key(cart_model, 'cartProductCode')

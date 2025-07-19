@@ -164,7 +164,6 @@ doc_events = {
     },
     "Quotation": {
         "before_save": "btb_cvs_support.events.onecpq_quote.before_save_quote"
-        # "after_save": "btb_cvs_support.events.onecpq_quote.amendCPQ"
     },
     "BtbCartItem": {
         "before_save": "btb_cvs_support.events.onecpq_quote.before_save_cart",

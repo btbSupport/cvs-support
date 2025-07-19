@@ -7,11 +7,16 @@ from decimal import Decimal
 fti_cache ={}
 
 def populate_cart_item_model( quote_name):
-    cartItems = get_synced_cart_items(quote_name)
+    syncedItems = get_synced_cart_items(quote_name)
+    if(len(syncedItems)==0): return None
+    cartItems = get_grouped_items(syncedItems)
     populate_featuretype_items(cartItems)
     return populate_cart_models(cartItems)
 
-
+def get_grouped_items(items):
+    df = pd.DataFrame(json.loads(json.dumps(items)))
+    res = df.groupby(["name","Unit_Price","discount","Sequence","Quantity","Title","itemName","item_code"], group_keys=False)
+    return res
 @frappe.whitelist()
 def get_synced_cart_items( quote_name: str) -> List[Dict[str, any]]:
     sql = f""" select tbc.name,tbc.Unit_Price,tbc.discount , tbc.Sequence, tbc.Quantity, tbc.Title,
@@ -28,9 +33,7 @@ def get_synced_cart_items( quote_name: str) -> List[Dict[str, any]]:
     order by tbc.idx
     """
     items = frappe.db.sql(sql, as_dict=1)
-    df = pd.DataFrame(json.loads(json.dumps(items)))
-    res = df.groupby(["name","Unit_Price","discount","Sequence","Quantity","Title","itemName","item_code"], group_keys=False)
-    return res
+    return items
 
 def populate_featuretype_items( cartItems):
     for group_name, df_group in cartItems:
@@ -69,7 +72,7 @@ def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
                 "cartProductName": {"value": row.itemName},
                 "cartProductCode": {"value": row.item_code},
                 "qty": {"value":   f"{row.Quantity:,.2f}"},
-                "cartQty": {"value":   Decimal(f"{row.Quantity:,.2f}")},
+                "cartQty": {"value":   row.Quantity},
                 "unitPrice": {"value": f"{row.Unit_Price:,.2f}"},
                 "beforeDiscount": {"value":   f"{(row.Quantity * row.Unit_Price):,.2f}"},
                 "rate": {"value":  f"{(row.Unit_Price*(1-(row.discount/100))):,.2f}"},

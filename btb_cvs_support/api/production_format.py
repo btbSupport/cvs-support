@@ -23,10 +23,12 @@ class ProductNode:
 
 @frappe.whitelist()
 def populate_cart_detail( quote_name:str):
+    ciModels = populate_cart_item_model(quote_name)
+    if(ciModels == None): return None
     qt = getQuoteById(quote_name)
     output = {}
     productFamilyMap = populate_product_family_map()
-    models = populateProductMap(quote_name)
+    models = populateProductMap(ciModels)
     file_name = 'Production Sheet_'+quote_name+'.xlsx'
     file_url = '/private/files/'+file_name
     file_path = frappe.utils.get_bench_path()+'/sites/'+frappe.utils.get_site_base_path()[2:]+file_url
@@ -59,7 +61,7 @@ def populate_cart_detail( quote_name:str):
     file_doc.attached_to_doctype = "Quotation",
     file_doc.attached_to_name = quote_name
     file_doc.save()
-    return output
+    return 'Success'
 
 def populateHeader( qt, header, subCat):
     replacements = {
@@ -189,7 +191,7 @@ def getValue( features, key):
         if('noofSections' in features):
             noOfSections = Decimal(features['noofSections']['value'])
         if('limitSwitchRequired' in features and features['noofSections']['value'] == 'Yes'):
-            qty = Decimal(features['qty']['value'])
+            qty = Decimal(features['cartQty']['value'])
         return str((noOfSections*qty))
     if(key =='4Inch' or key =='5Inch' or key =='6Inch' or key =='7Inch' or key =='TotalBlades'):
         output = 0
@@ -217,9 +219,8 @@ def getValue( features, key):
         return features[key]['value']
     return '-'
 
-def populateProductMap(quote_name):
+def populateProductMap(models):
     output = {}
-    models = populate_cart_item_model(quote_name)
     for cartModel in models:
         productCode = getKey(cartModel, 'cartProductCode')
         subCategory = getKey(cartModel, 'subcategory')
