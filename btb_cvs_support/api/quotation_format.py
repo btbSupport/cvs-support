@@ -29,10 +29,13 @@ def provide( quote_name: str):
     }
     # print("result -", output)
     file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_"+output["ci"]["companyInfo"]["code"]+".docx"
+    # file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_eg.docx"
+
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
     generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf")
     # generate(file_path, output, format="original",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".docx")
-    return 'Success'
+    return output
+    # return 'Success'
 
 def get_quote_details( quote_name: str) -> Dict:
     sql = f""" select docstatus,customer_name,address_display,in_words,contact_display,contact_designation,contact_mobile,contact_email,subject,project,name,terms,quotation_term_details,letter_details,standard_tc_details,grand_total,total_taxes_and_charges,net_total,discount_amount,additional_discount_percentage,total  from `tabQuotation` tqi where name ='{quote_name}'
@@ -51,6 +54,7 @@ def get_quote_details( quote_name: str) -> Dict:
     if(item["standard_tc_details"] != None):item["standard_tc_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["standard_tc_details"]+"</div>"
     if(item["terms"] != None):item["terms"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["terms"]+"</div>"
     if(item["letter_details"] != None):item["letter_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["letter_details"]+"</div>"
+    item["userName"]=frappe.get_user().doc.full_name
     return item
 
 def get_company_info() -> Dict:
@@ -168,7 +172,7 @@ def populate_cart_detail(models) -> Dict[str, 'ProductRootNode']:
 def populate_header_values( features, header_map):
     output = []
     for label, field in header_map.items():
-        val = str(populate_value(features, field)) or 'N/A'
+        val = str(populate_value(features, field))
         output.append({"label": label, "value": val})
     return output
 
@@ -190,6 +194,7 @@ def populate_summary( features, keys, summ: Dict) -> Dict:
     print('summ',summ)
     return summ
 def populate_value( features, formula: str) -> Union[str, Decimal]:
+    thicknessFields=['sleeveThickness','frameThickness','bladeThickness','doorThickness','transitionThickness','perfThickness','casingThickness']
     if not formula.startswith("CONCAT"):
             # print('formula :',formula)
             if(formula =='specification' and 'productCategory' in features) :
@@ -197,30 +202,32 @@ def populate_value( features, formula: str) -> Union[str, Decimal]:
                 if('240' in features['productCategory']['value']) : return 'Fire Rated - 240 Min'
                 return 'Normal'
             if(formula =='linkTemperature' and 'storOrDtorOption' in features) :
-                if(features['storOrDtorOption']['value']=='NA') : return 'NA'
+                if(features['storOrDtorOption']['value']=='NA') : return 'N/A'
             if(formula =='transitionThickness' and 'transition' in features) :
-                if(features['transition']['value']=='NA') : return 'NA'
+                if(features['transition']['value']=='NA') : return 'N/A'
             if(formula =='bladeThicknessForQuotePrint' and 'bladeType' in features) :
-                if(features['bladeType']['value']!='AF') :
+                if(features['bladeType']['value']!='AF' or ('bladeThicknessForQuotePrint' in features and features['bladeThicknessForQuotePrint']['value'] == '')) :
                    return populateThickness(features['bladeThicknessLookup']['value'])
             if(formula =='sleeveThickness' and 'sleeveType' in features) :
                 if(features['sleeveType']['value']=='Integral' and 'frameThickness' in features) :
                    return populateThickness(features['frameThickness']['value'])
-            if((formula =='sleeveThickness' and 'sleeveThickness' in features) or (formula =='frameThickness' and 'frameThickness' in features) or (formula =='bladeThickness' and 'bladeThickness' in features) or (formula =='doorThickness' and 'doorThickness' in features) or (formula =='transitionThickness' and 'transitionThickness' in features)) :
+            if(formula in thicknessFields and formula in features) :
                 return populateThickness(features[formula]['value'])
                 # res = Decimal(str(features[formula]['value']))
                 # if(res !=0 and res != '' and res != None) : return  f"{res:,.2f}"+' mm'
                 # else :'NA'
-            if(formula in features): return features[formula]['value']
-            return ''
+            if(formula in features): 
+                if(features[formula]['value'] == 'None' or features[formula]['value'] == 'NA'): return 'N/A'
+                return features[formula]['value']
+            return 'N/A'
     keys = exec(formula)
     print('keys - ',keys)
     # return "".join([features.get(k, {}).get("value", "") if "string" not in k else k.replace("string", "") for k in keys])
     return "".join([populate_value( features, k) if "string" not in k else k.replace("string", "") for k in keys])
 def populateThickness(val):
     res = Decimal(str(val))
-    if(res !=0 and res != '' and res != None) : return  f"{res:,.2f}"+' mm'
-    else :'NA'
+    if(res !=0 and res != '' and res != None and res !='None') : return  f"{res:,.2f}"+' mm'
+    else :'N/A'
 
 # def populate_value( features, formula: str) -> Union[str, Decimal]:
 #     if not formula.startswith("CONCAT"):
