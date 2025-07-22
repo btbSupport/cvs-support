@@ -50,10 +50,18 @@ def get_quote_details( quote_name: str) -> Dict:
     item["discount_amount"]=f"{item['discount_amount']:,.2f}"
     item["additional_discount_percentage"]=f"{item['additional_discount_percentage']:,.2f}"
     item["total"]=f"{item['total']:,.2f}"
-    if(item["quotation_term_details"] != None):item["quotation_term_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["quotation_term_details"]+"</div>"
-    if(item["standard_tc_details"] != None):item["standard_tc_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["standard_tc_details"]+"</div>"
-    if(item["terms"] != None):item["terms"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["terms"]+"</div>"
-    if(item["letter_details"] != None):item["letter_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["letter_details"]+"</div>"
+    if("quotation_term_details" in item) :
+        if(item["quotation_term_details"] != None):item["quotation_term_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["quotation_term_details"]+"</div>"
+    else : item["quotation_term_details"] = ""
+    if("standard_tc_details" in item ) :
+        if(item["standard_tc_details"] != None):item["standard_tc_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["standard_tc_details"]+"</div>"
+    else : item["standard_tc_details"] = ""
+    if("terms" in item ) :
+        if( item["terms"] != None):item["terms"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["terms"]+"</div>"
+    else : item["terms"] = ""
+    if("letter_details" in item ) :
+        if( item["letter_details"] != None):item["letter_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["letter_details"]+"</div>"
+    else : item["letter_details"] = ""
     item["userName"]=frappe.get_user().doc.full_name
     return item
 
