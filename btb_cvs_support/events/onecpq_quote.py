@@ -62,13 +62,13 @@ def proceed_cart_item_link(doc, method = None):
             ci.save()
 
 @frappe.whitelist()
-def lock_cart( doc = None, method = None) :
-    print('inside after quote save ',doc.workflow_state)
+def lock_cart( doc_name,workflow_state) :
+    print('inside after quote save ',workflow_state)
     lock = 1
-    if (doc.workflow_state =='Draft') : lock = 0
+    if (workflow_state =='Draft') : lock = 0
     print('inside after quote save lock',lock)
     sql = f""" select parent from `tabBtbCartLink` cl join `tabBtbCart` c on cl.parent = c.name and c.locked !='{lock}' 
-    where entity='{doc.name}'
+    where entity='{doc_name}'
     """
     print('inside after quote save sql',sql)
     items = frappe.db.sql(sql, as_dict=1)
@@ -90,7 +90,7 @@ def before_save_quote(doc = None, method = None):
             doc.items=[]
         return   
     if(doc is None): return
-    if(beforequote.workflow_state != doc.workflow_state) : lock_cart(doc,method)
+    if(beforequote.workflow_state != doc.workflow_state and doc.custom_customizable ==1) : lock_cart(doc.name,doc.workflow_state)
     print('doc beforequote.base_total : ',beforequote.base_total)
     print('doc doc.base_total : ',doc.base_total)
 

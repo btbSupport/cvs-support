@@ -147,6 +147,9 @@ app_license = "mit"
 # }
 
 doc_events = {
+    "Workflow Action": {
+        "before_save": "btb_cvs_support.events.workflow_action.before_save"
+    },
     "Version": {
         "after_insert": "btb_cvs_support.events.version.after_upsert",
         "on_update": "btb_cvs_support.events.version.after_upsert"
