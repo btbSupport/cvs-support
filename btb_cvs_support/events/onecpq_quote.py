@@ -37,6 +37,7 @@ def get_items(quote_name: str):
 def before_save_cart(doc, method = None):
     print('get_config allow_cpq before_save_cart',get_config('allow_cpq') )
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
+    if(doc.discount <-100 or doc.discount > 30):frappe.throw('Discount % not in the approved limit.')
     if(doc.unit_price == 0): doc.valid = 0
 
 @frappe.whitelist()
