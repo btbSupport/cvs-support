@@ -202,7 +202,7 @@ def populate_summary( features, keys, summ: Dict) -> Dict:
     print('summ',summ)
     return summ
 def populate_value( features, formula: str) -> Union[str, Decimal]:
-    thicknessFields=['sleeveThickness','frameThickness','bladeThickness','doorThickness','transitionThickness','perfThickness','casingThickness']
+    thicknessFields=['sleeveThickness','frameThickness','bladeThickness','doorThickness','transitionThickness','perfThickness','casingThickness','frameThicknessLookup','bladeThicknessLookup']
     if not formula.startswith("CONCAT"):
             # print('formula :',formula)
             if(formula =='specification' and 'productCategory' in features) :

@@ -285,7 +285,7 @@ fixtures = [
             ["fieldname", "in", [
                 "custom_manufactured_item", "custom_opr", "custom_sales_order", "custom_total_sqm", "custom_total_pcs","custom_total_discount",
 "custom_total_discount_amount", "custom_list_amount", "custom_discount", "custom_onecpq_total", "custom_cart_discount",
-"custom_apply_discount", "custom_customizable", "custom_onecpq_items", "custom_cart","custom_cart_item"
+"custom_apply_discount", "custom_customizable","letter","letter_details","quotation_terms","quotation_term_details"
             ]]
         ]
     }
