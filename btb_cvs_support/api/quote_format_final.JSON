@@ -54,8 +54,8 @@
     "ULRD": {
       "headerKey": "subcategory,modelDescription,transitionType,frameThicknessLookup,bladeThicknessLookup,rating,retainingPlate,leakageClass,fuseLinkOptions,actuatorBrand,linkTemperature,actuatorPower,auxSwitch,actuatorMounting,bladeSwitchPackage,junctionBox,mtsOption",
       "header": {
-        "Frame Thickness": "CONCAT(frameThicknessLookup,string mm)",
-        "Blade Thickness":"CONCAT(bladeThicknessLookup,string mm)",
+        "Frame Thickness": "frameThicknessLookup",
+        "Blade Thickness":"bladeThicknessLookup",
         "Mounting & Rating":"CONCAT(string V-,rating)",
         "Transition": "transitionType",
         "Leakage Class":"leakageClass",
@@ -92,7 +92,7 @@
     "VCDA": {
       "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeMaterialType,sleeveThickness,bladeThicknessForQuotePrint,bladeOperations,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,staticPressureCorrection,velocityCorrcetion",
       "header": {
-        "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
+        "Frame Thickness":"frameThicknessLookup",
         "Blade Material": "bladeMaterialType",
         "Sleeve Thickness":"sleeveThickness",
         "Blade Thickness":"bladeThicknessForQuotePrint",
@@ -109,7 +109,7 @@
     "VCDA-ACT": {
       "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeMaterialType,sleeveThickness,bladeThicknessForQuotePrint,bladeOperations,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,actuatorBrand,actuatorControls,auxSwitch,powerSupply,staticPressureCorrection,velocityCorrcetion,actuatorType",
       "header": {
-        "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
+        "Frame Thickness":"frameThicknessLookup",
         "Blade Material": "bladeMaterialType",
         "Sleeve Thickness":"sleeveThickness",
         "Blade Thickness":"bladeThicknessForQuotePrint",
@@ -130,7 +130,7 @@
     "VCDR": {
       "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeThickness,staticPressureClass,velocityRating,axleBearing,bladeSeal,amcaLabel",
       "header": {
-        "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
+        "Frame Thickness":"frameThicknessLookup",
         "Blade Seal":"bladeSeal",
         "Blade Thickness":"bladeThickness",
         "Static Pressure Class":"staticPressureClass",
@@ -145,7 +145,7 @@
     "VCDR-ACT": {
       "headerKey": "subcategory,modelDescription,frameThicknessLookup,bladeThickness,staticPressureClass,velocityRating,axleBearing,bladeSeal,amcaLabel,actuatorMounting,actuatorBrand,actuatorControls,actuatorAuxSwitch,actuatorPowerSupply",
       "header": {
-        "Frame Thickness":"CONCAT(frameThicknessLookup,string mm)",
+        "Frame Thickness":"frameThicknessLookup",
         "Blade Seal":"bladeSeal",
         "Blade Thickness":"bladeThickness",
         "Static Pressure Class":"staticPressureClass",
