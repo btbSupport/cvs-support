@@ -63,10 +63,10 @@ def proceed_cart_item_link(doc, method = None):
             ci.save()
 
 @frappe.whitelist()
-def lock_cart( doc_name,workflow_state) :
-    print('inside after quote save ',workflow_state)
+def lock_cart( doc_name,doc_status) :
+    print('inside after quote save ',doc_status)
     lock = 1
-    if (workflow_state =='Draft') : lock = 0
+    if (doc_status == 0) : lock = 0
     print('inside after quote save lock',lock)
     sql = f""" select parent from `tabBtbCartLink` cl join `tabBtbCart` c on cl.parent = c.name and c.locked !='{lock}' 
     where entity='{doc_name}'
@@ -79,9 +79,27 @@ def lock_cart( doc_name,workflow_state) :
         cart.locked = lock
         cart.db_update()
 
+
+@frappe.whitelist()
+def on_submit_quote(doc = None, method = None):
+    if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
+    if(doc.custom_customizable !=1): return
+    if( validate_cart(doc.name)):frappe.throw('Please check OneCPQ all cart items synced.')
+    if(doc.custom_customizable ==1) : lock_cart(doc.name,doc.docstatus)
+
+def validate_cart(quote_name: str):
+    sql = f""" select * from tabBtbCartItem tbci where cart in (select parent  from tabBtbCartLink tbcl where entity ='{quote_name}') and 
+    ( valid = 0 or name not in ( select parent from tabBtbCartItemLink tbcil where entity = '{quote_name}'))"""
+    items = frappe.db.sql(sql, as_dict=1)
+    return len(items) >0
+
+@frappe.whitelist()
+def on_cancel_quote(doc = None, method = None):
+    if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
+    if(doc.custom_customizable ==1) : lock_cart(doc.name,doc.docstatus)
+
 @frappe.whitelist()
 def before_save_quote(doc = None, method = None):
-    
     print('get_config allow_cpq before save quote',get_config('allow_cpq') )
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     beforequote = getQuoteById(doc.name)
@@ -91,14 +109,14 @@ def before_save_quote(doc = None, method = None):
             doc.items=[]
         return   
     if(doc is None): return
-    if(beforequote.workflow_state != doc.workflow_state and doc.custom_customizable ==1) : lock_cart(doc.name,doc.workflow_state)
-    print('doc beforequote.base_total : ',beforequote.base_total)
-    print('doc doc.base_total : ',doc.base_total)
+    if(beforequote.docstatus != doc.docstatus and doc.custom_customizable ==1) : lock_cart(doc.name,doc.docstatus)
+    print('doc beforequote.docstatus : ',beforequote.docstatus)
+    print('doc doc.docstatus : ',doc.docstatus)
 
-    if(beforequote.workflow_state != 'Draft' and doc.custom_customizable ==1 and
+    if(beforequote.docstatus != 0 and doc.custom_customizable ==1 and
        (beforequote.total_qty != doc.total_qty or beforequote.base_total != doc.base_total)):frappe.throw('You can only update the Quotation on Draft status.')
 
-    remove_quotation_items(doc)
+    if(beforequote != None and doc.custom_customizable != beforequote.custom_customizable): remove_quotation_items(doc)
     if(doc.custom_customizable == beforequote.custom_customizable and doc.custom_customizable ==0): return
     if(doc.custom_customizable == 1): 
         doc.apply_discount_on = 'Net Total'
@@ -127,7 +145,7 @@ def before_save_quote(doc = None, method = None):
             totalLineDiscount +=  (item.ciQty * ((item.unit_price) * item.ciDiscount/100))
             doc.items.append(frappe.frappe.get_doc("Quotation Item", item.name))
     calculate_taxes_and_totals(doc)
-    if(beforequote.workflow_state != 'Draft' and  doc.custom_customizable ==1 and
+    if(beforequote.docstatus != 0 and  doc.custom_customizable ==1 and
        (beforequote.total_qty != doc.total_qty or beforequote.base_total != doc.base_total)):frappe.throw('You can only update on Draft status.')
     totalDiscount = totalLineDiscount + doc.discount_amount
     if(totalUnitPrice>0) : 
@@ -175,17 +193,18 @@ def create_cart(quote_name: str):
     cart.append('cart_links', cartLink)
     cart.insert()
     return cart.name
+
 @frappe.whitelist()
 def remove_quotation_items(doc):
-    print('get_config allow_cpq remove_quotation_items',get_config('allow_cpq') )
-    if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
+    # print('get_config allow_cpq remove_quotation_items',get_config('allow_cpq') )
+    # if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     quote_name = doc.name
     customizable = doc.custom_customizable
     print('inside remove quote_name :',quote_name,' customizable :',customizable)
-    beforequote = getQuoteById(doc.name)
-    if(beforequote == None): return
-    if(customizable == beforequote.custom_customizable): return
-    items = []
+    # beforequote = getQuoteById(doc.name)
+    # if(beforequote == None): return
+    # if(customizable == beforequote.custom_customizable): return
+    # items = []
     cartItemLinks = []
     if(customizable == 1): 
         cartItems = get_cart_items(quote_name)

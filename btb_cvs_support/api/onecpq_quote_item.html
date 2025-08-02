@@ -31,6 +31,12 @@
                     <div style="max-width:12%"  title="Net Amount ({{currency}})" class="col grid-static-col" style="justify-content:right" >
                         <div class="static-area ellipsis text-right">Net Amount ({{currency}})</div>
                     </div>
+                    <div   style="max-width:10%" title="Tag Ref" class="col grid-static-col">
+                        <div class="static-area ellipsis">Tag Ref</div>
+                    </div>
+                    <div   style="max-width:10%" title="Notes" class="col grid-static-col">
+                        <div class="static-area ellipsis">Notes</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,6 +74,12 @@
                         </div>
                         <div  style="max-width:12%" class="col grid-static-col text-right bold" data-fieldname="net_amount" data-fieldtype="Currency">
                             {{item.net_amount}}
+                        </div>
+                        <div  style="max-width:10%"  title="{{item.tagRef}}" class="col grid-static-col" data-fieldtype="Text Editor">
+                            {{item.tagRef}}
+                        </div>
+                        <div  style="max-width:10%"  title="{{item.notes}}" class="col grid-static-col" data-fieldtype="Text Editor">
+                            {{item.notes}}
                         </div>
                     </div>
                 </div>

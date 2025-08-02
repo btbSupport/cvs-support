@@ -147,9 +147,16 @@ app_license = "mit"
 # }
 
 doc_events = {
-    "Workflow Action": {
-        "before_save": "btb_cvs_support.events.workflow_action.before_save"
-    },
+    # "Workflow Action": {
+    #     "before_save": "btb_cvs_support.events.workflow_action.before_save"
+    # },
+    # "*":{
+    #     "on_submit": "btb_cvs_support.events.workflow_action.before_save",
+    #     "validate": "btb_cvs_support.events.workflow_action.before_save",
+    #     "on_cancel": "btb_cvs_support.events.workflow_action.before_save",
+    #     "before_save": "btb_cvs_support.events.workflow_action.before_save",
+    #     "on_update": "btb_cvs_support.events.workflow_action.before_save"
+    # },
     "Version": {
         "after_insert": "btb_cvs_support.events.version.after_upsert",
         "on_update": "btb_cvs_support.events.version.after_upsert"
@@ -166,7 +173,9 @@ doc_events = {
         "before_save": "btb_cvs_support.events.quotation_item.before_upsert"
     },
     "Quotation": {
-        "before_save": "btb_cvs_support.events.onecpq_quote.before_save_quote"
+        "before_save": "btb_cvs_support.events.onecpq_quote.before_save_quote",
+        "on_submit": "btb_cvs_support.events.onecpq_quote.on_submit_quote",
+        "on_cancel": "btb_cvs_support.events.onecpq_quote.on_cancel_quote"
     },
     "BtbCartItem": {
         "before_save": "btb_cvs_support.events.onecpq_quote.before_save_cart",
@@ -284,9 +293,10 @@ fixtures = [
         "filters": [
             ["fieldname", "in", [
                 "custom_manufactured_item", "custom_opr", "custom_sales_order", "custom_total_sqm", "custom_total_pcs","custom_total_discount",
-"custom_total_discount_amount", "custom_list_amount", "custom_discount", "custom_onecpq_total", "custom_cart_discount",
-"custom_apply_discount", "custom_customizable","letter","letter_details","quotation_terms","quotation_term_details"
-            ]]
+"custom_total_discount_amount", "custom_list_amount", "custom_discount", "custom_onecpq_total", "custom_cart_discount","custom_onecpq_items",
+"custom_apply_discount", "custom_customizable","letter","letter_details","quotation_terms","quotation_term_details","tag_ref","notes"
+            ]],
+            ["module","in",["Btb Cvs Support"]]
         ]
     }
 ]

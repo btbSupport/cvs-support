@@ -8,21 +8,31 @@ def before_upsert(doc, method = None):
     print("calling quote line item sync doc.custom_cart_item ",doc.custom_cart_item)
 
     sql = f"""
-         select i.item_code,i.description,i.stock_uom,tbci.title from tabBtbCartItemFeature tbcif 
-        join tabBtbFeature tbf  on tbf.name = tbcif.feature  and tbf.field ='modelItem'
-        join tabBtbFeatureTypeItem tbfti on tbcif.value = tbfti.name
-        join `tabItem` i on tbfti.`object`  = i.name
-        join tabBtbCartItem tbci on tbci.name  = '{doc.custom_cart_item}'
-        where tbcif.parent  = '{doc.custom_cart_item}'
+          select a.title,
+ GROUP_CONCAT(CASE WHEN field = 'modelItem' THEN item_code END) AS item_code,
+ GROUP_CONCAT(CASE WHEN field = 'modelItem' THEN stock_uom END) AS stock_uom,
+ GROUP_CONCAT(CASE WHEN field = 'tagRef' THEN cifValue END) AS tagRef,
+ GROUP_CONCAT(CASE WHEN field = 'notes' THEN cifValue END) AS notes 
+ from (
+ SELECT i.item_code,i.stock_uom,tbci.title,tbf.field,tbcif.value cifValue,tbfti.value
+from tabBtbCartItem tbci 
+ join tabBtbCartItemFeature tbcif on tbci.name = '{doc.custom_cart_item}' and tbcif.parent  = tbci.name
+ join tabBtbFeature tbf  on tbf.name = tbcif.feature  and tbf.field in('modelItem','tagRef','notes')
+ left join tabBtbFeatureTypeItem tbfti on  tbfti.name = tbcif.value
+ left join `tabItem` i on i.name = tbfti.`object`) a 
+  
     """
     print("calling quote line item sync sql",sql)
 
     items = frappe.db.sql(sql, as_dict=1)
     if len(items) > 0 :
+        item = items[0]
         print("items inside qli ",items)
-        doc.item_code = items[0].item_code
-        doc.description = items[0].title
-        doc.uom = items[0].stock_uom
+        doc.description = item.title
+        if(item.item_code):doc.item_code = item.item_code
+        if(item.stock_uom):doc.uom = item.stock_uom
+        doc.custom_tag_ref = item.tagRef
+        doc.notes = item.notes
         
 def on_trash(doc, method = None):
     print("calling quote line item delete ",doc)
