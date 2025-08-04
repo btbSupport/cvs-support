@@ -7,12 +7,14 @@ from .btb_quotation import *
 def get_quotation_items(quote_name: str,currency:str,visibleFields:str):
     print('quote_name : ',quote_name)
     print('quote_name currency : ',currency)
+    frappe.log(visibleFields)
     items = get_synced_items(quote_name)
     count = 1
     headers=json.loads(visibleFields)
     for item in items: 
         item["idx"] = count
         item.qty = f"{item.qty:,.0f}"
+        if( "actual_qty" in item): item.actual_qty = f"{item.actual_qty:,.0f}"
         if( "company_total_stock" in item): item.company_total_stock = f"{item.company_total_stock:,.0f}"
         item.amount = f"{item.amount:,.2f}"
         item.net_amount = f"{item.net_amount:,.2f}"
