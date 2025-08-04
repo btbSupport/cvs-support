@@ -7,12 +7,15 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "item_code",
   "product_name",
-  "unit",
-  "column_break_ttfq",
+  "column_break_fktp",
+  "item_code",
+  "section_break_hfzw",
   "product_family",
+  "column_break_ttfq",
   "category",
+  "column_break_flkn",
+  "unit",
   "cost_info",
   "cost"
  ],
@@ -20,7 +23,8 @@
   {
    "fieldname": "unit",
    "fieldtype": "Select",
-   "label": "Unit"
+   "label": "Unit",
+   "options": "Kg\nEa\nNos\nMinutes\nCurrency\n%\nm\nTube\nsqm\nmm"
   },
   {
    "fieldname": "cost",
@@ -29,37 +33,52 @@
   },
   {
    "fieldname": "product_family",
-   "fieldtype": "Select",
-   "label": "ProductFamily"
+   "fieldtype": "Link",
+   "label": "Product Family",
+   "options": "BtbBundle"
   },
   {
    "fieldname": "item_code",
    "fieldtype": "Data",
-   "label": "ItemCode"
+   "label": "Item Code"
   },
   {
    "fieldname": "product_name",
    "fieldtype": "Data",
-   "label": "ProductName"
+   "label": "Product Name"
   },
   {
    "fieldname": "category",
    "fieldtype": "Select",
-   "label": "Category"
+   "label": "Category",
+   "options": "Flange\nAngle\nPerforated Sheet - Baffle\nSlit Addition\nRivets\nCorners\nFire Rated Corners\nSprings\nActuator\nFrame Accessories\nBlade Assembly"
   },
   {
    "fieldname": "column_break_ttfq",
    "fieldtype": "Column Break"
   },
   {
+   "depends_on": "eval:frappe.user_roles.includes( \"OneCPQ Admin\")",
    "fieldname": "cost_info",
    "fieldtype": "Section Break",
    "label": "Cost Info"
+  },
+  {
+   "fieldname": "column_break_fktp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hfzw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_flkn",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-13 10:06:31.190938",
+ "modified": "2025-08-04 14:40:49.508960",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCountryWiseCost",
