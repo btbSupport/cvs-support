@@ -4,19 +4,25 @@ from .btb_quotation import *
 
 
 @frappe.whitelist()
-def get_quotation_items(quote_name: str,currency:str):
+def get_quotation_items(quote_name: str,currency:str,visibleFields:str):
     print('quote_name : ',quote_name)
     print('quote_name currency : ',currency)
     items = get_synced_items(quote_name)
     count = 1
+    headers=json.loads(visibleFields)
     for item in items: 
         item["idx"] = count
+        item.qty = f"{item.qty:,.0f}"
+        if( "company_total_stock" in item): item.company_total_stock = f"{item.company_total_stock:,.0f}"
         item.amount = f"{item.amount:,.2f}"
         item.net_amount = f"{item.net_amount:,.2f}"
         item.rate = f"{item.rate:,.2f}"
         item.net_rate = f"{item.net_rate:,.2f}"
+        if(not ("custom_tag_ref" in item) or item["custom_tag_ref"] == None): item["custom_tag_ref"] = ''
+        if(not ("notes" in item) or item["notes"] == None): item["notes"] = ''
+        if(not ("description" in item) or item["description"] == None): item["description"] = ''
         count += 1
-    return frappe.frappe.render_template("btb_cvs_support/api/onecpq_quote_item.html", {"items": items,"currency":currency})
+    return frappe.frappe.render_template("btb_cvs_support/api/onecpq_quote_item.html", {"items": items,"currency":currency,"headers":headers})
 
 @frappe.whitelist()
 def get_quotation_onecpq_total(quote_name: str,currency:str):
