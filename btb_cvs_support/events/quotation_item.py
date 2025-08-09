@@ -31,7 +31,7 @@ from tabBtbCartItem tbci
         doc.description = item.title
         if(item.item_code):doc.item_code = item.item_code
         if(item.stock_uom):doc.uom = item.stock_uom
-        doc.custom_tag_ref = item.tagRef
+        doc.tag_ref = item.tagRef
         doc.notes = item.notes
         
 def on_trash(doc, method = None):

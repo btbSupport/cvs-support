@@ -21,6 +21,7 @@ def get_quotation_items(quote_name: str,currency:str,visibleFields:str):
         item.rate = f"{item.rate:,.2f}"
         item.net_rate = f"{item.net_rate:,.2f}"
         if(not ("custom_tag_ref" in item) or item["custom_tag_ref"] == None): item["custom_tag_ref"] = ''
+        if(not ("tag_ref" in item) or item["tag_ref"] == None): item["tag_ref"] = ''
         if(not ("notes" in item) or item["notes"] == None): item["notes"] = ''
         if(not ("description" in item) or item["description"] == None): item["description"] = ''
         count += 1
