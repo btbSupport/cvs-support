@@ -38,7 +38,7 @@
                     {% set currencyStyle = 'text-align: right' %}
                     {% endif %}
                     <div style="{{currencyStyle}}" class="col grid-static-col col-xs-{{classStyle}}" data-fieldname="{{header[0].fieldname}}" data-fieldtype="{{header[0].fieldtype}}">
-                            <span title="{{item[header[0].fieldname]}}" >{{item[header[0].fieldname]}}</span>
+                            <div title="{{item[header[0].fieldname]}}" class="static-area ellipsis">{{item[header[0].fieldname]}}</div>
                         </div>
                         {% endfor %}
                     </div>
