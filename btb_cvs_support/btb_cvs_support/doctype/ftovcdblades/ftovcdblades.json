@@ -43,162 +43,162 @@
   {
    "fieldname": "cd100_f_af_5_inch",
    "fieldtype": "Float",
-   "label": "CD100F_AF_5Inch__c"
+   "label": "CD100F AF 5Inch"
   },
   {
    "fieldname": "cd100_f_af_6_inch",
    "fieldtype": "Float",
-   "label": "CD100F_AF_6Inch__c"
+   "label": "CD100F AF 6Inch"
   },
   {
    "fieldname": "cd100_f_af_7_inch",
    "fieldtype": "Float",
-   "label": "CD100F_AF_7Inch__c"
+   "label": "CD100F AF 7Inch"
   },
   {
    "fieldname": "cd100_f_3_v_7_inch",
    "fieldtype": "Float",
-   "label": "CD100F_3V_7Inch__c"
+   "label": "CD100F 3V 7Inch"
   },
   {
    "fieldname": "cd125_h_af_6_inch",
    "fieldtype": "Float",
-   "label": "CD125H_AF_6Inch__c"
+   "label": "CD125H AF 6Inch"
   },
   {
    "fieldname": "cd125_h_af_7_inch",
    "fieldtype": "Float",
-   "label": "CD125H_AF_7Inch__c"
+   "label": "CD125H AF 7Inch"
   },
   {
    "fieldname": "cd165_f_3_v_4_inch",
    "fieldtype": "Float",
-   "label": "CD165F_3V_4Inch__c"
+   "label": "CD165F 3V 4Inch"
   },
   {
    "fieldname": "cd165_f_3_v_5_inch",
    "fieldtype": "Float",
-   "label": "CD165F_3V_5Inch__c"
+   "label": "CD165F 3V 5Inch"
   },
   {
    "fieldname": "cd100_f_3_v_5_inch",
    "fieldtype": "Float",
-   "label": "CD100F_3V_5Inch__c"
+   "label": "CD100F 3V 5Inch"
   },
   {
    "fieldname": "cd100_f_3_v_6_inch",
    "fieldtype": "Float",
-   "label": "CD100F_3V_6Inch__c"
+   "label": "CD100F 3V 6Inch"
   },
   {
    "fieldname": "cd165_f_3_v_7_inch",
    "fieldtype": "Float",
-   "label": "CD165F_3V_7Inch__c"
+   "label": "CD165F 3V 7Inch"
   },
   {
    "fieldname": "cd100_f_3_v_4_inch",
    "fieldtype": "Float",
-   "label": "CD100F_3V_4Inch__c"
+   "label": "CD100F 3V 4Inch"
   },
   {
    "fieldname": "cd165_f_3_v_6_inch",
    "fieldtype": "Float",
-   "label": "CD165F_3V_6Inch__c"
+   "label": "CD165F 3V 6Inch"
   },
   {
    "fieldname": "cd125_h_eal_6_inch",
    "fieldtype": "Float",
-   "label": "CD125H_EAL_6Inch__c"
+   "label": "CD125H EAL 6Inch"
   },
   {
    "fieldname": "cd165_f_af_6_inch",
    "fieldtype": "Float",
-   "label": "CD165F_AF_6Inch__c"
+   "label": "CD165F AF 6Inch"
   },
   {
    "fieldname": "cd165_f_af_7_inch",
    "fieldtype": "Float",
-   "label": "CD165F_AF_7Inch__c"
+   "label": "CD165F AF 7Inch"
   },
   {
    "fieldname": "cd125_h_eal_5_inch",
    "fieldtype": "Float",
-   "label": "CD125H_EAL_5Inch__c"
+   "label": "CD125H EAL 5Inch"
   },
   {
    "fieldname": "cd125_h_eal_7_inch",
    "fieldtype": "Float",
-   "label": "CD125H_EAL_7Inch__c"
+   "label": "CD125H EAL 7Inch"
   },
   {
    "fieldname": "cd165_f_af_5_inch",
    "fieldtype": "Float",
-   "label": "CD165F_AF_5Inch__c"
+   "label": "CD165F AF 5Inch"
   },
   {
    "fieldname": "cd165_f_eal_5_inch",
    "fieldtype": "Float",
-   "label": "CD165F_EAL_5Inch__c"
+   "label": "CD165F EAL 5Inch"
   },
   {
    "fieldname": "cd165_f_eal_7_inch",
    "fieldtype": "Float",
-   "label": "CD165F_EAL_7Inch__c"
+   "label": "CD165F EAL 7Inch"
   },
   {
    "fieldname": "cd165_f_eal_6_inch",
    "fieldtype": "Float",
-   "label": "CD165F_EAL_6Inch__c"
+   "label": "CD165F EAL 6Inch"
   },
   {
    "fieldname": "cd125_h_af_5_inch",
    "fieldtype": "Float",
-   "label": "CD125H_AF_5Inch__c"
+   "label": "CD125H AF 5Inch"
   },
   {
    "fieldname": "damper_height_mm",
    "fieldtype": "Float",
-   "label": "Damper_Height_mm__c"
+   "label": "Damper Height mm"
   },
   {
    "fieldname": "cd125_h_3_v_6_inch",
    "fieldtype": "Float",
-   "label": "CD125H_3V_6Inch__c"
+   "label": "CD125H 3V 6Inch"
   },
   {
    "fieldname": "cd100_f_eal_6_inch",
    "fieldtype": "Float",
-   "label": "CD100F_EAL_6Inch__c"
+   "label": "CD100F EAL 6Inch"
   },
   {
    "fieldname": "cd125_h_3_v_5_inch",
    "fieldtype": "Float",
-   "label": "CD125H_3V_5Inch__c"
+   "label": "CD125H 3V 5Inch"
   },
   {
    "fieldname": "cd125_h_3_v_7_inch",
    "fieldtype": "Float",
-   "label": "CD125H_3V_7Inch__c"
+   "label": "CD125H 3V 7Inch"
   },
   {
    "fieldname": "cd125_h_3_v_4_inch",
    "fieldtype": "Float",
-   "label": "CD125H_3V_4Inch__c"
+   "label": "CD125H 3V 4Inch"
   },
   {
    "fieldname": "cd100_f_eal_5_inch",
    "fieldtype": "Float",
-   "label": "CD100F_EAL_5Inch__c"
+   "label": "CD100F EAL 5Inch"
   },
   {
    "fieldname": "cd100_f_eal_7_inch",
    "fieldtype": "Float",
-   "label": "CD100F_EAL_7Inch__c"
+   "label": "CD100F EAL 7Inch"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-13 10:10:48.103347",
+ "modified": "2025-08-08 11:20:50.757524",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOVCDBlades",

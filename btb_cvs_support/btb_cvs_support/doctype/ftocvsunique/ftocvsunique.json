@@ -159,7 +159,8 @@
   {
    "fieldname": "jackshafting_sections",
    "fieldtype": "Select",
-   "label": "Jackshafting Sections"
+   "label": "Jackshafting Sections",
+   "options": "\nN/A\nOptional"
   },
   {
    "fieldname": "max_single_section_diameter",
@@ -211,7 +212,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-13 10:32:32.347681",
+ "modified": "2025-08-08 11:30:17.424084",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCVSUnique",

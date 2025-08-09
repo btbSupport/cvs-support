@@ -15,12 +15,12 @@
   {
    "fieldname": "af_slit_size",
    "fieldtype": "Float",
-   "label": "AFSlitSize"
+   "label": "AF Slit Size"
   },
   {
    "fieldname": "btb3_v_slit_size",
    "fieldtype": "Float",
-   "label": "Btb3VSlitSize"
+   "label": "3V Slit Size"
   },
   {
    "fieldname": "column_break_dcmc",
@@ -29,7 +29,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-13 10:10:34.642660",
+ "modified": "2025-08-08 11:06:59.162387",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOBtbBladeSlits",

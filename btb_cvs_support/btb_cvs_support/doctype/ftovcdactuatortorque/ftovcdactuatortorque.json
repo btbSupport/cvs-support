@@ -17,22 +17,26 @@
   {
    "fieldname": "torque1",
    "fieldtype": "Select",
-   "label": "Torque1"
+   "label": "Torque1",
+   "options": "\n22lbin-2.5Nm\n18lbin-2.5Nm\n30lbin-3.4Nm\n180lbin-20Nm\n45lbin-5Nm\n35lbin-4Nm\n30lbin-3.5Nm\n80lbin-9Nm\n90lbin-10Nm\n175lbin-20Nm"
   },
   {
    "fieldname": "torque2",
    "fieldtype": "Select",
-   "label": "Torque2"
+   "label": "Torque2",
+   "options": "\n22lbin-2.5Nm\n18lbin-2.5Nm\n30lbin-3.4Nm\n180lbin-20Nm\n45lbin-5Nm\n35lbin-4Nm\n30lbin-3.5Nm\n80lbin-9Nm\n90lbin-10Nm\n175lbin-20Nm"
   },
   {
    "fieldname": "torque3",
    "fieldtype": "Select",
-   "label": "Torque3"
+   "label": "Torque3",
+   "options": "\n22lbin-2.5Nm\n18lbin-2.5Nm\n30lbin-3.4Nm\n180lbin-20Nm\n45lbin-5Nm\n35lbin-4Nm\n30lbin-3.5Nm\n80lbin-9Nm\n90lbin-10Nm\n175lbin-20Nm"
   },
   {
    "fieldname": "torque4",
    "fieldtype": "Select",
-   "label": "Torque4"
+   "label": "Torque4",
+   "options": "\n22lbin-2.5Nm\n18lbin-2.5Nm\n30lbin-3.4Nm\n180lbin-20Nm\n45lbin-5Nm\n35lbin-4Nm\n30lbin-3.5Nm\n80lbin-9Nm\n90lbin-10Nm\n175lbin-20Nm"
   },
   {
    "fieldname": "column_break_dljn",
@@ -41,7 +45,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-13 10:13:23.682498",
+ "modified": "2025-08-08 11:17:19.730905",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOVCDActuatorTorque",

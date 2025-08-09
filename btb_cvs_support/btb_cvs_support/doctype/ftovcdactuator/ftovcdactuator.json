@@ -28,87 +28,94 @@
   {
    "fieldname": "erp_itemode",
    "fieldtype": "Data",
-   "label": "ERP_Item_Code__c"
+   "label": "Item Code"
   },
   {
    "fieldname": "brand",
    "fieldtype": "Select",
-   "label": "Brand__c"
+   "label": "Brand",
+   "options": "Belimo\nSiemens\nHoneywell"
   },
   {
    "fieldname": "actuator_type",
    "fieldtype": "Select",
-   "label": "Actuator_Type__c"
+   "label": "Actuator Type",
+   "options": "Spring Return\nNon Spring Return\nFire & Smoke"
   },
   {
    "fieldname": "controls",
    "fieldtype": "Select",
-   "label": "Controls__c"
+   "label": "Controls",
+   "options": "On/Off\nOn/Off + Floating\nModulating"
   },
   {
    "fieldname": "aux_switch",
    "fieldtype": "Select",
-   "label": "Aux_Switch__c"
+   "label": "Aux Switch",
+   "options": "w/o Aux\n2 Aux"
   },
   {
    "fieldname": "feedback",
    "fieldtype": "Select",
-   "label": "Feedback__c"
+   "label": "Feedback",
+   "options": "\n2-10V"
   },
   {
    "fieldname": "power_supply",
    "fieldtype": "Select",
-   "label": "Power_supply__c"
+   "label": "Power supply",
+   "options": "230V\n24V\n100V-240V"
   },
   {
    "fieldname": "torque_description",
    "fieldtype": "Select",
-   "label": "Torque_Description__c"
+   "label": "Torque Description",
+   "options": "22lbin-2.5Nm\n45lbin-5Nm\n90lbin-10Nm\n180lbin-20Nm\n80lbin-9Nm\n30lbin-3.5Nm\n175lbin-20Nm\n35lbin-4Nm\n18lbin-2.5Nm\n30lbin-3.4Nm"
   },
   {
    "fieldname": "model_name",
    "fieldtype": "Data",
-   "label": "Model_Name__c"
+   "label": "Model Name"
   },
   {
    "fieldname": "parallel_ss301",
    "fieldtype": "Float",
-   "label": "ParallelSS301__c"
+   "label": "Parallel SS301"
   },
   {
    "fieldname": "parallel_none",
    "fieldtype": "Float",
-   "label": "ParallelNone__c"
+   "label": "Parallel None"
   },
   {
    "fieldname": "opposed_ss301",
    "fieldtype": "Float",
-   "label": "OpposedSS301__c"
+   "label": "Opposed SS301"
   },
   {
    "fieldname": "opposed_none",
    "fieldtype": "Float",
-   "label": "OpposedNone__c"
+   "label": "Opposed None"
   },
   {
    "fieldname": "short_uniq",
    "fieldtype": "Data",
-   "label": "ShortUniq__c"
+   "label": "Short Uniq"
   },
   {
    "fieldname": "none",
    "fieldtype": "Float",
-   "label": "None__c"
+   "label": "None"
   },
   {
    "fieldname": "silicone",
    "fieldtype": "Float",
-   "label": "Silicone__c"
+   "label": "Silicone"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-13 10:13:35.412797",
+ "modified": "2025-08-08 11:38:44.294455",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOVCDActuator",

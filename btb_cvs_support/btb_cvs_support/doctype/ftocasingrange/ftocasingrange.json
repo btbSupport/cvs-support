@@ -20,7 +20,7 @@
   {
    "fieldname": "casing_thickness",
    "fieldtype": "Float",
-   "label": "CasingThickness"
+   "label": "Casing Thickness"
   },
   {
    "fieldname": "column_break_dwzu",
@@ -29,7 +29,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-13 10:13:54.269775",
+ "modified": "2025-08-08 11:21:26.877492",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCasingRange",

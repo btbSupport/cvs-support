@@ -17,32 +17,34 @@
   {
    "fieldname": "model_blade_type",
    "fieldtype": "Select",
-   "label": "ModelBladeType__c"
+   "label": "Model Blade Type",
+   "options": "AF-P\n3V\nAF\nAF-AP"
   },
   {
    "fieldname": "leakage_class",
    "fieldtype": "Select",
-   "label": "LeakageClass__c"
+   "label": "Leakage Class",
+   "options": "Class I\nClass II\nNA"
   },
   {
    "fieldname": "model_description",
    "fieldtype": "Data",
-   "label": "ModelDescription__c"
+   "label": "Model Description"
   },
   {
    "fieldname": "blade_type",
    "fieldtype": "Select",
-   "label": "BladeType__c"
+   "label": "Blade Type"
   },
   {
    "fieldname": "rating",
    "fieldtype": "Data",
-   "label": "Rating__c"
+   "label": "Rating"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-13 10:10:56.661509",
+ "modified": "2025-08-08 11:39:21.419324",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCVSModelNo",

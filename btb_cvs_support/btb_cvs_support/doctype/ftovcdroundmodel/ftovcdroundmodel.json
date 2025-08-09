@@ -15,12 +15,12 @@
   {
    "fieldname": "min_frame_thickness",
    "fieldtype": "Float",
-   "label": "MinFrameThickness"
+   "label": "Min Frame Thickness"
   },
   {
    "fieldname": "min_blade_thickness",
    "fieldtype": "Float",
-   "label": "MinBladeThickness"
+   "label": "Min Blade Thickness"
   },
   {
    "fieldname": "column_break_onmx",
@@ -29,7 +29,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-13 10:12:30.373840",
+ "modified": "2025-08-08 11:09:52.946654",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOVCDRoundModel",

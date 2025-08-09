@@ -23,62 +23,62 @@
   {
    "fieldname": "damper_height",
    "fieldtype": "Float",
-   "label": "Damper_Height__c"
+   "label": "Damper Height"
   },
   {
    "fieldname": "af_blade_inch_1",
    "fieldtype": "Float",
-   "label": "AF_Blade_Inch_1__c"
+   "label": "AF Blade Inch 1"
   },
   {
    "fieldname": "af_of_blades_1",
    "fieldtype": "Float",
-   "label": "AF_of_Blades_1__c"
+   "label": "AF of Blades 1"
   },
   {
    "fieldname": "af_blade_inch_2",
    "fieldtype": "Float",
-   "label": "AF_Blade_Inch_2__c"
+   "label": "AF Blade Inch 2"
   },
   {
    "fieldname": "af_of_blades_2",
    "fieldtype": "Float",
-   "label": "AF_of_Blades_2__c"
+   "label": "AF of Blades 2"
   },
   {
    "fieldname": "af_total_of_blades",
    "fieldtype": "Float",
-   "label": "AF_Total_of_Blades__c"
+   "label": "AF Total of Blades"
   },
   {
    "fieldname": "x3_v_blade_inch_1",
    "fieldtype": "Float",
-   "label": "X3V_Blade_Inch_1__c"
+   "label": "X3V Blade Inch 1"
   },
   {
    "fieldname": "x3_v_of_blades_1",
    "fieldtype": "Float",
-   "label": "X3V_of_Blades_1__c"
+   "label": "X3V of Blades 1"
   },
   {
    "fieldname": "x3_v_blade_inch_2",
    "fieldtype": "Float",
-   "label": "X3V_Blade_Inch_2__c"
+   "label": "X3V Blade Inch 2"
   },
   {
    "fieldname": "x3_v_of_blades_2",
    "fieldtype": "Float",
-   "label": "X3V_of_Blades_2__c"
+   "label": "X3V of Blades 2"
   },
   {
    "fieldname": "x3_v_total_of_blades",
    "fieldtype": "Float",
-   "label": "X3V_Total_of_Blades__c"
+   "label": "X3V Total of Blades"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-13 10:11:37.675330",
+ "modified": "2025-08-08 11:32:41.830880",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOFSBladeDetails",

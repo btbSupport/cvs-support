@@ -17,7 +17,7 @@
   {
    "fieldname": "unique_id",
    "fieldtype": "Data",
-   "label": "UniqueId"
+   "label": "Unique Id"
   },
   {
    "fieldname": "model",
@@ -27,12 +27,12 @@
   {
    "fieldname": "ulrd_valuation_rate",
    "fieldtype": "Float",
-   "label": "ULRDValuationRate"
+   "label": "ULRD Valuation Rate"
   },
   {
    "fieldname": "item_code",
    "fieldtype": "Data",
-   "label": "ItemCode"
+   "label": "Item Code"
   },
   {
    "fieldname": "column_break_ayxy",
@@ -41,7 +41,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-13 10:12:10.903831",
+ "modified": "2025-08-08 11:35:13.768628",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCVSActuator",

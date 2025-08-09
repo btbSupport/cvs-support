@@ -21,52 +21,52 @@
   {
    "fieldname": "damper_height",
    "fieldtype": "Float",
-   "label": "DamperHeight__c"
+   "label": "Damper Height"
   },
   {
    "fieldname": "dynamic_damper_horizontal_spring",
    "fieldtype": "Data",
-   "label": "DynamicDamperHorizontalSpring__c"
+   "label": "Dynamic Damper Horizontal Spring"
   },
   {
    "fieldname": "dynamic_damper_vertical_spring",
    "fieldtype": "Data",
-   "label": "DynamicDamperVerticalSpring__c"
+   "label": "Dynamic Damper Vertical Spring"
   },
   {
    "fieldname": "standard_noof_blades",
    "fieldtype": "Float",
-   "label": "StandardNoofBlades__c"
+   "label": "Standard No of Blades"
   },
   {
    "fieldname": "static_damper_spring_size",
    "fieldtype": "Data",
-   "label": "StaticDamperSpringSize__c"
+   "label": "Static Damper Spring Size"
   },
   {
    "fieldname": "usl_noof_blades",
    "fieldtype": "Float",
-   "label": "USLNoofBlades__c"
+   "label": "USL No of Blades"
   },
   {
    "fieldname": "af_blade_inch_1",
    "fieldtype": "Float",
-   "label": "AF_Blade_Inch_1__c"
+   "label": "AF Blade Inch 1"
   },
   {
    "fieldname": "af_of_blades_1",
    "fieldtype": "Float",
-   "label": "AF_of_Blades_1__c"
+   "label": "AF of Blades 1"
   },
   {
    "fieldname": "static_damper_vertical_spring",
    "fieldtype": "Data",
-   "label": "StaticDamperVerticalSpring__c"
+   "label": "Static Damper Vertical Spring"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-13 10:11:04.381006",
+ "modified": "2025-08-08 11:28:12.096269",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOBlade",

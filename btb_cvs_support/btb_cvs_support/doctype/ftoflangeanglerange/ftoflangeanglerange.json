@@ -22,12 +22,12 @@
   {
    "fieldname": "flange_size",
    "fieldtype": "Float",
-   "label": "FlangeSize"
+   "label": "Flange Size"
   },
   {
    "fieldname": "angle_size",
    "fieldtype": "Float",
-   "label": "AngleSize"
+   "label": "Angle Size"
   },
   {
    "fieldname": "column_break_yofl",
@@ -40,7 +40,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-06-13 10:14:21.463493",
+ "modified": "2025-08-08 11:10:22.222772",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOFlangeAngleRange",
