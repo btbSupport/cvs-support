@@ -21,11 +21,12 @@ fti_cache ={}
 def provide( quote_name: str):
     models = populate_cart_item_model(quote_name)
     if(models == None): return None
+    compInfo = get_company_info()
     output = {"ci": {
         "cartItem": populate_cart_detail(models),
-        "companyInfo": get_company_info()
+        "companyInfo": compInfo
     },
-    "qt": get_quote_details(quote_name)
+    "qt": get_quote_details(quote_name,compInfo["currency"])
     }
     # print("result -", output)
     file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_"+output["ci"]["companyInfo"]["code"]+".docx"
@@ -37,13 +38,15 @@ def provide( quote_name: str):
     return output
     # return 'Success'
 
-def get_quote_details( quote_name: str) -> Dict:
+def get_quote_details( quote_name: str,currency : str) -> Dict:
+    from frappe.utils import money_in_words
     sql = f""" select docstatus,customer_name,address_display,in_words,contact_display,contact_designation,contact_mobile,contact_email,subject,project,name,terms,quotation_term_details,letter_details,standard_tc_details,grand_total,total_taxes_and_charges,net_total,discount_amount,additional_discount_percentage,total  from `tabQuotation` tqi where name ='{quote_name}'
     """
     items = frappe.db.sql(sql, as_dict=1)
     item = items[0]
     item["water_mark"]=" "
     if(item["docstatus"] != 1): item["water_mark"]="DRAFT"
+    item["in_words"] = money_in_words(item['grand_total'], currency)
     item["grand_total"]=f"{(item['grand_total']):,.2f}"
     item["total_taxes_and_charges"]=f"{item['total_taxes_and_charges']:,.2f}"
     item["net_total"]=f"{item['net_total']:,.2f}"
