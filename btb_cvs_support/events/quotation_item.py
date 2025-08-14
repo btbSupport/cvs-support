@@ -12,12 +12,13 @@ def before_upsert(doc, method = None):
  GROUP_CONCAT(CASE WHEN field = 'modelItem' THEN item_code END) AS item_code,
  GROUP_CONCAT(CASE WHEN field = 'modelItem' THEN stock_uom END) AS stock_uom,
  GROUP_CONCAT(CASE WHEN field = 'tagRef' THEN cifValue END) AS tagRef,
- GROUP_CONCAT(CASE WHEN field = 'notes' THEN cifValue END) AS notes 
+ GROUP_CONCAT(CASE WHEN field = 'notes' THEN cifValue END) AS notes ,
+ GROUP_CONCAT(CASE WHEN field = 'notesInput' THEN cifValue END) AS notesInput
  from (
  SELECT i.item_code,i.stock_uom,tbci.title,tbf.field,tbcif.value cifValue,tbfti.value
 from tabBtbCartItem tbci 
  join tabBtbCartItemFeature tbcif on tbci.name = '{doc.custom_cart_item}' and tbcif.parent  = tbci.name
- join tabBtbFeature tbf  on tbf.name = tbcif.feature  and tbf.field in('modelItem','tagRef','notes')
+ join tabBtbFeature tbf  on tbf.name = tbcif.feature  and tbf.field in('modelItem','tagRef','notes','notesInput')
  left join tabBtbFeatureTypeItem tbfti on  tbfti.name = tbcif.value
  left join `tabItem` i on i.name = tbfti.`object`) a 
   
@@ -32,7 +33,8 @@ from tabBtbCartItem tbci
         if(item.item_code):doc.item_code = item.item_code
         if(item.stock_uom):doc.uom = item.stock_uom
         doc.tag_ref = item.tagRef
-        doc.notes = item.notes
+        if('notesInput' in item) : doc.notes = item.notesInput
+        else : doc.notes = item.notes
         
 def on_trash(doc, method = None):
     print("calling quote line item delete ",doc)

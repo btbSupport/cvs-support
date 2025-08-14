@@ -144,6 +144,17 @@ def applyDiscount( quote_name: str,discount:float):
     # doc.custom_total_discount = totalDiscountPercenatge
     # calculate_taxes_and_totals(doc)
 
+# @frappe.whitelist()
+# def lock_cart( quote_name: str, lock:bool) :
+#     sql = f""" select parent from `tabBtbCartLink` cl join `tabBtbCart` c on cl.parent = c.name and c.locked !='{lock}' 
+#     where entity='{quote_name}'
+#     """
+#     items = frappe.db.sql(sql, as_dict=1)
+#     for item in items:
+#         cart = frappe.frappe.get_doc("BtbCart", item.parent)
+#         cart.locked = lock
+#         cart.save()
+
 @frappe.whitelist()
 def get_cart_items( quote_name: str) :
     sql = f""" select name,discount
@@ -155,7 +166,6 @@ def get_cart_items( quote_name: str) :
     """
     items = frappe.db.sql(sql, as_dict=1)
     return items
-
 
 @frappe.whitelist()
 def amendCPQ(quote_name: str,amended_from: str):

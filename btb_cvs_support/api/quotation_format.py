@@ -181,6 +181,7 @@ def populate_header_values( features, header_map):
     output = []
     for label, field in header_map.items():
         val = str(populate_value(features, field))
+        if(val == '' or val == None or val == 'None'): val='N/A'
         output.append({"label": label, "value": val})
     return output
 
