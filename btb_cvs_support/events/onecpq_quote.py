@@ -84,7 +84,7 @@ def lock_cart( doc_name,doc_status) :
 def on_submit_quote(doc = None, method = None):
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     if(doc.custom_customizable !=1): return
-    if( validate_cart(doc.name)):frappe.throw('Please check OneCPQ all cart items synced.')
+    if( validate_cart(doc.name)):frappe.throw('Please ensure all OneCPQ cart items are synced and there are no errors in OneCPQ Cart.')
     if(doc.custom_customizable ==1) : lock_cart(doc.name,doc.docstatus)
 
 def validate_cart(quote_name: str):
