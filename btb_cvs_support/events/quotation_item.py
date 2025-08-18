@@ -30,7 +30,7 @@ from tabBtbCartItem tbci
         if(item.item_code):doc.item_code = item.item_code
         if(item.stock_uom):doc.uom = item.stock_uom
         doc.tag_ref = item.tagRef
-        if(item.ciItemCode == 'ULRD' or item.ciItemCode == 'SIL' or item.ciItemCode == 'VCDR'): 
+        if(item.ciItemCode == 'ULRD' or item.ciItemCode == 'SIL' or item.ciItemCode == 'VCDA'): 
             if('notesInput' in item) : doc.notes = item.notesInput
         elif('notes' in item) : doc.notes = item.notes
         
