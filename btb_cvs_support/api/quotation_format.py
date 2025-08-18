@@ -47,6 +47,8 @@ def get_quote_details( quote_name: str,currency : str) -> Dict:
     item["water_mark"]=" "
     if(item["docstatus"] != 1): item["water_mark"]="DRAFT"
     item["in_words"] = money_in_words(item['grand_total'], currency)
+    item["address_display"] = '<span style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item['address_display']+"</span>"
+    item["contact_display"] = '<span style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item['contact_display']+"</span>"
     item["grand_total"]=f"{(item['grand_total']):,.2f}"
     item["total_taxes_and_charges"]=f"{item['total_taxes_and_charges']:,.2f}"
     item["net_total"]=f"{item['net_total']:,.2f}"
