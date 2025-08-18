@@ -45,6 +45,8 @@ def get_quote_details( quote_name: str,currency : str) -> Dict:
     items = frappe.db.sql(sql, as_dict=1)
     item = items[0]
     item["water_mark"]=" "
+    item["displayTotal"]=1
+    if(item['total_taxes_and_charges'] ==0 and item['additional_discount_percentage'] ==0): item["displayTotal"]=0
     if(item["docstatus"] != 1): item["water_mark"]="DRAFT"
     item["in_words"] = money_in_words(item['grand_total'], currency)
     item["address_display"] = '<span style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item['address_display']+"</span>"
