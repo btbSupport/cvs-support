@@ -139,11 +139,15 @@ def before_save_quote(doc = None, method = None):
     if(doc.custom_customizable != 1): 
         for item in items: 
             doc.items.append(frappe.frappe.get_doc("Quotation Item", item.name))
+    qliId = 1
     if(doc.custom_customizable == 1):
         for item in syncItems: 
             totalUnitPrice += (item.ciQty * item.unit_price)
             totalLineDiscount +=  (item.ciQty * ((item.unit_price) * item.ciDiscount/100))
-            doc.items.append(frappe.frappe.get_doc("Quotation Item", item.name))
+            qli = frappe.frappe.get_doc("Quotation Item", item.name)
+            qli.idx = qliId
+            qliId +=1
+            doc.items.append(qli)
     calculate_taxes_and_totals(doc)
     if(beforequote.docstatus != 0 and  doc.custom_customizable ==1 and
        (beforequote.total_qty != doc.total_qty or beforequote.base_total != doc.base_total)):frappe.throw('You can only update on Draft status.')
