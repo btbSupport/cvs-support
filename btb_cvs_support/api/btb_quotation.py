@@ -175,10 +175,13 @@ def amendCPQ(quote_name: str,amended_from: str):
     cartItems = get_synced_items(amended_from)
     print('inside amendCPQ cartItems',cartItems)
     # clonedItems=[]
+    seq = 1
     for item in cartItems:
         cartItem = frappe.frappe.get_doc("BtbCartItem", item.ciName)
         cartItem.name = None
         cartItem.cart = cart_name
+        cartItem.idx = seq
+        seq +=1
         ciLinks =[]
         for cil in cartItem.cart_item_links:
             cil.entity = quote_name

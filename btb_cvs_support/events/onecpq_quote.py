@@ -105,7 +105,7 @@ def before_save_quote(doc = None, method = None):
     beforequote = getQuoteById(doc.name)
     if(beforequote == None): 
         doc.custom_cpq_amended=0
-        if(doc.custom_customizable == 1 and doc.amended_from != None) :
+        if(doc.custom_customizable == 1 and (doc.amended_from != None or doc.custom_created_from != None)) :
             doc.items=[]
         return   
     if(doc is None): return
@@ -165,12 +165,13 @@ def before_save_quote(doc = None, method = None):
 @frappe.whitelist()
 def amendCPQ(doc = None, method = None):
     quote_name = doc.name
-    amended_from = doc.amended_from
+    cloned_from = doc.amended_from
+    if(cloned_from == None):cloned_from = doc.custom_created_from
     print('inside amendCPQ',quote_name)
-    print('inside amendCPQ amended_from',amended_from)
-    if(doc.amended_from == None or doc.custom_customizable ==0 or doc.custom_cpq_amended!=0): return
+    print('inside amendCPQ amended_from',cloned_from)
+    if(cloned_from == None or doc.custom_customizable ==0 or doc.custom_cpq_amended!=0): return
     cart_name = create_cart(quote_name)
-    cartItems = get_synced_items(amended_from)
+    cartItems = get_synced_items(cloned_from)
     print('inside amendCPQ cartItems',cartItems)
     # clonedItems=[]
     for item in cartItems:

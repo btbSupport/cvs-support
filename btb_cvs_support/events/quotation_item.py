@@ -25,6 +25,7 @@ from tabBtbCartItem tbci
     if len(items) > 0 :
         item = items[0]
         print("items inside qli ",items)
+        if(item.idx == None): return
         doc.idx = item.idx
         doc.description = item.title
         if(item.item_code):doc.item_code = item.item_code
