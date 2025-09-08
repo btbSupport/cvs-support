@@ -9,8 +9,8 @@ def decimal_serializer(obj):
         return str(obj)
     raise TypeError('Type not serializable + '+obj)
 def generate(template_path:str, datasource: dict, **kwargs):
-    url = "https://onesign.digital/onedoc/convert"
-    # url = "https://docs.onedoc.ca/onedoc/convert"
+    # url = "https://onesign.digital/onedoc/convert"
+    url = "https://docs.onedoc.ca/onedoc/convert"
     data = {
         "dataSource": json.dumps(datasource,default=decimal_serializer),
         "outputFormat": kwargs.get("format", "")

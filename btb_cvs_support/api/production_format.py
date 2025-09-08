@@ -157,7 +157,8 @@ def getValue( features, key):
         modelNo = ''
         if('modelDescription' in features):
             modelNo = features['modelDescription']['value'].split(' ')[0]
-        if( str(modelNo).endswith('-I')): return 'Slim Line'
+        if( str(modelNo).endswith('-I')): return 'Integral'
+        if( str(modelNo).find('-SL-') != -1): return 'Slim Line'
         return 'Double T'
     if(key =='damperHeightTypeBC'):
         if('type' in features and (features['type']['value'] == 'TypeB' or features['type']['value'] == 'TypeC')):
@@ -214,7 +215,17 @@ def getValue( features, key):
             output += features['actModel2']['value']
         return output
     if(key =='bladeLengthMeter' and 'bladeLength' in features)  :      
-            return (Decimal(features['bladeLength']['value']))/1000
+            return (Decimal(features['bladeLength']['value']))/1000 
+    if(key =='bladeSealLength' and 'bladeSeal' in features)  :
+            val = (Decimal(features['bladeSeal']['value']))
+            if('leakageClass' in features and features['leakageClass']['value']=='Class I')  :
+                val = val/2
+            return val
+    if(key =='bladeSealLengthQty' and 'noofSections' in features)  :
+            val = (Decimal(features['noofSections']['value']))
+            if('leakageClass' in features and features['leakageClass']['value']=='Class I')  :
+                val = val*2
+            return val
     if key in features:
         return features[key]['value']
     return '-'
