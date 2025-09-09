@@ -50,10 +50,10 @@ def get_quote_details( quote_name: str,currency : str) -> Dict:
     if(item['total_taxes_and_charges'] ==0 and item['additional_discount_percentage'] ==0): item["displayTotal"]=0
     if(item["docstatus"] != 1): item["water_mark"]="DRAFT"
     item["in_words"] = money_in_words(item['grand_total'], currency)
-    if("address_display" in item and item["address_display"] != None) : item["address_display"] = '<span style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item['address_display']+"</span>"
+    if("address_display" in item and item["address_display"] != None) : item["address_display"] = '<span style="font-family:Arial,Helvetica Neue,sans-serif;font-size: 12px !important;">'+item['address_display']+"</span>"
     if("contact_display" in item and item["contact_display"] != None) : contact_details = item["contact_display"]
     if("contact_designation" in item and item["contact_designation"] != None) : contact_details  = contact_details +", "+item['contact_designation']
-    if(contact_details!="") : item["contact_display"] = '<span style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+contact_details+"</span>"
+    if(contact_details!="") : item["contact_display"] = '<span style="font-family:Arial,Helvetica Neue,sans-serif;font-size: 12px !important;">'+contact_details+"</span>"
     item["grand_total"]=f"{(item['grand_total']):,.2f}"
     item["total_taxes_and_charges"]=f"{item['total_taxes_and_charges']:,.2f}"
     item["net_total"]=f"{item['net_total']:,.2f}"
@@ -61,16 +61,16 @@ def get_quote_details( quote_name: str,currency : str) -> Dict:
     item["additional_discount_percentage"]=f"{item['additional_discount_percentage']:,.2f}"
     item["total"]=f"{item['total']:,.2f}"
     if("quotation_term_details" in item) :
-        if(item["quotation_term_details"] != None):item["quotation_term_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["quotation_term_details"]+"</div>"
+        if(item["quotation_term_details"] != None):item["quotation_term_details"]='<div style="font-family:Arial,Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["quotation_term_details"]+"</div>"
     else : item["quotation_term_details"] = ""
     if("standard_tc_details" in item ) :
-        if(item["standard_tc_details"] != None):item["standard_tc_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["standard_tc_details"]+"</div>"
+        if(item["standard_tc_details"] != None):item["standard_tc_details"]='<div style="font-family:Arial,Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["standard_tc_details"]+"</div>"
     else : item["standard_tc_details"] = ""
     if("terms" in item ) :
-        if( item["terms"] != None):item["terms"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["terms"]+"</div>"
+        if( item["terms"] != None):item["terms"]='<div style="font-family:Arial,Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["terms"]+"</div>"
     else : item["terms"] = ""
     if("letter_details" in item ) :
-        if( item["letter_details"] != None):item["letter_details"]='<div style="font-family:Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["letter_details"]+"</div>"
+        if( item["letter_details"] != None):item["letter_details"]='<div style="font-family:Arial,Helvetica Neue,sans-serif;font-size: 12px !important;">'+item["letter_details"]+"</div>"
     else : item["letter_details"] = ""
     item["userName"]=frappe.get_user().doc.full_name
     return item
