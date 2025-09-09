@@ -14,7 +14,13 @@ def generate(template_path:str, datasource: dict, **kwargs):
     data = {
         "dataSource": json.dumps(datasource,default=decimal_serializer),
         "outputFormat": kwargs.get("format", ""),
-        "settings":json.dumps({"addDigitalSignature":True,"showPlaceholder":False})
+        "settings":json.dumps(
+            {
+                "addDigitalSignature":True,
+                "showPlaceholder":False,
+                "userPassword":'user@123',
+                "ownerPassword":'owner@123'
+                })
     }
     files = {
         "file": open(template_path, "rb")
