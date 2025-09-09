@@ -13,7 +13,8 @@ def generate(template_path:str, datasource: dict, **kwargs):
     # url = "https://docs.onedoc.ca/onedoc/convert"
     data = {
         "dataSource": json.dumps(datasource,default=decimal_serializer),
-        "outputFormat": kwargs.get("format", "")
+        "outputFormat": kwargs.get("format", ""),
+        "settings":json.dumps({"addDigitalSignature":True,"showPlaceholder":False})
     }
     files = {
         "file": open(template_path, "rb")
