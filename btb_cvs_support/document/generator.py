@@ -18,8 +18,8 @@ def generate(template_path:str, datasource: dict, **kwargs):
             {
                 "addDigitalSignature":True,
                 "showPlaceholder":False,
-                "userPassword":'user@123',
-                "ownerPassword":'owner@123'
+                # "userPassword":"user123",
+                "ownerPassword":"owner123"
                 })
     }
     files = {
