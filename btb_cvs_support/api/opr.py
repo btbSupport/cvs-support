@@ -185,4 +185,112 @@ def get_delivered_items(sales_order_number: str):
     return output
 
 
+def update_opr(opr_name):
+    if not opr_name:
+        return
+    #opr
+    opr_doc = frappe.get_doc("Order Processing Request", opr_name)
+
+    #Delivery
+    delivery_data = get_delivery_data(opr_name)
+    invoiced_value = delivery_data.get("net_total") or 0
+    total_sqm_delivered = delivery_data.get("custom_total_sqm") or 0
+    total_nos_delivered = delivery_data.get("custom_total_pcs") or 0
+
+    approx_value = opr_doc.approx_value_ or 0
+    adjustment = opr_doc.adjustment or 0
+    remaining_value = approx_value + adjustment - invoiced_value
+
+    #Stock Consumption
+    stock_data = get_stock_consumption(opr_name)
+    consumption_value = stock_data.get("total") or 0
+    
+    net_value = invoiced_value + consumption_value
+    material_percent = 0
+    if invoiced_value > 0:
+        material_percent = - (consumption_value / invoiced_value) * 100
+
+    #Quantity Table
+    quantities = get_quantities(opr_name)
+    total_straight_sqm = quantities.get("total_straight_sqm") or 0
+    total_fittings_sqm = quantities.get("total_fittings_sqm") or 0
+    total_straight_nos = quantities.get("total_straight_nos") or 0
+    total_fittings_nos = quantities.get("total_fittings_nos") or 0
+    
+    total_sqm = total_straight_sqm + total_fittings_sqm
+    remaining_sqm_delivery = total_sqm - total_sqm_delivered
+    total_no = total_straight_nos + total_fittings_nos
+    remaining_nos_delivery = total_no - total_nos_delivered
+
+    #Production Schedule
+    production = get_production(opr_name)
+    total_sqm_produced = production.get("total_sqm_produced") or 0
+    total_nos_produced = production.get("total_nos_produced") or 0
+
+    remaining_nos_production = total_no - total_nos_produced
+    remaining_sqm_production = total_sqm - total_sqm_produced
+    remaining_produced_sqm_to_delivered = total_sqm_produced - total_sqm_delivered
+    remaining_produced_no_to_delivered = total_nos_produced - total_nos_delivered
+
+    frappe.db.set_value("Order Processing Request", opr_name, {
+        "invoiced_value": invoiced_value,
+        "total_sqm_delivered": total_sqm_delivered,
+        "total_nos_delivered": total_nos_delivered,
+        "consumption_value": consumption_value,
+        "net_value": net_value,
+        "total_straight_sqm": total_straight_sqm,
+        "total_fittings_sqm": total_fittings_sqm,
+        "total_sqm": total_sqm,
+        "remaining_sqm_delivery": remaining_sqm_delivery,
+        "total_sqm_produced": total_sqm_produced,
+        "remaining_sqm_production": remaining_sqm_production,
+        "remaining_produced_sqm_to_delivered": remaining_produced_sqm_to_delivered,
+        "total_straight_nos": total_straight_nos,
+        "total_fittings_nos": total_fittings_nos,
+        "total_no": total_no,
+        "remaining_nos_delivery": remaining_nos_delivery,
+        "total_nos_produced": total_nos_produced,
+        "remaining_nos_production": remaining_nos_production,
+        "remaining_produced_no_to_delivered": remaining_produced_no_to_delivered,
+        "material_percent": material_percent,
+        "remaining_value": remaining_value,
+    })
+
+def get_delivery_data(opr_name):
+    return frappe.db.sql("""
+        SELECT 
+            SUM(base_net_total) AS net_total, 
+            SUM(custom_total_sqm) AS custom_total_sqm, 
+            SUM(custom_total_pcs) AS custom_total_pcs
+        FROM `tabDelivery Note`
+        WHERE custom_opr = %s AND docstatus = 1
+    """, opr_name, as_dict=True)[0]
+
+def get_stock_consumption(opr_name):
+     return frappe.db.sql("""
+        SELECT SUM(value_difference) AS total
+        FROM `tabStock Entry`
+        WHERE custom_opr = %s AND docstatus = 1
+          AND stock_entry_type = 'Material Issue'
+    """, opr_name, as_dict=True)[0]
+
+def get_quantities(opr_name):
+    return frappe.db.sql("""
+        SELECT 
+            SUM(straight_sqm) AS total_straight_sqm,
+            SUM(fitting_sqm) AS total_fittings_sqm,
+            SUM(straight_no) AS total_straight_nos,
+            SUM(fitting_no)  AS total_fittings_nos
+        FROM `tabQuantities Table`
+        WHERE parent = %s
+    """, opr_name, as_dict=True)[0]
+
+def get_production(opr_name):
+    return frappe.db.sql("""
+        SELECT 
+            SUM(sqm) AS total_sqm_produced,
+            SUM(nos) AS total_nos_produced
+        FROM `tabProduction Schedule`
+        WHERE parent = %s
+    """, opr_name, as_dict=True)[0]
 
