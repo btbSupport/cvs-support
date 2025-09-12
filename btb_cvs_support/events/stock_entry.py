@@ -1,5 +1,5 @@
 import frappe
-from btb_cvs_support.api.opr import update_opr
+from ..api.opr import update_opr
 
 def after_upsert(doc, method = None):
     print('Stock Entry Test')
