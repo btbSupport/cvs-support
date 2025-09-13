@@ -3,14 +3,14 @@ from ..api.site_info import *
 @frappe.whitelist()
 def before_upsert(doc, method = None):
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
-    sql = f"""
- SELECT ci.item_code,ci.stock_uom,tbci.title,tbci.idx
-from tabBtbCartItem tbci  
-join `tabItem` ci on tbci.name = '{doc.custom_cart_item}' and ci.name = tbci.item
-    """
+#     sql = f"""
+#  SELECT ci.item_code,ci.stock_uom,tbci.title,tbci.idx
+# from tabBtbCartItem tbci  
+# join `tabItem` ci on tbci.name = '{doc.custom_cart_item}' and ci.name = tbci.item
+#     """
    
-    if(doc.custom_configurable == 1):
-        sql = f"""
+    # if(doc.custom_configurable == 1):
+    sql = f"""
             select a.title,a.idx,a.ciItemCode,
     GROUP_CONCAT(CASE WHEN field = 'modelItem' THEN item_code END) AS item_code,
     GROUP_CONCAT(CASE WHEN field = 'modelItem' THEN stock_uom END) AS stock_uom,
@@ -26,7 +26,7 @@ join `tabItem` ci on tbci.name = '{doc.custom_cart_item}' and ci.name = tbci.ite
     left join `tabItem` i on i.name = tbfti.`object`
     left join `tabItem` ci on ci.name = tbci.item) a 
         """
-        print("calling quote line item sync sql",sql)
+    print("calling quote line item sync sql",sql)
 
     items = frappe.db.sql(sql, as_dict=1)
     if len(items) > 0 :
