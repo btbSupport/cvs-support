@@ -20,7 +20,7 @@ def before_upsert(doc, method = None):
                 from tabBtbCartItem tbci  
                 join `tabItem` ci on tbci.name = '{doc.custom_cart_item}' and ci.name = tbci.item) 
             cartItem
-                join  (select i.item_code,i.stock_uom,tbf.field,tbcif.value cifValue,tbfti.value,tbcif.parent from tabBtbCartItemFeature tbcif  
+             left join  (select i.item_code,i.stock_uom,tbf.field,tbcif.value cifValue,tbfti.value,tbcif.parent from tabBtbCartItemFeature tbcif  
                 join tabBtbFeature tbf  on  tbcif.parent  = '{doc.custom_cart_item}' and tbf.name = tbcif.feature  and tbf.field in('modelItem','tagRef','notes','notesInput')
                 left join tabBtbFeatureTypeItem tbfti on  tbfti.name = tbcif.value
                 left join `tabItem` i on i.name = tbfti.`object`) 
