@@ -191,7 +191,7 @@ def populate_header_values( features, header_map):
     output = []
     for label, field in header_map.items():
         val = str(populate_value(features, field))
-        if(val == '' or val == None or val == 'None'): val='N/A'
+        if(val == '' or val == None or val == 'None' or val == 'N/A - N/A'): val='N/A'
         output.append({"label": label, "value": val})
     return output
 
@@ -223,7 +223,7 @@ def populate_value( features, formula: str) -> Union[str, Decimal]:
             if(formula =='linkTemperature' and 'storOrDtorOption' in features) :
                 if(features['storOrDtorOption']['value']=='NA') : return 'N/A'
             if(formula =='transitionThickness' and 'transition' in features) :
-                if(features['transition']['value']=='NA') : return 'N/A'
+                if(features['transition']['value']=='NA' or features['transition']['value']=='' or features['transition']['value']==None) : return 'N/A'
             if(formula =='bladeThicknessForQuotePrint' and 'bladeType' in features) :
                 if(features['bladeType']['value']!='AF' or ('bladeThicknessForQuotePrint' in features and features['bladeThicknessForQuotePrint']['value'] == '')) :
                    return populateThickness(features['bladeThicknessLookup']['value'])
