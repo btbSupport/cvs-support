@@ -50,10 +50,11 @@ def get_quote_details( quote_name: str,currency : str) -> Dict:
     if(item['total_taxes_and_charges'] ==0 and item['additional_discount_percentage'] ==0): item["displayTotal"]=0
     if(item["docstatus"] != 1): item["water_mark"]="DRAFT"
     item["in_words"] = money_in_words(item['grand_total'], currency)
-    if("address_display" in item and item["address_display"] != None) : item["address_display"] = '<span style="font-family:Arial,Helvetica Neue,sans-serif;font-size: 12px !important;">'+item['address_display']+"</span>"
+    if("address_display" in item and item["address_display"] != None) : item["address_display"] = '<div style="font-family:Arial,Helvetica Neue,sans-serif;font-size: 12px !important;">'+item['address_display']+"</div>"
     if("contact_display" in item and item["contact_display"] != None) : contact_details = item["contact_display"]
     if("contact_designation" in item and item["contact_designation"] != None) : contact_details  = contact_details +", "+item['contact_designation']
-    if(contact_details!="") : item["contact_display"] = '<span style="font-family:Arial,Helvetica Neue,sans-serif;font-size: 12px !important;">'+contact_details+"</span>"
+    if("contact_mobile" in item and item["contact_mobile"] != None) : contact_details  = contact_details +", "+item['contact_mobile']
+    if(contact_details!="") : item["contact_display"] = '<div style="font-family:Arial,Helvetica Neue,sans-serif;font-size: 12px !important;">'+contact_details+"</div>"
     item["grand_total"]=f"{(item['grand_total']):,.2f}"
     item["total_taxes_and_charges"]=f"{item['total_taxes_and_charges']:,.2f}"
     item["net_total"]=f"{item['net_total']:,.2f}"
