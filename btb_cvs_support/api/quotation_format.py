@@ -29,7 +29,8 @@ def provide( quote_name: str):
     "qt": get_quote_details(quote_name,compInfo["currency"])
     }
     # print("result -", output)
-    file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_"+output["ci"]["companyInfo"]["code"]+".docx"
+    code = output["ci"]["companyInfo"]["code"]
+    file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_"+code.lower()+".docx"
     # file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_eg.docx"
 
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
