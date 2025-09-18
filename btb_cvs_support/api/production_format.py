@@ -226,10 +226,20 @@ def getValue( features, key):
             if('leakageClass' in features and features['leakageClass']['value']=='Class I')  :
                 val = val*2
             return val
+    if(key =='actuatorBrandVCD' and 'actuatorBrand' in features ) : return getActuatorDetail(features,features['actuatorBrand']['value'])
+    if(key =='auxSwitchVCD' and 'auxSwitch' in features ) : return getActuatorDetail(features,features['auxSwitch']['value'])
+    if(key =='powerSupplyVCD' and 'powerSupply' in features ) : return getActuatorDetail(features,features['powerSupply']['value'])
+    if(key =='actuatorAuxSwitchVCD' and 'actuatorAuxSwitch' in features ) : return getActuatorDetail(features,features['actuatorAuxSwitch']['value'])
+    if(key =='actuatorPowerSupplyVCD' and 'actuatorPowerSupply' in features ) : return getActuatorDetail(features,features['actuatorPowerSupply']['value'])
     if key in features:
         return features[key]['value']
     return '-'
-
+def getActuatorDetail(features,val):
+     if('damperOperator' in features and features['damperOperator']['value'] == 'Motorized')  :
+         return val
+     if('operator' in features and features['operator']['value'] == 'Motorized')  :
+         return val
+     return '-'
 def populateProductMap(models):
     output = {}
     for cartModel in models:
