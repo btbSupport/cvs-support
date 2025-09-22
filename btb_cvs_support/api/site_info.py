@@ -12,14 +12,17 @@ def get_site_config():
         return site_config
     except FileNotFoundError:
         print(f"Error: Site config file not found at {site_config_path}")
+        frappe.log(f"Error: Site config file not found at {site_config_path}")
         return None
     except json.JSONDecodeError:
         print(f"Error: Invalid JSON in {site_config_path}")
+        frappe.log(f"Error: Invalid JSON in {site_config_path}")
         return None
     
 @frappe.whitelist()
 def get_config(confName:str):
     site_config = get_site_config()
+    frappe.log(site_config)
     if(confName in site_config) : 
         return site_config.get(confName)
     return None

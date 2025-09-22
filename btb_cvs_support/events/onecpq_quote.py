@@ -100,6 +100,8 @@ def on_cancel_quote(doc = None, method = None):
 
 @frappe.whitelist()
 def before_save_quote(doc = None, method = None):
+    frappe.log('get_config allow_cpq before save quote' )
+    frappe.log(get_config('allow_cpq'))
     print('get_config allow_cpq before save quote',get_config('allow_cpq') )
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     beforequote = getQuoteById(doc.name)
