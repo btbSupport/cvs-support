@@ -3,8 +3,8 @@ import json
 from frappe.utils import get_site_name
 
 def get_site_config():
-    frappe.log(f"Error: frappe.local.request.header in {frappe.local.site}")
-    site_name = get_site_name(frappe.local.request.header)
+    # frappe.log(f"Error: frappe.local.request.header in {frappe.local.site}")
+    site_name = frappe.local.site
     print(f"site_name {site_name}")
     site_config_path = "../sites/"+site_name+"/site_config.json"
     try:
