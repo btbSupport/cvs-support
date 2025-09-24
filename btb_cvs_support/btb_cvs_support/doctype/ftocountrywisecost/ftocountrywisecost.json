@@ -22,9 +22,9 @@
  "fields": [
   {
    "fieldname": "unit",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "label": "Unit",
-   "options": "Kg\nEa\nNos\nMinutes\nCurrency\n%\nm\nTube\nsqm\nmm"
+   "options": "UOM"
   },
   {
    "fieldname": "cost",
@@ -78,7 +78,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-08-04 14:40:49.508960",
+ "modified": "2025-09-24 08:10:10.613842",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCountryWiseCost",

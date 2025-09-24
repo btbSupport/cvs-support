@@ -8,8 +8,9 @@
  "engine": "InnoDB",
  "field_order": [
   "model_no",
-  "unique_id",
+  "custom_unique_id",
   "product_family",
+  "product_family_description",
   "flow",
   "frameoil_width",
   "frame_thickness",
@@ -205,14 +206,20 @@
    "label": "Model No"
   },
   {
-   "fieldname": "unique_id",
+   "fetch_from": "product_family.label",
+   "fieldname": "product_family_description",
+   "fieldtype": "Data",
+   "label": "Product Family Description"
+  },
+  {
+   "fieldname": "custom_unique_id",
    "fieldtype": "Data",
    "label": "Unique Id"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-08-08 11:30:17.424084",
+ "modified": "2025-09-13 09:30:17.626674",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCVSUnique",
