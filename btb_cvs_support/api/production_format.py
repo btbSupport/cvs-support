@@ -33,7 +33,7 @@ def populate_cart_detail( quote_name:str):
     file_url = '/private/files/'+file_name
     file_path = frappe.utils.get_bench_path()+'/sites/'+frappe.utils.get_site_base_path()[2:]+file_url
 
-    frappe.log('file_path : '+file_path)
+    # frappe.log('file_path : '+file_path)
     with pd.ExcelWriter(file_path) as writer:
         for subCat, features in models.items():
             productCode = subCategoryMap.get(subCat)

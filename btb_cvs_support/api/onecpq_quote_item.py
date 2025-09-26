@@ -7,7 +7,7 @@ from .btb_quotation import *
 def get_quotation_items(quote_name: str,currency:str,visibleFields:str):
     print('quote_name : ',quote_name)
     print('quote_name currency : ',currency)
-    frappe.log(visibleFields)
+    # frappe.log(visibleFields)
     items = get_synced_items(quote_name)
     count = 1
     headers=json.loads(visibleFields)
