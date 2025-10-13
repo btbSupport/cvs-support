@@ -4,6 +4,7 @@ from typing import Dict, List
 import pandas as pd
 from erpnext.controllers.taxes_and_totals import calculate_taxes_and_totals
 from decimal import Decimal
+from onecpq_connect.api.functions import bulk_insert_with_children
 fti_cache ={}
 
 def populate_cart_item_model( quote_name):
@@ -167,31 +168,75 @@ def get_cart_items( quote_name: str) :
     items = frappe.db.sql(sql, as_dict=1)
     return items
 
+# @frappe.whitelist()
+# def amendCPQ(quote_name: str,amended_from: str):
+#     print('inside amendCPQ',quote_name)
+#     print('inside amendCPQ amended_from',amended_from)
+#     cart_name = create_cart(quote_name)
+#     cartItems = get_synced_items(amended_from)
+#     print('inside amendCPQ cartItems',cartItems)
+#     # clonedItems=[]
+#     seq = 1
+#     for item in cartItems:
+#         cartItem = frappe.frappe.get_doc("BtbCartItem", item.ciName)
+#         cartItem.name = None
+#         cartItem.cart = cart_name
+#         cartItem.idx = seq
+#         seq +=1
+#         ciLinks =[]
+#         for cil in cartItem.cart_item_links:
+#             cil.entity = quote_name
+#             ciLinks.append(cil)
+#         cartItem.cart_item_links = ciLinks
+#         # cartItem.cart_item_links =[]
+#         cartItem.save()
+#     quot = frappe.frappe.get_doc("Quotation", quote_name)
+#     quot.custom_cpq_amended = 1
+#     quot.db_update()
+
 @frappe.whitelist()
 def amendCPQ(quote_name: str,amended_from: str):
     print('inside amendCPQ',quote_name)
     print('inside amendCPQ amended_from',amended_from)
     cart_name = create_cart(quote_name)
-    cartItems = get_synced_items(amended_from)
-    print('inside amendCPQ cartItems',cartItems)
-    # clonedItems=[]
+    syncedItems = get_synced_items(amended_from)
+    print('inside amendCPQ cartItems',syncedItems)
+    cartItems = []
     seq = 1
-    for item in cartItems:
-        cartItem = frappe.frappe.get_doc("BtbCartItem", item.ciName)
-        cartItem.name = None
-        cartItem.cart = cart_name
-        cartItem.idx = seq
+    quoteItemMap = {}
+    for item in syncedItems:
+        ci = frappe.get_doc("BtbCartItem", item.ciName)
+        # ci.name = None
+        quoteItemMap[item.ciName] = frappe.frappe.get_doc("Quotation Item",item.name)
+        ci.cart = cart_name
+        ci.idx = seq
         seq +=1
         ciLinks =[]
-        for cil in cartItem.cart_item_links:
+        for cil in ci.cart_item_links:
             cil.entity = quote_name
             ciLinks.append(cil)
-        cartItem.cart_item_links = ciLinks
-        # cartItem.cart_item_links =[]
-        cartItem.save()
+        ci.cart_item_links = ciLinks
+        cartItems.append(ci)
+    items = bulk_insert_with_children("BtbCartItem",cartItems)
+    qliId = 1
     quot = frappe.frappe.get_doc("Quotation", quote_name)
+    quoteItems = []
+    for key in list(items['parents'].keys()):
+        quoteItem = quoteItemMap[key]
+        quoteItem.custom_cart_item = items['parents'][key]
+        quoteItem.idx = qliId
+        quoteItem.name = None
+        quoteItem.parent = quote_name
+        qliId +=1
+        quoteItem.db_update()
+        # quoteItems.append(quoteItem)
     quot.custom_cpq_amended = 1
+    # quot.items = quoteItems
+    # calculate_taxes_and_totals(quot)
     quot.db_update()
+    print('inside amendCPQ amended')
+    return 'Cart Amended'
+
 
 def create_cart(quote_name: str):
     cartLink = frappe.new_doc("BtbCartLink")

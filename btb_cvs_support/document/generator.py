@@ -16,7 +16,7 @@ def generate(template_path:str, datasource: dict, **kwargs):
         "outputFormat": kwargs.get("format", ""),
         "settings":json.dumps(
             {
-                "addDigitalSignature":True,
+                "addDigitalSignature":kwargs.get("addDigitalSignature", False),
                 "showPlaceholder":False,
                 # "userPassword":"Chiranjeevi@1",
                 "ownerPassword":"admin@2025"

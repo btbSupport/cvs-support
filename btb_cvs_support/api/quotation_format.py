@@ -34,7 +34,7 @@ def provide( quote_name: str):
     # file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_eg.docx"
 
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
-    generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf")
+    generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf",addDigitalSignature=True)
     # generate(file_path, output, format="original",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".docx")
     return output
     # return 'Success'
@@ -151,6 +151,7 @@ def populate_cart_detail(models) -> Dict[str, 'ProductRootNode']:
         root_key = f"{product_code}-{sub_category}"
         if(product_code =='VCDR' and 'operator' in cart_model and cart_model['operator']['value'] == 'Motorized' ) : product_key = product_key+'-ACT'
         if(product_code =='VCDA' and 'damperOperator' in cart_model and cart_model['damperOperator']['value'] == 'Motorized' ) : product_key = product_key+'-ACT'
+        if(product_code =='ULRD' and 'damperOperator' in cart_model and cart_model['damperOperator']['value'] != 'Quadrant' ) : product_key = product_key+'-ACT'
 
         if root_key not in keys:
             prefix = get_prefix(str(len(keys)))
@@ -216,6 +217,7 @@ def populate_summary( features, keys, summ: Dict) -> Dict:
     return summ
 def populate_value( features, formula: str) -> Union[str, Decimal]:
     thicknessFields=['sleeveThickness','frameThickness','bladeThickness','doorThickness','transitionThickness','perfThickness','casingThickness','frameThicknessLookup','bladeThicknessLookup']
+    actuatorFields=['actuatorBrand','actuatorPower','auxSwitch','actuatorMounting']
     if not formula.startswith("CONCAT"):
             # print('formula :',formula)
             if(formula =='specification' and 'productCategory' in features) :
@@ -234,6 +236,8 @@ def populate_value( features, formula: str) -> Union[str, Decimal]:
                    return populateThickness(features['frameThickness']['value'])
             if(formula in thicknessFields and formula in features) :
                 return populateThickness(features[formula]['value'])
+            if(formula in actuatorFields and 'actuatorBrand' in features and (features['actuatorBrand']['value'] == 'NA' or features['actuatorBrand']['value'] == '' or features['actuatorBrand']['value'] == None)) :
+                return 'N/A'
                 # res = Decimal(str(features[formula]['value']))
                 # if(res !=0 and res != '' and res != None) : return  f"{res:,.2f}"+' mm'
                 # else :'NA'

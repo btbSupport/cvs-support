@@ -34,7 +34,7 @@ def provide( quote_name: str):
     file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/boq.docx"
     print("output : ",output)
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
-    generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="BOQ_"+quote_name+".pdf")
+    generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="BOQ_"+quote_name+".pdf",addDigitalSignature=False)
     return 'Success'
 
 def get_quote_details( quote_name: str) -> Dict:

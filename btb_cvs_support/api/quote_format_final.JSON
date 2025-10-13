@@ -52,6 +52,25 @@
       "summary": "rate,cartAmount,cartQty,beforeDiscount"
     },
     "ULRD": {
+      "headerKey": "subcategory,modelDescription,transitionType,frameThicknessLookup,bladeThicknessLookup,rating,retainingPlate,leakageClass,fuseLinkOptions,linkTemperature,bladeSwitchPackage,junctionBox,mtsOption",
+      "header": {
+        "Frame Thickness": "frameThicknessLookup",
+        "Blade Thickness":"bladeThicknessLookup",
+        "Mounting & Rating":"CONCAT(string V-,rating)",
+        "Transition": "transitionType",
+        "Leakage Class":"leakageClass",
+        "Heat Response":"CONCAT(fuseLinkOptions,string -,linkTemperature)",
+        "Retaining Plate":"retainingPlate",
+        "Smoke Detector":"CONCAT(string No)",
+        "Blade Switch":"bladeSwitchPackage",
+        "Ext. Junction Box":"junctionBox",
+        "MTS Option":"mtsOption",
+        "":"CONCAT(string )"
+      },
+      "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
+      "summary": "rate,cartAmount,cartQty,beforeDiscount"
+    },
+    "ULRD-ACT": {
       "headerKey": "subcategory,modelDescription,transitionType,frameThicknessLookup,bladeThicknessLookup,rating,retainingPlate,leakageClass,fuseLinkOptions,actuatorBrand,linkTemperature,actuatorPower,auxSwitch,actuatorMounting,bladeSwitchPackage,junctionBox,mtsOption",
       "header": {
         "Frame Thickness": "frameThicknessLookup",
