@@ -5,20 +5,27 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "discount_settings_section",
   "quotation_discount_limit"
  ],
  "fields": [
   {
+   "default": "32",
    "fieldname": "quotation_discount_limit",
    "fieldtype": "Float",
    "label": "Quotation Discount Limit"
+  },
+  {
+   "fieldname": "discount_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Discount Settings"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-10-29 12:14:47.389756",
+ "modified": "2025-10-29 12:48:06.054960",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "cvsSettings",
