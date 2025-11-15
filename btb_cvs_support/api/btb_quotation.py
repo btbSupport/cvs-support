@@ -124,7 +124,8 @@ def applyDiscount( quote_name: str,discount:float):
     for item in cartItems:
         item = frappe.frappe.get_doc("BtbCartItem", item.name)
         item.discount = discount
-        item.save()
+        item.db_update()
+    sync_all(quote_name)
     # items = get_synced_items(quote_name)
     # doc = frappe.frappe.get_doc("Quotation", quote_name)
     # doc.save()
@@ -242,9 +243,76 @@ def create_cart(quote_name: str):
     cartLink = frappe.new_doc("BtbCartLink")
     cartLink.entity_type = "Quotation"
     cartLink.entity = quote_name
-
     cart = frappe.new_doc("BtbCart")
     cart.append('cart_links', cartLink)
     cart.insert()
     return cart.name
-    
+
+@frappe.whitelist()
+def sync_all(quote_name, method = None):
+    cartsql = f"""select cart from tabBtbCartLink tbcl where entity ='{quote_name}'"""
+    cart = frappe.db.sql(cartsql, as_dict=1)[0].cart
+    sql = f""" select tbc.name 
+    from tabBtbCartItem tbc where tbc.cart = '{cart}' and tbc.name not in (
+    select parent from tabBtbCartItemLink tbcil where entity = '{quote_name}'
+    )"""
+    qitems = []
+    for item in frappe.db.sql(sql, as_dict=1): 
+        ci = populate_cart_item_links(quote_name, item)
+        ci.db_insert()
+    cartItems = get_all_cart_items(quote_name)
+    for item in cartItems: 
+        quoteItem = frappe.frappe.new_doc("Quotation Item")
+        quoteItem = populate_quotation_item(quoteItem, ci, quote_name)
+        qitems.append(quoteItem)
+    quote = frappe.frappe.get_doc("Quotation", quote_name)
+    quote.items = qitems
+    calculate_taxes_and_totals(quote)
+    quote.save()
+
+def get_all_cart_items(name:str):
+	sql = f"""
+		select ci.name, item, price_list, list_price, unit_price, quantity, discount,
+			i.item_name, i.item_code,sequence,i.stock_uom,ci.idx,i.description
+		from `tabBtbCartItem` ci
+		join `tabItem` i on ci.item = i.name
+		where ci.name = '{name}'
+	"""
+	print("Trying to fetch cart item", sql)
+	return frappe.db.sql(sql, as_dict=1)
+
+def populate_cart_item_links(quote_name:str,item:any):
+    ci = frappe.frappe.new_doc("BtbCartItemLink")
+    ci.entity = quote_name
+    ci.entity_type = "Quotation"
+    ci.parent = item.name
+    ci.parenttype = "BtbCartItem"
+    ci.parentfield = "cart_item_links"
+    return ci
+
+def populate_quotation_item(doc, cartItem, quoteId):
+	sql = f"""
+		select conversion_rate  from `tabQuotation` tqi where name ='{quoteId}'
+	"""
+	print("Trying to fetch quotation", sql)
+	qt= frappe.db.sql(sql, as_dict=1)[0]
+	doc.parenttype = 'Quotation'
+	doc.parent = quoteId
+	doc.parentfield= "items"
+	doc.uom = cartItem.stock_uom
+	doc.conversion_factor = 1
+	doc.item_code = cartItem.item
+	doc.item_name = cartItem.item_name
+	doc.qty = cartItem.quantity
+	doc.base_price_list_rate = cartItem.list_price
+	doc.price_list_rate = cartItem.list_price / qt.conversion_rate
+	doc.base_rate = cartItem.unit_price -  (cartItem.discount * cartItem.unit_price/100)
+	doc.rate = doc.base_rate / qt.conversion_rate
+	doc.base_amount = cartItem.quantity * doc.base_rate
+	doc.amount = doc.base_amount / qt.conversion_rate
+	doc.idx = cartItem.idx
+	doc.description = cartItem.description
+	# doc.discount_percentage = cartItem.discount
+	# doc.discount_amount = cartItem.discount * cartItem.unit_price
+	doc.custom_cart_item = cartItem.name
+	return doc

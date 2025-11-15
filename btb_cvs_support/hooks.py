@@ -179,7 +179,7 @@ doc_events = {
     },
     "BtbCartItem": {
         "before_save": "btb_cvs_support.events.onecpq_quote.before_save_cart",
-        "on_update": "btb_cvs_support.events.onecpq_quote.proceed_cart_item_link"
+        # "on_update": "btb_cvs_support.events.onecpq_quote.proceed_cart_item_link"
     }
 }
 # Scheduled Tasks
