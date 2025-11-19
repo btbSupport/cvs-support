@@ -100,8 +100,10 @@ def get_featuretype_items( tabName:str, data_text_field:str, values: List[str],f
 @frappe.whitelist()
 def get_synced_cart_items(quote_name: str):
     sql = f"""
-        select tbci.*  from `tabBtbCartItemLink` tqi 
-        join tabBtbCartItem tbci on tbci.name=tqi.parent  where tqi.entity ='{quote_name}'
+        select tbci.*,i.item_name, i.item_code,sequence,i.stock_uom,i.description  from `tabBtbCartItemLink` tqi 
+        join tabBtbCartItem tbci on tbci.name=tqi.parent  
+		join `tabItem` i on ci.item = i.name
+        where tqi.entity ='{quote_name}'
 order by tbci.idx
     """
     items = frappe.db.sql(sql, as_dict=1)
