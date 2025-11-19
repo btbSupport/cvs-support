@@ -6,11 +6,14 @@
  "engine": "InnoDB",
  "field_order": [
   "discount_settings_section",
-  "quotation_discount_limit"
+  "quotation_discount_limit",
+  "cart_minimum_discount",
+  "cart_maximum_discount",
+  "cart_item_minimum_discount",
+  "cart_item_maximum_discount"
  ],
  "fields": [
   {
-   "default": "32",
    "fieldname": "quotation_discount_limit",
    "fieldtype": "Float",
    "label": "Quotation Discount Limit"
@@ -19,13 +22,37 @@
    "fieldname": "discount_settings_section",
    "fieldtype": "Section Break",
    "label": "Discount Settings"
+  },
+  {
+   "default": "-100",
+   "fieldname": "cart_minimum_discount",
+   "fieldtype": "Float",
+   "label": "Cart Minimum Discount"
+  },
+  {
+   "default": "40",
+   "fieldname": "cart_maximum_discount",
+   "fieldtype": "Float",
+   "label": "Cart Maximum Discount"
+  },
+  {
+   "default": "-100",
+   "fieldname": "cart_item_minimum_discount",
+   "fieldtype": "Float",
+   "label": "Cart Item Minimum Discount"
+  },
+  {
+   "default": "40",
+   "fieldname": "cart_item_maximum_discount",
+   "fieldtype": "Float",
+   "label": "Cart Item Maximum Discount"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-10-29 12:48:06.054960",
+ "modified": "2025-11-19 17:16:05.302655",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "cvsSettings",
