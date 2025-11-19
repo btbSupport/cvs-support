@@ -5,5 +5,5 @@
 from frappe.tests.utils import FrappeTestCase
 
 
-class Testcvssettings(FrappeTestCase):
+class TestCvsSettings(FrappeTestCase):
 	pass

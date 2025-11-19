@@ -38,7 +38,7 @@ def before_save_cart(doc, method = None):
     print('get_config allow_cpq before_save_cart',get_config('allow_cpq') )
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
 
-    settings = frappe.get_doc("cvsSettings")
+    settings = frappe.get_doc("Cvs Settings")
     min_discount_limit = settings.get("cart_item_minimum_discount")
     max_discount_limit = settings.get("cart_item_maximum_discount")
     if(doc.discount != None and (doc.discount < min_discount_limit or doc.discount > max_discount_limit)):frappe.throw('Discount % not in the approved limit.')
@@ -165,7 +165,7 @@ def before_save_quote(doc = None, method = None):
     doc.custom_discount = totalLineDiscountPercentage
     doc.custom_total_discount_amount = totalDiscount
     doc.custom_total_discount = totalDiscountPercenatge
-    settings = frappe.get_doc("cvsSettings")
+    settings = frappe.get_doc("Cvs Settings")
     discount_limit = settings.get("quotation_discount_limit")
     if(doc.custom_total_discount>discount_limit):frappe.throw('Total Discount % exceeds the approved limit.')
     print('doc after calc - items : ',doc.items)

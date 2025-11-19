@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-10-29 12:13:01.158997",
+ "creation": "2025-11-19 18:36:13.812380",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -14,17 +14,18 @@
  ],
  "fields": [
   {
-   "fieldname": "quotation_discount_limit",
-   "fieldtype": "Float",
-   "label": "Quotation Discount Limit"
-  },
-  {
    "fieldname": "discount_settings_section",
    "fieldtype": "Section Break",
    "label": "Discount Settings"
   },
   {
-   "default": "-100",
+   "default": "32",
+   "fieldname": "quotation_discount_limit",
+   "fieldtype": "Float",
+   "label": "Quotation Discount Limit "
+  },
+  {
+   "default": "0",
    "fieldname": "cart_minimum_discount",
    "fieldtype": "Float",
    "label": "Cart Minimum Discount"
@@ -42,7 +43,7 @@
    "label": "Cart Item Minimum Discount"
   },
   {
-   "default": "40",
+   "default": "32",
    "fieldname": "cart_item_maximum_discount",
    "fieldtype": "Float",
    "label": "Cart Item Maximum Discount"
@@ -52,10 +53,10 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-11-19 17:16:05.302655",
+ "modified": "2025-11-19 18:39:35.669076",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
- "name": "cvsSettings",
+ "name": "Cvs Settings",
  "owner": "Administrator",
  "permissions": [
   {

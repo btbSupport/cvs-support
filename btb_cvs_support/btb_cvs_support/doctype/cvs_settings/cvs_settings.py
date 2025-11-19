@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class cvssettings(Document):
+class CvsSettings(Document):
 	pass
