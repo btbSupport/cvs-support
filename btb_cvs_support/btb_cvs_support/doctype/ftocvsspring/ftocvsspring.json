@@ -8,25 +8,13 @@
  "engine": "InnoDB",
  "field_order": [
   "item_code",
-  "column_break_kwcd",
   "spring_force",
-  "column_break_dura",
-  "width",
-  "column_break_hluz",
   "length",
+  "width",
   "cost_info",
-  "cost",
-  "column_break_ucpw",
-  "rounded_cost",
-  "column_break_jaci",
-  "gbp_unit_cost"
+  "cost"
  ],
  "fields": [
-  {
-   "fieldname": "gbp_unit_cost",
-   "fieldtype": "Float",
-   "label": "GBP Unit Cost"
-  },
   {
    "fieldname": "length",
    "fieldtype": "Float",
@@ -48,45 +36,20 @@
    "label": "Cost"
   },
   {
-   "fieldname": "column_break_kwcd",
-   "fieldtype": "Column Break"
-  },
-  {
    "depends_on": "eval:frappe.user_roles.includes( \"OneCPQ Admin\")",
    "fieldname": "cost_info",
    "fieldtype": "Section Break",
    "label": "Cost Info"
   },
   {
-   "fieldname": "column_break_ucpw",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_jaci",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "item_code",
    "fieldtype": "Data",
    "label": "Item Code"
-  },
-  {
-   "fieldname": "rounded_cost",
-   "fieldtype": "Float",
-   "label": "Rounded Cost"
-  },
-  {
-   "fieldname": "column_break_dura",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "column_break_hluz",
-   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-08-04 14:32:08.015666",
+ "modified": "2025-10-10 16:30:17.589172",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCVSSpring",

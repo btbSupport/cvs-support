@@ -7,17 +7,19 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "product_name",
-  "column_break_fktp",
   "item_code",
-  "section_break_hfzw",
+  "product_name",
   "product_family",
+  "section_break_hfzw",
+  "column_break_fktp",
+  "unit",
+  "cost_info",
+  "cost",
   "column_break_ttfq",
   "category",
   "column_break_flkn",
-  "unit",
-  "cost_info",
-  "cost"
+  "custom_cost_type",
+  "custom_country"
  ],
  "fields": [
   {
@@ -49,9 +51,8 @@
   },
   {
    "fieldname": "category",
-   "fieldtype": "Select",
-   "label": "Category",
-   "options": "Flange\nAngle\nPerforated Sheet - Baffle\nSlit Addition\nRivets\nCorners\nFire Rated Corners\nSprings\nActuator\nFrame Accessories\nBlade Assembly"
+   "fieldtype": "Data",
+   "label": "Category"
   },
   {
    "fieldname": "column_break_ttfq",
@@ -74,11 +75,23 @@
   {
    "fieldname": "column_break_flkn",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "custom_cost_type",
+   "fieldtype": "Select",
+   "label": "Cost Type",
+   "options": "Country Specific\n% of UAE"
+  },
+  {
+   "fieldname": "custom_country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-09-24 08:10:10.613842",
+ "modified": "2025-11-11 13:27:56.438616",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCountryWiseCost",
