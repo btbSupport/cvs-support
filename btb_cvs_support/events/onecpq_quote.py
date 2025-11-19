@@ -131,7 +131,7 @@ def before_save_quote(doc = None, method = None):
             if(doc.custom_cart_discount ==0):
                 doc.discount_amount = 0
     doc.items = []
-    syncItems = get_synced_items(doc.name)
+    syncItems = get_synced_cart_items(doc.name)
     items = get_items(doc.name)
     # frappe.log('doc before calc - items : ')
     # frappe.log(items)
@@ -148,12 +148,18 @@ def before_save_quote(doc = None, method = None):
     qliId = 1
     if(doc.custom_customizable == 1):
         for item in syncItems: 
-            totalUnitPrice += (item.ciQty * item.unit_price)
-            totalLineDiscount +=  (item.ciQty * ((item.unit_price) * item.ciDiscount/100))
-            qli = frappe.frappe.get_doc("Quotation Item", item.name)
-            qli.idx = qliId
+            totalUnitPrice += (item.quantity * item.unit_price)
+            totalLineDiscount +=  (item.quantity * ((item.unit_price) * item.discount/100))
+            quoteItem = frappe.frappe.new_doc("Quotation Item")
+            quoteItem = populate_quotation_item(quoteItem, item, doc)
+            quoteItem.idx = qliId
             qliId +=1
-            doc.items.append(qli)
+            # quoteItem.db_insert()
+            doc.items.append(quoteItem)
+            # qli = frappe.frappe.get_doc("Quotation Item", item.name)
+            # qli.idx = qliId
+            # qliId +=1
+            # doc.items.append(qli)
     calculate_taxes_and_totals(doc)
     if(beforequote.docstatus != 0 and  doc.custom_customizable ==1 and
        (beforequote.total_qty != doc.total_qty or beforequote.base_total != doc.base_total)):frappe.throw('You can only update on Draft status.')

@@ -98,6 +98,16 @@ def get_featuretype_items( tabName:str, data_text_field:str, values: List[str],f
         fti_cache[fti] = i[data_text_field]
 
 @frappe.whitelist()
+def get_synced_cart_items(quote_name: str):
+    sql = f"""
+        select tbci.*  from `tabBtbCartItemLink` tqi 
+        join tabBtbCartItem tbci on tbci.name=tqi.parent  where tqi.entity ='{quote_name}'
+order by tbci.idx
+    """
+    items = frappe.db.sql(sql, as_dict=1)
+    return items
+
+@frappe.whitelist()
 def get_synced_items(quote_name: str):
     sql = f"""
         select tqi.*,tbci.idx,tbci.unit_price,tbci.discount ciDiscount,tbci.quantity ciQty,tbci.name ciName  from `tabQuotation Item` tqi 
@@ -256,18 +266,23 @@ def sync_all(quote_name, method = None):
     from tabBtbCartItem tbc where tbc.cart = '{cart}' and tbc.name not in (
     select parent from tabBtbCartItemLink tbcil where entity = '{quote_name}'
     )"""
-    qitems = []
+    # qitems = []
+    # sql = f"""
+	# 	select name,conversion_rate  from `tabQuotation` tqi where name ='{quote_name}'
+	# """
+    # qt= frappe.db.sql(sql, as_dict=1)[0]
     for item in frappe.db.sql(sql, as_dict=1): 
         ci = populate_cart_item_links(quote_name, item)
         ci.db_insert()
-    cartItems = get_all_cart_items(quote_name)
-    for item in cartItems: 
-        quoteItem = frappe.frappe.new_doc("Quotation Item")
-        quoteItem = populate_quotation_item(quoteItem, ci, quote_name)
-        qitems.append(quoteItem)
+    # cartItems = get_all_cart_items(cart)
+    # for item in cartItems: 
+    #     quoteItem = frappe.frappe.new_doc("Quotation Item")
+    #     quoteItem = populate_quotation_item(quoteItem, ci, qt)
+    #     quoteItem.db_insert()
+    #     qitems.append(quoteItem)
     quote = frappe.frappe.get_doc("Quotation", quote_name)
-    quote.items = qitems
-    calculate_taxes_and_totals(quote)
+    # quote.items = qitems
+    # calculate_taxes_and_totals(quote)
     quote.save()
 
 def get_all_cart_items(name:str):
@@ -276,7 +291,7 @@ def get_all_cart_items(name:str):
 			i.item_name, i.item_code,sequence,i.stock_uom,ci.idx,i.description
 		from `tabBtbCartItem` ci
 		join `tabItem` i on ci.item = i.name
-		where ci.name = '{name}'
+		where ci.cart = '{name}'
 	"""
 	print("Trying to fetch cart item", sql)
 	return frappe.db.sql(sql, as_dict=1)
@@ -290,14 +305,10 @@ def populate_cart_item_links(quote_name:str,item:any):
     ci.parentfield = "cart_item_links"
     return ci
 
-def populate_quotation_item(doc, cartItem, quoteId):
-	sql = f"""
-		select conversion_rate  from `tabQuotation` tqi where name ='{quoteId}'
-	"""
-	print("Trying to fetch quotation", sql)
-	qt= frappe.db.sql(sql, as_dict=1)[0]
+def populate_quotation_item(doc, cartItem, qt):
+	
 	doc.parenttype = 'Quotation'
-	doc.parent = quoteId
+	doc.parent = qt.name
 	doc.parentfield= "items"
 	doc.uom = cartItem.stock_uom
 	doc.conversion_factor = 1
