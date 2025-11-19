@@ -250,8 +250,8 @@ def create_cart(quote_name: str):
 
 @frappe.whitelist()
 def sync_all(quote_name, method = None):
-    cartsql = f"""select cart from tabBtbCartLink tbcl where entity ='{quote_name}'"""
-    cart = frappe.db.sql(cartsql, as_dict=1)[0].cart
+    cartsql = f"""select parent from tabBtbCartLink tbcl where entity ='{quote_name}'"""
+    cart = frappe.db.sql(cartsql, as_dict=1)[0].parent
     sql = f""" select tbc.name 
     from tabBtbCartItem tbc where tbc.cart = '{cart}' and tbc.name not in (
     select parent from tabBtbCartItemLink tbcil where entity = '{quote_name}'
