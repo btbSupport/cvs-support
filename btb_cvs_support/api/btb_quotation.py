@@ -8,7 +8,7 @@ from onecpq_connect.api.functions import bulk_insert_with_children
 fti_cache ={}
 
 def populate_cart_item_model( quote_name):
-    syncedItems = get_synced_cart_items(quote_name)
+    syncedItems = get_items(quote_name)
     if(len(syncedItems)==0): return None
     cartItems = get_grouped_items(syncedItems)
     populate_featuretype_items(cartItems)
@@ -19,7 +19,7 @@ def get_grouped_items(items):
     res = df.groupby(["name","Unit_Price","discount","Sequence","Quantity","Title","itemName","item_code"], group_keys=False)
     return res
 @frappe.whitelist()
-def get_synced_cart_items( quote_name: str) -> List[Dict[str, any]]:
+def get_items( quote_name: str) -> List[Dict[str, any]]:
     sql = f""" select tbc.name,tbc.Unit_Price,tbc.discount , tbc.Sequence, tbc.Quantity, tbc.Title,
         i.Name itemName, i.item_code, tbf.Field, tbf.label ,
         tbcif.value cif_value,tbfti.value fti_value,tbfti.`object` obj_value,tbft.object_type obj_type,tbft.data_text_field 
@@ -265,7 +265,7 @@ def sync_all(quote_name, method = None):
     cartsql = f"""select parent from tabBtbCartLink tbcl where entity ='{quote_name}'"""
     cart = frappe.db.sql(cartsql, as_dict=1)[0].parent
     sql = f""" select tbc.name 
-    from tabBtbCartItem tbc where tbc.cart = '{cart}' and tbc.name not in (
+    from tabBtbCartItem tbc where tbc.valid = 1 and tbc.cart = '{cart}' and tbc.name not in (
     select parent from tabBtbCartItemLink tbcil where entity = '{quote_name}'
     )"""
     # qitems = []

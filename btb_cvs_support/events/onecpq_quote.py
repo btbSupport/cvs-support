@@ -176,32 +176,32 @@ def before_save_quote(doc = None, method = None):
     if(doc.custom_total_discount>discount_limit):frappe.throw('Total Discount % exceeds the approved limit.')
     print('doc after calc - items : ',doc.items)
 
-@frappe.whitelist()
-def amendCPQ(doc = None, method = None):
-    quote_name = doc.name
-    cloned_from = doc.amended_from
-    if(cloned_from == None):cloned_from = doc.custom_created_from
-    print('inside amendCPQ',quote_name)
-    print('inside amendCPQ amended_from',cloned_from)
-    if(cloned_from == None or doc.custom_customizable ==0 or doc.custom_cpq_amended!=0): return
-    cart_name = create_cart(quote_name)
-    cartItems = get_synced_items(cloned_from)
-    print('inside amendCPQ cartItems',cartItems)
-    # clonedItems=[]
-    for item in cartItems:
-        cartItem = frappe.frappe.get_doc("BtbCartItem", item.ciName)
-        cartItem.name = None
-        cartItem.cart = cart_name
-        ciLinks =[]
-        for cil in cartItem.cart_item_links:
-            cil.entity = quote_name
-            ciLinks.append(cil)
-        cartItem.cart_item_links = ciLinks
-        # cartItem.cart_item_links =[]
-        cartItem.save()
-    quot = frappe.frappe.get_doc("Quotation", quote_name)
-    quot.custom_cpq_amended = 1
-    quot.db_update()
+# @frappe.whitelist()
+# def amendCPQ(doc = None, method = None):
+#     quote_name = doc.name
+#     cloned_from = doc.amended_from
+#     if(cloned_from == None):cloned_from = doc.custom_created_from
+#     print('inside amendCPQ',quote_name)
+#     print('inside amendCPQ amended_from',cloned_from)
+#     if(cloned_from == None or doc.custom_customizable ==0 or doc.custom_cpq_amended!=0): return
+#     cart_name = create_cart(quote_name)
+#     cartItems = get_synced_items(cloned_from)
+#     print('inside amendCPQ cartItems',cartItems)
+#     # clonedItems=[]
+#     for item in cartItems:
+#         cartItem = frappe.frappe.get_doc("BtbCartItem", item.ciName)
+#         cartItem.name = None
+#         cartItem.cart = cart_name
+#         ciLinks =[]
+#         for cil in cartItem.cart_item_links:
+#             cil.entity = quote_name
+#             ciLinks.append(cil)
+#         cartItem.cart_item_links = ciLinks
+#         # cartItem.cart_item_links =[]
+#         cartItem.save()
+#     quot = frappe.frappe.get_doc("Quotation", quote_name)
+#     quot.custom_cpq_amended = 1
+#     quot.db_update()
 
 def create_cart(quote_name: str):
     cartLink = frappe.new_doc("BtbCartLink")
