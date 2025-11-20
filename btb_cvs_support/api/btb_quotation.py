@@ -246,6 +246,9 @@ def amendCPQ(quote_name: str,amended_from: str):
     quot.custom_cpq_amended = 1
     # quot.items = quoteItems
     # calculate_taxes_and_totals(quot)
+    attachments = frappe.get_all("File", filters={"attached_to_doctype": "Quotation", "attached_to_name": quote_name})
+    for file in attachments:
+        frappe.delete_doc("File", file.name, force=1)
     quot.db_update()
     print('inside amendCPQ amended')
     return 'Cart Amended'
