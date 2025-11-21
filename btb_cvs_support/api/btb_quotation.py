@@ -100,14 +100,46 @@ def get_featuretype_items( tabName:str, data_text_field:str, values: List[str],f
 @frappe.whitelist()
 def get_synced_cart_items(quote_name: str):
     sql = f"""
-        select tbci.*,i.item_name, i.item_code,sequence,i.stock_uom,i.description  from `tabBtbCartItemLink` tqi 
-        join tabBtbCartItem tbci on tbci.name=tqi.parent  
-		join `tabItem` i on tbci.item = i.name
-        where tqi.entity ='{quote_name}'
-order by tbci.idx
+        select cartItem.*,
+GROUP_CONCAT(CASE WHEN field = 'modelItem' THEN item_code END) AS model_item_code,
+GROUP_CONCAT(CASE WHEN field = 'modelItem' THEN stock_uom END) AS model_stock_uom,
+GROUP_CONCAT(CASE WHEN field = 'tagRef' THEN cifValue END) AS tagRef,
+GROUP_CONCAT(CASE WHEN field = 'notes' THEN cifValue END) AS notes ,
+GROUP_CONCAT(CASE WHEN field = 'notesInput' THEN cifValue END) AS notesInput from  
+
+    (SELECT i.item_code ciItemCode,i.stock_uom ciStockUom,ci.*
+    from `tabBtbCartItemLink` cil 
+        join tabBtbCartItem ci on ci.name=cil.parent 
+         and  cil.entity ='{quote_name}'
+    join `tabItem` i on i.name = ci.item) 
+    
+cartItem
+
+ left join  (select i.item_code,i.stock_uom,tbf.field,tbcif.value cifValue,tbfti.value,tbcif.parent from tabBtbCartItemFeature tbcif  
+    join tabBtbFeature tbf  on   tbf.name = tbcif.feature  and tbf.field in('modelItem','tagRef','notes','notesInput')
+    left join tabBtbFeatureTypeItem tbfti on  tbfti.name = tbcif.value
+    left join `tabItem` i on i.name = tbfti.`object`) 
+    
+config 
+
+on cartItem.name = config.parent
+group by cartItem.name
+
     """
     items = frappe.db.sql(sql, as_dict=1)
     return items
+    
+# @frappe.whitelist()
+# def get_synced_cart_items(quote_name: str):
+#     sql = f"""
+#         select tbci.*,i.item_name, i.item_code,sequence,i.stock_uom,i.description  from `tabBtbCartItemLink` tqi 
+#         join tabBtbCartItem tbci on tbci.name=tqi.parent  
+# 		join `tabItem` i on tbci.item = i.name
+#         where tqi.entity ='{quote_name}'
+# order by tbci.idx
+#     """
+#     items = frappe.db.sql(sql, as_dict=1)
+#     return items
 
 @frappe.whitelist()
 def get_synced_items(quote_name: str):
@@ -311,24 +343,29 @@ def populate_cart_item_links(quote_name:str,item:any):
     return ci
 
 def populate_quotation_item(doc, cartItem, qt):
-	
-	doc.parenttype = 'Quotation'
-	doc.parent = qt.name
-	doc.parentfield= "items"
-	doc.uom = cartItem.stock_uom
-	doc.conversion_factor = 1
-	doc.item_code = cartItem.item
-	doc.item_name = cartItem.item_name
-	doc.qty = cartItem.quantity
-	doc.base_price_list_rate = cartItem.list_price
-	doc.price_list_rate = cartItem.list_price / qt.conversion_rate
-	doc.base_rate = cartItem.unit_price -  (cartItem.discount * cartItem.unit_price/100)
-	doc.rate = doc.base_rate / qt.conversion_rate
-	doc.base_amount = cartItem.quantity * doc.base_rate
-	doc.amount = doc.base_amount / qt.conversion_rate
-	doc.idx = cartItem.idx
-	doc.description = cartItem.description
-	# doc.discount_percentage = cartItem.discount
-	# doc.discount_amount = cartItem.discount * cartItem.unit_price
-	doc.custom_cart_item = cartItem.name
-	return doc
+    doc.parenttype = 'Quotation'
+    doc.parent = qt.name
+    doc.parentfield= "items"
+    doc.uom = cartItem.stock_uom
+    doc.conversion_factor = 1
+    doc.item_code = cartItem.item
+    doc.item_name = cartItem.item_name
+    doc.qty = cartItem.quantity
+    doc.base_price_list_rate = cartItem.list_price
+    doc.price_list_rate = cartItem.list_price / qt.conversion_rate
+    doc.base_rate = cartItem.unit_price -  (cartItem.discount * cartItem.unit_price/100)
+    doc.rate = doc.base_rate / qt.conversion_rate
+    doc.base_amount = cartItem.quantity * doc.base_rate
+    doc.amount = doc.base_amount / qt.conversion_rate
+    doc.idx = cartItem.idx
+    doc.description = cartItem.title
+    doc.custom_cart_item = cartItem.name
+    if(cartItem.custom_configurable == 1):
+        if(cartItem.model_item_code):doc.item_code = cartItem.model_item_code
+        if(cartItem.model_stock_uom):doc.uom = cartItem.model_stock_uom
+        if('tagRef' in cartItem) : doc.tag_ref = cartItem.tagRef
+        if('item' in cartItem):
+            if(cartItem.item == 'ULRD' or cartItem.item == 'SIL' or cartItem.item == 'VCDA'): 
+                if('notesInput' in cartItem) : doc.notes = cartItem.notesInput
+        elif('notes' in cartItem) : doc.notes = cartItem.notes
+    return doc
