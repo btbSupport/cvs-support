@@ -271,6 +271,7 @@ def amendCPQ(quote_name: str,amended_from: str):
         quoteItem.custom_cart_item = items['parents'][key]
         quoteItem.idx = qliId
         quoteItem.name = None
+        quoteItem.docstatus = 0
         quoteItem.parent = quote_name
         qliId +=1
         quoteItem.db_update()

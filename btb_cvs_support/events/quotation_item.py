@@ -2,7 +2,7 @@ import frappe
 from ..api.site_info import *
 @frappe.whitelist()
 def before_upsert(doc, method = None):
-    if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
+    if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0 or doc.custom_cart_item == None): return
 #     sql = f"""
 #  SELECT ci.item_code,ci.stock_uom,tbci.title,tbci.idx
 # from tabBtbCartItem tbci  
