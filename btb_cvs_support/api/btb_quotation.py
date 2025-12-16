@@ -43,7 +43,8 @@ def populate_featuretype_items( cartItems):
             if(row.obj_type != None):
                 key = str(row.obj_type)+'-'+str(row.data_text_field)+'-'+str(row.cif_value)
                 if( key not in ftis.keys()):ftis[key] = []
-                if( row.obj_value not in fti_cache.keys()):ftis[key].append(row.obj_value)
+                if( row.obj_value not in fti_cache.keys()):
+                    if(row.obj_value not in ftis[key]) : ftis[key].append(row.obj_value)
         for key in ftis.keys():
             # print("check ",key)
             if(key == None): continue
@@ -89,11 +90,13 @@ def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
         output.append(item)
     return output  
 def get_featuretype_items( tabName:str, data_text_field:str, values: List[str],fti:str):
+    placeholders = ", ".join(["%s"] * len(values))
     sql = f"""
-    select * from `tab{tabName}` where name in {'',''.join(values)}
+    select * from `tab{tabName}` where name IN  ({placeholders})
     """
     # frappe.log(sql)
-    result = frappe.db.sql(sql, as_dict=1)
+    # result = frappe.db.sql(sql, as_dict=1)
+    result = frappe.db.sql(sql, tuple(values), as_dict=True)
     for i in result:
         fti_cache[fti] = i[data_text_field]
 
@@ -243,6 +246,9 @@ def get_cart_items( quote_name: str) :
 def amendCPQ(quote_name: str,amended_from: str):
     print('inside amendCPQ',quote_name)
     print('inside amendCPQ amended_from',amended_from)
+    # cartsql = f"""select parent from tabBtbCartLink tbcl where entity ='{quote_name}'"""
+    # cartDetail = frappe.db.sql(cartsql, as_dict=1)
+    # if(len(cartDetail) > 0 ): return
     cart_name = create_cart(quote_name)
     syncedItems = get_synced_items(amended_from)
     print('inside amendCPQ cartItems',syncedItems)
