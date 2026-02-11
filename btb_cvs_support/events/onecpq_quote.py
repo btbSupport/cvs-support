@@ -118,7 +118,7 @@ def before_save_quote(doc = None, method = None):
     settings = frappe.get_doc("Cvs Settings")
     cart_minimum_discount = settings.get("cart_minimum_discount")
     cart_maximum_discount = settings.get("cart_maximum_discount")
-    if(doc.custom_cart_discount != None and (doc.custom_cart_discount < cart_minimum_discount or doc.custom_cart_discount > cart_maximum_discount)):frappe.throw('Can Apply "Quote Discount" between '+cart_minimum_discount+' to '+cart_maximum_discount)
+    if(doc.custom_cart_discount != None and (doc.custom_cart_discount < cart_minimum_discount or doc.custom_cart_discount > cart_maximum_discount)):frappe.throw('Can Apply "Quote Discount" between '+str(cart_minimum_discount)+' to '+str(cart_maximum_discount))
     if(beforequote.docstatus != doc.docstatus and doc.custom_customizable ==1) : lock_cart(doc.name,doc.docstatus)
     print('doc beforequote.docstatus : ',beforequote.docstatus)
     print('doc doc.docstatus : ',doc.docstatus)
