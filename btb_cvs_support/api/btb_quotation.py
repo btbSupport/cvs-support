@@ -259,17 +259,27 @@ def amendCPQ(quote_name: str,amended_from: str):
     print('inside amendCPQ cartItems',syncedItems)
     cartItems = []
     seq = 1
+    current_user = frappe.session.user
+    current_time = frappe.utils.now()
     quoteItemMap = {}
     for item in syncedItems:
         ci = frappe.get_doc("BtbCartItem", item.ciName)
         # ci.name = None
         quoteItemMap[item.ciName] = frappe.frappe.get_doc("Quotation Item",item.name)
+        ci.creation = current_time
+        ci.modified = current_time
+        ci.owner = current_user
+        ci.modified_by = current_user
         ci.cart = cart_name
         ci.idx = seq
-        seq +=1
+        seq = seq+1
         ciLinks =[]
         for cil in ci.cart_item_links:
             cil.entity = quote_name
+            cil.creation = current_time
+            cil.modified = current_time
+            cil.owner = current_user
+            cil.modified_by = current_user
             ciLinks.append(cil)
         ci.cart_item_links = ciLinks
         cartItems.append(ci)
@@ -299,6 +309,9 @@ def amendCPQ(quote_name: str,amended_from: str):
 
 
 def create_cart(quote_name: str):
+    cartsql = f"""select parent from tabBtbCartLink tbcl where entity ='{quote_name}'"""
+    avl_cart = frappe.db.sql(cartsql, as_dict=1)
+    if(len(avl_cart)>0):return avl_cart[0].parent
     cartLink = frappe.new_doc("BtbCartLink")
     cartLink.entity_type = "Quotation"
     cartLink.entity = quote_name
