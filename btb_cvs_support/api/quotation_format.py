@@ -24,7 +24,7 @@ def provide( quote_name: str):
     if(models == None): return None
     compInfo = get_company_info()
     output = {"ci": {
-        "cartItem": populate_cart_detail(models,qt_detail),
+        "cartItem": populate_cart_detail(models),
         "companyInfo": compInfo
     },
     "qt": qt_detail
