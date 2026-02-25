@@ -23,9 +23,10 @@ class ProductNode:
 
 @frappe.whitelist()
 def populate_cart_detail( quote_name:str):
-    ciModels = populate_cart_item_model(quote_name)
-    if(ciModels == None): return None
     qt = getQuoteById(quote_name)
+    ciModels = populate_cart_item_model(quote_name,qt["conversion_rate"])
+    if(ciModels == None): return None
+    
     output = {}
     productFamilyMap = populate_product_family_map()
     models = populateProductMap(ciModels)

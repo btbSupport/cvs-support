@@ -28,22 +28,23 @@ def get_quotation_items(quote_name: str,currency:str,visibleFields:str):
     return frappe.frappe.render_template("btb_cvs_support/api/onecpq_quote_item.html", {"items": items,"currency":currency,"headers":headers})
 
 @frappe.whitelist()
-def get_quotation_onecpq_total(quote_name: str,currency:str):
+def get_quotation_onecpq_total(quote_name: str):
     print('quote_name : ',quote_name)
-    print('quote_name currency : ',currency)
+    # print('quote_name currency : ',currency)
     quote = getQuoteById(quote_name)
     if(quote != None): 
-        discAmt = quote.custom_list_amount - quote.total
-        quote.discountAmount = f"{discAmt:,.2f}"
+        discAmt = quote.custom_list_amount - (quote.total * quote.conversion_rate)
+        quote.discountAmount = f"{discAmt:,.2f}" 
         quote.custom_list_amount = f"{quote.custom_list_amount:,.2f}"
         quote.custom_discount = f"{quote.custom_discount:,.2f}"
-        quote.total = f"{quote.total:,.2f}"
+        quote.total = f"{quote.total * quote.conversion_rate:,.2f}"
         quote.additional_discount_percentage = f"{quote.additional_discount_percentage:,.2f}"
-        quote.discount_amount = f"{quote.discount_amount:,.2f}"
-        quote.net_total = f"{quote.net_total:,.2f}"
+        quote.discount_amount = f"{quote.discount_amount * quote.conversion_rate:,.2f}"
+        quote.net_total = f"{quote.net_total * quote.conversion_rate:,.2f}"
         quote.custom_total_discount = f"{quote.custom_total_discount:,.2f}"
         quote.custom_total_discount_amount = f"{quote.custom_total_discount_amount:,.2f}"
-        return frappe.frappe.render_template("btb_cvs_support/api/onecpq_quote_total.html", {"cpqTotal": quote,"currency":currency})
+        # quote.currency = quote.price_list_currency
+        return frappe.frappe.render_template("btb_cvs_support/api/onecpq_quote_total.html", {"cpqTotal": quote,"currency":quote.price_list_currency})
     return None
 
 # @frappe.whitelist()

@@ -25,7 +25,7 @@ class ProductNode:
 
 @frappe.whitelist()
 def provide( quote_name: str):
-    ciModels = populate_cart_item_model(quote_name)
+    ciModels = populate_cart_item_model(quote_name,1)
     if(ciModels == None): return None
     output = {
         "ci": populate_cart_detail(ciModels),

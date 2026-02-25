@@ -7,8 +7,8 @@ from decimal import Decimal
 from onecpq_connect.api.functions import bulk_insert_with_children
 fti_cache ={}
 
-def populate_cart_item_model( quote_name):
-    syncedItems = get_items(quote_name)
+def populate_cart_item_model( quote_name,conversion_rate):
+    syncedItems = get_items(quote_name,conversion_rate)
     if(len(syncedItems)==0): return None
     cartItems = get_grouped_items(syncedItems)
     populate_featuretype_items(cartItems)
@@ -19,8 +19,8 @@ def get_grouped_items(items):
     res = df.groupby(["name","Unit_Price","discount","Sequence","Quantity","Title","itemName","item_code"], group_keys=False)
     return res
 @frappe.whitelist()
-def get_items( quote_name: str) -> List[Dict[str, any]]:
-    sql = f""" select tbc.name,tbc.Unit_Price,tbc.discount , tbc.Sequence, tbc.Quantity, tbc.Title,
+def get_items( quote_name: str,conversion_rate:float) -> List[Dict[str, any]]:
+    sql = f""" select tbc.name,tbc.Unit_Price / {conversion_rate} AS Unit_Price,tbc.discount , tbc.Sequence, tbc.Quantity, tbc.Title,
         i.Name itemName, i.item_code, tbf.Field, tbf.label ,
         tbcif.value cif_value,tbfti.value fti_value,tbfti.`object` obj_value,tbft.object_type obj_type,tbft.data_text_field 
     from tabBtbCartItem tbc

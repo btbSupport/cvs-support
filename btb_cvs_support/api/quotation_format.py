@@ -19,14 +19,15 @@ fti_cache ={}
 
 @frappe.whitelist()
 def provide( quote_name: str):
-    models = populate_cart_item_model(quote_name)
+    qt_detail = get_quote_details(quote_name)
+    models = populate_cart_item_model(quote_name,qt_detail["conversion_rate"])
     if(models == None): return None
     compInfo = get_company_info()
     output = {"ci": {
-        "cartItem": populate_cart_detail(models),
+        "cartItem": populate_cart_detail(models,qt_detail),
         "companyInfo": compInfo
     },
-    "qt": get_quote_details(quote_name,compInfo["currency"])
+    "qt": qt_detail
     }
     # print("result -", output)
     code = output["ci"]["companyInfo"]["code"]
@@ -39,9 +40,9 @@ def provide( quote_name: str):
     return output
     # return 'Success'
 
-def get_quote_details( quote_name: str,currency : str) -> Dict:
+def get_quote_details( quote_name: str) -> Dict:
     from frappe.utils import money_in_words
-    sql = f""" select docstatus,customer_name,address_display,in_words,contact_display,contact_designation,contact_mobile,contact_email,subject,project,name,terms,quotation_term_details,letter_details,standard_tc_details,grand_total,total_taxes_and_charges,net_total,discount_amount,additional_discount_percentage,total  from `tabQuotation` tqi where name ='{quote_name}'
+    sql = f""" select currency,conversion_rate,docstatus,customer_name,address_display,in_words,contact_display,contact_designation,contact_mobile,contact_email,subject,project,name,terms,quotation_term_details,letter_details,standard_tc_details,grand_total,total_taxes_and_charges,net_total,discount_amount,additional_discount_percentage,total  from `tabQuotation` tqi where name ='{quote_name}'
     """
     items = frappe.db.sql(sql, as_dict=1)
     item = items[0]
@@ -50,7 +51,7 @@ def get_quote_details( quote_name: str,currency : str) -> Dict:
     contact_details = ""
     if(item['total_taxes_and_charges'] ==0 and item['additional_discount_percentage'] ==0): item["displayTotal"]=0
     if(item["docstatus"] != 1): item["water_mark"]="DRAFT"
-    item["in_words"] = money_in_words(item['grand_total'], currency)
+    item["in_words"] = money_in_words(item['grand_total'], item['currency'])
     if("address_display" in item and item["address_display"] != None) : item["address_display"] = '<div style="font-family:Arial,Helvetica Neue,sans-serif;font-size: 12px !important;">'+item['address_display']+"</div>"
     if("contact_display" in item and item["contact_display"] != None) : contact_details = item["contact_display"]
     if("contact_designation" in item and item["contact_designation"] != None) : contact_details  = contact_details +", "+item['contact_designation']
