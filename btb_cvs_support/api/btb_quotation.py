@@ -392,3 +392,14 @@ def populate_quotation_item(doc, cartItem, qt):
                 if('notesInput' in cartItem) : doc.notes = cartItem.notesInput
         elif('notes' in cartItem) : doc.notes = cartItem.notes
     return doc
+
+@frappe.whitelist()
+def get_linked_carts_for_quotation(quotation):
+    carts = frappe.db.sql("""
+        SELECT DISTINCT parent
+        FROM `tabBtbCartLink`
+        WHERE entity = %s
+        AND entity_type = 'Quotation'
+    """, quotation, as_dict=True)
+
+    return carts
