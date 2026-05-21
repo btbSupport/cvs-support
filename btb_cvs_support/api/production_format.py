@@ -128,7 +128,8 @@ def populateValue( features, formula):
             elif formula.startswith('SUB('):
                 result -= val
             elif formula.startswith('DIV('):
-                result /= val
+                if(val != 0):
+                    result /= val
     print("formula result: ",result)
     return result
 
