@@ -235,6 +235,8 @@ def getValue( features, key):
     if(key =='actuatorPowerSupplyVCD' and 'actuatorPowerSupply' in features ) : return getActuatorDetail(features,features['actuatorPowerSupply']['value'])
     if key in features:
         return features[key]['value']
+    if(key.isnumeric()):
+        return float(key)
     return '-'
 def getActuatorDetail(features,val):
      if('damperOperator' in features and features['damperOperator']['value'] == 'Motorized')  :
