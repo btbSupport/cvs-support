@@ -15677,7 +15677,7 @@
             {
               "logic": "MUL",
               "fields": [
-                "totalBladeWeight4",
+                "totalBladeWeight5",
                 "cartQty"
               ]
             }
@@ -15716,7 +15716,7 @@
             {
               "logic": "MUL",
               "fields": [
-                "totalBladeWeight5",
+                "totalBladeWeight6",
                 "cartQty"
               ]
             }
@@ -15755,7 +15755,7 @@
             {
               "logic": "MUL",
               "fields": [
-                "totalBladeWeight6",
+                "totalBladeWeight7",
                 "cartQty"
               ]
             }
