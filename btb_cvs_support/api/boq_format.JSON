@@ -13658,6 +13658,45 @@
       }
     },
     {
+      "itemCode": "SS304L Blade 3V5\" 2.0 X 153",
+      "description": "SS304L Blade 3V5\" 2.0 X 153",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "2.00"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight5",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS304L Blade 3V6\" 1.5 X 178",
       "description": "SS304L Blade 3V6\" 1.5 X 178",
       "uom": "kg",
@@ -14298,6 +14337,45 @@
               "field": "bladeThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight5",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Blade 3V5\" 2.0 X 153",
+      "description": "SS316L Blade 3V5\" 2.0 X 153",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "2.00"
             },
             {
               "field": "bladeType",
