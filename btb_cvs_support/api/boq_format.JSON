@@ -4155,6 +4155,45 @@
       }
     },
     {
+      "itemCode": "GI Frame 1.6 X 159",
+      "description": "GI Frame 1.6 X 159",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "159"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "GI Frame 2.0 X 159",
       "description": "GI Frame 2.0 X 159",
       "uom": "Kg",
@@ -4210,6 +4249,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "165"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Frame 1.6 X 165",
+      "description": "GI Frame 1.6 X 165",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "frameSlitSize",
@@ -4467,6 +4545,45 @@
       }
     },
     {
+      "itemCode": "GI Frame 1.6 X 200",
+      "description": "GI Frame 1.6 X 200",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "200"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "GI Frame 2.0 X 200",
       "description": "GI Frame 2.0 X 200",
       "uom": "Kg",
@@ -4584,6 +4701,45 @@
       }
     },
     {
+      "itemCode": "GI Frame 1.6 X 225",
+      "description": "GI Frame 1.6 X 225",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "225"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "GI Frame 2.0 X 225",
       "description": "GI Frame 2.0 X 225",
       "uom": "Kg",
@@ -4678,6 +4834,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "245"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Frame 1.6 X 245",
+      "description": "GI Frame 1.6 X 245",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "frameSlitSize",
@@ -4896,6 +5091,45 @@
       }
     },
     {
+      "itemCode": "GI Frame 1.6 X 243",
+      "description": "GI Frame 1.6 X 243",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "243"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "GI Frame 1.5 X 260",
       "description": "GI Frame 1.5 X 260",
       "uom": "Kg",
@@ -4912,6 +5146,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "260"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Frame 1.6 X 260",
+      "description": "GI Frame 1.6 X 260",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "frameSlitSize",
@@ -5052,6 +5325,45 @@
       }
     },
     {
+      "itemCode": "GI Frame 1.6 X 265",
+      "description": "GI Frame 1.6 X 265",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "265"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "GI Frame 2.0 X 265",
       "description": "GI Frame 2.0 X 265",
       "uom": "Kg",
@@ -5169,6 +5481,45 @@
       }
     },
     {
+      "itemCode": "GI Frame 1.6 X 280",
+      "description": "GI Frame 1.6 X 280",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "280"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "GI Frame 2.0 X 280",
       "description": "GI Frame 2.0 X 280",
       "uom": "Kg",
@@ -5263,6 +5614,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "300"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Frame 1.6 X 300",
+      "description": "GI Frame 1.6 X 300",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "frameSlitSize",
@@ -5754,6 +6144,45 @@
       }
     },
     {
+      "itemCode": "SS304L Frame 1.6 X 165",
+      "description": "SS304L Frame 1.6 X 165",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "165"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS304L Frame 2.0 X 165",
       "description": "SS304L Frame 2.0 X 165",
       "uom": "Kg",
@@ -5770,6 +6199,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "165"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 3.0 X 165",
+      "description": "SS304L Frame 3.0 X 165",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -5871,6 +6339,45 @@
       }
     },
     {
+      "itemCode": "SS304L Frame 1.6 X 225",
+      "description": "SS304L Frame 1.6 X 225",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "225"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS304L Frame 2.0 X 225",
       "description": "SS304L Frame 2.0 X 225",
       "uom": "Kg",
@@ -5887,6 +6394,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "225"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 3.0 X 225",
+      "description": "SS304L Frame 3.0 X 225",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -5988,6 +6534,45 @@
       }
     },
     {
+      "itemCode": "SS304L Frame 1.6 X 200",
+      "description": "SS304L Frame 1.6 X 200",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "200"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS304L Frame 2.0 X 200",
       "description": "SS304L Frame 2.0 X 200",
       "uom": "Kg",
@@ -6004,6 +6589,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "200"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 3.0 X 200",
+      "description": "SS304L Frame 3.0 X 200",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -6082,6 +6706,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "245"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 1.6 X 245",
+      "description": "SS304L Frame 1.6 X 245",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "frameSlitSize",
@@ -6222,6 +6885,45 @@
       }
     },
     {
+      "itemCode": "SS304L Frame 1.6 X 260",
+      "description": "SS304L Frame 1.6 X 260",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "260"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS304L Frame 2.0 X 260",
       "description": "SS304L Frame 2.0 X 260",
       "uom": "Kg",
@@ -6238,6 +6940,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "260"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 3.0 X 260",
+      "description": "SS304L Frame 3.0 X 260",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -6339,6 +7080,45 @@
       }
     },
     {
+      "itemCode": "SS304L Frame 1.6 X 265",
+      "description": "SS304L Frame 1.6 X 265",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "265"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS304L Frame 2.0 X 265",
       "description": "SS304L Frame 2.0 X 265",
       "uom": "Kg",
@@ -6355,6 +7135,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "265"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 3.0 X 265",
+      "description": "SS304L Frame 3.0 X 265",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -6456,6 +7275,45 @@
       }
     },
     {
+      "itemCode": "SS304L Frame 1.6 X 280",
+      "description": "SS304L Frame 1.6 X 280",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "280"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS304L Frame 2.0 X 280",
       "description": "SS304L Frame 2.0 X 280",
       "uom": "Kg",
@@ -6472,6 +7330,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "280"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 3.0 X 280",
+      "description": "SS304L Frame 3.0 X 280",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -6573,6 +7470,45 @@
       }
     },
     {
+      "itemCode": "SS304L Frame 1.6 X 300",
+      "description": "SS304L Frame 1.6 X 300",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "300"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS304L Frame 2.0 X 300",
       "description": "SS304L Frame 2.0 X 300",
       "uom": "Kg",
@@ -6589,6 +7525,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "300"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 3.0 X 300",
+      "description": "SS304L Frame 3.0 X 300",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -7002,6 +7977,45 @@
       }
     },
     {
+      "itemCode": "SS316L Frame 1.6 X 165",
+      "description": "SS316L Frame 1.6 X 165",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "165"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS316L Frame 2.0 X 165",
       "description": "SS316L Frame 2.0 X 165",
       "uom": "Kg",
@@ -7018,6 +8032,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "165"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 3.0 X 165",
+      "description": "SS316L Frame 3.0 X 165",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -7119,6 +8172,45 @@
       }
     },
     {
+      "itemCode": "SS316L Frame 1.6 X 225",
+      "description": "SS316L Frame 1.6 X 225",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "225"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS316L Frame 2.0 X 225",
       "description": "SS316L Frame 2.0 X 225",
       "uom": "Kg",
@@ -7135,6 +8227,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "225"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 3.0 X 225",
+      "description": "SS316L Frame 3.0 X 225",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -7236,6 +8367,45 @@
       }
     },
     {
+      "itemCode": "SS316L Frame 1.6 X 200",
+      "description": "SS316L Frame 1.6 X 200",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "200"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS316L Frame 2.0 X 200",
       "description": "SS316L Frame 2.0 X 200",
       "uom": "Kg",
@@ -7252,6 +8422,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "200"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 3.0 X 200",
+      "description": "SS316L Frame 3.0 X 200",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -7353,6 +8562,45 @@
       }
     },
     {
+      "itemCode": "SS316L Frame 1.6 X 245",
+      "description": "SS316L Frame 1.6 X 245",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "245"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS316L Frame 2.0 X 245",
       "description": "SS316L Frame 2.0 X 245",
       "uom": "Kg",
@@ -7369,6 +8617,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "245"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 3.0 X 245",
+      "description": "SS316L Frame 3.0 X 245",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -7470,6 +8757,45 @@
       }
     },
     {
+      "itemCode": "SS316L Frame 1.6 X 260",
+      "description": "SS316L Frame 1.6 X 260",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "260"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS316L Frame 2.0 X 260",
       "description": "SS316L Frame 2.0 X 260",
       "uom": "Kg",
@@ -7486,6 +8812,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "260"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 3.0 X 260",
+      "description": "SS316L Frame 3.0 X 260",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -7587,6 +8952,45 @@
       }
     },
     {
+      "itemCode": "SS316L Frame 1.6 X 265",
+      "description": "SS316L Frame 1.6 X 265",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "265"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS316L Frame 2.0 X 265",
       "description": "SS316L Frame 2.0 X 265",
       "uom": "Kg",
@@ -7603,6 +9007,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "265"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 3.0 X 265",
+      "description": "SS316L Frame 3.0 X 265",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -7704,6 +9147,45 @@
       }
     },
     {
+      "itemCode": "SS316L Frame 1.6 X 280",
+      "description": "SS316L Frame 1.6 X 280",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "280"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS316L Frame 2.0 X 280",
       "description": "SS316L Frame 2.0 X 280",
       "uom": "Kg",
@@ -7720,6 +9202,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "280"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 3.0 X 280",
+      "description": "SS316L Frame 3.0 X 280",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -7821,6 +9342,45 @@
       }
     },
     {
+      "itemCode": "SS316L Frame 1.6 X 300",
+      "description": "SS316L Frame 1.6 X 300",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "300"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS316L Frame 2.0 X 300",
       "description": "SS316L Frame 2.0 X 300",
       "uom": "Kg",
@@ -7837,6 +9397,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "300"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 3.0 X 300",
+      "description": "SS316L Frame 3.0 X 300",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -7899,6 +9498,201 @@
       }
     },
     {
+      "itemCode": "MS Frame 1.4 X 243",
+      "description": "MS Frame 1.4 X 243",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.40"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "243"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 1.6 X 243",
+      "description": "MS Frame 1.6 X 243",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "243"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 2.0 X 243",
+      "description": "MS Frame 2.0 X 243",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "243"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 3.0 X 243",
+      "description": "MS Frame 3.0 X 243",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "243"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 1.4 X 165",
+      "description": "MS Frame 1.4 X 165",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.40"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "165"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "MS Frame 1.5 X 165",
       "description": "MS Frame 1.5 X 165",
       "uom": "Kg",
@@ -7920,6 +9714,84 @@
               "field": "frameSlitSize",
               "operator": "eq",
               "value": "165"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 1.6 X 165",
+      "description": "MS Frame 1.6 X 165",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "165"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 1.4 X 200",
+      "description": "MS Frame 1.4 X 200",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.40"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "200"
             }
           ]
         },
@@ -7977,6 +9849,84 @@
       }
     },
     {
+      "itemCode": "MS Frame 1.6 X 200",
+      "description": "MS Frame 1.6 X 200",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "200"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 1.4 X 225",
+      "description": "MS Frame 1.4 X 225",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.40"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "225"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "MS Frame 1.5 X 225",
       "description": "MS Frame 1.5 X 225",
       "uom": "Kg",
@@ -7993,6 +9943,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "225"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 1.6 X 225",
+      "description": "MS Frame 1.6 X 225",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "frameSlitSize",
@@ -8094,6 +10083,123 @@
       }
     },
     {
+      "itemCode": "MS Frame 1.4 X 260",
+      "description": "MS Frame 1.4 X 260",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.40"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "260"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 1.6 X 260",
+      "description": "MS Frame 1.6 X 260",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "260"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 3.0 X 260",
+      "description": "MS Frame 3.0 X 260",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "260"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "MS Frame 1.5 X 265",
       "description": "MS Frame 1.5 X 265",
       "uom": "Kg",
@@ -8110,6 +10216,84 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "265"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 1.4 X 265",
+      "description": "MS Frame 1.4 X 265",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.40"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "265"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 1.6 X 265",
+      "description": "MS Frame 1.6 X 265",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "frameSlitSize",
@@ -8172,6 +10356,84 @@
       }
     },
     {
+      "itemCode": "MS Frame 1.4 X 280",
+      "description": "MS Frame 1.4 X 280",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.40"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "280"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 1.6 X 280",
+      "description": "MS Frame 1.6 X 280",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "280"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "MS Frame 1.5 X 300",
       "description": "MS Frame 1.5 X 300",
       "uom": "Kg",
@@ -8188,6 +10450,84 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "300"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 1.4 X 300",
+      "description": "MS Frame 1.4 X 300",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.40"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "300"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 1.6 X 300",
+      "description": "MS Frame 1.6 X 300",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "frameSlitSize",
@@ -8250,6 +10590,45 @@
       }
     },
     {
+      "itemCode": "MS Frame 3.0 X 165",
+      "description": "MS Frame 3.0 X 165",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "165"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "MS Frame 2.0 X 200",
       "description": "MS Frame 2.0 X 200",
       "uom": "Kg",
@@ -8289,6 +10668,45 @@
       }
     },
     {
+      "itemCode": "MS Frame 3.0 X 200",
+      "description": "MS Frame 3.0 X 200",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "200"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "MS Frame 2.0 X 225",
       "description": "MS Frame 2.0 X 225",
       "uom": "Kg",
@@ -8305,6 +10723,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "225"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 3.0 X 225",
+      "description": "MS Frame 3.0 X 225",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -8445,6 +10902,45 @@
       }
     },
     {
+      "itemCode": "MS Frame 3.0 X 265",
+      "description": "MS Frame 3.0 X 265",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "265"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "MS Frame 2.0 X 280",
       "description": "MS Frame 2.0 X 280",
       "uom": "Kg",
@@ -8484,6 +10980,45 @@
       }
     },
     {
+      "itemCode": "MS Frame 3.0 X 280",
+      "description": "MS Frame 3.0 X 280",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "280"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "MS Frame 2.0 X 300",
       "description": "MS Frame 2.0 X 300",
       "uom": "Kg",
@@ -8500,6 +11035,45 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "300"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Frame 3.0 X 300",
+      "description": "MS Frame 3.0 X 300",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "frameSlitSize",
@@ -12722,6 +15296,45 @@
       }
     },
     {
+      "itemCode": "GI Blade 3V4\" 1.6 X 127",
+      "description": "GI Blade 3V4\" 1.6 X 127",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight4",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "GI Blade 3V5\" 1.5 X 153",
       "description": "GI Blade 3V5\" 1.5 X 153",
       "uom": "kg",
@@ -12738,6 +15351,45 @@
               "field": "bladeThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight5",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Blade 3V5\" 1.6 X 153",
+      "description": "GI Blade 3V5\" 1.6 X 153",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "bladeType",
@@ -12800,6 +15452,45 @@
       }
     },
     {
+      "itemCode": "GI Blade 3V6\" 1.6 X 178",
+      "description": "GI Blade 3V6\" 1.6 X 178",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight6",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "GI Blade 3V7\" 1.5 X 203",
       "description": "GI Blade 3V7\" 1.5 X 203",
       "uom": "kg",
@@ -12816,6 +15507,45 @@
               "field": "bladeThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight7",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Blade 3V7\" 1.6 X 203",
+      "description": "GI Blade 3V7\" 1.6 X 203",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "bladeType",
@@ -13619,6 +16349,45 @@
       }
     },
     {
+      "itemCode": "SS304L Blade 3V4\" 1.6 X 127",
+      "description": "SS304L Blade 3V4\" 1.6 X 127",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight4",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS304L Blade 3V5\" 1.5 X 153",
       "description": "SS304L Blade 3V5\" 1.5 X 153",
       "uom": "kg",
@@ -13635,6 +16404,45 @@
               "field": "bladeThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight5",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Blade 3V5\" 1.6 X 153",
+      "description": "SS304L Blade 3V5\" 1.6 X 153",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "bladeType",
@@ -13736,6 +16544,45 @@
       }
     },
     {
+      "itemCode": "SS304L Blade 3V6\" 1.6 X 178",
+      "description": "SS304L Blade 3V6\" 1.6 X 178",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight6",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS304L Blade 3V6\" 2.0 X 178",
       "description": "SS304L Blade 3V6\" 2.0 X 178",
       "uom": "kg",
@@ -13791,6 +16638,45 @@
               "field": "bladeThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight7",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Blade 3V7\" 2.0 X 203",
+      "description": "SS304L Blade 3V7\" 2.0 X 203",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "2.00"
             },
             {
               "field": "bladeType",
@@ -14321,6 +17207,45 @@
       }
     },
     {
+      "itemCode": "SS316L Blade 3V4\" 1.6 X 127",
+      "description": "SS316L Blade 3V4\" 1.6 X 127",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight4",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS316L Blade 3V5\" 1.5 X 153",
       "description": "SS316L Blade 3V5\" 1.5 X 153",
       "uom": "kg",
@@ -14337,6 +17262,45 @@
               "field": "bladeThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight5",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Blade 3V5\" 1.6 X 153",
+      "description": "SS316L Blade 3V5\" 1.6 X 153",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "bladeType",
@@ -14438,6 +17402,45 @@
       }
     },
     {
+      "itemCode": "SS316L Blade 3V6\" 1.6 X 178",
+      "description": "SS316L Blade 3V6\" 1.6 X 178",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight6",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS316L Blade 3V6\" 2.0 X 178",
       "description": "SS316L Blade 3V6\" 2.0 X 178",
       "uom": "kg",
@@ -14516,6 +17519,84 @@
       }
     },
     {
+      "itemCode": "SS316L Blade 3V7\" 1.6 X 203",
+      "description": "SS316L Blade 3V7\" 1.6 X 203",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight7",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Blade 3V7\" 2.0 X 203",
+      "description": "SS316L Blade 3V7\" 2.0 X 203",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "2.00"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight7",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "MS Blade 3V4\" 1.5 X 127",
       "description": "MS Blade 3V4\" 1.5 X 127",
       "uom": "kg",
@@ -14532,6 +17613,84 @@
               "field": "bladeThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight4",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Blade 3V4\" 1.4 X 127",
+      "description": "MS Blade 3V4\" 1.4 X 127",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.40"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight4",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Blade 3V4\" 1.6 X 127",
+      "description": "MS Blade 3V4\" 1.6 X 127",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "bladeType",
@@ -14594,6 +17753,45 @@
       }
     },
     {
+      "itemCode": "MS Blade 3V4\" 3.0 X 127",
+      "description": "MS Blade 3V4\" 3.0 X 127",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight4",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "MS Blade 3V5\" 1.5 X 153",
       "description": "MS Blade 3V5\" 1.5 X 153",
       "uom": "kg",
@@ -14610,6 +17808,45 @@
               "field": "bladeThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight5",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Blade 3V5\" 1.6 X 153",
+      "description": "MS Blade 3V5\" 1.6 X 153",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "bladeType",
@@ -14672,6 +17909,45 @@
       }
     },
     {
+      "itemCode": "MS Blade 3V5\" 3.0 X 153",
+      "description": "MS Blade 3V5\" 3.0 X 153",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight5",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "MS Blade 3V6\" 1.5 X 178",
       "description": "MS Blade 3V6\" 1.5 X 178",
       "uom": "kg",
@@ -14688,6 +17964,84 @@
               "field": "bladeThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight6",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Blade 3V6\" 1.4 X 178",
+      "description": "MS Blade 3V6\" 1.4 X 178",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.40"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight6",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Blade 3V6\" 1.6 X 178",
+      "description": "MS Blade 3V6\" 1.6 X 178",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
             },
             {
               "field": "bladeType",
@@ -14750,6 +18104,84 @@
       }
     },
     {
+      "itemCode": "MS Blade 3V6\" 3.0 X 178",
+      "description": "MS Blade 3V6\" 3.0 X 178",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight6",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Blade 3V7\" 1.4 X 203",
+      "description": "MS Blade 3V7\" 1.4 X 203",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.40"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight7",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "MS Blade 3V7\" 1.5 X 203",
       "description": "MS Blade 3V7\" 1.5 X 203",
       "uom": "kg",
@@ -14766,6 +18198,123 @@
               "field": "bladeThicknessLookup",
               "operator": "eq",
               "value": "1.50"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight7",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Blade 3V7\" 3.0 X 203",
+      "description": "MS Blade 3V7\" 3.0 X 203",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight7",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Blade 3V7\" 1.6 X 203",
+      "description": "MS Blade 3V7\" 1.6 X 203",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight7",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Blade 3V7\" 2.0 X 203",
+      "description": "MS Blade 3V7\" 2.0 X 203",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "2.00"
             },
             {
               "field": "bladeType",
@@ -15257,6 +18806,45 @@
       }
     },
     {
+      "itemCode": "AL Blade 3V7\" 1.6 X 203",
+      "description": "AL Blade 3V7\" 1.6 X 203",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight7",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "AL Blade 3V4\" 2.0 X 127",
       "description": "AL Blade 3V4\" 2.0 X 127",
       "uom": "kg",
@@ -15624,6 +19212,84 @@
               "field": "bladeThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight7",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Blade 3V7\" 2.5 X 203",
+      "description": "AL Blade 3V7\" 2.5 X 203",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "2.50"
+            },
+            {
+              "field": "bladeType",
+              "operator": "eq",
+              "value": "3V"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalBladeWeight7",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "AL Blade 3V7\" 3.0 X 203",
+      "description": "AL Blade 3V7\" 3.0 X 203",
+      "uom": "kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "bladeMaterialType",
+              "operator": "eq",
+              "value": "AL"
+            },
+            {
+              "field": "bladeThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             },
             {
               "field": "bladeType",
