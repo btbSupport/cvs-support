@@ -85,7 +85,7 @@ def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
                 }
             value = row.cif_value
             if(row.fti_value != None and row.fti_value != ""):value = row.fti_value
-            if(row.obj_type != None and row.fti_value != ""):value = fti_cache.get(row.cif_value)
+            if(row.obj_type != None and row.obj_type != ""):value = fti_cache.get(row.cif_value)
             item[row.Field]={"label": row.label, "value": value}
         output.append(item)
     return output  
