@@ -12738,6 +12738,40 @@
       }
     },
     {
+      "itemCode": "SS304L Multi Section Joining Strip Weight 3.0",
+      "description": "SS304L Multi Section Joining Strip Weight 3.0",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "multiSectionJoiningStripWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS304L Multi Section Joining Strip Weight 1.0",
       "description": "SS304L Multi Section Joining Strip Weight 1.0",
       "uom": "Kg",
@@ -12890,6 +12924,40 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "0.80"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "multiSectionJoiningStripWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Multi Section Joining Strip Weight 3.0",
+      "description": "SS316L Multi Section Joining Strip Weight 3.0",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             }
           ]
         },
@@ -33172,6 +33240,84 @@
       }
     },
     {
+      "itemCode": "SS304L Frame 1.5 X 243",
+      "description": "SS304L Frame 1.5 X 243",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "materialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.5"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "243"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Frame 1.6 X 164",
+      "description": "SS304L Frame 1.6 X 164",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "materialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.6"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "164"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS316L Frame 0.8 X 164",
       "description": "SS316L Frame 0.8 X 164",
       "uom": "Kg",
@@ -33310,6 +33456,84 @@
               "field": "frameSlitSize",
               "operator": "eq",
               "value": "164"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 1.5 X 243",
+      "description": "SS316L Frame 1.5 X 243",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "materialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.5"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "243"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Frame 1.6 X 243",
+      "description": "SS316L Frame 1.6 X 243",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "materialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThickness",
+              "operator": "eq",
+              "value": "1.6"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "243"
             }
           ]
         },
