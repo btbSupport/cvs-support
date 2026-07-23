@@ -14043,7 +14043,7 @@
               "value": "GI"
             },
             {
-              "field": "sleeveThickness",
+              "field": "sleeveThicknessLookup",
               "operator": "eq",
               "value": "1.00"
             }
@@ -14077,7 +14077,7 @@
               "value": "GI"
             },
             {
-              "field": "sleeveThickness",
+              "field": "sleeveThicknessLookup",
               "operator": "eq",
               "value": "1.20"
             }
@@ -14111,7 +14111,7 @@
               "value": "GI"
             },
             {
-              "field": "sleeveThickness",
+              "field": "sleeveThicknessLookup",
               "operator": "eq",
               "value": "1.50"
             }
@@ -14145,7 +14145,7 @@
               "value": "SS304L"
             },
             {
-              "field": "sleeveThickness",
+              "field": "sleeveThicknessLookup",
               "operator": "eq",
               "value": "1.00"
             }
@@ -14179,7 +14179,7 @@
               "value": "SS304L"
             },
             {
-              "field": "sleeveThickness",
+              "field": "sleeveThicknessLookup",
               "operator": "eq",
               "value": "1.20"
             }
@@ -14213,7 +14213,7 @@
               "value": "SS304L"
             },
             {
-              "field": "sleeveThickness",
+              "field": "sleeveThicknessLookup",
               "operator": "eq",
               "value": "1.50"
             }
@@ -14247,7 +14247,7 @@
               "value": "SS316L"
             },
             {
-              "field": "sleeveThickness",
+              "field": "sleeveThicknessLookup",
               "operator": "eq",
               "value": "1.00"
             }
@@ -14281,7 +14281,7 @@
               "value": "SS316L"
             },
             {
-              "field": "sleeveThickness",
+              "field": "sleeveThicknessLookup",
               "operator": "eq",
               "value": "1.20"
             }
@@ -14315,7 +14315,7 @@
               "value": "SS316L"
             },
             {
-              "field": "sleeveThickness",
+              "field": "sleeveThicknessLookup",
               "operator": "eq",
               "value": "1.50"
             }
@@ -14472,7 +14472,7 @@
             {
               "field": "bladeBushOption",
               "operator": "eq",
-              "value": "Bush"
+              "value": "SS"
             }
           ]
         },
@@ -14608,7 +14608,7 @@
             {
               "field": "bladeBushOption",
               "operator": "eq",
-              "value": "Bush"
+              "value": "SS"
             }
           ]
         },
