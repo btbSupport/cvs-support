@@ -233,6 +233,13 @@ def getValue( features, key):
     if(key =='powerSupplyVCD' and 'powerSupply' in features ) : return getActuatorDetail(features,features['powerSupply']['value'])
     if(key =='actuatorAuxSwitchVCD' and 'actuatorAuxSwitch' in features ) : return getActuatorDetail(features,features['actuatorAuxSwitch']['value'])
     if(key =='actuatorPowerSupplyVCD' and 'actuatorPowerSupply' in features ) : return getActuatorDetail(features,features['actuatorPowerSupply']['value'])
+    if(key =='actuatorTypeVCD' and 'actuatorType' in features ) : return getActuatorDetail(features,features['actuatorType']['value'])
+    if(key =='actuatorControlsVCD' and 'actuatorControls' in features ) : return getActuatorDetail(features,features['actuatorControls']['value'])
+    if(key =='feedbackVCD' and 'feedback' in features ) : return getActuatorDetail(features,features['feedback']['value'])
+    if(key =='actuatorMountingVCD' and 'actuatorMounting' in features ) : return getActuatorDetail(features,features['actuatorMounting']['value'])
+    if(key =='actuatorModelVCD' and 'actuatorModel' in features ) : return getActuatorDetail(features,features['actuatorModel']['value'])
+    if(key =='applyJackShaftingVCD' and 'applyJackShafting' in features ) : return getActuatorDetail(features,features['applyJackShafting']['value'])
+                          
     if key in features:
         return features[key]['value']
     if(key.isnumeric()):

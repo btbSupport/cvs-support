@@ -4935,6 +4935,45 @@
       }
     },
     {
+      "itemCode": "GI Frame 2.0 X 243",
+      "description": "GI Frame 2.0 X 243",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "2.00"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "243"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "GI Frame 3.0 X 245",
       "description": "GI Frame 3.0 X 245",
       "uom": "Kg",
@@ -13418,6 +13457,40 @@
       }
     },
     {
+      "itemCode": "GI Transition 1.6",
+      "description": "GI Transition 1.6",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalTransitionWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "GI Transition 2.0",
       "description": "GI Transition 2.0",
       "uom": "Kg",
@@ -13622,6 +13695,40 @@
       }
     },
     {
+      "itemCode": "SS304L Transition 1.6",
+      "description": "SS304L Transition 1.6",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalTransitionWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS304L Transition 2.0",
       "description": "SS304L Transition 2.0",
       "uom": "Kg",
@@ -13638,6 +13745,40 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalTransitionWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Transition 3.0",
+      "description": "SS304L Transition 3.0",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             }
           ]
         },
@@ -13792,6 +13933,40 @@
       }
     },
     {
+      "itemCode": "SS316L Transition 1.6",
+      "description": "SS316L Transition 1.6",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalTransitionWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS316L Transition 2.0",
       "description": "SS316L Transition 2.0",
       "uom": "Kg",
@@ -13808,6 +13983,40 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalTransitionWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Transition 3.0",
+      "description": "SS316L Transition 3.0",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             }
           ]
         },
@@ -13860,6 +14069,74 @@
       }
     },
     {
+      "itemCode": "MS Transition 1.6",
+      "description": "MS Transition 1.6",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.60"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalTransitionWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Transition 1.4",
+      "description": "MS Transition 1.4",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.40"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalTransitionWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "MS Transition 2.0",
       "description": "MS Transition 2.0",
       "uom": "Kg",
@@ -13876,6 +14153,40 @@
               "field": "frameThicknessLookup",
               "operator": "eq",
               "value": "2.00"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "totalTransitionWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "MS Transition 3.0",
+      "description": "MS Transition 3.0",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "MS"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "3.00"
             }
           ]
         },
@@ -14030,6 +14341,74 @@
       }
     },
     {
+      "itemCode": "GI Sleeve 0.8",
+      "description": "GI Sleeve 0.8",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "sleeveThicknessLookup",
+              "operator": "eq",
+              "value": "0.80"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "sleeveWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "GI Sleeve 2.0",
+      "description": "GI Sleeve 2.0",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "GI"
+            },
+            {
+              "field": "sleeveThicknessLookup",
+              "operator": "eq",
+              "value": "2.00"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "sleeveWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "GI Sleeve 1.0",
       "description": "GI Sleeve 1.0",
       "uom": "Kg",
@@ -14166,6 +14545,142 @@
       }
     },
     {
+      "itemCode": "SS304L Sleeve 1.0",
+      "description": "SS304L Sleeve 1.0",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "sleeveThicknessLookup",
+              "operator": "eq",
+              "value": "1.00"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "sleeveWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Sleeve 2.0",
+      "description": "SS304L Sleeve 2.0",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "sleeveThicknessLookup",
+              "operator": "eq",
+              "value": "2.00"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "sleeveWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Sleeve 0.8",
+      "description": "SS304L Sleeve 0.8",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "sleeveThicknessLookup",
+              "operator": "eq",
+              "value": "0.80"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "sleeveWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS304L Sleeve 1.0",
+      "description": "SS304L Sleeve 1.0",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS304L"
+            },
+            {
+              "field": "sleeveThicknessLookup",
+              "operator": "eq",
+              "value": "1.00"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "sleeveWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS304L Sleeve 1.2",
       "description": "SS304L Sleeve 1.2",
       "uom": "Kg",
@@ -14250,6 +14765,74 @@
               "field": "sleeveThicknessLookup",
               "operator": "eq",
               "value": "1.00"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "sleeveWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Sleeve 2.0",
+      "description": "SS316L Sleeve 2.0",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "sleeveThicknessLookup",
+              "operator": "eq",
+              "value": "2.00"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "sleeveWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "itemCode": "SS316L Sleeve 0.8",
+      "description": "SS316L Sleeve 0.8",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "sleeveThicknessLookup",
+              "operator": "eq",
+              "value": "0.8"
             }
           ]
         },
