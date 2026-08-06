@@ -7,37 +7,74 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "section_break_hlsq",
+  "damper_height_mm",
+  "cd100f_section",
+  "cd100_f_3_v_4_inch",
+  "cd100_f_3_v_5_inch",
+  "cd100_f_3_v_6_inch",
+  "cd100_f_3_v_7_inch",
+  "column_break_bqze",
   "cd100_f_af_5_inch",
   "cd100_f_af_6_inch",
   "cd100_f_af_7_inch",
-  "cd100_f_3_v_7_inch",
+  "column_break_jhkc",
+  "cd100_f_eal_5_inch",
+  "cd100_f_eal_6_inch",
+  "cd100_f_eal_7_inch",
+  "cd125h_section",
+  "cd125_h_3_v_4_inch",
+  "cd125_h_3_v_5_inch",
+  "cd125_h_3_v_6_inch",
+  "cd125_h_3_v_7_inch",
+  "column_break_jsfx",
+  "cd125_h_af_5_inch",
   "cd125_h_af_6_inch",
   "cd125_h_af_7_inch",
+  "column_break_hzzb",
+  "cd125_h_eal_5_inch",
+  "cd125_h_eal_6_inch",
+  "cd125_h_eal_7_inch",
+  "cd165f_section",
   "cd165_f_3_v_4_inch",
   "cd165_f_3_v_5_inch",
-  "cd100_f_3_v_5_inch",
-  "cd100_f_3_v_6_inch",
-  "cd165_f_3_v_7_inch",
-  "cd100_f_3_v_4_inch",
   "cd165_f_3_v_6_inch",
-  "cd125_h_eal_6_inch",
+  "cd165_f_3_v_7_inch",
+  "column_break_erey",
+  "cd165_f_af_5_inch",
   "cd165_f_af_6_inch",
   "cd165_f_af_7_inch",
-  "cd125_h_eal_5_inch",
-  "cd125_h_eal_7_inch",
-  "cd165_f_af_5_inch",
+  "column_break_jewg",
   "cd165_f_eal_5_inch",
-  "cd165_f_eal_7_inch",
   "cd165_f_eal_6_inch",
-  "cd125_h_af_5_inch",
-  "damper_height_mm",
-  "cd125_h_3_v_6_inch",
-  "cd100_f_eal_6_inch",
-  "cd125_h_3_v_5_inch",
-  "cd125_h_3_v_7_inch",
-  "cd125_h_3_v_4_inch",
-  "cd100_f_eal_5_inch",
-  "cd100_f_eal_7_inch"
+  "cd165_f_eal_7_inch",
+  "cd175s_section",
+  "cd175_s_3_v_4_inch",
+  "cd175_s_3_v_5_inch",
+  "cd175_s_3_v_6_inch",
+  "cd175_s_3_v_7_inch",
+  "column_break_qcza",
+  "cd175_s_af_5_inch",
+  "cd175_s_af_6_inch",
+  "cd175_s_af_7_inch",
+  "column_break_ybdj",
+  "cd175_s_eal_5_inch",
+  "cd175_s_eal_6_inch",
+  "cd175_s_eal_7_inch",
+  "cdw_section",
+  "column_break_cqmt",
+  "cdw_3_v_4_inch",
+  "cdw_3_v_5_inch",
+  "cdw_3_v_6_inch",
+  "cdw_3_v_7_inch",
+  "column_break_mjus",
+  "cdw_af_5_inch",
+  "cdw_af_6_inch",
+  "cdw_af_7_inch",
+  "column_break_avmp",
+  "cdw_eal_5_inch",
+  "cdw_eal_6_inch",
+  "cdw_eal_7_inch"
  ],
  "fields": [
   {
@@ -194,11 +231,184 @@
    "fieldname": "cd100_f_eal_7_inch",
    "fieldtype": "Float",
    "label": "CD100F EAL 7Inch"
+  },
+  {
+   "fieldname": "cd175_s_3_v_4_inch",
+   "fieldtype": "Float",
+   "label": "CD175S 3V 4Inch"
+  },
+  {
+   "fieldname": "cd175_s_3_v_5_inch",
+   "fieldtype": "Float",
+   "label": "CD175S 3V 5Inch"
+  },
+  {
+   "fieldname": "cd175_s_3_v_6_inch",
+   "fieldtype": "Float",
+   "label": "CD175S 3V 6Inch"
+  },
+  {
+   "fieldname": "cd175_s_3_v_7_inch",
+   "fieldtype": "Float",
+   "label": "CD175S 3V 7Inch"
+  },
+  {
+   "fieldname": "cd175_s_af_5_inch",
+   "fieldtype": "Float",
+   "label": "CD175S AF 5Inch"
+  },
+  {
+   "fieldname": "cd175_s_af_6_inch",
+   "fieldtype": "Float",
+   "label": "CD175S AF 6Inch"
+  },
+  {
+   "fieldname": "cd175_s_af_7_inch",
+   "fieldtype": "Float",
+   "label": "CD175S AF 7Inch"
+  },
+  {
+   "fieldname": "cd175_s_eal_5_inch",
+   "fieldtype": "Float",
+   "label": "CD175S EAL 5Inch"
+  },
+  {
+   "fieldname": "cd175_s_eal_6_inch",
+   "fieldtype": "Float",
+   "label": "CD175S EAL 6Inch"
+  },
+  {
+   "fieldname": "cd175_s_eal_7_inch",
+   "fieldtype": "Float",
+   "label": "CD175S EAL 7Inch"
+  },
+  {
+   "fieldname": "cdw_af_5_inch",
+   "fieldtype": "Float",
+   "label": "CDW AF 5Inch"
+  },
+  {
+   "fieldname": "cdw_af_6_inch",
+   "fieldtype": "Float",
+   "label": "CDW AF 6Inch"
+  },
+  {
+   "fieldname": "cdw_af_7_inch",
+   "fieldtype": "Float",
+   "label": "CDW AF 7Inch"
+  },
+  {
+   "fieldname": "cdw_eal_5_inch",
+   "fieldtype": "Float",
+   "label": "CDW EAL 5Inch"
+  },
+  {
+   "fieldname": "cdw_eal_6_inch",
+   "fieldtype": "Float",
+   "label": "CDW EAL 6Inch"
+  },
+  {
+   "fieldname": "cdw_eal_7_inch",
+   "fieldtype": "Float",
+   "label": "CDW EAL 7Inch"
+  },
+  {
+   "fieldname": "cd100f_section",
+   "fieldtype": "Section Break",
+   "label": "CD100F-Extruded Frame"
+  },
+  {
+   "fieldname": "column_break_bqze",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jhkc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cd125h_section",
+   "fieldtype": "Section Break",
+   "label": "CD125H-Hat Frame"
+  },
+  {
+   "fieldname": "column_break_jsfx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hzzb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cd165f_section",
+   "fieldtype": "Section Break",
+   "label": "CD165F-Flanged Frame"
+  },
+  {
+   "fieldname": "column_break_erey",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jewg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cdw_section",
+   "fieldtype": "Section Break",
+   "label": "CDW-Welded Frame"
+  },
+  {
+   "fieldname": "column_break_cqmt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_mjus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_avmp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_hlsq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cd175s_section",
+   "fieldtype": "Section Break",
+   "label": "CD175S-SnC Frame"
+  },
+  {
+   "fieldname": "column_break_qcza",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ybdj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cdw_3_v_4_inch",
+   "fieldtype": "Float",
+   "label": "CDW 3V 4Inch"
+  },
+  {
+   "fieldname": "cdw_3_v_5_inch",
+   "fieldtype": "Float",
+   "label": "CDW 3V 5Inch"
+  },
+  {
+   "fieldname": "cdw_3_v_6_inch",
+   "fieldtype": "Float",
+   "label": "CDW 3V 6Inch"
+  },
+  {
+   "fieldname": "cdw_3_v_7_inch",
+   "fieldtype": "Float",
+   "label": "CDW 3V 7Inch"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-08-08 11:20:50.757524",
+ "modified": "2026-07-14 22:57:31.336420",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOVCDBlades",

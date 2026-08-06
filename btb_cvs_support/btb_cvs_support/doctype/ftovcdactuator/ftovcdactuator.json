@@ -64,13 +64,13 @@
    "fieldname": "power_supply",
    "fieldtype": "Select",
    "label": "Power supply",
-   "options": "230V\n24V\n100V-240V"
+   "options": "230V\n24V\n120V\n100V-240V"
   },
   {
    "fieldname": "torque_description",
    "fieldtype": "Select",
    "label": "Torque Description",
-   "options": "22lbin-2.5Nm\n45lbin-5Nm\n90lbin-10Nm\n180lbin-20Nm\n80lbin-9Nm\n30lbin-3.5Nm\n175lbin-20Nm\n35lbin-4Nm\n18lbin-2.5Nm\n30lbin-3.4Nm"
+   "options": "22lbin-2.5Nm\n45lbin-5Nm\n90lbin-10Nm\n180lbin-20Nm\n80lbin-9Nm\n30lbin-3.5Nm\n175lbin-20Nm\n35lbin-4Nm\n18lbin-2.5Nm\n30lbin-3.4Nm\n300lbin-34Nm"
   },
   {
    "fieldname": "model_name",
@@ -115,7 +115,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-08-08 11:38:44.294455",
+ "modified": "2026-06-10 11:38:24.010277",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOVCDActuator",
