@@ -14,6 +14,33 @@ def populate_cart_item_model( quote_name,conversion_rate):
     populate_featuretype_items(cartItems)
     return populate_cart_models(cartItems)
 
+def populate_cart_item_model_by_cart_items( cart_item_names: List[str], conversion_rate = 1):
+    """Same as populate_cart_item_model, but driven by an explicit list of cart
+    items instead of everything linked to one quotation. Used by the OPR BOQ,
+    where the cart items are reached one line at a time."""
+    syncedItems = get_items_by_cart_items(cart_item_names, conversion_rate)
+    if(len(syncedItems)==0): return None
+    cartItems = get_grouped_items(syncedItems)
+    populate_featuretype_items(cartItems)
+    return populate_cart_models(cartItems)
+
+def get_items_by_cart_items( cart_item_names: List[str], conversion_rate: float) -> List[Dict[str, any]]:
+    if(not cart_item_names): return []
+    placeholders = ", ".join(["%s"] * len(cart_item_names))
+    sql = f""" select tbc.name,tbc.Unit_Price / %s AS Unit_Price,tbc.discount , tbc.Sequence, tbc.Quantity, tbc.Title,
+        i.Name itemName, i.item_code, tbf.Field, tbf.label ,
+        tbcif.value cif_value,tbfti.value fti_value,tbfti.`object` obj_value,tbft.object_type obj_type,tbft.data_text_field
+    from tabBtbCartItem tbc
+    join `tabItem` i on tbc.item  = i.name and tbc.name in ({placeholders})
+    join tabBtbCartItemFeature tbcif on tbcif.parent = tbc.name
+    join tabBtbFeature tbf  on tbf.name = tbcif.feature
+    left join tabBtbFeatureTypeItem tbfti on tbcif.value = tbfti.name
+    left join tabBtbFeatureType tbft on tbft.name = tbfti.feature_type
+    order by tbc.idx
+    """
+    items = frappe.db.sql(sql, tuple([conversion_rate] + list(cart_item_names)), as_dict=1)
+    return items
+
 def get_grouped_items(items):
     df = pd.DataFrame(json.loads(json.dumps(items)))
     res = df.groupby(["name","Unit_Price","discount","Sequence","Quantity","Title","itemName","item_code"], group_keys=False)
@@ -71,6 +98,8 @@ def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
                 # "cartTitle": {"value": row.Title},
                 # }
                 item =  {
+                # row["name"], not row.name - on a pandas row .name is the index label
+                "cartItemId": {"value": row["name"]},
                 "cartProductName": {"value": row.itemName},
                 "cartProductCode": {"value": row.item_code},
                 "qty": {"value":   f"{row.Quantity:,.2f}"},

@@ -1,7 +1,29 @@
 import requests
 import json
+import os
+import re
 import frappe
 from decimal import Decimal
+
+
+def delete_existing_attachment(doc_type: str, doc_name: str, file_name: str):
+    """Remove the previously generated `file_name` attachment from a document.
+
+    generate() always asks for the same file name for a given source document,
+    but Frappe appends the tail of the content hash when that name is already
+    taken on disk, so what is stored is `<stem><hash><ext>` and never matches
+    the requested name exactly. Allow that hex tail - and nothing else - so a
+    document named like a prefix of another cannot be swept up.
+    """
+    if(not doc_type or not doc_name or not file_name): return
+    stem, ext = os.path.splitext(file_name)
+    pattern = re.compile("^%s[0-9a-f]*%s$" % (re.escape(stem), re.escape(ext)))
+    existing = frappe.get_all("File",
+        filters={"attached_to_doctype": doc_type, "attached_to_name": doc_name},
+        fields=["name", "file_name"])
+    for f in existing:
+        if(pattern.match(f.get("file_name") or "")):
+            frappe.delete_doc("File", f.get("name"), force=1, ignore_permissions=True)
 
 
 def decimal_serializer(obj):

@@ -33,8 +33,11 @@ def provide( quote_name: str):
     }
     file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/boq.docx"
     print("output : ",output)
+    file_name = "BOQ_"+quote_name+".pdf"
+    # ADR-0001 D7 - a quotation carries one current BOQ, not one per click
+    delete_existing_attachment("Quotation", quote_name, file_name)
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
-    generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="BOQ_"+quote_name+".pdf",addDigitalSignature=False)
+    generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name=file_name,addDigitalSignature=False)
     return 'Success'
 
 def get_quote_details( quote_name: str) -> Dict:
@@ -53,6 +56,9 @@ def populate_cart_detail( ciModels) -> Dict[str, ProductNode]:
     output: Dict[str, ProductNode] = {}
     # ciModels = populate_cart_item_model(quote_name)
     # if(ciModels == None): return ciModels
+    # module-level map - clear it so two BOQs run by the same worker process
+    # cannot leak sub-category -> product-code entries into each other
+    subCategoryMap.clear()
     models = populate_product_map(ciModels)
     product_family_map = populate_product_family_map()
     sno = 1

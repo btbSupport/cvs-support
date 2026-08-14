@@ -13,17 +13,23 @@ def exec_formula( f, features: List[Dict[str, 'Feature']]) -> float:
             output = get_aggregate_value(f["aggregate"]["logic"], output, aggregated_value)
     return output or 0
 
-def exec_aggregate( ags: List['Aggregate'], features: Dict[str, 'Feature']) -> float:
+def exec_aggregate( ags: List['Aggregate'], features: Dict[str, 'Feature'], logic: str = None) -> float:
+    # `logic` is the operator of the node these aggregates hang off. Siblings
+    # have to be combined with it, not with their own `logic` - under a SUM of
+    # two MUL branches, the branches were being multiplied instead of added.
     output = None
-    result = True
     for a in ags:
-        if "filter" in a.keys():
-            result = exec_filter(a["filter"], features)
-        if result:
-            if "aggregate" in a.keys():
-                output = exec_aggregate(a["aggregate"], features)
-            if "fields" in a.keys():
-                output = get_aggregate_value(a["logic"], output, exec_fields(a["logic"], a["fields"], features))
+        # evaluated per branch: a shared flag let an unfiltered branch inherit
+        # the verdict of a preceding filtered one
+        if "filter" in a.keys() and not exec_filter(a["filter"], features): continue
+        value = None
+        if "aggregate" in a.keys():
+            value = exec_aggregate(a["aggregate"], features, a["logic"])
+        if "fields" in a.keys():
+            value = get_aggregate_value(a["logic"], value, exec_fields(a["logic"], a["fields"], features))
+        # folded into `output` rather than assigned to it, so an earlier
+        # sibling's result survives a later one that nests its own aggregate
+        output = get_aggregate_value(logic or a["logic"], output, value)
     return output or 0
 
 def exec_fields( logic: str, fields: List[str], features: Dict[str, 'Feature']) -> float:
