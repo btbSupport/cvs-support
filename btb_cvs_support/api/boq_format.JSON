@@ -8016,6 +8016,45 @@
       }
     },
     {
+      "itemCode": "SS316L Frame 1.5 X 243",
+      "description": "SS316L Frame 1.5 X 243",
+      "uom": "Kg",
+      "formula": {
+        "filter": {
+          "logic": "and",
+          "conditions": [
+            {
+              "field": "frameMaterialType",
+              "operator": "eq",
+              "value": "SS316L"
+            },
+            {
+              "field": "frameThicknessLookup",
+              "operator": "eq",
+              "value": "1.50"
+            },
+            {
+              "field": "frameSlitSize",
+              "operator": "eq",
+              "value": "243"
+            }
+          ]
+        },
+        "aggregate": {
+          "logic": "SUM",
+          "aggregate": [
+            {
+              "logic": "MUL",
+              "fields": [
+                "frameWeight",
+                "cartQty"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
       "itemCode": "SS316L Frame 1.6 X 165",
       "description": "SS316L Frame 1.6 X 165",
       "uom": "Kg",
@@ -14545,40 +14584,6 @@
       }
     },
     {
-      "itemCode": "SS304L Sleeve 1.0",
-      "description": "SS304L Sleeve 1.0",
-      "uom": "Kg",
-      "formula": {
-        "filter": {
-          "logic": "and",
-          "conditions": [
-            {
-              "field": "frameMaterialType",
-              "operator": "eq",
-              "value": "SS304L"
-            },
-            {
-              "field": "sleeveThicknessLookup",
-              "operator": "eq",
-              "value": "1.00"
-            }
-          ]
-        },
-        "aggregate": {
-          "logic": "SUM",
-          "aggregate": [
-            {
-              "logic": "MUL",
-              "fields": [
-                "sleeveWeight",
-                "cartQty"
-              ]
-            }
-          ]
-        }
-      }
-    },
-    {
       "itemCode": "SS304L Sleeve 2.0",
       "description": "SS304L Sleeve 2.0",
       "uom": "Kg",
@@ -14629,40 +14634,6 @@
               "field": "sleeveThicknessLookup",
               "operator": "eq",
               "value": "0.80"
-            }
-          ]
-        },
-        "aggregate": {
-          "logic": "SUM",
-          "aggregate": [
-            {
-              "logic": "MUL",
-              "fields": [
-                "sleeveWeight",
-                "cartQty"
-              ]
-            }
-          ]
-        }
-      }
-    },
-    {
-      "itemCode": "SS304L Sleeve 1.0",
-      "description": "SS304L Sleeve 1.0",
-      "uom": "Kg",
-      "formula": {
-        "filter": {
-          "logic": "and",
-          "conditions": [
-            {
-              "field": "frameMaterialType",
-              "operator": "eq",
-              "value": "SS304L"
-            },
-            {
-              "field": "sleeveThicknessLookup",
-              "operator": "eq",
-              "value": "1.00"
             }
           ]
         },
