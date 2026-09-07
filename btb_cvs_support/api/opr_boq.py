@@ -157,7 +157,17 @@ def cart_items_by_item_code(quotation: str) -> Tuple[Dict[str, str], set]:
 
 
 def header_quotation(sales_order: str):
+    """The hand-keyed fallback route - `Sales Order`.quotation_reference.
+
+    That field is a Custom Field, not a standard one, so it is absent on any
+    site that has not had it installed. Ask the meta before the column: an
+    unguarded read raises OperationalError 1054, and because this runs before
+    the routing in resolve_rows() it would take down BOQ generation for every
+    OPR - including the ones that trace fully through so_detail and never need
+    the fallback. None is the answer the callers already handle (skip_reason).
+    """
     if(not sales_order): return None
+    if(not frappe.get_meta("Sales Order").has_field("quotation_reference")): return None
     return frappe.db.get_value("Sales Order", sales_order, "quotation_reference")
 
 

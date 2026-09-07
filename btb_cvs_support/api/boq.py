@@ -4,6 +4,7 @@ from typing import Dict, List, Optional
 import os
 from .btb_quotation import *
 from .btb_constraint import *
+from .boq_rules import families_with_rules, load_rules, expand
 from ..document.generator import *
 
 subCategoryMap: Dict[str, str] = {}
@@ -61,16 +62,27 @@ def populate_cart_detail( ciModels) -> Dict[str, ProductNode]:
     subCategoryMap.clear()
     models = populate_product_map(ciModels)
     product_family_map = populate_product_family_map()
+    # families migrated to `BOQ Rule`; everything else still reads the JSON
+    rule_families = families_with_rules()
+    rule_cache = {}
     sno = 1
 
     for sub_cat in models:
         # print(f'BOQ subCat - {sub_cat}')
         product_code = subCategoryMap.get(sub_cat)
         details = []
-        if product_code not in product_family_map:
+        if product_code in rule_families:
+            if product_code not in rule_cache:
+                rule_cache[product_code] = load_rules(product_code)
+            # expanded per sub-category - which combinations exist depends on
+            # the cart models in it
+            source_rows = expand(rule_cache[product_code], models[sub_cat])
+        elif product_code in product_family_map:
+            source_rows = product_family_map[product_code]
+        else:
             continue
-            
-        for pi in product_family_map[product_code]:
+
+        for pi in source_rows:
             # print("details pi : ",pi)
             pinfo = ProductInfo(pi['description'], Decimal('0'), pi['uom']).__dict__
             pinfo["formula"] = pi['formula']
