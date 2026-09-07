@@ -16,7 +16,7 @@
         "Heat Response": "fusibleLinkTemp"
       },
       "detail": "width,height,tagRef,notes,qty,rate,amount,diameter,fittingType,unitPrice,beforeDiscount",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "ULRD": {
       "headerKey": "frameMaterialType,transitionType,frameThicknessLookup,bladeThicknessLookup,rating,retainingPlate,leakageClass,fuseLinkOptions,damperOperator,actuatorBrand,linkTemperature,actuatorPower,auxSwitch,actuatorMounting,bladeSwitchPackage,maxDiameter,junctionBox,mtsOption",
@@ -41,7 +41,7 @@
         "MTS Option":"mtsOption"
       },
       "detail": "tagRef,notes,diameter,frameDepth,qty,rate,amount,unitPrice,beforeDiscount,transitionType,transitionDiameter,transitionLength,transitionDiameter2,transitionLength2",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "MSFD": {
       "headerKey": "materialType,frameThickness,sleeveSelection,sleeveThickness,rating,leakageClass,classTemperature,maxSingleSectionWidth,maxSingleSectionHeight,mounting,maxMultiSectionWidth,maxMultiSectionHeight,storOrDtorOption,linkTemperature,actuatorBrand,actuatorPower,actuatorMounting,auxSwitch,bladeSwitchPackage,smokeDetector,bladeOperations,transition,transitionThickness",
@@ -66,7 +66,7 @@
         "Transition": "CONCAT(transition,string - ,transitionThickness,string mm)"
       },
       "detail": "width,height,tagRef,notes,qty,rate,amount,diameter,transition,unitPrice,beforeDiscount",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "SIL": {
       "headerKey": "model,materialType,subCategory,infillType,constructionStandard,airTightness,casingThickness,perfThickness,orientation,infillProtection,removableBaffle,accessPanel",
@@ -85,7 +85,7 @@
         "Access Panel":"accessPanel"
       },
       "detail": "tagRef,notes,widthWi,heightHi,lengthLi,optionFlangeangle,assemblyType,qty,rate,amount,unitPrice,beforeDiscount",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "VCDA": {
       "headerKey": "modelName,subCategory,frameMaterialType,frameThicknessLookup,bladeMaterialType,bladeThicknessLookup,transitionType,bladeOperations,bladeAxleType,bladeBushOption,bladeSealInput,jambSideSeal,amcaLabelSelect,damperOperator,actuatorBrand,actuatorControls,auxSwitch,powerSupply",
@@ -108,7 +108,7 @@
         "Power Supply":"powerSupply"
       },
       "detail": "tagRef,notes,width,height,qty,rate,amount,unitPrice,beforeDiscount",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "VCDR": {
       "headerKey": "modelName,subCategory,materialType,frameThicknessLookup,frameClosure,bladeThickness,staticPressureClass,velocityRating,axleType,axleBearing,bladeSeal,amcaLabel,operator,actuatorMounting,actuatorBrand,actuatorControls,actuatorAuxSwitch,actuatorPowerSupply",
@@ -131,7 +131,7 @@
         "Power Supply":"actuatorPowerSupply"
       },
       "detail": "tagRef,notes,diameter,frameDepth,qty,rate,amount,unitPrice,beforeDiscount",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     },
     "AD": {
       "headerKey": "modelName,subCategory,materialType,frameThicknessLookup,frameClosure,bladeThickness,staticPressureClass,velocityRating,axleType,axleBearing,bladeSeal,amcaLabel,operator,actuatorMounting,actuatorBrand,actuatorControls,actuatorAuxSwitch,actuatorPowerSupply",
@@ -154,6 +154,6 @@
         "Power Supply":"actuatorPowerSupply"
       },
       "detail": "tagRef,notes,diameter,frameDepth,qty,rate,amount,unitPrice,beforeDiscount",
-      "summary": "qty,rate,amount,beforeDiscount"
+      "summary": "qty,rate,cartAmount,beforeDiscount"
     }
   }
