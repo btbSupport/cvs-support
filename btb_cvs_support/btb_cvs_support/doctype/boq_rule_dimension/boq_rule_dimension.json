@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-08-31 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "field",
+  "value_format",
+  "value_order"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "description": "Lines are grouped by the distinct values this field takes across the cart.",
+   "fieldname": "field",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Feature Field",
+   "reqd": 1
+  },
+  {
+   "columns": 3,
+   "default": "As is",
+   "description": "How the value is written into the identifier. Trim trailing zero renders a stored 0.60 as 0.6, matching the item codes.",
+   "fieldname": "value_format",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Value Format",
+   "options": "As is\nTrim trailing zero",
+   "reqd": 1
+  },
+  {
+   "columns": 4,
+   "description": "Comma-separated emit order, e.g. GI,AL,AZ,SS304L,SS316L. Values not listed sort naturally after those that are. Leave blank for natural order.",
+   "fieldname": "value_order",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Value Order"
+  }
+ ],
+ "grid_page_length": 50,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-31 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Btb Cvs Support",
+ "name": "BOQ Rule Dimension",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

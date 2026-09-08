@@ -1,0 +1,182 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "format:BOQ-{product_family}-{#####}",
+ "creation": "2026-08-31 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "product_family",
+  "sequence",
+  "active",
+  "column_break_head",
+  "source_type",
+  "uom",
+  "section_identifier",
+  "identifier_template",
+  "identifier_literal",
+  "identifier_help",
+  "section_matching",
+  "dimensions",
+  "condition_logic",
+  "conditions",
+  "section_quantity",
+  "aggregate",
+  "section_notes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "description": "Item.item_code of the configurator product, e.g. AD",
+   "fieldname": "product_family",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Product Family",
+   "reqd": 1
+  },
+  {
+   "description": "Emit order on the printed BOQ. Lines from one rule are ordered by their dimension values.",
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Sequence",
+   "reqd": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "fieldname": "column_break_head",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Templated",
+   "description": "Templated - the rendered identifier is both item code and description, and UOM is taken from this rule. Sourced - the identifier resolves one FTOCountryWiseCost row, which supplies item code, description and UOM.",
+   "fieldname": "source_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Source Type",
+   "options": "Templated\nSourced",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.source_type=='Templated'",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "section_identifier",
+   "fieldtype": "Section Break",
+   "label": "Identifier"
+  },
+  {
+   "description": "Pattern with {featureField} placeholders, e.g. {material} Door {doorThickness}",
+   "fieldname": "identifier_template",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Identifier Template"
+  },
+  {
+   "description": "Fixed identifier. Wins over the template when set - for codes that cannot be patterned, e.g. GI & AZ Handle Cost (per PC).",
+   "fieldname": "identifier_literal",
+   "fieldtype": "Data",
+   "label": "Identifier Literal (override)"
+  },
+  {
+   "fieldname": "identifier_help",
+   "fieldtype": "HTML",
+   "options": "<p class=\"text-muted small\">A Sourced rule matches its identifier against <b>BOQ Identifier</b> on FTOCountryWiseCost. A Templated rule never reads that table.</p>"
+  },
+  {
+   "fieldname": "section_matching",
+   "fieldtype": "Section Break",
+   "label": "Matching"
+  },
+  {
+   "description": "Group-by fields. One BOQ line is emitted per distinct combination present on the cart.",
+   "fieldname": "dimensions",
+   "fieldtype": "Table",
+   "label": "Dimensions",
+   "options": "BOQ Rule Dimension"
+  },
+  {
+   "default": "and",
+   "fieldname": "condition_logic",
+   "fieldtype": "Select",
+   "label": "Condition Logic",
+   "options": "and\nor\nnot"
+  },
+  {
+   "description": "Guards. A cart line must satisfy these before the rule applies to it.",
+   "fieldname": "conditions",
+   "fieldtype": "Table",
+   "label": "Conditions",
+   "options": "BOQ Rule Condition"
+  },
+  {
+   "fieldname": "section_quantity",
+   "fieldtype": "Section Break",
+   "label": "Quantity"
+  },
+  {
+   "description": "Aggregate tree, in the shape the BOQ engine already consumes. Copied verbatim from boq_format.JSON.",
+   "fieldname": "aggregate",
+   "fieldtype": "Code",
+   "label": "Aggregate",
+   "options": "JSON",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "grid_page_length": 50,
+ "links": [],
+ "modified": "2026-08-31 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Btb Cvs Support",
+ "name": "BOQ Rule",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "sequence",
+ "sort_order": "ASC",
+ "states": [],
+ "track_changes": 1
+}
