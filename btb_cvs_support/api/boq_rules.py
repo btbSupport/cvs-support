@@ -24,6 +24,7 @@ import re
 from typing import Dict, List, Optional
 
 import frappe
+from frappe import _
 
 from .btb_constraint import exec_filter
 
@@ -47,30 +48,46 @@ def families_with_rules() -> set:
 
 
 def load_rules(product_family: str) -> List[Dict]:
+    """Read the active rules of one family.
+
+    A rule that cannot be read names itself in the error. Without that, a bad
+    aggregate surfaces as a bare TypeError from json.loads with nothing to say
+    which of thirteen rules produced it - and because provide() builds the BOQ
+    before it removes the previous attachment, the generation aborts leaving
+    yesterday's PDF in place, looking current. Failing by name is what makes
+    that recoverable instead of a hunt.
+    """
     names = frappe.get_all("BOQ Rule",
                            filters={"product_family": product_family, "active": 1},
                            order_by="sequence asc, name asc", pluck="name")
     rules = []
     for name in names:
-        doc = frappe.get_doc("BOQ Rule", name)
-        rules.append({
-            "name": doc.name,
-            "sourceType": doc.source_type,
-            "identifierTemplate": doc.identifier_template,
-            "identifierLiteral": doc.identifier_literal,
-            "uom": doc.uom,
-            "conditionLogic": doc.condition_logic or "and",
-            "conditions": [
-                {"field": c.field, "operator": c.operator, "value": c.value}
-                for c in (doc.conditions or [])
-            ],
-            "dimensions": [
-                {"field": d.field, "format": d.value_format or "As is",
-                 "order": d.value_order or ""}
-                for d in (doc.dimensions or [])
-            ],
-            "aggregate": json.loads(doc.aggregate),
-        })
+        try:
+            doc = frappe.get_doc("BOQ Rule", name)
+            rules.append({
+                "name": doc.name,
+                "sourceType": doc.source_type,
+                "identifierTemplate": doc.identifier_template,
+                "identifierLiteral": doc.identifier_literal,
+                "uom": doc.uom,
+                "conditionLogic": doc.condition_logic or "and",
+                "conditions": [
+                    {"field": c.field, "operator": c.operator, "value": c.value}
+                    for c in (doc.conditions or [])
+                ],
+                "dimensions": [
+                    {"field": d.field, "format": d.value_format or "As is",
+                     "order": d.value_order or ""}
+                    for d in (doc.dimensions or [])
+                ],
+                "aggregate": json.loads(doc.aggregate),
+            })
+        except Exception as e:
+            frappe.throw(
+                _("BOQ Rule {0} ({1}) could not be read: {2}. "
+                  "Correct the rule, or untick Active on it to leave it out of the BOQ.").format(
+                    frappe.bold(name), product_family, e),
+                title=_("BOQ Rule is not usable"))
     return rules
 
 
@@ -184,8 +201,18 @@ def expand(rules: List[Dict], models: List[Dict]) -> List[Dict]:
     """
     planned = []
     for rule in rules:
-        for combo in combinations(rule, models):
-            planned.append((rule, combo, render_identifier(rule, combo)))
+        # named the same way load_rules does - a dimension pointing at a field
+        # no cart model carries, or a condition with an operator the filter
+        # does not know, fails here rather than at load time
+        try:
+            for combo in combinations(rule, models):
+                planned.append((rule, combo, render_identifier(rule, combo)))
+        except Exception as e:
+            frappe.throw(
+                _("BOQ Rule {0} could not be applied: {1}. "
+                  "Check its Dimensions and Conditions, or untick Active on it.").format(
+                    frappe.bold(rule.get("name") or "?"), e),
+                title=_("BOQ Rule is not usable"))
 
     wanted = [ident for rule, _c, ident in planned if rule["sourceType"] == "Sourced"]
     resolved = cost_rows_by_identifier(wanted)
