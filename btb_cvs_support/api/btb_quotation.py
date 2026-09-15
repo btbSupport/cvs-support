@@ -178,7 +178,7 @@ def get_synced_items(quote_name: str):
     sql = f"""
         select tqi.*,tbci.idx,tbci.unit_price,tbci.discount ciDiscount,tbci.quantity ciQty,tbci.name ciName  from `tabQuotation Item` tqi 
         join tabBtbCartItem tbci on tbci.name=tqi.custom_cart_item  where tqi.parent ='{quote_name}'
-order by tbci.idx
+order by tbci.idx, tbci.creation
     """
     items = frappe.db.sql(sql, as_dict=1)
     return items
@@ -301,6 +301,7 @@ def amendCPQ(quote_name: str,amended_from: str):
         ci.modified_by = current_user
         ci.cart = cart_name
         ci.idx = seq
+        ci.sequence = seq
         seq = seq+1
         ciLinks =[]
         for cil in ci.cart_item_links:
