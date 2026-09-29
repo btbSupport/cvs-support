@@ -27,7 +27,7 @@ def populate_cart_item_model_by_cart_items( cart_item_names: List[str], conversi
 def get_items_by_cart_items( cart_item_names: List[str], conversion_rate: float) -> List[Dict[str, any]]:
     if(not cart_item_names): return []
     placeholders = ", ".join(["%s"] * len(cart_item_names))
-    sql = f""" select tbc.name,tbc.Unit_Price / %s AS Unit_Price,tbc.discount , tbc.Sequence, tbc.Quantity, tbc.Title,
+    sql = f""" select tbc.name,tbc.Unit_Price / %s AS Unit_Price,tbc.discount , tbc.idx, tbc.Quantity, tbc.Title,
         i.Name itemName, i.item_code, tbf.Field, tbf.label ,
         tbcif.value cif_value,tbfti.value fti_value,tbfti.`object` obj_value,tbft.object_type obj_type,tbft.data_text_field
     from tabBtbCartItem tbc
@@ -43,11 +43,11 @@ def get_items_by_cart_items( cart_item_names: List[str], conversion_rate: float)
 
 def get_grouped_items(items):
     df = pd.DataFrame(json.loads(json.dumps(items)))
-    res = df.groupby(["name","Unit_Price","discount","Sequence","Quantity","Title","itemName","item_code"], group_keys=False)
+    res = df.groupby(["name","Unit_Price","discount","idx","Quantity","Title","itemName","item_code"], group_keys=False)
     return res
 @frappe.whitelist()
 def get_items( quote_name: str,conversion_rate:float) -> List[Dict[str, any]]:
-    sql = f""" select tbc.name,tbc.Unit_Price / {conversion_rate} AS Unit_Price,tbc.discount , tbc.Sequence, tbc.Quantity, tbc.Title,
+    sql = f""" select tbc.name,tbc.Unit_Price / {conversion_rate} AS Unit_Price,tbc.discount , tbc.idx, tbc.Quantity, tbc.Title,
         i.Name itemName, i.item_code, tbf.Field, tbf.label ,
         tbcif.value cif_value,tbfti.value fti_value,tbfti.`object` obj_value,tbft.object_type obj_type,tbft.data_text_field 
     from tabBtbCartItem tbc
@@ -109,7 +109,7 @@ def populate_cart_models( cartItems: Dict[str,any]) -> List[Dict[str, Dict]]:
                 "rate": {"value":  f"{(row.Unit_Price*(1-(row.discount/100))):,.2f}"},
                 "cartAmount": {"value": (row.Unit_Price*(1-(row.discount/100))*row.Quantity)},
                 "amount": {"value": f"{(row.Unit_Price*(1-(row.discount/100))*row.Quantity):,.2f}"},
-                "seq": {"value": row.Sequence},
+                "seq": {"value": row.idx},
                 "cartTitle": {"value": row.Title},
                 }
             value = row.cif_value
@@ -156,6 +156,7 @@ config
 
 on cartItem.name = config.parent
 group by cartItem.name
+order by cartItem.idx
 
     """
     items = frappe.db.sql(sql, as_dict=1)
@@ -378,7 +379,7 @@ def sync_all(quote_name, method = None):
 def get_all_cart_items(name:str):
 	sql = f"""
 		select ci.name, item, price_list, list_price, unit_price, quantity, discount,
-			i.item_name, i.item_code,sequence,i.stock_uom,ci.idx,i.description
+			i.item_name, i.item_code,ci.idx,i.stock_uom,ci.idx,i.description
 		from `tabBtbCartItem` ci
 		join `tabItem` i on ci.item = i.name
 		where ci.cart = '{name}'
