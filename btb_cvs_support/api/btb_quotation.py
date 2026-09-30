@@ -43,7 +43,9 @@ def get_items_by_cart_items( cart_item_names: List[str], conversion_rate: float)
 
 def get_grouped_items(items):
     df = pd.DataFrame(json.loads(json.dumps(items)))
-    res = df.groupby(["name","Unit_Price","discount","idx","Quantity","Title","itemName","item_code"], group_keys=False)
+    df["idx"] = pd.to_numeric(df["idx"], errors="coerce")
+    df = df.sort_values("idx", kind="stable", na_position="last")
+    res = df.groupby(["name","Unit_Price","discount","idx","Quantity","Title","itemName","item_code"], group_keys=False, sort=False, dropna=False)
     return res
 @frappe.whitelist()
 def get_items( quote_name: str,conversion_rate:float) -> List[Dict[str, any]]:
