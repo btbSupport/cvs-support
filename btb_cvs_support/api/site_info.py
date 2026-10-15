@@ -22,8 +22,5 @@ def get_site_config():
     
 @frappe.whitelist()
 def get_config(confName:str):
-    site_config = get_site_config()
-    # frappe.log(site_config)
-    if(confName in site_config) : 
-        return site_config.get(confName)
-    return None
+    # frappe.conf is loaded once per request; avoids re-reading site_config.json on every call
+    return frappe.conf.get(confName)

@@ -198,7 +198,7 @@ def getQuoteById( quote_name):
 
 @frappe.whitelist()
 def applyDiscount( quote_name: str,discount:float):
-    settings = frappe.get_doc("Cvs Settings")
+    settings = frappe.get_cached_doc("Cvs Settings")
     cart_item_minimum_discount = settings.get("cart_item_minimum_discount")
     cart_item_maximum_discount = settings.get("cart_item_maximum_discount")
     if(discount != None and (discount < cart_item_minimum_discount or discount > cart_item_maximum_discount)):frappe.throw('Can Apply discount between '+str(cart_item_minimum_discount)+' to '+str(cart_item_maximum_discount))

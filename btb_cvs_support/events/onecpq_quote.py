@@ -35,10 +35,11 @@ def get_items(quote_name: str):
 
 @frappe.whitelist()
 def before_save_cart(doc, method = None):
-    print('get_config allow_cpq before_save_cart',get_config('allow_cpq') )
-    if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
+    site_config_data = get_config('allow_cpq')
+    print('get_config allow_cpq before_save_cart',site_config_data )
+    if(site_config_data == None or  site_config_data == 0): return
 
-    settings = frappe.get_doc("Cvs Settings")
+    settings = frappe.get_cached_doc("Cvs Settings")
     min_discount_limit = settings.get("cart_item_minimum_discount")
     max_discount_limit = settings.get("cart_item_maximum_discount")
     if(doc.discount != None and (doc.discount < min_discount_limit or doc.discount > max_discount_limit)):frappe.throw('Discount % not in the approved limit.')
@@ -115,7 +116,7 @@ def before_save_quote(doc = None, method = None):
             doc.items=[]
         return   
     if(doc is None): return
-    settings = frappe.get_doc("Cvs Settings")
+    settings = frappe.get_cached_doc("Cvs Settings")
     cart_minimum_discount = settings.get("cart_minimum_discount")
     cart_maximum_discount = settings.get("cart_maximum_discount")
     if(doc.custom_cart_discount != None and (doc.custom_cart_discount < cart_minimum_discount or doc.custom_cart_discount > cart_maximum_discount)):frappe.throw('Can Apply "Quote Discount" between '+str(cart_minimum_discount)+' to '+str(cart_maximum_discount))
