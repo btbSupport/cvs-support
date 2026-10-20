@@ -8,6 +8,7 @@ import os
 import pandas as pd
 import numpy as np
 from ..document.generator import *
+from ..document.letter_head import build_template
 from .btb_quotation import *
 
 
@@ -39,6 +40,36 @@ def provide( quote_name: str):
     # generate(file_path, output, format="original",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".docx")
     return output
     # return 'Success'
+
+@frappe.whitelist()
+def provide_with_letter_head( quote_name: str):
+    """Quotation Format with the header and footer of the Quotation's Letter Head.
+
+    Same data as provide(), rendered on the common quotation_format_letterhead.docx
+    instead of the country template. Without a Letter Head it falls back to the
+    country template, as provide() does.
+    """
+    letter_head = frappe.db.get_value("Quotation", quote_name, "letter_head")
+    qt_detail = get_quote_details(quote_name)
+    models = populate_cart_item_model(quote_name,qt_detail["conversion_rate"])
+    if(models == None): return None
+    output = {"ci": {
+        "cartItem": populate_cart_detail(models),
+        "companyInfo": get_company_info()
+    },
+    "qt": qt_detail
+    }
+    code = output["ci"]["companyInfo"]["code"]
+    file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_"+code.lower()+".docx"
+    lh_path = None
+    if(letter_head and frappe.db.exists("Letter Head", letter_head)):
+        lh_path = build_template(letter_head, frappe.get_doc("Quotation", quote_name))
+        file_path = lh_path
+    try:
+        generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf",addDigitalSignature=True)
+    finally:
+        if(lh_path and os.path.exists(lh_path)): os.remove(lh_path)
+    return output
 
 def get_quote_details( quote_name: str) -> Dict:
     from frappe.utils import money_in_words
