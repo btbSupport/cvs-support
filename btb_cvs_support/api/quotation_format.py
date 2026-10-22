@@ -36,7 +36,7 @@ def provide( quote_name: str):
     # file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_eg.docx"
 
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
-    generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf",addDigitalSignature=True)
+    generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf",addDigitalSignature=False)
     # generate(file_path, output, format="original",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".docx")
     return output
     # return 'Success'
@@ -66,7 +66,7 @@ def provide_with_letter_head( quote_name: str):
         lh_path = build_template(letter_head, frappe.get_doc("Quotation", quote_name))
         file_path = lh_path
     try:
-        generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf",addDigitalSignature=True)
+        generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf",addDigitalSignature=False)
     finally:
         if(lh_path and os.path.exists(lh_path)): os.remove(lh_path)
     return output
