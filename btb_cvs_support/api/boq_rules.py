@@ -42,8 +42,9 @@ def families_with_rules() -> set:
     the JSON, instead of failing every generation on a missing table.
     """
     if(not frappe.db.table_exists("BOQ Rule")): return set()
+    # distinct as a keyword: v16 rejects "distinct ..." inside a field name
     rows = frappe.get_all("BOQ Rule", filters={"active": 1},
-                          fields=["distinct product_family as pf"])
+                          fields=["product_family as pf"], distinct=True)
     return {r.pf for r in rows}
 
 

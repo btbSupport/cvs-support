@@ -1,18 +1,28 @@
+<style>
+    /* v16 grid cells are a fixed 32px single line; long text columns wrap instead. */
+    .onecpq-qli .grid-body .grid-static-col { height: auto; min-height: 32px; }
+    .onecpq-qli .grid-static-col.qli-wrap .static-area { white-space: normal; word-break: break-word; }
+    /* v16 caps a grid's 2nd column at 40px (it expects check + index columns first); here it's a data column. */
+    .onecpq-qli.form-grid-container .form-grid .grid-row > .row .col:nth-child(2) { max-width: none; min-width: 0; }
+    /* ...and pins the last one as a 30px sticky action column; here it's a data column too. */
+    .onecpq-qli.form-grid-container .form-grid .grid-row > .row .col:last-child { max-width: none; min-width: 0; position: static; line-height: inherit; }
+</style>
+{% set wrapFields = ['description', 'item_name', 'notes'] %}
 <label class="control-label">Items</label>
-<div class="form-grid-container">
+<div class="form-grid-container onecpq-qli">
     <div class="form-grid">
         <div class="grid-heading-row">
             <div class="grid-row">
                 <div class="data-row row m-0">
-                    <div style="max-width:5%" class="col grid-static-col col-xs-1">
+                    <div style="flex: 0 0 50px; width: 50px;" class="col grid-static-col">
                         <span>No.</span>
                     </div>
                     {% for header in headers %}
                     {% set show_currency = header[0].fieldtype == 'Currency' %}
-                    {% set currencyStyle = '' %}
-                    {% if show_currency or header[0].fieldtype == 'Float' %} {% set style = 'justify-content:right' %}{% endif %}
-                    <!-- {{header | json}}  -->
-                    <div [style]="{{currencyStyle}}" class="col grid-static-col col-xs-{{header[1]}}" title="{{header[0].label}}{% if show_currency %} ({{currency}}){% endif %}">
+                    {# header[1] is the v16 grid column width in px; spare width is shared in proportion to it #}
+                    {% set colStyle = 'flex: ' ~ header[1] ~ ' 0 ' ~ header[1] ~ 'px; width: ' ~ header[1] ~ 'px;' %}
+                    {% if show_currency or header[0].fieldtype == 'Float' %}{% set colStyle = colStyle ~ ' justify-content: flex-end; text-align: right;' %}{% endif %}
+                    <div style="{{colStyle}}" class="col grid-static-col" title="{{header[0].label}}{% if show_currency %} ({{currency}}){% endif %}">
                         <div class="static-area ellipsis">{{header[0].label}}{% if show_currency %} ({{currency}}){% endif %}</div>
                     </div>
                     {% endfor %}
@@ -24,21 +34,18 @@
                 {% for item in items %}
                 <div class="grid-row" data-name="{{item.name}}" data-idx="{{item.idx}}">
                     <div class="data-row row m-0">
-                        <div style="max-width:5%" class="col grid-static-col col-xs-1">
+                        <div style="flex: 0 0 50px; width: 50px;" class="col grid-static-col">
                             <span>{{item.idx}}</span>
                         </div>
                         {% for header in headers %}
-                    {% set currencyStyle = '' %}
-                    {% set classStyle = header[1] %}
-                    {% if  header[0].bold == 1 or header[0].reqd == 1 %} 
-                    {% set classStyle = classStyle  ~  ' bold' %}
-                    {% endif %}
-                    {% if  header[0].fieldtype == 'Currency'  or header[0].fieldtype == 'Float' %} 
-                    {% set classStyle = classStyle  ~  ' text-align: right' %}
-                    {% set currencyStyle = 'text-align: right' %}
-                    {% endif %}
-                    <div style="{{currencyStyle}}" class="col grid-static-col col-xs-{{classStyle}}" data-fieldname="{{header[0].fieldname}}" data-fieldtype="{{header[0].fieldtype}}">
-                            <div title="{{item[header[0].fieldname]}}" class="static-area ellipsis">{{item[header[0].fieldname]}}</div>
+                        {% set colStyle = 'flex: ' ~ header[1] ~ ' 0 ' ~ header[1] ~ 'px; width: ' ~ header[1] ~ 'px;' %}
+                        {% set colClass = '' %}
+                        {% if header[0].bold == 1 or header[0].reqd == 1 %}{% set colClass = colClass ~ ' bold' %}{% endif %}
+                        {% if header[0].fieldtype == 'Currency' or header[0].fieldtype == 'Float' %}{% set colStyle = colStyle ~ ' justify-content: flex-end; text-align: right;' %}{% endif %}
+                        {% set wrap = header[0].fieldname in wrapFields %}
+                        {% if wrap %}{% set colClass = colClass ~ ' qli-wrap' %}{% endif %}
+                        <div style="{{colStyle}}" class="col grid-static-col{{colClass}}" data-fieldname="{{header[0].fieldname}}" data-fieldtype="{{header[0].fieldtype}}">
+                            <div title="{{item[header[0].fieldname]}}" class="static-area{% if not wrap %} ellipsis{% endif %}">{{item[header[0].fieldname]}}</div>
                         </div>
                         {% endfor %}
                     </div>

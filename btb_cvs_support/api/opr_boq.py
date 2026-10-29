@@ -18,7 +18,7 @@ from frappe.utils import flt
 
 from .boq import populate_cart_detail
 from .btb_quotation import populate_cart_item_model_by_cart_items
-from ..document.generator import generate, delete_existing_attachment
+from ..document.generator import generate
 
 TEMPLATE_PATH = "../apps/btb_cvs_support/btb_cvs_support/document/templates/boq_opr.docx"
 
@@ -49,12 +49,10 @@ def provide(opr_name: str) -> Dict:
         "qt": get_opr_details(opr)
     }
     file_name = "BOQ_"+opr_name+".pdf"
-    # ADR-0001 D7 - an OPR carries one current BOQ, not one per click. Done
-    # before rendering: the new File row must not be the one that gets removed.
-    delete_existing_attachment("Order Processing Request", opr_name, file_name)
-    generate(TEMPLATE_PATH, output, format="pdf", doc_type="Order Processing Request",
-             doc_name=opr_name, file_name=file_name, addDigitalSignature=False)
-    return {"status": "Success", "traced": len(ciModels), "skipped": skipped}
+    file_url = generate(TEMPLATE_PATH, output, format="pdf", doc_type="Order Processing Request",
+             doc_name=opr_name, file_name=file_name, addDigitalSignature=False,
+             replace_existing=True)  # ADR-0001 D7 - one current BOQ, not one per click
+    return {"status": "Success", "traced": len(ciModels), "skipped": skipped, "file_url": file_url}
 
 
 def resolve_rows(opr) -> Tuple[Dict[str, float], List[Dict]]:

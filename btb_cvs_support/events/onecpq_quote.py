@@ -4,36 +4,33 @@ from ..api.onecpq_quote_item import *
 from ..api.site_info import *
 #DEV API Key = dd017c3d9d14afe:2aba5089f049917
 
-@frappe.whitelist()
 def delete_links(doc, method = None):
-    sql = f"""select name from tabBtbCartItemLink where parent='{doc}'"""
-    for item in frappe.db.sql(sql, as_dict=1): 
+    sql = """select name from tabBtbCartItemLink where parent = %(doc)s"""
+    for item in frappe.db.sql(sql, {"doc": doc}, as_dict=1): 
             frappe.delete_doc("BtbCartItemLink",item.name) == None
     return
 
 @frappe.whitelist()
 def get_cart_item_links(quote_name: str):
-    sql = f"""select name from tabBtbCartItemLink where entity='{quote_name}'"""
-    items = frappe.db.sql(sql, as_dict=1)
+    sql = """select name from tabBtbCartItemLink where entity = %(quote_name)s"""
+    items = frappe.db.sql(sql, {"quote_name": quote_name}, as_dict=1)
     return items
 
 @frappe.whitelist()
 def get_cart_items(quote_name: str):
-    sql = f"""select * from tabBtbCartItem tbci where cart in (select parent  from tabBtbCartLink tbcl where entity ='{quote_name}') and valid = 1 
-and name not in ( select parent from tabBtbCartItemLink tbcil where entity = '{quote_name}')
+    sql = """select * from tabBtbCartItem tbci where cart in (select parent  from tabBtbCartLink tbcl where entity = %(quote_name)s) and valid = 1 
+and name not in ( select parent from tabBtbCartItemLink tbcil where entity = %(quote_name)s)
 order by tbci.idx"""
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"quote_name": quote_name}, as_dict=1)
     return items
 
-@frappe.whitelist()
 def get_items(quote_name: str):
-    sql = f"""
-        select name from `tabQuotation Item` tqi   where tqi.parent ='{quote_name}' and tqi.custom_cart_item is null
+    sql = """
+        select name from `tabQuotation Item` tqi   where tqi.parent = %(quote_name)s and tqi.custom_cart_item is null
     """
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"quote_name": quote_name}, as_dict=1)
     return items
 
-@frappe.whitelist()
 def before_save_cart(doc, method = None):
     print('get_config allow_cpq before_save_cart',get_config('allow_cpq') )
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
@@ -44,39 +41,36 @@ def before_save_cart(doc, method = None):
     if(doc.discount != None and (doc.discount < min_discount_limit or doc.discount > max_discount_limit)):frappe.throw('Discount % not in the approved limit.')
     if(doc.unit_price == 0): doc.valid = 0
 
-@frappe.whitelist()
 def proceed_cart_item_link(doc, method = None):
     print('get_config allow_cpq proceed_cart_item_link',get_config('allow_cpq') )
     print('doc.unit_price : ',doc.unit_price)
     print('doc.valid : ',doc.valid)
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     if(doc.unit_price == 0):
-        sqlcil = f"""select name,entity from tabBtbCartItemLink where parent='{doc.name}'"""
-        for item in frappe.db.sql(sqlcil, as_dict=1): 
+        sqlcil = """select name,entity from tabBtbCartItemLink where parent = %(name)s"""
+        for item in frappe.db.sql(sqlcil, {"name": doc.name}, as_dict=1): 
             frappe.delete_doc("BtbCartItemLink",item.name) == None
         print('doc.valid after: ',doc.valid)
         return
     if(doc.valid == 1):
-        sql = f"""select entity  from tabBtbCartLink tbcl where parent ='{doc.cart}'
-        and entity not in (select entity from tabBtbCartItemLink where parent='{doc.name}')"""
+        sql = """select entity  from tabBtbCartLink tbcl where parent = %(cart)s
+        and entity not in (select entity from tabBtbCartItemLink where parent = %(name)s)"""
         entityList = []
-        for item in frappe.db.sql(sql, as_dict=1): 
+        for item in frappe.db.sql(sql, {"cart": doc.cart, "name": doc.name}, as_dict=1): 
             entityList.append(item.entity)
         for entity in entityList: 
             ci = populate_cart_item_links(entity, doc)
             ci.save()
 
-@frappe.whitelist()
 def lock_cart( doc_name,doc_status) :
     print('inside after quote save ',doc_status)
     lock = 1
     if (doc_status == 0) : lock = 0
     print('inside after quote save lock',lock)
-    sql = f""" select parent from `tabBtbCartLink` cl join `tabBtbCart` c on cl.parent = c.name and c.locked !='{lock}' 
-    where entity='{doc_name}'
+    sql = """ select parent from `tabBtbCartLink` cl join `tabBtbCart` c on cl.parent = c.name and c.locked != %(lock)s 
+    where entity = %(doc_name)s
     """
-    print('inside after quote save sql',sql)
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"lock": lock, "doc_name": doc_name}, as_dict=1)
     print('inside after quote save items',items)
     for item in items:
         cart = frappe.frappe.get_doc("BtbCart", item.parent)
@@ -84,7 +78,6 @@ def lock_cart( doc_name,doc_status) :
         cart.db_update()
 
 
-@frappe.whitelist()
 def on_submit_quote(doc = None, method = None):
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     if(doc.custom_customizable !=1): return
@@ -92,17 +85,15 @@ def on_submit_quote(doc = None, method = None):
     if(doc.custom_customizable ==1) : lock_cart(doc.name,doc.docstatus)
 
 def validate_cart(quote_name: str):
-    sql = f""" select * from tabBtbCartItem tbci where cart in (select parent  from tabBtbCartLink tbcl where entity ='{quote_name}') and 
-    ( valid = 0 or name not in ( select parent from tabBtbCartItemLink tbcil where entity = '{quote_name}'))"""
-    items = frappe.db.sql(sql, as_dict=1)
+    sql = """ select * from tabBtbCartItem tbci where cart in (select parent  from tabBtbCartLink tbcl where entity = %(quote_name)s) and 
+    ( valid = 0 or name not in ( select parent from tabBtbCartItemLink tbcil where entity = %(quote_name)s))"""
+    items = frappe.db.sql(sql, {"quote_name": quote_name}, as_dict=1)
     return len(items) >0
 
-@frappe.whitelist()
 def on_cancel_quote(doc = None, method = None):
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     if(doc.custom_customizable ==1) : lock_cart(doc.name,doc.docstatus)
 
-@frappe.whitelist()
 def before_save_quote(doc = None, method = None):
     # frappe.log('get_config allow_cpq before save quote' )
     # frappe.log(get_config('allow_cpq'))
@@ -216,7 +207,6 @@ def create_cart(quote_name: str):
     cart.insert()
     return cart.name
 
-@frappe.whitelist()
 def remove_quotation_items(doc):
     # print('get_config allow_cpq remove_quotation_items',get_config('allow_cpq') )
     # if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
@@ -250,6 +240,5 @@ def populate_cart_item_links(quote_name:str,item:any):
     ci.parenttype = "BtbCartItem"
     ci.parentfield = "cart_item_links"
     return ci
-@frappe.whitelist()
 def on_trash(doc, method = None):
     print('deleting cart',method)

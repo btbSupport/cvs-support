@@ -14,6 +14,27 @@
 > tidying up redundant rows. See [Why D7](#why-d7-and-why-it-also-changes-the-quotation) —
 > this is worth putting back to the stakeholder before release.
 
+> **Amendment, 2026-10-29.**
+>
+> - **D7 re-confirmed.** The stakeholder accepts that regenerating replaces the
+>   previous BOQ, knowing it is a real superseded document. The open question below
+>   is closed.
+> - **Replacement order changed** (supersedes Architecture §1 step 5). The old
+>   BOQ used to be deleted *before* rendering, so a failed OneDoc call left the
+>   record with no BOQ. `generator.generate` now fetches the PDF into memory
+>   first, then deletes the previous attachment (`replace_existing=True`), then
+>   writes and attaches the new one. A failed render leaves the previous BOQ in
+>   place. Deleting before the write still keeps `File.on_trash` away from the new
+>   file.
+> - **OneDoc calls are bounded.** They time out after 60 s, retry once if the
+>   connection drops, and refuse a non-200 or non-PDF response instead of saving
+>   it as the PDF.
+> - **The OPR button (§5) was never in the fixture.** It is now added to
+>   `opr_controller` as described.
+> - **Generated documents open in a new tab** instead of reloading the page (the
+>   Quotation outputs and the OPR BOQ). The generators return the stored
+>   `file_url` for this.
+
 ## Context
 
 ### The flow today
@@ -456,7 +477,8 @@ change.
 
 ## Open questions
 
-**Re-confirm D7 with the stakeholder** (raised 2026-08-11). It was agreed on
+**Re-confirm D7 with the stakeholder** (raised 2026-08-11; **closed 2026-10-29**:
+re-confirmed, replace stays). It was agreed on
 the understanding that the accumulated attachments were duplicate rows over one
 file. They are not — each is a distinct superseded BOQ, and D7 as built deletes
 them. The behaviour is implemented as decided; the question is whether the

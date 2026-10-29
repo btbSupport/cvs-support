@@ -35,6 +35,7 @@ def populate_cart_detail( quote_name:str):
     file_path = frappe.utils.get_bench_path()+'/sites/'+frappe.utils.get_site_base_path()[2:]+file_url
 
     # frappe.log('file_path : '+file_path)
+    usedSheetNames = set()
     with pd.ExcelWriter(file_path) as writer:
         for subCat, features in models.items():
             productCode = subCategoryMap.get(subCat)
@@ -53,16 +54,32 @@ def populate_cart_detail( quote_name:str):
                 pn.items.append(det)
             output[subCat] = pn.__dict__
             df = pd.DataFrame(pn.items)
-            df.to_excel(writer,sheet_name=subCat,index=False,header=False)
+            df.to_excel(writer,sheet_name=get_sheet_name(subCat, usedSheetNames),index=False,header=False)
     file_doc = frappe.new_doc("File")
     file_doc.file_name = file_name
     file_doc.folder = "Home"
     file_doc.is_private = 1
     file_doc.file_url = file_url
-    file_doc.attached_to_doctype = "Quotation",
+    file_doc.attached_to_doctype = "Quotation"
     file_doc.attached_to_name = quote_name
     file_doc.save()
-    return 'Success'
+    return {"status": "Success", "file_url": file_doc.file_url}
+
+INVALID_SHEET_CHARS = re.compile(r"[\\/?*\[\]:]")
+
+def get_sheet_name(subCat, usedNames):
+    """Excel sheet names can't contain \\ / ? * [ ] :, can't start or end with
+    an apostrophe, are at most 31 characters and must be unique (ignoring case).
+    The full sub-category name is still shown in the sheet's header rows."""
+    base = INVALID_SHEET_CHARS.sub("-", str(subCat or "")).strip("'").strip() or "Sheet"
+    name = base[:31]
+    n = 2
+    while name.lower() in usedNames:
+        suffix = f" ({n})"
+        name = base[:31 - len(suffix)].rstrip("'") + suffix
+        n += 1
+    usedNames.add(name.lower())
+    return name
 
 def populateHeader( qt, header, subCat):
     replacements = {

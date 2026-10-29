@@ -1,6 +1,5 @@
 import frappe
 from ..api.site_info import *
-@frappe.whitelist()
 def before_upsert(doc, method = None):
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0 or doc.custom_cart_item == None): return
 #     sql = f"""
@@ -10,7 +9,7 @@ def before_upsert(doc, method = None):
 #     """
    
     # if(doc.custom_configurable == 1):
-    sql = f"""
+    sql = """
         select cartItem.*,GROUP_CONCAT(CASE WHEN field = 'modelItem' THEN item_code END) AS model_item_code,
             GROUP_CONCAT(CASE WHEN field = 'modelItem' THEN stock_uom END) AS model_stock_uom,
             GROUP_CONCAT(CASE WHEN field = 'tagRef' THEN cifValue END) AS tagRef,
@@ -18,10 +17,10 @@ def before_upsert(doc, method = None):
             GROUP_CONCAT(CASE WHEN field = 'notesInput' THEN cifValue END) AS notesInput from  
                 (SELECT ci.item_code ciItemCode,ci.stock_uom ciStockUom,tbci.title ciTitle,tbci.idx ciIdx,tbci.name ciName,tbci.custom_configurable
                 from tabBtbCartItem tbci  
-                join `tabItem` ci on tbci.name = '{doc.custom_cart_item}' and ci.name = tbci.item) 
+                join `tabItem` ci on tbci.name = %(cart_item)s and ci.name = tbci.item) 
             cartItem
              left join  (select i.item_code,i.stock_uom,tbf.field,tbcif.value cifValue,tbfti.value,tbcif.parent from tabBtbCartItemFeature tbcif  
-                join tabBtbFeature tbf  on  tbcif.parent  = '{doc.custom_cart_item}' and tbf.name = tbcif.feature  and tbf.field in('modelItem','tagRef','notes','notesInput')
+                join tabBtbFeature tbf  on  tbcif.parent  = %(cart_item)s and tbf.name = tbcif.feature  and tbf.field in('modelItem','tagRef','notes','notesInput')
                 left join tabBtbFeatureTypeItem tbfti on  tbfti.name = tbcif.value
                 left join `tabItem` i on i.name = tbfti.`object`) 
             config 
@@ -43,9 +42,8 @@ def before_upsert(doc, method = None):
     # left join `tabItem` i on i.name = tbfti.`object`
     # left join `tabItem` ci on ci.name = tbci.item) a 
     #     """
-    print("calling quote line item sync sql",sql)
 
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"cart_item": doc.custom_cart_item}, as_dict=1)
     if len(items) > 0 :
         item = items[0]
         print("items inside qli ",items)

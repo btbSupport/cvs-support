@@ -175,11 +175,17 @@ doc_events = {
     "Quotation": {
         "before_save": "btb_cvs_support.events.onecpq_quote.before_save_quote",
         "on_submit": "btb_cvs_support.events.onecpq_quote.on_submit_quote",
-        "on_cancel": "btb_cvs_support.events.onecpq_quote.on_cancel_quote"
+        "on_cancel": "btb_cvs_support.events.onecpq_quote.on_cancel_quote",
+        "on_update": "btb_cvs_support.events.quote_line_sequence.on_quote_update"
     },
     "BtbCartItem": {
         "before_save": "btb_cvs_support.events.onecpq_quote.before_save_cart",
         # "on_update": "btb_cvs_support.events.onecpq_quote.proceed_cart_item_link"
+        "on_update": "btb_cvs_support.events.quote_line_sequence.on_cart_item_update"
+    },
+    "BtbCartItemLink": {
+        "on_update": "btb_cvs_support.events.quote_line_sequence.on_cart_item_link_change",
+        "after_delete": "btb_cvs_support.events.quote_line_sequence.on_cart_item_link_change"
     }
 }
 # Scheduled Tasks
@@ -288,6 +294,12 @@ fixtures = [
     },
     {
         "doctype": "Custom Field",
+        "filters": [
+            ["module","in",["Btb Cvs Support"]]
+        ]
+    },
+    {
+        "doctype": "Property Setter",
         "filters": [
             ["module","in",["Btb Cvs Support"]]
         ]

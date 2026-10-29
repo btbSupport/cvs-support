@@ -22,10 +22,10 @@ def get_mapped_delivery_note(source_name, target_doc = None):
             "doctype": "Delivery Note"
         }
     }, target_doc)
-    sql = f"""
-        select sales_order, customer_name, customer_reference, payment_term from `tabOrder Processing Request` where name = '{source_name}'
+    sql = """
+        select sales_order, customer_name, customer_reference, payment_term from `tabOrder Processing Request` where name = %(source_name)s
     """
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"source_name": source_name}, as_dict=1)
     target_doc.sales_order_no = items[0].get("sales_order")
     target_doc.custom_sales_order = items[0].get("sales_order")
     target_doc.customer =  items[0].get("customer_name")
@@ -42,10 +42,10 @@ def get_mapped_stock_consumption(source_name, target_doc = None):
             "doctype": "Stock Entry"
         }
     }, target_doc)
-    sql = f"""
-        select sales_order, customer_name from `tabOrder Processing Request` where name = '{source_name}'
+    sql = """
+        select sales_order, customer_name from `tabOrder Processing Request` where name = %(source_name)s
     """
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"source_name": source_name}, as_dict=1)
     target_doc.sales_order = items[0].get("sales_order")
     target_doc.custom_sales_order = items[0].get("sales_order")
     target_doc.customer_name =  items[0].get("customer_name")
@@ -53,11 +53,11 @@ def get_mapped_stock_consumption(source_name, target_doc = None):
 
 @frappe.whitelist()
 def get_sales_order_details(sales_order_number: str):
-    sql = f"""
+    sql = """
         select  so.conversion_rate, so.additional_discount_percentage 
-        from `tabSales Order` so where so.name = '{sales_order_number}'
+        from `tabSales Order` so where so.name = %(sales_order_number)s
     """
-    return frappe.db.sql(sql, as_dict = 1)[0]
+    return frappe.db.sql(sql, {"sales_order_number": sales_order_number}, as_dict = 1)[0]
 
 @frappe.whitelist()
 def get_pending_quantities(sales_order_number: str, opr_name: str):
@@ -88,12 +88,12 @@ def get_delivery_note_summary(opr_name: str):
 
 @frappe.whitelist()
 def get_delivery_note_data(opr_name: str):
-    sql = f"""
+    sql = """
         select dn.name, dn.posting_date, dn.job_number, dn.sales_order_no, dn.custom_total_sqm, dn.custom_total_pcs, dn.net_total
         from `tabDelivery Note` dn
-        where dn.custom_opr = '{opr_name}' and dn.docstatus = 1
+        where dn.custom_opr = %(opr_name)s and dn.docstatus = 1
     """
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"opr_name": opr_name}, as_dict=1)
     return items;
 
 @frappe.whitelist()
@@ -110,34 +110,34 @@ def get_stock_consumption_summary(opr_name: str):
 
 @frappe.whitelist()
 def get_stock_consumption_data(opr_name: str):
-    sql = f"""
+    sql = """
         select se.name, se.posting_date, se.job_number, se.value_difference 
         from  `tabStock Entry` se 
-        where se.custom_opr = '{opr_name}' and se.stock_entry_type = 'Material Issue'
+        where se.custom_opr = %(opr_name)s and se.stock_entry_type = 'Material Issue'
         and se.docstatus = 1
     """
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"opr_name": opr_name}, as_dict=1)
     return items;
  
 
 def get_items(sales_order_number: str):
-    sql = f"""
+    sql = """
         select soi.name so_detail, soi.description, soi.item_code, soi.rate, soi.uom, qty,
             i.custom_manufactured_item
         from `tabSales Order Item` soi
         join `tabItem` i on soi.item_code = i.item_code
-        where soi.parent = '{sales_order_number}'
+        where soi.parent = %(sales_order_number)s
         order by soi.idx
     """
-    return frappe.db.sql(sql, as_dict=1)
+    return frappe.db.sql(sql, {"sales_order_number": sales_order_number}, as_dict=1)
 
 def get_ordered_items(sales_order_number: str, opr_name: str):
-    sql = f"""
+    sql = """
         Select qt.so_detail, sum(qt.quantity) qty
         from `tabQuantities Table` qt
         join `tabOrder Processing Request` opr on qt.parent = opr.name
-        where opr.sales_order = '{sales_order_number}'
-        and opr.name != '{opr_name}'
+        where opr.sales_order = %(sales_order_number)s
+        and opr.name != %(opr_name)s
         and opr.workflow_state != 'Completed' and opr.docstatus != 2
         group by qt.so_detail
         
@@ -146,12 +146,12 @@ def get_ordered_items(sales_order_number: str, opr_name: str):
         select acc.so_detail, sum(acc.quantity)
         from `tabAccessories` acc
         join `tabOrder Processing Request` opr on acc.parent = opr.name
-        where opr.sales_order = '{sales_order_number}'
-        and opr.name != '{opr_name}'
+        where opr.sales_order = %(sales_order_number)s
+        and opr.name != %(opr_name)s
         and opr.workflow_state != 'Completed' and opr.docstatus != 2
         group by acc.so_detail
     """
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"sales_order_number": sales_order_number, "opr_name": opr_name}, as_dict=1)
     output = {}
     delivered_items = get_delivered_items(sales_order_number)
     for item in items:
@@ -168,17 +168,17 @@ def get_ordered_items(sales_order_number: str, opr_name: str):
 
 def get_delivered_items(sales_order_number: str):
     #Account delivered quantity only for completed or cancelled opr
-    sql = f"""
+    sql = """
         select dni.so_detail, sum(dni.qty) as qty
         from `tabDelivery Note Item` dni
         join `tabDelivery Note` dn on dni.parent = dn.name
         join `tabOrder Processing Request` opr on dn.custom_opr = opr.name
-        where dn.custom_sales_order = '{sales_order_number}'
+        where dn.custom_sales_order = %(sales_order_number)s
         and (opr.workflow_state = 'Completed' or opr.docstatus = 2)
         and dn.docstatus = 1
         group by dni.so_detail
     """
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"sales_order_number": sales_order_number}, as_dict=1)
     output = {}
     for item in items:
         output[item["so_detail"]] = item["qty"]

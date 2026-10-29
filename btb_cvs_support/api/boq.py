@@ -35,16 +35,15 @@ def provide( quote_name: str):
     file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/boq.docx"
     print("output : ",output)
     file_name = "BOQ_"+quote_name+".pdf"
-    # ADR-0001 D7 - a quotation carries one current BOQ, not one per click
-    delete_existing_attachment("Quotation", quote_name, file_name)
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
-    generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name=file_name,addDigitalSignature=False)
-    return 'Success'
+    file_url = generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name=file_name,addDigitalSignature=False,
+        replace_existing=True)  # ADR-0001 D7 - one current BOQ, not one per click
+    return {"status": "Success", "file_url": file_url}
 
 def get_quote_details( quote_name: str) -> Dict:
-    sql = f""" select customer_name,project,name,docstatus  from `tabQuotation` tqi where name ='{quote_name}'
+    sql = """ select customer_name,project,name,docstatus  from `tabQuotation` tqi where name = %(quote_name)s
     """
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"quote_name": quote_name}, as_dict=1)
     item = items[0]
     item["water_mark"]=" "
     if(item["docstatus"] != 1):

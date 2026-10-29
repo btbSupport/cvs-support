@@ -35,16 +35,16 @@ def provide( quote_name: str):
     # file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_eg.docx"
 
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
-    generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf",addDigitalSignature=True)
+    file_url = generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf",addDigitalSignature=True)
     # generate(file_path, output, format="original",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".docx")
-    return output
+    return {"status": "Success", "file_url": file_url}
     # return 'Success'
 
 def get_quote_details( quote_name: str) -> Dict:
     from frappe.utils import money_in_words
-    sql = f""" select currency,conversion_rate,docstatus,customer_name,address_display,in_words,contact_display,contact_designation,contact_mobile,contact_email,subject,project,name,terms,quotation_term_details,letter_details,standard_tc_details,grand_total,total_taxes_and_charges,net_total,discount_amount,additional_discount_percentage,total  from `tabQuotation` tqi where name ='{quote_name}'
+    sql = """ select currency,conversion_rate,docstatus,customer_name,address_display,in_words,contact_display,contact_designation,contact_mobile,contact_email,subject,project,name,terms,quotation_term_details,letter_details,standard_tc_details,grand_total,total_taxes_and_charges,net_total,discount_amount,additional_discount_percentage,total  from `tabQuotation` tqi where name = %(quote_name)s
     """
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"quote_name": quote_name}, as_dict=1)
     item = items[0]
     item["water_mark"]=" "
     item["displayTotal"]=1

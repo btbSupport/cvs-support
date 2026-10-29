@@ -1,11 +1,14 @@
 import frappe
 import json
+from frappe.utils import flt
 from typing import Dict, List
 import pandas as pd
 from erpnext.controllers.taxes_and_totals import calculate_taxes_and_totals
 from decimal import Decimal
-from onecpq_connect.api.functions import bulk_insert_with_children
+from frappe.model.naming import make_autoname
 fti_cache ={}
+# file names of the documents the Output Documents buttons generate
+GENERATED_FILE_PREFIXES = ("BOQ_", "Quote_", "Production Sheet_")
 
 def populate_cart_item_model( quote_name,conversion_rate):
     syncedItems = get_items(quote_name,conversion_rate)
@@ -49,12 +52,12 @@ def get_grouped_items(items):
     return res
 @frappe.whitelist()
 def get_items( quote_name: str,conversion_rate:float) -> List[Dict[str, any]]:
-    sql = f""" select tbc.name,tbc.Unit_Price / {conversion_rate} AS Unit_Price,tbc.discount , tbc.idx, tbc.Quantity, tbc.Title,
+    sql = """ select tbc.name,tbc.Unit_Price / %(conversion_rate)s AS Unit_Price,tbc.discount , tbc.idx, tbc.Quantity, tbc.Title,
         i.Name itemName, i.item_code, tbf.Field, tbf.label ,
         tbcif.value cif_value,tbfti.value fti_value,tbfti.`object` obj_value,tbft.object_type obj_type,tbft.data_text_field 
     from tabBtbCartItem tbc
     join `tabItem` i on tbc.item  = i.name and   tbc.name in (
-    select parent from tabBtbCartItemLink tbcil where entity = '{quote_name}'
+    select parent from tabBtbCartItemLink tbcil where entity = %(quote_name)s
     )
     join tabBtbCartItemFeature tbcif on tbcif.parent = tbc.name
     join tabBtbFeature tbf  on tbf.name = tbcif.feature 
@@ -62,7 +65,7 @@ def get_items( quote_name: str,conversion_rate:float) -> List[Dict[str, any]]:
     left join tabBtbFeatureType tbft on tbft.name = tbfti.feature_type
     order by tbc.idx
     """
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"quote_name": quote_name, "conversion_rate": flt(conversion_rate) or 1}, as_dict=1)
     return items
 
 def populate_featuretype_items( cartItems):
@@ -133,7 +136,7 @@ def get_featuretype_items( tabName:str, data_text_field:str, values: List[str],f
 
 @frappe.whitelist()
 def get_synced_cart_items(quote_name: str):
-    sql = f"""
+    sql = """
         select cartItem.*,
 GROUP_CONCAT(CASE WHEN field = 'modelItem' THEN item_code END) AS model_item_code,
 GROUP_CONCAT(CASE WHEN field = 'modelItem' THEN stock_uom END) AS model_stock_uom,
@@ -144,7 +147,7 @@ GROUP_CONCAT(CASE WHEN field = 'notesInput' THEN cifValue END) AS notesInput fro
     (SELECT i.item_code ciItemCode,i.stock_uom ciStockUom,ci.*
     from `tabBtbCartItemLink` cil 
         join tabBtbCartItem ci on ci.name=cil.parent 
-         and  cil.entity ='{quote_name}'
+         and  cil.entity = %(quote_name)s
     join `tabItem` i on i.name = ci.item) 
     
 cartItem
@@ -161,7 +164,7 @@ group by cartItem.name
 order by cartItem.idx
 
     """
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"quote_name": quote_name}, as_dict=1)
     return items
     
 # @frappe.whitelist()
@@ -178,20 +181,20 @@ order by cartItem.idx
 
 @frappe.whitelist()
 def get_synced_items(quote_name: str):
-    sql = f"""
+    sql = """
         select tqi.*,tbci.idx,tbci.unit_price,tbci.discount ciDiscount,tbci.quantity ciQty,tbci.name ciName  from `tabQuotation Item` tqi 
-        join tabBtbCartItem tbci on tbci.name=tqi.custom_cart_item  where tqi.parent ='{quote_name}'
+        join tabBtbCartItem tbci on tbci.name=tqi.custom_cart_item  where tqi.parent = %(quote_name)s
 order by tbci.idx, tbci.creation
     """
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"quote_name": quote_name}, as_dict=1)
     return items
 
 @frappe.whitelist()
 def getQuoteById( quote_name):
-    sql = f"""
-		select *  from `tabQuotation` tqi where name ='{quote_name}'
+    sql = """
+		select *  from `tabQuotation` tqi where name = %(quote_name)s
 	"""
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"quote_name": quote_name}, as_dict=1)
     if(len(items) >0) : return items[0]
     return None
 
@@ -243,14 +246,14 @@ def applyDiscount( quote_name: str,discount:float):
 
 @frappe.whitelist()
 def get_cart_items( quote_name: str) :
-    sql = f""" select name,discount
+    sql = """ select name,discount
     from tabBtbCartItem tbc where tbc.cart in (
-    select parent from `tabBtbCartLink` where entity='{quote_name}'
+    select parent from `tabBtbCartLink` where entity = %(quote_name)s
     )
     order by tbc.idx
     
     """
-    items = frappe.db.sql(sql, as_dict=1)
+    items = frappe.db.sql(sql, {"quote_name": quote_name}, as_dict=1)
     return items
 
 # @frappe.whitelist()
@@ -283,63 +286,86 @@ def get_cart_items( quote_name: str) :
 def amendCPQ(quote_name: str,amended_from: str):
     print('inside amendCPQ',quote_name)
     print('inside amendCPQ amended_from',amended_from)
-    cartsql = f"""select parent from tabBtbCartLink tbcl where entity ='{quote_name}'"""
-    avl_cart = frappe.db.sql(cartsql, as_dict=1)
+    # it rebuilds quote_name's cart from amended_from's, so it needs both
+    frappe.has_permission("Quotation", "write", quote_name, throw=True)
+    frappe.has_permission("Quotation", "read", amended_from, throw=True)
+    cartsql = """select parent from tabBtbCartLink tbcl where entity = %(quote_name)s"""
+    avl_cart = frappe.db.sql(cartsql, {"quote_name": quote_name}, as_dict=1)
     if(len(avl_cart)>0):return avl_cart[0].parent
     cart_name = create_cart(quote_name)
-    syncedItems = get_synced_items(amended_from)
-    print('inside amendCPQ cartItems',syncedItems)
-    cartItems = []
-    seq = 1
-    current_user = frappe.session.user
-    current_time = frappe.utils.now()
-    quoteItemMap = {}
-    for item in syncedItems:
-        ci = frappe.get_doc("BtbCartItem", item.ciName)
-        # ci.name = None
-        quoteItemMap[item.ciName] = frappe.frappe.get_doc("Quotation Item",item.name)
-        ci.creation = current_time
-        ci.modified = current_time
-        ci.owner = current_user
-        ci.modified_by = current_user
-        ci.cart = cart_name
-        ci.idx = seq
-        ci.sequence = seq
-        seq = seq+1
-        ciLinks =[]
-        for cil in ci.cart_item_links:
-            cil.entity = quote_name
-            cil.creation = current_time
-            cil.modified = current_time
-            cil.owner = current_user
-            cil.modified_by = current_user
-            ciLinks.append(cil)
-        ci.cart_item_links = ciLinks
-        cartItems.append(ci)
-    items = bulk_insert_with_children("BtbCartItem",cartItems)
-    qliId = 1
-    quot = frappe.frappe.get_doc("Quotation", quote_name)
-    quoteItems = []
-    for key in list(items['parents'].keys()):
-        quoteItem = quoteItemMap[key]
-        quoteItem.custom_cart_item = items['parents'][key]
-        quoteItem.idx = qliId
-        quoteItem.name = None
-        quoteItem.docstatus = 0
-        quoteItem.parent = quote_name
-        qliId +=1
-        quoteItem.db_update()
-        # quoteItems.append(quoteItem)
-    quot.custom_cpq_amended = 1
-    # quot.items = quoteItems
-    # calculate_taxes_and_totals(quot)
-    attachments = frappe.get_all("File", filters={"attached_to_doctype": "Quotation", "attached_to_name": quote_name})
+    copy_cart_to_quote(get_synced_items(amended_from), quote_name, cart_name)
+    # drop only generated outputs copied from the source; user uploads (drawings, POs) stay
+    attachments = frappe.get_all("File", filters={"attached_to_doctype": "Quotation", "attached_to_name": quote_name}, fields=["name", "file_name"])
     for file in attachments:
-        frappe.delete_doc("File", file.name, force=1)
-    quot.db_update()
+        if((file.file_name or "").startswith(GENERATED_FILE_PREFIXES)):
+            frappe.delete_doc("File", file.name, force=1, ignore_permissions=True)
+    frappe.db.set_value("Quotation", quote_name, "custom_cpq_amended", 1, update_modified=False)
     print('inside amendCPQ amended')
     return 'Cart Amended'
 
+
+# Columns a copy gets fresh values for instead of the source's
+COPY_FRESH_NULLS = ("_user_tags", "_comments", "_assign", "_liked_by")
+COPY_CHUNK = 500
+
+def copy_cart_to_quote(source_lines, quote_name: str, cart_name: str):
+    """Copies the source quote's cart items (with their features and links) into
+    cart_name, numbered 1..n in the source's line order, and copies the source's
+    quote lines onto quote_name pointing at the copies.
+
+    Done with INSERT ... SELECT, one statement per table and chunk: loading every
+    cart item (~150 feature rows each) and quote line as a document took ~16,000
+    queries and 10-17 s for 50 items. Copies get random names; their child rows and
+    lines get a random prefix plus a row number, which is unique by construction
+    (a bulk insert can't retry a clashing name the way doc.insert() does)."""
+    user, now = frappe.session.user, frappe.utils.now()
+    new_cart_item = {}
+    cart_items = []   # (source cart item, copy, seq)
+    lines = []        # (source line, copy of its cart item, seq)
+    for line in source_lines:
+        if(line.ciName not in new_cart_item):
+            name = make_autoname("hash", "BtbCartItem")
+            while name in new_cart_item.values(): name = make_autoname("hash", "BtbCartItem")
+            new_cart_item[line.ciName] = name
+            cart_items.append((line.ciName, name, len(cart_items) + 1))
+        lines.append((line.name, new_cart_item[line.ciName], len(lines) + 1))
+
+    stamp = {"creation": ("%s", [now]), "modified": ("%s", [now]), "owner": ("%s", [user]), "modified_by": ("%s", [user])}
+    for chunk in chunked(cart_items):
+        insert_copies("BtbCartItem", chunk, "src.name = m.src", {
+            "name": ("m.dst", []), "cart": ("%s", [cart_name]), "idx": ("m.seq", []), "sequence": ("m.seq", []), **stamp})
+        for df in frappe.get_meta("BtbCartItem").get_table_fields():
+            child_overrides = {"name": ("concat(%s, row_number() over (order by m.seq, src.idx))", [frappe.generate_hash(length=8)]),
+                               "parent": ("m.dst", []), **stamp}
+            if(df.options == "BtbCartItemLink"): child_overrides["entity"] = ("%s", [quote_name])
+            insert_copies(df.options, chunk, "src.parent = m.src and src.parenttype = 'BtbCartItem' and src.parentfield = %s",
+                          child_overrides, [df.fieldname])
+    for chunk in chunked(lines):
+        insert_copies("Quotation Item", chunk, "src.name = m.src", {
+            "name": ("concat(%s, row_number() over (order by m.seq))", [frappe.generate_hash(length=8)]),
+            "parent": ("%s", [quote_name]), "idx": ("m.seq", []), "custom_cart_item": ("m.dst", []), "docstatus": ("0", []), **stamp})
+
+def chunked(rows):
+    for i in range(0, len(rows), COPY_CHUNK):
+        yield rows[i:i + COPY_CHUNK]
+
+def insert_copies(doctype: str, mapping, join_on: str, overrides: dict, join_params = None):
+    """INSERT INTO tab<doctype> SELECT every column of the source rows matched through
+    mapping [(src, dst, seq)], with overrides {column: (sql expression, params)}."""
+    columns = frappe.db.get_table_columns(doctype)
+    exprs, params = [], []
+    for col in columns:
+        if(col in overrides):
+            expr, values = overrides[col]
+        elif(col in COPY_FRESH_NULLS):
+            expr, values = "null", []
+        else:
+            expr, values = f"src.`{col}`", []
+        exprs.append(expr); params += values
+    derived = " union all ".join(["select %s src, %s dst, %s seq"] * len(mapping))
+    params += [v for row in mapping for v in row] + list(join_params or [])
+    frappe.db.sql(f"""insert into `tab{doctype}` ({", ".join(f"`{c}`" for c in columns)})
+        select {", ".join(exprs)} from `tab{doctype}` src join ({derived}) m on {join_on}""", params)
 
 def create_cart(quote_name: str):
    
@@ -353,18 +379,20 @@ def create_cart(quote_name: str):
 
 @frappe.whitelist()
 def sync_all(quote_name, method = None):
-    cartsql = f"""select parent from tabBtbCartLink tbcl where entity ='{quote_name}'"""
-    cart = frappe.db.sql(cartsql, as_dict=1)[0].parent
-    sql = f""" select tbc.name 
-    from tabBtbCartItem tbc where tbc.valid = 1 and tbc.cart = '{cart}' and tbc.name not in (
-    select parent from tabBtbCartItemLink tbcil where entity = '{quote_name}'
+    cartsql = """select parent from tabBtbCartLink tbcl where entity = %(quote_name)s"""
+    carts = frappe.db.sql(cartsql, {"quote_name": quote_name}, as_dict=1)
+    if(len(carts) == 0): frappe.throw(frappe._("This quotation has no OneCPQ cart yet. Open the OneCPQ cart and add items first."))
+    cart = carts[0].parent
+    sql = """ select tbc.name
+    from tabBtbCartItem tbc where tbc.valid = 1 and tbc.cart = %(cart)s and tbc.name not in (
+    select parent from tabBtbCartItemLink tbcil where entity = %(quote_name)s
     )"""
     # qitems = []
     # sql = f"""
 	# 	select name,conversion_rate  from `tabQuotation` tqi where name ='{quote_name}'
 	# """
     # qt= frappe.db.sql(sql, as_dict=1)[0]
-    for item in frappe.db.sql(sql, as_dict=1): 
+    for item in frappe.db.sql(sql, {"cart": cart, "quote_name": quote_name}, as_dict=1): 
         ci = populate_cart_item_links(quote_name, item)
         ci.db_insert()
     # cartItems = get_all_cart_items(cart)
@@ -379,15 +407,14 @@ def sync_all(quote_name, method = None):
     quote.save()
 
 def get_all_cart_items(name:str):
-	sql = f"""
+	sql = """
 		select ci.name, item, price_list, list_price, unit_price, quantity, discount,
 			i.item_name, i.item_code,ci.idx,i.stock_uom,ci.idx,i.description
 		from `tabBtbCartItem` ci
 		join `tabItem` i on ci.item = i.name
-		where ci.cart = '{name}'
+		where ci.cart = %(name)s
 	"""
-	print("Trying to fetch cart item", sql)
-	return frappe.db.sql(sql, as_dict=1)
+	return frappe.db.sql(sql, {"name": name}, as_dict=1)
 
 def populate_cart_item_links(quote_name:str,item:any):
     ci = frappe.frappe.new_doc("BtbCartItemLink")
