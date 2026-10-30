@@ -285,6 +285,13 @@ doc_events = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+# FTO cost tables export for OneCPQ Admin only (see api/fto_export.py)
+override_whitelisted_methods = {
+    "frappe.desk.reportview.export_query": "btb_cvs_support.api.fto_export.export_query",
+    "frappe.core.doctype.data_export.exporter.export_data": "btb_cvs_support.api.fto_export.export_data",
+    "frappe.core.doctype.data_import.data_import.download_template": "btb_cvs_support.api.fto_export.download_template",
+}
+
 fixtures = [
     {
         "doctype": "Client Script",

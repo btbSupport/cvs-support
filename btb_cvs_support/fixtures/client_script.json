@@ -2,50 +2,6 @@
  {
   "docstatus": 0,
   "doctype": "Client Script",
-  "dt": "FTOCountryWiseCost",
-  "enabled": 0,
-  "modified": "2025-09-27 13:11:43.193648",
-  "module": "Btb Cvs Support",
-  "name": "CustomScript0009",
-  "script": "const FIELD_COLUMN_TO_HIDE = \"cost\";     // column/fieldname you want to remove from the list view\nconst ALLOWED_ROLES = [\"OneCPQ Admin\"];\n// =================\nfrappe.query_reports[\"Country Wise Cost\"] = {\n  onload: function(report) {\n    const roles = (frappe.boot?.user?.roles || []);\n    const can_see = roles.some(r => ALLOWED_ROLES.includes(r));\n\n    if (!can_see) {\n      // Filter out the unwanted column\n      report.columns = (report.columns || []).filter(\n        (col) => col.fieldname !== FIELD_COLUMN_TO_HIDE\n      );\n\n      // Re-render the report\n      if (typeof report.refresh === \"function\") {\n        report.refresh();\n      }\n    }\n  }\n};\nfrappe.listview_settings[\"FTOCountryWiseCost\"] = {\n  onload(listview) {\n    const roles = (frappe.boot?.user?.roles || []);\n    const can_see = roles.some(r => ALLOWED_ROLES.includes(r));\n\n    if (!can_see) {\n      // Remove the column if present\n      // listview.columns is the rendered column defs; filter out our target\n      listview.columns = (listview.columns || []).filter(\n        (col) => (col.df?.fieldname || col.df?.label) !== FIELD_COLUMN_TO_HIDE\n      );\n\n      // Also prune from meta fields used to build columns on refresh\n      if (listview.meta && Array.isArray(listview.meta.fields)) {\n        listview.meta.fields = listview.meta.fields.filter(\n          (df) => df.fieldname !== FIELD_COLUMN_TO_HIDE\n        );\n      }\n\n      // Re-render header to reflect the change\n      if (typeof listview.render_header === \"function\") {\n        listview.render_header(listview.$result);\n      }\n    }\n  }\n};",
-  "view": "List"
- },
- {
-  "docstatus": 0,
-  "doctype": "Client Script",
-  "dt": "FTOCountryWiseCost",
-  "enabled": 1,
-  "modified": "2025-09-27 14:26:11.130862",
-  "module": "Btb Cvs Support",
-  "name": "CustomScript0010",
-  "script": "// Doctype: Customer\n// View: List\n\n// ==== CONFIG ====\nconst FIELD_TO_HIDE = \"cost\";  // fieldname to hide from List & the Report tab\nconst ALLOWED_ROLES = [\"OneCPQ Admin\"]; // can see the column\n// =================\n\n// Helper: does current user have any allowed role?\nfunction userCanSee() {\n  try {\n    return ALLOWED_ROLES.some((r) => frappe.user.has_role(r));\n  } catch (e) {\n    const roles = (frappe.boot?.user?.roles || []);\n    return roles.some((r) => ALLOWED_ROLES.includes(r));\n  }\n}\n\n// Remove field from a Frappe \"fields\" array (df objects)\nfunction filterFields(fields) {\n  return (fields || []).filter((df) => df.fieldname !== FIELD_TO_HIDE);\n}\n\n// Remove field from a ListView \"columns\" array (column defs often wrap df)\nfunction filterColumns(columns) {\n  return (columns || []).filter((col) => {\n    const df = col.df || col;\n    return df.fieldname !== FIELD_TO_HIDE && df.id !== FIELD_TO_HIDE;\n  });\n}\n\nfrappe.listview_settings[\"FTOCountryWiseCost\"] = {\n  onload(listview) {\n    const can_see = userCanSee();\n    if (can_see) return;\n\n    // --- Affect standard List header/columns immediately ---\n    if (listview.meta && Array.isArray(listview.meta.fields)) {\n      listview.meta.fields = filterFields(listview.meta.fields);\n    }\n    if (Array.isArray(listview.columns)) {\n      listview.columns = filterColumns(listview.columns);\n    }\n    if (listview.settings && Array.isArray(listview.settings.fields)) {\n      listview.settings.fields = filterFields(listview.settings.fields);\n    }\n\n    // Patch ListView methods that build columns/fields so subsequent refreshes won't bring it back\n    if (typeof listview.get_fields === \"function\") {\n      const _get_fields = listview.get_fields.bind(listview);\n      listview.get_fields = function () {\n        return filterFields(_get_fields());\n      };\n    }\n    if (typeof listview.get_columns === \"function\") {\n      const _get_columns = listview.get_columns.bind(listview);\n      listview.get_columns = function () {\n        return filterColumns(_get_columns());\n      };\n    }\n\n    // Re-render List header if available\n    if (typeof listview.render_header === \"function\") {\n      listview.render_header(listview.$result);\n    }\n\n    // --- Handle the List page's \"Report\" tab (ReportView) ---\n    const patchReportView = () => {\n      const rv = listview.report_view; // created when user switches to Report tab\n      if (!rv) return;\n\n      // Patch methods ReportView uses to build datatable columns\n      if (typeof rv.get_columns === \"function\") {\n        const _rv_get_columns = rv.get_columns.bind(rv);\n        rv.get_columns = function () {\n          return filterColumns(_rv_get_columns());\n        };\n      }\n\n      // Some builds build from .columns directly\n      if (Array.isArray(rv.columns)) {\n        rv.columns = filterColumns(rv.columns);\n      }\n\n      // If datatable already exists, trigger a refresh to apply pruning\n      if (typeof rv.refresh === \"function\") {\n        // avoid infinite loops\n        if (!rv.__pruned_once__) {\n          rv.__pruned_once__ = true;\n          rv.refresh();\n        }\n      }\n    };\n\n    // Patch now (in case Report tab is already constructed)\n    patchReportView();\n\n    // Also patch when user switches views to \"Report\"\n    // Frappe emits events on the page; if not, fallback to a tiny timeout\n    try {\n      listview.page && listview.page.on && listview.page.on(\"view-change\", patchReportView);\n    } catch (e) {\n      // fallback: run once after a small delay when users usually switch tabs\n      setTimeout(patchReportView, 500);\n    }\n\n    // --- Last-resort DOM hide (only if someone manually re-adds the column) ---\n    // This keeps UI clean even if a custom script re-injects the column.\n    const domHide = () => {\n      const $table = listview.$result && listview.$result.find && listview.$result.find(\".dt-scrollable\");\n      if (!$table || !$table.length) return;\n      // hide header cell by data-fieldname\n      $table.find(`.dt-cell__content[data-fieldname=\"${FIELD_TO_HIDE}\"]`).closest(\".dt-cell\").hide();\n      // hide body cells by same fieldname\n      $table.find(`.dt-row .dt-cell[data-fieldname=\"${FIELD_TO_HIDE}\"]`).hide();\n    };\n    setTimeout(domHide, 800);\n  }\n};\n",
-  "view": "List"
- },
- {
-  "docstatus": 0,
-  "doctype": "Client Script",
-  "dt": "FTOCountryWiseCost",
-  "enabled": 0,
-  "modified": "2025-08-04 14:26:05.847085",
-  "module": "Btb Cvs Support",
-  "name": "countrywisecost_controller",
-  "script": "frappe.ui.form.on('FTOCountryWiseCost', {\n\trefresh(frm) {\n\t\tif (!frappe.user_roles.includes( \"OneCPQ Admin\")) {\n\t\t    frm.$wrapper.find(\"[data-fieldname='cost_info']\").hide();\n\t\t}\n\t}\n})",
-  "view": "Form"
- },
- {
-  "docstatus": 0,
-  "doctype": "Client Script",
-  "dt": "FTOCVSSpring",
-  "enabled": 0,
-  "modified": "2025-08-04 14:28:31.959754",
-  "module": "Btb Cvs Support",
-  "name": "springcost_controller",
-  "script": "frappe.ui.form.on('FTOCVSSpring', {\n\trefresh(frm) {\n\t\tif (!frappe.user_roles.includes( \"OneCPQ Admin\")) {\n\t\t    frm.$wrapper.find(\"[data-fieldname='cost_info']\").hide();\n\t\t}\n\t}\n})",
-  "view": "Form"
- },
- {
-  "docstatus": 0,
-  "doctype": "Client Script",
   "dt": "Sales Order",
   "enabled": 1,
   "modified": "2025-09-23 21:52:16.974505",
