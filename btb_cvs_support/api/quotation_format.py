@@ -35,7 +35,7 @@ def provide( quote_name: str):
     # file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_eg.docx"
 
     # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
-    file_url = generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf",addDigitalSignature=True)
+    file_url = generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf",addDigitalSignature=False)
     # generate(file_path, output, format="original",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".docx")
     return {"status": "Success", "file_url": file_url}
     # return 'Success'
