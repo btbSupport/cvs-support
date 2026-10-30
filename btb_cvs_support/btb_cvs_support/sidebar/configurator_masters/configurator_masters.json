@@ -1,0 +1,205 @@
+{
+ "app": "btb_cvs_support",
+ "creation": "2026-10-30 16:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Sidebar",
+ "header_icon": "data-table-soft",
+ "idx": 0,
+ "items": [
+  {
+   "collapsible": 1,
+   "icon": "table",
+   "indent": 1,
+   "keep_closed": 0,
+   "label": "Feature Type Tables",
+   "link_type": "DocType",
+   "type": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOBlade",
+   "link_to": "FTOBlade",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOBtbBladeSlits",
+   "link_to": "FTOBtbBladeSlits",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOFSBladeDetails",
+   "link_to": "FTOFSBladeDetails",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOCVSActuator",
+   "link_to": "FTOCVSActuator",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOActuator_Area",
+   "link_to": "FTOActuator_Area",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOVCDActuator",
+   "link_to": "FTOVCDActuator",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOVCDActuatorTorque",
+   "link_to": "FTOVCDActuatorTorque",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOCVSSpring",
+   "link_to": "FTOCVSSpring",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOCVSModelNo",
+   "link_to": "FTOCVSModelNo",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOCVSUnique",
+   "link_to": "FTOCVSUnique",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOCasingRange",
+   "link_to": "FTOCasingRange",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOFlangeAngleRange",
+   "link_to": "FTOFlangeAngleRange",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOSilencerModel",
+   "link_to": "FTOSilencerModel",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOVCDBlades",
+   "link_to": "FTOVCDBlades",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOVCDRoundModel",
+   "link_to": "FTOVCDRoundModel",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "icon": "clipboard-list",
+   "indent": 1,
+   "keep_closed": 0,
+   "label": "Dynamic BOQ Setup",
+   "link_type": "DocType",
+   "type": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "label": "BOQ Rule",
+   "link_to": "BOQ Rule",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "label": "FTOCountryWiseCost",
+   "link_to": "FTOCountryWiseCost",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "icon": "sheet",
+   "indent": 1,
+   "keep_closed": 1,
+   "label": "Reports",
+   "link_type": "DocType",
+   "type": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "label": "FS Blade Details",
+   "link_to": "FS Blade Details",
+   "link_type": "Report",
+   "type": "Link",
+   "child": 1
+  },
+  {
+   "collapsible": 1,
+   "icon": "settings",
+   "indent": 1,
+   "keep_closed": 1,
+   "label": "Settings",
+   "link_type": "DocType",
+   "type": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "label": "Cvs Settings",
+   "link_to": "Cvs Settings",
+   "link_type": "DocType",
+   "type": "Link",
+   "child": 1
+  }
+ ],
+ "modified": "2026-10-30 16:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Btb Cvs Support",
+ "name": "Configurator Masters",
+ "owner": "Administrator",
+ "standard": 1,
+ "title": "Configurator Masters"
+}

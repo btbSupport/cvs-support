@@ -27,7 +27,8 @@
   {
    "fieldname": "ulrd_valuation_rate",
    "fieldtype": "Float",
-   "label": "ULRD Valuation Rate"
+   "label": "ULRD Valuation Rate",
+   "permlevel": 1
   },
   {
    "fieldname": "item_code",
@@ -41,7 +42,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-08-08 11:35:13.768628",
+ "modified": "2026-10-30 18:30:00.000000",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCVSActuator",
@@ -58,6 +59,21 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "import": 1,
+   "read": 1,
+   "role": "OneCPQ Admin",
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "OneCPQ Admin",
    "write": 1
   }
  ],

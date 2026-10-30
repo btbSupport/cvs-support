@@ -33,7 +33,8 @@
   {
    "fieldname": "cost",
    "fieldtype": "Float",
-   "label": "Cost"
+   "label": "Cost",
+   "permlevel": 1
   },
   {
    "depends_on": "eval:frappe.user_roles.includes( \"OneCPQ Admin\")",
@@ -49,7 +50,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-10-10 16:30:17.589172",
+ "modified": "2026-10-30 18:30:00.000000",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCVSSpring",
@@ -66,6 +67,21 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "import": 1,
+   "read": 1,
+   "role": "OneCPQ Admin",
+   "write": 1
+  },
+  {
+   "permlevel": 1,
+   "read": 1,
+   "role": "OneCPQ Admin",
    "write": 1
   }
  ],
