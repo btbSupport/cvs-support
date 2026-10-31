@@ -6,6 +6,7 @@ import pandas as pd
 from erpnext.controllers.taxes_and_totals import calculate_taxes_and_totals
 from decimal import Decimal
 from frappe.model.naming import make_autoname
+from onecpq_connect.api.permission import require_onecpq_role
 fti_cache ={}
 # file names of the documents the Output Documents buttons generate
 GENERATED_FILE_PREFIXES = ("BOQ_", "Quote_", "Production Sheet_")
@@ -201,6 +202,7 @@ def getQuoteById( quote_name):
 
 @frappe.whitelist()
 def applyDiscount( quote_name: str,discount:float):
+    require_onecpq_role()
     settings = frappe.get_doc("Cvs Settings")
     cart_item_minimum_discount = settings.get("cart_item_minimum_discount")
     cart_item_maximum_discount = settings.get("cart_item_maximum_discount")
@@ -284,6 +286,7 @@ def get_cart_items( quote_name: str) :
 
 @frappe.whitelist()
 def amendCPQ(quote_name: str,amended_from: str):
+    require_onecpq_role()
     print('inside amendCPQ',quote_name)
     print('inside amendCPQ amended_from',amended_from)
     # it rebuilds quote_name's cart from amended_from's, so it needs both
@@ -379,6 +382,7 @@ def create_cart(quote_name: str):
 
 @frappe.whitelist()
 def sync_all(quote_name, method = None):
+    require_onecpq_role()
     cartsql = """select parent from tabBtbCartLink tbcl where entity = %(quote_name)s"""
     carts = frappe.db.sql(cartsql, {"quote_name": quote_name}, as_dict=1)
     if(len(carts) == 0): frappe.throw(frappe._("This quotation has no OneCPQ cart yet. Open the OneCPQ cart and add items first."))

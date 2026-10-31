@@ -2,6 +2,7 @@ import frappe
 from erpnext.controllers.taxes_and_totals import calculate_taxes_and_totals
 from ..api.onecpq_quote_item import *
 from ..api.site_info import *
+from onecpq_connect.api.permission import has_app_permission
 #DEV API Key = dd017c3d9d14afe:2aba5089f049917
 
 def delete_links(doc, method = None):
@@ -94,12 +95,27 @@ def on_cancel_quote(doc = None, method = None):
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     if(doc.custom_customizable ==1) : lock_cart(doc.name,doc.docstatus)
 
+def check_configurator_changes(doc, beforequote):
+    """Users without a OneCPQ role can open and process configurator quotes, but not create one
+    (a duplicate or amendment is a new one) or change its configurator flag or discounts."""
+    if(has_app_permission()): return
+    if(beforequote == None):
+        if(doc.custom_customizable == 1): frappe.throw(frappe._("Creating a configurator quotation needs a OneCPQ role."), frappe.PermissionError)
+        return
+    if(frappe.utils.cint(doc.custom_customizable) != frappe.utils.cint(beforequote.custom_customizable)):
+        frappe.throw(frappe._("Changing Configurator needs a OneCPQ role."), frappe.PermissionError)
+    if(doc.custom_customizable != 1): return
+    for field in ("custom_discount", "custom_cart_discount"):
+        if(frappe.utils.flt(doc.get(field)) != frappe.utils.flt(beforequote.get(field))):
+            frappe.throw(frappe._("Changing discounts on a configurator quotation needs a OneCPQ role."), frappe.PermissionError)
+
 def before_save_quote(doc = None, method = None):
     # frappe.log('get_config allow_cpq before save quote' )
     # frappe.log(get_config('allow_cpq'))
     print('get_config allow_cpq before save quote',get_config('allow_cpq') )
     if(get_config('allow_cpq')==None or get_config('allow_cpq') == 0): return
     beforequote = getQuoteById(doc.name)
+    check_configurator_changes(doc, beforequote)
     if(beforequote == None): 
         doc.custom_cpq_amended=0
         if(doc.custom_customizable == 1 and (doc.amended_from != None or doc.custom_created_from != None)) :
