@@ -26,7 +26,7 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/btb_cvs_support/css/btb_cvs_support.css"
-# app_include_js = "/assets/btb_cvs_support/js/btb_cvs_support.js"
+app_include_js = "/assets/btb_cvs_support/js/workspace_custom_cards.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/btb_cvs_support/css/btb_cvs_support.css"
