@@ -2,6 +2,7 @@ import requests
 import json
 import os
 import re
+import sys
 import frappe
 from decimal import Decimal
 
@@ -76,8 +77,23 @@ def fetch_document(url: str, data: dict, template_path: str, output_format: str)
         frappe.throw(frappe._("The document service could not create the document. Please try again in a moment."))
     return response.content
 
+# Frappe (16.55+) checks every PDF for JavaScript before saving it (File.check_content
+# -> pdf_contains_js), walking the PDF object graph recursively. The quotation templates
+# carry an outline level on their line paragraphs, so the PDF has one bookmark per line,
+# and bookmarks are a linked list (/Next -> /Next ...): one stack frame each. A 930-line
+# quotation is ~955 deep, just under Python's default 1000; anything larger failed with
+# "PdfReadError: RecursionError('maximum recursion depth exceeded')" (QTN-26-4108).
+# Raised for the whole process and never lowered again: restoring it while another
+# thread of the same worker is mid-scan would break that thread's save instead.
+PDF_SCAN_RECURSION_LIMIT = 20000
+
+def _allow_deep_pdf_scan():
+    if(sys.getrecursionlimit() < PDF_SCAN_RECURSION_LIMIT):
+        sys.setrecursionlimit(PDF_SCAN_RECURSION_LIMIT)
+
 def _save(content: bytes, **kwargs) -> str:
     file_name =  kwargs.get("file_name", "output.pdf")
+    if(file_name.lower().endswith(".pdf")): _allow_deep_pdf_scan()
     # Replace the previous copy only now that the new one is in hand, so a failed render
     # leaves it in place (ADR-0001 amendment, 2026-10-29). Done before writing: the old
     # File row must not take the newly written file with it.
