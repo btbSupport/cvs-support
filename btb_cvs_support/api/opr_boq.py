@@ -18,7 +18,7 @@ from frappe.utils import flt
 
 from .boq import populate_cart_detail
 from .btb_quotation import populate_cart_item_model_by_cart_items
-from ..document.generator import generate
+from ..document.generator import generate_or_queue
 
 TEMPLATE_PATH = "../apps/btb_cvs_support/btb_cvs_support/document/templates/boq_opr.docx"
 
@@ -31,8 +31,8 @@ LINE_TABLES = (
 )
 
 
-@frappe.whitelist()
-def provide(opr_name: str) -> Dict:
+def build_opr_boq(opr_name: str):
+    """Render spec for the OPR BOQ (see generator.generate_or_queue)."""
     opr = frappe.get_doc("Order Processing Request", opr_name)
     resolved, skipped = resolve_rows(opr)
 
@@ -48,11 +48,19 @@ def provide(opr_name: str) -> Dict:
         "ci": populate_cart_detail(ciModels),
         "qt": get_opr_details(opr)
     }
-    file_name = "BOQ_"+opr_name+".pdf"
-    file_url = generate(TEMPLATE_PATH, output, format="pdf", doc_type="Order Processing Request",
-             doc_name=opr_name, file_name=file_name, addDigitalSignature=False,
-             replace_existing=True)  # ADR-0001 D7 - one current BOQ, not one per click
-    return {"status": "Success", "traced": len(ciModels), "skipped": skipped, "file_url": file_url}
+    return {"template": TEMPLATE_PATH, "datasource": output, "row_count": len(ciModels),
+            "response": {"traced": len(ciModels), "skipped": skipped},
+            "kwargs": {"doc_type": "Order Processing Request", "doc_name": opr_name,
+                       "file_name": "BOQ_"+opr_name+".pdf", "addDigitalSignature": False,
+                       "replace_existing": True}}  # ADR-0001 D7 - one current BOQ, not one per click
+
+
+@frappe.whitelist()
+def provide(opr_name: str) -> Dict:
+    # OneDoc renders the PDF; when it can't (large OPRs), it is made in the background.
+    return generate_or_queue("btb_cvs_support.api.opr_boq.build_opr_boq", {"opr_name": opr_name},
+                             "Order Processing Request", opr_name, "BOQ_"+opr_name+".pdf",
+                             frappe._("BOQ"))
 
 
 def resolve_rows(opr) -> Tuple[Dict[str, float], List[Dict]]:

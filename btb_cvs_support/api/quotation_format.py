@@ -18,60 +18,66 @@ def decimal_serializer(obj):
     raise TypeError('Type not serializable + '+obj)
 fti_cache ={}
 
-@frappe.whitelist()
-def provide( quote_name: str):
+QUOTATION_TEMPLATE = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_{code}.docx"
+
+def _quotation_datasource(quote_name: str):
     qt_detail = get_quote_details(quote_name)
     models = populate_cart_item_model(quote_name,qt_detail["conversion_rate"])
-    if(models == None): return None
-    compInfo = get_company_info()
-    output = {"ci": {
-        "cartItem": populate_cart_detail(models),
-        "companyInfo": compInfo
-    },
-    "qt": qt_detail
-    }
-    # print("result -", output)
-    code = output["ci"]["companyInfo"]["code"]
-    file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_"+code.lower()+".docx"
-    # file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_eg.docx"
-
-    # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
-    file_url = generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf",addDigitalSignature=False)
-    # generate(file_path, output, format="original",doc_type="Quotation",doc_name=quote_name,file_name="QuotationFormat_"+quote_name+".docx")
-    return {"status": "Success", "file_url": file_url}
-    # return 'Success'
-
-@frappe.whitelist()
-def provide_with_letter_head( quote_name: str):
-    """Quotation Format with the header and footer of the Quotation's Letter Head.
-
-    Same data as provide(), rendered on the common quotation_format_letterhead.docx
-    instead of the country template. Without a Letter Head it falls back to the
-    country template, as provide() does.
-    """
-    letter_head = frappe.db.get_value("Quotation", quote_name, "letter_head")
-    qt_detail = get_quote_details(quote_name)
-    models = populate_cart_item_model(quote_name,qt_detail["conversion_rate"])
-    if(models == None): return None
+    if(models == None): return None, None
     output = {"ci": {
         "cartItem": populate_cart_detail(models),
         "companyInfo": get_company_info()
     },
     "qt": qt_detail
     }
+    return output, len(models)
+
+def _quotation_kwargs(quote_name: str) -> Dict:
+    return {"doc_type": "Quotation", "doc_name": quote_name,
+            "file_name": "Quote_"+quote_name+".pdf", "addDigitalSignature": False}
+
+def build_quotation_format(quote_name: str):
+    """Render spec for the country Quotation Format (see generator.generate_or_queue)."""
+    output, row_count = _quotation_datasource(quote_name)
+    if(output == None): return None
     code = output["ci"]["companyInfo"]["code"]
-    file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/quotation_format_"+code.lower()+".docx"
+    return {"template": QUOTATION_TEMPLATE.format(code=code.lower()), "datasource": output,
+            "kwargs": _quotation_kwargs(quote_name), "row_count": row_count}
+
+def build_quotation_format_with_letter_head(quote_name: str):
+    """Render spec for the Quotation Format on the Quotation's Letter Head.
+
+    Same data as build_quotation_format, rendered on the common
+    quotation_format_letterhead.docx instead of the country template. Without a
+    Letter Head it falls back to the country template. The Letter Head template is
+    a temp file; generate_or_queue / run_fallback remove it ("cleanup").
+    """
+    output, row_count = _quotation_datasource(quote_name)
+    if(output == None): return None
+    code = output["ci"]["companyInfo"]["code"]
+    file_path = QUOTATION_TEMPLATE.format(code=code.lower())
     lh_path = None
+    letter_head = frappe.db.get_value("Quotation", quote_name, "letter_head")
     if(letter_head and frappe.db.exists("Letter Head", letter_head)):
         lh_path = build_template(letter_head, frappe.get_doc("Quotation", quote_name))
         file_path = lh_path
-    try:
-        file_url = generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name="Quote_"+quote_name+".pdf",addDigitalSignature=False)
-    finally:
-        if(lh_path and os.path.exists(lh_path)): os.remove(lh_path)
-    output["status"] = "Success"
-    output["file_url"] = file_url
-    return output
+    return {"template": file_path, "datasource": output, "cleanup": lh_path,
+            "kwargs": _quotation_kwargs(quote_name), "row_count": row_count,
+            "response": output}
+
+@frappe.whitelist()
+def provide( quote_name: str):
+    # OneDoc renders the PDF; when it can't (large quotes), it is made in the background.
+    return generate_or_queue("btb_cvs_support.api.quotation_format.build_quotation_format",
+                             {"quote_name": quote_name}, "Quotation", quote_name,
+                             "Quote_"+quote_name+".pdf", frappe._("Quotation Format"))
+
+@frappe.whitelist()
+def provide_with_letter_head( quote_name: str):
+    """Quotation Format with the header and footer of the Quotation's Letter Head."""
+    return generate_or_queue("btb_cvs_support.api.quotation_format.build_quotation_format_with_letter_head",
+                             {"quote_name": quote_name}, "Quotation", quote_name,
+                             "Quote_"+quote_name+".pdf", frappe._("Quotation Format"))
 
 def get_quote_details( quote_name: str) -> Dict:
     from frappe.utils import money_in_words

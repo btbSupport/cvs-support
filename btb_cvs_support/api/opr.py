@@ -1,4 +1,5 @@
 import frappe
+from frappe.utils import cint, flt, fmt_money, formatdate
 #DEV API Key = dd017c3d9d14afe:2aba5089f049917
 
 @frappe.whitelist()
@@ -79,10 +80,13 @@ def get_pending_quantities(sales_order_number: str, opr_name: str):
 @frappe.whitelist()
 def get_delivery_note_summary(opr_name: str):
     items = get_delivery_note_data(opr_name)
-    count = 1
-    for item in items: 
-        item["idx"] = count
-        count += 1
+    float_precision = _float_precision()
+    for idx, item in enumerate(items, start=1):
+        item["idx"] = idx
+        item["posting_date_fmt"] = formatdate(item["posting_date"])
+        item["sqm_fmt"] = fmt_money(flt(item["custom_total_sqm"]), precision=float_precision)
+        item["pcs_fmt"] = fmt_money(flt(item["custom_total_pcs"]), precision=0)
+        item["amount_fmt"] = fmt_money(flt(item["net_total"]))
     show_amount = "Accounts User" in frappe.get_roles()
     return frappe.frappe.render_template("btb_cvs_support/api/delivery_note_summary.html", {"items": items, "show_amount": show_amount})
 
@@ -92,6 +96,7 @@ def get_delivery_note_data(opr_name: str):
         select dn.name, dn.posting_date, dn.job_number, dn.sales_order_no, dn.custom_total_sqm, dn.custom_total_pcs, dn.net_total
         from `tabDelivery Note` dn
         where dn.custom_opr = %(opr_name)s and dn.docstatus = 1
+        order by dn.posting_date, dn.name
     """
     items = frappe.db.sql(sql, {"opr_name": opr_name}, as_dict=1)
     return items;
@@ -99,14 +104,16 @@ def get_delivery_note_data(opr_name: str):
 @frappe.whitelist()
 def get_stock_consumption_summary(opr_name: str):
     items = get_stock_consumption_data(opr_name)
-    count = 1
-    total = 0
-    for item in items: 
-        item["idx"] = count
-        count += 1
-        total += item["value_difference"]
+    for idx, item in enumerate(items, start=1):
+        item["idx"] = idx
+        item["posting_date_fmt"] = formatdate(item["posting_date"])
+        item["amount_fmt"] = fmt_money(flt(item["value_difference"]))
     show_amount = "Accounts User" in frappe.get_roles()
-    return frappe.frappe.render_template("btb_cvs_support/api/stock_consumption_summary.html", {"items": items, "total_consumption": total, "show_amount": show_amount})
+    return frappe.frappe.render_template("btb_cvs_support/api/stock_consumption_summary.html", {"items": items, "show_amount": show_amount})
+
+
+def _float_precision():
+    return cint(frappe.db.get_default("float_precision")) or 3
 
 @frappe.whitelist()
 def get_stock_consumption_data(opr_name: str):
@@ -115,6 +122,7 @@ def get_stock_consumption_data(opr_name: str):
         from  `tabStock Entry` se 
         where se.custom_opr = %(opr_name)s and se.stock_entry_type = 'Material Issue'
         and se.docstatus = 1
+        order by se.posting_date, se.name
     """
     items = frappe.db.sql(sql, {"opr_name": opr_name}, as_dict=1)
     return items;

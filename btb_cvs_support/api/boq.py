@@ -24,21 +24,25 @@ class ProductNode:
         self.pageBreak: bool = False
         self.items: List[ProductInfo] = []
 
-@frappe.whitelist()
-def provide( quote_name: str):
+def build_boq(quote_name: str):
+    """Render spec for the Quotation BOQ (see generator.generate_or_queue)."""
     ciModels = populate_cart_item_model(quote_name,1)
     if(ciModels == None): return None
     output = {
         "ci": populate_cart_detail(ciModels),
         "qt": get_quote_details(quote_name)
     }
-    file_path = "../apps/btb_cvs_support/btb_cvs_support/document/templates/boq.docx"
-    print("output : ",output)
-    file_name = "BOQ_"+quote_name+".pdf"
-    # generate("templates/quotation.docx", json.loads(json.dumps(output)), format="pdf")
-    file_url = generate(file_path, output, format="pdf",doc_type="Quotation",doc_name=quote_name,file_name=file_name,addDigitalSignature=False,
-        replace_existing=True)  # ADR-0001 D7 - one current BOQ, not one per click
-    return {"status": "Success", "file_url": file_url}
+    return {"template": "../apps/btb_cvs_support/btb_cvs_support/document/templates/boq.docx",
+            "datasource": output, "row_count": len(ciModels),
+            "kwargs": {"doc_type": "Quotation", "doc_name": quote_name,
+                       "file_name": "BOQ_"+quote_name+".pdf", "addDigitalSignature": False,
+                       "replace_existing": True}}  # ADR-0001 D7 - one current BOQ, not one per click
+
+@frappe.whitelist()
+def provide( quote_name: str):
+    # OneDoc renders the PDF; when it can't (large quotes), it is made in the background.
+    return generate_or_queue("btb_cvs_support.api.boq.build_boq", {"quote_name": quote_name},
+                             "Quotation", quote_name, "BOQ_"+quote_name+".pdf", frappe._("BOQ"))
 
 def get_quote_details( quote_name: str) -> Dict:
     sql = """ select customer_name,project,name,docstatus  from `tabQuotation` tqi where name = %(quote_name)s
