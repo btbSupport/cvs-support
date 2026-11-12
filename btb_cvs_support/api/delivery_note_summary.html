@@ -1,85 +1,72 @@
-<label class="control-label">Delivery Notes</label>
+{#- Read-only summary drawn with Frappe v16's own child-table markup so it matches native
+    grids: check col, row-index col, data cols with inline px widths, trailing action col. -#}
+{%- set columns = [
+    {"label": _("Delivery Note"), "width": 140},
+    {"label": _("Delivery Date"), "width": 140},
+    {"label": _("Job Number"), "width": 140},
+    {"label": _("Sales Order"), "width": 140},
+    {"label": _("Sqm Delivered"), "width": 100, "class": "text-right"},
+    {"label": _("Nos Delivered"), "width": 100, "class": "text-right"},
+] -%}
+{%- if show_amount -%}
+{%- set columns = columns + [{"label": _("Amount"), "width": 100, "class": "text-right"}] -%}
+{%- endif -%}
+<label class="control-label">{{ _("Delivery Notes") }}</label>
 <div class="form-grid-container">
     <div class="form-grid">
         <div class="grid-heading-row">
             <div class="grid-row">
                 <div class="data-row row m-0">
-                    <div class="col grid-static-col col-xs-1">
-                        <span>No.</span>
+                    <div class="row-check col" style="flex: 0 0 31px; width: 31px; max-width: 31px;"></div>
+                    <div class="row-index grid-static-col col"><span>{{ _("No.") }}</span></div>
+                    {%- for c in columns %}
+                    <div class="col grid-static-col {{ c.class or '' }} {{ 'grid-data-last' if loop.last else '' }}"
+                        style="flex: 1 0 {{ c.width }}px; width: {{ c.width }}px;" title="{{ c.label }}">
+                        <div class="static-area ellipsis">{{ c.label }}</div>
                     </div>
-                    <div class="col grid-static-col col-xs-2 " style="" data-fieldname="name" data-fieldtype="Data"
-                        title="Delivery Note #">
-                        <div class="field-area" style="display: none;"></div>
-                        <div class="static-area ellipsis">Delivery Note #</div>
-                    </div>
-                    <div class="col grid-static-col col-xs-2 " style="" data-fieldname="creation" data-fieldtype="Date"
-                        title="Date">
-                        <div class="field-area" style="display: none;"></div>
-                        <div class="static-area ellipsis">Delivery Date</div>
-                    </div>
-                    <div class="col grid-static-col col-xs-1 " style="" data-fieldname="job_number"
-                        data-fieldtype="Data" title="Job Number">
-                        <div class="field-area" style="display: none;"></div>
-                        <div class="static-area ellipsis">Job Number</div>
-                    </div>
-                    <div class="col grid-static-col col-xs-2 ">
-                        <div class="static-area ellipsis">Sales Order</div>
-                    </div>
-                    <div class="col grid-static-col col-xs-1  text-right" >
-                        <div class="static-area ellipsis">Sqm Delivered</div>
-                    </div>
-                    <div class="col grid-static-col col-xs-1  text-right" >
-                        <div class="static-area ellipsis">Nos Delivered</div>
-                    </div>
-                    {% if show_amount %}
-                    <div class="col grid-static-col col-xs-1  text-right" >
-                        <div class="static-area ellipsis">Amount</div>
-                    </div>
-                    {% endif %}
+                    {%- endfor %}
+                    <div class="col"></div>
                 </div>
             </div>
         </div>
         <div class="grid-body">
             <div class="rows">
-                {% for item in items %}
-                <div class="grid-row" data-name="{{item.name}}" data-idx="{{item.idx}}">
-                    <div class="data-row row m-0">
-                        <div class="col grid-static-col col-xs-1">
-                            <span>{{item.idx}}</span>
+                {%- for item in items %}
+                <div class="grid-row" data-idx="{{ item.idx }}">
+                    <div class="data-row row m-0" style="cursor: default;">
+                        <div class="row-check col" style="flex: 0 0 31px; width: 31px; max-width: 31px;"></div>
+                        <div class="row-index grid-static-col col"><span>{{ item.idx }}</span></div>
+                        <div class="col grid-static-col" style="flex: 1 0 140px; width: 140px;">
+                            <div class="static-area ellipsis"><a href="/app/delivery-note/{{ item.name }}">{{ item.name }}</a></div>
                         </div>
-                        <div class="col grid-static-col col-xs-2 " style="" data-fieldname="name"
-                            data-fieldtype="Link">
-                            <div class="field-area" style="display: none;"></div>
-                            <div class="static-area ellipsis"><a href="/app/delivery-note/{{item.name}}" data-doctype="Delivery Note"
-                                    data-name="{{item.name}}" data-value="{{item.name}}">{{item.name}}</a></div>
+                        <div class="col grid-static-col" style="flex: 1 0 140px; width: 140px;">
+                            <div class="static-area ellipsis">{{ item.posting_date_fmt }}</div>
                         </div>
-                        <div class="col grid-static-col col-xs-2" style="" data-fieldname="creation">
-                            {{item.posting_date}}
+                        <div class="col grid-static-col" style="flex: 1 0 140px; width: 140px;">
+                            <div class="static-area ellipsis">{{ item.job_number or "" }}</div>
                         </div>
-                        <div class="col grid-static-col col-xs-1" style="" data-fieldname="job_number">
-                            {{item.job_number}}
+                        <div class="col grid-static-col" style="flex: 1 0 140px; width: 140px;">
+                            <div class="static-area ellipsis">{% if item.sales_order_no %}<a href="/app/sales-order/{{ item.sales_order_no }}">{{ item.sales_order_no }}</a>{% endif %}</div>
                         </div>
-                        <div class="col grid-static-col col-xs-2">
-                            <div class="static-area ellipsis"><a href="/app/delivery-note/{{item.sales_order_no}}" data-doctype="Sales Order"
-                                data-name="{{item.sales_order_no}}" data-value="{{item.sales_order_no}}">{{item.sales_order_no}}</a></div>
+                        <div class="col grid-static-col text-right" style="flex: 1 0 100px; width: 100px;">
+                            <div class="static-area ellipsis">{{ item.sqm_fmt }}</div>
                         </div>
-                        <div class="col grid-static-col col-xs-1 text-right">
-                            {{item.custom_total_sqm}}
+                        <div class="col grid-static-col text-right {{ '' if show_amount else 'grid-data-last' }}" style="flex: 1 0 100px; width: 100px;">
+                            <div class="static-area ellipsis">{{ item.pcs_fmt }}</div>
                         </div>
-                        <div class="col grid-static-col col-xs-1 text-right">
-                            {{item.custom_total_pcs}}
+                        {%- if show_amount %}
+                        <div class="col grid-static-col text-right grid-data-last" style="flex: 1 0 100px; width: 100px;">
+                            <div class="static-area ellipsis">{{ item.amount_fmt }}</div>
                         </div>
-                        {% if show_amount %}
-                        <div class="col grid-static-col col-xs-1 text-right">
-                            {{item.net_total}}
-                        </div>
-                        {% endif %}
+                        {%- endif %}
+                        <div class="col"></div>
                     </div>
                 </div>
-                {% endfor %}
+                {%- endfor %}
             </div>
+            {%- if not items %}
+            <div class="grid-empty text-center text-extra-muted">{{ _("No Delivery Notes") }}</div>
+            {%- endif %}
         </div>
-
     </div>
-  
 </div>
