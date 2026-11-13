@@ -248,10 +248,14 @@ doc_events = {
 # ----------------
 # before_request = ["btb_cvs_support.utils.before_request"]
 # after_request = ["btb_cvs_support.utils.after_request"]
+# Delivered Items To Be Billed: show non-stock items again (v16 filters them out).
+before_request = ["btb_cvs_support.overrides.delivered_items_to_be_billed.apply"]
 
 # Job Events
 # ----------
 # before_job = ["btb_cvs_support.utils.before_job"]
+# Prepared reports run as background jobs, so patch there too.
+before_job = ["btb_cvs_support.overrides.delivered_items_to_be_billed.apply"]
 # after_job = ["btb_cvs_support.utils.after_job"]
 
 # User Data Protection
