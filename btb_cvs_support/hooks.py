@@ -137,6 +137,10 @@ app_include_js = [
 # 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
+override_doctype_class = {
+    "Sales Order": "btb_cvs_support.overrides.sales_order.CustomSalesOrder"
+}
+
 # Document Events
 # ---------------
 # Hook on document methods and events
