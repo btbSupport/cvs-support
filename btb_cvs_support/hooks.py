@@ -154,6 +154,16 @@ override_doctype_class = {
 # }
 
 doc_events = {
+    # Over-qty restrictions (see events/qty_restriction.py)
+    "Purchase Receipt": {
+        "validate": "btb_cvs_support.events.qty_restriction.validate_purchase_receipt"
+    },
+    "Sales Invoice": {
+        "validate": "btb_cvs_support.events.qty_restriction.validate_sales_invoice"
+    },
+    "Purchase Invoice": {
+        "validate": "btb_cvs_support.events.qty_restriction.validate_purchase_invoice"
+    },
     # "Workflow Action": {
     #     "before_save": "btb_cvs_support.events.workflow_action.before_save"
     # },
@@ -169,6 +179,7 @@ doc_events = {
         "on_update": "btb_cvs_support.events.version.after_upsert"
     },
     "Delivery Note": {
+        "validate": "btb_cvs_support.events.qty_restriction.validate_delivery_note",
         "after_insert": "btb_cvs_support.events.delivery_note.after_upsert",
         "on_update": "btb_cvs_support.events.delivery_note.after_upsert"
     },
