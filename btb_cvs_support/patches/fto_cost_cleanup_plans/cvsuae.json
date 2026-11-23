@@ -1,0 +1,2231 @@
+{
+ "site": "cvsuae",
+ "country": "United Arab Emirates",
+ "generated": "2026-11-23",
+ "source": "FTOCountryWiseCost_FTO_Mapping.xlsx + prod backup 2026-11-23; targets = UAE values + customer decisions",
+ "updates": [
+  {
+   "row": "FTO6511047",
+   "expect_name": "AL 30 mm Angle",
+   "set": {
+    "item_code": "AL 30 mm Angle"
+   }
+  },
+  {
+   "row": "FTO6511048",
+   "expect_name": "AL 40 mm Angle",
+   "set": {
+    "item_code": "AL 40 mm Angle"
+   }
+  },
+  {
+   "row": "FTO6511049",
+   "expect_name": "AL 50 mm Angle",
+   "set": {
+    "item_code": "AL 50 mm Angle"
+   }
+  },
+  {
+   "row": "FTO6511050",
+   "expect_name": "MS 30 mm Angle",
+   "set": {
+    "item_code": "MS 30 mm Angle"
+   }
+  },
+  {
+   "row": "FTO6511051",
+   "expect_name": "MS 40 mm Angle",
+   "set": {
+    "item_code": "MS 40 mm Angle"
+   }
+  },
+  {
+   "row": "FTO6511052",
+   "expect_name": "MS 50 mm Angle",
+   "set": {
+    "item_code": "MS 50 mm Angle"
+   }
+  },
+  {
+   "row": "FTO6511072",
+   "expect_name": "Honeywell 45lbin-5Nm , 230V Non Spring Return-On/Off + Floating  , Actuator w/o Aux CN4605A1001",
+   "set": {
+    "product_name": "Honeywell 45lbin-5Nm , 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN4605A1001"
+   }
+  },
+  {
+   "row": "FTO6511073",
+   "expect_name": "Honeywell 90lbin-10Nm , 230V Non Spring Return-On/Off + Floating  , Actuator w/o Aux CN4610A1001",
+   "set": {
+    "product_name": "Honeywell 90lbin-10Nm , 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN4610A1001"
+   }
+  },
+  {
+   "row": "FTO6511074",
+   "expect_name": "Honeywell 180lbin-20Nm , 230V Non Spring Return-On/Off + Floating  , Actuator w/o Aux CN4620A1001",
+   "set": {
+    "product_name": "Honeywell 180lbin-20Nm , 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN4620A1001"
+   }
+  },
+  {
+   "row": "FTO6511075",
+   "expect_name": "Honeywell 300lnin-34Nm, 230V Non Spring Return-On/Off + Floating  , Actuator w/o Aux CN4634A1001",
+   "set": {
+    "product_name": "Honeywell 300lnin-34Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN4634A1001"
+   }
+  },
+  {
+   "row": "FTO6511076",
+   "expect_name": "Honeywell 45lbin-5Nm , 24V Non Spring Return-On/Off + Floating  , Actuator w/o Aux CN6105A1011",
+   "set": {
+    "product_name": "Honeywell 45lbin-5Nm , 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN6105A1011"
+   }
+  },
+  {
+   "row": "FTO6511077",
+   "expect_name": "Honeywell 90lbin-10Nm , 24V Non Spring Return-On/Off + Floating  , Actuator w/o Aux CN6110A1003",
+   "set": {
+    "product_name": "Honeywell 90lbin-10Nm , 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN6110A1003"
+   }
+  },
+  {
+   "row": "FTO6511078",
+   "expect_name": "Honeywell 90lbin-10Nm , 24V Non Spring Return-On/Off + Floating  , Actuator 2 Aux CN6110A1201",
+   "set": {
+    "product_name": "Honeywell 90lbin-10Nm , 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux CN6110A1201"
+   }
+  },
+  {
+   "row": "FTO6511079",
+   "expect_name": "Honeywell 180lbin-20Nm , 24V Non Spring Return-On/Off + Floating  , Actuator w/o Aux CN6120A1002",
+   "set": {
+    "product_name": "Honeywell 180lbin-20Nm , 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN6120A1002"
+   }
+  },
+  {
+   "row": "FTO6511082",
+   "expect_name": "Siemens 45lbin-5Nm , 24V Non Spring Return-On/Off + Floating  , Actuator 2 Aux GDB146.1E",
+   "set": {
+    "product_name": "Siemens 45lbin-5Nm , 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux GDB146.1E"
+   }
+  },
+  {
+   "row": "FTO6511083",
+   "expect_name": "Siemens 90lbin-10Nm , 24V Non Spring Return-On/Off + Floating  , Actuator 2 Aux GLB146.1E",
+   "set": {
+    "product_name": "Siemens 90lbin-10Nm , 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux GLB146.1E"
+   }
+  },
+  {
+   "row": "FTO6511084",
+   "expect_name": "Siemens 180lbin-20Nm , 24V Non Spring Return-On/Off + Floating  , Actuator 2 Aux GEB146.1E",
+   "set": {
+    "product_name": "Siemens 180lbin-20Nm , 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux GEB146.1E"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost119",
+   "expect_name": "Fixed Frame Minutes",
+   "set": {
+    "item_code": "Fixed Frame Minutes"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost120",
+   "expect_name": "Variable Frame Minutes",
+   "set": {
+    "item_code": "Variable Frame Minutes"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost121",
+   "expect_name": "Sleeve Fixed Cost",
+   "set": {
+    "item_code": "Sleeve Fixed Cost"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost122",
+   "expect_name": "Sleeve Fixing Cost",
+   "set": {
+    "item_code": "Sleeve Fixing Cost"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost123",
+   "expect_name": "Fixed Blade Minutes",
+   "set": {
+    "item_code": "Fixed Blade Minutes"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost124",
+   "expect_name": "Variable Blade Minutes",
+   "set": {
+    "item_code": "Variable Blade Minutes"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost125",
+   "expect_name": "Fixed Switch Minutes",
+   "set": {
+    "item_code": "Fixed Switch Minutes"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost126",
+   "expect_name": "Fixed Joints Minutes",
+   "set": {
+    "item_code": "Fixed Joints Minutes"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost127",
+   "expect_name": "Joints Minutes for Multi-Section",
+   "set": {
+    "item_code": "Joints Minutes for Multi-Section"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost131",
+   "expect_name": "Processing Cost per Hour",
+   "set": {
+    "product_name": "Cost per Hour",
+    "item_code": "Processing Cost per Hour"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost132",
+   "expect_name": "Overhead Percentage where Height <= 500",
+   "set": {
+    "item_code": "Overhead Percentage where Height <= 500"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost133",
+   "expect_name": "Overhead Percentage where Height > 500",
+   "set": {
+    "item_code": "Overhead Percentage where Height > 500"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost134",
+   "expect_name": "Sleeve Wastage",
+   "set": {
+    "item_code": "Sleeve Wastage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost135",
+   "expect_name": "Cutting Waste",
+   "set": {
+    "item_code": "Cutting Waste"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost136",
+   "expect_name": "Profit",
+   "set": {
+    "item_code": "Profit"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost149",
+   "expect_name": "3V Axle Strap (Blade Axle Strap 3V  GI G90 58X44X1.5mm 9007)",
+   "set": {
+    "product_name": "3V Axle Strap (Blade Axle Strap 3V GI G90 58X44X1.5mm 9007)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost17",
+   "expect_name": "For Square Bush-3V",
+   "set": {
+    "product_name": "Blade Lever 3V-A GI G90 3.5mm 9003",
+    "item_code": "2290107"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost171",
+   "expect_name": "Linkage Pins & Lock Ring",
+   "set": {
+    "product_name": "Knurled Linkage Pin with Retaining Ring"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost19",
+   "expect_name": "EAL (Weight/meter) - 2.5",
+   "set": {
+    "item_code": "EAL (Weight/meter) - 2.5"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost2",
+   "expect_name": "SS304",
+   "set": {
+    "product_name": "SS304L"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost21",
+   "expect_name": "For Square Bush-AF",
+   "set": {
+    "product_name": "Blade Lever Airfoil C GI G90 3.5mm 9005",
+    "item_code": "2290105"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost22",
+   "expect_name": "Jamb Seal SS304 50X0.25mm",
+   "set": {
+    "product_name": "Side Seal / Jamb Seal / SS304 50X0.25mm"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost238",
+   "expect_name": "Sealant Dow Corning",
+   "set": {
+    "product_name": "Sealant Dow Corning 732 - 310ml"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost24",
+   "expect_name": "Small Spindle-Round Bush 12mm GI Round Shaft",
+   "set": {
+    "product_name": "Small Spindle-Round Bush 12mm GI Round Shaft"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost242",
+   "expect_name": "Cost per Hour",
+   "set": {
+    "unit": "Currency"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost243",
+   "expect_name": "Sleeve Cost",
+   "set": {
+    "product_name": "Sleeve Wastage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost255",
+   "expect_name": "Linkage Bar 13mm (AF-FD Linkage Bar GI CVSS 12.7X292X3.5mm 9170)",
+   "set": {
+    "product_name": "AF-FD Linkage Bar GI CVSS 12.7X367X3.5mm 9169",
+    "item_code": "2290128",
+    "unit": "Ea"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost26",
+   "expect_name": "Big Spindle-Round Bush 12mm GI Round Shaft",
+   "set": {
+    "product_name": "Big Spindle-Round Bush 12mm GI Round Shaft"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost27",
+   "expect_name": "Big Spindle-Round BushGI Blade Shaft  Square 9.50x9.50x120mm",
+   "set": {
+    "product_name": "Big Spindle-Round BushGI Blade Shaft Square 9.50x9.50x120mm"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost280",
+   "expect_name": "Fusible Link 73C (165F) - Globe JS",
+   "set": {
+    "product_name": "Fusible Link 73C (165F) Globe - JS 2.75\" Hook"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost282",
+   "expect_name": "Fusible Link 100C (212F) - Globe JS",
+   "set": {
+    "product_name": "Fusible Link 100C (212F) Globe - JS 2.75\" Hook"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost285",
+   "expect_name": "Installation Minutes per Junction Box",
+   "set": {
+    "item_code": "Installation Minutes per Junction Box"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost3",
+   "expect_name": "SS316",
+   "set": {
+    "product_name": "SS316L"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost306",
+   "expect_name": "Cost per Hour",
+   "set": {
+    "unit": "Currency"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost31",
+   "expect_name": "Conversion sqft to sqm",
+   "set": {
+    "item_code": "Conversion sqft to sqm"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost312",
+   "expect_name": "Casing Fabrication Cost Premium for 1.5mm  Casing Thickness",
+   "set": {
+    "product_name": "Casing Fabrication Cost Premium for 1.5mm Casing Thickness",
+    "item_code": "Casing Fabrication Cost Premium for 1.5mm Casing Thickness"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost313",
+   "expect_name": "Per m of Flange (Normal & FR)",
+   "set": {
+    "product_name": "Flange Installation Cost GI (Per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost314",
+   "expect_name": "Per m of Flange (Normal & FR)",
+   "set": {
+    "product_name": "Flange Installation Cost SS (Per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost315",
+   "expect_name": "Per m of Angle",
+   "set": {
+    "product_name": "Angle Installation Cost GI (Per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost316",
+   "expect_name": "Per m of Angle",
+   "set": {
+    "product_name": "Angle Installation Cost SS (Per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost317",
+   "expect_name": "per m of Angle",
+   "set": {
+    "product_name": "Angle Welding Cost GI (Per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost318",
+   "expect_name": "per m of Angle",
+   "set": {
+    "product_name": "Angle Welding Cost SS (Per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost319",
+   "expect_name": "per m of Angle",
+   "set": {
+    "product_name": "Casing Welding Cost GI (Per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost32",
+   "expect_name": "Conversion Inch to mm",
+   "set": {
+    "item_code": "Conversion Inch to mm"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost320",
+   "expect_name": "per m of Angle",
+   "set": {
+    "product_name": "Casing Welding Cost SS (Per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost33",
+   "expect_name": "EAL (Weight/meter) - 1.4",
+   "set": {
+    "item_code": "EAL (Weight/meter) - 1.4"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost340",
+   "expect_name": "GI 30",
+   "set": {
+    "product_name": "GI 30 mm Angle"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost341",
+   "expect_name": "GI 40",
+   "set": {
+    "product_name": "GI 40 mm Angle"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost342",
+   "expect_name": "GI 50",
+   "set": {
+    "product_name": "GI 50 mm Angle"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost343",
+   "expect_name": "GI 60",
+   "set": {
+    "product_name": "GI 60mm Angle",
+    "item_code": "2010109"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost344",
+   "expect_name": "SS304L 30",
+   "set": {
+    "product_name": "SS304L 30 mm Angle"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost345",
+   "expect_name": "SS304L 40",
+   "set": {
+    "product_name": "SS304L 40 mm Angle"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost346",
+   "expect_name": "SS304L 50",
+   "set": {
+    "product_name": "SS304L 50 mm Angle"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost348",
+   "expect_name": "SS316L 30",
+   "set": {
+    "product_name": "SS316L 30 mm Angle"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost349",
+   "expect_name": "SS316L 40",
+   "set": {
+    "product_name": "SS316L 40 mm Angle"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost350",
+   "expect_name": "SS316L 50",
+   "set": {
+    "product_name": "SS316L 50 mm Angle"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost388",
+   "expect_name": "SSDensityFactor",
+   "set": {
+    "product_name": "SS Density Factor"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost389",
+   "expect_name": "GIDensityFactor",
+   "set": {
+    "product_name": "GI Density Factor"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost413",
+   "expect_name": "Belimo 45lbin-5Nm, 230V Non Spring Return-On/Off + Floating  , Actuator 2 Aux LM230A -S",
+   "set": {
+    "product_name": "Belimo 45lbin-5Nm, 230V Non Spring Return-On/Off + Floating , Actuator 2 Aux LM230A -S"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost414",
+   "expect_name": "Belimo 45lbin-5Nm, 24V Non Spring Return-On/Off + Floating  , Actuator 2 Aux LM24A -S",
+   "set": {
+    "product_name": "Belimo 45lbin-5Nm, 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux LM24A -S"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost415",
+   "expect_name": "Siemens 45lbin-5Nm, 100V-240V Non Spring Return-On/Off + Floating  , Actuator w/o Aux GDB341.1E",
+   "set": {
+    "product_name": "Siemens 45lbin-5Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GDB341.1E"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost416",
+   "expect_name": "Siemens 45lbin-5Nm, 100V-240V Non Spring Return-On/Off + Floating  , Actuator 2 Aux GDB346.1E",
+   "set": {
+    "product_name": "Siemens 45lbin-5Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GDB346.1E"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost422",
+   "expect_name": "Siemens 90lbin-10Nm, 100V-240V Non Spring Return-On/Off + Floating  , Actuator w/o Aux GLB341.1E",
+   "set": {
+    "product_name": "Siemens 90lbin-10Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GLB341.1E"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost423",
+   "expect_name": "Siemens 90lbin-10Nm, 100V-240V Non Spring Return-On/Off + Floating  , Actuator 2 Aux GLB346.1E",
+   "set": {
+    "product_name": "Siemens 90lbin-10Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GLB346.1E"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost426",
+   "expect_name": "Belimo 180lbin-20Nm, 230V Non Spring Return-On/Off + Floating  , Actuator 2 Aux SM230A -S",
+   "set": {
+    "product_name": "Belimo 180lbin-20Nm, 230V Non Spring Return-On/Off + Floating , Actuator 2 Aux SM230A -S"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost428",
+   "expect_name": "Siemens 180lbin-20Nm, 100V-240V Non Spring Return-On/Off + Floating  , Actuator w/o Aux GEB341.1E",
+   "set": {
+    "product_name": "Siemens 180lbin-20Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GEB341.1E"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost429",
+   "expect_name": "Siemens 180lbin-20Nm, 100V-240V Non Spring Return-On/Off + Floating  , Actuator 2 Aux GEB346.1E",
+   "set": {
+    "product_name": "Siemens 180lbin-20Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GEB346.1E"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost461",
+   "expect_name": "Damper Processing Minutes",
+   "set": {
+    "item_code": "Damper Processing Minutes"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost462",
+   "expect_name": "Transition Time per m of Perimeter of Damper",
+   "set": {
+    "item_code": "Transition Time per m of Perimeter of Damper"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost463",
+   "expect_name": "Actuator Installation Minutes per Actuator",
+   "set": {
+    "item_code": "Actuator Installation Minutes per Actuator"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost464",
+   "expect_name": "Cost per Hour",
+   "set": {
+    "item_code": "Cost per Hour"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost465",
+   "expect_name": "Overhead Percentage",
+   "set": {
+    "item_code": "Overhead Percentage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost466",
+   "expect_name": "Overhead Percentage on Actuator",
+   "set": {
+    "item_code": "Overhead Percentage on Actuator"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost467",
+   "expect_name": "Profit",
+   "set": {
+    "item_code": "Profit"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost468",
+   "expect_name": "Accessories Wastage",
+   "set": {
+    "item_code": "Accessories Wastage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost469",
+   "expect_name": "Blade Wastage",
+   "set": {
+    "item_code": "Blade Wastage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost470",
+   "expect_name": "Frame Wastage",
+   "set": {
+    "item_code": "Frame Wastage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost471",
+   "expect_name": "GI Welding Cost",
+   "set": {
+    "item_code": "GI Welding Cost"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost472",
+   "expect_name": "AL Welding Cost",
+   "set": {
+    "item_code": "AL Welding Cost"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost473",
+   "expect_name": "SS Welding Cost",
+   "set": {
+    "item_code": "SS Welding Cost"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost474",
+   "expect_name": "Frame Gasket",
+   "set": {
+    "item_code": "Frame Gasket"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost475",
+   "expect_name": "Bracket Cost",
+   "set": {
+    "item_code": "Bracket Cost"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost477",
+   "expect_name": "Blade Seal Standard",
+   "set": {
+    "item_code": "Blade Seal Standard"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost478",
+   "expect_name": "GI 10mm Round Bar",
+   "set": {
+    "item_code": "GI 10mm Round Bar"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost480",
+   "expect_name": "GI 19mm Round Bar",
+   "set": {
+    "item_code": "GI 19mm Round Bar"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost481",
+   "expect_name": "GI 10mm Square Pin",
+   "set": {
+    "product_name": "Blade Shaft - Square GI - 9.50X9.50X80mm 9148"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost482",
+   "expect_name": "AL 10mm Round Bar",
+   "set": {
+    "item_code": "AL 10mm Round Bar"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost483",
+   "expect_name": "AL 12mm Round Bar",
+   "set": {
+    "item_code": "AL 12mm Round Bar"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost484",
+   "expect_name": "AL 19mm Round Bar",
+   "set": {
+    "item_code": "AL 19mm Round Bar"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost485",
+   "expect_name": "AL 10mm Square Pin",
+   "set": {
+    "item_code": "AL 10mm Square Pin"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost486",
+   "expect_name": "SS304L 10mm Round Bar",
+   "set": {
+    "item_code": "SS304L 10mm Round Bar"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost488",
+   "expect_name": "SS304L 19mm Round Bar",
+   "set": {
+    "item_code": "SS304L 19mm Round Bar"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost489",
+   "expect_name": "SS304L 10mm Square Pin",
+   "set": {
+    "item_code": "SS304L 10mm Square Pin"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost490",
+   "expect_name": "SS316L 10mm Round Bar",
+   "set": {
+    "item_code": "SS316L 10mm Round Bar"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost491",
+   "expect_name": "SS316L 12mm Round Bar",
+   "set": {
+    "item_code": "SS316L 12mm Round Bar"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost492",
+   "expect_name": "SS316L 19mm Round Bar",
+   "set": {
+    "item_code": "SS316L 19mm Round Bar"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost493",
+   "expect_name": "SS316L 10mm Square Pin",
+   "set": {
+    "item_code": "SS316L 10mm Square Pin"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost494",
+   "expect_name": "Acetate 10mm Round Bar Bush",
+   "set": {
+    "item_code": "Acetate 10mm Round Bar Bush"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost495",
+   "expect_name": "Acetate 12mm Round Bar Bush",
+   "set": {
+    "item_code": "Acetate 12mm Round Bar Bush"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost496",
+   "expect_name": "Acetate 19mm Round Bar Bush",
+   "set": {
+    "item_code": "Acetate 19mm Round Bar Bush"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost497",
+   "expect_name": "Acetate 10mm Square Pin Bush",
+   "set": {
+    "item_code": "Acetate 10mm Square Pin Bush"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost498",
+   "expect_name": "Bronze Oilite 10mm Round Bar Bush",
+   "set": {
+    "product_name": "Bronze Flanged Brass Shaft Bush-16x9.55x9.55x10mm"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost499",
+   "expect_name": "Bronze Oilite 12mm Round Bar Bush",
+   "set": {
+    "item_code": "Bronze Oilite 12mm Round Bar Bush"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost500",
+   "expect_name": "Bronze Oilite 19mm Round Bar Bush",
+   "set": {
+    "item_code": "Bronze Oilite 19mm Round Bar Bush"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost502",
+   "expect_name": "Nylon 6/6 10mm Round Bar Bush",
+   "set": {
+    "item_code": "Nylon 6/6 10mm Round Bar Bush"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost503",
+   "expect_name": "Nylon 6/6 12mm Round Bar Bush",
+   "set": {
+    "product_name": "Nylon Flanged Bush Round - 16mmx12mmx10mm"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost504",
+   "expect_name": "Nylon 6/6 19mm Round Bar Bush",
+   "set": {
+    "item_code": "Nylon 6/6 19mm Round Bar Bush"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost505",
+   "expect_name": "Nylon 6/6 10mm Square Pin Bush",
+   "set": {
+    "product_name": "Square Nylon Bush ID 9.55x9.55, OD 15.88mm"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost506",
+   "expect_name": "Stainless Steel 10mm Round Bar Bush",
+   "set": {
+    "item_code": "Stainless Steel 10mm Round Bar Bush"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost507",
+   "expect_name": "Stainless Steel 12mm Round Bar Bush",
+   "set": {
+    "item_code": "Stainless Steel 12mm Round Bar Bush"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost508",
+   "expect_name": "Stainless Steel 19mm Round Bar Bush",
+   "set": {
+    "item_code": "Stainless Steel 19mm Round Bar Bush"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost509",
+   "expect_name": "Stainless Steel 10mm Square Pin Bush",
+   "set": {
+    "item_code": "Stainless Steel 10mm Square Pin Bush"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost510",
+   "expect_name": "10mm Quadrant",
+   "set": {
+    "item_code": "10mm Quadrant"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost512",
+   "expect_name": "19mm Quadrant",
+   "set": {
+    "item_code": "19mm Quadrant"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost516",
+   "expect_name": "AZ",
+   "set": {
+    "item_code": "AZ"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost520",
+   "expect_name": "AL Handle Cost (per PC)",
+   "set": {
+    "item_code": "AL Handle Cost (per PC)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost523",
+   "expect_name": "AL Cam Lock Cost (per PC)",
+   "set": {
+    "item_code": "AL Cam Lock Cost (per PC)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost524",
+   "expect_name": "Rockwool 25mm",
+   "set": {
+    "item_code": "Rockwool 25mm"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost525",
+   "expect_name": "Rockwool 50mm",
+   "set": {
+    "item_code": "Rockwool 50mm"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost526",
+   "expect_name": "Fiberglass 25mm",
+   "set": {
+    "item_code": "Fiberglass 25mm"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost527",
+   "expect_name": "Fiberglass 50mm",
+   "set": {
+    "item_code": "Fiberglass 50mm"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost528",
+   "expect_name": "SS Standard Hinge",
+   "set": {
+    "item_code": "SS Standard Hinge"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost530",
+   "expect_name": "Brass Standard Hinge",
+   "set": {
+    "item_code": "Brass Standard Hinge"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost531",
+   "expect_name": "Brass Continuous Hinge",
+   "set": {
+    "item_code": "Brass Continuous Hinge"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost532",
+   "expect_name": "AL Standard Hinge",
+   "set": {
+    "item_code": "AL Standard Hinge"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost533",
+   "expect_name": "AL Continuous Hinge",
+   "set": {
+    "item_code": "AL Continuous Hinge"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost534",
+   "expect_name": "Safety Wire",
+   "set": {
+    "item_code": "Safety Wire"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost535",
+   "expect_name": "Neoprene Gasket",
+   "set": {
+    "item_code": "Neoprene Gasket"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost536",
+   "expect_name": "Polyurethane Gasket",
+   "set": {
+    "item_code": "Polyurethane Gasket"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost537",
+   "expect_name": "Min Door Fabrication Minutes",
+   "set": {
+    "item_code": "Min Door Fabrication Minutes"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost538",
+   "expect_name": "GI & AZ Door Fabrication Minutes (per sqm)",
+   "set": {
+    "item_code": "GI & AZ Door Fabrication Minutes (per sqm)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost539",
+   "expect_name": "SS Door Fabrication Minutes (per sqm)",
+   "set": {
+    "item_code": "SS Door Fabrication Minutes (per sqm)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost540",
+   "expect_name": "AL Door Fabrication Minutes (per sqm)",
+   "set": {
+    "item_code": "AL Door Fabrication Minutes (per sqm)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost541",
+   "expect_name": "Fixed Frame Fabrication Minutes",
+   "set": {
+    "item_code": "Fixed Frame Fabrication Minutes"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost542",
+   "expect_name": "GI & AZ Frame Fabrication Minutes (per m)",
+   "set": {
+    "item_code": "GI & AZ Frame Fabrication Minutes (per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost543",
+   "expect_name": "SS Frame Fabrication Minutes (per m)",
+   "set": {
+    "item_code": "SS Frame Fabrication Minutes (per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost544",
+   "expect_name": "AL Frame Fabrication Minutes (per m)",
+   "set": {
+    "item_code": "AL Frame Fabrication Minutes (per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost545",
+   "expect_name": "GI & AZ Fitting Fabrication Minutes (per m)",
+   "set": {
+    "item_code": "GI & AZ Fitting Fabrication Minutes (per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost546",
+   "expect_name": "SS Fitting Fabrication Minutes (per m)",
+   "set": {
+    "item_code": "SS Fitting Fabrication Minutes (per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost547",
+   "expect_name": "AL Fitting Fabrication Minutes (per m)",
+   "set": {
+    "item_code": "AL Fitting Fabrication Minutes (per m)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost548",
+   "expect_name": "GI & AZ Door Welding Minutes (per door)",
+   "set": {
+    "item_code": "GI & AZ Door Welding Minutes (per door)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost549",
+   "expect_name": "SS Door Welding Minutes (per door)",
+   "set": {
+    "item_code": "SS Door Welding Minutes (per door)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost550",
+   "expect_name": "AL Door Welding Minutes (per door)",
+   "set": {
+    "item_code": "AL Door Welding Minutes (per door)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost551",
+   "expect_name": "GI & AZ Frame Welding Minutes (per frame)",
+   "set": {
+    "item_code": "GI & AZ Frame Welding Minutes (per frame)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost552",
+   "expect_name": "SS Frame Welding Minutes (per frame)",
+   "set": {
+    "item_code": "SS Frame Welding Minutes (per frame)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost553",
+   "expect_name": "AL Frame Welding Minutes (per frame)",
+   "set": {
+    "item_code": "AL Frame Welding Minutes (per frame)"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost554",
+   "expect_name": "Powder Coating Cost",
+   "set": {
+    "item_code": "Powder Coating Cost"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost555",
+   "expect_name": "Cost per Hour",
+   "set": {
+    "item_code": "Cost per Hour"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost556",
+   "expect_name": "Welding Rate per Hour",
+   "set": {
+    "item_code": "Welding Rate per Hour"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost557",
+   "expect_name": "Overhead Percentage",
+   "set": {
+    "item_code": "Overhead Percentage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost558",
+   "expect_name": "Profit",
+   "set": {
+    "item_code": "Profit"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost559",
+   "expect_name": "Accessories Wastage",
+   "set": {
+    "item_code": "Accessories Wastage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost560",
+   "expect_name": "Door Wastage",
+   "set": {
+    "item_code": "Door Wastage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost561",
+   "expect_name": "Frame Wastage",
+   "set": {
+    "item_code": "Frame Wastage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost57",
+   "expect_name": "3/16’’ x 2’’ Lg. Solid Roll Pin",
+   "set": {
+    "product_name": "3/16 Inch x 2 Inch Lg. Solid Roll Pin"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost63",
+   "expect_name": "Damper Processing Minutes",
+   "set": {
+    "item_code": "Damper Processing Minutes"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost64",
+   "expect_name": "Blade Switch Processing Minutes",
+   "set": {
+    "item_code": "Blade Switch Processing Minutes"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost65",
+   "expect_name": "Transition Time per m of Perimeter of Damper",
+   "set": {
+    "item_code": "Transition Time per m of Perimeter of Damper"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost66",
+   "expect_name": "Retaining Plate Installation Minutes",
+   "set": {
+    "item_code": "Retaining Plate Installation Minutes"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost67",
+   "expect_name": "Actuator Installation Minutes per Actuator",
+   "set": {
+    "item_code": "Actuator Installation Minutes per Actuator"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost68",
+   "expect_name": "Cost per Hour",
+   "set": {
+    "item_code": "Cost per Hour"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost69",
+   "expect_name": "Overhead Percentage",
+   "set": {
+    "item_code": "Overhead Percentage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost70",
+   "expect_name": "Overhead Percentage on Actuator",
+   "set": {
+    "item_code": "Overhead Percentage on Actuator"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost71",
+   "expect_name": "Profit",
+   "set": {
+    "item_code": "Profit"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost72",
+   "expect_name": "Accessories Wastage",
+   "set": {
+    "item_code": "Accessories Wastage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost73",
+   "expect_name": "Blade Wastage",
+   "set": {
+    "item_code": "Blade Wastage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost74",
+   "expect_name": "Frame Wastage",
+   "set": {
+    "item_code": "Frame Wastage"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost77",
+   "expect_name": "UL FNST Blade Seal",
+   "set": {
+    "product_name": "UL FNST Blade Seal - High Temperature"
+   }
+  },
+  {
+   "row": "FTOCountryWiseCost85",
+   "expect_name": "5/16 - 18 x 1Â  1/2 Carriage Bolt",
+   "set": {
+    "product_name": "5/16 - 18 x 1 1/2 Carriage Bolt"
+   }
+  }
+ ],
+ "merges": [
+  {
+   "survivor": "FTOCountryWiseCost1",
+   "members": [
+    "FTOCountryWiseCost116",
+    "FTOCountryWiseCost137",
+    "FTOCountryWiseCost380",
+    "FTOCountryWiseCost457",
+    "FTOCountryWiseCost513",
+    "FTOCountryWiseCost58"
+   ],
+   "expect": {
+    "FTOCountryWiseCost513": "GI",
+    "FTOCountryWiseCost58": "GI",
+    "FTOCountryWiseCost137": "GI",
+    "FTOCountryWiseCost380": "GI",
+    "FTOCountryWiseCost116": "GI",
+    "FTOCountryWiseCost1": "GI",
+    "FTOCountryWiseCost457": "GI"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost101",
+   "members": [
+    "FTOCountryWiseCost175"
+   ],
+   "expect": {
+    "FTOCountryWiseCost101": "STOR 165F",
+    "FTOCountryWiseCost175": "STOR 165F"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost102",
+   "members": [
+    "FTOCountryWiseCost176"
+   ],
+   "expect": {
+    "FTOCountryWiseCost102": "STOR 212F",
+    "FTOCountryWiseCost176": "STOR 212F"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost103",
+   "members": [
+    "FTOCountryWiseCost177"
+   ],
+   "expect": {
+    "FTOCountryWiseCost103": "STOR 250F",
+    "FTOCountryWiseCost177": "STOR 250F"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost104",
+   "members": [
+    "FTOCountryWiseCost178"
+   ],
+   "expect": {
+    "FTOCountryWiseCost104": "STOR 350F",
+    "FTOCountryWiseCost178": "STOR 350F"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost105",
+   "members": [
+    "FTOCountryWiseCost179"
+   ],
+   "expect": {
+    "FTOCountryWiseCost105": "STOR PFL",
+    "FTOCountryWiseCost179": "STOR PFL"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost106",
+   "members": [
+    "FTOCountryWiseCost180"
+   ],
+   "expect": {
+    "FTOCountryWiseCost106": "DTOR 165/212F",
+    "FTOCountryWiseCost180": "DTOR 165/212F"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost107",
+   "members": [
+    "FTOCountryWiseCost181"
+   ],
+   "expect": {
+    "FTOCountryWiseCost107": "DTOR 165/250F",
+    "FTOCountryWiseCost181": "DTOR 165/250F"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost108",
+   "members": [
+    "FTOCountryWiseCost182"
+   ],
+   "expect": {
+    "FTOCountryWiseCost108": "DTOR 165/350F",
+    "FTOCountryWiseCost182": "DTOR 165/350F"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost109",
+   "members": [
+    "FTOCountryWiseCost183"
+   ],
+   "expect": {
+    "FTOCountryWiseCost109": "DTOR 212/250F",
+    "FTOCountryWiseCost183": "DTOR 212/250F"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost110",
+   "members": [
+    "FTOCountryWiseCost184"
+   ],
+   "expect": {
+    "FTOCountryWiseCost110": "DTOR 212/350F",
+    "FTOCountryWiseCost184": "DTOR 212/350F"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost17",
+   "members": [
+    "FTOCountryWiseCost167"
+   ],
+   "expect": {
+    "FTOCountryWiseCost167": "3V Linkage Bracket (Blade Lever 3V-A GI G90 3.5mm 9005)",
+    "FTOCountryWiseCost17": "For Square Bush-3V"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost171",
+   "members": [
+    "FTOCountryWiseCost20"
+   ],
+   "expect": {
+    "FTOCountryWiseCost20": "Knurling Pin with retainer ring",
+    "FTOCountryWiseCost171": "Linkage Pins & Lock Ring"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost2",
+   "members": [
+    "FTOCountryWiseCost118",
+    "FTOCountryWiseCost145",
+    "FTOCountryWiseCost381",
+    "FTOCountryWiseCost458",
+    "FTOCountryWiseCost514",
+    "FTOCountryWiseCost59"
+   ],
+   "expect": {
+    "FTOCountryWiseCost59": "SS304",
+    "FTOCountryWiseCost2": "SS304",
+    "FTOCountryWiseCost458": "SS304",
+    "FTOCountryWiseCost118": "SS304/304L",
+    "FTOCountryWiseCost514": "SS304L",
+    "FTOCountryWiseCost145": "SS304L",
+    "FTOCountryWiseCost381": "SS304L"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost21",
+   "members": [
+    "FTOCountryWiseCost169"
+   ],
+   "expect": {
+    "FTOCountryWiseCost169": "AF Linkage Bracket (Blade Lever Airfoil C GI G90 3.5mm 9003)",
+    "FTOCountryWiseCost21": "For Square Bush-AF"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost22",
+   "members": [
+    "FTOCountryWiseCost248"
+   ],
+   "expect": {
+    "FTOCountryWiseCost22": "Jamb Seal SS304 50X0.25mm",
+    "FTOCountryWiseCost248": "SS Jamb Seal (Side Seal / Jamb Seal / SS304 50X0.25mm)"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost23",
+   "members": [
+    "FTOCountryWiseCost54",
+    "FTOCountryWiseCost93"
+   ],
+   "expect": {
+    "FTOCountryWiseCost93": "GI VCD Handle (V) Square 10x10",
+    "FTOCountryWiseCost54": "GI VCD Handle (V) Square 10x10",
+    "FTOCountryWiseCost23": "GI VCD Handle (V) Square 10x10"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost238",
+   "members": [
+    "FTOCountryWiseCost277",
+    "FTOCountryWiseCost386"
+   ],
+   "expect": {
+    "FTOCountryWiseCost386": "Sealant",
+    "FTOCountryWiseCost277": "Sealant",
+    "FTOCountryWiseCost238": "Sealant Dow Corning"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost255",
+   "members": [
+    "FTOCountryWiseCost112"
+   ],
+   "expect": {
+    "FTOCountryWiseCost112": "Linkage Bar",
+    "FTOCountryWiseCost255": "Linkage Bar 13mm (AF-FD Linkage Bar GI CVSS 12.7X292X3.5mm 9170)"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost280",
+   "members": [
+    "FTOCountryWiseCost114",
+    "FTOCountryWiseCost288"
+   ],
+   "expect": {
+    "FTOCountryWiseCost280": "Fusible Link 73C (165F) - Globe JS",
+    "FTOCountryWiseCost114": "MFL 165F",
+    "FTOCountryWiseCost288": "MFL 165F"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost282",
+   "members": [
+    "FTOCountryWiseCost115",
+    "FTOCountryWiseCost289"
+   ],
+   "expect": {
+    "FTOCountryWiseCost282": "Fusible Link 100C (212F) - Globe JS",
+    "FTOCountryWiseCost115": "MFL 212F",
+    "FTOCountryWiseCost289": "MFL 212F"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost284",
+   "members": [
+    "FTOCountryWiseCost286"
+   ],
+   "expect": {
+    "FTOCountryWiseCost284": "Momemtory Test Switch (MTS)",
+    "FTOCountryWiseCost286": "Momemtory Test Switch (MTS)"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost3",
+   "members": [
+    "FTOCountryWiseCost117",
+    "FTOCountryWiseCost144",
+    "FTOCountryWiseCost382",
+    "FTOCountryWiseCost459",
+    "FTOCountryWiseCost515",
+    "FTOCountryWiseCost60"
+   ],
+   "expect": {
+    "FTOCountryWiseCost60": "SS316",
+    "FTOCountryWiseCost3": "SS316",
+    "FTOCountryWiseCost459": "SS316",
+    "FTOCountryWiseCost117": "SS316/316L",
+    "FTOCountryWiseCost515": "SS316L",
+    "FTOCountryWiseCost144": "SS316L",
+    "FTOCountryWiseCost382": "SS316L"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost31",
+   "members": [
+    "FTOCountryWiseCost240",
+    "FTOCountryWiseCost61"
+   ],
+   "expect": {
+    "FTOCountryWiseCost61": "Conversion sqft to sqm",
+    "FTOCountryWiseCost240": "Conversion sqft to sqm",
+    "FTOCountryWiseCost31": "Conversion sqft to sqm"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost32",
+   "members": [
+    "FTOCountryWiseCost130",
+    "FTOCountryWiseCost140",
+    "FTOCountryWiseCost62"
+   ],
+   "expect": {
+    "FTOCountryWiseCost62": "Conversion Inch to mm",
+    "FTOCountryWiseCost140": "Conversion Inch to mm",
+    "FTOCountryWiseCost130": "Conversion Inch to mm",
+    "FTOCountryWiseCost32": "Conversion Inch to mm"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost340",
+   "members": [
+    "FTO6511044"
+   ],
+   "expect": {
+    "FTOCountryWiseCost340": "GI 30",
+    "FTO6511044": "GI 30 mm Angle"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost341",
+   "members": [
+    "FTO6511045"
+   ],
+   "expect": {
+    "FTOCountryWiseCost341": "GI 40",
+    "FTO6511045": "GI 40 mm Angle"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost342",
+   "members": [
+    "FTO6511046"
+   ],
+   "expect": {
+    "FTOCountryWiseCost342": "GI 50",
+    "FTO6511046": "GI 50 mm Angle"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost344",
+   "members": [
+    "FTO6511053"
+   ],
+   "expect": {
+    "FTOCountryWiseCost344": "SS304L 30",
+    "FTO6511053": "SS304L 30 mm Angle"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost345",
+   "members": [
+    "FTO6511054"
+   ],
+   "expect": {
+    "FTOCountryWiseCost345": "SS304L 40",
+    "FTO6511054": "SS304L 40 mm Angle"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost346",
+   "members": [
+    "FTO6511055"
+   ],
+   "expect": {
+    "FTOCountryWiseCost346": "SS304L 50",
+    "FTO6511055": "SS304L 50 mm Angle"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost348",
+   "members": [
+    "FTO6511056"
+   ],
+   "expect": {
+    "FTOCountryWiseCost348": "SS316L 30",
+    "FTO6511056": "SS316L 30 mm Angle"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost349",
+   "members": [
+    "FTO6511057"
+   ],
+   "expect": {
+    "FTOCountryWiseCost349": "SS316L 40",
+    "FTO6511057": "SS316L 40 mm Angle"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost350",
+   "members": [
+    "FTO6511058"
+   ],
+   "expect": {
+    "FTOCountryWiseCost350": "SS316L 50",
+    "FTO6511058": "SS316L 50 mm Angle"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost388",
+   "members": [
+    "FTOCountryWiseCost128",
+    "FTOCountryWiseCost138"
+   ],
+   "expect": {
+    "FTOCountryWiseCost138": "SS Density Factor",
+    "FTOCountryWiseCost128": "SS Density Factor",
+    "FTOCountryWiseCost388": "SSDensityFactor"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost389",
+   "members": [
+    "FTOCountryWiseCost129",
+    "FTOCountryWiseCost139"
+   ],
+   "expect": {
+    "FTOCountryWiseCost139": "GI Density Factor",
+    "FTOCountryWiseCost129": "GI Density Factor",
+    "FTOCountryWiseCost389": "GIDensityFactor"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost430",
+   "members": [
+    "FTOCountryWiseCost230"
+   ],
+   "expect": {
+    "FTOCountryWiseCost230": "80 lb-in. (9 Nm), 24 V, F&S Actuator, 2 Aux. - FSNF24-S US",
+    "FTOCountryWiseCost430": "Belimo 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSNF24-S US"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost431",
+   "members": [
+    "FTOCountryWiseCost232"
+   ],
+   "expect": {
+    "FTOCountryWiseCost232": "80 lb-in. (9 Nm), 230 V, F&S Actuator, 2 Aux. - FSNF230-S US",
+    "FTOCountryWiseCost431": "Belimo 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSNF230-S US"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost432",
+   "members": [
+    "FTOCountryWiseCost226"
+   ],
+   "expect": {
+    "FTOCountryWiseCost226": "30 lb-in. (3.5 Nm), 230 V, F&S Actuator, 2 Aux. FSLF230-S US",
+    "FTOCountryWiseCost432": "Belimo 30lbin-3.5Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSLF230-S US"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost433",
+   "members": [
+    "FTOCountryWiseCost228"
+   ],
+   "expect": {
+    "FTOCountryWiseCost228": "30 lb-in. (3.5 Nm), 24 V, F&S Actuator, 2 Aux. - FSLF24-S US",
+    "FTOCountryWiseCost433": "Belimo 30lbin-3.5Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSLF24-S US"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost434",
+   "members": [
+    "FTOCountryWiseCost209"
+   ],
+   "expect": {
+    "FTOCountryWiseCost209": "30 lb-in. (3.4 Nm), 230 V, F&S Actuator w/o Aux. - MS4604F1010/B",
+    "FTOCountryWiseCost434": "Honeywell 30lbin-3.4Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4604F1010/B"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost435",
+   "members": [
+    "FTOCountryWiseCost210"
+   ],
+   "expect": {
+    "FTOCountryWiseCost210": "30 lb-in. (3.4 Nm), 230 V, F&S Actuator, 2 Aux. -MS4604F1210/B",
+    "FTOCountryWiseCost435": "Honeywell 30lbin-3.4Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4604F1210/B"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost436",
+   "members": [
+    "FTOCountryWiseCost211"
+   ],
+   "expect": {
+    "FTOCountryWiseCost211": "30 lb-in. (3.4 Nm), 24 V, F&S Actuator w/o Aux. - MS8104F1010/B",
+    "FTOCountryWiseCost436": "Honeywell 30lbin-3.4Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8104F1010/B"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost437",
+   "members": [
+    "FTOCountryWiseCost212"
+   ],
+   "expect": {
+    "FTOCountryWiseCost212": "30 lb-in. (3.4 Nm), 24 V, F&S Actuator, 2 Aux. - MS8104F1210/B",
+    "FTOCountryWiseCost437": "Honeywell 30lbin-3.4Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8104F1210/B"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost438",
+   "members": [
+    "FTOCountryWiseCost213"
+   ],
+   "expect": {
+    "FTOCountryWiseCost213": "80 lb-in. (9 Nm), 24 V, F&S Actuator w/o Aux. - MS8109F1010/B",
+    "FTOCountryWiseCost438": "Honeywell 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8109F1010/B"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost439",
+   "members": [
+    "FTOCountryWiseCost214"
+   ],
+   "expect": {
+    "FTOCountryWiseCost214": "80 lb-in. (9 Nm), 24 V, F&S Actuator, 2 Aux. - MS8109F1210/B",
+    "FTOCountryWiseCost439": "Honeywell 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8109F1210/B"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost440",
+   "members": [
+    "FTOCountryWiseCost215"
+   ],
+   "expect": {
+    "FTOCountryWiseCost215": "80 lb-in. (9 Nm), 230 V, F&S Actuator w/o Aux. - MS4609F1010/B",
+    "FTOCountryWiseCost440": "Honeywell 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4609F1010/B"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost441",
+   "members": [
+    "FTOCountryWiseCost216"
+   ],
+   "expect": {
+    "FTOCountryWiseCost216": "80 lb-in. (9 Nm), 230 V, F&S Actuator, 2 Aux. - MS4609F1210/B",
+    "FTOCountryWiseCost441": "Honeywell 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4609F1210/B"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost442",
+   "members": [
+    "FTOCountryWiseCost217"
+   ],
+   "expect": {
+    "FTOCountryWiseCost217": "175 lb-in. (20 Nm), 24 V, F&S Actuator w/o Aux. - MS8120F1002/B",
+    "FTOCountryWiseCost442": "Honeywell 175lbin-20Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8120F1002/B"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost443",
+   "members": [
+    "FTOCountryWiseCost218"
+   ],
+   "expect": {
+    "FTOCountryWiseCost218": "175 lb-in. (20 Nm), 24 V, F&S Actuator, 2 Aux. - MS8120F1200/B",
+    "FTOCountryWiseCost443": "Honeywell 175lbin-20Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8120F1200/B"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost444",
+   "members": [
+    "FTOCountryWiseCost220"
+   ],
+   "expect": {
+    "FTOCountryWiseCost220": "175 lb-in. (20 Nm), 230 V, F&S Actuator 2 Aux. - MS4620F1203/B",
+    "FTOCountryWiseCost444": "Honeywell 175lbin-20Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4620F1203/B"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost445",
+   "members": [
+    "FTOCountryWiseCost219"
+   ],
+   "expect": {
+    "FTOCountryWiseCost219": "175 lb-in. (20 Nm), 230 V, F&S Actuator, w/o Aux. - MS4620F1005/B",
+    "FTOCountryWiseCost445": "Honeywell 175lbin-20Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4620F1005/B"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost446",
+   "members": [
+    "FTOCountryWiseCost225"
+   ],
+   "expect": {
+    "FTOCountryWiseCost225": "30 lb-in. (3.5 Nm), 230 V, F&S Actuator w/o Aux. - FSLF230 US",
+    "FTOCountryWiseCost446": "Belimo 30lbin-3.5Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSLF230 US"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost447",
+   "members": [
+    "FTOCountryWiseCost231"
+   ],
+   "expect": {
+    "FTOCountryWiseCost231": "80 lb-in. (9 Nm), 230 V, F&S Actuator w/o Aux. - FSNF230 US",
+    "FTOCountryWiseCost447": "Belimo 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSNF230 US"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost448",
+   "members": [
+    "FTOCountryWiseCost229"
+   ],
+   "expect": {
+    "FTOCountryWiseCost229": "80 lb-in. (9 Nm), 24 V, F&S Actuator w/o Aux. - FSNF24 US",
+    "FTOCountryWiseCost448": "Belimo 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSNF24 US"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost449",
+   "members": [
+    "FTOCountryWiseCost227"
+   ],
+   "expect": {
+    "FTOCountryWiseCost227": "30 lb-in. (3.5 Nm), 24 V, F&S Actuator w/o Aux. - FSLF24 US",
+    "FTOCountryWiseCost449": "Belimo 30lbin-3.5Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSLF24 US"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost450",
+   "members": [
+    "FTOCountryWiseCost224"
+   ],
+   "expect": {
+    "FTOCountryWiseCost224": "18 lb-in. (2Nm), 24 V, two-position F&S Actuator, 2 Aux. - FSTF24-S US",
+    "FTOCountryWiseCost450": "Belimo 18lbin-2.5Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSTF24-S US"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost451",
+   "members": [
+    "FTOCountryWiseCost222"
+   ],
+   "expect": {
+    "FTOCountryWiseCost222": "18 lb-in. (2Nm), 230 V, two-position F&S Actuator, 2 Aux. - FSTF230-S US",
+    "FTOCountryWiseCost451": "Belimo 18lbin-2.5Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSTF230-S US"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost452",
+   "members": [
+    "FTOCountryWiseCost221"
+   ],
+   "expect": {
+    "FTOCountryWiseCost221": "18 lb-in. (2Nm), 230 V, two-position F&S Actuator w/o Aux. - FSTF230 US",
+    "FTOCountryWiseCost452": "Belimo 18lbin-2.5Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSTF230 US"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost453",
+   "members": [
+    "FTOCountryWiseCost223"
+   ],
+   "expect": {
+    "FTOCountryWiseCost223": "18 lb-in. (2Nm), 24 V, two-position F&S Actuator w/o Aux. - FSTF24 US",
+    "FTOCountryWiseCost453": "Belimo 18lbin-2.5Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSTF24 US"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost454",
+   "members": [
+    "FTOCountryWiseCost234"
+   ],
+   "expect": {
+    "FTOCountryWiseCost234": "175 lb-in. (20 Nm), 24 V, F&S Actuator w Aux. - FSAB-24-SR-S",
+    "FTOCountryWiseCost454": "Belimo 180lbin-20Nm, 24V Fire & Smoke-Modulating 2-10V, Actuator 2 Aux FSAFB24-SR-S"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost455",
+   "members": [
+    "FTOCountryWiseCost233"
+   ],
+   "expect": {
+    "FTOCountryWiseCost233": "175 lb-in. (20 Nm), 24 V, F&S Actuator w/o Aux. - FSAB-24-SR",
+    "FTOCountryWiseCost455": "Belimo 180lbin-20Nm, 24V Fire & Smoke-Modulating 2-10V, Actuator w/o Aux FSAFB24-SR"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost481",
+   "members": [
+    "FTOCountryWiseCost147",
+    "FTOCountryWiseCost25"
+   ],
+   "expect": {
+    "FTOCountryWiseCost147": "Axle Square Shaft (Blade Shaft Square GI G90 9.5X9.5X80mm 9148)",
+    "FTOCountryWiseCost25": "Small Spindle-Round Bush Blade Shaft Square",
+    "FTOCountryWiseCost481": "GI 10mm Square Pin"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost498",
+   "members": [
+    "FTOCountryWiseCost10",
+    "FTOCountryWiseCost148",
+    "FTOCountryWiseCost75"
+   ],
+   "expect": {
+    "FTOCountryWiseCost148": "Blade Shaft Bush (Square Bronze Bush 9.60 x 16mm Flanged)",
+    "FTOCountryWiseCost10": "Square Bronze Bush",
+    "FTOCountryWiseCost75": "Square Bronze Oilite Bush 3/8 Inch 10mm",
+    "FTOCountryWiseCost498": "Bronze Oilite 10mm Round Bar Bush"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost5",
+   "members": [
+    "FTOCountryWiseCost460",
+    "FTOCountryWiseCost517"
+   ],
+   "expect": {
+    "FTOCountryWiseCost517": "AL",
+    "FTOCountryWiseCost5": "AL",
+    "FTOCountryWiseCost460": "AL"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost503",
+   "members": [
+    "FTOCountryWiseCost13"
+   ],
+   "expect": {
+    "FTOCountryWiseCost13": "Round Nylon Bush",
+    "FTOCountryWiseCost503": "Nylon 6/6 12mm Round Bar Bush"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost505",
+   "members": [
+    "FTOCountryWiseCost9"
+   ],
+   "expect": {
+    "FTOCountryWiseCost9": "Square Nylon Bush",
+    "FTOCountryWiseCost505": "Nylon 6/6 10mm Square Pin Bush"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost55",
+   "members": [
+    "FTOCountryWiseCost79"
+   ],
+   "expect": {
+    "FTOCountryWiseCost79": "Fuse Link Hexa Stud Pin Steel 11X30.6mm 9145",
+    "FTOCountryWiseCost55": "Fuse Link Hexa Stud Pin Steel 11X30.6mm 9145"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost56",
+   "members": [
+    "FTOCountryWiseCost80"
+   ],
+   "expect": {
+    "FTOCountryWiseCost80": "Spring Retainer Bushing Steel 31.75mmX6.35mmDia",
+    "FTOCountryWiseCost56": "Spring Retainer Bushing Steel 31.75mmX6.35mmDia"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost57",
+   "members": [
+    "FTOCountryWiseCost82"
+   ],
+   "expect": {
+    "FTOCountryWiseCost82": "3/16 Inch x 2 Inch Lg. Solid Roll Pin",
+    "FTOCountryWiseCost57": "3/16’’ x 2’’ Lg. Solid Roll Pin"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost77",
+   "members": [
+    "FTOCountryWiseCost476"
+   ],
+   "expect": {
+    "FTOCountryWiseCost77": "UL FNST Blade Seal",
+    "FTOCountryWiseCost476": "UL FNST Blade Seal - High Temperature"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost78",
+   "members": [
+    "FTOCountryWiseCost165"
+   ],
+   "expect": {
+    "FTOCountryWiseCost78": "Fuse Link Retainer Pin",
+    "FTOCountryWiseCost165": "Fuse Link Retainer Pin"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost81",
+   "members": [
+    "FTOCountryWiseCost235"
+   ],
+   "expect": {
+    "FTOCountryWiseCost81": "Damper Closer Spring SS304 55.5mmX3.2mmDia",
+    "FTOCountryWiseCost235": "Damper Closer Spring SS304 55.5mmX3.2mmDia"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost83",
+   "members": [
+    "FTOCountryWiseCost159"
+   ],
+   "expect": {
+    "FTOCountryWiseCost83": "Zeb Drive Pin Steel 15.87X21.46mm 9146",
+    "FTOCountryWiseCost159": "Zeb Drive Pin Steel 15.87X21.46mm 9146"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost84",
+   "members": [
+    "FTOCountryWiseCost160"
+   ],
+   "expect": {
+    "FTOCountryWiseCost84": "Jack Shaft Drive GI G90 110X25mm 9008",
+    "FTOCountryWiseCost160": "Jack Shaft Drive GI G90 110X25mm 9008"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost85",
+   "members": [
+    "FTOCountryWiseCost161"
+   ],
+   "expect": {
+    "FTOCountryWiseCost85": "5/16 - 18 x 1Â  1/2 Carriage Bolt",
+    "FTOCountryWiseCost161": "5/16 - 18 x 1  1/2 Carriage Bolt"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost86",
+   "members": [
+    "FTOCountryWiseCost162"
+   ],
+   "expect": {
+    "FTOCountryWiseCost86": "5/16 -18 Flange Whiz Nut",
+    "FTOCountryWiseCost162": "5/16 -18 Flange Whiz Nut"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost87",
+   "members": [
+    "FTOCountryWiseCost163"
+   ],
+   "expect": {
+    "FTOCountryWiseCost87": "1/4 - 20 Lock Nut",
+    "FTOCountryWiseCost163": "1/4 - 20 Lock Nut"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost88",
+   "members": [
+    "FTOCountryWiseCost164"
+   ],
+   "expect": {
+    "FTOCountryWiseCost88": "Zeb Drive Link CRS 12.7X150mm 9006",
+    "FTOCountryWiseCost164": "Zeb Drive Link CRS 12.7X150mm 9006"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost92",
+   "members": [
+    "FTOCountryWiseCost253"
+   ],
+   "expect": {
+    "FTOCountryWiseCost92": "Jack Shaft Rod 12mm",
+    "FTOCountryWiseCost253": "Jack Shaft Rod 12mm"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost94",
+   "members": [
+    "FTOCountryWiseCost174"
+   ],
+   "expect": {
+    "FTOCountryWiseCost94": "Blade Switch Cost",
+    "FTOCountryWiseCost174": "Blade Switch Cost"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost95",
+   "members": [
+    "FTOCountryWiseCost236"
+   ],
+   "expect": {
+    "FTOCountryWiseCost95": "2 Way Junction Box with Cover 100x50x48-Ul Listed",
+    "FTOCountryWiseCost236": "2 Way Junction Box with Cover 100x50x48-Ul Listed"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost96",
+   "members": [
+    "FTOCountryWiseCost237"
+   ],
+   "expect": {
+    "FTOCountryWiseCost96": "Twister Wire Connector",
+    "FTOCountryWiseCost237": "Twister Wire Connector"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost98",
+   "members": [
+    "FTOCountryWiseCost252"
+   ],
+   "expect": {
+    "FTOCountryWiseCost98": "UL Listed Conduit",
+    "FTOCountryWiseCost252": "UL Listed Conduit"
+   }
+  },
+  {
+   "survivor": "FTOCountryWiseCost99",
+   "members": [
+    "FTOCountryWiseCost155"
+   ],
+   "expect": {
+    "FTOCountryWiseCost99": "Anti-short Bushing",
+    "FTOCountryWiseCost155": "Anti-short Bushing"
+   }
+  }
+ ],
+ "fill_country": [
+  "FTO44216",
+  "FTOCountryWiseCost33",
+  "FTOCountryWiseCost388",
+  "FTOCountryWiseCost389"
+ ]
+}

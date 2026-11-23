@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "creation": "2026-11-23 10:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bundle"
+ ],
+ "fields": [
+  {
+   "fieldname": "bundle",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Bundle",
+   "options": "BtbBundle",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-11-23 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Btb Cvs Support",
+ "name": "FTOCostBundle",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
