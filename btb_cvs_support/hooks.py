@@ -314,17 +314,47 @@ override_whitelisted_methods = {
     "frappe.core.doctype.data_import.data_import.download_template": "btb_cvs_support.api.fto_export.download_template",
 }
 
+# Each site maintains these records itself (they differ per site), so they are neither
+# shipped nor exported: a migrate leaves the site's own version untouched.
+SITE_OWNED_CLIENT_SCRIPTS = [
+    "Sales Order-Client",
+    "Order Processing Request-Client",
+    "Delivery Note-Client",
+]
+SITE_OWNED_CUSTOM_FIELDS = [
+    "Appraisal Goal-custom_employee_comments",
+    "FTOCVSSpring-custom_unique_id",
+    "Quotation-custom_onecpq_items",
+    "Quotation-custom_cpq_amended",
+    "Quotation-custom_apply_discount",
+    "Quotation-custom_cart_discount",
+    "Quotation-custom_created_from",
+    "Quotation-custom_discount",
+    "Quotation-custom_list_amount",
+    "Quotation-custom_onecpq_total",
+    "Quotation-custom_total_discount",
+    "Quotation-custom_total_discount_amount",
+    "Delivery Note-custom_opr",
+    "Delivery Note-custom_sales_order",
+    "Delivery Note-custom_total_pcs",
+    "Delivery Note-custom_total_sqm",
+    "Stock Entry-custom_opr",
+    "Stock Entry-custom_sales_order",
+]
+
 fixtures = [
     {
         "doctype": "Client Script",
         "filters": [
-            ["module","in",["Btb Cvs Support"]]
+            ["module","in",["Btb Cvs Support"]],
+            ["name","not in",SITE_OWNED_CLIENT_SCRIPTS]
         ]
     },
     {
         "doctype": "Custom Field",
         "filters": [
-            ["module","in",["Btb Cvs Support"]]
+            ["module","in",["Btb Cvs Support"]],
+            ["name","not in",SITE_OWNED_CUSTOM_FIELDS]
         ]
     },
     {

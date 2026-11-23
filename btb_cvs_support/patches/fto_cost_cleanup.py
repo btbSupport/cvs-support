@@ -351,7 +351,26 @@ def retire_old_fields():
 	for cf in frappe.get_all("Custom Field", {"dt": COST, "fieldname": ["in", OLD_FIELDS + OLD_BREAKS]}, ["name", "fieldname"]):
 		frappe.delete_doc("Custom Field", cf.name, ignore_permissions=True, force=True)
 		log(f"custom field {cf.name} ({cf.fieldname}) deleted")
+	remove_duplicate_custom_fields()
 	frappe.clear_cache(doctype=COST)
+
+
+def remove_duplicate_custom_fields():
+	"""Custom Field records left behind when custom_cost_type / custom_country moved into the doctype (Qatar, KSA,
+	Egypt). The field stays (standard DocField); its list-view setting is kept as a plain property setter."""
+	standard = set(frappe.get_all("DocField", {"parent": COST, "parenttype": "DocType"}, pluck="fieldname"))
+	for cf in frappe.get_all("Custom Field", {"dt": COST, "fieldname": ["in", ["custom_cost_type", "custom_country"]]},
+			["name", "fieldname"]):
+		if cf.fieldname not in standard:
+			continue
+		keep = frappe.get_all("Property Setter", {"doc_type": COST, "field_name": cf.fieldname},
+			["property", "value", "property_type"])
+		frappe.delete_doc("Custom Field", cf.name, ignore_permissions=True, force=True)
+		for ps in keep:
+			frappe.make_property_setter({"doctype": COST, "fieldname": cf.fieldname, "property": ps.property,
+				"value": ps.value, "property_type": ps.property_type or "Data"}, validate_fields_for_doctype=False)
+		log(f"duplicate custom field {cf.name} deleted (standard field {cf.fieldname} kept"
+			+ (f"; {len(keep)} setting(s) kept)" if keep else ")"))
 
 
 def clean_property_setters():
