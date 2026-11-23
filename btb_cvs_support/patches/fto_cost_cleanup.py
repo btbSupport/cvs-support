@@ -218,6 +218,9 @@ def move_option_refs(old, new):
 		frappe.db.set_value("BtbImplementationConstraintAction", r.name, "impact_options", ",".join(dict.fromkeys(opts)),
 			update_modified=False)
 		n += 1
+	for side in ("left", "right"):  # option-compatibility tables point at options too
+		n += frappe.db.count("BtbMappingConstraintEntry", {side: old})
+		frappe.db.sql(f"update `tabBtbMappingConstraintEntry` set `{side}` = %s where `{side}` = %s", (new, old))
 	return n
 
 

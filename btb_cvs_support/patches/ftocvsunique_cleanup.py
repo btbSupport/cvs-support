@@ -6,7 +6,8 @@ Agreed 2026-11-21:
   1. Delete the rows with no product family and model '#N/A' - old Curtain
      Fire Damper ids from before the model rename, left behind as options of
      the Fire & Smoke feature type - together with those options. A row stays
-     if any rule or saved cart line on this site still refers to it.
+     if any rule, mapping constraint entry or saved cart line on this site
+     still refers to it.
   2. product_family_description is fetched from the bundle label but was never
      filled for most rows: fill it for every row with a product family.
   3. Remove the custom fields custom_label (a copy of custom_unique_id that
@@ -77,6 +78,8 @@ def delete_orphan_rows():
 		options_of.setdefault(o.object, []).append(o.name)
 
 	used_ids, used_texts = rule_references()
+	used_ids |= {r[0] for r in frappe.db.sql("""select `left` from `tabBtbMappingConstraintEntry`
+		union select `right` from `tabBtbMappingConstraintEntry`""") if r[0]}  # option-compatibility tables
 	in_carts = set()
 	if(options):
 		in_carts = {r[0] for r in frappe.db.sql(
@@ -96,7 +99,7 @@ def delete_orphan_rows():
 	note(f"orphan rows: {deleted} deleted with {sum(len(options_of.get(r.name, [])) for r in rows if r.name not in kept)} "
 		 f"feature type option(s)")
 	if(kept):
-		note(f"orphan rows KEPT because a rule or cart line still uses them: {', '.join(kept)}")
+		note(f"orphan rows KEPT because a rule, mapping entry or cart line still uses them: {', '.join(kept)}")
 
 
 def rule_references():
