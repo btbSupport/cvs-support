@@ -120,7 +120,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Product Family",
-   "options": "BtbBundle"
+   "options": "BtbBundle",
+   "reqd": 1
   },
   {
    "fieldname": "min_diameter",
@@ -209,17 +210,20 @@
    "fetch_from": "product_family.label",
    "fieldname": "product_family_description",
    "fieldtype": "Data",
-   "label": "Product Family Description"
+   "label": "Product Family Description",
+   "read_only": 1
   },
   {
    "fieldname": "custom_unique_id",
    "fieldtype": "Data",
-   "label": "Unique Id"
+   "label": "Unique Id",
+   "in_list_view": 1,
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-09-13 09:30:17.626674",
+ "modified": "2026-11-21 12:30:00.000000",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCVSUnique",
