@@ -1,0 +1,6227 @@
+{
+ "bundle": "BUN11",
+ "label": "Fire Rated Access Doors",
+ "built_on": "cvsuae.localhost",
+ "records": [
+  {
+   "op": "ensure",
+   "doctype": "Item",
+   "name": "SKU41",
+   "doc": {
+    "item_code": "FRAD",
+    "item_name": "Fire Rated Access Doors",
+    "description": "Fire Rated Access Doors",
+    "item_group": "All Item Groups",
+    "stock_uom": "Ea",
+    "is_stock_item": 1,
+    "is_sales_item": 1,
+    "custom_configurable": 1,
+    "custom_manufactured_item": 0,
+    "default_material_request_type": "Purchase"
+   }
+  },
+  {
+   "op": "ensure",
+   "doctype": "Item",
+   "name": "RAPI",
+   "doc": {
+    "item_code": "RAPI",
+    "item_name": "SAFE4 Fire Rated Access Door Insulated Bolted",
+    "description": "SAFE4 Fire Rated Access Door Insulated Bolted",
+    "item_group": "22-Access Doors",
+    "stock_uom": "Ea",
+    "is_stock_item": 0,
+    "is_sales_item": 1,
+    "custom_configurable": 0,
+    "custom_manufactured_item": 1,
+    "default_material_request_type": "Purchase"
+   }
+  },
+  {
+   "op": "ensure",
+   "doctype": "Item",
+   "name": "RAPB",
+   "doc": {
+    "item_code": "RAPB",
+    "item_name": "SAFE4 Fire Rated Access Door Uninsulated Bolted",
+    "description": "SAFE4 Fire Rated Access Door Uninsulated Bolted",
+    "item_group": "22-Access Doors",
+    "stock_uom": "Ea",
+    "is_stock_item": 0,
+    "is_sales_item": 1,
+    "custom_configurable": 0,
+    "custom_manufactured_item": 1,
+    "default_material_request_type": "Purchase"
+   }
+  },
+  {
+   "op": "ensure",
+   "doctype": "Item",
+   "name": "RAPW",
+   "doc": {
+    "item_code": "RAPW",
+    "item_name": "SAFE4 Fire Rated Access Door Uninsulated Welded",
+    "description": "SAFE4 Fire Rated Access Door Uninsulated Welded",
+    "item_group": "22-Access Doors",
+    "stock_uom": "Ea",
+    "is_stock_item": 0,
+    "is_sales_item": 1,
+    "custom_configurable": 0,
+    "custom_manufactured_item": 1,
+    "default_material_request_type": "Purchase"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbBundle",
+   "name": "BUN11",
+   "doc": {
+    "label": "Fire Rated Access Doors",
+    "export_template": "model,doorWidthWi,doorHeightHi,material,frameThickness,doorThickness,rating,frameDepthSelect,roundTransition,transitionThickness,ductDiameterDi,installationType,finish,packing,safetyWireSelect,tagRef,notes"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCVSUnique",
+   "name": "FTO00001",
+   "doc": {
+    "model_no": "RAPI",
+    "frameoil_width": 80.0,
+    "frame_thickness": 0.0,
+    "frame_width": 0.0,
+    "max_height": 0.0,
+    "max_single_section_height": 1000.0,
+    "max_single_section_width": 1000.0,
+    "max_width": 0.0,
+    "min_height": 150.0,
+    "min_width": 150.0,
+    "no_of_brackets": 0.0,
+    "no_of_springs": 0.0,
+    "product_family": "BUN11",
+    "product_family_description": "Fire Rated Access Doors",
+    "min_diameter": 0.0,
+    "max_multi_section_diameter1": 0.0,
+    "max_multi_section_width2": 0.0,
+    "blade_thickness": 0.0,
+    "sleeve_thickness": 0.0,
+    "max_multi_section_height2": 0.0,
+    "max_single_section_diameter": 0.0,
+    "max_damper_section_width1": 0.0,
+    "max_damper_section_height1": 0.0,
+    "max_damper_section_width2": 0.0,
+    "max_damper_section_height2": 0.0,
+    "custom_unique_id": "RAPI"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCVSUnique",
+   "name": "FTO00002",
+   "doc": {
+    "model_no": "RAPB",
+    "frameoil_width": 80.0,
+    "frame_thickness": 0.0,
+    "frame_width": 0.0,
+    "max_height": 0.0,
+    "max_single_section_height": 1000.0,
+    "max_single_section_width": 1000.0,
+    "max_width": 0.0,
+    "min_height": 150.0,
+    "min_width": 150.0,
+    "no_of_brackets": 0.0,
+    "no_of_springs": 0.0,
+    "product_family": "BUN11",
+    "product_family_description": "Fire Rated Access Doors",
+    "min_diameter": 0.0,
+    "max_multi_section_diameter1": 0.0,
+    "max_multi_section_width2": 0.0,
+    "blade_thickness": 0.0,
+    "sleeve_thickness": 0.0,
+    "max_multi_section_height2": 0.0,
+    "max_single_section_diameter": 0.0,
+    "max_damper_section_width1": 0.0,
+    "max_damper_section_height1": 0.0,
+    "max_damper_section_width2": 0.0,
+    "max_damper_section_height2": 0.0,
+    "custom_unique_id": "RAPB"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCVSUnique",
+   "name": "FTO00003",
+   "doc": {
+    "model_no": "RAPW",
+    "frameoil_width": 50.0,
+    "frame_thickness": 0.0,
+    "frame_width": 0.0,
+    "max_height": 0.0,
+    "max_single_section_height": 1000.0,
+    "max_single_section_width": 1000.0,
+    "max_width": 0.0,
+    "min_height": 150.0,
+    "min_width": 150.0,
+    "no_of_brackets": 0.0,
+    "no_of_springs": 0.0,
+    "product_family": "BUN11",
+    "product_family_description": "Fire Rated Access Doors",
+    "min_diameter": 0.0,
+    "max_multi_section_diameter1": 0.0,
+    "max_multi_section_width2": 0.0,
+    "blade_thickness": 0.0,
+    "sleeve_thickness": 0.0,
+    "max_multi_section_height2": 0.0,
+    "max_single_section_diameter": 0.0,
+    "max_damper_section_width1": 0.0,
+    "max_damper_section_height1": 0.0,
+    "max_damper_section_width2": 0.0,
+    "max_damper_section_height2": 0.0,
+    "custom_unique_id": "RAPW"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbPriceListDetail",
+   "name": "PLD00001",
+   "doc": {
+    "detail_type": "Item",
+    "active": 1,
+    "price_type": "Fixed",
+    "recurring_duration": "Quarterly",
+    "operation_type": "One Time",
+    "use_price_picker": 0,
+    "include_quantity": 1,
+    "detail": "SKU41",
+    "price_list": "Standard Selling",
+    "valid_from": "2026-11-23 00:00:00",
+    "is_matrix": 0,
+    "matrix_type": "Volume",
+    "price": 0.0,
+    "currency": "AED",
+    "entries": []
+   }
+  },
+  {
+   "op": "item_bundle_link",
+   "item": "SKU41",
+   "bundle": "BUN11"
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbProductCategory",
+   "name": "PC00001",
+   "doc": {
+    "item": "SKU41",
+    "category": "CTR213589"
+   }
+  },
+  {
+   "op": "add_bundle",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost1",
+   "bundle": "BUN11",
+   "label": "GI"
+  },
+  {
+   "op": "set_if_empty",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost1",
+   "values": {
+    "boq_identifier": "GI"
+   }
+  },
+  {
+   "op": "add_bundle",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost4",
+   "bundle": "BUN11",
+   "label": "MS"
+  },
+  {
+   "op": "set_if_empty",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost4",
+   "values": {
+    "boq_identifier": "MS"
+   }
+  },
+  {
+   "op": "add_bundle",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost2",
+   "bundle": "BUN11",
+   "label": "SS304L"
+  },
+  {
+   "op": "set_if_empty",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost2",
+   "values": {
+    "boq_identifier": "SS304L"
+   }
+  },
+  {
+   "op": "add_bundle",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost3",
+   "bundle": "BUN11",
+   "label": "SS316L"
+  },
+  {
+   "op": "set_if_empty",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost3",
+   "values": {
+    "boq_identifier": "SS316L"
+   }
+  },
+  {
+   "op": "add_bundle",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost519",
+   "bundle": "BUN11",
+   "label": "SS Handle Cost (per PC)"
+  },
+  {
+   "op": "set_if_empty",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost519",
+   "values": {
+    "boq_identifier": "SS Handle Cost (per PC)"
+   }
+  },
+  {
+   "op": "add_bundle",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost534",
+   "bundle": "BUN11",
+   "label": "Safety Wire"
+  },
+  {
+   "op": "set_if_empty",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost534",
+   "values": {
+    "boq_identifier": "Safety Wire"
+   }
+  },
+  {
+   "op": "add_bundle",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost387",
+   "bundle": "BUN11",
+   "label": "Fire Rated Sealant"
+  },
+  {
+   "op": "set_if_empty",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost387",
+   "values": {
+    "boq_identifier": "Fire Rated Sealant"
+   }
+  },
+  {
+   "op": "add_bundle",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost537",
+   "bundle": "BUN11",
+   "label": "Min Door Fabrication Minutes"
+  },
+  {
+   "op": "set_if_empty",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost537",
+   "values": {
+    "boq_identifier": "Min Door Fabrication Minutes"
+   }
+  },
+  {
+   "op": "add_bundle",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost539",
+   "bundle": "BUN11",
+   "label": "SS Door Fabrication Minutes (per sqm)"
+  },
+  {
+   "op": "set_if_empty",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost539",
+   "values": {
+    "boq_identifier": "SS Door Fabrication Minutes (per sqm)"
+   }
+  },
+  {
+   "op": "add_bundle",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost541",
+   "bundle": "BUN11",
+   "label": "Fixed Frame Fabrication Minutes"
+  },
+  {
+   "op": "set_if_empty",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost541",
+   "values": {
+    "boq_identifier": "Fixed Frame Fabrication Minutes"
+   }
+  },
+  {
+   "op": "add_bundle",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost560",
+   "bundle": "BUN11",
+   "label": "Door Wastage"
+  },
+  {
+   "op": "set_if_empty",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost560",
+   "values": {
+    "boq_identifier": "Door Wastage"
+   }
+  },
+  {
+   "op": "add_bundle",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost389",
+   "bundle": "BUN11",
+   "label": "GI Density Factor"
+  },
+  {
+   "op": "set_if_empty",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost389",
+   "values": {
+    "boq_identifier": "GI Density Factor"
+   }
+  },
+  {
+   "op": "add_bundle",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost388",
+   "bundle": "BUN11",
+   "label": "SS Density Factor"
+  },
+  {
+   "op": "set_if_empty",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTOCountryWiseCost388",
+   "values": {
+    "boq_identifier": "SS Density Factor"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00001",
+   "doc": {
+    "item_code": "2660871",
+    "product_name": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 25mm x 1.2m x 10m (12 sqm/ROLL)",
+    "boq_identifier": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 25mm x 1.2m x 10m (12 sqm/ROLL)",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Insulation",
+    "unit": "Sqm",
+    "cost": 11.0,
+    "custom_cost_type": "% of UAE",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 11,
+    "Qatar": 15,
+    "KSA": 18,
+    "Egypt": 270
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00002",
+   "doc": {
+    "item_code": "2660861",
+    "product_name": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 50mm x 1.2m x 10m (12 sqm/ROLL)",
+    "boq_identifier": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 50mm x 1.2m x 10m (12 sqm/ROLL)",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Insulation",
+    "unit": "Sqm",
+    "cost": 19.0,
+    "custom_cost_type": "% of UAE",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 19,
+    "Qatar": 22,
+    "KSA": 24,
+    "Egypt": 360
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00003",
+   "doc": {
+    "item_code": "3010109",
+    "product_name": "Bolt GI 6mmx25mm",
+    "boq_identifier": "Bolt GI 6mmx25mm",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Accessories",
+    "unit": "Ea",
+    "cost": 0.07,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 0.07,
+    "Qatar": 0.08,
+    "KSA": 0.1,
+    "Egypt": 1.5
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00004",
+   "doc": {
+    "item_code": "3010115",
+    "product_name": "Bolt Hex SS304 6mmx25mm",
+    "boq_identifier": "Bolt Hex SS304 6mmx25mm",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Accessories",
+    "unit": "Ea",
+    "cost": 0.5,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 0.5,
+    "Qatar": 0.6,
+    "KSA": 0.8,
+    "Egypt": 12
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00005",
+   "doc": {
+    "item_code": "3020111",
+    "product_name": "Wing Head Nut GI 6mm",
+    "boq_identifier": "Wing Head Nut GI 6mm",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Accessories",
+    "unit": "Ea",
+    "cost": 0.15,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 0.15,
+    "Qatar": 0.17,
+    "KSA": 0.2,
+    "Egypt": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00006",
+   "doc": {
+    "item_code": "3020212",
+    "product_name": "Wing Nut SS 6mm",
+    "boq_identifier": "Wing Nut SS 6mm",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Accessories",
+    "unit": "Ea",
+    "cost": 1.6,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 1.6,
+    "Qatar": 1.7,
+    "KSA": 2,
+    "Egypt": 30
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00007",
+   "doc": {
+    "item_code": "3040116",
+    "product_name": "Washer Straight GI 6mm",
+    "boq_identifier": "Washer Straight GI 6mm",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Accessories",
+    "unit": "Ea",
+    "cost": 0.02,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 0.02,
+    "Qatar": 0.03,
+    "KSA": 0.04,
+    "Egypt": 0.6
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00008",
+   "doc": {
+    "item_code": "3040212",
+    "product_name": "Washer Straight SS 6mm",
+    "boq_identifier": "Washer Straight SS 6mm",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Accessories",
+    "unit": "Ea",
+    "cost": 0.15,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 0.15,
+    "Qatar": 0.17,
+    "KSA": 0.2,
+    "Egypt": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00009",
+   "doc": {
+    "item_code": "2040007",
+    "product_name": "Gasket Ceramic 3X25mmX30m",
+    "boq_identifier": "Gasket Ceramic 3X25mmX30m",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Seals",
+    "unit": "m",
+    "cost": 3.5,
+    "custom_cost_type": "% of UAE",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 3.5,
+    "Qatar": 4,
+    "KSA": 4.5,
+    "Egypt": 67.5
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00010",
+   "doc": {
+    "item_code": "GI & MS Door Fabrication Minutes (per sqm)",
+    "product_name": "GI & MS Door Fabrication Minutes (per sqm)",
+    "boq_identifier": "GI & MS Door Fabrication Minutes (per sqm)",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Labour & Assembly",
+    "unit": "Minutes",
+    "cost": 45.0,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 45,
+    "Qatar": 45,
+    "KSA": 45,
+    "Egypt": 45
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00011",
+   "doc": {
+    "item_code": "GI & MS Frame Fabrication Minutes (per sqm)",
+    "product_name": "GI & MS Frame Fabrication Minutes (per sqm)",
+    "boq_identifier": "GI & MS Frame Fabrication Minutes (per sqm)",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Labour & Assembly",
+    "unit": "Minutes",
+    "cost": 20.0,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 20,
+    "Qatar": 20,
+    "KSA": 20,
+    "Egypt": 20
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00012",
+   "doc": {
+    "item_code": "SS Frame Fabrication Minutes (per sqm)",
+    "product_name": "SS Frame Fabrication Minutes (per sqm)",
+    "boq_identifier": "SS Frame Fabrication Minutes (per sqm)",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Labour & Assembly",
+    "unit": "Minutes",
+    "cost": 30.0,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 30,
+    "Qatar": 30,
+    "KSA": 30,
+    "Egypt": 30
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00013",
+   "doc": {
+    "item_code": "GI & MS Fitting Fabrication Minutes (per sqm)",
+    "product_name": "GI & MS Fitting Fabrication Minutes (per sqm)",
+    "boq_identifier": "GI & MS Fitting Fabrication Minutes (per sqm)",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Labour & Assembly",
+    "unit": "Minutes",
+    "cost": 45.0,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 45,
+    "Qatar": 45,
+    "KSA": 45,
+    "Egypt": 45
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00014",
+   "doc": {
+    "item_code": "SS Fitting Fabrication Minutes (per sqm)",
+    "product_name": "SS Fitting Fabrication Minutes (per sqm)",
+    "boq_identifier": "SS Fitting Fabrication Minutes (per sqm)",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Labour & Assembly",
+    "unit": "Minutes",
+    "cost": 55.0,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 55,
+    "Qatar": 55,
+    "KSA": 55,
+    "Egypt": 55
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00015",
+   "doc": {
+    "item_code": "GI & MS Welding Cost",
+    "product_name": "GI & MS Welding Cost",
+    "boq_identifier": "GI & MS Welding Cost",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Labour & Assembly",
+    "unit": "Currency",
+    "cost": 24.0,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 24,
+    "Qatar": 25,
+    "KSA": 25,
+    "Egypt": 363
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00016",
+   "doc": {
+    "item_code": "SS Welding Cost",
+    "product_name": "SS Welding Cost",
+    "boq_identifier": "FRAD SS Welding Cost",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Labour & Assembly",
+    "unit": "Currency",
+    "cost": 84.0,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 84,
+    "Qatar": 88,
+    "KSA": 88,
+    "Egypt": 1270
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00017",
+   "doc": {
+    "item_code": "Red Oxide Paint Cost per SQM",
+    "product_name": "Red Oxide Paint Cost per SQM",
+    "boq_identifier": "Red Oxide Paint Cost per SQM",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Other Cost",
+    "unit": "Currency",
+    "cost": 60.0,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 60,
+    "Qatar": 60,
+    "KSA": 65,
+    "Egypt": 900
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00018",
+   "doc": {
+    "item_code": "Galvanic Paint Cost per SQM",
+    "product_name": "Galvanic Paint Cost per SQM",
+    "boq_identifier": "Galvanic Paint Cost per SQM",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Other Cost",
+    "unit": "Currency",
+    "cost": 60.0,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 60,
+    "Qatar": 60,
+    "KSA": 65,
+    "Egypt": 900
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00019",
+   "doc": {
+    "item_code": "Standard Stretch Film Wrapping Cost",
+    "product_name": "Standard Stretch Film Wrapping Cost",
+    "boq_identifier": "Standard Stretch Film Wrapping Cost",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Other Cost",
+    "unit": "Currency",
+    "cost": 15.0,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 15,
+    "Qatar": 15,
+    "KSA": 15,
+    "Egypt": 15
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00020",
+   "doc": {
+    "item_code": "Cost per Hour",
+    "product_name": "Cost per Hour",
+    "boq_identifier": "FRAD Cost per Hour",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Hourly Rate",
+    "unit": "Currency",
+    "cost": 20.0,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 20,
+    "Qatar": 25,
+    "KSA": 30,
+    "Egypt": 300
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00021",
+   "doc": {
+    "item_code": "Overhead Percentage",
+    "product_name": "Overhead Percentage",
+    "boq_identifier": "FRAD Overhead Percentage",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Overhead",
+    "unit": "%",
+    "cost": 0.5,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 0.5,
+    "Qatar": 0.5,
+    "KSA": 0.5,
+    "Egypt": 0.5
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00022",
+   "doc": {
+    "item_code": "Profit",
+    "product_name": "Profit",
+    "boq_identifier": "FRAD Profit",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Factor",
+    "unit": "%",
+    "cost": 0.5,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 0.5,
+    "Qatar": 0.5,
+    "KSA": 0.5,
+    "Egypt": 0.5
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00023",
+   "doc": {
+    "item_code": "Frame Wastage",
+    "product_name": "Frame Wastage",
+    "boq_identifier": "FRAD Frame Wastage",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Wastage",
+    "unit": "%",
+    "cost": 0.1,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 0.1,
+    "Qatar": 0.1,
+    "KSA": 0.1,
+    "Egypt": 0.1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "FTOCountryWiseCost",
+   "name": "FTO00024",
+   "doc": {
+    "item_code": "Accessories Wastage",
+    "product_name": "Accessories Wastage",
+    "boq_identifier": "FRAD Accessories Wastage",
+    "custom_product_family_description": "Fire Rated Access Doors",
+    "category": "Wastage",
+    "unit": "%",
+    "cost": 0.05,
+    "custom_cost_type": "Country Specific",
+    "bundles": [
+     {
+      "bundle": "BUN11"
+     }
+    ]
+   },
+   "site_costs": {
+    "UAE": 0.05,
+    "Qatar": 0.05,
+    "KSA": 0.05,
+    "Egypt": 0.05
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureType",
+   "name": "FTY00001",
+   "doc": {
+    "label": "FRAD Model",
+    "data_text_field": "custom_unique_id",
+    "data_type": "Object List",
+    "object_type": "FTOCVSUnique",
+    "additional_fields": "custom_unique_id,min_width,min_height,max_single_section_width,max_single_section_height,frameoil_width"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00001",
+   "doc": {
+    "feature_type": "FTY00001",
+    "object_type": "FTOCVSUnique",
+    "object": "FTO00001",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00002",
+   "doc": {
+    "feature_type": "FTY00001",
+    "object_type": "FTOCVSUnique",
+    "object": "FTO00002",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00003",
+   "doc": {
+    "feature_type": "FTY00001",
+    "object_type": "FTOCVSUnique",
+    "object": "FTO00003",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureType",
+   "name": "FTY00002",
+   "doc": {
+    "label": "FRAD Model Items",
+    "data_text_field": "item_code",
+    "data_type": "Object List",
+    "object_type": "Item",
+    "additional_fields": "item_code,item_name"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00004",
+   "doc": {
+    "feature_type": "FTY00002",
+    "object_type": "Item",
+    "object": "RAPI",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00005",
+   "doc": {
+    "feature_type": "FTY00002",
+    "object_type": "Item",
+    "object": "RAPB",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00006",
+   "doc": {
+    "feature_type": "FTY00002",
+    "object_type": "Item",
+    "object": "RAPW",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureType",
+   "name": "FTY00003",
+   "doc": {
+    "label": "Common Material Type",
+    "data_type": "Value List"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00007",
+   "doc": {
+    "feature_type": "FTY00003",
+    "value": "GI",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00008",
+   "doc": {
+    "feature_type": "FTY00003",
+    "value": "MS",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00009",
+   "doc": {
+    "feature_type": "FTY00003",
+    "value": "SS304L",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00010",
+   "doc": {
+    "feature_type": "FTY00003",
+    "value": "SS316L",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 4
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00011",
+   "doc": {
+    "feature_type": "FTY00003",
+    "value": "AL",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 5
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00012",
+   "doc": {
+    "feature_type": "FTY00003",
+    "value": "AZ",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 6
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00013",
+   "doc": {
+    "feature_type": "FTY00003",
+    "value": "EAL",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 7
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureType",
+   "name": "FTY00004",
+   "doc": {
+    "label": "Common Fire Rating",
+    "data_type": "Value List"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00014",
+   "doc": {
+    "feature_type": "FTY00004",
+    "value": "FR120",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00015",
+   "doc": {
+    "feature_type": "FTY00004",
+    "value": "FR240",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureType",
+   "name": "FTY00005",
+   "doc": {
+    "label": "FRAD Frame Thickness",
+    "data_type": "Value List"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00016",
+   "doc": {
+    "feature_type": "FTY00005",
+    "value": "1.2",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00017",
+   "doc": {
+    "feature_type": "FTY00005",
+    "value": "1.5",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00018",
+   "doc": {
+    "feature_type": "FTY00005",
+    "value": "2.0",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00019",
+   "doc": {
+    "feature_type": "FTY00005",
+    "value": "3.0",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 4
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00020",
+   "doc": {
+    "feature_type": "FTY00005",
+    "value": "5.0",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 5
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureType",
+   "name": "FTY00006",
+   "doc": {
+    "label": "FRAD Door Thickness",
+    "data_type": "Value List"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00021",
+   "doc": {
+    "feature_type": "FTY00006",
+    "value": "1.2",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00022",
+   "doc": {
+    "feature_type": "FTY00006",
+    "value": "1.5",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00023",
+   "doc": {
+    "feature_type": "FTY00006",
+    "value": "2.0",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00024",
+   "doc": {
+    "feature_type": "FTY00006",
+    "value": "3.0",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 4
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureType",
+   "name": "FTY00007",
+   "doc": {
+    "label": "FRAD Transition Thickness",
+    "data_type": "Value List"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00025",
+   "doc": {
+    "feature_type": "FTY00007",
+    "value": "1.2",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00026",
+   "doc": {
+    "feature_type": "FTY00007",
+    "value": "1.5",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00027",
+   "doc": {
+    "feature_type": "FTY00007",
+    "value": "2.0",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00028",
+   "doc": {
+    "feature_type": "FTY00007",
+    "value": "3.0",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 4
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureType",
+   "name": "FTY00008",
+   "doc": {
+    "label": "FRAD Frame Depth",
+    "data_type": "Value List"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00029",
+   "doc": {
+    "feature_type": "FTY00008",
+    "value": "25mm",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00030",
+   "doc": {
+    "feature_type": "FTY00008",
+    "value": "50mm",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00031",
+   "doc": {
+    "feature_type": "FTY00008",
+    "value": "75mm",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureType",
+   "name": "FTY00009",
+   "doc": {
+    "label": "FRAD Installation Type",
+    "data_type": "Value List"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00032",
+   "doc": {
+    "feature_type": "FTY00009",
+    "value": "Standard-With Holes",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00033",
+   "doc": {
+    "feature_type": "FTY00009",
+    "value": "Welded",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureType",
+   "name": "FTY00010",
+   "doc": {
+    "label": "FRAD Finish",
+    "data_type": "Value List"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00034",
+   "doc": {
+    "feature_type": "FTY00010",
+    "value": "Mill Finish",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00035",
+   "doc": {
+    "feature_type": "FTY00010",
+    "value": "Red Oxide Paint",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00036",
+   "doc": {
+    "feature_type": "FTY00010",
+    "value": "Galvanic Paint",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureType",
+   "name": "FTY00011",
+   "doc": {
+    "label": "FRAD Packing",
+    "data_type": "Value List"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00037",
+   "doc": {
+    "feature_type": "FTY00011",
+    "value": "None",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00038",
+   "doc": {
+    "feature_type": "FTY00011",
+    "value": "Standard Stretch Film Wrapping",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureType",
+   "name": "FTY00012",
+   "doc": {
+    "label": "FRAD Cost",
+    "data_text_field": "boq_identifier",
+    "data_type": "Object List",
+    "object_type": "FTOCountryWiseCost",
+    "additional_fields": "item_code,cost"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00039",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTOCountryWiseCost1",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00040",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTOCountryWiseCost4",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00041",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTOCountryWiseCost2",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00042",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTOCountryWiseCost3",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 4
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00043",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTOCountryWiseCost519",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 5
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00044",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTOCountryWiseCost534",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 6
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00045",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTOCountryWiseCost387",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 7
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00046",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTOCountryWiseCost537",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 8
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00047",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTOCountryWiseCost539",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 9
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00048",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTOCountryWiseCost541",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 10
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00049",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTOCountryWiseCost560",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 11
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00050",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTOCountryWiseCost389",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 12
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00051",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTOCountryWiseCost388",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 13
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00052",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00001",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 14
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00053",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00002",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 15
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00054",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00003",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 16
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00055",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00004",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 17
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00056",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00005",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 18
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00057",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00006",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 19
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00058",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00007",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 20
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00059",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00008",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 21
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00060",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00009",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 22
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00061",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00010",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 23
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00062",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00011",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 24
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00063",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00012",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 25
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00064",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00013",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 26
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00065",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00014",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 27
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00066",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00015",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 28
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00067",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00016",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 29
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00068",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00017",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 30
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00069",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00018",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 31
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00070",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00019",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 32
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00071",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00020",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 33
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00072",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00021",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 34
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00073",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00022",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 35
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00074",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00023",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 36
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00075",
+   "doc": {
+    "feature_type": "FTY00012",
+    "object_type": "FTOCountryWiseCost",
+    "object": "FTO00024",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 37
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureType",
+   "name": "FTY00013",
+   "doc": {
+    "label": "FRAD Model & Material",
+    "data_type": "Value List"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00076",
+   "doc": {
+    "feature_type": "FTY00013",
+    "value": "RAPI GI",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00077",
+   "doc": {
+    "feature_type": "FTY00013",
+    "value": "RAPI MS",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00078",
+   "doc": {
+    "feature_type": "FTY00013",
+    "value": "RAPI SS304L",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00079",
+   "doc": {
+    "feature_type": "FTY00013",
+    "value": "RAPI SS316L",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 4
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00080",
+   "doc": {
+    "feature_type": "FTY00013",
+    "value": "RAPB GI",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 5
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00081",
+   "doc": {
+    "feature_type": "FTY00013",
+    "value": "RAPB MS",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 6
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00082",
+   "doc": {
+    "feature_type": "FTY00013",
+    "value": "RAPB SS304L",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 7
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00083",
+   "doc": {
+    "feature_type": "FTY00013",
+    "value": "RAPB SS316L",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 8
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00084",
+   "doc": {
+    "feature_type": "FTY00013",
+    "value": "RAPW GI",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 9
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00085",
+   "doc": {
+    "feature_type": "FTY00013",
+    "value": "RAPW SS304L",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 10
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00086",
+   "doc": {
+    "feature_type": "FTY00013",
+    "value": "RAPW SS316L",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 11
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeatureTypeItem",
+   "name": "FTI00087",
+   "doc": {
+    "feature_type": "FT89",
+    "object_type": "Item",
+    "object": "SKU41",
+    "price_editable": 0,
+    "override_notes": 0,
+    "sequence": 9
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbStructure",
+   "name": "STR00001",
+   "doc": {
+    "label": "Fire Rated Access Doors",
+    "bundle": "BUN11",
+    "sequence": 0.0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbStructure",
+   "name": "STR00002",
+   "doc": {
+    "label": "Lookups",
+    "bundle": "BUN11",
+    "parent_structure": "STR00001",
+    "sequence": 1.0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbStructure",
+   "name": "STR00003",
+   "doc": {
+    "label": "Frame",
+    "bundle": "BUN11",
+    "parent_structure": "STR00001",
+    "sequence": 2.0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbStructure",
+   "name": "STR00004",
+   "doc": {
+    "label": "Door",
+    "bundle": "BUN11",
+    "parent_structure": "STR00001",
+    "sequence": 3.0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbStructure",
+   "name": "STR00005",
+   "doc": {
+    "label": "Processing Minutes",
+    "bundle": "BUN11",
+    "parent_structure": "STR00001",
+    "sequence": 4.0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbStructure",
+   "name": "STR00006",
+   "doc": {
+    "label": "Cost",
+    "bundle": "BUN11",
+    "parent_structure": "STR00001",
+    "sequence": 5.0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbStructure",
+   "name": "STR00007",
+   "doc": {
+    "label": "Factors",
+    "bundle": "BUN11",
+    "parent_structure": "STR00001",
+    "sequence": 6.0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00001",
+   "doc": {
+    "label": "Model",
+    "field": "model",
+    "control_type": "Dropdown",
+    "structure": "STR00001",
+    "sequence": 1,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FTY00001"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00002",
+   "doc": {
+    "label": "Model Description",
+    "field": "modelDescription",
+    "control_type": "Textbox",
+    "structure": "STR00001",
+    "sequence": 2,
+    "settings": "{}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00003",
+   "doc": {
+    "label": "Material",
+    "field": "material",
+    "control_type": "Dropdown",
+    "structure": "STR00001",
+    "sequence": 3,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FTY00003"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00004",
+   "doc": {
+    "label": "Frame Thickness",
+    "field": "frameThickness",
+    "control_type": "Dropdown",
+    "structure": "STR00001",
+    "sequence": 4,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FTY00005"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00005",
+   "doc": {
+    "label": "Door Thickness",
+    "field": "doorThickness",
+    "control_type": "Dropdown",
+    "structure": "STR00001",
+    "sequence": 5,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FTY00006"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00006",
+   "doc": {
+    "label": "Rating",
+    "field": "rating",
+    "control_type": "Dropdown",
+    "structure": "STR00001",
+    "sequence": 6,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FTY00004"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00007",
+   "doc": {
+    "label": "Door Width (WI)",
+    "field": "doorWidthWi",
+    "control_type": "Number",
+    "structure": "STR00001",
+    "sequence": 7,
+    "settings": "{\"displayFormat\": \"1.0-0\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00008",
+   "doc": {
+    "label": "Door Height (HI)",
+    "field": "doorHeightHi",
+    "control_type": "Number",
+    "structure": "STR00001",
+    "sequence": 8,
+    "settings": "{\"displayFormat\": \"1.0-0\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00009",
+   "doc": {
+    "label": "Frame Depth",
+    "field": "frameDepthSelect",
+    "control_type": "Dropdown",
+    "structure": "STR00001",
+    "sequence": 9,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FTY00008"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00010",
+   "doc": {
+    "label": "Round Transition",
+    "field": "roundTransition",
+    "control_type": "Dropdown",
+    "structure": "STR00001",
+    "sequence": 10,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FT60"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00011",
+   "doc": {
+    "label": "Transition Thickness",
+    "field": "transitionThickness",
+    "control_type": "Dropdown",
+    "structure": "STR00001",
+    "sequence": 11,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FTY00007"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00012",
+   "doc": {
+    "label": "Duct Diameter (DI)",
+    "field": "ductDiameterDi",
+    "control_type": "Number",
+    "structure": "STR00001",
+    "sequence": 12,
+    "settings": "{\"displayFormat\": \"1.0-0\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00013",
+   "doc": {
+    "label": "Installation Type",
+    "field": "installationType",
+    "control_type": "Dropdown",
+    "structure": "STR00001",
+    "sequence": 13,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FTY00009"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00014",
+   "doc": {
+    "label": "Finish",
+    "field": "finish",
+    "control_type": "Dropdown",
+    "structure": "STR00001",
+    "sequence": 14,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FTY00010"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00015",
+   "doc": {
+    "label": "Packing",
+    "field": "packing",
+    "control_type": "Dropdown",
+    "structure": "STR00001",
+    "sequence": 15,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FTY00011"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00016",
+   "doc": {
+    "label": "Safety Wire",
+    "field": "safetyWireSelect",
+    "control_type": "Dropdown",
+    "structure": "STR00001",
+    "sequence": 16,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FT60"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00017",
+   "doc": {
+    "label": "Tag Ref",
+    "field": "tagRef",
+    "control_type": "Textbox",
+    "structure": "STR00001",
+    "sequence": 17,
+    "settings": "{}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00018",
+   "doc": {
+    "label": "Notes",
+    "field": "notes",
+    "control_type": "Textbox",
+    "structure": "STR00001",
+    "sequence": 18,
+    "settings": "{}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00019",
+   "doc": {
+    "label": "Sub-Category",
+    "field": "subcategory",
+    "control_type": "Textbox",
+    "structure": "STR00002",
+    "sequence": 19,
+    "settings": "{}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00020",
+   "doc": {
+    "label": "Min Width",
+    "field": "minWidth",
+    "control_type": "Number",
+    "structure": "STR00002",
+    "sequence": 20,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00021",
+   "doc": {
+    "label": "Min Height",
+    "field": "minHeight",
+    "control_type": "Number",
+    "structure": "STR00002",
+    "sequence": 21,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00022",
+   "doc": {
+    "label": "Max Single Section Width",
+    "field": "maxSingleSectionWidth",
+    "control_type": "Number",
+    "structure": "STR00002",
+    "sequence": 22,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00023",
+   "doc": {
+    "label": "Max Single Section Height",
+    "field": "maxSingleSectionHeight",
+    "control_type": "Number",
+    "structure": "STR00002",
+    "sequence": 23,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00024",
+   "doc": {
+    "label": "Material Cost",
+    "field": "materialCost",
+    "control_type": "Number",
+    "structure": "STR00002",
+    "sequence": 24,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00025",
+   "doc": {
+    "label": "Material Density",
+    "field": "materialDensity",
+    "control_type": "Number",
+    "structure": "STR00002",
+    "sequence": 25,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00026",
+   "doc": {
+    "label": "Frame Depth (mm)",
+    "field": "frameDepth",
+    "control_type": "Number",
+    "structure": "STR00002",
+    "sequence": 26,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00027",
+   "doc": {
+    "label": "Frame Slit Size",
+    "field": "frameSlitSize",
+    "control_type": "Number",
+    "structure": "STR00002",
+    "sequence": 27,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00028",
+   "doc": {
+    "label": "Frame Area",
+    "field": "frameArea",
+    "control_type": "Number",
+    "structure": "STR00003",
+    "sequence": 28,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00029",
+   "doc": {
+    "label": "Frame Weight",
+    "field": "frameWeight",
+    "control_type": "Number",
+    "structure": "STR00003",
+    "sequence": 29,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00030",
+   "doc": {
+    "label": "Frame Metal Cost",
+    "field": "frameMetalCost",
+    "control_type": "Number",
+    "structure": "STR00003",
+    "sequence": 30,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00031",
+   "doc": {
+    "label": "Round Transition Area",
+    "field": "transitionArea",
+    "control_type": "Number",
+    "structure": "STR00003",
+    "sequence": 31,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00032",
+   "doc": {
+    "label": "Round Transition Weight",
+    "field": "transitionWeight",
+    "control_type": "Number",
+    "structure": "STR00003",
+    "sequence": 32,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00033",
+   "doc": {
+    "label": "Round Transition Cost",
+    "field": "transitionCost",
+    "control_type": "Number",
+    "structure": "STR00003",
+    "sequence": 33,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00034",
+   "doc": {
+    "label": "Door Insulation Cover Area",
+    "field": "doorInsulationCoverArea",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 34,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00035",
+   "doc": {
+    "label": "Door Insulation Cover Weight",
+    "field": "doorInsulationCoverWeight",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 35,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00036",
+   "doc": {
+    "label": "Door Insulation Cover Cost",
+    "field": "doorInsulationCoverCost",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 36,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00037",
+   "doc": {
+    "label": "Door Top Cover Area",
+    "field": "doorTopCoverArea",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 37,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00038",
+   "doc": {
+    "label": "Door Top Cover Weight",
+    "field": "doorTopCoverWeight",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 38,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00039",
+   "doc": {
+    "label": "Door Top Cover Cost",
+    "field": "doorTopCoverCost",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 39,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00040",
+   "doc": {
+    "label": "Insulation Area",
+    "field": "insulationArea",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 40,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00041",
+   "doc": {
+    "label": "Insulation Cost",
+    "field": "insulationCost",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 41,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00042",
+   "doc": {
+    "label": "Frame Gasket (m)",
+    "field": "frameGasket",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 42,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00043",
+   "doc": {
+    "label": "Frame Gasket Cost",
+    "field": "frameGasketCost",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 43,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00044",
+   "doc": {
+    "label": "Fire Rated Sealant (Tube)",
+    "field": "sealantQty",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 44,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00045",
+   "doc": {
+    "label": "Fire Rated Sealant Cost",
+    "field": "sealantCost",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 45,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00046",
+   "doc": {
+    "label": "Handle Qty",
+    "field": "handleQty",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 46,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00047",
+   "doc": {
+    "label": "Handle Cost",
+    "field": "handleCost",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 47,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00048",
+   "doc": {
+    "label": "Bolt/Wingnut/Washer Qty",
+    "field": "boltSetQty",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 48,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00049",
+   "doc": {
+    "label": "Bolt/Wingnut/Washer Cost",
+    "field": "boltSetCost",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 49,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00050",
+   "doc": {
+    "label": "Safety Wire Qty",
+    "field": "safetyWire",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 50,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00051",
+   "doc": {
+    "label": "Safety Wire Cost",
+    "field": "safetyWireCost",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 51,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00052",
+   "doc": {
+    "label": "Accessories Cost",
+    "field": "accessoriesCost",
+    "control_type": "Number",
+    "structure": "STR00004",
+    "sequence": 52,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00053",
+   "doc": {
+    "label": "Door Processing Minutes",
+    "field": "doorProcessingMinutes",
+    "control_type": "Number",
+    "structure": "STR00005",
+    "sequence": 53,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00054",
+   "doc": {
+    "label": "Frame Processing Minutes",
+    "field": "frameProcessingMinutes",
+    "control_type": "Number",
+    "structure": "STR00005",
+    "sequence": 54,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00055",
+   "doc": {
+    "label": "Fittings Processing Minutes",
+    "field": "fittingsProcessingMinutes",
+    "control_type": "Number",
+    "structure": "STR00005",
+    "sequence": 55,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00056",
+   "doc": {
+    "label": "Total Labour Minutes",
+    "field": "totalLabourMinutes",
+    "control_type": "Number",
+    "structure": "STR00005",
+    "sequence": 56,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00057",
+   "doc": {
+    "label": "Sheet Metal Cost",
+    "field": "sheetMetalCost",
+    "control_type": "Number",
+    "structure": "STR00006",
+    "sequence": 57,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00058",
+   "doc": {
+    "label": "Total Material Cost",
+    "field": "totalMaterialCost",
+    "control_type": "Number",
+    "structure": "STR00006",
+    "sequence": 58,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00059",
+   "doc": {
+    "label": "Total Assembly Cost",
+    "field": "totalAssemblyCost",
+    "control_type": "Number",
+    "structure": "STR00006",
+    "sequence": 59,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00060",
+   "doc": {
+    "label": "Welding Cost",
+    "field": "weldingCost",
+    "control_type": "Number",
+    "structure": "STR00006",
+    "sequence": 60,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00061",
+   "doc": {
+    "label": "Product Finish Cost",
+    "field": "productFinishCost",
+    "control_type": "Number",
+    "structure": "STR00006",
+    "sequence": 61,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00062",
+   "doc": {
+    "label": "Packing Cost",
+    "field": "packingCost",
+    "control_type": "Number",
+    "structure": "STR00006",
+    "sequence": 62,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00063",
+   "doc": {
+    "label": "Overhead",
+    "field": "overhead",
+    "control_type": "Number",
+    "structure": "STR00006",
+    "sequence": 63,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00064",
+   "doc": {
+    "label": "Total Cost",
+    "field": "totalCost",
+    "control_type": "Number",
+    "structure": "STR00006",
+    "sequence": 64,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00065",
+   "doc": {
+    "label": "List Price",
+    "field": "listPrice",
+    "control_type": "Number",
+    "structure": "STR00006",
+    "sequence": 65,
+    "settings": "{\"displayFormat\": \"1.2-2\"}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00066",
+   "doc": {
+    "label": "Model Item",
+    "field": "modelItem",
+    "control_type": "Dropdown",
+    "structure": "STR00007",
+    "sequence": 66,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FTY00002"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00067",
+   "doc": {
+    "label": "Country Wise Cost",
+    "field": "countryWiseCost",
+    "control_type": "Dropdown",
+    "structure": "STR00007",
+    "sequence": 67,
+    "settings": "{\"displayFormat\": \"1.0-2\"}",
+    "feature_types": [
+     {
+      "feature_type": "FTY00012"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00068",
+   "doc": {
+    "label": "Product",
+    "field": "product",
+    "control_type": "Dropdown",
+    "structure": "STR00007",
+    "sequence": 68,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FT89"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00069",
+   "doc": {
+    "label": "Model & Material",
+    "field": "modelMaterial",
+    "control_type": "Dropdown",
+    "structure": "STR00007",
+    "sequence": 69,
+    "settings": "{}",
+    "feature_types": [
+     {
+      "feature_type": "FTY00013"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00070",
+   "doc": {
+    "label": "Material Description",
+    "field": "materialDescription",
+    "control_type": "Textbox",
+    "structure": "STR00007",
+    "sequence": 70,
+    "settings": "{}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00071",
+   "doc": {
+    "label": "Size Description",
+    "field": "sizeDescription",
+    "control_type": "Textbox",
+    "structure": "STR00007",
+    "sequence": 71,
+    "settings": "{}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbFeature",
+   "name": "FTR00072",
+   "doc": {
+    "label": "Product Description",
+    "field": "productDescription",
+    "control_type": "Textbox",
+    "structure": "STR00007",
+    "sequence": 72,
+    "settings": "{}",
+    "feature_types": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbLookup",
+   "name": "LKU00001",
+   "doc": {
+    "bundle": "BUN11",
+    "field": "isCartLocked",
+    "path": "cart.locked"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbBundleGroup",
+   "name": "BGR00001",
+   "doc": {
+    "bundle": "BUN11",
+    "sequence": 0,
+    "label": "Section Detail",
+    "features": "subcategory,installationType,rating",
+    "properties": "feature.label,featureTypeItem.value",
+    "show_summary": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbBundleGroup",
+   "name": "BGR00002",
+   "doc": {
+    "bundle": "BUN11",
+    "sequence": 1,
+    "label": "Cost",
+    "features": "materialCost,sheetMetalCost,totalMaterialCost,totalAssemblyCost,weldingCost,productFinishCost,packingCost,overhead,totalCost",
+    "properties": "feature.label,featureTypeItem.value",
+    "show_summary": 0,
+    "template": "@if(ecomStore.userInfo().roles.indexOf(\"OneCPQ Admin\") != -1){\n    @if(bundleGroup(); as bg){\n                @if(toggleable()){    \n                <div class=\"pt-2\">\n                    <p-panel class=\"pt-2\" [collapsed]=\"collapsed()\" [toggleable]=\"toggleable()\" collapseIcon=\"pi pi-angle-left\"\n                        expandIcon=\"pi pi-angle-down\">\n                        <ng-template #header>\n                            <div class=\"flex align-items-center gap-2\">\n                                <span class=\"font-bold\">\n                                    {{bg.label}}\n                                </span>\n                            </div>\n                        </ng-template>\n                        @if(toggleable()){\n                        <ng-template #icons>\n                            <button\n                                class=\"p-0 p-ripple p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text p-panel-header-icon p-panel-toggler p-link\"\n                                (click)=\"setExpanded()\">\n                                <span [class]=\"'pi pi-angle-double-'+(collapsed() ? 'left':'down')\"></span>\n                            </button>\n                        </ng-template>\n                        }\n                        <ng-container *ngTemplateOutlet=\"table\"></ng-container>\n                    </p-panel>\n                </div>\n            }\n            @else {\n                <ng-container *ngTemplateOutlet=\"table\"></ng-container>\n            }\n            <ng-template #table>\n    @if(bundleGroup(); as bg){\n    @if(cartItemFeatureModels(); as cifs){\n    <p-table size=\"small\" styleClass=\"text-base \" paginatorDropdownAppendTo=\"body\"\n        [paginator]=\"cifs.length >5?true:false\" [rows]=\"10\" [rowsPerPageOptions]=\"[5,10,20,50,75,100]\" #dt\n        responsiveLayout=\"stack\" [value]=\"cifs\">\n\n        <ng-template #header>\n            <tr>\n                @for(property of bg.properties; track property){\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                <th\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    {{_.get(AppConst.bundleGroupColumns,property)?.label}}</th>\n                }\n            </tr>\n        </ng-template>\n        <ng-template #body let-item let-rowIndex=\"rowIndex\">\n            <tr class=\"bundleGroupTable\" (click)=\"navigate(item)\">\n                @for(property of bg.properties; track property){\n\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                @if(md?.editable && editable()) {\n                <td [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\"\n                    [pEditableColumn]=\"property\" [pEditableColumnField]=\"property\">\n                    <span class=\"p-column-title\">{{md.label}}</span>\n                    @if(property === 'unitPrice'){\n\n                    @let ftip = this.bundleGroupInterface()?.getPriceListDetail(item.featureTypeItem.id,'One Time');\n\n\n                    @if(ftip?.isMatrix){\n                    <span>\n\n                        <p-button (click)=\"handleToggleMatrix(item.featureTypeItem,$event)\" title=\"Matrix Detail\"\n                            styleClass=\"btb-rotate-45\" icon=\"pi pi-thumbtack\" [rounded]=\"true\" [text]=\"true\" />\n                        <btb-shared-matrix-price-detail [cartItemFeature]=\"item\"\n                            [headerTitle]=\"(ftip?.matrixType ?? '') +' pricing - '+item.featureTypeItem.value\"\n                            [items]=\"ftip?.entries\" [displayModal]=\"toggleViewModel()[item.featureTypeItem.id]\">\n                        </btb-shared-matrix-price-detail>\n                    </span>\n                    }\n                    }\n                    <p-cellEditor class=\"align-content-end\">\n                        <ng-template pTemplate=\"input\">\n                            @if(md.type === 'currency' || md.type === 'number'|| md.type === 'percentage') {\n                            <input pInputText type=\"number\" [(ngModel)]=\"item[property]\">\n                            }\n                        </ng-template>\n                        <ng-template pTemplate=\"output\">\n                            <span class=\"ref-link cursor-pointer\">\n                                {{getValue(item, property)}}\n                            </span>\n                        </ng-template>\n                    </p-cellEditor>\n                </td>    \n                \n                }\n                @else {\n                <td\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    <span class=\"p-column-title\">{{md?.label}}</span>\n                    {{getValue(item, property)}}\n                </td>\n                }\n                }\n            </tr>\n        </ng-template>\n        <ng-template #footer *ngIf=\"bg.showSummary\">\n            <tr>\n                @for(property of bg.properties; track property){\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                <td\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    @if (md?.showSummary) {\n                    {{_.get(summary(),property)}}\n                    }\n\n                </td>\n                }\n            </tr>\n        </ng-template>\n    </p-table>\n    }\n    }\n</ng-template>\n        }\n}"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00001",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "label": "Defaults",
+    "result": 0,
+    "constraint": "LOADDEFAULTS()",
+    "formula": "LOADDEFAULTS()",
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47pkjn9upu",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Include",
+    "implementation_constraint": "IMC00001",
+    "impact_fields": "material,rating,installationType,packing,finish",
+    "impact_options": "FTI00007,FTI00014,FTI00032,FTI00037,FTI00034",
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47ptiekuun",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Include",
+    "implementation_constraint": "IMC00001",
+    "impact_fields": "frameThickness",
+    "impact_options": "FTI00017",
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qlsdtkgc",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Include",
+    "implementation_constraint": "IMC00001",
+    "impact_fields": "doorThickness",
+    "impact_options": "FTI00021",
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47q6ccsup3",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Include",
+    "implementation_constraint": "IMC00001",
+    "impact_fields": "roundTransition",
+    "impact_options": "FTV245",
+    "sequence": 4
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47q5k2u2i8",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Include",
+    "implementation_constraint": "IMC00001",
+    "impact_fields": "safetyWireSelect",
+    "impact_options": "FTV246",
+    "sequence": 5
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47ql621950",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Include",
+    "implementation_constraint": "IMC00001",
+    "impact_fields": "product",
+    "impact_options": "FTI00087",
+    "sequence": 6
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00002",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "label": "Always: locks, read-only fields, model item",
+    "result": 0,
+    "constraint": "true",
+    "formula": "true",
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qcfupt4n",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Hide Bundle Property",
+    "implementation_constraint": "IMC00002",
+    "impact_fields": "basePrice,search,return",
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47q545j7jr",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Lock Field",
+    "implementation_constraint": "IMC00002",
+    "impact_fields": "model,material,frameThickness,doorThickness,rating,frameDepthSelect,roundTransition,transitionThickness,installationType,finish,packing,safetyWireSelect,modelItem,countryWiseCost,product,modelMaterial",
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47q7v01f3v",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Include Value",
+    "implementation_constraint": "IMC00002",
+    "impact_fields": "modelItem",
+    "formula": "SELECTEDVALUE(model)",
+    "sequence": 3,
+    "constraint": "SELECTEDVALUE(model)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qbl2i0tg",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Disable Field",
+    "implementation_constraint": "IMC00002",
+    "impact_fields": "subcategory,minWidth,minHeight,maxSingleSectionWidth,maxSingleSectionHeight,materialCost,materialDensity,frameDepth,frameSlitSize",
+    "sequence": 4
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47q4evqs4p",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Disable Field",
+    "implementation_constraint": "IMC00002",
+    "impact_fields": "frameArea,frameWeight,frameMetalCost,transitionArea,transitionWeight,transitionCost",
+    "sequence": 5
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qt6qfddd",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Disable Field",
+    "implementation_constraint": "IMC00002",
+    "impact_fields": "doorInsulationCoverArea,doorInsulationCoverWeight,doorInsulationCoverCost,doorTopCoverArea,doorTopCoverWeight,doorTopCoverCost,insulationArea,insulationCost,frameGasket,frameGasketCost,sealantQty,sealantCost,handleQty,handleCost,boltSetQty,boltSetCost,safetyWire,safetyWireCost,accessoriesCost",
+    "sequence": 6
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qtqkunm1",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Disable Field",
+    "implementation_constraint": "IMC00002",
+    "impact_fields": "doorProcessingMinutes,frameProcessingMinutes,fittingsProcessingMinutes,totalLabourMinutes",
+    "sequence": 7
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qkjlktbu",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Disable Field",
+    "implementation_constraint": "IMC00002",
+    "impact_fields": "sheetMetalCost,totalMaterialCost,totalAssemblyCost,weldingCost,productFinishCost,packingCost,overhead,totalCost,listPrice",
+    "sequence": 8
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qdbkc8nk",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Disable Field",
+    "implementation_constraint": "IMC00002",
+    "impact_fields": "modelDescription,productDescription,materialDescription,sizeDescription,modelItem,countryWiseCost,product,modelMaterial",
+    "sequence": 9
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qr8liuv5",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Disable Bundle Property",
+    "implementation_constraint": "IMC00002",
+    "impact_fields": "title",
+    "sequence": 10
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47q82125d3",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Disable Field Quantity",
+    "implementation_constraint": "IMC00002",
+    "impact_fields": "model,material,frameThickness,doorThickness,rating,frameDepthSelect,roundTransition,transitionThickness,installationType,finish,packing,safetyWireSelect,modelItem,countryWiseCost,product,modelMaterial",
+    "sequence": 11
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00003",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "label": "Model: description and sub-category",
+    "result": 0,
+    "constraint": "ISCHANGED(model)",
+    "formula": "ISCHANGED(model)",
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qbl84hi7",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00003",
+    "impact_fields": "modelDescription",
+    "formula": "EVALUATE(' var m = input.arg1; if(m == \"RAPI\") return \"SAFE4 Fire Rated Access Door Insulated Bolted\"; if(m == \"RAPB\") return \"SAFE4 Fire Rated Access Door Uninsulated Bolted\"; if(m == \"RAPW\") return \"SAFE4 Fire Rated Access Door Uninsulated Welded\"; return \"\"; ', SELECTEDVALUE(model))",
+    "sequence": 1,
+    "constraint": "EVALUATE(' var m = input.arg1; if(m == \"RAPI\") return \"SAFE4 Fire Rated Access Door Insulated Bolted\"; if(m == \"RAPB\") return \"SAFE4 Fire Rated Access Door Uninsulated Bolted\"; if(m == \"RAPW\") return \"SAFE4 Fire Rated Access Door Uninsulated Welded\"; return \"\"; ', SELECTEDVALUE(model))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qi8kgvrr",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00003",
+    "impact_fields": "subcategory",
+    "formula": "EVALUATE(' var m = input.arg1; if(m == \"RAPI\") return \"Insulated Fire Rated Access Door\"; if(m == \"RAPB\") return \"Uninsulated Fire Rated Access Door\"; if(m == \"RAPW\") return \"Uninsulated Fire Rated Access Door\"; return \"\"; ', SELECTEDVALUE(model))",
+    "sequence": 2,
+    "constraint": "EVALUATE(' var m = input.arg1; if(m == \"RAPI\") return \"Insulated Fire Rated Access Door\"; if(m == \"RAPB\") return \"Uninsulated Fire Rated Access Door\"; if(m == \"RAPW\") return \"Uninsulated Fire Rated Access Door\"; return \"\"; ', SELECTEDVALUE(model))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00004",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "label": "Model & Material key for the frame thickness table",
+    "result": 0,
+    "constraint": "ISCHANGED(model) || ISCHANGED(material)",
+    "formula": "ISCHANGED(model) || ISCHANGED(material)",
+    "sequence": 4
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qrt55pv1",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Include Value",
+    "implementation_constraint": "IMC00004",
+    "impact_fields": "modelMaterial",
+    "formula": "CONCAT(SELECTEDVALUE(model),' ',SELECTEDVALUE(material))",
+    "sequence": 1,
+    "constraint": "CONCAT(SELECTEDVALUE(model),' ',SELECTEDVALUE(material))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00005",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "label": "Model/material change: thickness and finish defaults (Q9, Q10)",
+    "result": 0,
+    "constraint": "(ISCHANGED(model) || ISCHANGED(material)) && NOT(ISIMPORT())",
+    "formula": "(ISCHANGED(model) || ISCHANGED(material)) && NOT(ISIMPORT())",
+    "sequence": 4
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qkf6ukqr",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Include Value",
+    "implementation_constraint": "IMC00005",
+    "impact_fields": "frameThickness",
+    "formula": "IIF(CONTAINS(model,'$[FTI00003]'),'5.0','1.5')",
+    "sequence": 1,
+    "constraint": "IIF(CONTAINS(model,'$[RAPW]'),'5.0','1.5')"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47q58vq0ub",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Include Value",
+    "implementation_constraint": "IMC00005",
+    "impact_fields": "doorThickness",
+    "formula": "IIF(CONTAINS(material,'$[FTI00008]'),'1.5','1.2')",
+    "sequence": 2,
+    "constraint": "IIF(CONTAINS(material,'$[MS]'),'1.5','1.2')"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qrgk8ldj",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Include",
+    "implementation_constraint": "IMC00005",
+    "impact_fields": "finish",
+    "impact_options": "FTI00034",
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00006",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "label": "Round transition No: clear DI and thickness (Q13)",
+    "result": 0,
+    "constraint": "ISCHANGED(roundTransition) && CONTAINS(roundTransition,'$[No]') && NOT(ISIMPORT())",
+    "formula": "ISCHANGED(roundTransition) && CONTAINS(roundTransition,'$[FTV246]') && NOT(ISIMPORT())",
+    "sequence": 5
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qnu01m6m",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00006",
+    "impact_fields": "ductDiameterDi",
+    "formula": "0",
+    "sequence": 1,
+    "constraint": "0"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47q4h9sqb1",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Reset Field",
+    "implementation_constraint": "IMC00006",
+    "impact_fields": "transitionThickness",
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00007",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "label": "Calculation (workbook compute order)",
+    "result": 0,
+    "constraint": "(NUMBER(doorHeightHi) > 0) && (NUMBER(doorWidthWi) > 0) && (COUNT(model) > 0) && (COUNT(material) > 0)",
+    "formula": "(NUMBER(doorHeightHi) > 0) && (NUMBER(doorWidthWi) > 0) && (COUNT(model) > 0) && (COUNT(material) > 0)",
+    "sequence": 6
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47q2eshq7j",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "minWidth",
+    "formula": "CFLOAT(OBJECTATTRIBUTEF(model,'min_width'))",
+    "sequence": 1,
+    "constraint": "CFLOAT(OBJECTATTRIBUTEF(model,'min_width'))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qjjutrm0",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "minHeight",
+    "formula": "CFLOAT(OBJECTATTRIBUTEF(model,'min_height'))",
+    "sequence": 2,
+    "constraint": "CFLOAT(OBJECTATTRIBUTEF(model,'min_height'))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qi6cspqb",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "maxSingleSectionWidth",
+    "formula": "CFLOAT(OBJECTATTRIBUTEF(model,'max_single_section_width'))",
+    "sequence": 3,
+    "constraint": "CFLOAT(OBJECTATTRIBUTEF(model,'max_single_section_width'))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qhg5r4t1",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "maxSingleSectionHeight",
+    "formula": "CFLOAT(OBJECTATTRIBUTEF(model,'max_single_section_height'))",
+    "sequence": 4,
+    "constraint": "CFLOAT(OBJECTATTRIBUTEF(model,'max_single_section_height'))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qvnb6iuo",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "materialCost",
+    "formula": "IIF(CONTAINS(material,'$[FTI00007]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00039]','cost')),IIF(CONTAINS(material,'$[FTI00008]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00040]','cost')),IIF(CONTAINS(material,'$[FTI00009]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00041]','cost')),IIF(CONTAINS(material,'$[FTI00010]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00042]','cost')),0))))",
+    "sequence": 5,
+    "constraint": "IIF(CONTAINS(material,'$[GI]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI]','cost')),IIF(CONTAINS(material,'$[MS]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[MS]','cost')),IIF(CONTAINS(material,'$[SS304L]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS304L]','cost')),IIF(CONTAINS(material,'$[SS316L]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS316L]','cost')),0))))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qq1789dg",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "materialDensity",
+    "formula": "IIF(CONTAINS(material,'$[FTI00009]','$[FTI00010]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00051]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00050]','cost')))",
+    "sequence": 6,
+    "constraint": "IIF(CONTAINS(material,'$[SS304L]','$[SS316L]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Density Factor]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI Density Factor]','cost')))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47qmu1b8cr",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "frameDepth",
+    "formula": "IIF(CONTAINS(model,'$[FTI00003]'),0,IIF(CONTAINS(frameDepthSelect,'$[FTI00029]'),25,IIF(CONTAINS(frameDepthSelect,'$[FTI00030]'),50,IIF(CONTAINS(frameDepthSelect,'$[FTI00031]'),75,0))))",
+    "sequence": 7,
+    "constraint": "IIF(CONTAINS(model,'$[RAPW]'),0,IIF(CONTAINS(frameDepthSelect,'$[25mm]'),25,IIF(CONTAINS(frameDepthSelect,'$[50mm]'),50,IIF(CONTAINS(frameDepthSelect,'$[75mm]'),75,0))))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47ra6d343h",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "frameSlitSize",
+    "formula": "CFLOAT(OBJECTATTRIBUTEF(model,'frameoil_width')) + IIF(CONTAINS(model,'$[FTI00003]'),0,NUMBER(frameDepth)+5)",
+    "sequence": 8,
+    "constraint": "CFLOAT(OBJECTATTRIBUTEF(model,'frameoil_width')) + IIF(CONTAINS(model,'$[RAPW]'),0,NUMBER(frameDepth)+5)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rsn5ncl1",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "frameArea",
+    "formula": "IIF(CONTAINS(model,'$[FTI00003]'),(NUMBER(doorWidthWi)+NUMBER(doorHeightHi)+50)*2*NUMBER(frameSlitSize),(NUMBER(doorWidthWi)+NUMBER(doorHeightHi)+40)*2*NUMBER(frameSlitSize))/1000000",
+    "sequence": 9,
+    "constraint": "IIF(CONTAINS(model,'$[RAPW]'),(NUMBER(doorWidthWi)+NUMBER(doorHeightHi)+50)*2*NUMBER(frameSlitSize),(NUMBER(doorWidthWi)+NUMBER(doorHeightHi)+40)*2*NUMBER(frameSlitSize))/1000000"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rm8djq40",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "frameWeight",
+    "formula": "NUMBER(frameArea)*CFLOAT(SELECTEDVALUE(frameThickness))*NUMBER(materialDensity)",
+    "sequence": 10,
+    "constraint": "NUMBER(frameArea)*CFLOAT(SELECTEDVALUE(frameThickness))*NUMBER(materialDensity)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47r4ut2204",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "frameMetalCost",
+    "formula": "NUMBER(frameWeight)*NUMBER(materialCost)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00074]','cost')))",
+    "sequence": 11,
+    "constraint": "NUMBER(frameWeight)*NUMBER(materialCost)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Frame Wastage]','cost')))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rj53lp6d",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "transitionArea",
+    "formula": "IIF(CONTAINS(roundTransition,'$[FTV245]'),((NUMBER(ductDiameterDi)+NUMBER(ductDiameterDi))*2*(NUMBER(ductDiameterDi)+250))/1000000,0)",
+    "sequence": 12,
+    "constraint": "IIF(CONTAINS(roundTransition,'$[Yes]'),((NUMBER(ductDiameterDi)+NUMBER(ductDiameterDi))*2*(NUMBER(ductDiameterDi)+250))/1000000,0)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rfvtk06o",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "transitionWeight",
+    "formula": "IIF(COUNT(transitionThickness)>0,CFLOAT(SELECTEDVALUE(transitionThickness))*NUMBER(transitionArea)*NUMBER(materialDensity),0)",
+    "sequence": 13,
+    "constraint": "IIF(COUNT(transitionThickness)>0,CFLOAT(SELECTEDVALUE(transitionThickness))*NUMBER(transitionArea)*NUMBER(materialDensity),0)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rberu3ca",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "transitionCost",
+    "formula": "NUMBER(transitionWeight)*NUMBER(materialCost)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00074]','cost')))",
+    "sequence": 14,
+    "constraint": "NUMBER(transitionWeight)*NUMBER(materialCost)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Frame Wastage]','cost')))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rakndaph",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "doorInsulationCoverArea",
+    "formula": "IIF(CONTAINS(model,'$[FTI00001]'),(NUMBER(doorWidthWi)+(NUMBER(frameDepth)*2))*(NUMBER(doorHeightHi)+(NUMBER(frameDepth)*2))/1000000,0)",
+    "sequence": 15,
+    "constraint": "IIF(CONTAINS(model,'$[RAPI]'),(NUMBER(doorWidthWi)+(NUMBER(frameDepth)*2))*(NUMBER(doorHeightHi)+(NUMBER(frameDepth)*2))/1000000,0)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rmp1hn1g",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "doorInsulationCoverWeight",
+    "formula": "NUMBER(doorInsulationCoverArea)*CFLOAT(SELECTEDVALUE(doorThickness))*NUMBER(materialDensity)",
+    "sequence": 16,
+    "constraint": "NUMBER(doorInsulationCoverArea)*CFLOAT(SELECTEDVALUE(doorThickness))*NUMBER(materialDensity)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47r93g7d20",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "doorInsulationCoverCost",
+    "formula": "NUMBER(doorInsulationCoverWeight)*NUMBER(materialCost)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00049]','cost')))",
+    "sequence": 17,
+    "constraint": "NUMBER(doorInsulationCoverWeight)*NUMBER(materialCost)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Door Wastage]','cost')))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rih1sf27",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "doorTopCoverArea",
+    "formula": "IIF(CONTAINS(model,'$[FTI00003]'),(NUMBER(doorWidthWi)+128)*(NUMBER(doorHeightHi)+128),(NUMBER(doorWidthWi)+108)*(NUMBER(doorHeightHi)+108))/1000000",
+    "sequence": 18,
+    "constraint": "IIF(CONTAINS(model,'$[RAPW]'),(NUMBER(doorWidthWi)+128)*(NUMBER(doorHeightHi)+128),(NUMBER(doorWidthWi)+108)*(NUMBER(doorHeightHi)+108))/1000000"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rbgqn2kv",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "doorTopCoverWeight",
+    "formula": "NUMBER(doorTopCoverArea)*CFLOAT(SELECTEDVALUE(doorThickness))*NUMBER(materialDensity)",
+    "sequence": 19,
+    "constraint": "NUMBER(doorTopCoverArea)*CFLOAT(SELECTEDVALUE(doorThickness))*NUMBER(materialDensity)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rauu22au",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "doorTopCoverCost",
+    "formula": "NUMBER(doorTopCoverWeight)*NUMBER(materialCost)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00049]','cost')))",
+    "sequence": 20,
+    "constraint": "NUMBER(doorTopCoverWeight)*NUMBER(materialCost)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Door Wastage]','cost')))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rdrm9fi9",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "sheetMetalCost",
+    "formula": "NUMBER(frameMetalCost)+NUMBER(doorInsulationCoverCost)+NUMBER(doorTopCoverCost)+NUMBER(transitionCost)",
+    "sequence": 21,
+    "constraint": "NUMBER(frameMetalCost)+NUMBER(doorInsulationCoverCost)+NUMBER(doorTopCoverCost)+NUMBER(transitionCost)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rn072f0m",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "insulationArea",
+    "formula": "IIF(CONTAINS(model,'$[FTI00001]'),(NUMBER(doorWidthWi)*NUMBER(doorHeightHi))/1000000,0)",
+    "sequence": 22,
+    "constraint": "IIF(CONTAINS(model,'$[RAPI]'),(NUMBER(doorWidthWi)*NUMBER(doorHeightHi))/1000000,0)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47r4htr1fd",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "insulationCost",
+    "formula": "IIF(CONTAINS(model,'$[FTI00001]'),NUMBER(insulationArea)*IIF((NUMBER(frameDepth)==25),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00052]','cost')),IIF((NUMBER(frameDepth)==50),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00053]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00052]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00053]','cost'))))*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00075]','cost'))),0)",
+    "sequence": 23,
+    "constraint": "IIF(CONTAINS(model,'$[RAPI]'),NUMBER(insulationArea)*IIF((NUMBER(frameDepth)==25),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 25mm x 1.2m x 10m (12 sqm/ROLL)]','cost')),IIF((NUMBER(frameDepth)==50),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 50mm x 1.2m x 10m (12 sqm/ROLL)]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 25mm x 1.2m x 10m (12 sqm/ROLL)]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 50mm x 1.2m x 10m (12 sqm/ROLL)]','cost'))))*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Accessories Wastage]','cost'))),0)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47r7knioqa",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "frameGasket",
+    "formula": "EVALUATE(' return Math.ceil(input.arg1);', IIF(CONTAINS(model,'$[FTI00003]'),(NUMBER(doorWidthWi)+NUMBER(doorHeightHi)+50)*2,(NUMBER(doorWidthWi)+NUMBER(doorHeightHi)+40)*2)/1000)",
+    "sequence": 24,
+    "constraint": "EVALUATE(' return Math.ceil(input.arg1);', IIF(CONTAINS(model,'$[RAPW]'),(NUMBER(doorWidthWi)+NUMBER(doorHeightHi)+50)*2,(NUMBER(doorWidthWi)+NUMBER(doorHeightHi)+40)*2)/1000)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rrrn4eek",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "frameGasketCost",
+    "formula": "NUMBER(frameGasket)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00060]','cost'))*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00075]','cost')))",
+    "sequence": 25,
+    "constraint": "NUMBER(frameGasket)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Gasket Ceramic 3X25mmX30m]','cost'))*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Accessories Wastage]','cost')))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47r4jkuhr9",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "sealantQty",
+    "formula": "NUMBER(frameGasket)/12",
+    "sequence": 26,
+    "constraint": "NUMBER(frameGasket)/12"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rjgvjd1c",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "sealantCost",
+    "formula": "NUMBER(sealantQty)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00045]','cost'))*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00075]','cost')))",
+    "sequence": 27,
+    "constraint": "NUMBER(sealantQty)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fire Rated Sealant]','cost'))*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Accessories Wastage]','cost')))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47r4hmn79l",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "handleQty",
+    "formula": "IIF(((NUMBER(doorWidthWi) >= 601) || (NUMBER(doorHeightHi) >= 601)),2,1)",
+    "sequence": 28,
+    "constraint": "IIF(((NUMBER(doorWidthWi) >= 601) || (NUMBER(doorHeightHi) >= 601)),2,1)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47r4uol0nq",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "handleCost",
+    "formula": "NUMBER(handleQty)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00043]','cost'))",
+    "sequence": 29,
+    "constraint": "NUMBER(handleQty)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Handle Cost (per PC)]','cost'))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rd2jnnnb",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "boltSetQty",
+    "formula": "EVALUATE(' return 2*Math.ceil(Math.max(1,(input.arg1+40)/150)+Math.max(1,(input.arg2+40)/150));', NUMBER(doorWidthWi), NUMBER(doorHeightHi))",
+    "sequence": 30,
+    "constraint": "EVALUATE(' return 2*Math.ceil(Math.max(1,(input.arg1+40)/150)+Math.max(1,(input.arg2+40)/150));', NUMBER(doorWidthWi), NUMBER(doorHeightHi))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rtn6oodo",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "boltSetCost",
+    "formula": "NUMBER(boltSetQty)*IIF(CONTAINS(material,'$[FTI00009]','$[FTI00010]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00055]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00057]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00059]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00054]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00056]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00058]','cost')))",
+    "sequence": 31,
+    "constraint": "NUMBER(boltSetQty)*IIF(CONTAINS(material,'$[SS304L]','$[SS316L]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Bolt Hex SS304 6mmx25mm]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Wing Nut SS 6mm]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Washer Straight SS 6mm]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Bolt GI 6mmx25mm]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Wing Head Nut GI 6mm]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Washer Straight GI 6mm]','cost')))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rh0i52ti",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "safetyWire",
+    "formula": "IIF(CONTAINS(safetyWireSelect,'$[FTV245]'),1,0)",
+    "sequence": 32,
+    "constraint": "IIF(CONTAINS(safetyWireSelect,'$[Yes]'),1,0)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rfab4sae",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "safetyWireCost",
+    "formula": "NUMBER(safetyWire)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00044]','cost'))",
+    "sequence": 33,
+    "constraint": "NUMBER(safetyWire)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Safety Wire]','cost'))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47ricsr00r",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "accessoriesCost",
+    "formula": "NUMBER(frameGasketCost)+NUMBER(sealantCost)+NUMBER(handleCost)+NUMBER(boltSetCost)+NUMBER(safetyWireCost)",
+    "sequence": 34,
+    "constraint": "NUMBER(frameGasketCost)+NUMBER(sealantCost)+NUMBER(handleCost)+NUMBER(boltSetCost)+NUMBER(safetyWireCost)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47ros0uiig",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "totalMaterialCost",
+    "formula": "NUMBER(sheetMetalCost)+NUMBER(insulationCost)+NUMBER(accessoriesCost)",
+    "sequence": 35,
+    "constraint": "NUMBER(sheetMetalCost)+NUMBER(insulationCost)+NUMBER(accessoriesCost)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47r8n267ha",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "doorProcessingMinutes",
+    "formula": "EVALUATE(' return Math.max(input.arg1,input.arg2);', CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00046]','cost')), NUMBER(doorTopCoverArea)*IIF(CONTAINS(material,'$[FTI00007]','$[FTI00008]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00061]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00047]','cost'))))",
+    "sequence": 36,
+    "constraint": "EVALUATE(' return Math.max(input.arg1,input.arg2);', CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Min Door Fabrication Minutes]','cost')), NUMBER(doorTopCoverArea)*IIF(CONTAINS(material,'$[GI]','$[MS]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI & MS Door Fabrication Minutes (per sqm)]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Door Fabrication Minutes (per sqm)]','cost'))))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rc60188k",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "frameProcessingMinutes",
+    "formula": "CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00048]','cost'))+NUMBER(frameArea)*IIF(CONTAINS(material,'$[FTI00007]','$[FTI00008]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00062]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00063]','cost')))",
+    "sequence": 37,
+    "constraint": "CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fixed Frame Fabrication Minutes]','cost'))+NUMBER(frameArea)*IIF(CONTAINS(material,'$[GI]','$[MS]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI & MS Frame Fabrication Minutes (per sqm)]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Frame Fabrication Minutes (per sqm)]','cost')))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rij6epfm",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "fittingsProcessingMinutes",
+    "formula": "IIF(CONTAINS(roundTransition,'$[FTV245]'),EVALUATE(' return Math.max(input.arg1,input.arg2);', 10, NUMBER(transitionArea)*IIF(CONTAINS(material,'$[FTI00007]','$[FTI00008]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00064]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00065]','cost')))),0)",
+    "sequence": 38,
+    "constraint": "IIF(CONTAINS(roundTransition,'$[Yes]'),EVALUATE(' return Math.max(input.arg1,input.arg2);', 10, NUMBER(transitionArea)*IIF(CONTAINS(material,'$[GI]','$[MS]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI & MS Fitting Fabrication Minutes (per sqm)]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Fitting Fabrication Minutes (per sqm)]','cost')))),0)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47r824ngaa",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "totalLabourMinutes",
+    "formula": "NUMBER(doorProcessingMinutes)+NUMBER(frameProcessingMinutes)+NUMBER(fittingsProcessingMinutes)",
+    "sequence": 39,
+    "constraint": "NUMBER(doorProcessingMinutes)+NUMBER(frameProcessingMinutes)+NUMBER(fittingsProcessingMinutes)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rjpe1l7p",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "totalAssemblyCost",
+    "formula": "NUMBER(totalLabourMinutes)/60*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00071]','cost'))",
+    "sequence": 40,
+    "constraint": "NUMBER(totalLabourMinutes)/60*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Cost per Hour]','cost'))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47r8nebh7m",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "weldingCost",
+    "formula": "IIF(CONTAINS(model,'$[FTI00001]'),((8*40)+(NUMBER(frameDepth)+5)*8+(NUMBER(doorWidthWi)+NUMBER(doorHeightHi))*2),IIF(CONTAINS(model,'$[FTI00002]'),((8*40)+(NUMBER(frameDepth)+5)*4),(50*4)))/1000*IIF(CONTAINS(material,'$[FTI00009]','$[FTI00010]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00067]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00066]','cost')))",
+    "sequence": 41,
+    "constraint": "IIF(CONTAINS(model,'$[RAPI]'),((8*40)+(NUMBER(frameDepth)+5)*8+(NUMBER(doorWidthWi)+NUMBER(doorHeightHi))*2),IIF(CONTAINS(model,'$[RAPB]'),((8*40)+(NUMBER(frameDepth)+5)*4),(50*4)))/1000*IIF(CONTAINS(material,'$[SS304L]','$[SS316L]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD SS Welding Cost]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI & MS Welding Cost]','cost')))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47rdb8f1ie",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "productFinishCost",
+    "formula": "(NUMBER(frameArea)*2+NUMBER(doorInsulationCoverArea)+NUMBER(doorTopCoverArea)*2)*IIF(CONTAINS(finish,'$[FTI00035]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00068]','cost')),IIF(CONTAINS(finish,'$[FTI00036]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00069]','cost')),0))",
+    "sequence": 42,
+    "constraint": "(NUMBER(frameArea)*2+NUMBER(doorInsulationCoverArea)+NUMBER(doorTopCoverArea)*2)*IIF(CONTAINS(finish,'$[Red Oxide Paint]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Red Oxide Paint Cost per SQM]','cost')),IIF(CONTAINS(finish,'$[Galvanic Paint]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Galvanic Paint Cost per SQM]','cost')),0))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47r6k13sit",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "packingCost",
+    "formula": "IIF(CONTAINS(packing,'$[FTI00037]'),0,NUMBER(doorWidthWi)*NUMBER(doorHeightHi)/1000000*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00070]','cost')))",
+    "sequence": 43,
+    "constraint": "IIF(CONTAINS(packing,'$[None]'),0,NUMBER(doorWidthWi)*NUMBER(doorHeightHi)/1000000*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Standard Stretch Film Wrapping Cost]','cost')))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47re539ppu",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "overhead",
+    "formula": "(NUMBER(totalMaterialCost)+NUMBER(totalAssemblyCost)+NUMBER(weldingCost)+NUMBER(productFinishCost)+NUMBER(packingCost))*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00072]','cost'))",
+    "sequence": 44,
+    "constraint": "(NUMBER(totalMaterialCost)+NUMBER(totalAssemblyCost)+NUMBER(weldingCost)+NUMBER(productFinishCost)+NUMBER(packingCost))*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Overhead Percentage]','cost'))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47sdkb18aa",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "totalCost",
+    "formula": "NUMBER(totalMaterialCost)+NUMBER(totalAssemblyCost)+NUMBER(productFinishCost)+NUMBER(overhead)",
+    "sequence": 45,
+    "constraint": "NUMBER(totalMaterialCost)+NUMBER(totalAssemblyCost)+NUMBER(productFinishCost)+NUMBER(overhead)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47s4ij8rlv",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "listPrice",
+    "formula": "EVALUATE(' return Math.ceil(input.arg1);', NUMBER(totalCost)/(1-CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FTI00073]','cost'))))",
+    "sequence": 46,
+    "constraint": "EVALUATE(' return Math.ceil(input.arg1);', NUMBER(totalCost)/(1-CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Profit]','cost'))))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47s5sn6h2v",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value Price",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "product",
+    "impact_options": "FTI00087",
+    "formula": "NUMBER(listPrice)",
+    "sequence": 47,
+    "constraint": "NUMBER(listPrice)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47s8ek460p",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "productDescription",
+    "formula": "CONCAT('W:',NUMBER(doorWidthWi),' H:',NUMBER(doorHeightHi),' - ',SELECTEDVALUE(material),' ',SELECTEDVALUE(model),' ',TEXT(modelDescription),' - ',SELECTEDVALUE(rating))",
+    "sequence": 48,
+    "constraint": "CONCAT('W:',NUMBER(doorWidthWi),' H:',NUMBER(doorHeightHi),' - ',SELECTEDVALUE(material),' ',SELECTEDVALUE(model),' ',TEXT(modelDescription),' - ',SELECTEDVALUE(rating))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47ssijun5b",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Bundle Title",
+    "implementation_constraint": "IMC00007",
+    "formula": "TEXT(productDescription)",
+    "sequence": 49,
+    "constraint": "TEXT(productDescription)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47sc9qh76a",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "materialDescription",
+    "formula": "IIF(CONTAINS(material,'$[FTI00007]'),'Galvanized Steel',IIF(CONTAINS(material,'$[FTI00008]'),'Mild Steel',SELECTEDVALUE(material)))",
+    "sequence": 50,
+    "constraint": "IIF(CONTAINS(material,'$[GI]'),'Galvanized Steel',IIF(CONTAINS(material,'$[MS]'),'Mild Steel',SELECTEDVALUE(material)))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47suin4c7n",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value",
+    "implementation_constraint": "IMC00007",
+    "impact_fields": "sizeDescription",
+    "formula": "CONCAT(NUMBER(doorWidthWi),' X ',NUMBER(doorHeightHi),IIF((CONTAINS(roundTransition,'$[FTV245]')) && (NUMBER(ductDiameterDi) > 0),CONCAT(' Dia ',NUMBER(ductDiameterDi)),''))",
+    "sequence": 51,
+    "constraint": "CONCAT(NUMBER(doorWidthWi),' X ',NUMBER(doorHeightHi),IIF((CONTAINS(roundTransition,'$[Yes]')) && (NUMBER(ductDiameterDi) > 0),CONCAT(' Dia ',NUMBER(ductDiameterDi)),''))"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00008",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "label": "Hide calculation sections for non-admins (Q15)",
+    "result": 0,
+    "constraint": "EVALUATE(' var roles = input.arg1.split(\",\"); if(roles.indexOf(\"OneCPQ Admin\") != -1) return false; return true; ',USERINFO('roles'))",
+    "formula": "EVALUATE(' var roles = input.arg1.split(\",\"); if(roles.indexOf(\"OneCPQ Admin\") != -1) return false; return true; ',USERINFO('roles'))",
+    "sequence": 7
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47srihvpir",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Hide Structure",
+    "implementation_constraint": "IMC00008",
+    "impact_fields": "STR00002,STR00003,STR00004,STR00005,STR00006,STR00007",
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47sf7blkef",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Show List View",
+    "implementation_constraint": "IMC00008",
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47svs5seq4",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Hide Group",
+    "implementation_constraint": "IMC00008",
+    "impact_fields": "BGR00002",
+    "sequence": 3
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00009",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "parent_constraint": "IMC00002",
+    "label": "Product line",
+    "result": 1,
+    "constraint": "(COUNT(product) == 0)",
+    "formula": "(COUNT(product) == 0)",
+    "sequence": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47srlirsa6",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Include",
+    "implementation_constraint": "IMC00009",
+    "impact_fields": "product",
+    "impact_options": "FTI00087",
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00010",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "parent_constraint": "IMC00002",
+    "label": "Cart locked: read-only",
+    "result": 1,
+    "constraint": "REFERENCE(isCartLocked)",
+    "formula": "REFERENCE(isCartLocked)",
+    "sequence": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47sollhgip",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Hide Bundle Property",
+    "implementation_constraint": "IMC00010",
+    "impact_fields": "save",
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47ssu0psvo",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Lock",
+    "implementation_constraint": "IMC00010",
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00011",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "parent_constraint": "IMC00002",
+    "label": "Error: model missing",
+    "result": 1,
+    "constraint": "COUNT(model) == 0",
+    "formula": "COUNT(model) == 0",
+    "sequence": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47s41dvef3",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Show Error",
+    "implementation_constraint": "IMC00011",
+    "formula": "'Please select model'",
+    "sequence": 1,
+    "constraint": "'Please select model'"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00012",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "parent_constraint": "IMC00002",
+    "label": "Error: door width outside the model's limits (Q12)",
+    "result": 1,
+    "constraint": "COUNT(model) > 0 && (ISNULLORBLANK(doorWidthWi) || NUMBER(doorWidthWi) < CFLOAT(OBJECTATTRIBUTEF(model,'min_width')) || NUMBER(doorWidthWi) > CFLOAT(OBJECTATTRIBUTEF(model,'max_single_section_width')))",
+    "formula": "COUNT(model) > 0 && (ISNULLORBLANK(doorWidthWi) || NUMBER(doorWidthWi) < CFLOAT(OBJECTATTRIBUTEF(model,'min_width')) || NUMBER(doorWidthWi) > CFLOAT(OBJECTATTRIBUTEF(model,'max_single_section_width')))",
+    "sequence": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47slkl8ekl",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Show Error",
+    "implementation_constraint": "IMC00012",
+    "formula": "CONCAT('Door width must be between ', OBJECTATTRIBUTEF(model,'min_width'), ' and ', OBJECTATTRIBUTEF(model,'max_single_section_width'), ' mm')",
+    "sequence": 1,
+    "constraint": "CONCAT('Door width must be between ', OBJECTATTRIBUTEF(model,'min_width'), ' and ', OBJECTATTRIBUTEF(model,'max_single_section_width'), ' mm')"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00013",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "parent_constraint": "IMC00002",
+    "label": "Error: door height outside the model's limits (Q12)",
+    "result": 1,
+    "constraint": "COUNT(model) > 0 && (ISNULLORBLANK(doorHeightHi) || NUMBER(doorHeightHi) < CFLOAT(OBJECTATTRIBUTEF(model,'min_height')) || NUMBER(doorHeightHi) > CFLOAT(OBJECTATTRIBUTEF(model,'max_single_section_height')))",
+    "formula": "COUNT(model) > 0 && (ISNULLORBLANK(doorHeightHi) || NUMBER(doorHeightHi) < CFLOAT(OBJECTATTRIBUTEF(model,'min_height')) || NUMBER(doorHeightHi) > CFLOAT(OBJECTATTRIBUTEF(model,'max_single_section_height')))",
+    "sequence": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47so3re3f1",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Show Error",
+    "implementation_constraint": "IMC00013",
+    "formula": "CONCAT('Door height must be between ', OBJECTATTRIBUTEF(model,'min_height'), ' and ', OBJECTATTRIBUTEF(model,'max_single_section_height'), ' mm')",
+    "sequence": 1,
+    "constraint": "CONCAT('Door height must be between ', OBJECTATTRIBUTEF(model,'min_height'), ' and ', OBJECTATTRIBUTEF(model,'max_single_section_height'), ' mm')"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00014",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "parent_constraint": "IMC00002",
+    "label": "Error: frame depth missing (Q8)",
+    "result": 1,
+    "constraint": "COUNT(model) > 0 && NOT(CONTAINS(model,'$[RAPW]')) && COUNT(frameDepthSelect) == 0",
+    "formula": "COUNT(model) > 0 && NOT(CONTAINS(model,'$[FTI00003]')) && COUNT(frameDepthSelect) == 0",
+    "sequence": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47s049kgmd",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Show Error",
+    "implementation_constraint": "IMC00014",
+    "formula": "'Please select frame depth'",
+    "sequence": 1,
+    "constraint": "'Please select frame depth'"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00015",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "parent_constraint": "IMC00002",
+    "label": "Error: RAPW is not made in MS (Q10)",
+    "result": 1,
+    "constraint": "CONTAINS(model,'$[RAPW]') && CONTAINS(material,'$[MS]')",
+    "formula": "CONTAINS(model,'$[FTI00003]') && CONTAINS(material,'$[FTI00008]')",
+    "sequence": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47s9jn99m5",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Show Error",
+    "implementation_constraint": "IMC00015",
+    "formula": "'RAPW is not available in MS - choose another material'",
+    "sequence": 1,
+    "constraint": "'RAPW is not available in MS - choose another material'"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00016",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "parent_constraint": "IMC00002",
+    "label": "Error: round transition data missing (Q13)",
+    "result": 1,
+    "constraint": "CONTAINS(roundTransition,'$[Yes]') && (COUNT(transitionThickness) == 0 || NUMBER(ductDiameterDi) <= 0)",
+    "formula": "CONTAINS(roundTransition,'$[FTV245]') && (COUNT(transitionThickness) == 0 || NUMBER(ductDiameterDi) <= 0)",
+    "sequence": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47strtucc4",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Show Error",
+    "implementation_constraint": "IMC00016",
+    "formula": "'Please select the transition thickness and enter the duct diameter'",
+    "sequence": 1,
+    "constraint": "'Please select the transition thickness and enter the duct diameter'"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00017",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "parent_constraint": "IMC00002",
+    "label": "RAPW: no frame depth (Q8)",
+    "result": 1,
+    "constraint": "CONTAINS(model,'$[RAPW]')",
+    "formula": "CONTAINS(model,'$[FTI00003]')",
+    "sequence": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47sckslv6n",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Hide Field",
+    "implementation_constraint": "IMC00017",
+    "impact_fields": "frameDepthSelect",
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47s264j7nk",
+   "doc": {
+    "active": 1,
+    "result": 0,
+    "type": "Show Field",
+    "implementation_constraint": "IMC00017",
+    "impact_fields": "frameDepthSelect",
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00018",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "parent_constraint": "IMC00002",
+    "label": "Round transition fields only when Yes (Q13)",
+    "result": 1,
+    "constraint": "CONTAINS(roundTransition,'$[Yes]')",
+    "formula": "CONTAINS(roundTransition,'$[FTV245]')",
+    "sequence": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47sh3p02of",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Show Field",
+    "implementation_constraint": "IMC00018",
+    "impact_fields": "transitionThickness,ductDiameterDi",
+    "sequence": 1
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47t2lco6n7",
+   "doc": {
+    "active": 1,
+    "result": 0,
+    "type": "Hide Field",
+    "implementation_constraint": "IMC00018",
+    "impact_fields": "transitionThickness,ductDiameterDi",
+    "sequence": 2
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraint",
+   "name": "IMC00019",
+   "doc": {
+    "active": 1,
+    "bundle": "BUN11",
+    "parent_constraint": "IMC00002",
+    "label": "Price from list price",
+    "result": 1,
+    "constraint": "(NUMBER(listPrice) >0) || (NUMBER(listPrice) ==0)",
+    "formula": "(NUMBER(listPrice) >0) || (NUMBER(listPrice) ==0)",
+    "sequence": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbImplementationConstraintAction",
+   "name": "47tn6k7h51",
+   "doc": {
+    "active": 1,
+    "result": 1,
+    "type": "Change Value Price",
+    "implementation_constraint": "IMC00019",
+    "impact_fields": "product",
+    "impact_options": "FTI00087",
+    "formula": "NUMBER(listPrice)",
+    "sequence": 1,
+    "constraint": "NUMBER(listPrice)"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraint",
+   "name": "47t8f8a6ju",
+   "doc": {
+    "bundle": "BUN11",
+    "active": 1,
+    "sequence": 0,
+    "mode": "BtbFeature",
+    "left": "FTR00001",
+    "right": "FTR00003",
+    "two_way": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47t9jq17vr",
+   "doc": {
+    "mapping_constraint": "47t8f8a6ju",
+    "left": "FTI00001",
+    "right": "FTI00007"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47tokdgrol",
+   "doc": {
+    "mapping_constraint": "47t8f8a6ju",
+    "left": "FTI00001",
+    "right": "FTI00008"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47tgpu0ehn",
+   "doc": {
+    "mapping_constraint": "47t8f8a6ju",
+    "left": "FTI00001",
+    "right": "FTI00009"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47tvit4nvs",
+   "doc": {
+    "mapping_constraint": "47t8f8a6ju",
+    "left": "FTI00001",
+    "right": "FTI00010"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47t87voqjr",
+   "doc": {
+    "mapping_constraint": "47t8f8a6ju",
+    "left": "FTI00002",
+    "right": "FTI00007"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47tkf409lb",
+   "doc": {
+    "mapping_constraint": "47t8f8a6ju",
+    "left": "FTI00002",
+    "right": "FTI00008"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47tpkmga22",
+   "doc": {
+    "mapping_constraint": "47t8f8a6ju",
+    "left": "FTI00002",
+    "right": "FTI00009"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47t8vrj87s",
+   "doc": {
+    "mapping_constraint": "47t8f8a6ju",
+    "left": "FTI00002",
+    "right": "FTI00010"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47t5nd1cr8",
+   "doc": {
+    "mapping_constraint": "47t8f8a6ju",
+    "left": "FTI00003",
+    "right": "FTI00007"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47tee1tntl",
+   "doc": {
+    "mapping_constraint": "47t8f8a6ju",
+    "left": "FTI00003",
+    "right": "FTI00009"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47tgbmn98t",
+   "doc": {
+    "mapping_constraint": "47t8f8a6ju",
+    "left": "FTI00003",
+    "right": "FTI00010"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraint",
+   "name": "47tq6546qj",
+   "doc": {
+    "bundle": "BUN11",
+    "active": 1,
+    "sequence": 0,
+    "mode": "BtbFeature",
+    "left": "FTR00001",
+    "right": "FTR00009",
+    "two_way": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47tjrn91tg",
+   "doc": {
+    "mapping_constraint": "47tq6546qj",
+    "left": "FTI00001",
+    "right": "FTI00029"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47ti18g8ku",
+   "doc": {
+    "mapping_constraint": "47tq6546qj",
+    "left": "FTI00001",
+    "right": "FTI00030"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47t84mkphe",
+   "doc": {
+    "mapping_constraint": "47tq6546qj",
+    "left": "FTI00001",
+    "right": "FTI00031"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47tjgsof2q",
+   "doc": {
+    "mapping_constraint": "47tq6546qj",
+    "left": "FTI00002",
+    "right": "FTI00029"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47tqjc86bu",
+   "doc": {
+    "mapping_constraint": "47tq6546qj",
+    "left": "FTI00002",
+    "right": "FTI00030"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47t3etadqu",
+   "doc": {
+    "mapping_constraint": "47tq6546qj",
+    "left": "FTI00002",
+    "right": "FTI00031"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraint",
+   "name": "47tjk6tm6e",
+   "doc": {
+    "bundle": "BUN11",
+    "active": 1,
+    "sequence": 0,
+    "mode": "BtbFeature",
+    "left": "FTR00003",
+    "right": "FTR00014",
+    "two_way": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47trsmn3cr",
+   "doc": {
+    "mapping_constraint": "47tjk6tm6e",
+    "left": "FTI00008",
+    "right": "FTI00034"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47um458jqv",
+   "doc": {
+    "mapping_constraint": "47tjk6tm6e",
+    "left": "FTI00008",
+    "right": "FTI00035"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47u09kj33f",
+   "doc": {
+    "mapping_constraint": "47tjk6tm6e",
+    "left": "FTI00008",
+    "right": "FTI00036"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47u9u5tsf5",
+   "doc": {
+    "mapping_constraint": "47tjk6tm6e",
+    "left": "FTI00007",
+    "right": "FTI00034"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47udfat15u",
+   "doc": {
+    "mapping_constraint": "47tjk6tm6e",
+    "left": "FTI00009",
+    "right": "FTI00034"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47ua5ehucq",
+   "doc": {
+    "mapping_constraint": "47tjk6tm6e",
+    "left": "FTI00010",
+    "right": "FTI00034"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraint",
+   "name": "47uf2mvg83",
+   "doc": {
+    "bundle": "BUN11",
+    "active": 1,
+    "sequence": 0,
+    "mode": "BtbFeature",
+    "left": "FTR00003",
+    "right": "FTR00005",
+    "two_way": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47udc0bijh",
+   "doc": {
+    "mapping_constraint": "47uf2mvg83",
+    "left": "FTI00008",
+    "right": "FTI00022"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47uaq9felk",
+   "doc": {
+    "mapping_constraint": "47uf2mvg83",
+    "left": "FTI00007",
+    "right": "FTI00021"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47u4i102sg",
+   "doc": {
+    "mapping_constraint": "47uf2mvg83",
+    "left": "FTI00007",
+    "right": "FTI00022"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47ufm21jfn",
+   "doc": {
+    "mapping_constraint": "47uf2mvg83",
+    "left": "FTI00007",
+    "right": "FTI00023"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47ueb9iajo",
+   "doc": {
+    "mapping_constraint": "47uf2mvg83",
+    "left": "FTI00007",
+    "right": "FTI00024"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47u23gkhk6",
+   "doc": {
+    "mapping_constraint": "47uf2mvg83",
+    "left": "FTI00009",
+    "right": "FTI00021"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47udhvv6ps",
+   "doc": {
+    "mapping_constraint": "47uf2mvg83",
+    "left": "FTI00009",
+    "right": "FTI00022"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47utnk98ge",
+   "doc": {
+    "mapping_constraint": "47uf2mvg83",
+    "left": "FTI00009",
+    "right": "FTI00023"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47u3qvt6aj",
+   "doc": {
+    "mapping_constraint": "47uf2mvg83",
+    "left": "FTI00009",
+    "right": "FTI00024"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47u8frcbeg",
+   "doc": {
+    "mapping_constraint": "47uf2mvg83",
+    "left": "FTI00010",
+    "right": "FTI00021"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47un5qjdf0",
+   "doc": {
+    "mapping_constraint": "47uf2mvg83",
+    "left": "FTI00010",
+    "right": "FTI00022"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47uv0eopc0",
+   "doc": {
+    "mapping_constraint": "47uf2mvg83",
+    "left": "FTI00010",
+    "right": "FTI00023"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47uo1k9vqp",
+   "doc": {
+    "mapping_constraint": "47uf2mvg83",
+    "left": "FTI00010",
+    "right": "FTI00024"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraint",
+   "name": "47u2001njb",
+   "doc": {
+    "bundle": "BUN11",
+    "active": 1,
+    "sequence": 0,
+    "mode": "BtbFeature",
+    "left": "FTR00069",
+    "right": "FTR00004",
+    "two_way": 0
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47ut8qc0qq",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00084",
+    "right": "FTI00020"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47ud3uu5mf",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00085",
+    "right": "FTI00020"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47ult9f0f3",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00086",
+    "right": "FTI00020"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47uf8k75rt",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00077",
+    "right": "FTI00017"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47un70ma25",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00081",
+    "right": "FTI00017"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47u1u9vhn6",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00076",
+    "right": "FTI00016"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47upenpdua",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00076",
+    "right": "FTI00017"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47u7fjut6n",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00076",
+    "right": "FTI00018"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47u81udeg0",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00076",
+    "right": "FTI00019"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47uu137ek9",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00076",
+    "right": "FTI00020"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47umhh8btt",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00078",
+    "right": "FTI00016"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47uo45mrbg",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00078",
+    "right": "FTI00017"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47u93mo35f",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00078",
+    "right": "FTI00018"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47ujnam6h1",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00078",
+    "right": "FTI00019"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vi66brdu",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00078",
+    "right": "FTI00020"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vf2mj81p",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00079",
+    "right": "FTI00016"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vkva1g0t",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00079",
+    "right": "FTI00017"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47v5osr20g",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00079",
+    "right": "FTI00018"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47v1sd5q97",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00079",
+    "right": "FTI00019"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vrrlolr4",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00079",
+    "right": "FTI00020"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47v2kcaaut",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00080",
+    "right": "FTI00016"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vic9n10b",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00080",
+    "right": "FTI00017"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47v3hpc000",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00080",
+    "right": "FTI00018"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vn0td8k1",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00080",
+    "right": "FTI00019"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47v36j925l",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00080",
+    "right": "FTI00020"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vjd38i1a",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00082",
+    "right": "FTI00016"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47v7puh6f7",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00082",
+    "right": "FTI00017"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vu15t3rh",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00082",
+    "right": "FTI00018"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vga7vu3h",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00082",
+    "right": "FTI00019"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vtdonr98",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00082",
+    "right": "FTI00020"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vs4d0bo5",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00083",
+    "right": "FTI00016"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vu73k38h",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00083",
+    "right": "FTI00017"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vrlgp8km",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00083",
+    "right": "FTI00018"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47vojesg7e",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00083",
+    "right": "FTI00019"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BtbMappingConstraintEntry",
+   "name": "47v2a2co57",
+   "doc": {
+    "mapping_constraint": "47u2001njb",
+    "left": "FTI00083",
+    "right": "FTI00020"
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00001",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 10,
+    "active": 1,
+    "source_type": "Templated",
+    "uom": "Sqm",
+    "identifier_template": "{material} Frame {frameThickness} X {frameSlitSize}",
+    "condition_logic": "and",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"frameArea\", \"cartQty\"]}]}",
+    "dimensions": [
+     {
+      "field": "frameSlitSize",
+      "value_format": "Trim trailing zero",
+      "value_order": "110,135,160,50"
+     },
+     {
+      "field": "material",
+      "value_format": "As is",
+      "value_order": "GI,MS,SS304L,SS316L"
+     },
+     {
+      "field": "frameThickness",
+      "value_format": "As is"
+     }
+    ],
+    "conditions": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00002",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 20,
+    "active": 1,
+    "source_type": "Templated",
+    "uom": "Sqm",
+    "identifier_template": "{material} Door Insulation Cover Area {doorThickness}",
+    "condition_logic": "and",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"doorInsulationCoverArea\", \"cartQty\"]}]}",
+    "dimensions": [
+     {
+      "field": "material",
+      "value_format": "As is",
+      "value_order": "GI,MS,SS304L,SS316L"
+     },
+     {
+      "field": "doorThickness",
+      "value_format": "As is"
+     }
+    ],
+    "conditions": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00003",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 30,
+    "active": 1,
+    "source_type": "Templated",
+    "uom": "Sqm",
+    "identifier_template": "{material} Door Top Cover Area {doorThickness}",
+    "condition_logic": "and",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"doorTopCoverArea\", \"cartQty\"]}]}",
+    "dimensions": [
+     {
+      "field": "material",
+      "value_format": "As is",
+      "value_order": "GI,MS,SS304L,SS316L"
+     },
+     {
+      "field": "doorThickness",
+      "value_format": "As is"
+     }
+    ],
+    "conditions": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00004",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 40,
+    "active": 1,
+    "source_type": "Templated",
+    "uom": "Sqm",
+    "identifier_template": "{material} Round Transition Area {transitionThickness}",
+    "condition_logic": "and",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"transitionArea\", \"cartQty\"]}]}",
+    "dimensions": [
+     {
+      "field": "material",
+      "value_format": "As is",
+      "value_order": "GI,MS,SS304L,SS316L"
+     },
+     {
+      "field": "transitionThickness",
+      "value_format": "As is"
+     }
+    ],
+    "conditions": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00005",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 50,
+    "active": 1,
+    "source_type": "Sourced",
+    "identifier_literal": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 25mm x 1.2m x 10m (12 sqm/ROLL)",
+    "condition_logic": "or",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"insulationArea\", \"cartQty\"]}]}",
+    "dimensions": [],
+    "conditions": [
+     {
+      "field": "frameDepthSelect",
+      "operator": "eq",
+      "value": "25mm"
+     },
+     {
+      "field": "frameDepthSelect",
+      "operator": "eq",
+      "value": "75mm"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00006",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 60,
+    "active": 1,
+    "source_type": "Sourced",
+    "identifier_literal": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 50mm x 1.2m x 10m (12 sqm/ROLL)",
+    "condition_logic": "or",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"insulationArea\", \"cartQty\"]}]}",
+    "dimensions": [],
+    "conditions": [
+     {
+      "field": "frameDepthSelect",
+      "operator": "eq",
+      "value": "50mm"
+     },
+     {
+      "field": "frameDepthSelect",
+      "operator": "eq",
+      "value": "75mm"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00007",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 70,
+    "active": 1,
+    "source_type": "Sourced",
+    "identifier_literal": "Gasket Ceramic 3X25mmX30m",
+    "condition_logic": "and",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"frameGasket\", \"cartQty\"]}]}",
+    "dimensions": [],
+    "conditions": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00008",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 80,
+    "active": 1,
+    "source_type": "Sourced",
+    "identifier_literal": "Fire Rated Sealant",
+    "condition_logic": "and",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"sealantQty\", \"cartQty\"]}]}",
+    "dimensions": [],
+    "conditions": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00009",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 90,
+    "active": 1,
+    "source_type": "Sourced",
+    "identifier_literal": "SS Handle Cost (per PC)",
+    "condition_logic": "and",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"handleQty\", \"cartQty\"]}]}",
+    "dimensions": [],
+    "conditions": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00010",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 100,
+    "active": 1,
+    "source_type": "Sourced",
+    "identifier_literal": "Safety Wire",
+    "condition_logic": "and",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"safetyWire\", \"cartQty\"]}]}",
+    "dimensions": [],
+    "conditions": []
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00011",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 110,
+    "active": 1,
+    "source_type": "Sourced",
+    "identifier_literal": "Bolt GI 6mmx25mm",
+    "condition_logic": "or",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"boltSetQty\", \"cartQty\"]}]}",
+    "dimensions": [],
+    "conditions": [
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "GI"
+     },
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "MS"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00012",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 120,
+    "active": 1,
+    "source_type": "Sourced",
+    "identifier_literal": "Bolt Hex SS304 6mmx25mm",
+    "condition_logic": "or",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"boltSetQty\", \"cartQty\"]}]}",
+    "dimensions": [],
+    "conditions": [
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "SS304L"
+     },
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "SS316L"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00013",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 130,
+    "active": 1,
+    "source_type": "Sourced",
+    "identifier_literal": "Wing Head Nut GI 6mm",
+    "condition_logic": "or",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"boltSetQty\", \"cartQty\"]}]}",
+    "dimensions": [],
+    "conditions": [
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "GI"
+     },
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "MS"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00014",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 140,
+    "active": 1,
+    "source_type": "Sourced",
+    "identifier_literal": "Wing Nut SS 6mm",
+    "condition_logic": "or",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"boltSetQty\", \"cartQty\"]}]}",
+    "dimensions": [],
+    "conditions": [
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "SS304L"
+     },
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "SS316L"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00015",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 150,
+    "active": 1,
+    "source_type": "Sourced",
+    "identifier_literal": "Washer Straight GI 6mm",
+    "condition_logic": "or",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"boltSetQty\", \"cartQty\"]}]}",
+    "dimensions": [],
+    "conditions": [
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "GI"
+     },
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "MS"
+     }
+    ]
+   }
+  },
+  {
+   "op": "insert",
+   "doctype": "BOQ Rule",
+   "name": "BOQ-FRAD-00016",
+   "doc": {
+    "product_family": "FRAD",
+    "sequence": 160,
+    "active": 1,
+    "source_type": "Sourced",
+    "identifier_literal": "Washer Straight SS 6mm",
+    "condition_logic": "or",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"boltSetQty\", \"cartQty\"]}]}",
+    "dimensions": [],
+    "conditions": [
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "SS304L"
+     },
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "SS316L"
+     }
+    ]
+   }
+  }
+ ]
+}

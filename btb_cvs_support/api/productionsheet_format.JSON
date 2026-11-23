@@ -40,5 +40,11 @@
       "total":"Totals,,,,,,,,,,,,,,,,,,,,,,,,,,",
       "tableHeader":"#,Tag Ref,Notes,Model No.,Frame Material,Duct Diameter (DI),Door Width (WI),Door Height (HI),Qty, Frame Thickness , Frame Area ,Frame Construction,Door Thickness,Door Area,Door Depth,Door Construction, Duct Opening Undersize ,Safety Wire,Hinge Material,Hinge Type,Insulation,Gasket,Finish",
       "detail":"tagRef,notes,model,material,ductDiameterDi,doorWidthWi,doorHeightHi,cartQty,frameThickness,frameArea,frameConstruction,doorThickness,doorMetalArea,doorDepthSelect,doorConstruction,ductOpeningUndersize,safetyWireSelect,hingeMaterial,hingeType,insulation,gasket,finish"
+   },
+   "FRAD":{
+      "header": "${subCat},,,,,,Customer Name,${compName},,,,,,,,,,Print Date:,${date},,,,,,,,,,,,,\nProduction Cut Sheet,,,,,,Project,${project},,,,,Quote No.,${qNo},,,,Prepared By:,${curUser},,,,,,,,,,,,,\n,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,",
+      "total": "Totals,,,,,,,,,,,frameArea,,doorInsulationCoverArea,doorTopCoverArea,transitionArea,,,insulationArea,,,",
+      "tableHeader": "#,Model No.,Material,Tag,Door Width (WI),Door Height (HI),Frame Depth,Transition Thickness,Duct Diameter (DI),Qty,Frame Thickness,Frame Area,Door Thickness,Door Insulation Cover Area,Door Top Cover Area,Round Transition Area,Installation Type,Safety Wire,Insulation Area,Gasket,Finish,Packing",
+      "detail": "model,material,tagRef,doorWidthWi,doorHeightHi,frameDepthSelect,transitionThickness,ductDiameterDi,cartQty,frameThickness,frameArea,doorThickness,doorInsulationCoverArea,doorTopCoverArea,transitionArea,installationType,safetyWireSelect,insulationArea,frameGasket,finish,packing"
    }
 }

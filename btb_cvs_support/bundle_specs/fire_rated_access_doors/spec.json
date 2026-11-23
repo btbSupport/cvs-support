@@ -1,0 +1,3474 @@
+{
+ "bundle": {
+  "label": "Fire Rated Access Doors",
+  "external_id": null,
+  "export_template": [
+   "model",
+   "doorWidthWi",
+   "doorHeightHi",
+   "material",
+   "frameThickness",
+   "doorThickness",
+   "rating",
+   "frameDepthSelect",
+   "roundTransition",
+   "transitionThickness",
+   "ductDiameterDi",
+   "installationType",
+   "finish",
+   "packing",
+   "safetyWireSelect",
+   "tagRef",
+   "notes"
+  ]
+ },
+ "master_data": {
+  "items": [
+   {
+    "name": "SKU41",
+    "item_code": "FRAD",
+    "item_name": "Fire Rated Access Doors",
+    "description": "Fire Rated Access Doors",
+    "item_group": "All Item Groups",
+    "stock_uom": "Ea",
+    "is_stock_item": 1,
+    "is_sales_item": 1,
+    "custom_configurable": 1,
+    "custom_manufactured_item": 0,
+    "default_material_request_type": "Purchase"
+   },
+   {
+    "item_code": "RAPI",
+    "item_name": "SAFE4 Fire Rated Access Door Insulated Bolted",
+    "description": "SAFE4 Fire Rated Access Door Insulated Bolted",
+    "item_group": "22-Access Doors",
+    "stock_uom": "Ea",
+    "is_stock_item": 0,
+    "is_sales_item": 1,
+    "custom_configurable": 0,
+    "custom_manufactured_item": 1,
+    "default_material_request_type": "Purchase"
+   },
+   {
+    "item_code": "RAPB",
+    "item_name": "SAFE4 Fire Rated Access Door Uninsulated Bolted",
+    "description": "SAFE4 Fire Rated Access Door Uninsulated Bolted",
+    "item_group": "22-Access Doors",
+    "stock_uom": "Ea",
+    "is_stock_item": 0,
+    "is_sales_item": 1,
+    "custom_configurable": 0,
+    "custom_manufactured_item": 1,
+    "default_material_request_type": "Purchase"
+   },
+   {
+    "item_code": "RAPW",
+    "item_name": "SAFE4 Fire Rated Access Door Uninsulated Welded",
+    "description": "SAFE4 Fire Rated Access Door Uninsulated Welded",
+    "item_group": "22-Access Doors",
+    "stock_uom": "Ea",
+    "is_stock_item": 0,
+    "is_sales_item": 1,
+    "custom_configurable": 0,
+    "custom_manufactured_item": 1,
+    "default_material_request_type": "Purchase"
+   }
+  ],
+  "objects": [
+   {
+    "key": "RAPI",
+    "doctype": "FTOCVSUnique",
+    "custom_unique_id": "RAPI",
+    "model_no": "RAPI",
+    "product_family": "@bundle",
+    "min_width": 150,
+    "min_height": 150,
+    "max_single_section_width": 1000,
+    "max_single_section_height": 1000,
+    "frameoil_width": 80
+   },
+   {
+    "key": "RAPB",
+    "doctype": "FTOCVSUnique",
+    "custom_unique_id": "RAPB",
+    "model_no": "RAPB",
+    "product_family": "@bundle",
+    "min_width": 150,
+    "min_height": 150,
+    "max_single_section_width": 1000,
+    "max_single_section_height": 1000,
+    "frameoil_width": 80
+   },
+   {
+    "key": "RAPW",
+    "doctype": "FTOCVSUnique",
+    "custom_unique_id": "RAPW",
+    "model_no": "RAPW",
+    "product_family": "@bundle",
+    "min_width": 150,
+    "min_height": 150,
+    "max_single_section_width": 1000,
+    "max_single_section_height": 1000,
+    "frameoil_width": 50
+   },
+   {
+    "key": "SKU41 selling",
+    "doctype": "BtbPriceListDetail",
+    "detail_type": "Item",
+    "detail": "SKU41",
+    "price_list": "Standard Selling",
+    "active": 1,
+    "price_type": "Fixed",
+    "operation_type": "One Time",
+    "include_quantity": 1,
+    "use_price_picker": 0,
+    "is_matrix": 0,
+    "matrix_type": "Volume",
+    "price": 0,
+    "valid_from": "2026-11-23 00:00:00"
+   }
+  ],
+  "feature_type_options": [
+   {
+    "feature_type": "FT89",
+    "object_type": "Item",
+    "object": "SKU41"
+   }
+  ],
+  "late_objects": [
+   {
+    "key": "boq1",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00001",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 10,
+    "condition_logic": "and",
+    "conditions": [],
+    "dimensions": [
+     {
+      "field": "frameSlitSize",
+      "value_format": "Trim trailing zero",
+      "value_order": "110,135,160,50"
+     },
+     {
+      "field": "material",
+      "value_format": "As is",
+      "value_order": "GI,MS,SS304L,SS316L"
+     },
+     {
+      "field": "frameThickness",
+      "value_format": "As is"
+     }
+    ],
+    "source_type": "Templated",
+    "identifier_template": "{material} Frame {frameThickness} X {frameSlitSize}",
+    "uom": "Sqm",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"frameArea\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq2",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00002",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 20,
+    "condition_logic": "and",
+    "conditions": [],
+    "dimensions": [
+     {
+      "field": "material",
+      "value_format": "As is",
+      "value_order": "GI,MS,SS304L,SS316L"
+     },
+     {
+      "field": "doorThickness",
+      "value_format": "As is"
+     }
+    ],
+    "source_type": "Templated",
+    "identifier_template": "{material} Door Insulation Cover Area {doorThickness}",
+    "uom": "Sqm",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"doorInsulationCoverArea\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq3",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00003",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 30,
+    "condition_logic": "and",
+    "conditions": [],
+    "dimensions": [
+     {
+      "field": "material",
+      "value_format": "As is",
+      "value_order": "GI,MS,SS304L,SS316L"
+     },
+     {
+      "field": "doorThickness",
+      "value_format": "As is"
+     }
+    ],
+    "source_type": "Templated",
+    "identifier_template": "{material} Door Top Cover Area {doorThickness}",
+    "uom": "Sqm",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"doorTopCoverArea\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq4",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00004",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 40,
+    "condition_logic": "and",
+    "conditions": [],
+    "dimensions": [
+     {
+      "field": "material",
+      "value_format": "As is",
+      "value_order": "GI,MS,SS304L,SS316L"
+     },
+     {
+      "field": "transitionThickness",
+      "value_format": "As is"
+     }
+    ],
+    "source_type": "Templated",
+    "identifier_template": "{material} Round Transition Area {transitionThickness}",
+    "uom": "Sqm",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"transitionArea\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq5",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00005",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 50,
+    "condition_logic": "or",
+    "conditions": [
+     {
+      "field": "frameDepthSelect",
+      "operator": "eq",
+      "value": "25mm"
+     },
+     {
+      "field": "frameDepthSelect",
+      "operator": "eq",
+      "value": "75mm"
+     }
+    ],
+    "dimensions": [],
+    "source_type": "Sourced",
+    "identifier_literal": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 25mm x 1.2m x 10m (12 sqm/ROLL)",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"insulationArea\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq6",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00006",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 60,
+    "condition_logic": "or",
+    "conditions": [
+     {
+      "field": "frameDepthSelect",
+      "operator": "eq",
+      "value": "50mm"
+     },
+     {
+      "field": "frameDepthSelect",
+      "operator": "eq",
+      "value": "75mm"
+     }
+    ],
+    "dimensions": [],
+    "source_type": "Sourced",
+    "identifier_literal": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 50mm x 1.2m x 10m (12 sqm/ROLL)",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"insulationArea\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq7",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00007",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 70,
+    "condition_logic": "and",
+    "conditions": [],
+    "dimensions": [],
+    "source_type": "Sourced",
+    "identifier_literal": "Gasket Ceramic 3X25mmX30m",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"frameGasket\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq8",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00008",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 80,
+    "condition_logic": "and",
+    "conditions": [],
+    "dimensions": [],
+    "source_type": "Sourced",
+    "identifier_literal": "Fire Rated Sealant",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"sealantQty\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq9",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00009",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 90,
+    "condition_logic": "and",
+    "conditions": [],
+    "dimensions": [],
+    "source_type": "Sourced",
+    "identifier_literal": "SS Handle Cost (per PC)",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"handleQty\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq10",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00010",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 100,
+    "condition_logic": "and",
+    "conditions": [],
+    "dimensions": [],
+    "source_type": "Sourced",
+    "identifier_literal": "Safety Wire",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"safetyWire\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq11",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00011",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 110,
+    "condition_logic": "or",
+    "conditions": [
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "GI"
+     },
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "MS"
+     }
+    ],
+    "dimensions": [],
+    "source_type": "Sourced",
+    "identifier_literal": "Bolt GI 6mmx25mm",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"boltSetQty\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq12",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00012",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 120,
+    "condition_logic": "or",
+    "conditions": [
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "SS304L"
+     },
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "SS316L"
+     }
+    ],
+    "dimensions": [],
+    "source_type": "Sourced",
+    "identifier_literal": "Bolt Hex SS304 6mmx25mm",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"boltSetQty\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq13",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00013",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 130,
+    "condition_logic": "or",
+    "conditions": [
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "GI"
+     },
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "MS"
+     }
+    ],
+    "dimensions": [],
+    "source_type": "Sourced",
+    "identifier_literal": "Wing Head Nut GI 6mm",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"boltSetQty\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq14",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00014",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 140,
+    "condition_logic": "or",
+    "conditions": [
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "SS304L"
+     },
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "SS316L"
+     }
+    ],
+    "dimensions": [],
+    "source_type": "Sourced",
+    "identifier_literal": "Wing Nut SS 6mm",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"boltSetQty\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq15",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00015",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 150,
+    "condition_logic": "or",
+    "conditions": [
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "GI"
+     },
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "MS"
+     }
+    ],
+    "dimensions": [],
+    "source_type": "Sourced",
+    "identifier_literal": "Washer Straight GI 6mm",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"boltSetQty\", \"cartQty\"]}]}"
+   },
+   {
+    "key": "boq16",
+    "doctype": "BOQ Rule",
+    "name": "BOQ-FRAD-00016",
+    "product_family": "FRAD",
+    "active": 1,
+    "sequence": 160,
+    "condition_logic": "or",
+    "conditions": [
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "SS304L"
+     },
+     {
+      "field": "material",
+      "operator": "eq",
+      "value": "SS316L"
+     }
+    ],
+    "dimensions": [],
+    "source_type": "Sourced",
+    "identifier_literal": "Washer Straight SS 6mm",
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"boltSetQty\", \"cartQty\"]}]}"
+   }
+  ]
+ },
+ "items": {
+  "anchor": [
+   "SKU41"
+  ],
+  "catalog_categories": [
+   "CTR213589"
+  ]
+ },
+ "cost_objects": {
+  "doctype": "FTOCountryWiseCost",
+  "label_field": "product_name",
+  "rows": [
+   {
+    "product_name": "GI",
+    "existing": "FTOCountryWiseCost1",
+    "set_if_empty": {
+     "boq_identifier": "GI"
+    }
+   },
+   {
+    "product_name": "MS",
+    "existing": "FTOCountryWiseCost4",
+    "set_if_empty": {
+     "boq_identifier": "MS"
+    }
+   },
+   {
+    "product_name": "SS304L",
+    "existing": "FTOCountryWiseCost2",
+    "set_if_empty": {
+     "boq_identifier": "SS304L"
+    }
+   },
+   {
+    "product_name": "SS316L",
+    "existing": "FTOCountryWiseCost3",
+    "set_if_empty": {
+     "boq_identifier": "SS316L"
+    }
+   },
+   {
+    "product_name": "SS Handle Cost (per PC)",
+    "existing": "FTOCountryWiseCost519",
+    "set_if_empty": {
+     "boq_identifier": "SS Handle Cost (per PC)"
+    }
+   },
+   {
+    "product_name": "Safety Wire",
+    "existing": "FTOCountryWiseCost534",
+    "set_if_empty": {
+     "boq_identifier": "Safety Wire"
+    }
+   },
+   {
+    "product_name": "Fire Rated Sealant",
+    "existing": "FTOCountryWiseCost387",
+    "set_if_empty": {
+     "boq_identifier": "Fire Rated Sealant"
+    }
+   },
+   {
+    "product_name": "Min Door Fabrication Minutes",
+    "existing": "FTOCountryWiseCost537",
+    "set_if_empty": {
+     "boq_identifier": "Min Door Fabrication Minutes"
+    }
+   },
+   {
+    "product_name": "SS Door Fabrication Minutes (per sqm)",
+    "existing": "FTOCountryWiseCost539",
+    "set_if_empty": {
+     "boq_identifier": "SS Door Fabrication Minutes (per sqm)"
+    }
+   },
+   {
+    "product_name": "Fixed Frame Fabrication Minutes",
+    "existing": "FTOCountryWiseCost541",
+    "set_if_empty": {
+     "boq_identifier": "Fixed Frame Fabrication Minutes"
+    }
+   },
+   {
+    "product_name": "Door Wastage",
+    "existing": "FTOCountryWiseCost560",
+    "set_if_empty": {
+     "boq_identifier": "Door Wastage"
+    }
+   },
+   {
+    "product_name": "GI Density Factor",
+    "existing": "FTOCountryWiseCost389",
+    "set_if_empty": {
+     "boq_identifier": "GI Density Factor"
+    }
+   },
+   {
+    "product_name": "SS Density Factor",
+    "existing": "FTOCountryWiseCost388",
+    "set_if_empty": {
+     "boq_identifier": "SS Density Factor"
+    }
+   },
+   {
+    "product_name": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 25mm x 1.2m x 10m (12 sqm/ROLL)",
+    "item_code": "2660871",
+    "unit": "Sqm",
+    "category": "Insulation",
+    "custom_cost_type": "% of UAE",
+    "cost": 11,
+    "site_costs": {
+     "UAE": 11,
+     "Qatar": 15,
+     "KSA": 18,
+     "Egypt": 270
+    },
+    "boq_identifier": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 25mm x 1.2m x 10m (12 sqm/ROLL)"
+   },
+   {
+    "product_name": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 50mm x 1.2m x 10m (12 sqm/ROLL)",
+    "item_code": "2660861",
+    "unit": "Sqm",
+    "category": "Insulation",
+    "custom_cost_type": "% of UAE",
+    "cost": 19,
+    "site_costs": {
+     "UAE": 19,
+     "Qatar": 22,
+     "KSA": 24,
+     "Egypt": 360
+    },
+    "boq_identifier": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 50mm x 1.2m x 10m (12 sqm/ROLL)"
+   },
+   {
+    "product_name": "Bolt GI 6mmx25mm",
+    "item_code": "3010109",
+    "unit": "Ea",
+    "category": "Accessories",
+    "custom_cost_type": "Country Specific",
+    "cost": 0.07,
+    "site_costs": {
+     "UAE": 0.07,
+     "Qatar": 0.08,
+     "KSA": 0.1,
+     "Egypt": 1.5
+    },
+    "boq_identifier": "Bolt GI 6mmx25mm"
+   },
+   {
+    "product_name": "Bolt Hex SS304 6mmx25mm",
+    "item_code": "3010115",
+    "unit": "Ea",
+    "category": "Accessories",
+    "custom_cost_type": "Country Specific",
+    "cost": 0.5,
+    "site_costs": {
+     "UAE": 0.5,
+     "Qatar": 0.6,
+     "KSA": 0.8,
+     "Egypt": 12
+    },
+    "boq_identifier": "Bolt Hex SS304 6mmx25mm"
+   },
+   {
+    "product_name": "Wing Head Nut GI 6mm",
+    "item_code": "3020111",
+    "unit": "Ea",
+    "category": "Accessories",
+    "custom_cost_type": "Country Specific",
+    "cost": 0.15,
+    "site_costs": {
+     "UAE": 0.15,
+     "Qatar": 0.17,
+     "KSA": 0.2,
+     "Egypt": 3
+    },
+    "boq_identifier": "Wing Head Nut GI 6mm"
+   },
+   {
+    "product_name": "Wing Nut SS 6mm",
+    "item_code": "3020212",
+    "unit": "Ea",
+    "category": "Accessories",
+    "custom_cost_type": "Country Specific",
+    "cost": 1.6,
+    "site_costs": {
+     "UAE": 1.6,
+     "Qatar": 1.7,
+     "KSA": 2,
+     "Egypt": 30
+    },
+    "boq_identifier": "Wing Nut SS 6mm"
+   },
+   {
+    "product_name": "Washer Straight GI 6mm",
+    "item_code": "3040116",
+    "unit": "Ea",
+    "category": "Accessories",
+    "custom_cost_type": "Country Specific",
+    "cost": 0.02,
+    "site_costs": {
+     "UAE": 0.02,
+     "Qatar": 0.03,
+     "KSA": 0.04,
+     "Egypt": 0.6
+    },
+    "boq_identifier": "Washer Straight GI 6mm"
+   },
+   {
+    "product_name": "Washer Straight SS 6mm",
+    "item_code": "3040212",
+    "unit": "Ea",
+    "category": "Accessories",
+    "custom_cost_type": "Country Specific",
+    "cost": 0.15,
+    "site_costs": {
+     "UAE": 0.15,
+     "Qatar": 0.17,
+     "KSA": 0.2,
+     "Egypt": 3
+    },
+    "boq_identifier": "Washer Straight SS 6mm"
+   },
+   {
+    "product_name": "Gasket Ceramic 3X25mmX30m",
+    "item_code": "2040007",
+    "unit": "m",
+    "category": "Seals",
+    "custom_cost_type": "% of UAE",
+    "cost": 3.5,
+    "site_costs": {
+     "UAE": 3.5,
+     "Qatar": 4,
+     "KSA": 4.5,
+     "Egypt": 67.5
+    },
+    "boq_identifier": "Gasket Ceramic 3X25mmX30m"
+   },
+   {
+    "product_name": "GI & MS Door Fabrication Minutes (per sqm)",
+    "item_code": "GI & MS Door Fabrication Minutes (per sqm)",
+    "unit": "Minutes",
+    "category": "Labour & Assembly",
+    "custom_cost_type": "Country Specific",
+    "cost": 45,
+    "site_costs": {
+     "UAE": 45,
+     "Qatar": 45,
+     "KSA": 45,
+     "Egypt": 45
+    },
+    "boq_identifier": "GI & MS Door Fabrication Minutes (per sqm)"
+   },
+   {
+    "product_name": "GI & MS Frame Fabrication Minutes (per sqm)",
+    "item_code": "GI & MS Frame Fabrication Minutes (per sqm)",
+    "unit": "Minutes",
+    "category": "Labour & Assembly",
+    "custom_cost_type": "Country Specific",
+    "cost": 20,
+    "site_costs": {
+     "UAE": 20,
+     "Qatar": 20,
+     "KSA": 20,
+     "Egypt": 20
+    },
+    "boq_identifier": "GI & MS Frame Fabrication Minutes (per sqm)"
+   },
+   {
+    "product_name": "SS Frame Fabrication Minutes (per sqm)",
+    "item_code": "SS Frame Fabrication Minutes (per sqm)",
+    "unit": "Minutes",
+    "category": "Labour & Assembly",
+    "custom_cost_type": "Country Specific",
+    "cost": 30,
+    "site_costs": {
+     "UAE": 30,
+     "Qatar": 30,
+     "KSA": 30,
+     "Egypt": 30
+    },
+    "boq_identifier": "SS Frame Fabrication Minutes (per sqm)"
+   },
+   {
+    "product_name": "GI & MS Fitting Fabrication Minutes (per sqm)",
+    "item_code": "GI & MS Fitting Fabrication Minutes (per sqm)",
+    "unit": "Minutes",
+    "category": "Labour & Assembly",
+    "custom_cost_type": "Country Specific",
+    "cost": 45,
+    "site_costs": {
+     "UAE": 45,
+     "Qatar": 45,
+     "KSA": 45,
+     "Egypt": 45
+    },
+    "boq_identifier": "GI & MS Fitting Fabrication Minutes (per sqm)"
+   },
+   {
+    "product_name": "SS Fitting Fabrication Minutes (per sqm)",
+    "item_code": "SS Fitting Fabrication Minutes (per sqm)",
+    "unit": "Minutes",
+    "category": "Labour & Assembly",
+    "custom_cost_type": "Country Specific",
+    "cost": 55,
+    "site_costs": {
+     "UAE": 55,
+     "Qatar": 55,
+     "KSA": 55,
+     "Egypt": 55
+    },
+    "boq_identifier": "SS Fitting Fabrication Minutes (per sqm)"
+   },
+   {
+    "product_name": "GI & MS Welding Cost",
+    "item_code": "GI & MS Welding Cost",
+    "unit": "Currency",
+    "category": "Labour & Assembly",
+    "custom_cost_type": "Country Specific",
+    "cost": 24,
+    "site_costs": {
+     "UAE": 24,
+     "Qatar": 25,
+     "KSA": 25,
+     "Egypt": 363
+    },
+    "boq_identifier": "GI & MS Welding Cost"
+   },
+   {
+    "product_name": "SS Welding Cost",
+    "item_code": "SS Welding Cost",
+    "unit": "Currency",
+    "category": "Labour & Assembly",
+    "custom_cost_type": "Country Specific",
+    "cost": 84,
+    "site_costs": {
+     "UAE": 84,
+     "Qatar": 88,
+     "KSA": 88,
+     "Egypt": 1270
+    },
+    "boq_identifier": "FRAD SS Welding Cost"
+   },
+   {
+    "product_name": "Red Oxide Paint Cost per SQM",
+    "item_code": "Red Oxide Paint Cost per SQM",
+    "unit": "Currency",
+    "category": "Other Cost",
+    "custom_cost_type": "Country Specific",
+    "cost": 60,
+    "site_costs": {
+     "UAE": 60,
+     "Qatar": 60,
+     "KSA": 65,
+     "Egypt": 900
+    },
+    "boq_identifier": "Red Oxide Paint Cost per SQM"
+   },
+   {
+    "product_name": "Galvanic Paint Cost per SQM",
+    "item_code": "Galvanic Paint Cost per SQM",
+    "unit": "Currency",
+    "category": "Other Cost",
+    "custom_cost_type": "Country Specific",
+    "cost": 60,
+    "site_costs": {
+     "UAE": 60,
+     "Qatar": 60,
+     "KSA": 65,
+     "Egypt": 900
+    },
+    "boq_identifier": "Galvanic Paint Cost per SQM"
+   },
+   {
+    "product_name": "Standard Stretch Film Wrapping Cost",
+    "item_code": "Standard Stretch Film Wrapping Cost",
+    "unit": "Currency",
+    "category": "Other Cost",
+    "custom_cost_type": "Country Specific",
+    "cost": 15,
+    "site_costs": {
+     "UAE": 15,
+     "Qatar": 15,
+     "KSA": 15,
+     "Egypt": 15
+    },
+    "boq_identifier": "Standard Stretch Film Wrapping Cost"
+   },
+   {
+    "product_name": "Cost per Hour",
+    "item_code": "Cost per Hour",
+    "unit": "Currency",
+    "category": "Hourly Rate",
+    "custom_cost_type": "Country Specific",
+    "cost": 20,
+    "site_costs": {
+     "UAE": 20,
+     "Qatar": 25,
+     "KSA": 30,
+     "Egypt": 300
+    },
+    "boq_identifier": "FRAD Cost per Hour"
+   },
+   {
+    "product_name": "Overhead Percentage",
+    "item_code": "Overhead Percentage",
+    "unit": "%",
+    "category": "Overhead",
+    "custom_cost_type": "Country Specific",
+    "cost": 0.5,
+    "site_costs": {
+     "UAE": 0.5,
+     "Qatar": 0.5,
+     "KSA": 0.5,
+     "Egypt": 0.5
+    },
+    "boq_identifier": "FRAD Overhead Percentage"
+   },
+   {
+    "product_name": "Profit",
+    "item_code": "Profit",
+    "unit": "%",
+    "category": "Factor",
+    "custom_cost_type": "Country Specific",
+    "cost": 0.5,
+    "site_costs": {
+     "UAE": 0.5,
+     "Qatar": 0.5,
+     "KSA": 0.5,
+     "Egypt": 0.5
+    },
+    "boq_identifier": "FRAD Profit"
+   },
+   {
+    "product_name": "Frame Wastage",
+    "item_code": "Frame Wastage",
+    "unit": "%",
+    "category": "Wastage",
+    "custom_cost_type": "Country Specific",
+    "cost": 0.1,
+    "site_costs": {
+     "UAE": 0.1,
+     "Qatar": 0.1,
+     "KSA": 0.1,
+     "Egypt": 0.1
+    },
+    "boq_identifier": "FRAD Frame Wastage"
+   },
+   {
+    "product_name": "Accessories Wastage",
+    "item_code": "Accessories Wastage",
+    "unit": "%",
+    "category": "Wastage",
+    "custom_cost_type": "Country Specific",
+    "cost": 0.05,
+    "site_costs": {
+     "UAE": 0.05,
+     "Qatar": 0.05,
+     "KSA": 0.05,
+     "Egypt": 0.05
+    },
+    "boq_identifier": "FRAD Accessories Wastage"
+   }
+  ]
+ },
+ "feature_types": [
+  {
+   "key": "model",
+   "label": "FRAD Model",
+   "data_type": "Object List",
+   "object_type": "FTOCVSUnique",
+   "data_text_field": "custom_unique_id",
+   "additional_fields": "custom_unique_id,min_width,min_height,max_single_section_width,max_single_section_height,frameoil_width",
+   "objects": [
+    {
+     "master": "RAPI"
+    },
+    {
+     "master": "RAPB"
+    },
+    {
+     "master": "RAPW"
+    }
+   ]
+  },
+  {
+   "key": "modelItems",
+   "label": "FRAD Model Items",
+   "data_type": "Object List",
+   "object_type": "Item",
+   "data_text_field": "item_code",
+   "additional_fields": "item_code,item_name",
+   "objects": [
+    {
+     "object": "RAPI"
+    },
+    {
+     "object": "RAPB"
+    },
+    {
+     "object": "RAPW"
+    }
+   ]
+  },
+  {
+   "key": "material",
+   "label": "Common Material Type",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "GI"
+    },
+    {
+     "value": "MS"
+    },
+    {
+     "value": "SS304L"
+    },
+    {
+     "value": "SS316L"
+    },
+    {
+     "value": "AL"
+    },
+    {
+     "value": "AZ"
+    },
+    {
+     "value": "EAL"
+    }
+   ]
+  },
+  {
+   "key": "rating",
+   "label": "Common Fire Rating",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "FR120"
+    },
+    {
+     "value": "FR240"
+    }
+   ]
+  },
+  {
+   "key": "frameThickness",
+   "label": "FRAD Frame Thickness",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "1.2"
+    },
+    {
+     "value": "1.5"
+    },
+    {
+     "value": "2.0"
+    },
+    {
+     "value": "3.0"
+    },
+    {
+     "value": "5.0"
+    }
+   ]
+  },
+  {
+   "key": "doorThickness",
+   "label": "FRAD Door Thickness",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "1.2"
+    },
+    {
+     "value": "1.5"
+    },
+    {
+     "value": "2.0"
+    },
+    {
+     "value": "3.0"
+    }
+   ]
+  },
+  {
+   "key": "transitionThickness",
+   "label": "FRAD Transition Thickness",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "1.2"
+    },
+    {
+     "value": "1.5"
+    },
+    {
+     "value": "2.0"
+    },
+    {
+     "value": "3.0"
+    }
+   ]
+  },
+  {
+   "key": "frameDepth",
+   "label": "FRAD Frame Depth",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "25mm"
+    },
+    {
+     "value": "50mm"
+    },
+    {
+     "value": "75mm"
+    }
+   ]
+  },
+  {
+   "key": "installationType",
+   "label": "FRAD Installation Type",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "Standard-With Holes"
+    },
+    {
+     "value": "Welded"
+    }
+   ]
+  },
+  {
+   "key": "finish",
+   "label": "FRAD Finish",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "Mill Finish"
+    },
+    {
+     "value": "Red Oxide Paint"
+    },
+    {
+     "value": "Galvanic Paint"
+    }
+   ]
+  },
+  {
+   "key": "packing",
+   "label": "FRAD Packing",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "None"
+    },
+    {
+     "value": "Standard Stretch Film Wrapping"
+    }
+   ]
+  },
+  {
+   "key": "cost",
+   "label": "FRAD Cost",
+   "data_type": "Object List",
+   "object_type": "FTOCountryWiseCost",
+   "data_text_field": "boq_identifier",
+   "additional_fields": "item_code,cost",
+   "objects": [
+    {
+     "cost_row": "GI"
+    },
+    {
+     "cost_row": "MS"
+    },
+    {
+     "cost_row": "SS304L"
+    },
+    {
+     "cost_row": "SS316L"
+    },
+    {
+     "cost_row": "SS Handle Cost (per PC)"
+    },
+    {
+     "cost_row": "Safety Wire"
+    },
+    {
+     "cost_row": "Fire Rated Sealant"
+    },
+    {
+     "cost_row": "Min Door Fabrication Minutes"
+    },
+    {
+     "cost_row": "SS Door Fabrication Minutes (per sqm)"
+    },
+    {
+     "cost_row": "Fixed Frame Fabrication Minutes"
+    },
+    {
+     "cost_row": "Door Wastage"
+    },
+    {
+     "cost_row": "GI Density Factor"
+    },
+    {
+     "cost_row": "SS Density Factor"
+    },
+    {
+     "cost_row": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 25mm x 1.2m x 10m (12 sqm/ROLL)"
+    },
+    {
+     "cost_row": "Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 50mm x 1.2m x 10m (12 sqm/ROLL)"
+    },
+    {
+     "cost_row": "Bolt GI 6mmx25mm"
+    },
+    {
+     "cost_row": "Bolt Hex SS304 6mmx25mm"
+    },
+    {
+     "cost_row": "Wing Head Nut GI 6mm"
+    },
+    {
+     "cost_row": "Wing Nut SS 6mm"
+    },
+    {
+     "cost_row": "Washer Straight GI 6mm"
+    },
+    {
+     "cost_row": "Washer Straight SS 6mm"
+    },
+    {
+     "cost_row": "Gasket Ceramic 3X25mmX30m"
+    },
+    {
+     "cost_row": "GI & MS Door Fabrication Minutes (per sqm)"
+    },
+    {
+     "cost_row": "GI & MS Frame Fabrication Minutes (per sqm)"
+    },
+    {
+     "cost_row": "SS Frame Fabrication Minutes (per sqm)"
+    },
+    {
+     "cost_row": "GI & MS Fitting Fabrication Minutes (per sqm)"
+    },
+    {
+     "cost_row": "SS Fitting Fabrication Minutes (per sqm)"
+    },
+    {
+     "cost_row": "GI & MS Welding Cost"
+    },
+    {
+     "cost_row": "SS Welding Cost"
+    },
+    {
+     "cost_row": "Red Oxide Paint Cost per SQM"
+    },
+    {
+     "cost_row": "Galvanic Paint Cost per SQM"
+    },
+    {
+     "cost_row": "Standard Stretch Film Wrapping Cost"
+    },
+    {
+     "cost_row": "Cost per Hour"
+    },
+    {
+     "cost_row": "Overhead Percentage"
+    },
+    {
+     "cost_row": "Profit"
+    },
+    {
+     "cost_row": "Frame Wastage"
+    },
+    {
+     "cost_row": "Accessories Wastage"
+    }
+   ]
+  },
+  {
+   "key": "modelMaterial",
+   "label": "FRAD Model & Material",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "RAPI GI"
+    },
+    {
+     "value": "RAPI MS"
+    },
+    {
+     "value": "RAPI SS304L"
+    },
+    {
+     "value": "RAPI SS316L"
+    },
+    {
+     "value": "RAPB GI"
+    },
+    {
+     "value": "RAPB MS"
+    },
+    {
+     "value": "RAPB SS304L"
+    },
+    {
+     "value": "RAPB SS316L"
+    },
+    {
+     "value": "RAPW GI"
+    },
+    {
+     "value": "RAPW SS304L"
+    },
+    {
+     "value": "RAPW SS316L"
+    }
+   ]
+  },
+  {
+   "key": "yesno",
+   "existing": "FT60"
+  },
+  {
+   "key": "product",
+   "existing": "FT89"
+  }
+ ],
+ "structures": [
+  {
+   "key": "Fire Rated Access Doors",
+   "label": "Fire Rated Access Doors",
+   "parent": null,
+   "sequence": 0
+  },
+  {
+   "key": "Lookups",
+   "label": "Lookups",
+   "parent": "Fire Rated Access Doors",
+   "sequence": 1
+  },
+  {
+   "key": "Frame",
+   "label": "Frame",
+   "parent": "Fire Rated Access Doors",
+   "sequence": 2
+  },
+  {
+   "key": "Door",
+   "label": "Door",
+   "parent": "Fire Rated Access Doors",
+   "sequence": 3
+  },
+  {
+   "key": "Processing Minutes",
+   "label": "Processing Minutes",
+   "parent": "Fire Rated Access Doors",
+   "sequence": 4
+  },
+  {
+   "key": "Cost",
+   "label": "Cost",
+   "parent": "Fire Rated Access Doors",
+   "sequence": 5
+  },
+  {
+   "key": "Factors",
+   "label": "Factors",
+   "parent": "Fire Rated Access Doors",
+   "sequence": 6
+  }
+ ],
+ "features": [
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "model",
+   "label": "Model",
+   "control_type": "Dropdown",
+   "sequence": 1,
+   "feature_types": [
+    "model"
+   ]
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "modelDescription",
+   "label": "Model Description",
+   "control_type": "Textbox",
+   "sequence": 2
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "material",
+   "label": "Material",
+   "control_type": "Dropdown",
+   "sequence": 3,
+   "feature_types": [
+    "material"
+   ]
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "frameThickness",
+   "label": "Frame Thickness",
+   "control_type": "Dropdown",
+   "sequence": 4,
+   "feature_types": [
+    "frameThickness"
+   ]
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "doorThickness",
+   "label": "Door Thickness",
+   "control_type": "Dropdown",
+   "sequence": 5,
+   "feature_types": [
+    "doorThickness"
+   ]
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "rating",
+   "label": "Rating",
+   "control_type": "Dropdown",
+   "sequence": 6,
+   "feature_types": [
+    "rating"
+   ]
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "doorWidthWi",
+   "label": "Door Width (WI)",
+   "control_type": "Number",
+   "sequence": 7,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "doorHeightHi",
+   "label": "Door Height (HI)",
+   "control_type": "Number",
+   "sequence": 8,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "frameDepthSelect",
+   "label": "Frame Depth",
+   "control_type": "Dropdown",
+   "sequence": 9,
+   "feature_types": [
+    "frameDepth"
+   ]
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "roundTransition",
+   "label": "Round Transition",
+   "control_type": "Dropdown",
+   "sequence": 10,
+   "feature_types": [
+    "yesno"
+   ]
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "transitionThickness",
+   "label": "Transition Thickness",
+   "control_type": "Dropdown",
+   "sequence": 11,
+   "feature_types": [
+    "transitionThickness"
+   ]
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "ductDiameterDi",
+   "label": "Duct Diameter (DI)",
+   "control_type": "Number",
+   "sequence": 12,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "installationType",
+   "label": "Installation Type",
+   "control_type": "Dropdown",
+   "sequence": 13,
+   "feature_types": [
+    "installationType"
+   ]
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "finish",
+   "label": "Finish",
+   "control_type": "Dropdown",
+   "sequence": 14,
+   "feature_types": [
+    "finish"
+   ]
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "packing",
+   "label": "Packing",
+   "control_type": "Dropdown",
+   "sequence": 15,
+   "feature_types": [
+    "packing"
+   ]
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "safetyWireSelect",
+   "label": "Safety Wire",
+   "control_type": "Dropdown",
+   "sequence": 16,
+   "feature_types": [
+    "yesno"
+   ]
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "tagRef",
+   "label": "Tag Ref",
+   "control_type": "Textbox",
+   "sequence": 17
+  },
+  {
+   "structure": "Fire Rated Access Doors",
+   "field": "notes",
+   "label": "Notes",
+   "control_type": "Textbox",
+   "sequence": 18
+  },
+  {
+   "structure": "Lookups",
+   "field": "subcategory",
+   "label": "Sub-Category",
+   "control_type": "Textbox",
+   "sequence": 19
+  },
+  {
+   "structure": "Lookups",
+   "field": "minWidth",
+   "label": "Min Width",
+   "control_type": "Number",
+   "sequence": 20,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Lookups",
+   "field": "minHeight",
+   "label": "Min Height",
+   "control_type": "Number",
+   "sequence": 21,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Lookups",
+   "field": "maxSingleSectionWidth",
+   "label": "Max Single Section Width",
+   "control_type": "Number",
+   "sequence": 22,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Lookups",
+   "field": "maxSingleSectionHeight",
+   "label": "Max Single Section Height",
+   "control_type": "Number",
+   "sequence": 23,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Lookups",
+   "field": "materialCost",
+   "label": "Material Cost",
+   "control_type": "Number",
+   "sequence": 24,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Lookups",
+   "field": "materialDensity",
+   "label": "Material Density",
+   "control_type": "Number",
+   "sequence": 25,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Lookups",
+   "field": "frameDepth",
+   "label": "Frame Depth (mm)",
+   "control_type": "Number",
+   "sequence": 26,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Lookups",
+   "field": "frameSlitSize",
+   "label": "Frame Slit Size",
+   "control_type": "Number",
+   "sequence": 27,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame",
+   "field": "frameArea",
+   "label": "Frame Area",
+   "control_type": "Number",
+   "sequence": 28,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame",
+   "field": "frameWeight",
+   "label": "Frame Weight",
+   "control_type": "Number",
+   "sequence": 29,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame",
+   "field": "frameMetalCost",
+   "label": "Frame Metal Cost",
+   "control_type": "Number",
+   "sequence": 30,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame",
+   "field": "transitionArea",
+   "label": "Round Transition Area",
+   "control_type": "Number",
+   "sequence": 31,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame",
+   "field": "transitionWeight",
+   "label": "Round Transition Weight",
+   "control_type": "Number",
+   "sequence": 32,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame",
+   "field": "transitionCost",
+   "label": "Round Transition Cost",
+   "control_type": "Number",
+   "sequence": 33,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "doorInsulationCoverArea",
+   "label": "Door Insulation Cover Area",
+   "control_type": "Number",
+   "sequence": 34,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "doorInsulationCoverWeight",
+   "label": "Door Insulation Cover Weight",
+   "control_type": "Number",
+   "sequence": 35,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "doorInsulationCoverCost",
+   "label": "Door Insulation Cover Cost",
+   "control_type": "Number",
+   "sequence": 36,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "doorTopCoverArea",
+   "label": "Door Top Cover Area",
+   "control_type": "Number",
+   "sequence": 37,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "doorTopCoverWeight",
+   "label": "Door Top Cover Weight",
+   "control_type": "Number",
+   "sequence": 38,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "doorTopCoverCost",
+   "label": "Door Top Cover Cost",
+   "control_type": "Number",
+   "sequence": 39,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "insulationArea",
+   "label": "Insulation Area",
+   "control_type": "Number",
+   "sequence": 40,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "insulationCost",
+   "label": "Insulation Cost",
+   "control_type": "Number",
+   "sequence": 41,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "frameGasket",
+   "label": "Frame Gasket (m)",
+   "control_type": "Number",
+   "sequence": 42,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "frameGasketCost",
+   "label": "Frame Gasket Cost",
+   "control_type": "Number",
+   "sequence": 43,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "sealantQty",
+   "label": "Fire Rated Sealant (Tube)",
+   "control_type": "Number",
+   "sequence": 44,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "sealantCost",
+   "label": "Fire Rated Sealant Cost",
+   "control_type": "Number",
+   "sequence": 45,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "handleQty",
+   "label": "Handle Qty",
+   "control_type": "Number",
+   "sequence": 46,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "handleCost",
+   "label": "Handle Cost",
+   "control_type": "Number",
+   "sequence": 47,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "boltSetQty",
+   "label": "Bolt/Wingnut/Washer Qty",
+   "control_type": "Number",
+   "sequence": 48,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "boltSetCost",
+   "label": "Bolt/Wingnut/Washer Cost",
+   "control_type": "Number",
+   "sequence": 49,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "safetyWire",
+   "label": "Safety Wire Qty",
+   "control_type": "Number",
+   "sequence": 50,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "safetyWireCost",
+   "label": "Safety Wire Cost",
+   "control_type": "Number",
+   "sequence": 51,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Door",
+   "field": "accessoriesCost",
+   "label": "Accessories Cost",
+   "control_type": "Number",
+   "sequence": 52,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "doorProcessingMinutes",
+   "label": "Door Processing Minutes",
+   "control_type": "Number",
+   "sequence": 53,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "frameProcessingMinutes",
+   "label": "Frame Processing Minutes",
+   "control_type": "Number",
+   "sequence": 54,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "fittingsProcessingMinutes",
+   "label": "Fittings Processing Minutes",
+   "control_type": "Number",
+   "sequence": 55,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "totalLabourMinutes",
+   "label": "Total Labour Minutes",
+   "control_type": "Number",
+   "sequence": 56,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "sheetMetalCost",
+   "label": "Sheet Metal Cost",
+   "control_type": "Number",
+   "sequence": 57,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalMaterialCost",
+   "label": "Total Material Cost",
+   "control_type": "Number",
+   "sequence": 58,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalAssemblyCost",
+   "label": "Total Assembly Cost",
+   "control_type": "Number",
+   "sequence": 59,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "weldingCost",
+   "label": "Welding Cost",
+   "control_type": "Number",
+   "sequence": 60,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "productFinishCost",
+   "label": "Product Finish Cost",
+   "control_type": "Number",
+   "sequence": 61,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "packingCost",
+   "label": "Packing Cost",
+   "control_type": "Number",
+   "sequence": 62,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "overhead",
+   "label": "Overhead",
+   "control_type": "Number",
+   "sequence": 63,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalCost",
+   "label": "Total Cost",
+   "control_type": "Number",
+   "sequence": 64,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "listPrice",
+   "label": "List Price",
+   "control_type": "Number",
+   "sequence": 65,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "modelItem",
+   "label": "Model Item",
+   "control_type": "Dropdown",
+   "sequence": 66,
+   "feature_types": [
+    "modelItems"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "countryWiseCost",
+   "label": "Country Wise Cost",
+   "control_type": "Dropdown",
+   "sequence": 67,
+   "feature_types": [
+    "cost"
+   ],
+   "settings": {
+    "displayFormat": "1.0-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "product",
+   "label": "Product",
+   "control_type": "Dropdown",
+   "sequence": 68,
+   "feature_types": [
+    "product"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "modelMaterial",
+   "label": "Model & Material",
+   "control_type": "Dropdown",
+   "sequence": 69,
+   "feature_types": [
+    "modelMaterial"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "materialDescription",
+   "label": "Material Description",
+   "control_type": "Textbox",
+   "sequence": 70
+  },
+  {
+   "structure": "Factors",
+   "field": "sizeDescription",
+   "label": "Size Description",
+   "control_type": "Textbox",
+   "sequence": 71
+  },
+  {
+   "structure": "Factors",
+   "field": "productDescription",
+   "label": "Product Description",
+   "control_type": "Textbox",
+   "sequence": 72
+  }
+ ],
+ "lookups": [
+  {
+   "field": "isCartLocked",
+   "path": "cart.locked"
+  }
+ ],
+ "groups": [
+  {
+   "key": "Section Detail",
+   "label": "Section Detail",
+   "features": [
+    "subcategory",
+    "installationType",
+    "rating"
+   ],
+   "properties": "feature.label,featureTypeItem.value",
+   "show_summary": 0,
+   "sequence": 0
+  },
+  {
+   "key": "Cost",
+   "label": "Cost",
+   "features": [
+    "materialCost",
+    "sheetMetalCost",
+    "totalMaterialCost",
+    "totalAssemblyCost",
+    "weldingCost",
+    "productFinishCost",
+    "packingCost",
+    "overhead",
+    "totalCost"
+   ],
+   "properties": "feature.label,featureTypeItem.value",
+   "show_summary": 0,
+   "sequence": 1,
+   "template": "@if(ecomStore.userInfo().roles.indexOf(\"OneCPQ Admin\") != -1){\n    @if(bundleGroup(); as bg){\n                @if(toggleable()){    \n                <div class=\"pt-2\">\n                    <p-panel class=\"pt-2\" [collapsed]=\"collapsed()\" [toggleable]=\"toggleable()\" collapseIcon=\"pi pi-angle-left\"\n                        expandIcon=\"pi pi-angle-down\">\n                        <ng-template #header>\n                            <div class=\"flex align-items-center gap-2\">\n                                <span class=\"font-bold\">\n                                    {{bg.label}}\n                                </span>\n                            </div>\n                        </ng-template>\n                        @if(toggleable()){\n                        <ng-template #icons>\n                            <button\n                                class=\"p-0 p-ripple p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text p-panel-header-icon p-panel-toggler p-link\"\n                                (click)=\"setExpanded()\">\n                                <span [class]=\"'pi pi-angle-double-'+(collapsed() ? 'left':'down')\"></span>\n                            </button>\n                        </ng-template>\n                        }\n                        <ng-container *ngTemplateOutlet=\"table\"></ng-container>\n                    </p-panel>\n                </div>\n            }\n            @else {\n                <ng-container *ngTemplateOutlet=\"table\"></ng-container>\n            }\n            <ng-template #table>\n    @if(bundleGroup(); as bg){\n    @if(cartItemFeatureModels(); as cifs){\n    <p-table size=\"small\" styleClass=\"text-base \" paginatorDropdownAppendTo=\"body\"\n        [paginator]=\"cifs.length >5?true:false\" [rows]=\"10\" [rowsPerPageOptions]=\"[5,10,20,50,75,100]\" #dt\n        responsiveLayout=\"stack\" [value]=\"cifs\">\n\n        <ng-template #header>\n            <tr>\n                @for(property of bg.properties; track property){\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                <th\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    {{_.get(AppConst.bundleGroupColumns,property)?.label}}</th>\n                }\n            </tr>\n        </ng-template>\n        <ng-template #body let-item let-rowIndex=\"rowIndex\">\n            <tr class=\"bundleGroupTable\" (click)=\"navigate(item)\">\n                @for(property of bg.properties; track property){\n\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                @if(md?.editable && editable()) {\n                <td [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\"\n                    [pEditableColumn]=\"property\" [pEditableColumnField]=\"property\">\n                    <span class=\"p-column-title\">{{md.label}}</span>\n                    @if(property === 'unitPrice'){\n\n                    @let ftip = this.bundleGroupInterface()?.getPriceListDetail(item.featureTypeItem.id,'One Time');\n\n\n                    @if(ftip?.isMatrix){\n                    <span>\n\n                        <p-button (click)=\"handleToggleMatrix(item.featureTypeItem,$event)\" title=\"Matrix Detail\"\n                            styleClass=\"btb-rotate-45\" icon=\"pi pi-thumbtack\" [rounded]=\"true\" [text]=\"true\" />\n                        <btb-shared-matrix-price-detail [cartItemFeature]=\"item\"\n                            [headerTitle]=\"(ftip?.matrixType ?? '') +' pricing - '+item.featureTypeItem.value\"\n                            [items]=\"ftip?.entries\" [displayModal]=\"toggleViewModel()[item.featureTypeItem.id]\">\n                        </btb-shared-matrix-price-detail>\n                    </span>\n                    }\n                    }\n                    <p-cellEditor class=\"align-content-end\">\n                        <ng-template pTemplate=\"input\">\n                            @if(md.type === 'currency' || md.type === 'number'|| md.type === 'percentage') {\n                            <input pInputText type=\"number\" [(ngModel)]=\"item[property]\">\n                            }\n                        </ng-template>\n                        <ng-template pTemplate=\"output\">\n                            <span class=\"ref-link cursor-pointer\">\n                                {{getValue(item, property)}}\n                            </span>\n                        </ng-template>\n                    </p-cellEditor>\n                </td>    \n                \n                }\n                @else {\n                <td\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    <span class=\"p-column-title\">{{md?.label}}</span>\n                    {{getValue(item, property)}}\n                </td>\n                }\n                }\n            </tr>\n        </ng-template>\n        <ng-template #footer *ngIf=\"bg.showSummary\">\n            <tr>\n                @for(property of bg.properties; track property){\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                <td\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    @if (md?.showSummary) {\n                    {{_.get(summary(),property)}}\n                    }\n\n                </td>\n                }\n            </tr>\n        </ng-template>\n    </p-table>\n    }\n    }\n</ng-template>\n        }\n}"
+  }
+ ],
+ "constraints": [
+  {
+   "key": "defaults",
+   "label": "Defaults",
+   "parent": null,
+   "sequence": 1,
+   "active": 1,
+   "result": 0,
+   "when": "LOADDEFAULTS()",
+   "actions": [
+    {
+     "type": "Include",
+     "result": 1,
+     "fields": [
+      "material",
+      "rating",
+      "installationType",
+      "packing",
+      "finish"
+     ],
+     "options": [
+      "GI",
+      "FR120",
+      "Standard-With Holes",
+      "None",
+      "Mill Finish"
+     ]
+    },
+    {
+     "type": "Include",
+     "result": 1,
+     "fields": [
+      "frameThickness"
+     ],
+     "options": [
+      "1.5"
+     ]
+    },
+    {
+     "type": "Include",
+     "result": 1,
+     "fields": [
+      "doorThickness"
+     ],
+     "options": [
+      "1.2"
+     ]
+    },
+    {
+     "type": "Include",
+     "result": 1,
+     "fields": [
+      "roundTransition"
+     ],
+     "options": [
+      "Yes"
+     ]
+    },
+    {
+     "type": "Include",
+     "result": 1,
+     "fields": [
+      "safetyWireSelect"
+     ],
+     "options": [
+      "No"
+     ]
+    },
+    {
+     "type": "Include",
+     "result": 1,
+     "fields": [
+      "product"
+     ],
+     "options": [
+      "Fire Rated Access Doors"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "always",
+   "label": "Always: locks, read-only fields, model item",
+   "parent": null,
+   "sequence": 2,
+   "active": 1,
+   "result": 0,
+   "when": "true",
+   "actions": [
+    {
+     "type": "Hide Bundle Property",
+     "result": 1,
+     "fields": [
+      "basePrice",
+      "search",
+      "return"
+     ]
+    },
+    {
+     "type": "Lock Field",
+     "result": 1,
+     "fields": [
+      "model",
+      "material",
+      "frameThickness",
+      "doorThickness",
+      "rating",
+      "frameDepthSelect",
+      "roundTransition",
+      "transitionThickness",
+      "installationType",
+      "finish",
+      "packing",
+      "safetyWireSelect",
+      "modelItem",
+      "countryWiseCost",
+      "product",
+      "modelMaterial"
+     ]
+    },
+    {
+     "type": "Include Value",
+     "result": 1,
+     "fields": [
+      "modelItem"
+     ],
+     "expr": "SELECTEDVALUE(model)"
+    },
+    {
+     "type": "Disable Field",
+     "result": 1,
+     "fields": [
+      "subcategory",
+      "minWidth",
+      "minHeight",
+      "maxSingleSectionWidth",
+      "maxSingleSectionHeight",
+      "materialCost",
+      "materialDensity",
+      "frameDepth",
+      "frameSlitSize"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "result": 1,
+     "fields": [
+      "frameArea",
+      "frameWeight",
+      "frameMetalCost",
+      "transitionArea",
+      "transitionWeight",
+      "transitionCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "result": 1,
+     "fields": [
+      "doorInsulationCoverArea",
+      "doorInsulationCoverWeight",
+      "doorInsulationCoverCost",
+      "doorTopCoverArea",
+      "doorTopCoverWeight",
+      "doorTopCoverCost",
+      "insulationArea",
+      "insulationCost",
+      "frameGasket",
+      "frameGasketCost",
+      "sealantQty",
+      "sealantCost",
+      "handleQty",
+      "handleCost",
+      "boltSetQty",
+      "boltSetCost",
+      "safetyWire",
+      "safetyWireCost",
+      "accessoriesCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "result": 1,
+     "fields": [
+      "doorProcessingMinutes",
+      "frameProcessingMinutes",
+      "fittingsProcessingMinutes",
+      "totalLabourMinutes"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "result": 1,
+     "fields": [
+      "sheetMetalCost",
+      "totalMaterialCost",
+      "totalAssemblyCost",
+      "weldingCost",
+      "productFinishCost",
+      "packingCost",
+      "overhead",
+      "totalCost",
+      "listPrice"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "result": 1,
+     "fields": [
+      "modelDescription",
+      "productDescription",
+      "materialDescription",
+      "sizeDescription",
+      "modelItem",
+      "countryWiseCost",
+      "product",
+      "modelMaterial"
+     ]
+    },
+    {
+     "type": "Disable Bundle Property",
+     "result": 1,
+     "fields": [
+      "title"
+     ]
+    },
+    {
+     "type": "Disable Field Quantity",
+     "result": 1,
+     "fields": [
+      "model",
+      "material",
+      "frameThickness",
+      "doorThickness",
+      "rating",
+      "frameDepthSelect",
+      "roundTransition",
+      "transitionThickness",
+      "installationType",
+      "finish",
+      "packing",
+      "safetyWireSelect",
+      "modelItem",
+      "countryWiseCost",
+      "product",
+      "modelMaterial"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "product",
+   "label": "Product line",
+   "parent": "always",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(product) == 0)",
+   "actions": [
+    {
+     "type": "Include",
+     "result": 1,
+     "fields": [
+      "product"
+     ],
+     "options": [
+      "Fire Rated Access Doors"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "cartLocked",
+   "label": "Cart locked: read-only",
+   "parent": "always",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "REFERENCE(isCartLocked)",
+   "actions": [
+    {
+     "type": "Hide Bundle Property",
+     "result": 1,
+     "fields": [
+      "save"
+     ]
+    },
+    {
+     "type": "Lock",
+     "result": 1
+    }
+   ]
+  },
+  {
+   "key": "noModel",
+   "label": "Error: model missing",
+   "parent": "always",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "COUNT(model) == 0",
+   "actions": [
+    {
+     "type": "Show Error",
+     "result": 1,
+     "expr": "'Please select model'"
+    }
+   ]
+  },
+  {
+   "key": "widthLimit",
+   "label": "Error: door width outside the model's limits (Q12)",
+   "parent": "always",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "COUNT(model) > 0 && (ISNULLORBLANK(doorWidthWi) || NUMBER(doorWidthWi) < CFLOAT(OBJECTATTRIBUTEF(model,'min_width')) || NUMBER(doorWidthWi) > CFLOAT(OBJECTATTRIBUTEF(model,'max_single_section_width')))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "result": 1,
+     "expr": "CONCAT('Door width must be between ', OBJECTATTRIBUTEF(model,'min_width'), ' and ', OBJECTATTRIBUTEF(model,'max_single_section_width'), ' mm')"
+    }
+   ]
+  },
+  {
+   "key": "heightLimit",
+   "label": "Error: door height outside the model's limits (Q12)",
+   "parent": "always",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "COUNT(model) > 0 && (ISNULLORBLANK(doorHeightHi) || NUMBER(doorHeightHi) < CFLOAT(OBJECTATTRIBUTEF(model,'min_height')) || NUMBER(doorHeightHi) > CFLOAT(OBJECTATTRIBUTEF(model,'max_single_section_height')))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "result": 1,
+     "expr": "CONCAT('Door height must be between ', OBJECTATTRIBUTEF(model,'min_height'), ' and ', OBJECTATTRIBUTEF(model,'max_single_section_height'), ' mm')"
+    }
+   ]
+  },
+  {
+   "key": "frameDepthRequired",
+   "label": "Error: frame depth missing (Q8)",
+   "parent": "always",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "COUNT(model) > 0 && NOT(CONTAINS(model,'$[RAPW]')) && COUNT(frameDepthSelect) == 0",
+   "actions": [
+    {
+     "type": "Show Error",
+     "result": 1,
+     "expr": "'Please select frame depth'"
+    }
+   ]
+  },
+  {
+   "key": "rapwMs",
+   "label": "Error: RAPW is not made in MS (Q10)",
+   "parent": "always",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(model,'$[RAPW]') && CONTAINS(material,'$[MS]')",
+   "actions": [
+    {
+     "type": "Show Error",
+     "result": 1,
+     "expr": "'RAPW is not available in MS - choose another material'"
+    }
+   ]
+  },
+  {
+   "key": "transitionRequired",
+   "label": "Error: round transition data missing (Q13)",
+   "parent": "always",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(roundTransition,'$[Yes]') && (COUNT(transitionThickness) == 0 || NUMBER(ductDiameterDi) <= 0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "result": 1,
+     "expr": "'Please select the transition thickness and enter the duct diameter'"
+    }
+   ]
+  },
+  {
+   "key": "rapwFields",
+   "label": "RAPW: no frame depth (Q8)",
+   "parent": "always",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(model,'$[RAPW]')",
+   "actions": [
+    {
+     "type": "Hide Field",
+     "result": 1,
+     "fields": [
+      "frameDepthSelect"
+     ]
+    },
+    {
+     "type": "Show Field",
+     "result": 0,
+     "fields": [
+      "frameDepthSelect"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "transitionFields",
+   "label": "Round transition fields only when Yes (Q13)",
+   "parent": "always",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(roundTransition,'$[Yes]')",
+   "actions": [
+    {
+     "type": "Show Field",
+     "result": 1,
+     "fields": [
+      "transitionThickness",
+      "ductDiameterDi"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "result": 0,
+     "fields": [
+      "transitionThickness",
+      "ductDiameterDi"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "price",
+   "label": "Price from list price",
+   "parent": "always",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(NUMBER(listPrice) >0) || (NUMBER(listPrice) ==0)",
+   "actions": [
+    {
+     "type": "Change Value Price",
+     "result": 1,
+     "fields": [
+      "product"
+     ],
+     "options": [
+      "Fire Rated Access Doors"
+     ],
+     "expr": "NUMBER(listPrice)"
+    }
+   ]
+  },
+  {
+   "key": "modelChanged",
+   "label": "Model: description and sub-category",
+   "parent": null,
+   "sequence": 3,
+   "active": 1,
+   "result": 0,
+   "when": "ISCHANGED(model)",
+   "actions": [
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "modelDescription"
+     ],
+     "expr": "EVALUATE(' var m = input.arg1; if(m == \"RAPI\") return \"SAFE4 Fire Rated Access Door Insulated Bolted\"; if(m == \"RAPB\") return \"SAFE4 Fire Rated Access Door Uninsulated Bolted\"; if(m == \"RAPW\") return \"SAFE4 Fire Rated Access Door Uninsulated Welded\"; return \"\"; ', SELECTEDVALUE(model))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "subcategory"
+     ],
+     "expr": "EVALUATE(' var m = input.arg1; if(m == \"RAPI\") return \"Insulated Fire Rated Access Door\"; if(m == \"RAPB\") return \"Uninsulated Fire Rated Access Door\"; if(m == \"RAPW\") return \"Uninsulated Fire Rated Access Door\"; return \"\"; ', SELECTEDVALUE(model))"
+    }
+   ]
+  },
+  {
+   "key": "modelMaterialKey",
+   "label": "Model & Material key for the frame thickness table",
+   "parent": null,
+   "sequence": 4,
+   "active": 1,
+   "result": 0,
+   "when": "ISCHANGED(model) || ISCHANGED(material)",
+   "actions": [
+    {
+     "type": "Include Value",
+     "result": 1,
+     "fields": [
+      "modelMaterial"
+     ],
+     "expr": "CONCAT(SELECTEDVALUE(model),' ',SELECTEDVALUE(material))"
+    }
+   ]
+  },
+  {
+   "key": "thicknessDefaults",
+   "label": "Model/material change: thickness and finish defaults (Q9, Q10)",
+   "parent": null,
+   "sequence": 4,
+   "active": 1,
+   "result": 0,
+   "when": "(ISCHANGED(model) || ISCHANGED(material)) && NOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include Value",
+     "result": 1,
+     "fields": [
+      "frameThickness"
+     ],
+     "expr": "IIF(CONTAINS(model,'$[RAPW]'),'5.0','1.5')"
+    },
+    {
+     "type": "Include Value",
+     "result": 1,
+     "fields": [
+      "doorThickness"
+     ],
+     "expr": "IIF(CONTAINS(material,'$[MS]'),'1.5','1.2')"
+    },
+    {
+     "type": "Include",
+     "result": 1,
+     "fields": [
+      "finish"
+     ],
+     "options": [
+      "Mill Finish"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "transitionReset",
+   "label": "Round transition No: clear DI and thickness (Q13)",
+   "parent": null,
+   "sequence": 5,
+   "active": 1,
+   "result": 0,
+   "when": "ISCHANGED(roundTransition) && CONTAINS(roundTransition,'$[No]') && NOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "ductDiameterDi"
+     ],
+     "expr": "0"
+    },
+    {
+     "type": "Reset Field",
+     "result": 1,
+     "fields": [
+      "transitionThickness"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "calculation",
+   "label": "Calculation (workbook compute order)",
+   "parent": null,
+   "sequence": 6,
+   "active": 1,
+   "result": 0,
+   "when": "(NUMBER(doorHeightHi) > 0) && (NUMBER(doorWidthWi) > 0) && (COUNT(model) > 0) && (COUNT(material) > 0)",
+   "actions": [
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "minWidth"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEF(model,'min_width'))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "minHeight"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEF(model,'min_height'))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "maxSingleSectionWidth"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEF(model,'max_single_section_width'))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "maxSingleSectionHeight"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEF(model,'max_single_section_height'))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "materialCost"
+     ],
+     "expr": "IIF(CONTAINS(material,'$[GI]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI]','cost')),IIF(CONTAINS(material,'$[MS]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[MS]','cost')),IIF(CONTAINS(material,'$[SS304L]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS304L]','cost')),IIF(CONTAINS(material,'$[SS316L]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS316L]','cost')),0))))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "materialDensity"
+     ],
+     "expr": "IIF(CONTAINS(material,'$[SS304L]','$[SS316L]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Density Factor]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI Density Factor]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "frameDepth"
+     ],
+     "expr": "IIF(CONTAINS(model,'$[RAPW]'),0,IIF(CONTAINS(frameDepthSelect,'$[25mm]'),25,IIF(CONTAINS(frameDepthSelect,'$[50mm]'),50,IIF(CONTAINS(frameDepthSelect,'$[75mm]'),75,0))))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "frameSlitSize"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEF(model,'frameoil_width')) + IIF(CONTAINS(model,'$[RAPW]'),0,NUMBER(frameDepth)+5)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "frameArea"
+     ],
+     "expr": "IIF(CONTAINS(model,'$[RAPW]'),(NUMBER(doorWidthWi)+NUMBER(doorHeightHi)+50)*2*NUMBER(frameSlitSize),(NUMBER(doorWidthWi)+NUMBER(doorHeightHi)+40)*2*NUMBER(frameSlitSize))/1000000"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "frameWeight"
+     ],
+     "expr": "NUMBER(frameArea)*CFLOAT(SELECTEDVALUE(frameThickness))*NUMBER(materialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "frameMetalCost"
+     ],
+     "expr": "NUMBER(frameWeight)*NUMBER(materialCost)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Frame Wastage]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "transitionArea"
+     ],
+     "expr": "IIF(CONTAINS(roundTransition,'$[Yes]'),((NUMBER(ductDiameterDi)+NUMBER(ductDiameterDi))*2*(NUMBER(ductDiameterDi)+250))/1000000,0)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "transitionWeight"
+     ],
+     "expr": "IIF(COUNT(transitionThickness)>0,CFLOAT(SELECTEDVALUE(transitionThickness))*NUMBER(transitionArea)*NUMBER(materialDensity),0)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "transitionCost"
+     ],
+     "expr": "NUMBER(transitionWeight)*NUMBER(materialCost)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Frame Wastage]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "doorInsulationCoverArea"
+     ],
+     "expr": "IIF(CONTAINS(model,'$[RAPI]'),(NUMBER(doorWidthWi)+(NUMBER(frameDepth)*2))*(NUMBER(doorHeightHi)+(NUMBER(frameDepth)*2))/1000000,0)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "doorInsulationCoverWeight"
+     ],
+     "expr": "NUMBER(doorInsulationCoverArea)*CFLOAT(SELECTEDVALUE(doorThickness))*NUMBER(materialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "doorInsulationCoverCost"
+     ],
+     "expr": "NUMBER(doorInsulationCoverWeight)*NUMBER(materialCost)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Door Wastage]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "doorTopCoverArea"
+     ],
+     "expr": "IIF(CONTAINS(model,'$[RAPW]'),(NUMBER(doorWidthWi)+128)*(NUMBER(doorHeightHi)+128),(NUMBER(doorWidthWi)+108)*(NUMBER(doorHeightHi)+108))/1000000"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "doorTopCoverWeight"
+     ],
+     "expr": "NUMBER(doorTopCoverArea)*CFLOAT(SELECTEDVALUE(doorThickness))*NUMBER(materialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "doorTopCoverCost"
+     ],
+     "expr": "NUMBER(doorTopCoverWeight)*NUMBER(materialCost)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Door Wastage]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "sheetMetalCost"
+     ],
+     "expr": "NUMBER(frameMetalCost)+NUMBER(doorInsulationCoverCost)+NUMBER(doorTopCoverCost)+NUMBER(transitionCost)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "insulationArea"
+     ],
+     "expr": "IIF(CONTAINS(model,'$[RAPI]'),(NUMBER(doorWidthWi)*NUMBER(doorHeightHi))/1000000,0)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "insulationCost"
+     ],
+     "expr": "IIF(CONTAINS(model,'$[RAPI]'),NUMBER(insulationArea)*IIF((NUMBER(frameDepth)==25),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 25mm x 1.2m x 10m (12 sqm/ROLL)]','cost')),IIF((NUMBER(frameDepth)==50),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 50mm x 1.2m x 10m (12 sqm/ROLL)]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 25mm x 1.2m x 10m (12 sqm/ROLL)]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Knauf Earthwool Thermal Insulation - ALUGLASS Facing - Ecose - 48Kg/m3 x 50mm x 1.2m x 10m (12 sqm/ROLL)]','cost'))))*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Accessories Wastage]','cost'))),0)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "frameGasket"
+     ],
+     "expr": "EVALUATE(' return Math.ceil(input.arg1);', IIF(CONTAINS(model,'$[RAPW]'),(NUMBER(doorWidthWi)+NUMBER(doorHeightHi)+50)*2,(NUMBER(doorWidthWi)+NUMBER(doorHeightHi)+40)*2)/1000)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "frameGasketCost"
+     ],
+     "expr": "NUMBER(frameGasket)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Gasket Ceramic 3X25mmX30m]','cost'))*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Accessories Wastage]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "sealantQty"
+     ],
+     "expr": "NUMBER(frameGasket)/12"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "sealantCost"
+     ],
+     "expr": "NUMBER(sealantQty)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fire Rated Sealant]','cost'))*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Accessories Wastage]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "handleQty"
+     ],
+     "expr": "IIF(((NUMBER(doorWidthWi) >= 601) || (NUMBER(doorHeightHi) >= 601)),2,1)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "handleCost"
+     ],
+     "expr": "NUMBER(handleQty)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Handle Cost (per PC)]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "boltSetQty"
+     ],
+     "expr": "EVALUATE(' return 2*Math.ceil(Math.max(1,(input.arg1+40)/150)+Math.max(1,(input.arg2+40)/150));', NUMBER(doorWidthWi), NUMBER(doorHeightHi))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "boltSetCost"
+     ],
+     "expr": "NUMBER(boltSetQty)*IIF(CONTAINS(material,'$[SS304L]','$[SS316L]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Bolt Hex SS304 6mmx25mm]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Wing Nut SS 6mm]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Washer Straight SS 6mm]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Bolt GI 6mmx25mm]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Wing Head Nut GI 6mm]','cost'))+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Washer Straight GI 6mm]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "safetyWire"
+     ],
+     "expr": "IIF(CONTAINS(safetyWireSelect,'$[Yes]'),1,0)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "safetyWireCost"
+     ],
+     "expr": "NUMBER(safetyWire)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Safety Wire]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "accessoriesCost"
+     ],
+     "expr": "NUMBER(frameGasketCost)+NUMBER(sealantCost)+NUMBER(handleCost)+NUMBER(boltSetCost)+NUMBER(safetyWireCost)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "totalMaterialCost"
+     ],
+     "expr": "NUMBER(sheetMetalCost)+NUMBER(insulationCost)+NUMBER(accessoriesCost)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "doorProcessingMinutes"
+     ],
+     "expr": "EVALUATE(' return Math.max(input.arg1,input.arg2);', CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Min Door Fabrication Minutes]','cost')), NUMBER(doorTopCoverArea)*IIF(CONTAINS(material,'$[GI]','$[MS]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI & MS Door Fabrication Minutes (per sqm)]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Door Fabrication Minutes (per sqm)]','cost'))))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "frameProcessingMinutes"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fixed Frame Fabrication Minutes]','cost'))+NUMBER(frameArea)*IIF(CONTAINS(material,'$[GI]','$[MS]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI & MS Frame Fabrication Minutes (per sqm)]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Frame Fabrication Minutes (per sqm)]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "fittingsProcessingMinutes"
+     ],
+     "expr": "IIF(CONTAINS(roundTransition,'$[Yes]'),EVALUATE(' return Math.max(input.arg1,input.arg2);', 10, NUMBER(transitionArea)*IIF(CONTAINS(material,'$[GI]','$[MS]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI & MS Fitting Fabrication Minutes (per sqm)]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Fitting Fabrication Minutes (per sqm)]','cost')))),0)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "totalLabourMinutes"
+     ],
+     "expr": "NUMBER(doorProcessingMinutes)+NUMBER(frameProcessingMinutes)+NUMBER(fittingsProcessingMinutes)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "totalAssemblyCost"
+     ],
+     "expr": "NUMBER(totalLabourMinutes)/60*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Cost per Hour]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "weldingCost"
+     ],
+     "expr": "IIF(CONTAINS(model,'$[RAPI]'),((8*40)+(NUMBER(frameDepth)+5)*8+(NUMBER(doorWidthWi)+NUMBER(doorHeightHi))*2),IIF(CONTAINS(model,'$[RAPB]'),((8*40)+(NUMBER(frameDepth)+5)*4),(50*4)))/1000*IIF(CONTAINS(material,'$[SS304L]','$[SS316L]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD SS Welding Cost]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI & MS Welding Cost]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "productFinishCost"
+     ],
+     "expr": "(NUMBER(frameArea)*2+NUMBER(doorInsulationCoverArea)+NUMBER(doorTopCoverArea)*2)*IIF(CONTAINS(finish,'$[Red Oxide Paint]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Red Oxide Paint Cost per SQM]','cost')),IIF(CONTAINS(finish,'$[Galvanic Paint]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Galvanic Paint Cost per SQM]','cost')),0))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "packingCost"
+     ],
+     "expr": "IIF(CONTAINS(packing,'$[None]'),0,NUMBER(doorWidthWi)*NUMBER(doorHeightHi)/1000000*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Standard Stretch Film Wrapping Cost]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "overhead"
+     ],
+     "expr": "(NUMBER(totalMaterialCost)+NUMBER(totalAssemblyCost)+NUMBER(weldingCost)+NUMBER(productFinishCost)+NUMBER(packingCost))*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Overhead Percentage]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "totalCost"
+     ],
+     "expr": "NUMBER(totalMaterialCost)+NUMBER(totalAssemblyCost)+NUMBER(productFinishCost)+NUMBER(overhead)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "listPrice"
+     ],
+     "expr": "EVALUATE(' return Math.ceil(input.arg1);', NUMBER(totalCost)/(1-CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[FRAD Profit]','cost'))))"
+    },
+    {
+     "type": "Change Value Price",
+     "result": 1,
+     "fields": [
+      "product"
+     ],
+     "options": [
+      "Fire Rated Access Doors"
+     ],
+     "expr": "NUMBER(listPrice)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "productDescription"
+     ],
+     "expr": "CONCAT('W:',NUMBER(doorWidthWi),' H:',NUMBER(doorHeightHi),' - ',SELECTEDVALUE(material),' ',SELECTEDVALUE(model),' ',TEXT(modelDescription),' - ',SELECTEDVALUE(rating))"
+    },
+    {
+     "type": "Change Bundle Title",
+     "result": 1,
+     "expr": "TEXT(productDescription)"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "materialDescription"
+     ],
+     "expr": "IIF(CONTAINS(material,'$[GI]'),'Galvanized Steel',IIF(CONTAINS(material,'$[MS]'),'Mild Steel',SELECTEDVALUE(material)))"
+    },
+    {
+     "type": "Change Value",
+     "result": 1,
+     "fields": [
+      "sizeDescription"
+     ],
+     "expr": "CONCAT(NUMBER(doorWidthWi),' X ',NUMBER(doorHeightHi),IIF((CONTAINS(roundTransition,'$[Yes]')) && (NUMBER(ductDiameterDi) > 0),CONCAT(' Dia ',NUMBER(ductDiameterDi)),''))"
+    }
+   ]
+  },
+  {
+   "key": "adminOnly",
+   "label": "Hide calculation sections for non-admins (Q15)",
+   "parent": null,
+   "sequence": 7,
+   "active": 1,
+   "result": 0,
+   "when": "EVALUATE(' var roles = input.arg1.split(\",\"); if(roles.indexOf(\"OneCPQ Admin\") != -1) return false; return true; ',USERINFO('roles'))",
+   "actions": [
+    {
+     "type": "Hide Structure",
+     "result": 1,
+     "fields": [
+      "@structure:Lookups",
+      "@structure:Frame",
+      "@structure:Door",
+      "@structure:Processing Minutes",
+      "@structure:Cost",
+      "@structure:Factors"
+     ]
+    },
+    {
+     "type": "Show List View",
+     "result": 1
+    },
+    {
+     "type": "Hide Group",
+     "result": 1,
+     "fields": [
+      "@group:Cost"
+     ]
+    }
+   ]
+  }
+ ],
+ "mappings": [
+  {
+   "key": "modelMaterial",
+   "left": "model",
+   "right": "material",
+   "active": 1,
+   "entries": [
+    [
+     "RAPI",
+     "GI"
+    ],
+    [
+     "RAPI",
+     "MS"
+    ],
+    [
+     "RAPI",
+     "SS304L"
+    ],
+    [
+     "RAPI",
+     "SS316L"
+    ],
+    [
+     "RAPB",
+     "GI"
+    ],
+    [
+     "RAPB",
+     "MS"
+    ],
+    [
+     "RAPB",
+     "SS304L"
+    ],
+    [
+     "RAPB",
+     "SS316L"
+    ],
+    [
+     "RAPW",
+     "GI"
+    ],
+    [
+     "RAPW",
+     "SS304L"
+    ],
+    [
+     "RAPW",
+     "SS316L"
+    ]
+   ]
+  },
+  {
+   "key": "modelFrameDepth",
+   "left": "model",
+   "right": "frameDepthSelect",
+   "active": 1,
+   "entries": [
+    [
+     "RAPI",
+     "25mm"
+    ],
+    [
+     "RAPI",
+     "50mm"
+    ],
+    [
+     "RAPI",
+     "75mm"
+    ],
+    [
+     "RAPB",
+     "25mm"
+    ],
+    [
+     "RAPB",
+     "50mm"
+    ],
+    [
+     "RAPB",
+     "75mm"
+    ]
+   ]
+  },
+  {
+   "key": "materialFinish",
+   "left": "material",
+   "right": "finish",
+   "active": 1,
+   "entries": [
+    [
+     "MS",
+     "Mill Finish"
+    ],
+    [
+     "MS",
+     "Red Oxide Paint"
+    ],
+    [
+     "MS",
+     "Galvanic Paint"
+    ],
+    [
+     "GI",
+     "Mill Finish"
+    ],
+    [
+     "SS304L",
+     "Mill Finish"
+    ],
+    [
+     "SS316L",
+     "Mill Finish"
+    ]
+   ]
+  },
+  {
+   "key": "materialDoorThickness",
+   "left": "material",
+   "right": "doorThickness",
+   "active": 1,
+   "entries": [
+    [
+     "MS",
+     "1.5"
+    ],
+    [
+     "GI",
+     "1.2"
+    ],
+    [
+     "GI",
+     "1.5"
+    ],
+    [
+     "GI",
+     "2.0"
+    ],
+    [
+     "GI",
+     "3.0"
+    ],
+    [
+     "SS304L",
+     "1.2"
+    ],
+    [
+     "SS304L",
+     "1.5"
+    ],
+    [
+     "SS304L",
+     "2.0"
+    ],
+    [
+     "SS304L",
+     "3.0"
+    ],
+    [
+     "SS316L",
+     "1.2"
+    ],
+    [
+     "SS316L",
+     "1.5"
+    ],
+    [
+     "SS316L",
+     "2.0"
+    ],
+    [
+     "SS316L",
+     "3.0"
+    ]
+   ]
+  },
+  {
+   "key": "comboFrameThickness",
+   "left": "modelMaterial",
+   "right": "frameThickness",
+   "active": 1,
+   "entries": [
+    [
+     "RAPW GI",
+     "5.0"
+    ],
+    [
+     "RAPW SS304L",
+     "5.0"
+    ],
+    [
+     "RAPW SS316L",
+     "5.0"
+    ],
+    [
+     "RAPI MS",
+     "1.5"
+    ],
+    [
+     "RAPB MS",
+     "1.5"
+    ],
+    [
+     "RAPI GI",
+     "1.2"
+    ],
+    [
+     "RAPI GI",
+     "1.5"
+    ],
+    [
+     "RAPI GI",
+     "2.0"
+    ],
+    [
+     "RAPI GI",
+     "3.0"
+    ],
+    [
+     "RAPI GI",
+     "5.0"
+    ],
+    [
+     "RAPI SS304L",
+     "1.2"
+    ],
+    [
+     "RAPI SS304L",
+     "1.5"
+    ],
+    [
+     "RAPI SS304L",
+     "2.0"
+    ],
+    [
+     "RAPI SS304L",
+     "3.0"
+    ],
+    [
+     "RAPI SS304L",
+     "5.0"
+    ],
+    [
+     "RAPI SS316L",
+     "1.2"
+    ],
+    [
+     "RAPI SS316L",
+     "1.5"
+    ],
+    [
+     "RAPI SS316L",
+     "2.0"
+    ],
+    [
+     "RAPI SS316L",
+     "3.0"
+    ],
+    [
+     "RAPI SS316L",
+     "5.0"
+    ],
+    [
+     "RAPB GI",
+     "1.2"
+    ],
+    [
+     "RAPB GI",
+     "1.5"
+    ],
+    [
+     "RAPB GI",
+     "2.0"
+    ],
+    [
+     "RAPB GI",
+     "3.0"
+    ],
+    [
+     "RAPB GI",
+     "5.0"
+    ],
+    [
+     "RAPB SS304L",
+     "1.2"
+    ],
+    [
+     "RAPB SS304L",
+     "1.5"
+    ],
+    [
+     "RAPB SS304L",
+     "2.0"
+    ],
+    [
+     "RAPB SS304L",
+     "3.0"
+    ],
+    [
+     "RAPB SS304L",
+     "5.0"
+    ],
+    [
+     "RAPB SS316L",
+     "1.2"
+    ],
+    [
+     "RAPB SS316L",
+     "1.5"
+    ],
+    [
+     "RAPB SS316L",
+     "2.0"
+    ],
+    [
+     "RAPB SS316L",
+     "3.0"
+    ],
+    [
+     "RAPB SS316L",
+     "5.0"
+    ]
+   ]
+  }
+ ]
+}

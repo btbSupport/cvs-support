@@ -246,7 +246,15 @@ def populate_header_display( headers: List[Dict]) -> List['Display']:
     return output
 
 def populate_detail( features, keys) -> Dict:
-    return {k: features[k]["value"] for k in keys.split(",") if k in features}
+    """`key` copies that feature; `key:field` fills the template's `key` column from another feature (FRAD prints
+    its 'W X H Dia' size as the row title: cartTitle:sizeDescription)."""
+    out = {}
+    for k in keys.split(","):
+        name, _, source = k.partition(":")
+        source = source or name
+        if source in features:
+            out[name] = features[source]["value"]
+    return out
 
 def populate_summary( features, keys, summ: Dict) -> Dict:
     for k in keys.split(","):

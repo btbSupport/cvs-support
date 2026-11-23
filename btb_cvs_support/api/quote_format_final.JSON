@@ -178,5 +178,18 @@
       },
       "detail": "tagRef,cartTitle,qty,rate,amount,unitPrice,beforeDiscount,notes",
       "summary": "rate,cartAmount,cartQty,beforeDiscount"
+    },
+    "FRAD": {
+      "headerKey": "subcategory,modelDescription,materialDescription,frameThickness,rating,doorThickness,finish,safetyWireSelect",
+      "header": {
+        "Material": "materialDescription",
+        "Frame Thickness": "frameThickness",
+        "Rating": "rating",
+        "Door Thickness": "doorThickness",
+        "Finish": "finish",
+        "Safety Wire": "safetyWireSelect"
+      },
+      "detail": "tagRef,cartTitle:sizeDescription,qty,rate,amount,unitPrice,beforeDiscount,notes",
+      "summary": "rate,cartAmount,cartQty,beforeDiscount"
     }
-  }
+}
