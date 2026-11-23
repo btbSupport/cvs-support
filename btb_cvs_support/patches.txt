@@ -16,3 +16,4 @@ btb_cvs_support.patches.fto_cost_item_code_as_text
 btb_cvs_support.patches.fto_cost_type_country_specific
 btb_cvs_support.patches.fto_cost_fill_blank_item_code
 btb_cvs_support.patches.fto_cost_cleanup
+btb_cvs_support.patches.fix_onecpq_bundle_rule_drift

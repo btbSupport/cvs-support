@@ -7,11 +7,19 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "blade_size",
   "af_slit_size",
   "column_break_dcmc",
   "btb3_v_slit_size"
  ],
  "fields": [
+  {
+   "description": "Blade size this slit row belongs to (e.g. 4 Inch). Used as the option text of blade-slit feature types.",
+   "fieldname": "blade_size",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Blade Size"
+  },
   {
    "fieldname": "af_slit_size",
    "fieldtype": "Float",
@@ -29,7 +37,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2025-08-08 11:06:59.162387",
+ "modified": "2026-11-21 12:00:00.000000",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOBtbBladeSlits",
