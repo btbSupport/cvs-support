@@ -6,14 +6,6 @@ from frappe.model.document import Document
 class FTOCountryWiseCost(Document):
 	def validate(self):
 		self.validate_boq_identifier()
-		self.set_bundle_description()
-
-	def set_bundle_description(self):
-		"""Read-only text of the bundles using this row (replaces the old product_family fetch)."""
-		if(not self.meta.has_field("custom_product_family_description")): return
-		names = [row.bundle for row in (self.get("bundles") or []) if row.bundle]
-		labels = [frappe.db.get_value("BtbBundle", n, "label") or n for n in names]
-		self.custom_product_family_description = ", ".join(labels)
 
 	def validate_boq_identifier(self):
 		"""Uniqueness is enforced here rather than by a database index.

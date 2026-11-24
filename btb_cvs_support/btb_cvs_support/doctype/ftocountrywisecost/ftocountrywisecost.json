@@ -10,7 +10,7 @@
   "item_code",
   "product_name",
   "boq_identifier",
-  "bundles",
+  "product_family",
   "section_break_hfzw",
   "column_break_fktp",
   "unit",
@@ -33,6 +33,12 @@
    "fieldname": "cost",
    "fieldtype": "Float",
    "label": "Cost"
+  },
+  {
+   "fieldname": "product_family",
+   "fieldtype": "Link",
+   "label": "Product Family",
+   "options": "BtbBundle"
   },
   {
    "fieldname": "item_code",
@@ -89,19 +95,11 @@
    "fieldtype": "Link",
    "label": "Country",
    "options": "Country"
-  },
-  {
-   "description": "Bundles whose cost lists use this row. Shared rows list several.",
-   "fieldname": "bundles",
-   "fieldtype": "Table MultiSelect",
-   "in_standard_filter": 1,
-   "label": "Bundles",
-   "options": "FTOCostBundle"
   }
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2026-11-23 10:00:00.000000",
+ "modified": "2026-10-30 22:00:00.000000",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCountryWiseCost",

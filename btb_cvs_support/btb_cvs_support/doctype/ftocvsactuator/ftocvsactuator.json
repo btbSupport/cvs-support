@@ -10,7 +10,8 @@
   "unique_id",
   "model",
   "column_break_ayxy",
-  "item_code"
+  "item_code",
+  "ulrd_valuation_rate"
  ],
  "fields": [
   {
@@ -24,6 +25,14 @@
    "label": "Model"
   },
   {
+   "fieldname": "ulrd_valuation_rate",
+   "fieldtype": "Float",
+   "label": "ULRD Valuation Rate",
+   "depends_on": "eval:frappe.user_roles.includes( \"OneCPQ Admin\")",
+   "print_hide": 1,
+   "report_hide": 1
+  },
+  {
    "fieldname": "item_code",
    "fieldtype": "Data",
    "label": "Item Code"
@@ -35,7 +44,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2026-11-23 10:00:00.000000",
+ "modified": "2026-10-30 22:00:00.000000",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCVSActuator",
