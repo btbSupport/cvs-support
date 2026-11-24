@@ -1,7 +1,7 @@
 """FTOCountryWiseCost cleanup (customer Final Activities reply + 4-site analysis, 2026-11-23).
 
 Reads the plan of the current site from patches/fto_cost_cleanup_plans/<site>.json (cvsuae, cvsqatar, cvsksa,
-badregypt; the site key is the first part of the site name). Unknown site = nothing happens.
+badregypt; site_config "cvs_country" or the start of the site name picks it). A site with no plan stops the migrate.
 
 Rules agreed for this cleanup:
 - Rows only. The cost field is never written: each site maintains its own costs. A surviving row keeps its own cost.
@@ -96,12 +96,24 @@ def prepare_schema():
 		log("custom_product_family_description: Data -> Small Text, read-only, no fetch")
 
 
+PLAN_OF_COUNTRY = {"UAE": "cvsuae", "Qatar": "cvsqatar", "KSA": "cvsksa", "Egypt": "badregypt"}
+
+
 def load_plan():
-	key = (frappe.local.site or "").split(".")[0]
-	path = frappe.get_app_path("btb_cvs_support", "patches", "fto_cost_cleanup_plans", f"{key}.json")
-	if not os.path.exists(path):
-		log(f"no plan for site {frappe.local.site!r} (key {key!r}) - nothing done")
-		return None
+	"""The plan of this site: site_config "cvs_country" if set, else the site name (cvsqatarprod -> cvsqatar).
+
+	A site that matches no plan stops the migrate. Marking the patch done without running it would leave the
+	site uncleaned for good."""
+	site = frappe.local.site or ""
+	country = frappe.conf.get("cvs_country")
+	if country:
+		key = PLAN_OF_COUNTRY.get(country)
+	else:
+		key = next((k for k in PLAN_OF_COUNTRY.values() if site.startswith(k)), None)
+	path = key and frappe.get_app_path("btb_cvs_support", "patches", "fto_cost_cleanup_plans", f"{key}.json")
+	if not path or not os.path.exists(path):
+		frappe.throw(f"fto_cost_cleanup: no cleanup plan for site {site!r} (cvs_country {country!r}). Set "
+			"\"cvs_country\" (UAE, Qatar, KSA or Egypt) in its site_config.json and migrate again.")
 	with open(path) as f:
 		plan = json.load(f)
 	log(f"plan {key}.json: {len(plan['updates'])} updates, {len(plan['merges'])} merges")
