@@ -451,9 +451,10 @@ def populate_quotation_item(doc, cartItem, qt):
         if(cartItem.model_item_code):doc.item_code = cartItem.model_item_code
         if(cartItem.model_stock_uom):doc.uom = cartItem.model_stock_uom
         if('tagRef' in cartItem) : doc.tag_ref = cartItem.tagRef
-        if('item' in cartItem):
-            if(cartItem.item == 'ULRD' or cartItem.item == 'SIL' or cartItem.item == 'VCDA'): 
-                if('notesInput' in cartItem) : doc.notes = cartItem.notesInput
+        # ULRD, SIL and VCDA keep their line note in notesInput, the other products in
+        # notes. cartItem.item is the Item name (SKU34...), so compare the item code.
+        if cartItem.get('ciItemCode') in ('ULRD', 'SIL', 'VCDA'):
+            if('notesInput' in cartItem) : doc.notes = cartItem.notesInput
         elif('notes' in cartItem) : doc.notes = cartItem.notes
     return doc
 
