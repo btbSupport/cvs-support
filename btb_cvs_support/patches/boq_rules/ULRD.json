@@ -1,0 +1,454 @@
+{
+ "_about": "BOQ Rules of UL True Round Dampers (ULRD, BUN4), made by api/_boq_convert.py from boq_format.JSON (103 lines -> 34 rules) on 2026-11-25 and checked on the carts of all four sites (same quantities and order). Seeded once by patches/seed_boq_rules_ulrd.py.",
+ "family": "ULRD",
+ "bundle": "BUN4",
+ "rules": [
+  {
+   "sequence": 10,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "frameThicknessLookup",
+     "value_format": "Trim trailing zero",
+     "value_order": "1.0,1.2,1.5"
+    }
+   ],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"frameWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "source_type": "Templated",
+   "identifier_template": "{frameMaterialType} Frame {frameThicknessLookup}",
+   "notes": "9 JSON lines | replaces: GI Frame 1.0, GI Frame 1.2, GI Frame 1.5, SS304L Frame 1.0, SS304L Frame 1.2, SS304L Frame 1.5, SS316L Frame 1.0, SS316L Frame 1.2, SS316L Frame 1.5"
+  },
+  {
+   "sequence": 20,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "bladeThicknessLookup",
+     "value_format": "Trim trailing zero",
+     "value_order": "0.7,0.8,1.0"
+    }
+   ],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bladeWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "source_type": "Templated",
+   "identifier_template": "{frameMaterialType} Blade {bladeThicknessLookup}",
+   "notes": "9 JSON lines | replaces: GI Blade 0.7, GI Blade 0.8, GI Blade 1.0, SS304L Blade 0.7, SS304L Blade 0.8, SS304L Blade 1.0, SS316L Blade 0.7, SS316L Blade 0.8, SS316L Blade 1.0"
+  },
+  {
+   "sequence": 30,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "frameThicknessLookup",
+     "value_format": "Trim trailing zero",
+     "value_order": "1.0,1.2,1.5"
+    }
+   ],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"transitionWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "source_type": "Templated",
+   "identifier_template": "{frameMaterialType} Transition {frameThicknessLookup}",
+   "notes": "9 JSON lines | replaces: GI Transition 1.0, GI Transition 1.2, GI Transition 1.5, SS304L Transition 1.0, SS304L Transition 1.2, SS304L Transition 1.5, SS316L Transition 1.0, SS316L Transition 1.2, SS316L Transition 1.5"
+  },
+  {
+   "sequence": 40,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "frameThicknessLookup",
+     "value_format": "Trim trailing zero",
+     "value_order": "1.0,1.2"
+    }
+   ],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"retainingPlateWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "source_type": "Templated",
+   "identifier_template": "{frameMaterialType} Retaining Plate {frameThicknessLookup}",
+   "notes": "6 JSON lines | replaces: GI Retaining Plate 1.0, GI Retaining Plate 1.2, SS304L Retaining Plate 1.0, SS304L Retaining Plate 1.2, SS316L Retaining Plate 1.0, SS316L Retaining Plate 1.2"
+  },
+  {
+   "sequence": 50,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    }
+   ],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"motorHoldingPlateWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "source_type": "Templated",
+   "identifier_template": "{frameMaterialType} Motor Holding Plate 1.2",
+   "notes": "3 JSON lines | replaces: GI Motor Holding Plate 1.2, SS304L Motor Holding Plate 1.2, SS316L Motor Holding Plate 1.2"
+  },
+  {
+   "sequence": 60,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "frameThicknessLookup",
+     "value_format": "Trim trailing zero",
+     "value_order": "1.0,1.2,1.5"
+    }
+   ],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"axleRetainerWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "source_type": "Templated",
+   "identifier_template": "{frameMaterialType} Axle Retainer {frameThicknessLookup}",
+   "notes": "9 JSON lines | replaces: GI Axle Retainer 1.0, GI Axle Retainer 1.2, GI Axle Retainer 1.5, SS304L Axle Retainer 1.0, SS304L Axle Retainer 1.2, SS304L Axle Retainer 1.5, SS316L Axle Retainer 1.0, SS316L Axle Retainer 1.2, SS316L Axle Retainer 1.5"
+  },
+  {
+   "sequence": 70,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bladeSwitchQuantity\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Blade Switch Cost",
+   "notes": "cost row FTOCountryWiseCost94 | replaces: Blade Switch"
+  },
+  {
+   "sequence": 80,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bronzeOiliteBladeBush\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Bronze Oilite 10mm Round Bar Bush",
+   "notes": "cost row FTOCountryWiseCost498 | replaces: 2610914"
+  },
+  {
+   "sequence": 90,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bladeSquareBar\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Blade 3/8 Inch 10mm Square Bar",
+   "notes": "cost row FTOCountryWiseCost76 | replaces: Square Bar"
+  },
+  {
+   "sequence": 100,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bladeSealInputValue\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "UL FNST Blade Seal - High Temperature",
+   "notes": "cost row FTOCountryWiseCost77 | replaces: 2290018"
+  },
+  {
+   "sequence": 110,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"closureSpringKit\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Fuse Link Retainer Pin",
+   "notes": "cost row FTOCountryWiseCost78 | replaces: 2290006"
+  },
+  {
+   "sequence": 120,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"closureSpringKit\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Fuse Link Hexa Stud Pin Steel 11X30.6mm 9145",
+   "notes": "cost row FTOCountryWiseCost55 | replaces: 2290008"
+  },
+  {
+   "sequence": 130,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"closureSpringKit\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Spring Retainer Bushing Steel 31.75mmX6.35mmDia",
+   "notes": "cost row FTOCountryWiseCost56 | replaces: 2290010"
+  },
+  {
+   "sequence": 140,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"closureSpringKit\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Damper Closer Spring SS304 55.5mmX3.2mmDia",
+   "notes": "cost row FTOCountryWiseCost81 | replaces: 2290217"
+  },
+  {
+   "sequence": 150,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"closureSpringKit\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "3/16 Inch x 2 Inch Lg. Solid Roll Pin",
+   "notes": "cost row FTOCountryWiseCost57 | replaces: 229112"
+  },
+  {
+   "sequence": 160,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"aggregate\": [{\"fields\": [\"noOfActuators\", \"closureSpringKit\"], \"logic\": \"SUM\"}], \"fields\": [\"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Zeb Drive Pin Steel 15.87X21.46mm 9146",
+   "notes": "cost row FTOCountryWiseCost83 | replaces: 2290005"
+  },
+  {
+   "sequence": 170,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"aggregate\": [{\"fields\": [\"noOfActuators\", \"closureSpringKit\", \"closureSpringKit\"], \"logic\": \"SUM\"}], \"fields\": [\"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Jack Shaft Drive GI G90 110X25mm 9008",
+   "notes": "cost row FTOCountryWiseCost84 | replaces: 2290109"
+  },
+  {
+   "sequence": 180,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"aggregate\": [{\"fields\": [\"noOfActuators\", \"closureSpringKit\"], \"logic\": \"SUM\"}], \"fields\": [\"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "5/16 - 18 x 1 1/2 Carriage Bolt",
+   "notes": "cost row FTOCountryWiseCost85 | replaces: 2290190"
+  },
+  {
+   "sequence": 190,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"aggregate\": [{\"fields\": [\"noOfActuators\", \"closureSpringKit\"], \"logic\": \"SUM\"}], \"fields\": [\"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "5/16 -18 Flange Whiz Nut",
+   "notes": "cost row FTOCountryWiseCost86 | replaces: 2290191"
+  },
+  {
+   "sequence": 200,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"aggregate\": [{\"fields\": [\"noOfActuators\", \"closureSpringKit\"], \"logic\": \"SUM\"}], \"fields\": [\"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "1/4 - 20 Lock Nut",
+   "notes": "cost row FTOCountryWiseCost87 | replaces: 2290192"
+  },
+  {
+   "sequence": 210,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"aggregate\": [{\"fields\": [\"noOfActuators\", \"closureSpringKit\"], \"logic\": \"SUM\"}], \"fields\": [\"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Zeb Drive Link CRS 12.7X150mm 9006",
+   "notes": "cost row FTOCountryWiseCost88 | replaces: 2290009"
+  },
+  {
+   "sequence": 220,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bronzeJsBushes\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Bronze Oilite Jackshaft Bushes 1/2 Inch",
+   "notes": "cost row FTOCountryWiseCost111 | replaces: 2290113"
+  },
+  {
+   "sequence": 230,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"jackShaftRod\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Jack Shaft Rod 12mm",
+   "notes": "cost row FTOCountryWiseCost92 | replaces: 2290111"
+  },
+  {
+   "sequence": 240,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"linkageBarInput\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "AF-FD Linkage Bar GI CVSS 12.7X367X3.5mm 9169",
+   "notes": "cost row FTOCountryWiseCost255 | replaces: 2290128/2290129"
+  },
+  {
+   "sequence": 250,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"anchorBracket\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Anchor Bracket",
+   "notes": "cost row FTOCountryWiseCost113 | replaces: Anchor Bracket"
+  },
+  {
+   "sequence": 260,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"manualQuadrant\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "GI VCD Handle (V) Square 10x10",
+   "notes": "cost row FTOCountryWiseCost23 | replaces: 2230101"
+  },
+  {
+   "sequence": 270,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"ulListedConduit\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "UL Listed Conduit",
+   "notes": "cost row FTOCountryWiseCost98 | replaces: 2290041"
+  },
+  {
+   "sequence": 280,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"antishortBushing\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Anti-short Bushing",
+   "notes": "cost row FTOCountryWiseCost99 | replaces: 2290195"
+  },
+  {
+   "sequence": 290,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"junctionBoxValue\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "2 Way Junction Box with Cover 100x50x48-Ul Listed",
+   "notes": "cost row FTOCountryWiseCost95 | replaces: 2290078"
+  },
+  {
+   "sequence": 300,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"junctionBoxValue\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Twister Wire Connector",
+   "notes": "cost row FTOCountryWiseCost96 | replaces: 229123"
+  },
+  {
+   "sequence": 310,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"mts\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "Momemtory Test Switch (MTS)",
+   "notes": "cost row FTOCountryWiseCost284 | replaces: MTS"
+  },
+  {
+   "sequence": 320,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"ulLabels\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_literal": "UL Label Cost",
+   "notes": "cost row FTOCountryWiseCost100 | replaces: UL Label Cost"
+  },
+  {
+   "sequence": 330,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "fuseLink",
+     "value_format": "As is",
+     "value_order": "MFL 165F,MFL 212F,STOR 165F,STOR 212F,STOR 250F,STOR 350F,STOR PFL,DTOR 165/212F,DTOR 165/250F,DTOR 165/350F,DTOR 212/250F,DTOR 212/350F"
+    }
+   ],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"fusibleLink\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_template": "{fuseLink}",
+   "notes": "12 JSON lines; item code, name and unit from the cost row | replaces: 2290013, 2290080, 165F, 212F, 250F, 350F, PFL, 165/212F, 165/250F, 165/350F, 212/250F, 212/350F"
+  },
+  {
+   "sequence": 340,
+   "condition_logic": "and",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "actuatorItemCode",
+     "value_format": "As is",
+     "value_order": "229100-MS4604F1010/B,229101-MS4604F1210/B,229102-MS8104F1010/B,229103-MS8104F1210/B,229104-MS8109F1010/B,229105-MS8109F1210/B,229106-MS4609F1010/B,229107-MS4609F1210/B,229108-MS8120F1002/B,229109-MS8120F1200/B,229110-MS4620F1203/B,229111-MS4620F1005/B,2290263-FSLF230 US,229090-FSLF230-S US,2290283-FSLF24 US,229091-FSLF24-S US,2290281-FSNF24 US,229088-FSNF24-S US,2290280-FSNF230 US,229089-FSNF230-S US"
+    }
+   ],
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"noOfActuators\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "source_type": "Sourced",
+   "identifier_template": "{actuatorItemCode}",
+   "notes": "20 JSON lines; item code, name and unit from the cost row | replaces: 229100, 229101, 229102, 229103, 229104, 229105, 229106, 229107, 229108, 229109, 229110, 229111, 2290263, 229090, 2290283, 229091, 2290281, 229088, 2290280, 229089"
+  }
+ ]
+}
