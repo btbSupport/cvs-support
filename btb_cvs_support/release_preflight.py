@@ -20,6 +20,7 @@ COST = "FTOCountryWiseCost"
 RELEASE_PATCHES = [
 	"btb_cvs_support.patches.ftocvsunique_cleanup",
 	"btb_cvs_support.patches.fto_ulrd_actuator_country_cost",
+	"btb_cvs_support.patches.fto_ulrd_actuator_cart_codes",
 	"btb_cvs_support.patches.fto_cost_item_code_as_text",
 	"btb_cvs_support.patches.fto_cost_type_country_specific",
 	"btb_cvs_support.patches.fto_cost_fill_blank_item_code",
