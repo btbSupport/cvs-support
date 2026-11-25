@@ -19,6 +19,7 @@ never learns that rules exist, which is what makes quantities identical by
 construction rather than by testing.
 """
 
+import itertools
 import json
 import re
 from typing import Dict, List, Optional
@@ -70,6 +71,8 @@ def load_rules(product_family: str) -> List[Dict]:
                 "sourceType": doc.source_type,
                 "identifierTemplate": doc.identifier_template,
                 "identifierLiteral": doc.identifier_literal,
+                "descriptionTemplate": doc.get("description_template"),
+                "filterJson": json.loads(doc.filter_json) if doc.get("filter_json") else None,
                 "uom": doc.uom,
                 "conditionLogic": doc.condition_logic or "and",
                 "conditions": [
@@ -102,6 +105,26 @@ def feature_value(model: Dict, field: str) -> Optional[str]:
     return None if value is None else str(value)
 
 
+def slot_fields(dim: Dict) -> List[str]:
+    """A dimension can pool several fields - 'halfBaffleSlit|fullBaffleSlit',
+    'actModel1|actModel2': one line per value found in any of them, measured
+    over every slot that holds it (aggregate nodes tagged with "slot")."""
+    return [f.strip() for f in dim["field"].split("|") if f.strip()]
+
+
+def dim_values(model: Dict, dim: Dict) -> List[str]:
+    """Values a model contributes to one dimension; [] if it names none."""
+    fields = slot_fields(dim)
+    if(len(fields) == 1):
+        v = feature_value(model, fields[0])
+        return [] if v is None else [v]
+    out = []
+    for f in fields:
+        v = feature_value(model, f)
+        if(v not in (None, "") and v not in out): out.append(v)
+    return out
+
+
 def format_value(raw: str, fmt: str) -> str:
     """Render a stored feature value the way the item code spells it.
 
@@ -109,6 +132,10 @@ def format_value(raw: str, fmt: str) -> str:
     1.00 - while the item codes drop the redundant zero: GI Door 0.6, GI Door
     1.0. One decimal is always kept, so 1.00 does not collapse to 1.
     """
+    if(fmt == "One decimal"):
+        # casing gauges are stored as 1 or 1.2 but spelled 1.0 / 1.2
+        if(re.match(r"^-?\d+$", raw or "")): return raw + ".0"
+        fmt = "Trim trailing zero"
     if(fmt != "Trim trailing zero"): return raw
     if(not re.match(r"^-?\d+\.\d{2,}$", raw or "")): return raw
     trimmed = raw.rstrip("0")
@@ -131,8 +158,11 @@ def order_key(value: str, declared: str):
 
 
 def guard_filter(rule: Dict) -> Optional[Dict]:
-    if(not rule["conditions"]): return None
-    return {"logic": rule["conditionLogic"], "conditions": rule["conditions"]}
+    extra = rule.get("filterJson")
+    if(not rule["conditions"]): return extra
+    out = {"logic": rule["conditionLogic"], "conditions": rule["conditions"]}
+    if(extra): out["filter"] = extra
+    return out
 
 
 def passes_guards(model: Dict, rule: Dict) -> bool:
@@ -150,10 +180,11 @@ def combinations(rule: Dict, models: List[Dict]) -> List[List[str]]:
     seen = {}
     for model in models:
         if(not passes_guards(model, rule)): continue
-        raw = [feature_value(model, d["field"]) for d in dims]
+        per_dim = [dim_values(model, d) for d in dims]
         # a model missing one of the dimensions cannot name a line
-        if(any(v is None for v in raw)): continue
-        seen[tuple(raw)] = raw
+        if(any(not v for v in per_dim)): continue
+        for raw in itertools.product(*per_dim):
+            seen[tuple(raw)] = list(raw)
 
     combos = list(seen.values())
     combos.sort(key=lambda raw: tuple(
@@ -164,21 +195,62 @@ def combinations(rule: Dict, models: List[Dict]) -> List[List[str]]:
 
 def render_identifier(rule: Dict, combo: List[str]) -> str:
     if(rule["identifierLiteral"]): return rule["identifierLiteral"]
-    identifier = rule["identifierTemplate"] or ""
+    return render_text(rule["identifierTemplate"] or "", rule, combo)
+
+
+def render_text(text: str, rule: Dict, combo: List[str]) -> str:
     for value, dim in zip(combo, rule["dimensions"]):
-        identifier = identifier.replace(
-            "{" + dim["field"] + "}", format_value(value, dim["format"]))
-    return identifier
+        text = text.replace("{" + dim["field"] + "}", format_value(value, dim["format"]))
+    return text
 
 
 def row_filter(rule: Dict, combo: List[str]) -> Optional[Dict]:
     """Guards plus one eq condition per dimension value - which is precisely
-    the filter the hand-written JSON row carried."""
+    the filter the hand-written JSON row carried. A pooled dimension adds a
+    nested or-filter over its slots (field eq value in any of them)."""
     conditions = list(rule["conditions"])
+    pooled = []
     for value, dim in zip(combo, rule["dimensions"]):
-        conditions.append({"field": dim["field"], "operator": "eq", "value": value})
-    if(not conditions): return None
-    return {"logic": rule["conditionLogic"], "conditions": conditions}
+        fields = slot_fields(dim)
+        if(len(fields) == 1):
+            conditions.append({"field": fields[0], "operator": "eq", "value": value})
+        else:
+            pooled.append({"logic": "or", "conditions": [
+                {"field": f, "operator": "eq", "value": value} for f in fields]})
+    if(rule.get("filterJson")): pooled.append(json.loads(json.dumps(rule["filterJson"])))
+    # exec_filter ands a nested "filter" onto the flat conditions; with no flat
+    # condition it would evaluate to False, so the first or-filter stands alone
+    if(not conditions):
+        if(not pooled): return None
+        out = pooled.pop(0)
+    else:
+        out = {"logic": rule["conditionLogic"], "conditions": conditions}
+    node = out
+    for f in pooled:
+        while("filter" in node): node = node["filter"]
+        node["filter"] = f
+        node = f
+    return out
+
+
+def slot_aggregate(aggregate: Dict, rule: Dict, combo: List[str]) -> Dict:
+    """Aggregate nodes tagged {"slot": field} measure only the slot holding the
+    line's value: the tag becomes a filter field eq value (as the JSON wrote it)."""
+    value_of = {}
+    for value, dim in zip(combo, rule["dimensions"]):
+        for f in slot_fields(dim): value_of[f] = value
+    if(not any(len(slot_fields(d)) > 1 for d in rule["dimensions"])): return aggregate
+
+    def walk(node):
+        if(isinstance(node, list)): return [walk(n) for n in node]
+        if(not isinstance(node, dict)): return node
+        out = {k: walk(v) for k, v in node.items() if k != "slot"}
+        if("slot" in node):
+            out["filter"] = {"logic": "and", "conditions": [
+                {"field": node["slot"], "operator": "eq", "value": value_of.get(node["slot"], "")}]}
+        return out
+
+    return walk(aggregate)
 
 
 # ------------------------------------------------------------- resolution
@@ -230,13 +302,16 @@ def expand(rules: List[Dict], models: List[Dict]) -> List[Dict]:
             uom = cost.unit or ""
         else:
             item_code = description = identifier
+            if(rule.get("descriptionTemplate")):
+                description = render_text(rule["descriptionTemplate"], rule, combo)
             uom = rule["uom"] or ""
 
         rows.append({
             "itemCode": item_code,
             "description": description,
             "uom": uom,
-            "formula": {"filter": row_filter(rule, combo), "aggregate": rule["aggregate"]},
+            "formula": {"filter": row_filter(rule, combo),
+                        "aggregate": slot_aggregate(rule["aggregate"], rule, combo)},
         })
 
     if(skipped):

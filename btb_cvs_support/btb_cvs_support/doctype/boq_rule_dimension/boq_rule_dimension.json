@@ -13,7 +13,7 @@
  "fields": [
   {
    "columns": 3,
-   "description": "Lines are grouped by the distinct values this field takes across the cart.",
+   "description": "Lines are grouped by the distinct values this field takes across the cart. Several fields separated by | pool their values (halfBaffleSlit|fullBaffleSlit): one line per value found in any of them; aggregate nodes tagged \"slot\": <field> measure only that field's slot.",
    "fieldname": "field",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -23,12 +23,12 @@
   {
    "columns": 3,
    "default": "As is",
-   "description": "How the value is written into the identifier. Trim trailing zero renders a stored 0.60 as 0.6, matching the item codes.",
+   "description": "How the value is written into the identifier. Trim trailing zero renders a stored 0.60 as 0.6, matching the item codes. One decimal writes a whole number with one decimal (1 -> 1.0) and trims longer ones (0.60 -> 0.6).",
    "fieldname": "value_format",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Value Format",
-   "options": "As is\nTrim trailing zero",
+   "options": "As is\nTrim trailing zero\nOne decimal",
    "reqd": 1
   },
   {

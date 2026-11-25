@@ -22,6 +22,8 @@ class BOQRule(Document):
 		self.validate_placeholders()
 		self.validate_logic()
 		self.validate_aggregate()
+		self.validate_filter_json()
+		self.validate_description()
 		self.validate_uom()
 		self.validate_sourced_literal()
 
@@ -62,6 +64,30 @@ class BOQRule(Document):
 			frappe.throw(_("Aggregate is not valid JSON: {0}").format(e))
 		if(not isinstance(parsed, dict) or "logic" not in parsed):
 			frappe.throw(_("Aggregate must be an object carrying a 'logic' key."))
+
+	def validate_filter_json(self):
+		"""Same filter shape the engine evaluates: {"logic": "and|or", "conditions": [...], "filter": {...}}."""
+		if(not (self.filter_json or "").strip()):
+			self.filter_json = None
+			return
+		try:
+			parsed = json.loads(self.filter_json)
+		except ValueError as e:
+			frappe.throw(_("Extra Filter is not valid JSON: {0}").format(e))
+		if(not isinstance(parsed, dict) or "logic" not in parsed or not isinstance(parsed.get("conditions"), list)):
+			frappe.throw(_("Extra Filter must be an object with 'logic' and a 'conditions' list."))
+
+	def validate_description(self):
+		"""A Sourced rule prints the cost row's name; a description here would be a second source of truth."""
+		if(self.source_type == "Sourced"):
+			self.description_template = None
+			return
+		if(not self.description_template): return
+		declared = {(d.field or "").strip() for d in (self.dimensions or [])}
+		unknown = sorted({p.strip() for p in PLACEHOLDER.findall(self.description_template)} - declared)
+		if(unknown):
+			frappe.throw(_("Description uses {0}, which is not declared as a Dimension.").format(
+				", ".join("{" + u + "}" for u in unknown)))
 
 	def validate_uom(self):
 		"""A Templated rule names its own UOM; a Sourced rule takes it from the

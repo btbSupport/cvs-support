@@ -16,11 +16,13 @@
   "section_identifier",
   "identifier_template",
   "identifier_literal",
+  "description_template",
   "identifier_help",
   "section_matching",
   "dimensions",
   "condition_logic",
   "conditions",
+  "filter_json",
   "section_quantity",
   "aggregate",
   "section_notes",
@@ -92,6 +94,13 @@
    "label": "Identifier Literal (override)"
   },
   {
+   "fieldname": "description_template",
+   "fieldtype": "Data",
+   "label": "Description",
+   "depends_on": "eval:doc.source_type=='Templated'",
+   "description": "Templated only: the BOQ description, when it differs from the item code (e.g. item code 2290225, description H10J14). {featureField} placeholders as in the identifier. Leave blank to print the identifier."
+  },
+  {
    "fieldname": "identifier_help",
    "fieldtype": "HTML",
    "options": "<p class=\"text-muted small\">A Sourced rule matches its identifier against <b>BOQ Identifier</b> on FTOCountryWiseCost. A Templated rule never reads that table.</p>"
@@ -123,6 +132,13 @@
    "options": "BOQ Rule Condition"
   },
   {
+   "fieldname": "filter_json",
+   "fieldtype": "Code",
+   "label": "Extra Filter (JSON)",
+   "options": "JSON",
+   "description": "Optional guard in the BOQ engine's filter shape, for what the Conditions table can't say (e.g. materialType eq GI and modelNo is one of FD, FD-SL, ...). Applied together with the Conditions."
+  },
+  {
    "fieldname": "section_quantity",
    "fieldtype": "Section Break",
    "label": "Quantity"
@@ -148,7 +164,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2026-08-31 10:00:00.000000",
+ "modified": "2026-11-25 14:00:00.000000",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "BOQ Rule",
