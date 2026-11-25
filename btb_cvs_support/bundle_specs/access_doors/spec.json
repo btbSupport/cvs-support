@@ -1,0 +1,3201 @@
+{
+ "bundle": {
+  "label": "Access doors",
+  "external_id": "01tQo000009Pom1IAC",
+  "export_template": [
+   "model",
+   "doorWidthWi",
+   "doorHeightHi",
+   "ductDiameterDi",
+   "material",
+   "hingeMaterial",
+   "hingeType",
+   "frameThickness",
+   "frameConstruction",
+   "doorThickness",
+   "ductOpeningUndersize",
+   "doorDepthSelect",
+   "doorConstruction",
+   "gasket",
+   "finish",
+   "insulation",
+   "safetyWireSelect",
+   "tagRef",
+   "notes"
+  ]
+ },
+ "items": {
+  "anchor": [
+   "SKU40"
+  ],
+  "catalog_categories": [
+   "CTR213589"
+  ]
+ },
+ "cost_objects": {
+  "doctype": "FTOCountryWiseCost",
+  "label_field": "product_name",
+  "rows": [
+   {
+    "product_name": "GI",
+    "item_code": "GI",
+    "unit": "Kg",
+    "cost": 4.0,
+    "category": "Coil",
+    "boq_identifier": "GI",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost1"
+   },
+   {
+    "product_name": "SS304L",
+    "item_code": "SS304L",
+    "unit": "Kg",
+    "cost": 9.5,
+    "category": "Coil",
+    "boq_identifier": "SS304L",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost2"
+   },
+   {
+    "product_name": "SS316L",
+    "item_code": "SS316L",
+    "unit": "Kg",
+    "cost": 16.5,
+    "category": "Coil",
+    "boq_identifier": "SS316L",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost3"
+   },
+   {
+    "product_name": "AL",
+    "item_code": "AL",
+    "unit": "Kg",
+    "cost": 18.5,
+    "category": "Coil",
+    "boq_identifier": "AL",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost5"
+   },
+   {
+    "product_name": "AZ",
+    "item_code": "AZ",
+    "unit": "Kg",
+    "cost": 4.0,
+    "category": "Coil",
+    "boq_identifier": "AZ",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost516"
+   },
+   {
+    "product_name": "GI & AZ Handle Cost (per PC)",
+    "item_code": "2290249",
+    "unit": "Ea",
+    "cost": 0.55,
+    "category": "Accessories",
+    "boq_identifier": "GI & AZ Handle Cost (per PC)",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost518"
+   },
+   {
+    "product_name": "SS Handle Cost (per PC)",
+    "item_code": "2290437",
+    "unit": "Ea",
+    "cost": 2.75,
+    "category": "Accessories",
+    "boq_identifier": "SS Handle Cost (per PC)",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost519"
+   },
+   {
+    "product_name": "AL Handle Cost (per PC)",
+    "item_code": "AL Handle Cost (per PC)",
+    "unit": "Ea",
+    "cost": 1.1,
+    "category": "Accessories",
+    "boq_identifier": "AL Handle Cost (per PC)",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost520"
+   },
+   {
+    "product_name": "GI & AZ Cam Lock Cost (per PC)",
+    "item_code": "2620101",
+    "unit": "Ea",
+    "cost": 0.5,
+    "category": "Accessories",
+    "boq_identifier": "GI & AZ Cam Lock Cost (per PC)",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost521"
+   },
+   {
+    "product_name": "SS Cam Lock Cost (per PC)",
+    "item_code": "2620201",
+    "unit": "Ea",
+    "cost": 1.1,
+    "category": "Accessories",
+    "boq_identifier": "SS Cam Lock Cost (per PC)",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost522"
+   },
+   {
+    "product_name": "AL Cam Lock Cost (per PC)",
+    "item_code": "AL Cam Lock Cost (per PC)",
+    "unit": "Ea",
+    "cost": 1.65,
+    "category": "Accessories",
+    "boq_identifier": "AL Cam Lock Cost (per PC)",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost523"
+   },
+   {
+    "product_name": "Rockwool 25mm",
+    "item_code": "Rockwool 25mm",
+    "unit": "Sqm",
+    "cost": 13.0,
+    "category": "Insulation",
+    "boq_identifier": "Rockwool 25mm",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost524"
+   },
+   {
+    "product_name": "Rockwool 50mm",
+    "item_code": "Rockwool 50mm",
+    "unit": "Sqm",
+    "cost": 20.0,
+    "category": "Insulation",
+    "boq_identifier": "Rockwool 50mm",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost525"
+   },
+   {
+    "product_name": "Fiberglass 25mm",
+    "item_code": "Fiberglass 25mm",
+    "unit": "Sqm",
+    "cost": 12.5,
+    "category": "Insulation",
+    "boq_identifier": "Fiberglass 25mm",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost526"
+   },
+   {
+    "product_name": "Fiberglass 50mm",
+    "item_code": "Fiberglass 50mm",
+    "unit": "Sqm",
+    "cost": 19.0,
+    "category": "Insulation",
+    "boq_identifier": "Fiberglass 50mm",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost527"
+   },
+   {
+    "product_name": "SS Standard Hinge",
+    "item_code": "SS Standard Hinge",
+    "unit": "Ea",
+    "cost": 3.3,
+    "category": "Accessories",
+    "boq_identifier": "SS Standard Hinge",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost528"
+   },
+   {
+    "product_name": "SS Continuous Hinge",
+    "item_code": "2290275 (Q)",
+    "unit": "m",
+    "cost": 6.82,
+    "category": "Accessories",
+    "boq_identifier": "SS Continuous Hinge",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost529"
+   },
+   {
+    "product_name": "Brass Standard Hinge",
+    "item_code": "Brass Standard Hinge",
+    "unit": "Ea",
+    "cost": 1.1,
+    "category": "Accessories",
+    "boq_identifier": "Brass Standard Hinge",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost530"
+   },
+   {
+    "product_name": "Brass Continuous Hinge",
+    "item_code": "Brass Continuous Hinge",
+    "unit": "m",
+    "cost": 3.3,
+    "category": "Accessories",
+    "boq_identifier": "Brass Continuous Hinge",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost531"
+   },
+   {
+    "product_name": "AL Standard Hinge",
+    "item_code": "AL Standard Hinge",
+    "unit": "Ea",
+    "cost": 2.75,
+    "category": "Accessories",
+    "boq_identifier": "AL Standard Hinge",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost532"
+   },
+   {
+    "product_name": "AL Continuous Hinge",
+    "item_code": "AL Continuous Hinge",
+    "unit": "m",
+    "cost": 5.5,
+    "category": "Accessories",
+    "boq_identifier": "AL Continuous Hinge",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost533"
+   },
+   {
+    "product_name": "Safety Wire",
+    "item_code": "Safety Wire",
+    "unit": "Ea",
+    "cost": 4.4,
+    "category": "Accessories",
+    "boq_identifier": "Safety Wire",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost534"
+   },
+   {
+    "product_name": "Neoprene Gasket",
+    "item_code": "Neoprene Gasket",
+    "unit": "m",
+    "cost": 0.67,
+    "category": "Accessories",
+    "boq_identifier": "Neoprene Gasket",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost535"
+   },
+   {
+    "product_name": "Polyurethane Gasket",
+    "item_code": "Polyurethane Gasket",
+    "unit": "m",
+    "cost": 1.65,
+    "category": "Accessories",
+    "boq_identifier": "Polyurethane Gasket",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost536"
+   },
+   {
+    "product_name": "Min Door Fabrication Minutes",
+    "item_code": "Min Door Fabrication Minutes",
+    "unit": "Minutes",
+    "cost": 15.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Min Door Fabrication Minutes",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost537"
+   },
+   {
+    "product_name": "GI & AZ Door Fabrication Minutes (per sqm)",
+    "item_code": "GI & AZ Door Fabrication Minutes (per sqm)",
+    "unit": "Minutes",
+    "cost": 30.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "GI & AZ Door Fabrication Minutes (per sqm)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost538"
+   },
+   {
+    "product_name": "SS Door Fabrication Minutes (per sqm)",
+    "item_code": "SS Door Fabrication Minutes (per sqm)",
+    "unit": "Minutes",
+    "cost": 35.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "SS Door Fabrication Minutes (per sqm)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost539"
+   },
+   {
+    "product_name": "AL Door Fabrication Minutes (per sqm)",
+    "item_code": "AL Door Fabrication Minutes (per sqm)",
+    "unit": "Minutes",
+    "cost": 40.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "AL Door Fabrication Minutes (per sqm)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost540"
+   },
+   {
+    "product_name": "Fixed Frame Fabrication Minutes",
+    "item_code": "Fixed Frame Fabrication Minutes",
+    "unit": "Minutes",
+    "cost": 5.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Fixed Frame Fabrication Minutes",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost541"
+   },
+   {
+    "product_name": "GI & AZ Frame Fabrication Minutes (per m)",
+    "item_code": "GI & AZ Frame Fabrication Minutes (per m)",
+    "unit": "Minutes",
+    "cost": 2.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "GI & AZ Frame Fabrication Minutes (per m)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost542"
+   },
+   {
+    "product_name": "SS Frame Fabrication Minutes (per m)",
+    "item_code": "SS Frame Fabrication Minutes (per m)",
+    "unit": "Minutes",
+    "cost": 5.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "SS Frame Fabrication Minutes (per m)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost543"
+   },
+   {
+    "product_name": "AL Frame Fabrication Minutes (per m)",
+    "item_code": "AL Frame Fabrication Minutes (per m)",
+    "unit": "Minutes",
+    "cost": 5.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "AL Frame Fabrication Minutes (per m)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost544"
+   },
+   {
+    "product_name": "GI & AZ Fitting Fabrication Minutes (per m)",
+    "item_code": "GI & AZ Fitting Fabrication Minutes (per m)",
+    "unit": "Minutes",
+    "cost": 15.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "GI & AZ Fitting Fabrication Minutes (per m)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost545"
+   },
+   {
+    "product_name": "SS Fitting Fabrication Minutes (per m)",
+    "item_code": "SS Fitting Fabrication Minutes (per m)",
+    "unit": "Minutes",
+    "cost": 30.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "SS Fitting Fabrication Minutes (per m)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost546"
+   },
+   {
+    "product_name": "AL Fitting Fabrication Minutes (per m)",
+    "item_code": "AL Fitting Fabrication Minutes (per m)",
+    "unit": "Minutes",
+    "cost": 32.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "AL Fitting Fabrication Minutes (per m)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost547"
+   },
+   {
+    "product_name": "GI & AZ Door Welding Minutes (per door)",
+    "item_code": "GI & AZ Door Welding Minutes (per door)",
+    "unit": "Minutes",
+    "cost": 20.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "GI & AZ Door Welding Minutes (per door)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost548"
+   },
+   {
+    "product_name": "SS Door Welding Minutes (per door)",
+    "item_code": "SS Door Welding Minutes (per door)",
+    "unit": "Minutes",
+    "cost": 30.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "SS Door Welding Minutes (per door)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost549"
+   },
+   {
+    "product_name": "AL Door Welding Minutes (per door)",
+    "item_code": "AL Door Welding Minutes (per door)",
+    "unit": "Minutes",
+    "cost": 40.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "AL Door Welding Minutes (per door)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost550"
+   },
+   {
+    "product_name": "GI & AZ Frame Welding Minutes (per frame)",
+    "item_code": "GI & AZ Frame Welding Minutes (per frame)",
+    "unit": "Minutes",
+    "cost": 5.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "GI & AZ Frame Welding Minutes (per frame)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost551"
+   },
+   {
+    "product_name": "SS Frame Welding Minutes (per frame)",
+    "item_code": "SS Frame Welding Minutes (per frame)",
+    "unit": "Minutes",
+    "cost": 8.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "SS Frame Welding Minutes (per frame)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost552"
+   },
+   {
+    "product_name": "AL Frame Welding Minutes (per frame)",
+    "item_code": "AL Frame Welding Minutes (per frame)",
+    "unit": "Minutes",
+    "cost": 10.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "AL Frame Welding Minutes (per frame)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost553"
+   },
+   {
+    "product_name": "Powder Coating Cost",
+    "item_code": "Powder Coating Cost",
+    "unit": "Currency",
+    "cost": 60.0,
+    "category": "Other Cost",
+    "boq_identifier": "Powder Coating Cost",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost554"
+   },
+   {
+    "product_name": "Cost per Hour",
+    "item_code": "Cost per Hour",
+    "unit": "Currency",
+    "cost": 15.0,
+    "category": "Hourly Rate",
+    "boq_identifier": "Cost per Hour (AD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost555"
+   },
+   {
+    "product_name": "Welding Rate per Hour",
+    "item_code": "Welding Rate per Hour",
+    "unit": "Currency",
+    "cost": 50.0,
+    "category": "Hourly Rate",
+    "boq_identifier": "Welding Rate per Hour",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost556"
+   },
+   {
+    "product_name": "Overhead Percentage",
+    "item_code": "Overhead Percentage",
+    "unit": "%",
+    "cost": 0.4,
+    "category": "Overhead",
+    "boq_identifier": "Overhead Percentage (AD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost557"
+   },
+   {
+    "product_name": "Profit",
+    "item_code": "Profit",
+    "unit": "%",
+    "cost": 0.4,
+    "category": "Factor",
+    "boq_identifier": "Profit (AD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost558"
+   },
+   {
+    "product_name": "Accessories Wastage",
+    "item_code": "Accessories Wastage",
+    "unit": "%",
+    "cost": 0.02,
+    "category": "Wastage",
+    "boq_identifier": "Accessories Wastage (AD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost559"
+   },
+   {
+    "product_name": "Door Wastage",
+    "item_code": "Door Wastage",
+    "unit": "%",
+    "cost": 0.1,
+    "category": "Wastage",
+    "boq_identifier": "Door Wastage",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost560"
+   },
+   {
+    "product_name": "Frame Wastage",
+    "item_code": "Frame Wastage",
+    "unit": "%",
+    "cost": 0.05,
+    "category": "Wastage",
+    "boq_identifier": "Frame Wastage (AD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost561"
+   },
+   {
+    "product_name": "AL/EALDensityFactor",
+    "item_code": "AL/EALDensityFactor",
+    "cost": 2.7,
+    "category": "Density",
+    "boq_identifier": "AL/EALDensityFactor",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO44216"
+   },
+   {
+    "product_name": "SS Density Factor",
+    "item_code": "SSDensityFactor",
+    "cost": 8.0,
+    "category": "Density",
+    "boq_identifier": "SS Density Factor",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost388"
+   },
+   {
+    "product_name": "GI Density Factor",
+    "item_code": "GIDensityFactor",
+    "cost": 7.85,
+    "category": "Density",
+    "boq_identifier": "GI Density Factor",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost389"
+   }
+  ]
+ },
+ "feature_types": [
+  {
+   "key": "FT150",
+   "label": "AD model",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "AD-100",
+     "sequence": 1
+    },
+    {
+     "value": "AD-105",
+     "sequence": 2
+    },
+    {
+     "value": "AD-200",
+     "sequence": 3
+    },
+    {
+     "value": "AD-205",
+     "sequence": 4
+    }
+   ]
+  },
+  {
+   "key": "FT151",
+   "label": "AD Thickness",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "0.55",
+     "sequence": 1
+    },
+    {
+     "value": "0.60",
+     "sequence": 2
+    },
+    {
+     "value": "0.70",
+     "sequence": 3
+    },
+    {
+     "value": "0.80",
+     "sequence": 4
+    },
+    {
+     "value": "0.90",
+     "sequence": 5
+    },
+    {
+     "value": "1.00",
+     "sequence": 6
+    },
+    {
+     "value": "1.20",
+     "sequence": 7
+    },
+    {
+     "value": "1.50",
+     "sequence": 8
+    }
+   ]
+  },
+  {
+   "key": "FT152",
+   "label": "AD Door depth",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "25mm",
+     "sequence": 1
+    },
+    {
+     "value": "50mm",
+     "sequence": 2
+    }
+   ]
+  },
+  {
+   "key": "FT153",
+   "label": "AD Material Type",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "GI",
+     "sequence": 1
+    },
+    {
+     "value": "AL",
+     "sequence": 2
+    },
+    {
+     "value": "AZ",
+     "sequence": 3
+    },
+    {
+     "value": "SS304L",
+     "sequence": 4
+    },
+    {
+     "value": "SS316L",
+     "sequence": 5
+    }
+   ]
+  },
+  {
+   "key": "FT154",
+   "label": "AD Gasket",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "Polyurethane",
+     "sequence": 1
+    },
+    {
+     "value": "Neoprene",
+     "sequence": 2
+    }
+   ]
+  },
+  {
+   "key": "FT155",
+   "label": "AD Hinge Material",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "Brass",
+     "sequence": 1
+    },
+    {
+     "value": "AL",
+     "sequence": 2
+    },
+    {
+     "value": "SS",
+     "sequence": 3
+    }
+   ]
+  },
+  {
+   "key": "FT156",
+   "label": "AD Hinge Type",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "Standard",
+     "sequence": 1
+    },
+    {
+     "value": "Continuous",
+     "sequence": 2
+    },
+    {
+     "value": "NA",
+     "sequence": 3
+    }
+   ]
+  },
+  {
+   "key": "FT157",
+   "label": "AD Insulation",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "Fiberglass",
+     "sequence": 1
+    },
+    {
+     "value": "Rockwool",
+     "sequence": 2
+    },
+    {
+     "value": "Packless",
+     "sequence": 3
+    }
+   ]
+  },
+  {
+   "key": "FT158",
+   "label": "AD Finish",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "Mill Finish",
+     "sequence": 1
+    },
+    {
+     "value": "Powder Coated",
+     "sequence": 2
+    }
+   ]
+  },
+  {
+   "key": "FT159",
+   "label": "AD Cost",
+   "data_type": "Object List",
+   "object_type": "FTOCountryWiseCost",
+   "data_text_field": "boq_identifier",
+   "additional_fields": "item_code,cost",
+   "objects": [
+    {
+     "cost_row": "AL/EALDensityFactor",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "cost_row": "SS Density Factor",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "cost_row": "GI Density Factor",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "cost_row": "GI",
+     "sequence": 1
+    },
+    {
+     "cost_row": "SS304L",
+     "sequence": 2
+    },
+    {
+     "cost_row": "SS316L",
+     "sequence": 3
+    },
+    {
+     "cost_row": "AZ",
+     "sequence": 4
+    },
+    {
+     "cost_row": "AL",
+     "sequence": 5
+    },
+    {
+     "cost_row": "GI & AZ Handle Cost (per PC)",
+     "sequence": 6
+    },
+    {
+     "cost_row": "SS Handle Cost (per PC)",
+     "sequence": 7
+    },
+    {
+     "cost_row": "AL Handle Cost (per PC)",
+     "sequence": 8
+    },
+    {
+     "cost_row": "GI & AZ Cam Lock Cost (per PC)",
+     "sequence": 9
+    },
+    {
+     "cost_row": "SS Cam Lock Cost (per PC)",
+     "sequence": 10
+    },
+    {
+     "cost_row": "AL Cam Lock Cost (per PC)",
+     "sequence": 11
+    },
+    {
+     "cost_row": "Rockwool 25mm",
+     "sequence": 12
+    },
+    {
+     "cost_row": "Rockwool 50mm",
+     "sequence": 13
+    },
+    {
+     "cost_row": "Fiberglass 25mm",
+     "sequence": 14
+    },
+    {
+     "cost_row": "Fiberglass 50mm",
+     "sequence": 15
+    },
+    {
+     "cost_row": "SS Standard Hinge",
+     "sequence": 16
+    },
+    {
+     "cost_row": "SS Continuous Hinge",
+     "sequence": 17
+    },
+    {
+     "cost_row": "Brass Standard Hinge",
+     "sequence": 18
+    },
+    {
+     "cost_row": "Brass Continuous Hinge",
+     "sequence": 19
+    },
+    {
+     "cost_row": "AL Standard Hinge",
+     "sequence": 20
+    },
+    {
+     "cost_row": "AL Continuous Hinge",
+     "sequence": 21
+    },
+    {
+     "cost_row": "Safety Wire",
+     "sequence": 22
+    },
+    {
+     "cost_row": "Neoprene Gasket",
+     "sequence": 23
+    },
+    {
+     "cost_row": "Polyurethane Gasket",
+     "sequence": 24
+    },
+    {
+     "cost_row": "Min Door Fabrication Minutes",
+     "sequence": 25
+    },
+    {
+     "cost_row": "GI & AZ Door Fabrication Minutes (per sqm)",
+     "sequence": 26
+    },
+    {
+     "cost_row": "SS Door Fabrication Minutes (per sqm)",
+     "sequence": 27
+    },
+    {
+     "cost_row": "AL Door Fabrication Minutes (per sqm)",
+     "sequence": 28
+    },
+    {
+     "cost_row": "Fixed Frame Fabrication Minutes",
+     "sequence": 29
+    },
+    {
+     "cost_row": "GI & AZ Frame Fabrication Minutes (per m)",
+     "sequence": 30
+    },
+    {
+     "cost_row": "SS Frame Fabrication Minutes (per m)",
+     "sequence": 31
+    },
+    {
+     "cost_row": "AL Frame Fabrication Minutes (per m)",
+     "sequence": 32
+    },
+    {
+     "cost_row": "GI & AZ Fitting Fabrication Minutes (per m)",
+     "sequence": 33
+    },
+    {
+     "cost_row": "SS Fitting Fabrication Minutes (per m)",
+     "sequence": 34
+    },
+    {
+     "cost_row": "AL Fitting Fabrication Minutes (per m)",
+     "sequence": 35
+    },
+    {
+     "cost_row": "GI & AZ Door Welding Minutes (per door)",
+     "sequence": 36
+    },
+    {
+     "cost_row": "SS Door Welding Minutes (per door)",
+     "sequence": 37
+    },
+    {
+     "cost_row": "AL Door Welding Minutes (per door)",
+     "sequence": 38
+    },
+    {
+     "cost_row": "GI & AZ Frame Welding Minutes (per frame)",
+     "sequence": 39
+    },
+    {
+     "cost_row": "SS Frame Welding Minutes (per frame)",
+     "sequence": 40
+    },
+    {
+     "cost_row": "AL Frame Welding Minutes (per frame)",
+     "sequence": 41
+    },
+    {
+     "cost_row": "Powder Coating Cost",
+     "sequence": 42
+    },
+    {
+     "cost_row": "Cost per Hour",
+     "sequence": 43
+    },
+    {
+     "cost_row": "Welding Rate per Hour",
+     "sequence": 44
+    },
+    {
+     "cost_row": "Overhead Percentage",
+     "sequence": 45
+    },
+    {
+     "cost_row": "Profit",
+     "sequence": 46
+    },
+    {
+     "cost_row": "Accessories Wastage",
+     "sequence": 47
+    },
+    {
+     "cost_row": "Door Wastage",
+     "sequence": 48
+    },
+    {
+     "cost_row": "Frame Wastage",
+     "sequence": 49
+    }
+   ]
+  },
+  {
+   "key": "FT160",
+   "label": "AD Construction",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "Standard",
+     "sequence": 1
+    },
+    {
+     "value": "Welded",
+     "sequence": 2
+    }
+   ]
+  },
+  {
+   "key": "FT60",
+   "existing": "FT60",
+   "label": "YesNo",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT89",
+   "existing": "FT89",
+   "label": "Dampers",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FTY102327",
+   "label": "AD Model Items",
+   "data_type": "Object List",
+   "object_type": "Item",
+   "data_text_field": "item_code",
+   "additional_fields": "item_code,description",
+   "objects": [
+    {
+     "object": "AD-100",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "AD-105",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "AD-200",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "AD-205",
+     "sequence": 1,
+     "price_editable": 1
+    }
+   ]
+  },
+  {
+   "key": "FTY6626875",
+   "label": "AD Duct Opening",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "W-25mm, H-25mm",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "value": "W-50mm, H-50mm",
+     "sequence": 1,
+     "price_editable": 1
+    }
+   ]
+  }
+ ],
+ "structures": [
+  {
+   "key": "Access doors",
+   "label": "Access doors",
+   "parent": null,
+   "sequence": 0.0
+  },
+  {
+   "key": "Lookups",
+   "label": "Lookups",
+   "parent": "Access doors",
+   "sequence": 1.0
+  },
+  {
+   "key": "Doors",
+   "label": "Doors",
+   "parent": "Access doors",
+   "sequence": 2.0
+  },
+  {
+   "key": "Frames & Fittings",
+   "label": "Frames & Fittings",
+   "parent": "Access doors",
+   "sequence": 3.0
+  },
+  {
+   "key": "Processing Minutes",
+   "label": "Processing Minutes",
+   "parent": "Access doors",
+   "sequence": 4.0
+  },
+  {
+   "key": "Cost",
+   "label": "Cost",
+   "parent": "Access doors",
+   "sequence": 5.0
+  },
+  {
+   "key": "Factors",
+   "label": "Factors",
+   "parent": "Access doors",
+   "sequence": 6.0
+  }
+ ],
+ "features": [
+  {
+   "structure": "Factors",
+   "field": "modelItem",
+   "label": "Model Item",
+   "control_type": "Dropdown",
+   "sequence": 0,
+   "feature_types": [
+    "FTY102327"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "model",
+   "label": "Model",
+   "control_type": "Dropdown",
+   "sequence": 1,
+   "feature_types": [
+    "FT150"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "subcategory",
+   "label": "Model Description",
+   "control_type": "Textbox",
+   "sequence": 2
+  },
+  {
+   "structure": "Access doors",
+   "field": "doorWidthWi",
+   "label": "Door Width (WI)",
+   "control_type": "Number",
+   "sequence": 3,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Access doors",
+   "field": "doorHeightHi",
+   "label": "Door Height (HI)",
+   "control_type": "Number",
+   "sequence": 4,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Access doors",
+   "field": "ductDiameterDi",
+   "label": "Duct Diameter (DI)",
+   "control_type": "Number",
+   "sequence": 5,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Access doors",
+   "field": "material",
+   "label": "Material",
+   "control_type": "Dropdown",
+   "sequence": 6,
+   "feature_types": [
+    "FT153"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "hingeMaterial",
+   "label": "Hinge Material",
+   "control_type": "Dropdown",
+   "sequence": 7,
+   "feature_types": [
+    "FT155"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "hingeType",
+   "label": "Hinge Type",
+   "control_type": "Dropdown",
+   "sequence": 8,
+   "feature_types": [
+    "FT156"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "frameThickness",
+   "label": "Frame Thickness",
+   "control_type": "Dropdown",
+   "sequence": 9,
+   "feature_types": [
+    "FT151"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "frameConstruction",
+   "label": "Frame - Construction",
+   "control_type": "Dropdown",
+   "sequence": 10,
+   "feature_types": [
+    "FT160"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "doorThickness",
+   "label": "Door Thickness",
+   "control_type": "Dropdown",
+   "sequence": 11,
+   "feature_types": [
+    "FT151"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "ductOpeningUndersize",
+   "label": "Duct Opening Undersize",
+   "control_type": "Dropdown",
+   "sequence": 12,
+   "feature_types": [
+    "FTY6626875"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "doorDepthSelect",
+   "label": "Door Depth",
+   "control_type": "Dropdown",
+   "sequence": 13,
+   "feature_types": [
+    "FT152"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "doorConstruction",
+   "label": "Door Construction",
+   "control_type": "Dropdown",
+   "sequence": 14,
+   "feature_types": [
+    "FT160"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "gasket",
+   "label": "Gasket",
+   "control_type": "Dropdown",
+   "sequence": 15,
+   "feature_types": [
+    "FT154"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "finish",
+   "label": "Finish",
+   "control_type": "Dropdown",
+   "sequence": 16,
+   "feature_types": [
+    "FT158"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "insulation",
+   "label": "Insulation",
+   "control_type": "Dropdown",
+   "sequence": 17,
+   "feature_types": [
+    "FT157"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "safetyWireSelect",
+   "label": "Safety Wire",
+   "control_type": "Dropdown",
+   "sequence": 18,
+   "feature_types": [
+    "FT60"
+   ]
+  },
+  {
+   "structure": "Access doors",
+   "field": "attachment",
+   "label": "Attachment",
+   "control_type": "Textbox",
+   "sequence": 19
+  },
+  {
+   "structure": "Access doors",
+   "field": "tagRef",
+   "label": "Tag Ref",
+   "control_type": "Textbox",
+   "sequence": 20
+  },
+  {
+   "structure": "Lookups",
+   "field": "frameStripWidth",
+   "label": "Frame Strip Width",
+   "control_type": "Number",
+   "sequence": 21,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Access doors",
+   "field": "notes",
+   "label": "Notes",
+   "control_type": "Textbox",
+   "sequence": 21
+  },
+  {
+   "structure": "Lookups",
+   "field": "materialCost",
+   "label": "Material Cost",
+   "control_type": "Number",
+   "sequence": 22,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Lookups",
+   "field": "materialDensity",
+   "label": "Material Density",
+   "control_type": "Number",
+   "sequence": 23,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Lookups",
+   "field": "maxSideCategory",
+   "label": "Max Side Category",
+   "control_type": "Textbox",
+   "sequence": 24
+  },
+  {
+   "structure": "Lookups",
+   "field": "doorDepth",
+   "label": "Door Depth1",
+   "control_type": "Number",
+   "sequence": 25,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Doors",
+   "field": "doorMetalArea",
+   "label": "Door Metal Area",
+   "control_type": "Number",
+   "sequence": 26,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Doors",
+   "field": "doorWeight",
+   "label": "Door Weight",
+   "control_type": "Number",
+   "sequence": 27,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Doors",
+   "field": "doorMetalCost",
+   "label": "Door Metal Cost",
+   "control_type": "Number",
+   "sequence": 28,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Doors",
+   "field": "insulationArea",
+   "label": "Insulation Area",
+   "control_type": "Number",
+   "sequence": 29,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Doors",
+   "field": "insulationCost",
+   "label": "Insulation Cost",
+   "control_type": "Number",
+   "sequence": 30,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Doors",
+   "field": "handleCost",
+   "label": "Handle Cost",
+   "control_type": "Number",
+   "sequence": 31,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Doors",
+   "field": "camLockQty",
+   "label": "Cam Lock Qty",
+   "control_type": "Number",
+   "sequence": 32,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Doors",
+   "field": "camLockCost",
+   "label": "Cam Lock Cost",
+   "control_type": "Number",
+   "sequence": 33,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Doors",
+   "field": "hingeUom",
+   "label": "Hinge UOM",
+   "control_type": "Textbox",
+   "sequence": 34
+  },
+  {
+   "structure": "Doors",
+   "field": "hingeQty",
+   "label": "Hinge Qty",
+   "control_type": "Number",
+   "sequence": 35,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Doors",
+   "field": "hingeCost",
+   "label": "Hinge Cost",
+   "control_type": "Number",
+   "sequence": 36,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Doors",
+   "field": "doorCost",
+   "label": "Door Cost",
+   "control_type": "Number",
+   "sequence": 37,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameSlitSize",
+   "label": "Frame Slit Size",
+   "control_type": "Number",
+   "sequence": 38,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameLength",
+   "label": "Frame Length",
+   "control_type": "Number",
+   "sequence": 39,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameArea",
+   "label": "Frame Area",
+   "control_type": "Number",
+   "sequence": 40,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameWeight",
+   "label": "Frame Weight",
+   "control_type": "Number",
+   "sequence": 41,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameMetalCost",
+   "label": "Frame Metal Cost",
+   "control_type": "Number",
+   "sequence": 42,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameGasket",
+   "label": "Frame Gasket",
+   "control_type": "Number",
+   "sequence": 43,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameGasketCost",
+   "label": "Frame Gasket Cost",
+   "control_type": "Number",
+   "sequence": 44,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "safetyWire",
+   "label": "Safety Wire1",
+   "control_type": "Number",
+   "sequence": 45,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "safetyWireCost",
+   "label": "Safety Wire Cost",
+   "control_type": "Number",
+   "sequence": 46,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameCost",
+   "label": "Frame Cost",
+   "control_type": "Number",
+   "sequence": 47,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "roundFittingArea",
+   "label": "Round Fitting Area",
+   "control_type": "Number",
+   "sequence": 48,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "roundFittingWeight",
+   "label": "Round Fitting Weight",
+   "control_type": "Number",
+   "sequence": 49,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "roundFittingMetalCost",
+   "label": "Round Fitting Metal Cost",
+   "control_type": "Number",
+   "sequence": 50,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalMaterialCost",
+   "label": "Total Material Cost",
+   "control_type": "Number",
+   "sequence": 51,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "doorProcessingMinutes",
+   "label": "Door Processing Minutes",
+   "control_type": "Number",
+   "sequence": 52,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "frameProcessingMinutes",
+   "label": "Frame Processing Minutes",
+   "control_type": "Number",
+   "sequence": 53,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "fittingsProcessingMinutes",
+   "label": "Fittings Processing Minutes",
+   "control_type": "Number",
+   "sequence": 54,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "doorWeldingMinutes",
+   "label": "Door Welding Minutes",
+   "control_type": "Number",
+   "sequence": 55,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "frameWeldingMinutes",
+   "label": "Frame Welding Minutes",
+   "control_type": "Number",
+   "sequence": 56,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "totalLabourMinutes",
+   "label": "Total Labour Minutes",
+   "control_type": "Number",
+   "sequence": 57,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalAssemblyCost",
+   "label": "Total Assembly Cost",
+   "control_type": "Number",
+   "sequence": 58,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "powderCoatingCost",
+   "label": "Powder Coating Cost",
+   "control_type": "Number",
+   "sequence": 59,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "overhead",
+   "label": "Overhead",
+   "control_type": "Number",
+   "sequence": 60,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalCost",
+   "label": "Total Cost",
+   "control_type": "Number",
+   "sequence": 61,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "listPrice",
+   "label": "List Price",
+   "control_type": "Number",
+   "sequence": 62,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "productDescription",
+   "label": "Product Description",
+   "control_type": "Textbox",
+   "sequence": 63
+  },
+  {
+   "structure": "Factors",
+   "field": "countryWiseCost",
+   "label": "Country Wise Cost",
+   "control_type": "Dropdown",
+   "sequence": 64,
+   "settings": {
+    "displayFormat": "1.0-2"
+   },
+   "feature_types": [
+    "FT159"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "product",
+   "label": "Product",
+   "control_type": "Dropdown",
+   "sequence": 69,
+   "feature_types": [
+    "FT89"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "insulationCostLookup",
+   "label": "Insulation Cost Lookup",
+   "control_type": "Dropdown",
+   "sequence": 70,
+   "settings": {
+    "displayFormat": "1.0-2"
+   },
+   "feature_types": [
+    "FT159"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "hingeCostLookup",
+   "label": "Hinge Cost Lookup",
+   "control_type": "Dropdown",
+   "sequence": 71,
+   "settings": {
+    "displayFormat": "1.0-2"
+   },
+   "feature_types": [
+    "FT159"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "modelDescription",
+   "label": "Model Description1",
+   "control_type": "Textbox",
+   "sequence": 72
+  }
+ ],
+ "lookups": [
+  {
+   "field": "isCartLocked",
+   "path": "cart.locked"
+  }
+ ],
+ "groups": [
+  {
+   "key": "Cost",
+   "label": "Cost",
+   "features": [
+    "materialCost",
+    "doorCost",
+    "frameCost",
+    "roundFittingMetalCost",
+    "totalMaterialCost",
+    "totalAssemblyCost",
+    "powderCoatingCost",
+    "overhead",
+    "totalCost"
+   ],
+   "properties": "feature.label,featureTypeItem.value",
+   "show_summary": 0,
+   "sequence": 0,
+   "template": "@if(ecomStore.userInfo().roles.indexOf(\"OneCPQ Admin\") != -1){\n    @if(bundleGroup(); as bg){\n                @if(toggleable()){    \n                <div class=\"pt-2\">\n                    <p-panel class=\"pt-2\" [collapsed]=\"collapsed()\" [toggleable]=\"toggleable()\" collapseIcon=\"pi pi-angle-left\"\n                        expandIcon=\"pi pi-angle-down\">\n                        <ng-template #header>\n                            <div class=\"flex align-items-center gap-2\">\n                                <span class=\"font-bold\">\n                                    {{bg.label}}\n                                </span>\n                            </div>\n                        </ng-template>\n                        @if(toggleable()){\n                        <ng-template #icons>\n                            <button\n                                class=\"p-0 p-ripple p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text p-panel-header-icon p-panel-toggler p-link\"\n                                (click)=\"setExpanded()\">\n                                <span [class]=\"'pi pi-angle-double-'+(collapsed() ? 'left':'down')\"></span>\n                            </button>\n                        </ng-template>\n                        }\n                        <ng-container *ngTemplateOutlet=\"table\"></ng-container>\n                    </p-panel>\n                </div>\n            }\n            @else {\n                <ng-container *ngTemplateOutlet=\"table\"></ng-container>\n            }\n            <ng-template #table>\n    @if(bundleGroup(); as bg){\n    @if(cartItemFeatureModels(); as cifs){\n    <p-table size=\"small\" styleClass=\"text-base \" paginatorDropdownAppendTo=\"body\"\n        [paginator]=\"cifs.length >5?true:false\" [rows]=\"10\" [rowsPerPageOptions]=\"[5,10,20,50,75,100]\" #dt\n        responsiveLayout=\"stack\" [value]=\"cifs\">\n\n        <ng-template #header>\n            <tr>\n                @for(property of bg.properties; track property){\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                <th\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    {{_.get(AppConst.bundleGroupColumns,property)?.label}}</th>\n                }\n            </tr>\n        </ng-template>\n        <ng-template #body let-item let-rowIndex=\"rowIndex\">\n            <tr class=\"bundleGroupTable\" (click)=\"navigate(item)\">\n                @for(property of bg.properties; track property){\n\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                @if(md?.editable && editable()) {\n                <td [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\"\n                    [pEditableColumn]=\"property\" [pEditableColumnField]=\"property\">\n                    <span class=\"p-column-title\">{{md.label}}</span>\n                    @if(property === 'unitPrice'){\n\n                    @let ftip = this.bundleGroupInterface()?.getPriceListDetail(item.featureTypeItem.id,'One Time');\n\n\n                    @if(ftip?.isMatrix){\n                    <span>\n\n                        <p-button (click)=\"handleToggleMatrix(item.featureTypeItem,$event)\" title=\"Matrix Detail\"\n                            styleClass=\"btb-rotate-45\" icon=\"pi pi-thumbtack\" [rounded]=\"true\" [text]=\"true\" />\n                        <btb-shared-matrix-price-detail [cartItemFeature]=\"item\"\n                            [headerTitle]=\"(ftip?.matrixType ?? '') +' pricing - '+item.featureTypeItem.value\"\n                            [items]=\"ftip?.entries\" [displayModal]=\"toggleViewModel()[item.featureTypeItem.id]\">\n                        </btb-shared-matrix-price-detail>\n                    </span>\n                    }\n                    }\n                    <p-cellEditor class=\"align-content-end\">\n                        <ng-template pTemplate=\"input\">\n                            @if(md.type === 'currency' || md.type === 'number'|| md.type === 'percentage') {\n                            <input pInputText type=\"number\" [(ngModel)]=\"item[property]\">\n                            }\n                        </ng-template>\n                        <ng-template pTemplate=\"output\">\n                            <span class=\"ref-link cursor-pointer\">\n                                {{getValue(item, property)}}\n                            </span>\n                        </ng-template>\n                    </p-cellEditor>\n                </td>    \n                \n                }\n                @else {\n                <td\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    <span class=\"p-column-title\">{{md?.label}}</span>\n                    {{getValue(item, property)}}\n                </td>\n                }\n                }\n            </tr>\n        </ng-template>\n        <ng-template #footer *ngIf=\"bg.showSummary\">\n            <tr>\n                @for(property of bg.properties; track property){\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                <td\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    @if (md?.showSummary) {\n                    {{_.get(summary(),property)}}\n                    }\n\n                </td>\n                }\n            </tr>\n        </ng-template>\n    </p-table>\n    }\n    }\n</ng-template>\n        }\n}"
+  },
+  {
+   "key": "Section Detail",
+   "label": "Section Detail",
+   "features": [
+    "maxSideCategory"
+   ],
+   "properties": "feature.label,featureTypeItem.value",
+   "show_summary": 0,
+   "sequence": 0
+  }
+ ],
+ "constraints": [
+  {
+   "key": "IMC202177",
+   "label": null,
+   "parent": "1122",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(product) == 0)",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "product"
+     ],
+     "options": [
+      "Access doors"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC304822",
+   "label": null,
+   "parent": "1122",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "REFERENCE(isCartLocked)",
+   "actions": [
+    {
+     "type": "Hide Bundle Property",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "save"
+     ]
+    },
+    {
+     "type": "Lock",
+     "sequence": 0,
+     "active": 1,
+     "result": 1
+    }
+   ]
+  },
+  {
+   "key": "IMC33694",
+   "label": null,
+   "parent": "1122",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "TEXT(attachment) == 'Hinged'",
+   "actions": [
+    {
+     "type": "Show Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "hingeMaterial",
+      "hingeType"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "hingeMaterial",
+      "hingeType"
+     ]
+    },
+    {
+     "type": "Hide Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "hingeType"
+     ],
+     "options": [
+      "NA"
+     ]
+    },
+    {
+     "type": "Show Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "hingeType"
+     ],
+     "options": [
+      "NA"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC39116",
+   "label": null,
+   "parent": "1122",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "ISNULLORBLANK(doorWidthWi)\n||\nNUMBER(doorWidthWi) > 600\n||\nNUMBER(doorWidthWi) < 150",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "'Door width exceeds the limit'"
+    }
+   ]
+  },
+  {
+   "key": "IMC39117",
+   "label": null,
+   "parent": "1122",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "ISNULLORBLANK(doorHeightHi)\n||\nNUMBER(doorHeightHi) > 600\n||\nNUMBER(doorHeightHi) < 150",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "'Door height exceeds the limit'"
+    }
+   ]
+  },
+  {
+   "key": "IMC6626910",
+   "label": null,
+   "parent": "1122",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(NUMBER(listPrice) >0) || (NUMBER(listPrice) ==0)",
+   "actions": [
+    {
+     "type": "Change Value Price",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "product"
+     ],
+     "options": [
+      "Access doors"
+     ],
+     "expr": "NUMBER(listPrice)"
+    }
+   ]
+  },
+  {
+   "key": "1121",
+   "label": null,
+   "parent": null,
+   "sequence": 1,
+   "active": 1,
+   "result": 0,
+   "when": "LOADDEFAULTS()",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "material",
+      "ductOpeningUndersize",
+      "doorDepthSelect",
+      "gasket",
+      "finish",
+      "insulation",
+      "safetyWireSelect"
+     ],
+     "options": [
+      "GI",
+      "25mm",
+      "Neoprene",
+      "Mill Finish",
+      "Fiberglass",
+      "No"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "product"
+     ],
+     "options": [
+      "Access doors"
+     ]
+    },
+    {
+     "type": "Include Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "doorConstruction",
+      "frameConstruction"
+     ],
+     "expr": "'Standard'"
+    }
+   ]
+  },
+  {
+   "key": "1122",
+   "label": null,
+   "parent": null,
+   "sequence": 2,
+   "active": 1,
+   "result": 0,
+   "when": "true",
+   "actions": [
+    {
+     "type": "Hide Bundle Property",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "basePrice",
+      "search",
+      "return"
+     ]
+    },
+    {
+     "type": "Lock Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelItem",
+      "model",
+      "material",
+      "hingeMaterial",
+      "hingeType",
+      "frameThickness",
+      "frameConstruction",
+      "doorThickness",
+      "ductOpeningUndersize",
+      "doorDepthSelect",
+      "doorConstruction",
+      "gasket",
+      "finish",
+      "insulation",
+      "safetyWireSelect",
+      "countryWiseCost",
+      "product",
+      "insulationCostLookup",
+      "hingeCostLookup"
+     ]
+    },
+    {
+     "type": "Include Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelItem"
+     ],
+     "expr": "SELECTEDVALUE(model)"
+    },
+    {
+     "type": "Show Info",
+     "sequence": 0,
+     "active": 0,
+     "result": 1,
+     "expr": "OBJECTATTRIBUTEV(countryWiseCost,'$[GI]','cost')"
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameStripWidth",
+      "materialCost",
+      "materialDensity",
+      "maxSideCategory",
+      "doorDepth"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "doorProcessingMinutes",
+      "frameProcessingMinutes",
+      "fittingsProcessingMinutes",
+      "doorWeldingMinutes",
+      "frameWeldingMinutes",
+      "totalLabourMinutes"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "doorMetalArea",
+      "doorWeight",
+      "doorMetalCost",
+      "insulationArea",
+      "insulationCost",
+      "handleCost",
+      "camLockQty",
+      "camLockCost",
+      "hingeUom",
+      "hingeQty",
+      "hingeCost",
+      "doorCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalMaterialCost",
+      "totalAssemblyCost",
+      "powderCoatingCost",
+      "overhead",
+      "totalCost",
+      "listPrice"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameSlitSize",
+      "frameLength",
+      "frameArea",
+      "frameWeight",
+      "frameMetalCost",
+      "frameGasket",
+      "frameGasketCost",
+      "safetyWireCost",
+      "frameCost",
+      "roundFittingArea",
+      "roundFittingWeight",
+      "roundFittingMetalCost",
+      "safetyWire"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelItem",
+      "productDescription",
+      "countryWiseCost",
+      "product",
+      "insulationCostLookup",
+      "hingeCostLookup",
+      "modelDescription"
+     ]
+    },
+    {
+     "type": "Disable Bundle Property",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "title"
+     ]
+    },
+    {
+     "type": "Disable Field Quantity",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "countryWiseCost",
+      "doorConstruction",
+      "doorDepth",
+      "doorThickness",
+      "ductOpeningUndersize",
+      "finish",
+      "frameConstruction",
+      "frameThickness",
+      "gasket",
+      "hingeMaterial",
+      "hingeType",
+      "insulation",
+      "material",
+      "model",
+      "product",
+      "safetyWireSelect"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 4,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "attachment",
+      "subcategory"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1123",
+   "label": null,
+   "parent": null,
+   "sequence": 3,
+   "active": 1,
+   "result": 0,
+   "when": "ISCHANGED(model)",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "subcategory"
+     ],
+     "expr": "EVALUATE('\nvar model = input.arg1;\nif(model == \"AD-100\" || model == \"AD-105\") return \"Rectangular Access Door\";\nif(model == \"AD-200\" || model == \"AD-205\") return \"Round Access Door\";\nreturn \"\";',\nSELECTEDVALUE(model))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "attachment"
+     ],
+     "expr": "EVALUATE('\nvar model = input.arg1;\nif(model == \"AD-105\" || model == \"AD-205\") return \"Hinged\";\nif(model == \"AD-100\" || model == \"AD-200\") return \"Hingless\";\nreturn \"\";\n',\nSELECTEDVALUE(model))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 4,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelDescription"
+     ],
+     "expr": "CONCAT(TEXT(subcategory),' - ',SELECTEDVALUE(model))"
+    }
+   ]
+  },
+  {
+   "key": "1129",
+   "label": null,
+   "parent": "1122",
+   "sequence": 4,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(model,'$[AD-200]','$[AD-205]')",
+   "actions": [
+    {
+     "type": "Show Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "ductDiameterDi"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 2,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "ductDiameterDi"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1130",
+   "label": null,
+   "parent": null,
+   "sequence": 4,
+   "active": 1,
+   "result": 0,
+   "when": "ISCHANGED(model) && NOT(CONTAINS(model,'$[AD-200]','$[AD-205]')",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "ductDiameterDi"
+     ],
+     "expr": "0"
+    }
+   ]
+  },
+  {
+   "key": "IMC230773",
+   "label": null,
+   "parent": null,
+   "sequence": 5,
+   "active": 1,
+   "result": 1,
+   "when": "(ISCHANGED(model)\n||\nISCHANGED(material))\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "hingeMaterial"
+     ],
+     "expr": "IIF( CONTAINS(material,'$[AZ]','$[GI]'), 'Brass', IIF(CONTAINS(material,'$[AL]'), 'AL', IIF(CONTAINS(material,'$[SS304L]','$[SS316L]'), 'SS','')))"
+    }
+   ]
+  },
+  {
+   "key": "IMC230774",
+   "label": null,
+   "parent": null,
+   "sequence": 6,
+   "active": 1,
+   "result": 1,
+   "when": "TEXT(attachment) != 'Hinged'  && NOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "hingeType"
+     ],
+     "options": [
+      "NA"
+     ]
+    },
+    {
+     "type": "Reset Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "hingeMaterial"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1124",
+   "label": null,
+   "parent": null,
+   "sequence": 7,
+   "active": 0,
+   "result": 0,
+   "when": "TEXT(attachment) == 'Hinged'",
+   "actions": [
+    {
+     "type": "Hide Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "hingeType"
+     ],
+     "options": [
+      "NA"
+     ]
+    },
+    {
+     "type": "Show Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "hingeType"
+     ],
+     "options": [
+      "NA"
+     ]
+    },
+    {
+     "type": "Show Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "hingeMaterial",
+      "hingeType"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 2,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "hingeMaterial",
+      "hingeType"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1127",
+   "label": null,
+   "parent": "1122",
+   "sequence": 8,
+   "active": 1,
+   "result": 1,
+   "when": "(TEXT(attachment) == 'Hinged') && NOT(CONTAINS(hingeType,'$[Continuous]','$[Standard]'))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Hinge type must be selected between Standard/Continuous'"
+    }
+   ]
+  },
+  {
+   "key": "1128",
+   "label": null,
+   "parent": null,
+   "sequence": 9,
+   "active": 1,
+   "result": 0,
+   "when": "ISCHANGED(material)",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "materialCost"
+     ],
+     "expr": "IIF(\n(SELECTEDVALUE(material)=='SS304L'), \nCFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[SS304L]','cost')\n),\nIIF(\n    (SELECTEDVALUE(material)=='SS316L'), \nCFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[SS316L]','cost')\n),\nIIF(\n    (SELECTEDVALUE(material)=='AL'), \nCFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[AL]','cost')\n),\nIIF(\n    (SELECTEDVALUE(material)=='AZ'), \nCFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[AZ]','cost')\n),\nCFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[GI]','cost')\n)\n)\n)\n)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "materialDensity"
+     ],
+     "expr": "IIF(CONTAINS(material, '$[AL]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[AL/EALDensityFactor]','cost')),\nIIF(CONTAINS(material, '$[SS304L]','$[SS316L]'),\n     CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Density Factor]','cost')),\n     CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI Density Factor]','cost'))\n )\n )"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 4,
+     "active": 0,
+     "result": 1,
+     "fields": [
+      "hingeMaterial"
+     ],
+     "expr": "IIF( CONTAINS(material,'$[AZ]','$[GI]'), 'Brass', IIF(CONTAINS(material,'$[AL]'), 'AL', IIF(CONTAINS(material,'$[SS304L]','$[SS316L]'), 'SS','')))"
+    }
+   ]
+  },
+  {
+   "key": "1125",
+   "label": null,
+   "parent": null,
+   "sequence": 10,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(material,'$[AL]') && ISCHANGED(material) && NOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameThickness"
+     ],
+     "options": [
+      "1.00"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "doorThickness"
+     ],
+     "options": [
+      "0.80"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1126",
+   "label": null,
+   "parent": null,
+   "sequence": 11,
+   "active": 1,
+   "result": 0,
+   "when": "NOT(CONTAINS(material,'$[AL]')) \n&& \nISCHANGED(material)\n&&\nNOT(ISIMPORT())\n",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameThickness"
+     ],
+     "options": [
+      "0.70"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "doorThickness"
+     ],
+     "options": [
+      "0.55"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1134",
+   "label": null,
+   "parent": null,
+   "sequence": 12,
+   "active": 1,
+   "result": 0,
+   "when": "ISCHANGED(ductOpeningUndersize)",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameStripWidth"
+     ],
+     "expr": "IIF(CONTAINS(ductOpeningUndersize,'$[W-25mm, H-25mm]'),25, IIF(CONTAINS(ductOpeningUndersize,'$[W-50mm, H-50mm]'),50,0))"
+    }
+   ]
+  },
+  {
+   "key": "1131",
+   "label": null,
+   "parent": "1122",
+   "sequence": 13,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(model,'$[AD-200]','$[AD-205]') && ((NUMBER(ductDiameterDi) == 0 ) || (ISNULLORBLANK(ductDiameterDi)))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please enter duct diameter'"
+    }
+   ]
+  },
+  {
+   "key": "1132",
+   "label": null,
+   "parent": "1122",
+   "sequence": 14,
+   "active": 1,
+   "result": 1,
+   "when": "(NUMBER(ductDiameterDi) >0) \n&& \n(\n    ((NUMBER(doorHeightHi) + 100) < NUMBER(ductDiameterDi)) \n    || \n    ((NUMBER(doorHeightHi) - 25) > NUMBER(ductDiameterDi))\n)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Duct Diameter exceeds the limit'"
+    }
+   ]
+  },
+  {
+   "key": "1135",
+   "label": null,
+   "parent": null,
+   "sequence": 15,
+   "active": 1,
+   "result": 0,
+   "when": "ISCHANGED(doorDepthSelect)",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "doorDepth"
+     ],
+     "expr": "IIF(CONTAINS(doorDepthSelect,'$[25mm]'),25, IIF(CONTAINS(doorDepthSelect,'$[50mm]'),50,0))"
+    }
+   ]
+  },
+  {
+   "key": "1133",
+   "label": null,
+   "parent": null,
+   "sequence": 16,
+   "active": 1,
+   "result": 0,
+   "when": "(NUMBER(doorHeightHi) > 0) && (NUMBER(doorWidthWi) > 0) && (COUNT(model) > 0)",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "maxSideCategory"
+     ],
+     "expr": "EVALUATE('\nvar maxVal = Math.max(input.arg1,input.arg2);\nif(maxVal <= 300) return \"0-300\";\nif(maxVal <= 450) return \"301-450\";\nif(maxVal <= 600) return \"451-600\";\nreturn \"NA\";\n',\nNUMBER(doorWidthWi),\nNUMBER(doorHeightHi)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "doorMetalArea"
+     ],
+     "expr": "((NUMBER(doorWidthWi)+(2*NUMBER(doorDepth)))*(NUMBER(doorHeightHi)+(2*NUMBER(doorDepth))))*2/1000000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "doorWeight"
+     ],
+     "expr": "SELECTEDVALUE(doorThickness)*NUMBER(doorMetalArea)*NUMBER(materialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 4,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "doorMetalCost"
+     ],
+     "expr": "NUMBER(doorWeight)\n*NUMBER(materialCost)*\n(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Door Wastage]','cost')))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 5,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "insulationCostLookup"
+     ],
+     "expr": "CONCAT(SELECTEDVALUE(insulation),' ',SELECTEDVALUE(doorDepthSelect))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 6,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "insulationArea"
+     ],
+     "expr": "IIF(CONTAINS(insulation,'$[Packless]'),0,NUMBER(doorMetalArea)/2)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 7,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "insulationCost"
+     ],
+     "expr": "IIF(\nCONTAINS(insulation,'$[Packless]'),\n0,\nNUMBER(insulationArea)\n*\nCFLOAT(OBJECTATTRIBUTEF(insulationCostLookup,'cost')\n*\n(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Accessories Wastage (AD)]','cost')\n)\n)\n)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 8,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "handleCost"
+     ],
+     "expr": "IIF(\nCONTAINS(material,'$[AZ]','$[GI]'),\nCFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[GI & AZ Handle Cost (per PC)]','cost')\n),\nIIF(CONTAINS(material,'$[AL]'),\nCFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[AL Handle Cost (per PC)]','cost')\n),\nIIF(CONTAINS(material,'$[SS304L]','$[SS316L]'),\nCFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[SS Handle Cost (per PC)]','cost')\n),0)))\n*(1+CFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[Accessories Wastage (AD)]','cost')\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 9,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "camLockQty"
+     ],
+     "expr": "EVALUATE('\nvar cat = input.arg1;\nif(cat == \"451-600 AD-100\") return 4;\nif(cat == \"0-300 AD-105\" || cat == \"0-300 AD-200\" || cat == \"0-300 AD-205\") return 1;\nreturn 2;\n',\nCONCAT(TEXT(maxSideCategory),' ',SELECTEDVALUE(model))\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 10,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "camLockCost"
+     ],
+     "expr": "NUMBER(camLockQty) \n* \nIIF(\nCONTAINS(material,'$[AZ]','$[GI]'),\nCFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[GI & AZ Cam Lock Cost (per PC)]','cost')\n),\nIIF(CONTAINS(material,'$[AL]'),\nCFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[AL Cam Lock Cost (per PC)]','cost')\n),\nIIF(CONTAINS(material,'$[SS304L]','$[SS316L]'),\nCFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[SS Cam Lock Cost (per PC)]','cost')\n),0)))\n*\n(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Accessories Wastage (AD)]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 11,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "hingeUom"
+     ],
+     "expr": "IIF((TEXT(attachment) =='Hingless'),'N/A',IIF(CONTAINS(hingeType,'$[Standard]'),'Ea','m'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 12,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "hingeQty"
+     ],
+     "expr": "IIF((TEXT(attachment)=='Hingless'),0,IIF(CONTAINS(hingeType,'$[Continuous]'),NUMBER(doorHeightHi)/1000,IIF((CONTAINS(hingeType,'$[Standard]') && NUMBER(doorHeightHi)<=450),2,3)))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 13,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "hingeCostLookup"
+     ],
+     "expr": "CONCAT(SELECTEDVALUE(hingeMaterial),' ',SELECTEDVALUE(hingeType),' Hinge')"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 14,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "hingeCost"
+     ],
+     "expr": "IIF(\n(TEXT(attachment)=='Hingless'),\n0,\nNUMBER(hingeQty)\n* \nOBJECTATTRIBUTEF(hingeCostLookup,'cost')\n*\n(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Accessories Wastage (AD)]','cost')))\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 15,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "doorCost"
+     ],
+     "expr": "NUMBER(doorMetalCost)\n+\nNUMBER(insulationCost)\n+\nNUMBER(hingeCost)\n+\nNUMBER(camLockCost)\n+\nNUMBER(handleCost)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 16,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameSlitSize"
+     ],
+     "expr": "NUMBER(frameStripWidth)+25+(2*NUMBER(doorDepth))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 17,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameLength"
+     ],
+     "expr": "((NUMBER(doorWidthWi)+NUMBER(doorHeightHi))*2+25)/1000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 18,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameArea"
+     ],
+     "expr": "NUMBER(frameLength)*NUMBER(frameSlitSize)/1000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 19,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameWeight"
+     ],
+     "expr": "CFLOAT(SELECTEDVALUE(frameThickness))*NUMBER(frameArea)*NUMBER(materialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 20,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameMetalCost"
+     ],
+     "expr": "NUMBER(frameWeight)*NUMBER(materialCost)\n*\n(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Frame Wastage (AD)]','cost')\n)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 21,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameGasket"
+     ],
+     "expr": "(NUMBER(doorWidthWi)+NUMBER(doorHeightHi))*2/1000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 22,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameGasketCost"
+     ],
+     "expr": "NUMBER(frameGasket)\n*\n(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Accessories Wastage (AD)]','cost')\n)\n)\n*\nIIF(CONTAINS(gasket,'$[Neoprene]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Neoprene Gasket]','cost')\n),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Polyurethane Gasket]','cost')\n))\n*\n(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Accessories Wastage (AD)]','cost')\n)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 23,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "safetyWire"
+     ],
+     "expr": "IIF(CONTAINS(safetyWireSelect,'$[Yes]'),1,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 24,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "safetyWireCost"
+     ],
+     "expr": "NUMBER(safetyWire)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Safety Wire]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 25,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameCost"
+     ],
+     "expr": "NUMBER(frameMetalCost)\n+\nNUMBER(safetyWireCost)\n+\nNUMBER(frameGasketCost)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 26,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "roundFittingArea"
+     ],
+     "expr": "IIF(CONTAINS(model,'$[AD-200]','$[AD-205]'),((NUMBER(doorWidthWi) - 25)+(3.14*NUMBER(ductDiameterDi)/2))*2/1000*(NUMBER(ductDiameterDi)+100)/1000,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 27,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "roundFittingWeight"
+     ],
+     "expr": "0.8*NUMBER(roundFittingArea)*NUMBER(materialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 28,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "roundFittingMetalCost"
+     ],
+     "expr": "NUMBER(roundFittingWeight)*NUMBER(materialCost) * (1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Frame Wastage (AD)]','cost') ) )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 29,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalMaterialCost"
+     ],
+     "expr": "NUMBER(doorCost)\n+\nNUMBER(frameCost)\n+\nNUMBER(roundFittingMetalCost)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 30,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "doorProcessingMinutes"
+     ],
+     "expr": "EVALUATE(' return Math.max(input.arg1,input.arg2);', CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Min Door Fabrication Minutes]','cost')), NUMBER(doorMetalArea) * IIF( CONTAINS(material,'$[AZ]','$[GI]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[GI & AZ Door Fabrication Minutes (per sqm)]','cost') ), IIF(CONTAINS(material,'$[AL]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[AL Door Fabrication Minutes (per sqm)]','cost') ), IIF(CONTAINS(material,'$[SS304L]','$[SS316L]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[SS Door Fabrication Minutes (per sqm)]','cost') ),0))) )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 31,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fittingsProcessingMinutes"
+     ],
+     "expr": "EVALUATE(' return Math.max(input.arg1,input.arg2);', 10, NUMBER(roundFittingArea) * IIF( CONTAINS(material,'$[AZ]','$[GI]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[GI & AZ Fitting Fabrication Minutes (per m)]','cost') ), IIF(CONTAINS(material,'$[AL]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[AL Fitting Fabrication Minutes (per m)]','cost') ), IIF(CONTAINS(material,'$[SS304L]','$[SS316L]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[SS Fitting Fabrication Minutes (per m)]','cost') ),0))) )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 32,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameProcessingMinutes"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fixed Frame Fabrication Minutes]','cost')) + ( NUMBER(frameLength) * IIF( CONTAINS(material,'$[AZ]','$[GI]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[GI & AZ Frame Fabrication Minutes (per m)]','cost') ), IIF(CONTAINS(material,'$[AL]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[AL Frame Fabrication Minutes (per m)]','cost') ), IIF(CONTAINS(material,'$[SS304L]','$[SS316L]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[SS Frame Fabrication Minutes (per m)]','cost') ),0))))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 33,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "doorWeldingMinutes"
+     ],
+     "expr": "IIF( (CONTAINS(doorConstruction,'$[Standard]')), 0, IIF( CONTAINS(material,'$[AZ]','$[GI]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[GI & AZ Door Welding Minutes (per door)]','cost') ), IIF(CONTAINS(material,'$[AL]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[AL Door Welding Minutes (per door)]','cost') ), IIF(CONTAINS(material,'$[SS304L]','$[SS316L]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[SS Door Welding Minutes (per door)]','cost') ),0))) )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 34,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameWeldingMinutes"
+     ],
+     "expr": "IIF( (CONTAINS(frameConstruction,'$[Standard]')), 0, IIF( CONTAINS(material,'$[AZ]','$[GI]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[GI & AZ Frame Welding Minutes (per frame)]','cost') ), IIF(CONTAINS(material,'$[AL]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[AL Frame Welding Minutes (per frame)]','cost') ), IIF(CONTAINS(material,'$[SS304L]','$[SS316L]'), CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[SS Frame Welding Minutes (per frame)]','cost') ),0))) )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 35,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalLabourMinutes"
+     ],
+     "expr": "NUMBER(doorProcessingMinutes)\n+\nNUMBER(frameProcessingMinutes)\n+\nNUMBER(fittingsProcessingMinutes)\n+\nNUMBER(doorWeldingMinutes)\n+\nNUMBER(frameWeldingMinutes)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 36,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalAssemblyCost"
+     ],
+     "expr": "\t((NUMBER(doorProcessingMinutes) + NUMBER(frameProcessingMinutes) + NUMBER(fittingsProcessingMinutes)) /60*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Cost per Hour (AD)]','cost'))) + ((NUMBER(doorWeldingMinutes) + NUMBER(frameWeldingMinutes))/60*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Welding Rate per Hour]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 37,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "powderCoatingCost"
+     ],
+     "expr": "\tIIF(CONTAINS(finish,'$[Powder Coated]'),NUMBER(doorWidthWi)*NUMBER(doorHeightHi)/1000000*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Powder Coating Cost]','cost')),0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 38,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "overhead"
+     ],
+     "expr": "\t((NUMBER(totalMaterialCost)+NUMBER(totalAssemblyCost)+NUMBER(powderCoatingCost))*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Overhead Percentage (AD)]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 39,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalCost"
+     ],
+     "expr": "NUMBER(totalMaterialCost)\n+\nNUMBER(totalAssemblyCost)\n+\nNUMBER(powderCoatingCost)\n+\nNUMBER(overhead)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 40,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "listPrice"
+     ],
+     "expr": "EVALUATE(' return Math.ceil(input.arg1);', NUMBER(totalCost)/(1-CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Profit (AD)]','cost'))) )"
+    },
+    {
+     "type": "Change Value Price",
+     "sequence": 41,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "product"
+     ],
+     "options": [
+      "Access doors"
+     ],
+     "expr": "NUMBER(listPrice)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 42,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "productDescription"
+     ],
+     "expr": "CONCAT(\n    IIF((NUMBER(doorWidthWi) > 0), CONCAT( 'W:' , NUMBER(doorWidthWi)) , ''),\n    IIF((NUMBER(doorHeightHi) > 0), CONCAT( ' H:' , NUMBER(doorHeightHi)) , ''),\n    IIF((NUMBER(ductDiameterDi) > 0), CONCAT( ' Duct Dia:' , NUMBER(ductDiameterDi)) , ''),\n    IIF((COUNT(material) > 0), CONCAT( ' - ' ,SELECTEDVALUE(material)) , ''),\n    ' ',\n    SELECTEDVALUE(model),\n    ' ',\n    TEXT(subcategory)\n)"
+    },
+    {
+     "type": "Change Bundle Title",
+     "sequence": 43,
+     "active": 1,
+     "result": 1,
+     "expr": "TEXT(productDescription)"
+    }
+   ]
+  },
+  {
+   "key": "1136",
+   "label": null,
+   "parent": null,
+   "sequence": 17,
+   "active": 1,
+   "result": 0,
+   "when": "EVALUATE(' var roles = input.arg1.split(\",\"); if(roles.indexOf(\"OneCPQ Admin\") != -1) return false; return true; ',USERINFO('roles'))",
+   "actions": [
+    {
+     "type": "Hide Structure",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "@structure:Lookups",
+      "@structure:Doors",
+      "@structure:Frames & Fittings",
+      "@structure:Processing Minutes",
+      "@structure:Cost",
+      "@structure:Factors"
+     ]
+    },
+    {
+     "type": "Show List View",
+     "sequence": 1,
+     "active": 1,
+     "result": 1
+    },
+    {
+     "type": "Hide Group",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "@group:Cost"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1138",
+   "label": null,
+   "parent": "1122",
+   "sequence": 18,
+   "active": 1,
+   "result": 1,
+   "when": "COUNT(model) ==0",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select model'"
+    }
+   ]
+  }
+ ],
+ "mappings": []
+}

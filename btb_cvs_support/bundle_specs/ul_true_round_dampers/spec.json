@@ -1,0 +1,6303 @@
+{
+ "bundle": {
+  "label": "UL True Round Dampers",
+  "external_id": "01tHp00000BZ6EQIA1",
+  "export_template": [
+   "subcategory",
+   "modelDescription",
+   "leakageClass",
+   "rating",
+   "frameMaterialType",
+   "frameThicknessLookup",
+   "bladeThicknessLookup",
+   "diameter",
+   "frameDepth",
+   "transitionType",
+   "transitionDiameter",
+   "transitionLength",
+   "transitionDiameter2",
+   "transitionLength2",
+   "retainingPlate",
+   "damperOperator",
+   "fuseLinkOptions",
+   "linkTemperature",
+   "mtsOption",
+   "bladeSwitchPackage",
+   "actuatorBrand",
+   "actuatorMounting",
+   "actuatorPower",
+   "auxSwitch",
+   "actuatorTorqueSize",
+   "junctionBox",
+   "tagRef",
+   "notes"
+  ]
+ },
+ "items": {
+  "anchor": [
+   "SKU34"
+  ],
+  "catalog_categories": [
+   "CAT3"
+  ]
+ },
+ "cost_objects": {
+  "doctype": "FTOCountryWiseCost",
+  "label_field": "product_name",
+  "rows": [
+   {
+    "product_name": "GI",
+    "item_code": "GI",
+    "unit": "Kg",
+    "cost": 4.0,
+    "category": "Coil",
+    "boq_identifier": "GI",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost1"
+   },
+   {
+    "product_name": "UL Label Cost",
+    "item_code": "UL Label Cost",
+    "unit": "Ea",
+    "cost": 8.0,
+    "category": "Sticker",
+    "boq_identifier": "UL Label Cost",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost100"
+   },
+   {
+    "product_name": "STOR 165F",
+    "item_code": "165F",
+    "unit": "Ea",
+    "cost": 14.0,
+    "category": "Fuse Link",
+    "boq_identifier": "STOR 165F",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost101"
+   },
+   {
+    "product_name": "STOR 212F",
+    "item_code": "212F",
+    "unit": "Ea",
+    "cost": 14.0,
+    "category": "Fuse Link",
+    "boq_identifier": "STOR 212F",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost102"
+   },
+   {
+    "product_name": "STOR 250F",
+    "item_code": "250F",
+    "unit": "Ea",
+    "cost": 17.0,
+    "category": "Fuse Link",
+    "boq_identifier": "STOR 250F",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost103"
+   },
+   {
+    "product_name": "STOR 350F",
+    "item_code": "350F",
+    "unit": "Ea",
+    "cost": 17.0,
+    "category": "Fuse Link",
+    "boq_identifier": "STOR 350F",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost104"
+   },
+   {
+    "product_name": "STOR PFL",
+    "item_code": "PFL",
+    "unit": "Ea",
+    "cost": 120.0,
+    "category": "Fuse Link",
+    "boq_identifier": "STOR PFL",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost105"
+   },
+   {
+    "product_name": "DTOR 165/212F",
+    "item_code": "165/212F",
+    "unit": "Ea",
+    "cost": 21.0,
+    "category": "Fuse Link",
+    "boq_identifier": "DTOR 165/212F",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost106"
+   },
+   {
+    "product_name": "DTOR 165/250F",
+    "item_code": "165/250F",
+    "unit": "Ea",
+    "cost": 21.0,
+    "category": "Fuse Link",
+    "boq_identifier": "DTOR 165/250F",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost107"
+   },
+   {
+    "product_name": "DTOR 165/350F",
+    "item_code": "165/350F",
+    "unit": "Ea",
+    "cost": 21.0,
+    "category": "Fuse Link",
+    "boq_identifier": "DTOR 165/350F",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost108"
+   },
+   {
+    "product_name": "DTOR 212/250F",
+    "item_code": "212/250F",
+    "unit": "Ea",
+    "cost": 23.0,
+    "category": "Fuse Link",
+    "boq_identifier": "DTOR 212/250F",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost109"
+   },
+   {
+    "product_name": "DTOR 212/350F",
+    "item_code": "212/350F",
+    "unit": "Ea",
+    "cost": 23.0,
+    "category": "Fuse Link",
+    "boq_identifier": "DTOR 212/350F",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost110"
+   },
+   {
+    "product_name": "Bronze Oilite Jackshaft Bushes 1/2 Inch",
+    "item_code": "2290113",
+    "unit": "Ea",
+    "cost": 0.97,
+    "category": "Accessories",
+    "boq_identifier": "Bronze Oilite Jackshaft Bushes 1/2 Inch",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost111"
+   },
+   {
+    "product_name": "Anchor Bracket",
+    "item_code": "Anchor Bracket",
+    "unit": "Ea",
+    "cost": 2.2,
+    "category": "Accessories",
+    "boq_identifier": "Anchor Bracket",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost113"
+   },
+   {
+    "product_name": "SS304L",
+    "item_code": "SS304L",
+    "unit": "Kg",
+    "cost": 9.5,
+    "category": "Coil",
+    "boq_identifier": "SS304L",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost2"
+   },
+   {
+    "product_name": "GI VCD Handle (V) Square 10x10",
+    "item_code": "2230101",
+    "unit": "Ea",
+    "cost": 1.65,
+    "category": "Accessories",
+    "boq_identifier": "GI VCD Handle (V) Square 10x10",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost23"
+   },
+   {
+    "product_name": "AF-FD Linkage Bar GI CVSS 12.7X367X3.5mm 9169",
+    "item_code": "2290128",
+    "unit": "Ea",
+    "cost": 1.93,
+    "category": "Accessories",
+    "boq_identifier": "AF-FD Linkage Bar GI CVSS 12.7X367X3.5mm 9169",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost255"
+   },
+   {
+    "product_name": "Fusible Link 73C (165F) Globe - JS 2.75\" Hook",
+    "item_code": "2290013",
+    "unit": "Ea",
+    "cost": 3.84,
+    "category": "Fuse Link",
+    "boq_identifier": "MFL 165F",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost280"
+   },
+   {
+    "product_name": "Fusible Link 100C (212F) Globe - JS 2.75\" Hook",
+    "item_code": "2290080",
+    "unit": "Ea",
+    "cost": 3.84,
+    "category": "Fuse Link",
+    "boq_identifier": "MFL 212F",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost282"
+   },
+   {
+    "product_name": "Momemtory Test Switch (MTS)",
+    "item_code": "MTS",
+    "unit": "Ea",
+    "cost": 11.5,
+    "category": "Switches",
+    "boq_identifier": "Momemtory Test Switch (MTS)",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost284"
+   },
+   {
+    "product_name": "Installation Minutes per Junction Box",
+    "item_code": "Installation Minutes per Junction Box",
+    "unit": "Minutes",
+    "cost": 90.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Installation Minutes per Junction Box (ULRD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost285"
+   },
+   {
+    "product_name": "SS316L",
+    "item_code": "SS316L",
+    "unit": "Kg",
+    "cost": 16.5,
+    "category": "Coil",
+    "boq_identifier": "SS316L",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost3"
+   },
+   {
+    "product_name": "Conversion sqft to sqm",
+    "item_code": "Conversion sqft to sqm",
+    "unit": "Sqm",
+    "cost": 0.092903,
+    "category": "Conversion",
+    "boq_identifier": "Conversion sqft to sqm",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost31"
+   },
+   {
+    "product_name": "Conversion Inch to mm",
+    "item_code": "Conversion Inch to mm",
+    "unit": "mm",
+    "cost": 25.0,
+    "category": "Conversion",
+    "boq_identifier": "Conversion Inch to mm",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost32"
+   },
+   {
+    "product_name": "Belimo 22lbin-2.5Nm, 230V Spring Return-On/Off , Actuator w/o Aux TF230",
+    "item_code": "2290517-TF230",
+    "unit": "Ea",
+    "cost": 370.0,
+    "category": "Actuator",
+    "boq_identifier": "2290517-TF230",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost405"
+   },
+   {
+    "product_name": "Belimo 22lbin-2.5Nm, 24V Spring Return-On/Off , Actuator w/o Aux TF24",
+    "item_code": "2290516-TF24",
+    "unit": "Ea",
+    "cost": 336.0,
+    "category": "Actuator",
+    "boq_identifier": "2290516-TF24",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost406"
+   },
+   {
+    "product_name": "Belimo 22lbin-2.5Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux TF24-SR",
+    "item_code": "2290515-TF24-SR",
+    "unit": "Ea",
+    "cost": 453.0,
+    "category": "Actuator",
+    "boq_identifier": "2290515-TF24-SR",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost407"
+   },
+   {
+    "product_name": "Belimo 35lbin-4Nm, 230V Spring Return-On/Off , Actuator w/o Aux LF230A",
+    "item_code": "2290514-LF230A",
+    "unit": "Ea",
+    "cost": 448.0,
+    "category": "Actuator",
+    "boq_identifier": "2290514-LF230A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost408"
+   },
+   {
+    "product_name": "Belimo 35lbin-4Nm, 24V Spring Return-On/Off , Actuator w/o Aux LF24",
+    "item_code": "2290513-LF24",
+    "unit": "Ea",
+    "cost": 411.0,
+    "category": "Actuator",
+    "boq_identifier": "2290513-LF24",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost409"
+   },
+   {
+    "product_name": "Belimo 35lbin-4Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux LF24-SR",
+    "item_code": "2290512-LF24-SR",
+    "unit": "Ea",
+    "cost": 553.0,
+    "category": "Actuator",
+    "boq_identifier": "2290512-LF24-SR",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost410"
+   },
+   {
+    "product_name": "Belimo 45lbin-5Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux LM230A",
+    "item_code": "2290511-LM230A",
+    "unit": "Ea",
+    "cost": 270.0,
+    "category": "Actuator",
+    "boq_identifier": "2290511-LM230A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost411"
+   },
+   {
+    "product_name": "Belimo 45lbin-5Nm, 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux LM24A",
+    "item_code": "2290510-LM24A",
+    "unit": "Ea",
+    "cost": 266.0,
+    "category": "Actuator",
+    "boq_identifier": "2290510-LM24A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost412"
+   },
+   {
+    "product_name": "Belimo 45lbin-5Nm, 230V Non Spring Return-On/Off + Floating , Actuator 2 Aux LM230A -S",
+    "item_code": "229096-LM230A -S",
+    "unit": "Ea",
+    "cost": 315.0,
+    "category": "Actuator",
+    "boq_identifier": "229096-LM230A -S",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost413"
+   },
+   {
+    "product_name": "Belimo 45lbin-5Nm, 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux LM24A -S",
+    "item_code": "2290465-LM24A -S",
+    "unit": "Ea",
+    "cost": 305.0,
+    "category": "Actuator",
+    "boq_identifier": "2290465-LM24A -S",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost414"
+   },
+   {
+    "product_name": "Siemens 45lbin-5Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GDB341.1E",
+    "item_code": "2290341-GDB341.1E",
+    "unit": "Ea",
+    "cost": 200.0,
+    "category": "Actuator",
+    "boq_identifier": "2290341-GDB341.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost415"
+   },
+   {
+    "product_name": "Siemens 45lbin-5Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GDB346.1E",
+    "item_code": "2290495-GDB346.1E",
+    "unit": "Ea",
+    "cost": 240.0,
+    "category": "Actuator",
+    "boq_identifier": "2290495-GDB346.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost416"
+   },
+   {
+    "product_name": "Belimo 90lbin-10Nm, 230V Spring Return-On/Off , Actuator w/o Aux NF230A",
+    "item_code": "2290509-NF230A",
+    "unit": "Ea",
+    "cost": 621.0,
+    "category": "Actuator",
+    "boq_identifier": "2290509-NF230A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost417"
+   },
+   {
+    "product_name": "Belimo 90lbin-10Nm, 24V Spring Return-On/Off , Actuator w/o Aux NF24A",
+    "item_code": "2290508-NF24A",
+    "unit": "Ea",
+    "cost": 530.0,
+    "category": "Actuator",
+    "boq_identifier": "2290508-NF24A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost418"
+   },
+   {
+    "product_name": "Belimo 90lbin-10Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux NM230A",
+    "item_code": "2290270-NM230A",
+    "unit": "Ea",
+    "cost": 333.0,
+    "category": "Actuator",
+    "boq_identifier": "2290270-NM230A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost419"
+   },
+   {
+    "product_name": "Belimo 90lbin-10Nm, 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux NM24A",
+    "item_code": "2290507-NM24A",
+    "unit": "Ea",
+    "cost": 322.0,
+    "category": "Actuator",
+    "boq_identifier": "2290507-NM24A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost420"
+   },
+   {
+    "product_name": "Belimo 90lbin-10Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux NF24A-SR",
+    "item_code": "2290506-NF24A-SR",
+    "unit": "Ea",
+    "cost": 618.0,
+    "category": "Actuator",
+    "boq_identifier": "2290506-NF24A-SR",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost421"
+   },
+   {
+    "product_name": "Siemens 90lbin-10Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GLB341.1E",
+    "item_code": "2290499-GLB341.1E",
+    "unit": "Ea",
+    "cost": 245.0,
+    "category": "Actuator",
+    "boq_identifier": "2290499-GLB341.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost422"
+   },
+   {
+    "product_name": "Siemens 90lbin-10Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GLB346.1E",
+    "item_code": "2290496-GLB346.1E",
+    "unit": "Ea",
+    "cost": 290.0,
+    "category": "Actuator",
+    "boq_identifier": "2290496-GLB346.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost423"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux SM230A",
+    "item_code": "2290276-SM230A",
+    "unit": "Ea",
+    "cost": 382.0,
+    "category": "Actuator",
+    "boq_identifier": "2290276-SM230A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost424"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux SM24A",
+    "item_code": "2290505-SM24A",
+    "unit": "Ea",
+    "cost": 373.0,
+    "category": "Actuator",
+    "boq_identifier": "2290505-SM24A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost425"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 230V Non Spring Return-On/Off + Floating , Actuator 2 Aux SM230A -S",
+    "item_code": "229098-SM230A -S",
+    "unit": "Ea",
+    "cost": 480.0,
+    "category": "Actuator",
+    "boq_identifier": "229098-SM230A -S",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost426"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux SF24A-SR",
+    "item_code": "2290504-SF24A-SR",
+    "unit": "Ea",
+    "cost": 740.0,
+    "category": "Actuator",
+    "boq_identifier": "2290504-SF24A-SR",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost427"
+   },
+   {
+    "product_name": "Siemens 180lbin-20Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GEB341.1E",
+    "item_code": "2290500-GEB341.1E",
+    "unit": "Ea",
+    "cost": 310.0,
+    "category": "Actuator",
+    "boq_identifier": "2290500-GEB341.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost428"
+   },
+   {
+    "product_name": "Siemens 180lbin-20Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GEB346.1E",
+    "item_code": "2290497-GEB346.1E",
+    "unit": "Ea",
+    "cost": 365.0,
+    "category": "Actuator",
+    "boq_identifier": "2290497-GEB346.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost429"
+   },
+   {
+    "product_name": "Belimo 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSNF24-S US",
+    "item_code": "229088-FSNF24-S US",
+    "unit": "Ea",
+    "cost": 485.0,
+    "category": "Actuator",
+    "boq_identifier": "229088-FSNF24-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost430"
+   },
+   {
+    "product_name": "Belimo 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSNF230-S US",
+    "item_code": "229089-FSNF230-S US",
+    "unit": "Ea",
+    "cost": 475.0,
+    "category": "Actuator",
+    "boq_identifier": "229089-FSNF230-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost431"
+   },
+   {
+    "product_name": "Belimo 30lbin-3.5Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSLF230-S US",
+    "item_code": "229090-FSLF230-S US",
+    "unit": "Ea",
+    "cost": 470.0,
+    "category": "Actuator",
+    "boq_identifier": "229090-FSLF230-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost432"
+   },
+   {
+    "product_name": "Belimo 30lbin-3.5Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSLF24-S US",
+    "item_code": "229091-FSLF24-S US",
+    "unit": "Ea",
+    "cost": 425.0,
+    "category": "Actuator",
+    "boq_identifier": "229091-FSLF24-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost433"
+   },
+   {
+    "product_name": "Honeywell 30lbin-3.4Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4604F1010/B",
+    "item_code": "229100-MS4604F1010/B",
+    "unit": "Ea",
+    "cost": 242.0,
+    "category": "Actuator",
+    "boq_identifier": "229100-MS4604F1010/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost434"
+   },
+   {
+    "product_name": "Honeywell 30lbin-3.4Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4604F1210/B",
+    "item_code": "229101-MS4604F1210/B",
+    "unit": "Ea",
+    "cost": 248.0,
+    "category": "Actuator",
+    "boq_identifier": "229101-MS4604F1210/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost435"
+   },
+   {
+    "product_name": "Honeywell 30lbin-3.4Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8104F1010/B",
+    "item_code": "229102-MS8104F1010/B",
+    "unit": "Ea",
+    "cost": 248.0,
+    "category": "Actuator",
+    "boq_identifier": "229102-MS8104F1010/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost436"
+   },
+   {
+    "product_name": "Honeywell 30lbin-3.4Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8104F1210/B",
+    "item_code": "229103-MS8104F1210/B",
+    "unit": "Ea",
+    "cost": 253.0,
+    "category": "Actuator",
+    "boq_identifier": "229103-MS8104F1210/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost437"
+   },
+   {
+    "product_name": "Honeywell 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8109F1010/B",
+    "item_code": "229104-MS8109F1010/B",
+    "unit": "Ea",
+    "cost": 270.0,
+    "category": "Actuator",
+    "boq_identifier": "229104-MS8109F1010/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost438"
+   },
+   {
+    "product_name": "Honeywell 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8109F1210/B",
+    "item_code": "229105-MS8109F1210/B",
+    "unit": "Ea",
+    "cost": 277.0,
+    "category": "Actuator",
+    "boq_identifier": "229105-MS8109F1210/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost439"
+   },
+   {
+    "product_name": "Honeywell 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4609F1010/B",
+    "item_code": "229106-MS4609F1010/B",
+    "unit": "Ea",
+    "cost": 270.0,
+    "category": "Actuator",
+    "boq_identifier": "229106-MS4609F1010/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost440"
+   },
+   {
+    "product_name": "Honeywell 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4609F1210/B",
+    "item_code": "229107-MS4609F1210/B",
+    "unit": "Ea",
+    "cost": 277.0,
+    "category": "Actuator",
+    "boq_identifier": "229107-MS4609F1210/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost441"
+   },
+   {
+    "product_name": "Honeywell 175lbin-20Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8120F1002/B",
+    "item_code": "229108-MS8120F1002/B",
+    "unit": "Ea",
+    "cost": 445.0,
+    "category": "Actuator",
+    "boq_identifier": "229108-MS8120F1002/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost442"
+   },
+   {
+    "product_name": "Honeywell 175lbin-20Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8120F1200/B",
+    "item_code": "229109-MS8120F1200/B",
+    "unit": "Ea",
+    "cost": 450.0,
+    "category": "Actuator",
+    "boq_identifier": "229109-MS8120F1200/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost443"
+   },
+   {
+    "product_name": "Honeywell 175lbin-20Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4620F1203/B",
+    "item_code": "229110-MS4620F1203/B",
+    "unit": "Ea",
+    "cost": 450.0,
+    "category": "Actuator",
+    "boq_identifier": "229110-MS4620F1203/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost444"
+   },
+   {
+    "product_name": "Honeywell 175lbin-20Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4620F1005/B",
+    "item_code": "229111-MS4620F1005/B",
+    "unit": "Ea",
+    "cost": 445.0,
+    "category": "Actuator",
+    "boq_identifier": "229111-MS4620F1005/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost445"
+   },
+   {
+    "product_name": "Belimo 30lbin-3.5Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSLF230 US",
+    "item_code": "2290263-FSLF230 US",
+    "unit": "Ea",
+    "cost": 425.0,
+    "category": "Actuator",
+    "boq_identifier": "2290263-FSLF230 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost446"
+   },
+   {
+    "product_name": "Belimo 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSNF230 US",
+    "item_code": "2290280-FSNF230 US",
+    "unit": "Ea",
+    "cost": 480.0,
+    "category": "Actuator",
+    "boq_identifier": "2290280-FSNF230 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost447"
+   },
+   {
+    "product_name": "Belimo 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSNF24 US",
+    "item_code": "2290281-FSNF24 US",
+    "unit": "Ea",
+    "cost": 430.0,
+    "category": "Actuator",
+    "boq_identifier": "2290281-FSNF24 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost448"
+   },
+   {
+    "product_name": "Belimo 30lbin-3.5Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSLF24 US",
+    "item_code": "2290283-FSLF24 US",
+    "unit": "Ea",
+    "cost": 375.0,
+    "category": "Actuator",
+    "boq_identifier": "2290283-FSLF24 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost449"
+   },
+   {
+    "product_name": "Belimo 18lbin-2.5Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSTF24-S US",
+    "item_code": "229093-FSTF24-S US",
+    "unit": "Ea",
+    "cost": 390.0,
+    "category": "Actuator",
+    "boq_identifier": "229093-FSTF24-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost450"
+   },
+   {
+    "product_name": "Belimo 18lbin-2.5Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSTF230-S US",
+    "item_code": "229092-FSTF230-S US",
+    "unit": "Ea",
+    "cost": 390.0,
+    "category": "Actuator",
+    "boq_identifier": "229092-FSTF230-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost451"
+   },
+   {
+    "product_name": "Belimo 18lbin-2.5Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSTF230 US",
+    "item_code": "2290501-FSTF230 US",
+    "unit": "Ea",
+    "cost": 320.0,
+    "category": "Actuator",
+    "boq_identifier": "2290501-FSTF230 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost452"
+   },
+   {
+    "product_name": "Belimo 18lbin-2.5Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSTF24 US",
+    "item_code": "2290502-FSTF24 US",
+    "unit": "Ea",
+    "cost": 320.0,
+    "category": "Actuator",
+    "boq_identifier": "2290502-FSTF24 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost453"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 24V Fire & Smoke-Modulating 2-10V, Actuator 2 Aux FSAFB24-SR-S",
+    "item_code": "2290468-FSAFB24-SR-S",
+    "unit": "Ea",
+    "cost": 885.0,
+    "category": "Actuator",
+    "boq_identifier": "2290468-FSAFB24-SR-S",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost454"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 24V Fire & Smoke-Modulating 2-10V, Actuator w/o Aux FSAFB24-SR",
+    "item_code": "2290503-FSAFB24-SR",
+    "unit": "Ea",
+    "cost": 795.0,
+    "category": "Actuator",
+    "boq_identifier": "2290503-FSAFB24-SR",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost455"
+   },
+   {
+    "product_name": "Bronze Flanged Brass Shaft Bush-16x9.55x9.55x10mm",
+    "item_code": "2610913",
+    "unit": "Ea",
+    "cost": 0.58,
+    "category": "Blade Assembly",
+    "boq_identifier": "Bronze Oilite 10mm Round Bar Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost498"
+   },
+   {
+    "product_name": "Fuse Link Hexa Stud Pin Steel 11X30.6mm 9145",
+    "item_code": "2290008",
+    "unit": "Ea",
+    "cost": 1.05,
+    "category": "Accessories",
+    "boq_identifier": "Fuse Link Hexa Stud Pin Steel 11X30.6mm 9145",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost55"
+   },
+   {
+    "product_name": "Spring Retainer Bushing Steel 31.75mmX6.35mmDia",
+    "item_code": "2290010",
+    "unit": "Ea",
+    "cost": 1.54,
+    "category": "Accessories",
+    "boq_identifier": "Spring Retainer Bushing Steel 31.75mmX6.35mmDia",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost56"
+   },
+   {
+    "product_name": "3/16 Inch x 2 Inch Lg. Solid Roll Pin",
+    "item_code": "229112",
+    "unit": "Ea",
+    "cost": 0.13,
+    "category": "Accessories",
+    "boq_identifier": "3/16 Inch x 2 Inch Lg. Solid Roll Pin",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost57"
+   },
+   {
+    "product_name": "Damper Processing Minutes",
+    "item_code": "Damper Processing Minutes",
+    "unit": "Minutes",
+    "cost": 45.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Damper Processing Minutes (ULRD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost63"
+   },
+   {
+    "product_name": "Blade Switch Processing Minutes",
+    "item_code": "Blade Switch Processing Minutes",
+    "unit": "Minutes",
+    "cost": 20.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Blade Switch Processing Minutes (ULRD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost64"
+   },
+   {
+    "product_name": "Transition Time per m of Perimeter of Damper",
+    "item_code": "Transition Time per m of Perimeter of Damper",
+    "unit": "Minutes",
+    "cost": 15.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Transition Time per m of Perimeter of Damper (ULRD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost65"
+   },
+   {
+    "product_name": "Retaining Plate Installation Minutes",
+    "item_code": "Retaining Plate Installation Minutes",
+    "unit": "Minutes",
+    "cost": 15.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Retaining Plate Installation Minutes",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost66"
+   },
+   {
+    "product_name": "Actuator Installation Minutes per Actuator",
+    "item_code": "Actuator Installation Minutes per Actuator",
+    "unit": "Minutes",
+    "cost": 30.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Actuator Installation Minutes per Actuator (ULRD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost67"
+   },
+   {
+    "product_name": "Cost per Hour",
+    "item_code": "Cost per Hour",
+    "unit": "Currency",
+    "cost": 15.0,
+    "category": "Hourly Rate",
+    "boq_identifier": "Cost per Hour (ULRD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost68"
+   },
+   {
+    "product_name": "Overhead Percentage",
+    "item_code": "Overhead Percentage",
+    "unit": "%",
+    "cost": 0.6,
+    "category": "Overhead",
+    "boq_identifier": "Overhead Percentage (ULRD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost69"
+   },
+   {
+    "product_name": "Overhead Percentage on Actuator",
+    "item_code": "Overhead Percentage on Actuator",
+    "unit": "%",
+    "cost": 0.3,
+    "category": "Overhead",
+    "boq_identifier": "Overhead Percentage on Actuator (ULRD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost70"
+   },
+   {
+    "product_name": "Profit",
+    "item_code": "Profit",
+    "unit": "%",
+    "cost": 0.5,
+    "category": "Factor",
+    "boq_identifier": "Profit (ULRD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost71"
+   },
+   {
+    "product_name": "Accessories Wastage",
+    "item_code": "Accessories Wastage",
+    "unit": "%",
+    "cost": 0.03,
+    "category": "Wastage",
+    "boq_identifier": "Accessories Wastage (ULRD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost72"
+   },
+   {
+    "product_name": "Blade Wastage",
+    "item_code": "Blade Wastage",
+    "unit": "%",
+    "cost": 0.12,
+    "category": "Wastage",
+    "boq_identifier": "Blade Wastage (ULRD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost73"
+   },
+   {
+    "product_name": "Frame Wastage",
+    "item_code": "Frame Wastage",
+    "unit": "%",
+    "cost": 0.05,
+    "category": "Wastage",
+    "boq_identifier": "Frame Wastage (ULRD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost74"
+   },
+   {
+    "product_name": "Blade 3/8 Inch 10mm Square Bar",
+    "item_code": "Square Bar",
+    "unit": "m",
+    "cost": 5.5,
+    "category": "Accessories",
+    "boq_identifier": "Blade 3/8 Inch 10mm Square Bar",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost76"
+   },
+   {
+    "product_name": "UL FNST Blade Seal - High Temperature",
+    "item_code": "2290018",
+    "unit": "m",
+    "cost": 20.0,
+    "category": "Seals",
+    "boq_identifier": "UL FNST Blade Seal - High Temperature",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost77"
+   },
+   {
+    "product_name": "Fuse Link Retainer Pin",
+    "item_code": "2290006",
+    "unit": "Ea",
+    "cost": 0.22,
+    "category": "Accessories",
+    "boq_identifier": "Fuse Link Retainer Pin",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost78"
+   },
+   {
+    "product_name": "Damper Closer Spring SS304 55.5mmX3.2mmDia",
+    "item_code": "2290217",
+    "unit": "Ea",
+    "cost": 2.2,
+    "category": "Accessories",
+    "boq_identifier": "Damper Closer Spring SS304 55.5mmX3.2mmDia",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost81"
+   },
+   {
+    "product_name": "Zeb Drive Pin Steel 15.87X21.46mm 9146",
+    "item_code": "2290005",
+    "unit": "Ea",
+    "cost": 0.72,
+    "category": "Accessories",
+    "boq_identifier": "Zeb Drive Pin Steel 15.87X21.46mm 9146",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost83"
+   },
+   {
+    "product_name": "Jack Shaft Drive GI G90 110X25mm 9008",
+    "item_code": "2290109",
+    "unit": "Ea",
+    "cost": 0.88,
+    "category": "Accessories",
+    "boq_identifier": "Jack Shaft Drive GI G90 110X25mm 9008",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost84"
+   },
+   {
+    "product_name": "5/16 - 18 x 1 1/2 Carriage Bolt",
+    "item_code": "2290190",
+    "unit": "Ea",
+    "cost": 0.17,
+    "category": "Accessories",
+    "boq_identifier": "5/16 - 18 x 1 1/2 Carriage Bolt",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost85"
+   },
+   {
+    "product_name": "5/16 -18 Flange Whiz Nut",
+    "item_code": "2290191",
+    "unit": "Ea",
+    "cost": 0.09,
+    "category": "Accessories",
+    "boq_identifier": "5/16 -18 Flange Whiz Nut",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost86"
+   },
+   {
+    "product_name": "1/4 - 20 Lock Nut",
+    "item_code": "2290192",
+    "unit": "Ea",
+    "cost": 0.11,
+    "category": "Accessories",
+    "boq_identifier": "1/4 - 20 Lock Nut",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost87"
+   },
+   {
+    "product_name": "Zeb Drive Link CRS 12.7X150mm 9006",
+    "item_code": "2290009",
+    "unit": "Ea",
+    "cost": 0.55,
+    "category": "Accessories",
+    "boq_identifier": "Zeb Drive Link CRS 12.7X150mm 9006",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost88"
+   },
+   {
+    "product_name": "Jack Shaft Rod 12mm",
+    "item_code": "2290111",
+    "unit": "m",
+    "cost": 3.52,
+    "category": "Accessories",
+    "boq_identifier": "Jack Shaft Rod 12mm",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost92"
+   },
+   {
+    "product_name": "Blade Switch Cost",
+    "item_code": "Blade Switch Cost",
+    "unit": "Ea",
+    "cost": 40.0,
+    "category": "Switches",
+    "boq_identifier": "Blade Switch Cost",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost94"
+   },
+   {
+    "product_name": "2 Way Junction Box with Cover 100x50x48-Ul Listed",
+    "item_code": "2290078",
+    "unit": "Ea",
+    "cost": 1.93,
+    "category": "Accessories",
+    "boq_identifier": "2 Way Junction Box with Cover 100x50x48-Ul Listed",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost95"
+   },
+   {
+    "product_name": "Twister Wire Connector",
+    "item_code": "229123",
+    "unit": "Ea",
+    "cost": 0.22,
+    "category": "Accessories",
+    "boq_identifier": "Twister Wire Connector",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost96"
+   },
+   {
+    "product_name": "UL Listed Conduit",
+    "item_code": "2290075",
+    "unit": "m",
+    "cost": 1.65,
+    "category": "Accessories",
+    "boq_identifier": "UL Listed Conduit",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost98"
+   },
+   {
+    "product_name": "Anti-short Bushing",
+    "item_code": "2290195",
+    "unit": "Ea",
+    "cost": 0.11,
+    "category": "Accessories",
+    "boq_identifier": "Anti-short Bushing",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost99"
+   },
+   {
+    "product_name": "Belimo 80lbin-9-Nm, 120V Fire & Smoke-On/Off , Actuator w/o Aux FSNF120 US",
+    "item_code": "2290540-FSNF120 US",
+    "unit": "Ea",
+    "cost": 880.0,
+    "category": "Actuator",
+    "boq_identifier": "2290540-FSNF120 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511062"
+   },
+   {
+    "product_name": "Belimo 18lbin-2.5Nm, 120V Fire & Smoke-On/Off , Actuator w/o Aux FSTF120-S US",
+    "item_code": "2290541-FSTF120-S US",
+    "unit": "Ea",
+    "cost": 880.0,
+    "category": "Actuator",
+    "boq_identifier": "2290541-FSTF120-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511063"
+   },
+   {
+    "product_name": "Belimo 30lbin-3.5Nm, 120V Fire & Smoke-On/Off , Actuator w/o Aux FSLF120-US",
+    "item_code": "2290542-FSLF120-US",
+    "unit": "Ea",
+    "cost": 725.0,
+    "category": "Actuator",
+    "boq_identifier": "2290542-FSLF120-US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511064"
+   },
+   {
+    "product_name": "Belimo 90lbin-10Nm , 24V Non Spring Return-Modulating 2-10V, Actuator w/o Aux NMV-D3-MP",
+    "item_code": "2290543-NMV-D3-MP",
+    "unit": "Ea",
+    "cost": 600.0,
+    "category": "Actuator",
+    "boq_identifier": "2290543-NMV-D3-MP",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511065"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 24V Non Spring Return-Modulating 2-10V, Actuator w/o Aux SMV-D3-MP",
+    "item_code": "2290544-SMV-D3-MP",
+    "unit": "Ea",
+    "cost": 750.0,
+    "category": "Actuator",
+    "boq_identifier": "2290544-SMV-D3-MP",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511066"
+   },
+   {
+    "product_name": "Honeywell 80lbin-9Nm, 120V Fire & Smoke-On/Off , Actuator 2 Aux MS4109F1210/B",
+    "item_code": "2290560-MS4109F1210/B",
+    "unit": "Ea",
+    "cost": 835.0,
+    "category": "Actuator",
+    "boq_identifier": "2290560-MS4109F1210/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511067"
+   },
+   {
+    "product_name": "Honeywell 80lbin-9Nm, 120V Fire & Smoke-On/Off , Actuator w/o Aux MS4109F1010/B",
+    "item_code": "2290561-MS4109F1010/B",
+    "unit": "Ea",
+    "cost": 745.0,
+    "category": "Actuator",
+    "boq_identifier": "2290561-MS4109F1010/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511068"
+   },
+   {
+    "product_name": "Honeywell 30lbin-3.4Nm, 120V Fire & Smoke-On/Off , Actuator 2 Aux MS4104F1210/B",
+    "item_code": "2290562-MS4104F1210/B",
+    "unit": "Ea",
+    "cost": 745.0,
+    "category": "Actuator",
+    "boq_identifier": "2290562-MS4104F1210/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511069"
+   },
+   {
+    "product_name": "Honeywell 30lbin-3.4Nm, 120V Fire & Smoke-On/Off , Actuator w/o Aux MS4104F1010/B",
+    "item_code": "2290563-MS4104F1010/B",
+    "unit": "Ea",
+    "cost": 670.0,
+    "category": "Actuator",
+    "boq_identifier": "2290563-MS4104F1010/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511070"
+   },
+   {
+    "product_name": "Honeywell 175lbin-20Nm, 120V Fire & Smoke-On/Off , Actuator 2 Aux MS4120F1204",
+    "item_code": "2290564-MS4120F1204",
+    "unit": "Ea",
+    "cost": 1300.0,
+    "category": "Actuator",
+    "boq_identifier": "2290564-MS4120F1204",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511071"
+   },
+   {
+    "product_name": "Honeywell 45lbin-5Nm , 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN4605A1001",
+    "item_code": "2290565-CN4605A1001",
+    "unit": "Ea",
+    "cost": 315.0,
+    "category": "Actuator",
+    "boq_identifier": "2290565-CN4605A1001",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511072"
+   },
+   {
+    "product_name": "Honeywell 90lbin-10Nm , 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN4610A1001",
+    "item_code": "2290566-CN4610A1001",
+    "unit": "Ea",
+    "cost": 350.0,
+    "category": "Actuator",
+    "boq_identifier": "2290566-CN4610A1001",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511073"
+   },
+   {
+    "product_name": "Honeywell 180lbin-20Nm , 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN4620A1001",
+    "item_code": "2290567-CN4620A1001",
+    "unit": "Ea",
+    "cost": 905.0,
+    "category": "Actuator",
+    "boq_identifier": "2290567-CN4620A1001",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511074"
+   },
+   {
+    "product_name": "Honeywell 300lnin-34Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN4634A1001",
+    "item_code": "2290568-CN4634A1001",
+    "unit": "Ea",
+    "cost": 800.0,
+    "category": "Actuator",
+    "boq_identifier": "2290568-CN4634A1001",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511075"
+   },
+   {
+    "product_name": "Honeywell 45lbin-5Nm , 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN6105A1011",
+    "item_code": "2290569-CN6105A1011",
+    "unit": "Ea",
+    "cost": 390.0,
+    "category": "Actuator",
+    "boq_identifier": "2290569-CN6105A1011",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511076"
+   },
+   {
+    "product_name": "Honeywell 90lbin-10Nm , 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN6110A1003",
+    "item_code": "2290570-CN6110A1003",
+    "unit": "Ea",
+    "cost": 405.0,
+    "category": "Actuator",
+    "boq_identifier": "2290570-CN6110A1003",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511077"
+   },
+   {
+    "product_name": "Honeywell 90lbin-10Nm , 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux CN6110A1201",
+    "item_code": "2290571-CN6110A1201",
+    "unit": "Ea",
+    "cost": 620.0,
+    "category": "Actuator",
+    "boq_identifier": "2290571-CN6110A1201",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511078"
+   },
+   {
+    "product_name": "Honeywell 180lbin-20Nm , 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN6120A1002",
+    "item_code": "2290572-CN6120A1002",
+    "unit": "Ea",
+    "cost": 670.0,
+    "category": "Actuator",
+    "boq_identifier": "2290572-CN6120A1002",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511079"
+   },
+   {
+    "product_name": "Honeywell 300lnin-34Nm, 24V Non Spring Return-Modulating 2-10V, Actuator 2 Aux CN7234A2008",
+    "item_code": "2290574-CN7234A2008",
+    "unit": "Ea",
+    "cost": 1480.0,
+    "category": "Actuator",
+    "boq_identifier": "2290574-CN7234A2008",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511081"
+   },
+   {
+    "product_name": "Siemens 45lbin-5Nm , 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux GDB146.1E",
+    "item_code": "2290531-GDB146.1E",
+    "unit": "Ea",
+    "cost": 240.0,
+    "category": "Actuator",
+    "boq_identifier": "2290531-GDB146.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511082"
+   },
+   {
+    "product_name": "Siemens 90lbin-10Nm , 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux GLB146.1E",
+    "item_code": "2290532-GLB146.1E",
+    "unit": "Ea",
+    "cost": 295.0,
+    "category": "Actuator",
+    "boq_identifier": "2290532-GLB146.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511083"
+   },
+   {
+    "product_name": "Siemens 180lbin-20Nm , 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux GEB146.1E",
+    "item_code": "2290533-GEB146.1E",
+    "unit": "Ea",
+    "cost": 360.0,
+    "category": "Actuator",
+    "boq_identifier": "2290533-GEB146.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511084"
+   },
+   {
+    "product_name": "Siemens 45lbin-5Nm , 24V Non Spring Return-Modulating 2-10V, Actuator w/o Aux GDB181.1E/3",
+    "item_code": "2290534-GDB181.1E/3",
+    "unit": "Ea",
+    "cost": 425.0,
+    "category": "Actuator",
+    "boq_identifier": "2290534-GDB181.1E/3",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511085"
+   },
+   {
+    "product_name": "Honeywell 180lbin-20Nm , 24V Non Spring Return-Modulating 2-10V, Actuator w/o Aux CN7220A2007",
+    "item_code": "2290573-CN7220A2007",
+    "unit": "Ea",
+    "cost": 700.0,
+    "category": "Actuator",
+    "boq_identifier": "2290573-CN7220A2007",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511080"
+   },
+   {
+    "product_name": "AL/EALDensityFactor",
+    "item_code": "AL/EALDensityFactor",
+    "cost": 2.7,
+    "category": "Density",
+    "boq_identifier": "AL/EALDensityFactor",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO44216"
+   },
+   {
+    "product_name": "SS Density Factor",
+    "item_code": "SSDensityFactor",
+    "cost": 8.0,
+    "category": "Density",
+    "boq_identifier": "SS Density Factor",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost388"
+   },
+   {
+    "product_name": "GI Density Factor",
+    "item_code": "GIDensityFactor",
+    "cost": 7.85,
+    "category": "Density",
+    "boq_identifier": "GI Density Factor",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost389"
+   }
+  ]
+ },
+ "feature_types": [
+  {
+   "key": "FT100",
+   "label": "ULRD Cost",
+   "data_type": "Object List",
+   "object_type": "FTOCountryWiseCost",
+   "data_text_field": "boq_identifier",
+   "additional_fields": "cost",
+   "objects": [
+    {
+     "cost_row": "AL/EALDensityFactor",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "cost_row": "SS Density Factor",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "cost_row": "GI Density Factor",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "cost_row": "GI",
+     "sequence": 1
+    },
+    {
+     "cost_row": "SS304L",
+     "sequence": 2
+    },
+    {
+     "cost_row": "SS316L",
+     "sequence": 3
+    },
+    {
+     "cost_row": "Conversion sqft to sqm",
+     "sequence": 4
+    },
+    {
+     "cost_row": "Conversion Inch to mm",
+     "sequence": 5
+    },
+    {
+     "cost_row": "Damper Processing Minutes",
+     "sequence": 6
+    },
+    {
+     "cost_row": "Blade Switch Processing Minutes",
+     "sequence": 7
+    },
+    {
+     "cost_row": "Transition Time per m of Perimeter of Damper",
+     "sequence": 8
+    },
+    {
+     "cost_row": "Retaining Plate Installation Minutes",
+     "sequence": 9
+    },
+    {
+     "cost_row": "Actuator Installation Minutes per Actuator",
+     "sequence": 10
+    },
+    {
+     "cost_row": "Cost per Hour",
+     "sequence": 11
+    },
+    {
+     "cost_row": "Overhead Percentage",
+     "sequence": 12
+    },
+    {
+     "cost_row": "Overhead Percentage on Actuator",
+     "sequence": 13
+    },
+    {
+     "cost_row": "Profit",
+     "sequence": 14
+    },
+    {
+     "cost_row": "Accessories Wastage",
+     "sequence": 15
+    },
+    {
+     "cost_row": "Blade Wastage",
+     "sequence": 16
+    },
+    {
+     "cost_row": "Frame Wastage",
+     "sequence": 17
+    },
+    {
+     "cost_row": "Bronze Flanged Brass Shaft Bush-16x9.55x9.55x10mm",
+     "sequence": 18
+    },
+    {
+     "cost_row": "Blade 3/8 Inch 10mm Square Bar",
+     "sequence": 19
+    },
+    {
+     "cost_row": "UL FNST Blade Seal - High Temperature",
+     "sequence": 20
+    },
+    {
+     "cost_row": "Fuse Link Retainer Pin",
+     "sequence": 21
+    },
+    {
+     "cost_row": "Fuse Link Hexa Stud Pin Steel 11X30.6mm 9145",
+     "sequence": 22
+    },
+    {
+     "cost_row": "Spring Retainer Bushing Steel 31.75mmX6.35mmDia",
+     "sequence": 23
+    },
+    {
+     "cost_row": "Damper Closer Spring SS304 55.5mmX3.2mmDia",
+     "sequence": 24
+    },
+    {
+     "cost_row": "3/16 Inch x 2 Inch Lg. Solid Roll Pin",
+     "sequence": 25
+    },
+    {
+     "cost_row": "Zeb Drive Pin Steel 15.87X21.46mm 9146",
+     "sequence": 26
+    },
+    {
+     "cost_row": "Jack Shaft Drive GI G90 110X25mm 9008",
+     "sequence": 27
+    },
+    {
+     "cost_row": "5/16 - 18 x 1 1/2 Carriage Bolt",
+     "sequence": 28
+    },
+    {
+     "cost_row": "5/16 -18 Flange Whiz Nut",
+     "sequence": 29
+    },
+    {
+     "cost_row": "1/4 - 20 Lock Nut",
+     "sequence": 30
+    },
+    {
+     "cost_row": "Zeb Drive Link CRS 12.7X150mm 9006",
+     "sequence": 31
+    },
+    {
+     "cost_row": "Jack Shaft Rod 12mm",
+     "sequence": 35
+    },
+    {
+     "cost_row": "GI VCD Handle (V) Square 10x10",
+     "sequence": 36
+    },
+    {
+     "cost_row": "Blade Switch Cost",
+     "sequence": 37
+    },
+    {
+     "cost_row": "2 Way Junction Box with Cover 100x50x48-Ul Listed",
+     "sequence": 38
+    },
+    {
+     "cost_row": "Twister Wire Connector",
+     "sequence": 39
+    },
+    {
+     "cost_row": "UL Listed Conduit",
+     "sequence": 41
+    },
+    {
+     "cost_row": "Anti-short Bushing",
+     "sequence": 42
+    },
+    {
+     "cost_row": "UL Label Cost",
+     "sequence": 43
+    },
+    {
+     "cost_row": "STOR 165F",
+     "sequence": 44
+    },
+    {
+     "cost_row": "STOR 212F",
+     "sequence": 45
+    },
+    {
+     "cost_row": "STOR 250F",
+     "sequence": 46
+    },
+    {
+     "cost_row": "STOR 350F",
+     "sequence": 47
+    },
+    {
+     "cost_row": "STOR PFL",
+     "sequence": 48
+    },
+    {
+     "cost_row": "DTOR 165/212F",
+     "sequence": 49
+    },
+    {
+     "cost_row": "DTOR 165/250F",
+     "sequence": 50
+    },
+    {
+     "cost_row": "DTOR 165/350F",
+     "sequence": 51
+    },
+    {
+     "cost_row": "DTOR 212/250F",
+     "sequence": 52
+    },
+    {
+     "cost_row": "DTOR 212/350F",
+     "sequence": 53
+    },
+    {
+     "cost_row": "Bronze Oilite Jackshaft Bushes 1/2 Inch",
+     "sequence": 54
+    },
+    {
+     "cost_row": "AF-FD Linkage Bar GI CVSS 12.7X367X3.5mm 9169",
+     "sequence": 55
+    },
+    {
+     "cost_row": "Anchor Bracket",
+     "sequence": 56
+    },
+    {
+     "cost_row": "Fusible Link 73C (165F) Globe - JS 2.75\" Hook",
+     "sequence": 57
+    },
+    {
+     "cost_row": "Fusible Link 100C (212F) Globe - JS 2.75\" Hook",
+     "sequence": 58
+    },
+    {
+     "cost_row": "Momemtory Test Switch (MTS)",
+     "sequence": 59
+    },
+    {
+     "cost_row": "Installation Minutes per Junction Box",
+     "sequence": 60
+    }
+   ]
+  },
+  {
+   "key": "FT101",
+   "label": "ULRD Fuse Link Cost",
+   "data_type": "Object List",
+   "object_type": "FTOCountryWiseCost",
+   "data_text_field": "boq_identifier",
+   "additional_fields": "cost",
+   "objects": [
+    {
+     "cost_row": "DTOR 165/350F",
+     "sequence": 1
+    },
+    {
+     "cost_row": "DTOR 212/250F",
+     "sequence": 2
+    },
+    {
+     "cost_row": "DTOR 212/350F",
+     "sequence": 3
+    },
+    {
+     "cost_row": "Fusible Link 73C (165F) Globe - JS 2.75\" Hook",
+     "sequence": 4
+    },
+    {
+     "cost_row": "Fusible Link 100C (212F) Globe - JS 2.75\" Hook",
+     "sequence": 5
+    },
+    {
+     "cost_row": "STOR 165F",
+     "sequence": 6
+    },
+    {
+     "cost_row": "STOR 212F",
+     "sequence": 7
+    },
+    {
+     "cost_row": "STOR 250F",
+     "sequence": 8
+    },
+    {
+     "cost_row": "STOR 350F",
+     "sequence": 9
+    },
+    {
+     "cost_row": "STOR PFL",
+     "sequence": 10
+    },
+    {
+     "cost_row": "DTOR 165/212F",
+     "sequence": 11
+    },
+    {
+     "cost_row": "DTOR 165/250F",
+     "sequence": 12
+    }
+   ]
+  },
+  {
+   "key": "FT102",
+   "label": "ULRD uniqueFuseLink",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "MFL",
+     "sequence": 1
+    },
+    {
+     "value": "FDSTOR",
+     "sequence": 2
+    },
+    {
+     "value": "FDDSTOR",
+     "sequence": 3
+    },
+    {
+     "value": "CFSDSTOR",
+     "sequence": 4
+    },
+    {
+     "value": "CFSDDTOR",
+     "sequence": 5
+    },
+    {
+     "value": "FDDTOR",
+     "sequence": 6
+    },
+    {
+     "value": "FDDDTOR",
+     "sequence": 7
+    }
+   ]
+  },
+  {
+   "key": "FT103",
+   "existing": "FT103",
+   "label": "ULRD Actuator Mounting",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT105",
+   "existing": "FT105",
+   "label": "MTS Option",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT106",
+   "existing": "FT106",
+   "label": "Junction Box",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT139",
+   "existing": "FT139",
+   "label": "VCD Actuator Cost",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT18",
+   "existing": "FT18",
+   "label": "CD - Rating",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT20",
+   "existing": "FT20",
+   "label": "Material Type",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT53",
+   "existing": "FT53",
+   "label": "Actuator Brand",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT55",
+   "existing": "FT55",
+   "label": "Actuator Power",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT56",
+   "existing": "FT56",
+   "label": "Aux Switch",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT57",
+   "existing": "FT57",
+   "label": "Actuator Torque/ Size",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT60",
+   "existing": "FT60",
+   "label": "YesNo",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT62",
+   "existing": "FT62",
+   "label": "Actuator",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT68",
+   "existing": "FT68",
+   "label": "FS Link Temperature",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT85",
+   "existing": "FT85",
+   "label": "Thickness",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT89",
+   "existing": "FT89",
+   "label": "Dampers",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT92",
+   "label": "ULRD Model Name",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "FD-R True Round Fire Damper - Static",
+     "sequence": 1
+    },
+    {
+     "value": "FDD-R True Round Fire Damper - Dynamic",
+     "sequence": 2
+    },
+    {
+     "value": "SSD-R True Round Smoke Damper",
+     "sequence": 3
+    },
+    {
+     "value": "FSD-R True Round Combination Fire Smoke Damper",
+     "sequence": 4
+    }
+   ]
+  },
+  {
+   "key": "FT93",
+   "label": "ULRD Subcategory",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "UL True Round Static Fire Dampers",
+     "sequence": 1
+    },
+    {
+     "value": "UL True Round Dynamic Fire Dampers",
+     "sequence": 2
+    },
+    {
+     "value": "UL True Round Smoke Dampers",
+     "sequence": 3
+    },
+    {
+     "value": "UL True Round Combination Fire Smoke Dampers",
+     "sequence": 4
+    }
+   ]
+  },
+  {
+   "key": "FT94",
+   "label": "ULRD Damper Operator",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "Electric",
+     "sequence": 1
+    },
+    {
+     "value": "Quadrant",
+     "sequence": 2
+    }
+   ]
+  },
+  {
+   "key": "FT95",
+   "label": "ULRD - Blade Thickness",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "0.70",
+     "sequence": 1
+    },
+    {
+     "value": "0.80",
+     "sequence": 2,
+     "price_editable": 1
+    },
+    {
+     "value": "1.00",
+     "sequence": 3
+    }
+   ]
+  },
+  {
+   "key": "FT96",
+   "label": "ULRD Transition Type",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "NA",
+     "sequence": 1
+    },
+    {
+     "value": "One Side",
+     "sequence": 2
+    },
+    {
+     "value": "Both Sides",
+     "sequence": 3
+    }
+   ]
+  },
+  {
+   "key": "FT97",
+   "label": "Retaining Plate",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "No",
+     "sequence": 1
+    },
+    {
+     "value": "1.00",
+     "sequence": 2
+    },
+    {
+     "value": "1.20",
+     "sequence": 3
+    }
+   ]
+  },
+  {
+   "key": "FT98",
+   "label": "Fuse Link Options",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "NA",
+     "sequence": 1
+    },
+    {
+     "value": "MFL",
+     "sequence": 2
+    },
+    {
+     "value": "STOR",
+     "sequence": 3
+    },
+    {
+     "value": "DTOR",
+     "sequence": 4
+    }
+   ]
+  },
+  {
+   "key": "FT99",
+   "label": "Leakage class options",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "NA",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "value": "Class I-250F",
+     "sequence": 2,
+     "price_editable": 1
+    },
+    {
+     "value": "Class I-350F",
+     "sequence": 3,
+     "price_editable": 1
+    },
+    {
+     "value": "Class II-250F",
+     "sequence": 4,
+     "price_editable": 1
+    },
+    {
+     "value": "Class II-350F",
+     "sequence": 5,
+     "price_editable": 1
+    }
+   ]
+  },
+  {
+   "key": "FTY102325",
+   "label": "ULRD Model Items",
+   "data_type": "Object List",
+   "object_type": "Item",
+   "data_text_field": "item_code",
+   "additional_fields": "item_code,description",
+   "objects": [
+    {
+     "object": "FD-R",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-R",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "SSD-R",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FSD-R",
+     "sequence": 1,
+     "price_editable": 1
+    }
+   ]
+  }
+ ],
+ "structures": [
+  {
+   "key": "UL True Round Dampers",
+   "label": "UL True Round Dampers",
+   "parent": null,
+   "sequence": 0.0
+  },
+  {
+   "key": "Minutes",
+   "label": "Minutes",
+   "parent": "UL True Round Dampers",
+   "sequence": 10.0
+  },
+  {
+   "key": "Cost",
+   "label": "Cost",
+   "parent": "UL True Round Dampers",
+   "sequence": 11.0
+  },
+  {
+   "key": "Others",
+   "label": "Others",
+   "parent": "UL True Round Dampers",
+   "sequence": 11.0
+  },
+  {
+   "key": "Actuators",
+   "label": "Actuators",
+   "parent": "UL True Round Dampers",
+   "sequence": 12.0
+  },
+  {
+   "key": "Factors",
+   "label": "Factors",
+   "parent": "UL True Round Dampers",
+   "sequence": 12.0
+  }
+ ],
+ "features": [
+  {
+   "structure": "Factors",
+   "field": "modelItem",
+   "label": "Model Item",
+   "control_type": "Dropdown",
+   "sequence": 0,
+   "feature_types": [
+    "FTY102325"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "notes",
+   "label": "Notes Display",
+   "control_type": "Textbox",
+   "sequence": 0
+  },
+  {
+   "structure": "Actuators",
+   "field": "noOfActuators",
+   "label": "No Of Actuators",
+   "control_type": "Number",
+   "sequence": 1,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "countryWiseCost",
+   "label": "Country Wise Cost",
+   "control_type": "Dropdown",
+   "sequence": 1,
+   "settings": {
+    "displayFormat": "1.0-2"
+   },
+   "feature_types": [
+    "FT100"
+   ]
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "subcategory",
+   "label": "Sub-Category",
+   "control_type": "Dropdown",
+   "sequence": 1,
+   "feature_types": [
+    "FT93"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "frameCost",
+   "label": "Frame Cost",
+   "control_type": "Number",
+   "sequence": 1,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "actuator",
+   "label": "Actuator",
+   "control_type": "Dropdown",
+   "sequence": 2,
+   "feature_types": [
+    "FT62"
+   ]
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "subCategoryCode",
+   "label": "Sub Category Code",
+   "control_type": "Textbox",
+   "sequence": 2
+  },
+  {
+   "structure": "Cost",
+   "field": "bladeCost",
+   "label": "Blade Cost",
+   "control_type": "Number",
+   "sequence": 2,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "modelDescription",
+   "label": "Model Name",
+   "control_type": "Dropdown",
+   "sequence": 3,
+   "feature_types": [
+    "FT92"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "totalBladeAssembly",
+   "label": "Total Blade Assembly",
+   "control_type": "Number",
+   "sequence": 3,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "fuseLink",
+   "label": "Fuse Link",
+   "control_type": "Dropdown",
+   "sequence": 3,
+   "feature_types": [
+    "FT101"
+   ]
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "leakageClass",
+   "label": "Leakage Class",
+   "control_type": "Dropdown",
+   "sequence": 4,
+   "feature_types": [
+    "FT99"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "minDiameter",
+   "label": "Min Diameter",
+   "control_type": "Number",
+   "sequence": 4,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "transitionCost",
+   "label": "Transition Cost",
+   "control_type": "Number",
+   "sequence": 4,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "rating",
+   "label": "Rating",
+   "control_type": "Dropdown",
+   "sequence": 5,
+   "feature_types": [
+    "FT18"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "maxDiameter",
+   "label": "Max Diameter",
+   "control_type": "Number",
+   "sequence": 5,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "retainingPlateCost",
+   "label": "Retaining Plate Cost",
+   "control_type": "Number",
+   "sequence": 5,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "frameMaterialDensity",
+   "label": "Frame Material Density",
+   "control_type": "Number",
+   "sequence": 6,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "unique",
+   "label": "Unique",
+   "control_type": "Textbox",
+   "sequence": 6
+  },
+  {
+   "structure": "Cost",
+   "field": "motorHoldingPlateCost",
+   "label": "Motor Holding Plate Cost",
+   "control_type": "Number",
+   "sequence": 6,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "frameMaterialCost",
+   "label": "Frame Material Cost",
+   "control_type": "Number",
+   "sequence": 7,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "frameMaterialType",
+   "label": "Frame Material Type",
+   "control_type": "Dropdown",
+   "sequence": 7,
+   "feature_types": [
+    "FT20"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "bladeSwitchCost",
+   "label": "Blade Switch Cost",
+   "control_type": "Number",
+   "sequence": 7,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "frameWastage",
+   "label": "Frame Wastage",
+   "control_type": "Number",
+   "sequence": 8,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "frameThicknessLookup",
+   "label": "Frame Thickness (only if different from standard)",
+   "control_type": "Dropdown",
+   "sequence": 8,
+   "feature_types": [
+    "FT85"
+   ]
+  },
+  {
+   "structure": "Minutes",
+   "field": "actuatorProcessingMinutes",
+   "label": "Actuator Processing Minutes",
+   "control_type": "Number",
+   "sequence": 8,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalOtherAccessories",
+   "label": "Total Other Accessories",
+   "control_type": "Number",
+   "sequence": 8,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalMaterialCostBeforeMotors",
+   "label": "Total Material Cost before Motors",
+   "control_type": "Number",
+   "sequence": 9,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "hourlyRate",
+   "label": "Hourly Rate",
+   "control_type": "Number",
+   "sequence": 9,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "bladeThicknessLookup",
+   "label": "Blade Thickness (only if different from standard)",
+   "control_type": "Dropdown",
+   "sequence": 9,
+   "feature_types": [
+    "FT95"
+   ]
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "diameter",
+   "label": "Diameter (DI)",
+   "control_type": "Number",
+   "sequence": 10,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "fuseLinkCost",
+   "label": "Fuse Link Cost",
+   "control_type": "Number",
+   "sequence": 10,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "actuatorCostLookup",
+   "label": "Actuator Cost Lookup",
+   "control_type": "Dropdown",
+   "sequence": 10,
+   "settings": {
+    "displayFormat": "1.0-2"
+   },
+   "feature_types": [
+    "FT139"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "actuatorCost",
+   "label": "Actuator Cost",
+   "control_type": "Number",
+   "sequence": 11,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "frameDepth",
+   "label": "Frame Depth (FDI)",
+   "control_type": "Number",
+   "sequence": 11,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalMaterialCostWithMotors",
+   "label": "Total Material Cost with Motors",
+   "control_type": "Number",
+   "sequence": 12,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "transitionType",
+   "label": "Transition Type",
+   "control_type": "Dropdown",
+   "sequence": 12,
+   "feature_types": [
+    "FT96"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "totalProcessingMinutes",
+   "label": "Total Processing Minutes",
+   "control_type": "Number",
+   "sequence": 13,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "transitionDiameter",
+   "label": "Transition Diameter",
+   "control_type": "Number",
+   "sequence": 13,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalAssemblyCost",
+   "label": "Total Assembly Cost",
+   "control_type": "Number",
+   "sequence": 14,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "transitionLength",
+   "label": "Transition Length",
+   "control_type": "Number",
+   "sequence": 14,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "overhead",
+   "label": "Overhead",
+   "control_type": "Number",
+   "sequence": 15,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "transitionDiameter2",
+   "label": "Transition Diameter 2",
+   "control_type": "Number",
+   "sequence": 15,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalCost",
+   "label": "Total Cost",
+   "control_type": "Number",
+   "sequence": 16,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "transitionLength2",
+   "label": "Transition Length 2",
+   "control_type": "Number",
+   "sequence": 16,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "profit",
+   "label": "Profit",
+   "control_type": "Number",
+   "sequence": 17,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "retainingPlate",
+   "label": "Retaining Plate",
+   "control_type": "Dropdown",
+   "sequence": 17,
+   "feature_types": [
+    "FT97"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "productCost",
+   "label": "Product Cost",
+   "control_type": "Dropdown",
+   "sequence": 18,
+   "settings": {
+    "displayFormat": "1.0-2"
+   },
+   "feature_types": [
+    "FT89"
+   ]
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "damperOperator",
+   "label": "Damper Operator",
+   "control_type": "Dropdown",
+   "sequence": 18,
+   "feature_types": [
+    "FT94"
+   ]
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "fuseLinkOptions",
+   "label": "Fuse Link Options",
+   "control_type": "Dropdown",
+   "sequence": 19,
+   "feature_types": [
+    "FT98"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "bronzeOiliteBladeBush",
+   "label": "Bronze Oilite Blade Bush",
+   "control_type": "Number",
+   "sequence": 19,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "uniqueFuseLink",
+   "label": "Unique Fuse Link",
+   "control_type": "Dropdown",
+   "sequence": 20,
+   "feature_types": [
+    "FT102"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "bronzeOiliteBladeBushCost",
+   "label": "Bronze Oilite Blade Bush Cost",
+   "control_type": "Number",
+   "sequence": 20,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "linkTemperature",
+   "label": "Link Temperature",
+   "control_type": "Dropdown",
+   "sequence": 21,
+   "feature_types": [
+    "FT68"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "bladeSquareBar",
+   "label": "Blade Square Bar",
+   "control_type": "Number",
+   "sequence": 21,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "bladeSquareBarCost",
+   "label": "Blade Square Bar Cost",
+   "control_type": "Number",
+   "sequence": 22,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "mtsOption",
+   "label": "MTS Option",
+   "control_type": "Dropdown",
+   "sequence": 22,
+   "feature_types": [
+    "FT105"
+   ]
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "bladeSwitchPackage",
+   "label": "Blade Switch Package",
+   "control_type": "Dropdown",
+   "sequence": 23,
+   "feature_types": [
+    "FT60"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "axleRetainerArea",
+   "label": "Axle Retainer Area",
+   "control_type": "Number",
+   "sequence": 23,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "actuatorBrand",
+   "label": "Actuator Brand",
+   "control_type": "Dropdown",
+   "sequence": 24,
+   "feature_types": [
+    "FT53"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "axleRetainerWeight",
+   "label": "Axle Retainer Weight",
+   "control_type": "Number",
+   "sequence": 24,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "actuatorMounting",
+   "label": "Actuator Mounting",
+   "control_type": "Dropdown",
+   "sequence": 25,
+   "feature_types": [
+    "FT103"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "axleRetainerCost",
+   "label": "Axle Retainer Cost",
+   "control_type": "Number",
+   "sequence": 25,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "actuatorPower",
+   "label": "Actuator Power",
+   "control_type": "Dropdown",
+   "sequence": 26,
+   "feature_types": [
+    "FT55"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "bladeSealInputValue",
+   "label": "Blade Seal input value",
+   "control_type": "Number",
+   "sequence": 26,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "auxSwitch",
+   "label": "Aux Switch",
+   "control_type": "Dropdown",
+   "sequence": 27,
+   "feature_types": [
+    "FT56"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "bladeSealCostInput",
+   "label": "Blade Seal Cost input",
+   "control_type": "Number",
+   "sequence": 27,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "closureSpringKit",
+   "label": "Closure Spring Kit",
+   "control_type": "Number",
+   "sequence": 28,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "actuatorTorqueSize",
+   "label": "Actuator Torque/ Size",
+   "control_type": "Dropdown",
+   "sequence": 28,
+   "feature_types": [
+    "FT57"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "closureSpringKitUnitCost",
+   "label": "Closure Spring Kit Unit Cost",
+   "control_type": "Number",
+   "sequence": 29,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "junctionBox",
+   "label": "Junction Box",
+   "control_type": "Dropdown",
+   "sequence": 29,
+   "feature_types": [
+    "FT106"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "closingSpringKitCost",
+   "label": "Closing Spring Kit Cost",
+   "control_type": "Number",
+   "sequence": 30,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "notesInput",
+   "label": "Notes",
+   "control_type": "Textbox",
+   "sequence": 30
+  },
+  {
+   "structure": "Cost",
+   "field": "jackShaftKit",
+   "label": "Jack Shaft Kit",
+   "control_type": "Number",
+   "sequence": 31,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "UL True Round Dampers",
+   "field": "tagRef",
+   "label": "Tag Ref",
+   "control_type": "Textbox",
+   "sequence": 31
+  },
+  {
+   "structure": "Cost",
+   "field": "jackShaftKitUnitCost",
+   "label": "Jack Shaft Kit Unit Cost",
+   "control_type": "Number",
+   "sequence": 32,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "jackShaftKitCost",
+   "label": "Jack Shaft Kit Cost",
+   "control_type": "Number",
+   "sequence": 33,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "bronzeJsBushes",
+   "label": "Bronze JS Bushes",
+   "control_type": "Number",
+   "sequence": 34,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "bronzeJsBushesCost",
+   "label": "Bronze JS Bushes Cost",
+   "control_type": "Number",
+   "sequence": 35,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "jackShaftRod",
+   "label": "Jack Shaft Rod",
+   "control_type": "Number",
+   "sequence": 36,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Others",
+   "field": "check",
+   "label": "Check",
+   "control_type": "Textbox",
+   "sequence": 37
+  },
+  {
+   "structure": "Cost",
+   "field": "jackShaftRodCost",
+   "label": "Jack Shaft Rod Cost",
+   "control_type": "Number",
+   "sequence": 37,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuators",
+   "field": "actuatorMinimum",
+   "label": "Actuator Minimum",
+   "control_type": "Number",
+   "sequence": 38,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "linkageBarInput",
+   "label": "Linkage Bar input",
+   "control_type": "Number",
+   "sequence": 38,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Others",
+   "field": "retainingPlateSize",
+   "label": "Retaining Plate Size",
+   "control_type": "Textbox",
+   "sequence": 38
+  },
+  {
+   "structure": "Cost",
+   "field": "linkageBarCostInput",
+   "label": "Linkage Bar Cost input",
+   "control_type": "Number",
+   "sequence": 39,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "anchorBracket",
+   "label": "Anchor Bracket",
+   "control_type": "Number",
+   "sequence": 40,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "anchorBracketCost",
+   "label": "Anchor Bracket Cost",
+   "control_type": "Number",
+   "sequence": 41,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuators",
+   "field": "actuatorModel",
+   "label": "Actuator Model",
+   "control_type": "Textbox",
+   "sequence": 42
+  },
+  {
+   "structure": "Cost",
+   "field": "manualQuadrant",
+   "label": "Manual Quadrant",
+   "control_type": "Number",
+   "sequence": 42,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuators",
+   "field": "actuatorItemCode",
+   "label": "Actuator Item Code",
+   "control_type": "Textbox",
+   "sequence": 43
+  },
+  {
+   "structure": "Cost",
+   "field": "manualQuadrantCost",
+   "label": "Manual Quadrant Cost",
+   "control_type": "Number",
+   "sequence": 43,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "ulListedConduit",
+   "label": "UL Listed Conduit",
+   "control_type": "Number",
+   "sequence": 44,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "ulListedConduitCost",
+   "label": "UL Listed Conduit Cost",
+   "control_type": "Number",
+   "sequence": 45,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "antishortBushing",
+   "label": "Antishort Bushing",
+   "control_type": "Number",
+   "sequence": 46,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "antishortBushingCost",
+   "label": "Antishort Bushing Cost",
+   "control_type": "Number",
+   "sequence": 47,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "ulLabels",
+   "label": "UL Labels",
+   "control_type": "Number",
+   "sequence": 48,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "ulLabelCost",
+   "label": "UL Label Cost",
+   "control_type": "Number",
+   "sequence": 49,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "fusibleLink",
+   "label": "Fusible Link",
+   "control_type": "Number",
+   "sequence": 50,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "frameArea",
+   "label": "Frame Area",
+   "control_type": "Number",
+   "sequence": 51,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "frameWeight",
+   "label": "Frame Weight",
+   "control_type": "Number",
+   "sequence": 52,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "bladeArea",
+   "label": "Blade Area",
+   "control_type": "Number",
+   "sequence": 53,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "bladeWeight",
+   "label": "Blade Weight",
+   "control_type": "Number",
+   "sequence": 54,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "transitionArea",
+   "label": "Transition Area",
+   "control_type": "Number",
+   "sequence": 55,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "transitionWeight",
+   "label": "Transition Weight",
+   "control_type": "Number",
+   "sequence": 56,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "retainingPlateArea",
+   "label": "Retaining Plate Area",
+   "control_type": "Number",
+   "sequence": 57,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "retainingPlateWeight",
+   "label": "Retaining Plate Weight",
+   "control_type": "Number",
+   "sequence": 58,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "motorHoldingPlateArea",
+   "label": "Motor Holding Plate Area",
+   "control_type": "Number",
+   "sequence": 59,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "motorHoldingPlateWeight",
+   "label": "Motor Holding Plate Weight",
+   "control_type": "Number",
+   "sequence": 60,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "bladeSwitchQuantity",
+   "label": "Blade Switch Quantity",
+   "control_type": "Number",
+   "sequence": 61,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "mtsCost",
+   "label": "MTS Cost",
+   "control_type": "Number",
+   "sequence": 62,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "junctionBoxCost",
+   "label": "Junction Box Cost",
+   "control_type": "Number",
+   "sequence": 63,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "mts",
+   "label": "MTS",
+   "control_type": "Number",
+   "sequence": 64,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "junctionBoxValue",
+   "label": "Junction Box1",
+   "control_type": "Number",
+   "sequence": 65,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Minutes",
+   "field": "damperProcessingMinutes",
+   "label": "Damper Processing Minutes",
+   "control_type": "Number",
+   "sequence": 79,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Minutes",
+   "field": "transitionProcessingMinutes",
+   "label": "Transition Processing Minutes",
+   "control_type": "Number",
+   "sequence": 80,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Minutes",
+   "field": "retainingPlateProcessingMinutes",
+   "label": "Retaining Plate Processing Minutes",
+   "control_type": "Number",
+   "sequence": 81,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Minutes",
+   "field": "bladeSwitchProcessingMinutes",
+   "label": "Blade Switch Processing Minutes",
+   "control_type": "Number",
+   "sequence": 82,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Minutes",
+   "field": "junctionBoxInstallationMinutes",
+   "label": "Junction Box Installation Minutes",
+   "control_type": "Number",
+   "sequence": 83,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  }
+ ],
+ "lookups": [
+  {
+   "field": "isCartLocked",
+   "path": "cart.locked"
+  }
+ ],
+ "groups": [
+  {
+   "key": "Section Detail",
+   "label": "Section Detail",
+   "features": [
+    "unique"
+   ],
+   "properties": "feature.label,featureTypeItem.value",
+   "show_summary": 0,
+   "sequence": 1
+  },
+  {
+   "key": "Cost",
+   "label": "Cost",
+   "features": [
+    "frameCost",
+    "bladeCost",
+    "totalBladeAssembly",
+    "transitionCost",
+    "retainingPlateCost",
+    "motorHoldingPlateCost",
+    "bladeSwitchCost",
+    "totalOtherAccessories",
+    "totalMaterialCostBeforeMotors",
+    "fuseLinkCost",
+    "actuatorCost",
+    "totalMaterialCostWithMotors",
+    "totalProcessingMinutes",
+    "totalAssemblyCost",
+    "overhead",
+    "totalCost",
+    "profit",
+    "mtsCost",
+    "junctionBoxCost"
+   ],
+   "properties": "feature.label,featureTypeItem.value",
+   "show_summary": 0,
+   "sequence": 4,
+   "template": "@if(ecomStore.userInfo().roles.indexOf(\"OneCPQ Admin\") != -1){\n    @if(bundleGroup(); as bg){\n                @if(toggleable()){    \n                <div class=\"pt-2\">\n                    <p-panel class=\"pt-2\" [collapsed]=\"collapsed()\" [toggleable]=\"toggleable()\" collapseIcon=\"pi pi-angle-left\"\n                        expandIcon=\"pi pi-angle-down\">\n                        <ng-template #header>\n                            <div class=\"flex align-items-center gap-2\">\n                                <span class=\"font-bold\">\n                                    {{bg.label}}\n                                </span>\n                            </div>\n                        </ng-template>\n                        @if(toggleable()){\n                        <ng-template #icons>\n                            <button\n                                class=\"p-0 p-ripple p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text p-panel-header-icon p-panel-toggler p-link\"\n                                (click)=\"setExpanded()\">\n                                <span [class]=\"'pi pi-angle-double-'+(collapsed() ? 'left':'down')\"></span>\n                            </button>\n                        </ng-template>\n                        }\n                        <ng-container *ngTemplateOutlet=\"table\"></ng-container>\n                    </p-panel>\n                </div>\n            }\n            @else {\n                <ng-container *ngTemplateOutlet=\"table\"></ng-container>\n            }\n            <ng-template #table>\n    @if(bundleGroup(); as bg){\n    @if(cartItemFeatureModels(); as cifs){\n    <p-table size=\"small\" styleClass=\"text-base \" paginatorDropdownAppendTo=\"body\"\n        [paginator]=\"cifs.length >5?true:false\" [rows]=\"10\" [rowsPerPageOptions]=\"[5,10,20,50,75,100]\" #dt\n        responsiveLayout=\"stack\" [value]=\"cifs\">\n\n        <ng-template #header>\n            <tr>\n                @for(property of bg.properties; track property){\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                <th\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    {{_.get(AppConst.bundleGroupColumns,property)?.label}}</th>\n                }\n            </tr>\n        </ng-template>\n        <ng-template #body let-item let-rowIndex=\"rowIndex\">\n            <tr class=\"bundleGroupTable\" (click)=\"navigate(item)\">\n                @for(property of bg.properties; track property){\n\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                @if(md?.editable && editable()) {\n                <td [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\"\n                    [pEditableColumn]=\"property\" [pEditableColumnField]=\"property\">\n                    <span class=\"p-column-title\">{{md.label}}</span>\n                    @if(property === 'unitPrice'){\n\n                    @let ftip = this.bundleGroupInterface()?.getPriceListDetail(item.featureTypeItem.id,'One Time');\n\n\n                    @if(ftip?.isMatrix){\n                    <span>\n\n                        <p-button (click)=\"handleToggleMatrix(item.featureTypeItem,$event)\" title=\"Matrix Detail\"\n                            styleClass=\"btb-rotate-45\" icon=\"pi pi-thumbtack\" [rounded]=\"true\" [text]=\"true\" />\n                        <btb-shared-matrix-price-detail [cartItemFeature]=\"item\"\n                            [headerTitle]=\"(ftip?.matrixType ?? '') +' pricing - '+item.featureTypeItem.value\"\n                            [items]=\"ftip?.entries\" [displayModal]=\"toggleViewModel()[item.featureTypeItem.id]\">\n                        </btb-shared-matrix-price-detail>\n                    </span>\n                    }\n                    }\n                    <p-cellEditor class=\"align-content-end\">\n                        <ng-template pTemplate=\"input\">\n                            @if(md.type === 'currency' || md.type === 'number'|| md.type === 'percentage') {\n                            <input pInputText type=\"number\" [(ngModel)]=\"item[property]\">\n                            }\n                        </ng-template>\n                        <ng-template pTemplate=\"output\">\n                            <span class=\"ref-link cursor-pointer\">\n                                {{getValue(item, property)}}\n                            </span>\n                        </ng-template>\n                    </p-cellEditor>\n                </td>    \n                \n                }\n                @else {\n                <td\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    <span class=\"p-column-title\">{{md?.label}}</span>\n                    {{getValue(item, property)}}\n                </td>\n                }\n                }\n            </tr>\n        </ng-template>\n        <ng-template #footer *ngIf=\"bg.showSummary\">\n            <tr>\n                @for(property of bg.properties; track property){\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                <td\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    @if (md?.showSummary) {\n                    {{_.get(summary(),property)}}\n                    }\n\n                </td>\n                }\n            </tr>\n        </ng-template>\n    </p-table>\n    }\n    }\n</ng-template>\n        }\n}"
+  }
+ ],
+ "constraints": [
+  {
+   "key": "IMC202178",
+   "label": null,
+   "parent": "713",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(productCost) == 0)",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "productCost"
+     ],
+     "options": [
+      "UL True Round Dampers"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC243642",
+   "label": "ActuatorTorq Selection",
+   "parent": "713",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(CONTAINS(actuatorBrand,'$[Belimo]')) && (NUMBER(diameter) >410)",
+   "actions": [
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorTorqueSize"
+     ]
+    },
+    {
+     "type": "Enable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "actuatorTorqueSize"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC304816",
+   "label": null,
+   "parent": "713",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "REFERENCE(isCartLocked)",
+   "actions": [
+    {
+     "type": "Hide Bundle Property",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "save"
+     ]
+    },
+    {
+     "type": "Lock",
+     "sequence": 0,
+     "active": 1,
+     "result": 1
+    }
+   ]
+  },
+  {
+   "key": "IMC4700",
+   "label": null,
+   "parent": "714",
+   "sequence": 0,
+   "active": 0,
+   "result": 1,
+   "when": "CONTAINS(subcategory,'$[UL True Round Static Fire Dampers]')",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelDescription",
+      "leakageClass"
+     ],
+     "options": [
+      "FD-R True Round Fire Damper - Static",
+      "NA"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "leakageClass"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC4701",
+   "label": null,
+   "parent": "714",
+   "sequence": 0,
+   "active": 0,
+   "result": 1,
+   "when": "CONTAINS(subcategory,'$[UL True Round Smoke Dampers]')",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelDescription",
+      "rating",
+      "damperOperator",
+      "fuseLinkOptions",
+      "actuatorBrand",
+      "actuatorMounting",
+      "actuatorPower",
+      "actuatorTorqueSize",
+      "auxSwitch"
+     ],
+     "options": [
+      "SSD-R True Round Smoke Damper",
+      "NA",
+      "Electric",
+      "STOR",
+      "Honeywell",
+      "External",
+      "230V",
+      "30lbin-3.5Nm",
+      "2 Aux"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "rating"
+     ]
+    },
+    {
+     "type": "Show Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "leakageClass",
+      "junctionBox"
+     ]
+    },
+    {
+     "type": "Show Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "rating"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "rating"
+     ],
+     "options": [
+      "1.5 HR"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC4702",
+   "label": null,
+   "parent": "714",
+   "sequence": 0,
+   "active": 0,
+   "result": 1,
+   "when": "CONTAINS(subcategory,'$[UL True Round Combination Fire Smoke Dampers]')",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelDescription",
+      "damperOperator",
+      "fuseLinkOptions",
+      "actuatorBrand",
+      "actuatorPower",
+      "actuatorTorqueSize",
+      "actuatorMounting",
+      "auxSwitch"
+     ],
+     "options": [
+      "FSD-R True Round Combination Fire Smoke Damper",
+      "Electric",
+      "STOR",
+      "Honeywell",
+      "External",
+      "230V",
+      "2 Aux",
+      "30lbin-3.5Nm"
+     ]
+    },
+    {
+     "type": "Show Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "leakageClass",
+      "junctionBox"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC6626907",
+   "label": null,
+   "parent": "713",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(NUMBER(totalCost) >0) || (NUMBER(totalCost) ==0)",
+   "actions": [
+    {
+     "type": "Change Field Price",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "productCost"
+     ],
+     "expr": "EVALUATE(' return Math.ceil(input.arg1);', NUMBER(totalCost)/(1-CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Profit (ULRD)]','cost'))) )"
+    }
+   ]
+  },
+  {
+   "key": "727",
+   "label": "Hide ,Disable field",
+   "parent": null,
+   "sequence": 1,
+   "active": 1,
+   "result": 0,
+   "when": "LOADDEFAULTS()",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "productCost"
+     ],
+     "options": [
+      "UL True Round Dampers"
+     ]
+    },
+    {
+     "type": "Change Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "minDiameter"
+     ],
+     "expr": "200"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "maxDiameter"
+     ],
+     "expr": "610"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameDepth"
+     ],
+     "expr": "0"
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "junctionBox",
+      "retainingPlateSize",
+      "subCategoryCode",
+      "uniqueFuseLink"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorMinimum",
+      "modelDescription",
+      "rating"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "junctionBox",
+      "mtsOption",
+      "retainingPlate",
+      "transitionType"
+     ],
+     "options": [
+      {
+       "field": "retainingPlate",
+       "option": "No"
+      },
+      "NA",
+      "No",
+      {
+       "field": "mtsOption",
+       "option": "No"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "713",
+   "label": "Set factors from country wise cost table based on opportunity country",
+   "parent": null,
+   "sequence": 2,
+   "active": 1,
+   "result": 0,
+   "when": "true",
+   "actions": [
+    {
+     "type": "Lock Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelItem",
+      "countryWiseCost",
+      "subcategory",
+      "actuator",
+      "modelDescription",
+      "fuseLink",
+      "leakageClass",
+      "rating",
+      "frameMaterialType",
+      "frameThicknessLookup",
+      "bladeThicknessLookup",
+      "transitionType",
+      "retainingPlate",
+      "productCost",
+      "damperOperator",
+      "fuseLinkOptions",
+      "uniqueFuseLink",
+      "linkTemperature",
+      "mtsOption",
+      "bladeSwitchPackage",
+      "actuatorBrand",
+      "actuatorMounting",
+      "actuatorPower",
+      "auxSwitch",
+      "actuatorTorqueSize",
+      "junctionBox",
+      "actuatorCostLookup"
+     ]
+    },
+    {
+     "type": "Change Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "notes"
+     ],
+     "expr": "CONCAT(\nIIF(CONTAINS(transitionType, '$[One Side]','$[Both Sides]'),\nCONCAT('Transition 1: D',NUMBER(transitionDiameter),' x L',NUMBER(transitionLength),' '),\n''),\nIIF(CONTAINS(transitionType, '$[Both Sides]'),\nCONCAT(', Transition 2: D',NUMBER(transitionDiameter2),' x L',NUMBER(transitionLength2),' '),\n''),\nTEXT(notesInput)\n)"
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorProcessingMinutes",
+      "totalProcessingMinutes",
+      "damperProcessingMinutes",
+      "transitionProcessingMinutes",
+      "retainingPlateProcessingMinutes",
+      "bladeSwitchProcessingMinutes",
+      "junctionBoxInstallationMinutes"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "mtsCost",
+      "mts"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "junctionBoxCost",
+      "junctionBoxValue"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelItem"
+     ]
+    },
+    {
+     "type": "Hide Bundle Property",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "return",
+      "basePrice",
+      "search"
+     ]
+    },
+    {
+     "type": "Disable Bundle Property",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "title"
+     ]
+    },
+    {
+     "type": "Include Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelItem"
+     ],
+     "expr": "EVALUATE(' var mNo = input.arg1; return mNo.split(\" \")[0]',IIF((COUNT(modelDescription)>0),SELECTEDVALUE(modelDescription),'  ') )"
+    },
+    {
+     "type": "Hide Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorBrand"
+     ],
+     "options": [
+      "NA",
+      "Pneumatic",
+      "Siemens"
+     ]
+    },
+    {
+     "type": "Change Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameWastage"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Frame Wastage (ULRD)]','cost'))"
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 6,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorItemCode",
+      "actuatorModel",
+      "actuatorProcessingMinutes",
+      "bladeSwitchProcessingMinutes",
+      "check",
+      "damperProcessingMinutes",
+      "noOfActuators",
+      "retainingPlateProcessingMinutes",
+      "totalProcessingMinutes",
+      "transitionProcessingMinutes"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 7,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuator",
+      "countryWiseCost",
+      "frameMaterialCost",
+      "frameMaterialDensity",
+      "frameWastage",
+      "fuseLink",
+      "hourlyRate",
+      "maxDiameter",
+      "minDiameter",
+      "profit"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 8,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorCost",
+      "axleRetainerArea",
+      "axleRetainerWeight",
+      "bladeSquareBar",
+      "bladeSquareBarCost",
+      "bronzeOiliteBladeBush",
+      "bronzeOiliteBladeBushCost",
+      "productCost",
+      "totalAssemblyCost",
+      "totalCost",
+      "totalMaterialCostBeforeMotors",
+      "totalMaterialCostWithMotors"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 9,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleRetainerCost",
+      "bladeSealCostInput",
+      "bladeSealInputValue",
+      "bronzeJsBushes",
+      "bronzeJsBushesCost",
+      "closingSpringKitCost",
+      "closureSpringKit",
+      "closureSpringKitUnitCost",
+      "jackShaftKit",
+      "jackShaftKitCost",
+      "jackShaftKitUnitCost",
+      "jackShaftRod",
+      "jackShaftRodCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 10,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "anchorBracket",
+      "anchorBracketCost",
+      "antishortBushing",
+      "antishortBushingCost",
+      "bladeSwitchCost",
+      "linkageBarCostInput",
+      "linkageBarInput",
+      "manualQuadrant",
+      "manualQuadrantCost",
+      "retainingPlateCost",
+      "totalBladeAssembly",
+      "transitionCost",
+      "ulLabels",
+      "ulListedConduit",
+      "ulListedConduitCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 11,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeArea",
+      "bladeCost",
+      "bladeWeight",
+      "frameArea",
+      "frameCost",
+      "frameWeight",
+      "fuseLinkCost",
+      "fusibleLink",
+      "motorHoldingPlateArea",
+      "overhead",
+      "retainingPlateArea",
+      "retainingPlateWeight",
+      "totalOtherAccessories",
+      "transitionArea",
+      "transitionWeight",
+      "ulLabelCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 12,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorMinimum",
+      "bladeSwitchQuantity",
+      "modelDescription",
+      "motorHoldingPlateCost",
+      "motorHoldingPlateWeight",
+      "rating"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 14,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "retainingPlateSize",
+      "subCategoryCode",
+      "unique",
+      "uniqueFuseLink"
+     ]
+    },
+    {
+     "type": "Hide Field Price",
+     "sequence": 15,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSwitchPackage",
+      "bladeThicknessLookup",
+      "damperOperator",
+      "frameMaterialType",
+      "frameThicknessLookup",
+      "fuseLinkOptions",
+      "junctionBox",
+      "leakageClass",
+      "linkTemperature",
+      "modelDescription",
+      "mtsOption",
+      "rating",
+      "retainingPlate",
+      "subcategory",
+      "transitionType",
+      "uniqueFuseLink"
+     ]
+    },
+    {
+     "type": "Hide Field Price",
+     "sequence": 16,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorBrand",
+      "actuatorMounting",
+      "actuatorPower",
+      "actuatorTorqueSize",
+      "auxSwitch"
+     ]
+    },
+    {
+     "type": "Disable Field Quantity",
+     "sequence": 17,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSwitchPackage",
+      "bladeThicknessLookup",
+      "damperOperator",
+      "frameMaterialType",
+      "frameThicknessLookup",
+      "fuseLinkOptions",
+      "junctionBox",
+      "leakageClass",
+      "linkTemperature",
+      "modelDescription",
+      "mtsOption",
+      "rating",
+      "retainingPlate",
+      "subcategory",
+      "transitionType",
+      "uniqueFuseLink"
+     ]
+    },
+    {
+     "type": "Disable Field Quantity",
+     "sequence": 18,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorBrand",
+      "actuatorMounting",
+      "actuatorPower",
+      "actuatorTorqueSize",
+      "auxSwitch"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "714",
+   "label": "Subcategory change",
+   "parent": null,
+   "sequence": 3,
+   "active": 1,
+   "result": 0,
+   "when": "ISCHANGED(subcategory)",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "subCategoryCode"
+     ],
+     "expr": "EVALUATE(\n'\nvar sub = input.arg1;\nif(sub ==\"UL True Round Static Fire Dampers\") return \"FD\";\nif(sub ==\"UL True Round Dynamic Fire Dampers\") return \"FDD\";\nif(sub ==\"UL True Round Smoke Dampers\") return \"SSD\";\nif(sub ==\"UL True Round Combination Fire Smoke Dampers\") return \"CFSD\";\nreturn \"\";\n',\nSELECTEDVALUE(subcategory)\n)"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "leakageClass"
+     ],
+     "expr": "EVALUATE(\n'\nvar sub = input.arg1;\nif(sub ==\"UL True Round Smoke Dampers\" || sub ==\"UL True Round Combination Fire Smoke Dampers\") return \"Class II-250F\";\nreturn \"NA\";\n',\nSELECTEDVALUE(subcategory)\n)"
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 6,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "junctionBox"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC243634",
+   "label": "Subcategory change",
+   "parent": null,
+   "sequence": 4,
+   "active": 1,
+   "result": 1,
+   "when": "ISCHANGED(subcategory)\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameMaterialType",
+      "frameThicknessLookup",
+      "bladeThicknessLookup",
+      "transitionType",
+      "retainingPlate",
+      "mtsOption",
+      "bladeSwitchPackage",
+      "junctionBox"
+     ],
+     "options": [
+      "GI",
+      "1.00",
+      "0.70",
+      "NA",
+      "No",
+      {
+       "field": "mtsOption",
+       "option": "No"
+      },
+      {
+       "field": "bladeSwitchPackage",
+       "option": "No"
+      },
+      {
+       "field": "junctionBox",
+       "option": "No"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC243636",
+   "label": "Sub category smoke",
+   "parent": "713",
+   "sequence": 5,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(subcategory,'$[UL True Round Smoke Dampers]')",
+   "actions": [
+    {
+     "type": "Hide Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "rating"
+     ]
+    },
+    {
+     "type": "Show Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "rating"
+     ]
+    },
+    {
+     "type": "Show Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "leakageClass",
+      "junctionBox"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "731",
+   "label": "Sub category smoke",
+   "parent": null,
+   "sequence": 6,
+   "active": 1,
+   "result": 0,
+   "when": "(CONTAINS(subcategory,'$[UL True Round Smoke Dampers]')) \n&& \n(ISCHANGED(subcategory))\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorBrand",
+      "actuatorMounting",
+      "actuatorPower",
+      "actuatorTorqueSize",
+      "auxSwitch",
+      "damperOperator",
+      "fuseLinkOptions",
+      "modelDescription",
+      "rating"
+     ],
+     "options": [
+      {
+       "field": "rating",
+       "option": "NA"
+      },
+      "30lbin-3.5Nm",
+      "2 Aux",
+      "230V",
+      "Honeywell",
+      "STOR",
+      "Electric",
+      "External",
+      "SSD-R True Round Smoke Damper"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC243637",
+   "label": "Sub category smoke",
+   "parent": null,
+   "sequence": 7,
+   "active": 1,
+   "result": 1,
+   "when": "NOT(CONTAINS(subcategory,'$[UL True Round Smoke Dampers]')) \n&& \nISCHANGED(subcategory)\n&& \nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "rating"
+     ],
+     "options": [
+      "1.5 HR"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC243639",
+   "label": "Sub category static",
+   "parent": "713",
+   "sequence": 8,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(subcategory,'$[UL True Round Static Fire Dampers]')",
+   "actions": [
+    {
+     "type": "Hide Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "leakageClass"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "712",
+   "label": null,
+   "parent": "713",
+   "sequence": 9,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(subcategory) == 0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select Sub-Category Option.'"
+    }
+   ]
+  },
+  {
+   "key": "728",
+   "label": "Sub category static",
+   "parent": null,
+   "sequence": 9,
+   "active": 1,
+   "result": 0,
+   "when": "(CONTAINS(subcategory,'$[UL True Round Static Fire Dampers]')) \n&& \n(ISCHANGED(subcategory))\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "leakageClass",
+      "modelDescription"
+     ],
+     "options": [
+      "NA",
+      "FD-R True Round Fire Damper - Static"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "711",
+   "label": null,
+   "parent": "713",
+   "sequence": 10,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(modelDescription) == 0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select a Model.'"
+    }
+   ]
+  },
+  {
+   "key": "IMC243640",
+   "label": "Sub category combination",
+   "parent": "713",
+   "sequence": 10,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(subcategory,'$[UL True Round Combination Fire Smoke Dampers]')",
+   "actions": [
+    {
+     "type": "Show Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "leakageClass",
+      "junctionBox"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "717",
+   "label": "Transition Type related Values",
+   "parent": "713",
+   "sequence": 11,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(transitionType,'$[Both Sides]','$[One Side]')",
+   "actions": [
+    {
+     "type": "Show Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "transitionDiameter",
+      "transitionLength"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 2,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "transitionDiameter",
+      "transitionLength"
+     ]
+    },
+    {
+     "type": "Reset Field",
+     "sequence": 3,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "transitionDiameter",
+      "transitionLength"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "732",
+   "label": "Sub category combination",
+   "parent": null,
+   "sequence": 11,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(subcategory,'$[UL True Round Combination Fire Smoke Dampers]')\n&&\nISCHANGED(subcategory)\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorBrand",
+      "actuatorMounting",
+      "actuatorPower",
+      "actuatorTorqueSize",
+      "auxSwitch",
+      "damperOperator",
+      "fuseLinkOptions",
+      "modelDescription"
+     ],
+     "options": [
+      "30lbin-3.5Nm",
+      "2 Aux",
+      "230V",
+      "Honeywell",
+      "STOR",
+      "Electric",
+      "External",
+      "FSD-R True Round Combination Fire Smoke Damper"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "716",
+   "label": "Frame depth check",
+   "parent": "713",
+   "sequence": 12,
+   "active": 1,
+   "result": 1,
+   "when": "(400 > NUMBER(frameDepth)) || (650< NUMBER(frameDepth)) || ISNULLORBLANK(frameDepth)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "CONCAT('Warning : Frame depth entered is not within the limit. Please enter between ',400,' and ',650)"
+    }
+   ]
+  },
+  {
+   "key": "730",
+   "label": "Sub category Dynamic",
+   "parent": null,
+   "sequence": 12,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(subcategory,'$[UL True Round Dynamic Fire Dampers]')\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "leakageClass",
+      "modelDescription"
+     ],
+     "options": [
+      "NA",
+      "FDD-R True Round Fire Damper - Dynamic"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "718",
+   "label": "transition Diameter",
+   "parent": "713",
+   "sequence": 13,
+   "active": 1,
+   "result": 1,
+   "when": "(CONTAINS(transitionType,'$[Both Sides]','$[One Side]')) && (((NUMBER(diameter) -100) > NUMBER(transitionDiameter)) || ((NUMBER(diameter) +200) < NUMBER(transitionDiameter)))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "CONCAT('Warning : Transition Diameter entered is not within the limit. Please enter between ',(NUMBER(diameter) -100),' and ',(NUMBER(diameter) +200))"
+    }
+   ]
+  },
+  {
+   "key": "IMC243641",
+   "label": "Sub category Dynamic",
+   "parent": "713",
+   "sequence": 13,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(subcategory,'$[UL True Round Dynamic Fire Dampers]')",
+   "actions": [
+    {
+     "type": "Hide Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "leakageClass"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "715",
+   "label": "Diameter check",
+   "parent": "713",
+   "sequence": 14,
+   "active": 1,
+   "result": 1,
+   "when": "(200 > NUMBER(diameter)) || (610 < NUMBER(diameter)) || ISNULLORBLANK(diameter)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "CONCAT('Warning : Diameter entered is not within the limit. Please enter between ',200,' and ',610)"
+    }
+   ]
+  },
+  {
+   "key": "719",
+   "label": "transition Length",
+   "parent": "713",
+   "sequence": 14,
+   "active": 1,
+   "result": 1,
+   "when": "(CONTAINS(transitionType,'$[Both Sides]','$[One Side]')) && ((150 > NUMBER(transitionLength)) || (400 < NUMBER(transitionLength)))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "CONCAT('Warning : Transition Length entered is not within the limit. Please enter between ',150,' and ',400)"
+    }
+   ]
+  },
+  {
+   "key": "721",
+   "label": "acDamper Operator based defaults",
+   "parent": "713",
+   "sequence": 14,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(damperOperator,'$[Quadrant]')",
+   "actions": [
+    {
+     "type": "Hide Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorBrand",
+      "actuatorMounting",
+      "actuatorPower",
+      "actuatorTorqueSize",
+      "auxSwitch",
+      "junctionBox",
+      "mtsOption"
+     ]
+    },
+    {
+     "type": "Show Value",
+     "sequence": 6,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fuseLinkOptions"
+     ],
+     "options": [
+      "MFL"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "735",
+   "label": "Transition is both side",
+   "parent": "713",
+   "sequence": 14,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(transitionType,'$[Both Sides]')",
+   "actions": [
+    {
+     "type": "Show Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "transitionDiameter2",
+      "transitionLength2"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 2,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "transitionDiameter2",
+      "transitionLength2"
+     ]
+    },
+    {
+     "type": "Reset Field",
+     "sequence": 3,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "transitionDiameter2",
+      "transitionLength2"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "736",
+   "label": "transition Diameter 2",
+   "parent": "713",
+   "sequence": 15,
+   "active": 1,
+   "result": 1,
+   "when": "(CONTAINS(transitionType,'$[Both Sides]')) && (((NUMBER(diameter) -100) > NUMBER(transitionDiameter2)) || ((NUMBER(diameter) +200) < NUMBER(transitionDiameter2)))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Transition Diameter is not within the limit '"
+    }
+   ]
+  },
+  {
+   "key": "737",
+   "label": "transition Length 2",
+   "parent": "713",
+   "sequence": 16,
+   "active": 1,
+   "result": 1,
+   "when": "(CONTAINS(transitionType,'$[Both Sides]')) && ((150 > NUMBER(transitionLength2)) || (400 < NUMBER(transitionLength2)))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Transition Length is not within the limit'"
+    }
+   ]
+  },
+  {
+   "key": "IMC243635",
+   "label": "acDamper Operator based defaults",
+   "parent": null,
+   "sequence": 16,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(damperOperator,'$[Quadrant]') \n&& \nISCHANGED(damperOperator)\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Reset Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "auxSwitch",
+      "actuatorMounting",
+      "actuatorPower",
+      "actuatorModel"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fuseLinkOptions",
+      "mtsOption",
+      "actuatorBrand",
+      "junctionBox"
+     ],
+     "options": [
+      "No",
+      {
+       "field": "junctionBox",
+       "option": "No"
+      },
+      {
+       "field": "actuatorBrand",
+       "option": "NA"
+      },
+      "MFL"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "720",
+   "label": "Fusible link option",
+   "parent": "713",
+   "sequence": 17,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(subcategory,'$[UL True Round Combination Fire Smoke Dampers]','$[UL True Round Dynamic Fire Dampers]','$[UL True Round Static Fire Dampers]')",
+   "actions": [
+    {
+     "type": "Show Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fuseLink",
+      "fuseLinkOptions",
+      "linkTemperature"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 2,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "fuseLink",
+      "fuseLinkOptions",
+      "linkTemperature"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "740",
+   "label": "fuse link mandate",
+   "parent": "713",
+   "sequence": 17,
+   "active": 1,
+   "result": 1,
+   "when": "(CONTAINS(subcategory,'$[UL True Round Combination Fire Smoke Dampers]','$[UL True Round Dynamic Fire Dampers]','$[UL True Round Static Fire Dampers]') )&& (COUNT(fuseLinkOptions) == 0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select fuse link options'"
+    }
+   ]
+  },
+  {
+   "key": "746",
+   "label": "Fuse Link Options is Empty",
+   "parent": null,
+   "sequence": 17,
+   "active": 1,
+   "result": 0,
+   "when": "(COUNT(fuseLinkOptions))==0",
+   "actions": [
+    {
+     "type": "Reset Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "linkTemperature"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "747",
+   "label": "Transition Type Mantadory",
+   "parent": "713",
+   "sequence": 18,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(transitionType))==0",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please Select Transition Type'"
+    }
+   ]
+  },
+  {
+   "key": "IMC243638",
+   "label": "Operator is Electric",
+   "parent": "713",
+   "sequence": 18,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(damperOperator, '$[Electric]')",
+   "actions": [
+    {
+     "type": "Show Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorBrand",
+      "actuatorMounting",
+      "actuatorPower",
+      "actuatorTorqueSize",
+      "junctionBox",
+      "auxSwitch",
+      "mtsOption"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "734",
+   "label": "Operator is Electric",
+   "parent": null,
+   "sequence": 19,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(damperOperator, '$[Electric]')\n&&\nISCHANGED(damperOperator)\n&& NOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorBrand",
+      "actuatorMounting",
+      "actuatorPower",
+      "actuatorTorqueSize",
+      "auxSwitch",
+      "fuseLinkOptions",
+      "junctionBox"
+     ],
+     "options": [
+      "30lbin-3.5Nm",
+      "2 Aux",
+      "230V",
+      "Honeywell",
+      "STOR",
+      "External",
+      "No"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "738",
+   "label": "Actuator Torque/ Size",
+   "parent": null,
+   "sequence": 19,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(actuatorBrand, '$[Honeywell]','$[Belimo]')\n&& \n(NUMBER(diameter) <=410 )\n&&\n(ISCHANGED(actuatorBrand) || ISCHANGED(diameter))\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorTorqueSize"
+     ],
+     "options": [
+      "30lbin-3.5Nm"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "739",
+   "label": "Actuator Torque/ Size 2",
+   "parent": null,
+   "sequence": 20,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(actuatorBrand,'$[Belimo]')\n&&\n(NUMBER(diameter) >410)\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorTorqueSize"
+     ],
+     "options": [
+      "80lbin-9Nm"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "743",
+   "label": "Fuse Link DTOR",
+   "parent": null,
+   "sequence": 20,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(fuseLinkOptions,'$[DTOR]')",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "linkTemperature"
+     ],
+     "options": [
+      "165/212F"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "723",
+   "label": "Actuator related details",
+   "parent": null,
+   "sequence": 21,
+   "active": 1,
+   "result": 0,
+   "when": "(COUNT(actuatorBrand)>0 ) && (COUNT(actuatorPower)>0) && (COUNT(auxSwitch) > 0) && (COUNT(actuatorTorqueSize) > 0)",
+   "actions": [
+    {
+     "type": "Include Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuator"
+     ],
+     "expr": "CONCAT(SELECTEDVALUE(actuatorBrand),SELECTEDVALUE(actuatorPower),SELECTEDVALUE(auxSwitch),SELECTEDVALUE(actuatorTorqueSize))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorItemCode"
+     ],
+     "expr": "OBJECTATTRIBUTEF(actuator,'item_code')"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorModel"
+     ],
+     "expr": "OBJECTATTRIBUTEF(actuator,'model')"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 4,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorMinimum"
+     ],
+     "expr": "IIF(\nCONTAINS(damperOperator,'$[Quadrant]'),0,\nIIF((CONTAINS(actuatorBrand,'$[Belimo]') && CONTAINS(actuatorTorqueSize,'$[30lbin-3.5Nm]')),460,610\n)\n)"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 5,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorCostLookup"
+     ],
+     "expr": "OBJECTATTRIBUTEF(actuator,'item_code')",
+     "description": "Country-wise actuator cost row (same item code as the selected actuator)"
+    }
+   ]
+  },
+  {
+   "key": "724",
+   "label": "pricing calculations",
+   "parent": null,
+   "sequence": 22,
+   "active": 1,
+   "result": 0,
+   "when": "(NUMBER(diameter) > 0)\n && \n(COUNT(modelDescription) > 0)",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameMaterialDensity"
+     ],
+     "expr": "IIF(CONTAINS(frameMaterialType, '$[SS304L]','$[SS316L]'),\n     CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Density Factor]','cost')),\n     CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI Density Factor]','cost'))\n )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameMaterialCost"
+     ],
+     "expr": "IIF(SELECTEDVALUE(frameMaterialType) == 'GI',\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI]','cost')),\nIIF(SELECTEDVALUE(frameMaterialType) == 'SS304L',\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS304L]','cost')),\nIIF(SELECTEDVALUE(frameMaterialType) == 'SS316L',\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS316L]','cost')),0\n)\n)\n)"
+    },
+    {
+     "type": "Reset Field",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fuseLink",
+      "uniqueFuseLink"
+     ]
+    },
+    {
+     "type": "Change Value",
+     "sequence": 4,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "check"
+     ],
+     "expr": "IIF(NUMBER(diameter)>NUMBER(actuatorMinimum),'Check','Okay')"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 5,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "noOfActuators"
+     ],
+     "expr": "IIF((SELECTEDVALUE(damperOperator)=='Electric'),1,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 6,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameArea"
+     ],
+     "expr": "((NUMBER(diameter)*3.14)+25)*NUMBER(frameDepth)/1000000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 7,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameWeight"
+     ],
+     "expr": "CFLOAT(SELECTEDVALUE(frameThicknessLookup))*NUMBER(frameArea)*NUMBER(frameMaterialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 8,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameCost"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1; return cost.toFixed(2); ',\n\nNUMBER(frameWeight)*NUMBER(frameMaterialCost)*(1+NUMBER(frameWastage))\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 9,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeArea"
+     ],
+     "expr": "(NUMBER(diameter)*NUMBER(diameter))*3.14*2/4/1000000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 10,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeWeight"
+     ],
+     "expr": "SELECTEDVALUE(bladeThicknessLookup)*NUMBER(bladeArea)*NUMBER(frameMaterialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 11,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeCost"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1;  return cost.toFixed(2); ', \n(\nNUMBER(bladeWeight)\n*\nNUMBER(frameMaterialCost)\n*\n(1+\n(\nCFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[Blade Wastage (ULRD)]','cost')\n)))\n)\n)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 12,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bronzeOiliteBladeBush"
+     ],
+     "expr": "2"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 13,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bronzeOiliteBladeBushCost"
+     ],
+     "expr": "NUMBER(bronzeOiliteBladeBush)*\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Bronze Oilite 10mm Round Bar Bush]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 14,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSquareBar"
+     ],
+     "expr": "(NUMBER(diameter)+25)/1000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 15,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSquareBarCost"
+     ],
+     "expr": "NUMBER(bladeSquareBar)*\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Blade 3/8 Inch 10mm Square Bar]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 16,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleRetainerArea"
+     ],
+     "expr": "NUMBER(diameter)*75/1000000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 17,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleRetainerWeight"
+     ],
+     "expr": "CFLOAT(SELECTEDVALUE(frameThicknessLookup))*NUMBER(axleRetainerArea)*NUMBER(frameMaterialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 18,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleRetainerCost"
+     ],
+     "expr": "NUMBER(axleRetainerWeight)*NUMBER(frameMaterialCost)*(1+NUMBER(frameWastage))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 19,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSealInputValue"
+     ],
+     "expr": "IIF(((TEXT(subCategoryCode)=='SSD') || (TEXT(subCategoryCode)=='CFSD')),3.14*NUMBER(diameter)/1000,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 20,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSealCostInput"
+     ],
+     "expr": "NUMBER(bladeSealInputValue)*  \nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[UL FNST Blade Seal - High Temperature]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 21,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "jackShaftKit"
+     ],
+     "expr": "NUMBER(noOfActuators)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 22,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "jackShaftKitUnitCost"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Zeb Drive Pin Steel 15.87X21.46mm 9146]','cost'))\n+\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Jack Shaft Drive GI G90 110X25mm 9008]','cost'))\n+\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[5/16 - 18 x 1 1/2 Carriage Bolt]','cost'))\n+\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[5/16 -18 Flange Whiz Nut]','cost'))\n+\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[1/4 - 20 Lock Nut]','cost'))\n+\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Zeb Drive Link CRS 12.7X150mm 9006]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 23,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "jackShaftKitCost"
+     ],
+     "expr": "NUMBER(jackShaftKit)*NUMBER(jackShaftKitUnitCost)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 24,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "closureSpringKit"
+     ],
+     "expr": "IIF(\n    (((TEXT(subCategoryCode) =='FD') || (TEXT(subCategoryCode) =='FDD') ) && (NUMBER(noOfActuators)==0)),1,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 25,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "closureSpringKitUnitCost"
+     ],
+     "expr": "NUMBER(jackShaftKitUnitCost)\n+\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Jack Shaft Drive GI G90 110X25mm 9008]','cost'))\n+\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fuse Link Retainer Pin]','cost'))\n+\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fuse Link Hexa Stud Pin Steel 11X30.6mm 9145]','cost'))\n+\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Spring Retainer Bushing Steel 31.75mmX6.35mmDia]','cost'))\n+\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Damper Closer Spring SS304 55.5mmX3.2mmDia]','cost'))\n+\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[3/16 Inch x 2 Inch Lg. Solid Roll Pin]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 26,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "closingSpringKitCost"
+     ],
+     "expr": "NUMBER(closureSpringKit)*NUMBER(closureSpringKitUnitCost)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 27,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bronzeJsBushes"
+     ],
+     "expr": "2"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 28,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bronzeJsBushesCost"
+     ],
+     "expr": "NUMBER(bronzeJsBushes)*  \nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Bronze Oilite Jackshaft Bushes 1/2 Inch]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 29,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "jackShaftRod"
+     ],
+     "expr": "(NUMBER(diameter)+150)/1000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 30,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "jackShaftRodCost"
+     ],
+     "expr": "NUMBER(jackShaftRod)* \nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Jack Shaft Rod 12mm]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 31,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "linkageBarInput"
+     ],
+     "expr": "1"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 32,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "linkageBarCostInput"
+     ],
+     "expr": "NUMBER(linkageBarInput)*\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[AF-FD Linkage Bar GI CVSS 12.7X367X3.5mm 9169]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 33,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "anchorBracket"
+     ],
+     "expr": "1"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 34,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "anchorBracketCost"
+     ],
+     "expr": "NUMBER(anchorBracket)*\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Anchor Bracket]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 35,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "manualQuadrant"
+     ],
+     "expr": "IIF((NUMBER(noOfActuators)==0),1,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 36,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "manualQuadrantCost"
+     ],
+     "expr": "NUMBER(manualQuadrant)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI VCD Handle (V) Square 10x10]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 37,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalBladeAssembly"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1; return cost.toFixed(2); ', \n\nNUMBER(bronzeOiliteBladeBushCost)+NUMBER(bladeSquareBarCost)+NUMBER(axleRetainerCost)+NUMBER(closingSpringKitCost)+NUMBER(jackShaftKitCost)+NUMBER(bladeSealCostInput)+NUMBER(bronzeJsBushesCost)+NUMBER(jackShaftRodCost)+NUMBER(linkageBarCostInput)+NUMBER(anchorBracketCost)+NUMBER(manualQuadrantCost)\n\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 38,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "transitionArea"
+     ],
+     "expr": "IIF(CONTAINS(transitionType,'$[NA]'),0,(\nIIF(NUMBER(diameter) > NUMBER(transitionDiameter),NUMBER(diameter),NUMBER(transitionDiameter))\n*\n(NUMBER(transitionLength)\n/1000000  )\n+\nIIF(\nCONTAINS(transitionType,'$[Both Sides]'),\n    (\n    IIF(\n        NUMBER(diameter) > NUMBER(transitionDiameter2),NUMBER(diameter),NUMBER(transitionDiameter2)\n        )\n*\nNUMBER(transitionLength2)/1000000\n),0) ))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 39,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "transitionWeight"
+     ],
+     "expr": "CFLOAT(SELECTEDVALUE(frameThicknessLookup))\n*\nIIF(ISNULLORBLANK(transitionArea),0,NUMBER(transitionArea))\n*\nNUMBER(frameMaterialDensity)\n"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 40,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "transitionCost"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1; return cost.toFixed(2); ', \n\n((1+NUMBER(frameWastage))*NUMBER(frameMaterialCost)*NUMBER(transitionWeight))\n\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 41,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "retainingPlateArea"
+     ],
+     "expr": "IIF(\n((CONTAINS(retainingPlate,'$[No]')) || (COUNT(retainingPlate) ==0)),0,\n((((NUMBER(diameter)+100)*(NUMBER(diameter)+100))/1000000)\n)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 42,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "retainingPlateWeight"
+     ],
+     "expr": "IIF(\n(NUMBER(retainingPlateArea) == 0),\n0,\n(CFLOAT(SELECTEDVALUE(retainingPlate))*NUMBER(retainingPlateArea)*NUMBER(frameMaterialDensity) )\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 43,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "retainingPlateCost"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1; return cost.toFixed(2); ',\n\n(NUMBER(retainingPlateWeight)*NUMBER(frameMaterialCost)*(1+NUMBER(frameWastage)))\n\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 44,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "motorHoldingPlateArea"
+     ],
+     "expr": "125*150/1000000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 45,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "motorHoldingPlateWeight"
+     ],
+     "expr": "1.2*NUMBER(motorHoldingPlateArea)*NUMBER(frameMaterialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 46,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "motorHoldingPlateCost"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1;  return cost.toFixed(2); ', \n\n(1+NUMBER(frameWastage))*NUMBER(frameMaterialCost)*NUMBER(motorHoldingPlateWeight)\n\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 47,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSwitchQuantity"
+     ],
+     "expr": "IIF(\n(SELECTEDVALUE(bladeSwitchPackage)=='Yes'),1,0\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 48,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSwitchCost"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1; return cost.toFixed(2); ', \n\n(NUMBER(bladeSwitchQuantity) * \n\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Blade Switch Cost]','cost'))\n)\n\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 49,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "ulListedConduit"
+     ],
+     "expr": "0.5"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 50,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "ulListedConduitCost"
+     ],
+     "expr": "NUMBER(ulListedConduit)*\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[UL Listed Conduit]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 51,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "antishortBushing"
+     ],
+     "expr": "2"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 52,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "antishortBushingCost"
+     ],
+     "expr": "NUMBER(antishortBushing)\n*\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Anti-short Bushing]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 53,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "ulLabels"
+     ],
+     "expr": "1"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 54,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "ulLabelCost"
+     ],
+     "expr": "NUMBER(ulLabels)\n*\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[UL Label Cost]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 55,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalOtherAccessories"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1;  return cost.toFixed(2); ', \n\nNUMBER(ulListedConduitCost)+NUMBER(ulLabelCost)+NUMBER(antishortBushingCost)\n\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 56,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalMaterialCostBeforeMotors"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1; return cost.toFixed(2); ', \n\n(NUMBER(frameCost)+NUMBER(transitionCost)+NUMBER(totalBladeAssembly)+NUMBER(retainingPlateCost)+NUMBER(motorHoldingPlateCost)+NUMBER(bladeSwitchCost)+NUMBER(totalOtherAccessories)+NUMBER(bladeCost))\n\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 57,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fusibleLink"
+     ],
+     "expr": "IIF(CONTAINS(subcategory,'$[UL True Round Smoke Dampers]'),0,1)"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 58,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fuseLink"
+     ],
+     "expr": "CONCAT(SELECTEDVALUE(fuseLinkOptions),' ',SELECTEDVALUE(linkTemperature))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 59,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fuseLinkCost"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1;  return cost.toFixed(2); ', \n(\nNUMBER(fusibleLink)*\nCFLOAT(OBJECTATTRIBUTEF(fuseLink,'cost'))\n)\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 60,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "mts"
+     ],
+     "expr": "IIF( (SELECTEDVALUE(mtsOption)=='Yes'),1,0 )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 61,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "mtsCost"
+     ],
+     "expr": "NUMBER(mts)*\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Momemtory Test Switch (MTS)]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 62,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "junctionBoxValue"
+     ],
+     "expr": "IIF( (SELECTEDVALUE(junctionBox)=='Yes'),1,0 )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 63,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "junctionBoxCost"
+     ],
+     "expr": "NUMBER(junctionBoxValue)*\n (\n    CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[2 Way Junction Box with Cover 100x50x48-Ul Listed]','cost'))  +\n    CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Twister Wire Connector]','cost'))\n )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 64,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorCost"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1; return cost.toFixed(2); ', \n\nIIF(CONTAINS(damperOperator,'$[Quadrant]'),0,CFLOAT(OBJECTATTRIBUTEF(actuatorCostLookup,'cost')))\n\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 65,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalMaterialCostWithMotors"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1;  return cost.toFixed(2); ', \nNUMBER(totalMaterialCostBeforeMotors)+NUMBER(fuseLinkCost)+NUMBER(mtsCost)+NUMBER(junctionBoxCost)+NUMBER(actuatorCost)))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 66,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "damperProcessingMinutes"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Damper Processing Minutes (ULRD)]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 67,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "transitionProcessingMinutes"
+     ],
+     "expr": "IIF(\nCONTAINS(transitionType,'$[NA]'),0,\n(IIF(CONTAINS(transitionType,'$[One Side]'),1,2))\n)\n*\nCFLOAT\n(\n    OBJECTATTRIBUTEV(countryWiseCost,'$[Transition Time per m of Perimeter of Damper (ULRD)]','cost')\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 68,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "retainingPlateProcessingMinutes"
+     ],
+     "expr": "IIF(\n(SELECTEDVALUE(retainingPlate)=='No'),\n0,\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Retaining Plate Installation Minutes]','cost'))\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 69,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSwitchProcessingMinutes"
+     ],
+     "expr": "IIF(\n(SELECTEDVALUE(bladeSwitchPackage)=='Yes'),\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Blade Switch Processing Minutes (ULRD)]','cost'))\n,0\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 70,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorProcessingMinutes"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Actuator Installation Minutes per Actuator (ULRD)]','cost'))\n*\nNUMBER(noOfActuators)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 71,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "junctionBoxInstallationMinutes"
+     ],
+     "expr": "IIF(\n(SELECTEDVALUE(junctionBox)=='Yes'),\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Installation Minutes per Junction Box (ULRD)]','cost')),\n0\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 72,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalProcessingMinutes"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1; return cost.toFixed(2); ', \n\nNUMBER(damperProcessingMinutes)+NUMBER(transitionProcessingMinutes)+NUMBER(retainingPlateProcessingMinutes)+NUMBER(bladeSwitchProcessingMinutes)+NUMBER(actuatorProcessingMinutes)+NUMBER(junctionBoxInstallationMinutes)\n\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 73,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalAssemblyCost"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1; return cost.toFixed(2); ', \n\n(\n(NUMBER(totalProcessingMinutes)/60)*\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Cost per Hour (ULRD)]','cost'))\n\n)\n\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 74,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "overhead"
+     ],
+     "expr": "CFLOAT(EVALUATE(' var cost = input.arg1; return cost.toFixed(2); ', \n\n((NUMBER(totalMaterialCostWithMotors)+NUMBER(totalAssemblyCost) - NUMBER(actuatorCost))\n*\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Overhead Percentage (ULRD)]','cost')))\n+\n(NUMBER(actuatorCost)\n*\nCFLOAT(\nOBJECTATTRIBUTEV(countryWiseCost,'$[Overhead Percentage on Actuator (ULRD)]','cost')\n))\n))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 75,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalCost"
+     ],
+     "expr": "NUMBER(totalMaterialCostWithMotors)+NUMBER(totalAssemblyCost)+NUMBER(overhead)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 76,
+     "active": 0,
+     "result": 1,
+     "fields": [
+      "profit"
+     ],
+     "expr": "CFLOAT(\n    EVALUATE(\n        ' var cost = input.arg1; return cost.toFixed(2); ', \n        NUMBER(totalCost)*CFLOAT( OBJECTATTRIBUTEV(countryWiseCost,'$[Profit (ULRD)]','cost'))\n    )\n)"
+    },
+    {
+     "type": "Change Bundle Title",
+     "sequence": 77,
+     "active": 1,
+     "result": 1,
+     "expr": "CONCAT(\nIIF((NUMBER(diameter) > 0), CONCAT( 'D:' , NUMBER(diameter)) , ''),\nIIF((NUMBER(frameDepth) > 0), CONCAT( ' L:' , NUMBER(frameDepth)) , ''),\nIIF((COUNT(frameMaterialType) > 0), CONCAT( ' - ' ,SELECTEDVALUE(frameMaterialType),' ') , ''),\nEVALUATE(' var mNo = input.arg1; return mNo.replace(\" - Static\",\"\")',IIF((COUNT(modelDescription)>0),SELECTEDVALUE(modelDescription),''))\n)"
+    },
+    {
+     "type": "Change Bundle Title",
+     "sequence": 78,
+     "active": 1,
+     "result": 0,
+     "expr": "''"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 79,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "unique"
+     ],
+     "expr": "EVALUATE('\nvar model = input.arg1.split(\" \");\nreturn model[0]+input.arg2;\n',\nSELECTEDVALUE(modelDescription),\nSELECTEDVALUE(leakageClass))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 80,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "uniqueFuseLink"
+     ],
+     "expr": "IIF((CONTAINS(damperOperator,'$[Quadrant]')),'MFL',(CONCAT(TEXT(subCategoryCode),SELECTEDVALUE(fuseLinkOptions))))"
+    },
+    {
+     "type": "Change Field Price",
+     "sequence": 81,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "productCost"
+     ],
+     "expr": "EVALUATE(' return Math.ceil(input.arg1);', NUMBER(totalCost)/(1-CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Profit (ULRD)]','cost'))) )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 82,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "retainingPlateSize"
+     ],
+     "expr": "CONCAT((NUMBER(diameter)+100),' X ',(NUMBER(diameter)+100))"
+    }
+   ]
+  },
+  {
+   "key": "742",
+   "label": "Fuse Link Options STOR or MFL",
+   "parent": null,
+   "sequence": 22,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(fuseLinkOptions,'$[MFL]','$[STOR]')",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "linkTemperature"
+     ],
+     "options": [
+      "165F"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "922",
+   "label": "USERINFO('roleName') == 'Sales Co-ordinator'",
+   "parent": null,
+   "sequence": 23,
+   "active": 1,
+   "result": 0,
+   "when": "EVALUATE(' var roles = input.arg1.split(\",\"); if(roles.indexOf(\"OneCPQ Admin\") != -1) return false; return true; ',USERINFO('roles'))",
+   "actions": [
+    {
+     "type": "Hide Structure",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "@structure:Minutes",
+      "@structure:Cost",
+      "@structure:Others",
+      "@structure:Actuators",
+      "@structure:Factors"
+     ]
+    },
+    {
+     "type": "Hide Group",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "@group:Cost"
+     ]
+    },
+    {
+     "type": "Show List View",
+     "sequence": 4,
+     "active": 1,
+     "result": 1
+    }
+   ]
+  }
+ ],
+ "mappings": [
+  {
+   "key": "62",
+   "mode": "feature",
+   "left": "subcategory",
+   "right": "leakageClass",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "UL True Round Dynamic Fire Dampers",
+     "NA"
+    ],
+    [
+     "UL True Round Static Fire Dampers",
+     "NA"
+    ],
+    [
+     "UL True Round Combination Fire Smoke Dampers",
+     "Class I-250F"
+    ],
+    [
+     "UL True Round Combination Fire Smoke Dampers",
+     "Class I-350F"
+    ],
+    [
+     "UL True Round Combination Fire Smoke Dampers",
+     "Class II-250F"
+    ],
+    [
+     "UL True Round Combination Fire Smoke Dampers",
+     "Class II-350F"
+    ],
+    [
+     "UL True Round Smoke Dampers",
+     "Class I-250F"
+    ],
+    [
+     "UL True Round Smoke Dampers",
+     "Class I-350F"
+    ],
+    [
+     "UL True Round Smoke Dampers",
+     "Class II-250F"
+    ],
+    [
+     "UL True Round Smoke Dampers",
+     "Class II-350F"
+    ]
+   ]
+  },
+  {
+   "key": "63",
+   "mode": "feature",
+   "left": "damperOperator",
+   "right": "fuseLinkOptions",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "Quadrant",
+     "MFL"
+    ],
+    [
+     "Electric",
+     "DTOR"
+    ],
+    [
+     "Electric",
+     "STOR"
+    ]
+   ]
+  },
+  {
+   "key": "64",
+   "mode": "feature",
+   "left": "subcategory",
+   "right": "damperOperator",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "UL True Round Combination Fire Smoke Dampers",
+     "Electric"
+    ],
+    [
+     "UL True Round Smoke Dampers",
+     "Electric"
+    ],
+    [
+     "UL True Round Dynamic Fire Dampers",
+     "Quadrant"
+    ],
+    [
+     "UL True Round Static Fire Dampers",
+     "Quadrant"
+    ],
+    [
+     "UL True Round Dynamic Fire Dampers",
+     "Electric"
+    ],
+    [
+     "UL True Round Static Fire Dampers",
+     "Electric"
+    ]
+   ]
+  },
+  {
+   "key": "65",
+   "mode": "feature",
+   "left": "actuatorBrand",
+   "right": "actuatorTorqueSize",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "Honeywell",
+     "175lbin-20Nm"
+    ],
+    [
+     "Honeywell",
+     "30lbin-3.5Nm"
+    ],
+    [
+     "Honeywell",
+     "80lbin-9Nm"
+    ],
+    [
+     "Belimo",
+     "30lbin-3.5Nm"
+    ],
+    [
+     "Belimo",
+     "80lbin-9Nm"
+    ]
+   ]
+  },
+  {
+   "key": "66",
+   "mode": "feature",
+   "left": "subcategory",
+   "right": "modelDescription",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "UL True Round Combination Fire Smoke Dampers",
+     "FSD-R True Round Combination Fire Smoke Damper"
+    ],
+    [
+     "UL True Round Dynamic Fire Dampers",
+     "FDD-R True Round Fire Damper - Dynamic"
+    ],
+    [
+     "UL True Round Smoke Dampers",
+     "SSD-R True Round Smoke Damper"
+    ],
+    [
+     "UL True Round Static Fire Dampers",
+     "FD-R True Round Fire Damper - Static"
+    ]
+   ]
+  },
+  {
+   "key": "68",
+   "mode": "feature",
+   "left": "uniqueFuseLink",
+   "right": "linkTemperature",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "FDDSTOR",
+     "165F"
+    ],
+    [
+     "FDDSTOR",
+     "212F"
+    ],
+    [
+     "FDSTOR",
+     "165F"
+    ],
+    [
+     "FDSTOR",
+     "212F"
+    ],
+    [
+     "MFL",
+     "165F"
+    ],
+    [
+     "MFL",
+     "212F"
+    ],
+    [
+     "CFSDSTOR",
+     "165F"
+    ],
+    [
+     "CFSDSTOR",
+     "212F"
+    ],
+    [
+     "CFSDSTOR",
+     "250F"
+    ],
+    [
+     "CFSDSTOR",
+     "350F"
+    ],
+    [
+     "CFSDDTOR",
+     "165/212F"
+    ],
+    [
+     "CFSDDTOR",
+     "165/250F"
+    ],
+    [
+     "CFSDDTOR",
+     "165/350F"
+    ],
+    [
+     "CFSDDTOR",
+     "212/250F"
+    ],
+    [
+     "CFSDDTOR",
+     "212/350F"
+    ],
+    [
+     "FDDDTOR",
+     "165/212F"
+    ],
+    [
+     "FDDDTOR",
+     "165/250F"
+    ],
+    [
+     "FDDDTOR",
+     "165/350F"
+    ],
+    [
+     "FDDDTOR",
+     "212/250F"
+    ],
+    [
+     "FDDDTOR",
+     "212/350F"
+    ],
+    [
+     "FDDTOR",
+     "165/212F"
+    ],
+    [
+     "FDDTOR",
+     "165/250F"
+    ],
+    [
+     "FDDTOR",
+     "165/350F"
+    ],
+    [
+     "FDDTOR",
+     "212/250F"
+    ],
+    [
+     "FDDTOR",
+     "212/350F"
+    ]
+   ]
+  },
+  {
+   "key": "70",
+   "mode": "feature",
+   "left": "fuseLinkOptions",
+   "right": "uniqueFuseLink",
+   "two_way": 0,
+   "active": 0,
+   "sequence": 0,
+   "entries": [
+    [
+     "DTOR",
+     "CFSDDTOR"
+    ],
+    [
+     "DTOR",
+     "FDDDTOR"
+    ],
+    [
+     "DTOR",
+     "FDDTOR"
+    ],
+    [
+     "STOR",
+     "CFSDSTOR"
+    ],
+    [
+     "STOR",
+     "FDDSTOR"
+    ],
+    [
+     "STOR",
+     "FDSTOR"
+    ],
+    [
+     "MFL",
+     "MFL"
+    ]
+   ]
+  }
+ ]
+}

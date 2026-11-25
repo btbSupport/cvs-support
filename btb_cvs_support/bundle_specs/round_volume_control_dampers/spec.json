@@ -1,0 +1,6811 @@
+{
+ "bundle": {
+  "label": "Round Volume Control Dampers",
+  "external_id": "01tQo0000081HYTIA2",
+  "export_template": [
+   "subcategory",
+   "modelNo",
+   "materialType",
+   "staticPressureClass",
+   "velocityRating",
+   "diameter",
+   "frameDepth",
+   "frameThickness",
+   "bladeSkinThickness",
+   "frameClosure",
+   "axleType",
+   "axleBearing",
+   "bladeSeal",
+   "amcaLabel",
+   "operator",
+   "quadrantOption",
+   "actuatorBrand",
+   "actuatorType",
+   "actuatorMounting",
+   "actuatorControls",
+   "actuatorAuxSwitch",
+   "actuatorFeedback",
+   "actuatorPowerSupply",
+   "tagRef",
+   "notes"
+  ]
+ },
+ "items": {
+  "anchor": [
+   "SKU39"
+  ],
+  "catalog_categories": [
+   "CAT4"
+  ]
+ },
+ "cost_objects": {
+  "doctype": "FTOCountryWiseCost",
+  "label_field": "product_name",
+  "rows": [
+   {
+    "product_name": "GI",
+    "item_code": "GI",
+    "unit": "Kg",
+    "cost": 4.0,
+    "category": "Coil",
+    "boq_identifier": "GI",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost1"
+   },
+   {
+    "product_name": "SS304L",
+    "item_code": "SS304L",
+    "unit": "Kg",
+    "cost": 9.5,
+    "category": "Coil",
+    "boq_identifier": "SS304L",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost2"
+   },
+   {
+    "product_name": "SS316L",
+    "item_code": "SS316L",
+    "unit": "Kg",
+    "cost": 16.5,
+    "category": "Coil",
+    "boq_identifier": "SS316L",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost3"
+   },
+   {
+    "product_name": "AMCA Label",
+    "item_code": "2290494",
+    "unit": "Ea",
+    "cost": 0.63,
+    "category": "Sticker",
+    "boq_identifier": "AMCA Label",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost30"
+   },
+   {
+    "product_name": "Belimo 22lbin-2.5Nm, 230V Spring Return-On/Off , Actuator w/o Aux TF230",
+    "item_code": "2290517-TF230",
+    "unit": "Ea",
+    "cost": 370.0,
+    "category": "Actuator",
+    "boq_identifier": "2290517-TF230",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost405"
+   },
+   {
+    "product_name": "Belimo 22lbin-2.5Nm, 24V Spring Return-On/Off , Actuator w/o Aux TF24",
+    "item_code": "2290516-TF24",
+    "unit": "Ea",
+    "cost": 336.0,
+    "category": "Actuator",
+    "boq_identifier": "2290516-TF24",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost406"
+   },
+   {
+    "product_name": "Belimo 22lbin-2.5Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux TF24-SR",
+    "item_code": "2290515-TF24-SR",
+    "unit": "Ea",
+    "cost": 453.0,
+    "category": "Actuator",
+    "boq_identifier": "2290515-TF24-SR",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost407"
+   },
+   {
+    "product_name": "Belimo 35lbin-4Nm, 230V Spring Return-On/Off , Actuator w/o Aux LF230A",
+    "item_code": "2290514-LF230A",
+    "unit": "Ea",
+    "cost": 448.0,
+    "category": "Actuator",
+    "boq_identifier": "2290514-LF230A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost408"
+   },
+   {
+    "product_name": "Belimo 35lbin-4Nm, 24V Spring Return-On/Off , Actuator w/o Aux LF24",
+    "item_code": "2290513-LF24",
+    "unit": "Ea",
+    "cost": 411.0,
+    "category": "Actuator",
+    "boq_identifier": "2290513-LF24",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost409"
+   },
+   {
+    "product_name": "Belimo 35lbin-4Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux LF24-SR",
+    "item_code": "2290512-LF24-SR",
+    "unit": "Ea",
+    "cost": 553.0,
+    "category": "Actuator",
+    "boq_identifier": "2290512-LF24-SR",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost410"
+   },
+   {
+    "product_name": "Belimo 45lbin-5Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux LM230A",
+    "item_code": "2290511-LM230A",
+    "unit": "Ea",
+    "cost": 270.0,
+    "category": "Actuator",
+    "boq_identifier": "2290511-LM230A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost411"
+   },
+   {
+    "product_name": "Belimo 45lbin-5Nm, 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux LM24A",
+    "item_code": "2290510-LM24A",
+    "unit": "Ea",
+    "cost": 266.0,
+    "category": "Actuator",
+    "boq_identifier": "2290510-LM24A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost412"
+   },
+   {
+    "product_name": "Belimo 45lbin-5Nm, 230V Non Spring Return-On/Off + Floating , Actuator 2 Aux LM230A -S",
+    "item_code": "229096-LM230A -S",
+    "unit": "Ea",
+    "cost": 315.0,
+    "category": "Actuator",
+    "boq_identifier": "229096-LM230A -S",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost413"
+   },
+   {
+    "product_name": "Belimo 45lbin-5Nm, 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux LM24A -S",
+    "item_code": "2290465-LM24A -S",
+    "unit": "Ea",
+    "cost": 305.0,
+    "category": "Actuator",
+    "boq_identifier": "2290465-LM24A -S",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost414"
+   },
+   {
+    "product_name": "Siemens 45lbin-5Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GDB341.1E",
+    "item_code": "2290341-GDB341.1E",
+    "unit": "Ea",
+    "cost": 200.0,
+    "category": "Actuator",
+    "boq_identifier": "2290341-GDB341.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost415"
+   },
+   {
+    "product_name": "Siemens 45lbin-5Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GDB346.1E",
+    "item_code": "2290495-GDB346.1E",
+    "unit": "Ea",
+    "cost": 240.0,
+    "category": "Actuator",
+    "boq_identifier": "2290495-GDB346.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost416"
+   },
+   {
+    "product_name": "Belimo 90lbin-10Nm, 230V Spring Return-On/Off , Actuator w/o Aux NF230A",
+    "item_code": "2290509-NF230A",
+    "unit": "Ea",
+    "cost": 621.0,
+    "category": "Actuator",
+    "boq_identifier": "2290509-NF230A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost417"
+   },
+   {
+    "product_name": "Belimo 90lbin-10Nm, 24V Spring Return-On/Off , Actuator w/o Aux NF24A",
+    "item_code": "2290508-NF24A",
+    "unit": "Ea",
+    "cost": 530.0,
+    "category": "Actuator",
+    "boq_identifier": "2290508-NF24A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost418"
+   },
+   {
+    "product_name": "Belimo 90lbin-10Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux NM230A",
+    "item_code": "2290270-NM230A",
+    "unit": "Ea",
+    "cost": 333.0,
+    "category": "Actuator",
+    "boq_identifier": "2290270-NM230A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost419"
+   },
+   {
+    "product_name": "Belimo 90lbin-10Nm, 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux NM24A",
+    "item_code": "2290507-NM24A",
+    "unit": "Ea",
+    "cost": 322.0,
+    "category": "Actuator",
+    "boq_identifier": "2290507-NM24A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost420"
+   },
+   {
+    "product_name": "Belimo 90lbin-10Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux NF24A-SR",
+    "item_code": "2290506-NF24A-SR",
+    "unit": "Ea",
+    "cost": 618.0,
+    "category": "Actuator",
+    "boq_identifier": "2290506-NF24A-SR",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost421"
+   },
+   {
+    "product_name": "Siemens 90lbin-10Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GLB341.1E",
+    "item_code": "2290499-GLB341.1E",
+    "unit": "Ea",
+    "cost": 245.0,
+    "category": "Actuator",
+    "boq_identifier": "2290499-GLB341.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost422"
+   },
+   {
+    "product_name": "Siemens 90lbin-10Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GLB346.1E",
+    "item_code": "2290496-GLB346.1E",
+    "unit": "Ea",
+    "cost": 290.0,
+    "category": "Actuator",
+    "boq_identifier": "2290496-GLB346.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost423"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux SM230A",
+    "item_code": "2290276-SM230A",
+    "unit": "Ea",
+    "cost": 382.0,
+    "category": "Actuator",
+    "boq_identifier": "2290276-SM230A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost424"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux SM24A",
+    "item_code": "2290505-SM24A",
+    "unit": "Ea",
+    "cost": 373.0,
+    "category": "Actuator",
+    "boq_identifier": "2290505-SM24A",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost425"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 230V Non Spring Return-On/Off + Floating , Actuator 2 Aux SM230A -S",
+    "item_code": "229098-SM230A -S",
+    "unit": "Ea",
+    "cost": 480.0,
+    "category": "Actuator",
+    "boq_identifier": "229098-SM230A -S",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost426"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux SF24A-SR",
+    "item_code": "2290504-SF24A-SR",
+    "unit": "Ea",
+    "cost": 740.0,
+    "category": "Actuator",
+    "boq_identifier": "2290504-SF24A-SR",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost427"
+   },
+   {
+    "product_name": "Siemens 180lbin-20Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GEB341.1E",
+    "item_code": "2290500-GEB341.1E",
+    "unit": "Ea",
+    "cost": 310.0,
+    "category": "Actuator",
+    "boq_identifier": "2290500-GEB341.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost428"
+   },
+   {
+    "product_name": "Siemens 180lbin-20Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GEB346.1E",
+    "item_code": "2290497-GEB346.1E",
+    "unit": "Ea",
+    "cost": 365.0,
+    "category": "Actuator",
+    "boq_identifier": "2290497-GEB346.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost429"
+   },
+   {
+    "product_name": "Belimo 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSNF24-S US",
+    "item_code": "229088-FSNF24-S US",
+    "unit": "Ea",
+    "cost": 485.0,
+    "category": "Actuator",
+    "boq_identifier": "229088-FSNF24-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost430"
+   },
+   {
+    "product_name": "Belimo 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSNF230-S US",
+    "item_code": "229089-FSNF230-S US",
+    "unit": "Ea",
+    "cost": 475.0,
+    "category": "Actuator",
+    "boq_identifier": "229089-FSNF230-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost431"
+   },
+   {
+    "product_name": "Belimo 30lbin-3.5Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSLF230-S US",
+    "item_code": "229090-FSLF230-S US",
+    "unit": "Ea",
+    "cost": 470.0,
+    "category": "Actuator",
+    "boq_identifier": "229090-FSLF230-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost432"
+   },
+   {
+    "product_name": "Belimo 30lbin-3.5Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSLF24-S US",
+    "item_code": "229091-FSLF24-S US",
+    "unit": "Ea",
+    "cost": 425.0,
+    "category": "Actuator",
+    "boq_identifier": "229091-FSLF24-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost433"
+   },
+   {
+    "product_name": "Honeywell 30lbin-3.4Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4604F1010/B",
+    "item_code": "229100-MS4604F1010/B",
+    "unit": "Ea",
+    "cost": 242.0,
+    "category": "Actuator",
+    "boq_identifier": "229100-MS4604F1010/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost434"
+   },
+   {
+    "product_name": "Honeywell 30lbin-3.4Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4604F1210/B",
+    "item_code": "229101-MS4604F1210/B",
+    "unit": "Ea",
+    "cost": 248.0,
+    "category": "Actuator",
+    "boq_identifier": "229101-MS4604F1210/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost435"
+   },
+   {
+    "product_name": "Honeywell 30lbin-3.4Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8104F1010/B",
+    "item_code": "229102-MS8104F1010/B",
+    "unit": "Ea",
+    "cost": 248.0,
+    "category": "Actuator",
+    "boq_identifier": "229102-MS8104F1010/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost436"
+   },
+   {
+    "product_name": "Honeywell 30lbin-3.4Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8104F1210/B",
+    "item_code": "229103-MS8104F1210/B",
+    "unit": "Ea",
+    "cost": 253.0,
+    "category": "Actuator",
+    "boq_identifier": "229103-MS8104F1210/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost437"
+   },
+   {
+    "product_name": "Honeywell 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8109F1010/B",
+    "item_code": "229104-MS8109F1010/B",
+    "unit": "Ea",
+    "cost": 270.0,
+    "category": "Actuator",
+    "boq_identifier": "229104-MS8109F1010/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost438"
+   },
+   {
+    "product_name": "Honeywell 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8109F1210/B",
+    "item_code": "229105-MS8109F1210/B",
+    "unit": "Ea",
+    "cost": 277.0,
+    "category": "Actuator",
+    "boq_identifier": "229105-MS8109F1210/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost439"
+   },
+   {
+    "product_name": "Honeywell 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4609F1010/B",
+    "item_code": "229106-MS4609F1010/B",
+    "unit": "Ea",
+    "cost": 270.0,
+    "category": "Actuator",
+    "boq_identifier": "229106-MS4609F1010/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost440"
+   },
+   {
+    "product_name": "Honeywell 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4609F1210/B",
+    "item_code": "229107-MS4609F1210/B",
+    "unit": "Ea",
+    "cost": 277.0,
+    "category": "Actuator",
+    "boq_identifier": "229107-MS4609F1210/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost441"
+   },
+   {
+    "product_name": "Honeywell 175lbin-20Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8120F1002/B",
+    "item_code": "229108-MS8120F1002/B",
+    "unit": "Ea",
+    "cost": 445.0,
+    "category": "Actuator",
+    "boq_identifier": "229108-MS8120F1002/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost442"
+   },
+   {
+    "product_name": "Honeywell 175lbin-20Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8120F1200/B",
+    "item_code": "229109-MS8120F1200/B",
+    "unit": "Ea",
+    "cost": 450.0,
+    "category": "Actuator",
+    "boq_identifier": "229109-MS8120F1200/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost443"
+   },
+   {
+    "product_name": "Honeywell 175lbin-20Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4620F1203/B",
+    "item_code": "229110-MS4620F1203/B",
+    "unit": "Ea",
+    "cost": 450.0,
+    "category": "Actuator",
+    "boq_identifier": "229110-MS4620F1203/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost444"
+   },
+   {
+    "product_name": "Honeywell 175lbin-20Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4620F1005/B",
+    "item_code": "229111-MS4620F1005/B",
+    "unit": "Ea",
+    "cost": 445.0,
+    "category": "Actuator",
+    "boq_identifier": "229111-MS4620F1005/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost445"
+   },
+   {
+    "product_name": "Belimo 30lbin-3.5Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSLF230 US",
+    "item_code": "2290263-FSLF230 US",
+    "unit": "Ea",
+    "cost": 425.0,
+    "category": "Actuator",
+    "boq_identifier": "2290263-FSLF230 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost446"
+   },
+   {
+    "product_name": "Belimo 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSNF230 US",
+    "item_code": "2290280-FSNF230 US",
+    "unit": "Ea",
+    "cost": 480.0,
+    "category": "Actuator",
+    "boq_identifier": "2290280-FSNF230 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost447"
+   },
+   {
+    "product_name": "Belimo 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSNF24 US",
+    "item_code": "2290281-FSNF24 US",
+    "unit": "Ea",
+    "cost": 430.0,
+    "category": "Actuator",
+    "boq_identifier": "2290281-FSNF24 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost448"
+   },
+   {
+    "product_name": "Belimo 30lbin-3.5Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSLF24 US",
+    "item_code": "2290283-FSLF24 US",
+    "unit": "Ea",
+    "cost": 375.0,
+    "category": "Actuator",
+    "boq_identifier": "2290283-FSLF24 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost449"
+   },
+   {
+    "product_name": "Belimo 18lbin-2.5Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSTF24-S US",
+    "item_code": "229093-FSTF24-S US",
+    "unit": "Ea",
+    "cost": 390.0,
+    "category": "Actuator",
+    "boq_identifier": "229093-FSTF24-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost450"
+   },
+   {
+    "product_name": "Belimo 18lbin-2.5Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSTF230-S US",
+    "item_code": "229092-FSTF230-S US",
+    "unit": "Ea",
+    "cost": 390.0,
+    "category": "Actuator",
+    "boq_identifier": "229092-FSTF230-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost451"
+   },
+   {
+    "product_name": "Belimo 18lbin-2.5Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSTF230 US",
+    "item_code": "2290501-FSTF230 US",
+    "unit": "Ea",
+    "cost": 320.0,
+    "category": "Actuator",
+    "boq_identifier": "2290501-FSTF230 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost452"
+   },
+   {
+    "product_name": "Belimo 18lbin-2.5Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSTF24 US",
+    "item_code": "2290502-FSTF24 US",
+    "unit": "Ea",
+    "cost": 320.0,
+    "category": "Actuator",
+    "boq_identifier": "2290502-FSTF24 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost453"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 24V Fire & Smoke-Modulating 2-10V, Actuator 2 Aux FSAFB24-SR-S",
+    "item_code": "2290468-FSAFB24-SR-S",
+    "unit": "Ea",
+    "cost": 885.0,
+    "category": "Actuator",
+    "boq_identifier": "2290468-FSAFB24-SR-S",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost454"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 24V Fire & Smoke-Modulating 2-10V, Actuator w/o Aux FSAFB24-SR",
+    "item_code": "2290503-FSAFB24-SR",
+    "unit": "Ea",
+    "cost": 795.0,
+    "category": "Actuator",
+    "boq_identifier": "2290503-FSAFB24-SR",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost455"
+   },
+   {
+    "product_name": "Damper Processing Minutes",
+    "item_code": "Damper Processing Minutes",
+    "unit": "Minutes",
+    "cost": 20.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Damper Processing Minutes (VCDR)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost461"
+   },
+   {
+    "product_name": "Transition Time per m of Perimeter of Damper",
+    "item_code": "Transition Time per m of Perimeter of Damper",
+    "unit": "Minutes",
+    "cost": 15.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Transition Time per m of Perimeter of Damper (VCDR)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost462"
+   },
+   {
+    "product_name": "Actuator Installation Minutes per Actuator",
+    "item_code": "Actuator Installation Minutes per Actuator",
+    "unit": "Minutes",
+    "cost": 20.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Actuator Installation Minutes per Actuator (VCDR)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost463"
+   },
+   {
+    "product_name": "Cost per Hour",
+    "item_code": "Cost per Hour",
+    "unit": "Currency",
+    "cost": 15.0,
+    "category": "Hourly Rate",
+    "boq_identifier": "Cost per Hour (VCDR)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost464"
+   },
+   {
+    "product_name": "Overhead Percentage",
+    "item_code": "Overhead Percentage",
+    "unit": "%",
+    "cost": 0.4,
+    "category": "Overhead",
+    "boq_identifier": "Overhead Percentage (VCDR)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost465"
+   },
+   {
+    "product_name": "Overhead Percentage on Actuator",
+    "item_code": "Overhead Percentage on Actuator",
+    "unit": "%",
+    "cost": 0.15,
+    "category": "Overhead",
+    "boq_identifier": "Overhead Percentage on Actuator (VCDR)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost466"
+   },
+   {
+    "product_name": "Profit",
+    "item_code": "Profit",
+    "unit": "%",
+    "cost": 0.4,
+    "category": "Factor",
+    "boq_identifier": "Profit (VCDR)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost467"
+   },
+   {
+    "product_name": "Accessories Wastage",
+    "item_code": "Accessories Wastage",
+    "unit": "%",
+    "cost": 0.03,
+    "category": "Wastage",
+    "boq_identifier": "Accessories Wastage (VCDR)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost468"
+   },
+   {
+    "product_name": "Blade Wastage",
+    "item_code": "Blade Wastage",
+    "unit": "%",
+    "cost": 0.15,
+    "category": "Wastage",
+    "boq_identifier": "Blade Wastage (VCDR)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost469"
+   },
+   {
+    "product_name": "Frame Wastage",
+    "item_code": "Frame Wastage",
+    "unit": "%",
+    "cost": 0.15,
+    "category": "Wastage",
+    "boq_identifier": "Frame Wastage (VCDR)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost470"
+   },
+   {
+    "product_name": "GI Welding Cost",
+    "item_code": "GI Welding Cost",
+    "unit": "Currency",
+    "cost": 24.0,
+    "category": "Other Cost",
+    "boq_identifier": "GI Welding Cost",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost471"
+   },
+   {
+    "product_name": "AL Welding Cost",
+    "item_code": "AL Welding Cost",
+    "unit": "Currency",
+    "cost": 96.0,
+    "category": "Other Cost",
+    "boq_identifier": "AL Welding Cost (VCDR)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost472"
+   },
+   {
+    "product_name": "SS Welding Cost",
+    "item_code": "SS Welding Cost",
+    "unit": "Currency",
+    "cost": 84.0,
+    "category": "Other Cost",
+    "boq_identifier": "SS Welding Cost (VCDR)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost473"
+   },
+   {
+    "product_name": "Frame Gasket",
+    "item_code": "Frame Gasket",
+    "unit": "m",
+    "cost": 5.75,
+    "category": "Frame Accessories",
+    "boq_identifier": "Frame Gasket",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost474"
+   },
+   {
+    "product_name": "Bracket Cost",
+    "item_code": "Bracket Cost",
+    "unit": "m",
+    "cost": 2.2,
+    "category": "Frame Accessories",
+    "boq_identifier": "Bracket Cost",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost475"
+   },
+   {
+    "product_name": "Blade Seal Standard",
+    "item_code": "Blade Seal Standard",
+    "unit": "m",
+    "cost": 12.0,
+    "category": "Seals",
+    "boq_identifier": "Blade Seal Standard",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost477"
+   },
+   {
+    "product_name": "GI 10mm Round Bar",
+    "item_code": "GI 10mm Round Bar",
+    "unit": "m",
+    "cost": 5.52,
+    "category": "Blade Assembly",
+    "boq_identifier": "GI 10mm Round Bar",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost478"
+   },
+   {
+    "product_name": "GI 12mm Round Bar",
+    "item_code": "2290200/2290290",
+    "unit": "m",
+    "cost": 5.75,
+    "category": "Blade Assembly",
+    "boq_identifier": "GI 12mm Round Bar",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost479"
+   },
+   {
+    "product_name": "GI 19mm Round Bar",
+    "item_code": "GI 19mm Round Bar",
+    "unit": "m",
+    "cost": 12.0,
+    "category": "Blade Assembly",
+    "boq_identifier": "GI 19mm Round Bar",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost480"
+   },
+   {
+    "product_name": "Blade Shaft - Square GI - 9.50X9.50X80mm 9148",
+    "item_code": "2290104",
+    "unit": "Ea",
+    "cost": 0.41,
+    "category": "Blade Assembly",
+    "boq_identifier": "GI 10mm Square Pin",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost481"
+   },
+   {
+    "product_name": "AL 10mm Round Bar",
+    "item_code": "AL 10mm Round Bar",
+    "unit": "m",
+    "cost": 5.75,
+    "category": "Blade Assembly",
+    "boq_identifier": "AL 10mm Round Bar",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost482"
+   },
+   {
+    "product_name": "AL 12mm Round Bar",
+    "item_code": "AL 12mm Round Bar",
+    "unit": "m",
+    "cost": 5.75,
+    "category": "Blade Assembly",
+    "boq_identifier": "AL 12mm Round Bar",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost483"
+   },
+   {
+    "product_name": "AL 19mm Round Bar",
+    "item_code": "AL 19mm Round Bar",
+    "unit": "m",
+    "cost": 5.75,
+    "category": "Blade Assembly",
+    "boq_identifier": "AL 19mm Round Bar",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost484"
+   },
+   {
+    "product_name": "AL 10mm Square Pin",
+    "item_code": "AL 10mm Square Pin",
+    "unit": "Ea",
+    "cost": 5.75,
+    "category": "Blade Assembly",
+    "boq_identifier": "AL 10mm Square Pin",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost485"
+   },
+   {
+    "product_name": "SS304L 10mm Round Bar",
+    "item_code": "SS304L 10mm Round Bar",
+    "unit": "m",
+    "cost": 11.7,
+    "category": "Blade Assembly",
+    "boq_identifier": "SS304L 10mm Round Bar",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost486"
+   },
+   {
+    "product_name": "SS304L 12mm Round Bar",
+    "item_code": "2615014",
+    "unit": "m",
+    "cost": 13.0,
+    "category": "Blade Assembly",
+    "boq_identifier": "SS304L 12mm Round Bar",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost487"
+   },
+   {
+    "product_name": "SS304L 19mm Round Bar",
+    "item_code": "SS304L 19mm Round Bar",
+    "unit": "m",
+    "cost": 26.0,
+    "category": "Blade Assembly",
+    "boq_identifier": "SS304L 19mm Round Bar",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost488"
+   },
+   {
+    "product_name": "SS304L 10mm Square Pin",
+    "item_code": "SS304L 10mm Square Pin",
+    "unit": "Ea",
+    "cost": 10.8,
+    "category": "Blade Assembly",
+    "boq_identifier": "SS304L 10mm Square Pin",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost489"
+   },
+   {
+    "product_name": "SS316L 10mm Round Bar",
+    "item_code": "SS316L 10mm Round Bar",
+    "unit": "m",
+    "cost": 19.5,
+    "category": "Blade Assembly",
+    "boq_identifier": "SS316L 10mm Round Bar",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost490"
+   },
+   {
+    "product_name": "SS316L 12mm Round Bar",
+    "item_code": "SS316L 12mm Round Bar",
+    "unit": "m",
+    "cost": 20.8,
+    "category": "Blade Assembly",
+    "boq_identifier": "SS316L 12mm Round Bar",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost491"
+   },
+   {
+    "product_name": "SS316L 19mm Round Bar",
+    "item_code": "SS316L 19mm Round Bar",
+    "unit": "m",
+    "cost": 32.5,
+    "category": "Blade Assembly",
+    "boq_identifier": "SS316L 19mm Round Bar",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost492"
+   },
+   {
+    "product_name": "SS316L 10mm Square Pin",
+    "item_code": "SS316L 10mm Square Pin",
+    "unit": "Ea",
+    "cost": 18.0,
+    "category": "Blade Assembly",
+    "boq_identifier": "SS316L 10mm Square Pin",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost493"
+   },
+   {
+    "product_name": "Acetate 10mm Round Bar Bush",
+    "item_code": "Acetate 10mm Round Bar Bush",
+    "unit": "Ea",
+    "cost": 2.3,
+    "category": "Blade Assembly",
+    "boq_identifier": "Acetate 10mm Round Bar Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost494"
+   },
+   {
+    "product_name": "Acetate 12mm Round Bar Bush",
+    "item_code": "Acetate 12mm Round Bar Bush",
+    "unit": "Ea",
+    "cost": 2.3,
+    "category": "Blade Assembly",
+    "boq_identifier": "Acetate 12mm Round Bar Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost495"
+   },
+   {
+    "product_name": "Acetate 19mm Round Bar Bush",
+    "item_code": "Acetate 19mm Round Bar Bush",
+    "unit": "Ea",
+    "cost": 2.3,
+    "category": "Blade Assembly",
+    "boq_identifier": "Acetate 19mm Round Bar Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost496"
+   },
+   {
+    "product_name": "Acetate 10mm Square Pin Bush",
+    "item_code": "Acetate 10mm Square Pin Bush",
+    "unit": "Ea",
+    "cost": 2.3,
+    "category": "Blade Assembly",
+    "boq_identifier": "Acetate 10mm Square Pin Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost497"
+   },
+   {
+    "product_name": "Bronze Flanged Brass Shaft Bush-16x9.55x9.55x10mm",
+    "item_code": "2610913",
+    "unit": "Ea",
+    "cost": 0.58,
+    "category": "Blade Assembly",
+    "boq_identifier": "Bronze Oilite 10mm Round Bar Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost498"
+   },
+   {
+    "product_name": "Bronze Oilite 12mm Round Bar Bush",
+    "item_code": "Bronze Oilite 12mm Round Bar Bush",
+    "unit": "Ea",
+    "cost": 0.81,
+    "category": "Blade Assembly",
+    "boq_identifier": "Bronze Oilite 12mm Round Bar Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost499"
+   },
+   {
+    "product_name": "AL",
+    "item_code": "AL",
+    "unit": "Kg",
+    "cost": 18.5,
+    "category": "Coil",
+    "boq_identifier": "AL",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost5"
+   },
+   {
+    "product_name": "Bronze Oilite 19mm Round Bar Bush",
+    "item_code": "Bronze Oilite 19mm Round Bar Bush",
+    "unit": "Ea",
+    "cost": 1.15,
+    "category": "Blade Assembly",
+    "boq_identifier": "Bronze Oilite 19mm Round Bar Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost500"
+   },
+   {
+    "product_name": "Bronze Oilite 10mm Square Pin Bush",
+    "item_code": "2290003",
+    "unit": "Ea",
+    "cost": 0.69,
+    "category": "Blade Assembly",
+    "boq_identifier": "Bronze Oilite 10mm Square Pin Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost501"
+   },
+   {
+    "product_name": "Nylon 6/6 10mm Round Bar Bush",
+    "item_code": "Nylon 6/6 10mm Round Bar Bush",
+    "unit": "Ea",
+    "cost": 0.1,
+    "category": "Blade Assembly",
+    "boq_identifier": "Nylon 6/6 10mm Round Bar Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost502"
+   },
+   {
+    "product_name": "Nylon Flanged Bush Round - 16mmx12mmx10mm",
+    "item_code": "2290293",
+    "unit": "Ea",
+    "cost": 0.1,
+    "category": "Blade Assembly",
+    "boq_identifier": "Nylon 6/6 12mm Round Bar Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost503"
+   },
+   {
+    "product_name": "Nylon 6/6 19mm Round Bar Bush",
+    "item_code": "Nylon 6/6 19mm Round Bar Bush",
+    "unit": "Ea",
+    "cost": 0.23,
+    "category": "Blade Assembly",
+    "boq_identifier": "Nylon 6/6 19mm Round Bar Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost504"
+   },
+   {
+    "product_name": "Square Nylon Bush ID 9.55x9.55, OD 15.88mm",
+    "item_code": "2290294",
+    "unit": "Ea",
+    "cost": 0.1,
+    "category": "Blade Assembly",
+    "boq_identifier": "Nylon 6/6 10mm Square Pin Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost505"
+   },
+   {
+    "product_name": "Stainless Steel 10mm Round Bar Bush",
+    "item_code": "Stainless Steel 10mm Round Bar Bush",
+    "unit": "Ea",
+    "cost": 2.4,
+    "category": "Blade Assembly",
+    "boq_identifier": "Stainless Steel 10mm Round Bar Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost506"
+   },
+   {
+    "product_name": "Stainless Steel 12mm Round Bar Bush",
+    "item_code": "Stainless Steel 12mm Round Bar Bush",
+    "unit": "Ea",
+    "cost": 2.4,
+    "category": "Blade Assembly",
+    "boq_identifier": "Stainless Steel 12mm Round Bar Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost507"
+   },
+   {
+    "product_name": "Stainless Steel 19mm Round Bar Bush",
+    "item_code": "Stainless Steel 19mm Round Bar Bush",
+    "unit": "Ea",
+    "cost": 2.4,
+    "category": "Blade Assembly",
+    "boq_identifier": "Stainless Steel 19mm Round Bar Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost508"
+   },
+   {
+    "product_name": "Stainless Steel 10mm Square Pin Bush",
+    "item_code": "Stainless Steel 10mm Square Pin Bush",
+    "unit": "Ea",
+    "cost": 2.4,
+    "category": "Blade Assembly",
+    "boq_identifier": "Stainless Steel 10mm Square Pin Bush",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost509"
+   },
+   {
+    "product_name": "10mm Quadrant",
+    "item_code": "10mm Quadrant",
+    "unit": "Ea",
+    "cost": 1.04,
+    "category": "Blade Assembly",
+    "boq_identifier": "10mm Quadrant",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost510"
+   },
+   {
+    "product_name": "12mm Quadrant",
+    "item_code": "2230114/2230116",
+    "unit": "Ea",
+    "cost": 1.15,
+    "category": "Blade Assembly",
+    "boq_identifier": "12mm Quadrant",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost511"
+   },
+   {
+    "product_name": "19mm Quadrant",
+    "item_code": "19mm Quadrant",
+    "unit": "Ea",
+    "cost": 1.27,
+    "category": "Blade Assembly",
+    "boq_identifier": "19mm Quadrant",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost512"
+   },
+   {
+    "product_name": "UL FNST Blade Seal - High Temperature",
+    "item_code": "2290018",
+    "unit": "m",
+    "cost": 20.0,
+    "category": "Seals",
+    "boq_identifier": "UL FNST Blade Seal - High Temperature",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost77"
+   },
+   {
+    "product_name": "Belimo 80lbin-9-Nm, 120V Fire & Smoke-On/Off , Actuator w/o Aux FSNF120 US",
+    "item_code": "2290540-FSNF120 US",
+    "unit": "Ea",
+    "cost": 880.0,
+    "category": "Actuator",
+    "boq_identifier": "2290540-FSNF120 US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511062"
+   },
+   {
+    "product_name": "Belimo 18lbin-2.5Nm, 120V Fire & Smoke-On/Off , Actuator w/o Aux FSTF120-S US",
+    "item_code": "2290541-FSTF120-S US",
+    "unit": "Ea",
+    "cost": 880.0,
+    "category": "Actuator",
+    "boq_identifier": "2290541-FSTF120-S US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511063"
+   },
+   {
+    "product_name": "Belimo 30lbin-3.5Nm, 120V Fire & Smoke-On/Off , Actuator w/o Aux FSLF120-US",
+    "item_code": "2290542-FSLF120-US",
+    "unit": "Ea",
+    "cost": 725.0,
+    "category": "Actuator",
+    "boq_identifier": "2290542-FSLF120-US",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511064"
+   },
+   {
+    "product_name": "Belimo 90lbin-10Nm , 24V Non Spring Return-Modulating 2-10V, Actuator w/o Aux NMV-D3-MP",
+    "item_code": "2290543-NMV-D3-MP",
+    "unit": "Ea",
+    "cost": 600.0,
+    "category": "Actuator",
+    "boq_identifier": "2290543-NMV-D3-MP",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511065"
+   },
+   {
+    "product_name": "Belimo 180lbin-20Nm, 24V Non Spring Return-Modulating 2-10V, Actuator w/o Aux SMV-D3-MP",
+    "item_code": "2290544-SMV-D3-MP",
+    "unit": "Ea",
+    "cost": 750.0,
+    "category": "Actuator",
+    "boq_identifier": "2290544-SMV-D3-MP",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511066"
+   },
+   {
+    "product_name": "Honeywell 80lbin-9Nm, 120V Fire & Smoke-On/Off , Actuator 2 Aux MS4109F1210/B",
+    "item_code": "2290560-MS4109F1210/B",
+    "unit": "Ea",
+    "cost": 835.0,
+    "category": "Actuator",
+    "boq_identifier": "2290560-MS4109F1210/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511067"
+   },
+   {
+    "product_name": "Honeywell 80lbin-9Nm, 120V Fire & Smoke-On/Off , Actuator w/o Aux MS4109F1010/B",
+    "item_code": "2290561-MS4109F1010/B",
+    "unit": "Ea",
+    "cost": 745.0,
+    "category": "Actuator",
+    "boq_identifier": "2290561-MS4109F1010/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511068"
+   },
+   {
+    "product_name": "Honeywell 30lbin-3.4Nm, 120V Fire & Smoke-On/Off , Actuator 2 Aux MS4104F1210/B",
+    "item_code": "2290562-MS4104F1210/B",
+    "unit": "Ea",
+    "cost": 745.0,
+    "category": "Actuator",
+    "boq_identifier": "2290562-MS4104F1210/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511069"
+   },
+   {
+    "product_name": "Honeywell 30lbin-3.4Nm, 120V Fire & Smoke-On/Off , Actuator w/o Aux MS4104F1010/B",
+    "item_code": "2290563-MS4104F1010/B",
+    "unit": "Ea",
+    "cost": 670.0,
+    "category": "Actuator",
+    "boq_identifier": "2290563-MS4104F1010/B",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511070"
+   },
+   {
+    "product_name": "Honeywell 175lbin-20Nm, 120V Fire & Smoke-On/Off , Actuator 2 Aux MS4120F1204",
+    "item_code": "2290564-MS4120F1204",
+    "unit": "Ea",
+    "cost": 1300.0,
+    "category": "Actuator",
+    "boq_identifier": "2290564-MS4120F1204",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511071"
+   },
+   {
+    "product_name": "Honeywell 45lbin-5Nm , 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN4605A1001",
+    "item_code": "2290565-CN4605A1001",
+    "unit": "Ea",
+    "cost": 315.0,
+    "category": "Actuator",
+    "boq_identifier": "2290565-CN4605A1001",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511072"
+   },
+   {
+    "product_name": "Honeywell 90lbin-10Nm , 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN4610A1001",
+    "item_code": "2290566-CN4610A1001",
+    "unit": "Ea",
+    "cost": 350.0,
+    "category": "Actuator",
+    "boq_identifier": "2290566-CN4610A1001",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511073"
+   },
+   {
+    "product_name": "Honeywell 180lbin-20Nm , 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN4620A1001",
+    "item_code": "2290567-CN4620A1001",
+    "unit": "Ea",
+    "cost": 905.0,
+    "category": "Actuator",
+    "boq_identifier": "2290567-CN4620A1001",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511074"
+   },
+   {
+    "product_name": "Honeywell 300lnin-34Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN4634A1001",
+    "item_code": "2290568-CN4634A1001",
+    "unit": "Ea",
+    "cost": 800.0,
+    "category": "Actuator",
+    "boq_identifier": "2290568-CN4634A1001",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511075"
+   },
+   {
+    "product_name": "Honeywell 45lbin-5Nm , 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN6105A1011",
+    "item_code": "2290569-CN6105A1011",
+    "unit": "Ea",
+    "cost": 390.0,
+    "category": "Actuator",
+    "boq_identifier": "2290569-CN6105A1011",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511076"
+   },
+   {
+    "product_name": "Honeywell 90lbin-10Nm , 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN6110A1003",
+    "item_code": "2290570-CN6110A1003",
+    "unit": "Ea",
+    "cost": 405.0,
+    "category": "Actuator",
+    "boq_identifier": "2290570-CN6110A1003",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511077"
+   },
+   {
+    "product_name": "Honeywell 90lbin-10Nm , 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux CN6110A1201",
+    "item_code": "2290571-CN6110A1201",
+    "unit": "Ea",
+    "cost": 620.0,
+    "category": "Actuator",
+    "boq_identifier": "2290571-CN6110A1201",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511078"
+   },
+   {
+    "product_name": "Honeywell 180lbin-20Nm , 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux CN6120A1002",
+    "item_code": "2290572-CN6120A1002",
+    "unit": "Ea",
+    "cost": 670.0,
+    "category": "Actuator",
+    "boq_identifier": "2290572-CN6120A1002",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511079"
+   },
+   {
+    "product_name": "Honeywell 300lnin-34Nm, 24V Non Spring Return-Modulating 2-10V, Actuator 2 Aux CN7234A2008",
+    "item_code": "2290574-CN7234A2008",
+    "unit": "Ea",
+    "cost": 1480.0,
+    "category": "Actuator",
+    "boq_identifier": "2290574-CN7234A2008",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511081"
+   },
+   {
+    "product_name": "Siemens 45lbin-5Nm , 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux GDB146.1E",
+    "item_code": "2290531-GDB146.1E",
+    "unit": "Ea",
+    "cost": 240.0,
+    "category": "Actuator",
+    "boq_identifier": "2290531-GDB146.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511082"
+   },
+   {
+    "product_name": "Siemens 90lbin-10Nm , 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux GLB146.1E",
+    "item_code": "2290532-GLB146.1E",
+    "unit": "Ea",
+    "cost": 295.0,
+    "category": "Actuator",
+    "boq_identifier": "2290532-GLB146.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511083"
+   },
+   {
+    "product_name": "Siemens 180lbin-20Nm , 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux GEB146.1E",
+    "item_code": "2290533-GEB146.1E",
+    "unit": "Ea",
+    "cost": 360.0,
+    "category": "Actuator",
+    "boq_identifier": "2290533-GEB146.1E",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511084"
+   },
+   {
+    "product_name": "Siemens 45lbin-5Nm , 24V Non Spring Return-Modulating 2-10V, Actuator w/o Aux GDB181.1E/3",
+    "item_code": "2290534-GDB181.1E/3",
+    "unit": "Ea",
+    "cost": 425.0,
+    "category": "Actuator",
+    "boq_identifier": "2290534-GDB181.1E/3",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511085"
+   },
+   {
+    "product_name": "Honeywell 180lbin-20Nm , 24V Non Spring Return-Modulating 2-10V, Actuator w/o Aux CN7220A2007",
+    "item_code": "2290573-CN7220A2007",
+    "unit": "Ea",
+    "cost": 700.0,
+    "category": "Actuator",
+    "boq_identifier": "2290573-CN7220A2007",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO6511080"
+   },
+   {
+    "product_name": "AL/EALDensityFactor",
+    "item_code": "AL/EALDensityFactor",
+    "cost": 2.7,
+    "category": "Density",
+    "boq_identifier": "AL/EALDensityFactor",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTO44216"
+   },
+   {
+    "product_name": "SS Density Factor",
+    "item_code": "SSDensityFactor",
+    "cost": 8.0,
+    "category": "Density",
+    "boq_identifier": "SS Density Factor",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost388"
+   },
+   {
+    "product_name": "GI Density Factor",
+    "item_code": "GIDensityFactor",
+    "cost": 7.85,
+    "category": "Density",
+    "boq_identifier": "GI Density Factor",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost389"
+   }
+  ]
+ },
+ "feature_types": [
+  {
+   "key": "FT103",
+   "existing": "FT103",
+   "label": "ULRD Actuator Mounting",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT132",
+   "existing": "FT132",
+   "label": "VCD Actuator type",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT133",
+   "existing": "FT133",
+   "label": "VCD actuator Controls",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT134",
+   "existing": "FT134",
+   "label": "VCD actuator feedback",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT135",
+   "existing": "FT135",
+   "label": "VCD actuator power",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT136",
+   "existing": "FT136",
+   "label": "VCD Rated Static Pressure Area Correction Factor",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT137",
+   "existing": "FT137",
+   "label": "VCD Rated Velocity Area Correction Factor",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT138",
+   "existing": "FT138",
+   "label": "VCD actuator",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT139",
+   "existing": "FT139",
+   "label": "VCD Actuator Cost",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT140",
+   "existing": "FT140",
+   "label": "VCD Actuator torq",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT141",
+   "label": "VCD Round Subcategory",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "Round Balancing Damper",
+     "sequence": 1
+    },
+    {
+     "value": "Round Seal Stop Damper",
+     "sequence": 2
+    },
+    {
+     "value": "Round Double Skin Control Damper",
+     "sequence": 3
+    }
+   ]
+  },
+  {
+   "key": "FT142",
+   "label": "VCD Round Model Name",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "ED - Round Balancing Damper",
+     "sequence": 1
+    },
+    {
+     "value": "RD - Round Seal Stop Damper",
+     "sequence": 2
+    },
+    {
+     "value": "RI - Round Double Skin Control Damper",
+     "sequence": 3
+    }
+   ]
+  },
+  {
+   "key": "FT144",
+   "label": "VCD round Frame Closure",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "Clinch",
+     "sequence": 1
+    },
+    {
+     "value": "Spot Welded",
+     "sequence": 2
+    },
+    {
+     "value": "Fully Welded",
+     "sequence": 3
+    }
+   ]
+  },
+  {
+   "key": "FT145",
+   "label": "VCD Round Axle Type",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "10mm Round Bar",
+     "sequence": 1
+    },
+    {
+     "value": "12mm Round Bar",
+     "sequence": 2
+    },
+    {
+     "value": "19mm Round Bar",
+     "sequence": 3
+    },
+    {
+     "value": "10mm Square Pin",
+     "sequence": 4
+    }
+   ]
+  },
+  {
+   "key": "FT146",
+   "label": "VCD round Axle Bearing",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "Nylon 6/6",
+     "sequence": 1
+    },
+    {
+     "value": "Acetate",
+     "sequence": 2
+    },
+    {
+     "value": "Bronze Oilite",
+     "sequence": 3
+    },
+    {
+     "value": "Stainless Steel",
+     "sequence": 4
+    }
+   ]
+  },
+  {
+   "key": "FT147",
+   "label": "VCD round Blade Seals",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "None",
+     "sequence": 1
+    },
+    {
+     "value": "Silicone Standard",
+     "sequence": 2
+    },
+    {
+     "value": "Silicone High Temp",
+     "sequence": 3
+    }
+   ]
+  },
+  {
+   "key": "FT148",
+   "label": "VCD Round Model",
+   "data_type": "Object List",
+   "object_type": "FTOVCDRoundModel",
+   "data_text_field": "custom_label",
+   "additional_fields": "min_blade_thickness,min_frame_thickness",
+   "objects": [
+    {
+     "object": "FTOVCDRoundModel20",
+     "sequence": 1
+    },
+    {
+     "object": "FTOVCDRoundModel21",
+     "sequence": 2
+    },
+    {
+     "object": "FTOVCDRoundModel22",
+     "sequence": 3
+    },
+    {
+     "object": "FTOVCDRoundModel23",
+     "sequence": 4
+    },
+    {
+     "object": "FTOVCDRoundModel24",
+     "sequence": 5
+    },
+    {
+     "object": "FTOVCDRoundModel25",
+     "sequence": 6
+    },
+    {
+     "object": "FTOVCDRoundModel26",
+     "sequence": 7
+    },
+    {
+     "object": "FTOVCDRoundModel27",
+     "sequence": 8
+    },
+    {
+     "object": "FTOVCDRoundModel28",
+     "sequence": 9
+    },
+    {
+     "object": "FTOVCDRoundModel29",
+     "sequence": 10
+    },
+    {
+     "object": "FTOVCDRoundModel30",
+     "sequence": 11
+    },
+    {
+     "object": "FTOVCDRoundModel31",
+     "sequence": 12
+    },
+    {
+     "object": "FTOVCDRoundModel32",
+     "sequence": 13
+    },
+    {
+     "object": "FTOVCDRoundModel33",
+     "sequence": 14
+    },
+    {
+     "object": "FTOVCDRoundModel34",
+     "sequence": 15
+    },
+    {
+     "object": "FTOVCDRoundModel35",
+     "sequence": 16
+    },
+    {
+     "object": "FTOVCDRoundModel36",
+     "sequence": 17
+    },
+    {
+     "object": "FTOVCDRoundModel37",
+     "sequence": 18
+    },
+    {
+     "object": "FTOVCDRoundModel38",
+     "sequence": 19
+    },
+    {
+     "object": "FTOVCDRoundModel39",
+     "sequence": 20
+    },
+    {
+     "object": "FTOVCDRoundModel40",
+     "sequence": 21
+    },
+    {
+     "object": "FTOVCDRoundModel41",
+     "sequence": 22
+    },
+    {
+     "object": "FTOVCDRoundModel42",
+     "sequence": 23
+    },
+    {
+     "object": "FTOVCDRoundModel43",
+     "sequence": 24
+    },
+    {
+     "object": "FTOVCDRoundModel44",
+     "sequence": 25
+    },
+    {
+     "object": "FTOVCDRoundModel45",
+     "sequence": 26
+    },
+    {
+     "object": "FTOVCDRoundModel46",
+     "sequence": 27
+    },
+    {
+     "object": "FTOVCDRoundModel47",
+     "sequence": 28
+    },
+    {
+     "object": "FTOVCDRoundModel48",
+     "sequence": 29
+    },
+    {
+     "object": "FTOVCDRoundModel49",
+     "sequence": 30
+    },
+    {
+     "object": "FTOVCDRoundModel50",
+     "sequence": 31
+    },
+    {
+     "object": "FTOVCDRoundModel51",
+     "sequence": 32
+    },
+    {
+     "object": "FTOVCDRoundModel52",
+     "sequence": 33
+    },
+    {
+     "object": "FTOVCDRoundModel53",
+     "sequence": 34
+    },
+    {
+     "object": "FTOVCDRoundModel54",
+     "sequence": 35
+    },
+    {
+     "object": "FTOVCDRoundModel55",
+     "sequence": 36
+    },
+    {
+     "object": "FTOVCDRoundModel56",
+     "sequence": 37
+    },
+    {
+     "object": "FTOVCDRoundModel57",
+     "sequence": 38
+    },
+    {
+     "object": "FTOVCDRoundModel58",
+     "sequence": 39
+    },
+    {
+     "object": "FTOVCDRoundModel59",
+     "sequence": 40
+    },
+    {
+     "object": "FTOVCDRoundModel60",
+     "sequence": 41
+    },
+    {
+     "object": "FTOVCDRoundModel61",
+     "sequence": 42
+    },
+    {
+     "object": "FTOVCDRoundModel62",
+     "sequence": 43
+    },
+    {
+     "object": "FTOVCDRoundModel63",
+     "sequence": 44
+    },
+    {
+     "object": "FTOVCDRoundModel64",
+     "sequence": 45
+    },
+    {
+     "object": "FTOVCDRoundModel65",
+     "sequence": 46
+    },
+    {
+     "object": "FTOVCDRoundModel66",
+     "sequence": 47
+    },
+    {
+     "object": "FTOVCDRoundModel67",
+     "sequence": 48
+    },
+    {
+     "object": "FTOVCDRoundModel68",
+     "sequence": 49
+    },
+    {
+     "object": "FTOVCDRoundModel69",
+     "sequence": 50
+    },
+    {
+     "object": "FTOVCDRoundModel70",
+     "sequence": 51
+    },
+    {
+     "object": "FTOVCDRoundModel71",
+     "sequence": 52
+    },
+    {
+     "object": "FTOVCDRoundModel72",
+     "sequence": 53
+    },
+    {
+     "object": "FTOVCDRoundModel73",
+     "sequence": 54
+    },
+    {
+     "object": "FTOVCDRoundModel74",
+     "sequence": 55
+    },
+    {
+     "object": "FTOVCDRoundModel75",
+     "sequence": 56
+    }
+   ]
+  },
+  {
+   "key": "FT149",
+   "label": "VCDR Cost",
+   "data_type": "Object List",
+   "object_type": "FTOCountryWiseCost",
+   "data_text_field": "boq_identifier",
+   "additional_fields": "cost",
+   "objects": [
+    {
+     "cost_row": "AL/EALDensityFactor",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "cost_row": "SS Density Factor",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "cost_row": "GI Density Factor",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "cost_row": "GI",
+     "sequence": 1
+    },
+    {
+     "cost_row": "SS304L",
+     "sequence": 2
+    },
+    {
+     "cost_row": "SS316L",
+     "sequence": 3
+    },
+    {
+     "cost_row": "AL",
+     "sequence": 4
+    },
+    {
+     "cost_row": "Damper Processing Minutes",
+     "sequence": 5
+    },
+    {
+     "cost_row": "Transition Time per m of Perimeter of Damper",
+     "sequence": 6
+    },
+    {
+     "cost_row": "Actuator Installation Minutes per Actuator",
+     "sequence": 7
+    },
+    {
+     "cost_row": "Cost per Hour",
+     "sequence": 8
+    },
+    {
+     "cost_row": "Overhead Percentage",
+     "sequence": 9
+    },
+    {
+     "cost_row": "Overhead Percentage on Actuator",
+     "sequence": 10
+    },
+    {
+     "cost_row": "Profit",
+     "sequence": 11
+    },
+    {
+     "cost_row": "Accessories Wastage",
+     "sequence": 12
+    },
+    {
+     "cost_row": "Blade Wastage",
+     "sequence": 13
+    },
+    {
+     "cost_row": "Frame Wastage",
+     "sequence": 14
+    },
+    {
+     "cost_row": "GI Welding Cost",
+     "sequence": 15
+    },
+    {
+     "cost_row": "AL Welding Cost",
+     "sequence": 16
+    },
+    {
+     "cost_row": "SS Welding Cost",
+     "sequence": 17
+    },
+    {
+     "cost_row": "Belimo 18lbin-2.5Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSTF24 US",
+     "sequence": 18
+    },
+    {
+     "cost_row": "Belimo 180lbin-20Nm, 24V Fire & Smoke-Modulating 2-10V, Actuator 2 Aux FSAFB24-SR-S",
+     "sequence": 19
+    },
+    {
+     "cost_row": "Belimo 180lbin-20Nm, 24V Fire & Smoke-Modulating 2-10V, Actuator w/o Aux FSAFB24-SR",
+     "sequence": 20
+    },
+    {
+     "cost_row": "Honeywell 175lbin-20Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8120F1200/B",
+     "sequence": 21
+    },
+    {
+     "cost_row": "Honeywell 175lbin-20Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4620F1203/B",
+     "sequence": 22
+    },
+    {
+     "cost_row": "Honeywell 175lbin-20Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4620F1005/B",
+     "sequence": 23
+    },
+    {
+     "cost_row": "Belimo 30lbin-3.5Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSLF230 US",
+     "sequence": 24
+    },
+    {
+     "cost_row": "Belimo 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSNF230 US",
+     "sequence": 25
+    },
+    {
+     "cost_row": "Belimo 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSNF24 US",
+     "sequence": 26
+    },
+    {
+     "cost_row": "Belimo 30lbin-3.5Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux FSLF24 US",
+     "sequence": 27
+    },
+    {
+     "cost_row": "Belimo 18lbin-2.5Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSTF24-S US",
+     "sequence": 28
+    },
+    {
+     "cost_row": "Belimo 18lbin-2.5Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSTF230-S US",
+     "sequence": 29
+    },
+    {
+     "cost_row": "Belimo 18lbin-2.5Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux FSTF230 US",
+     "sequence": 30
+    },
+    {
+     "cost_row": "Belimo 30lbin-3.5Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSLF24-S US",
+     "sequence": 31
+    },
+    {
+     "cost_row": "Honeywell 30lbin-3.4Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4604F1010/B",
+     "sequence": 32
+    },
+    {
+     "cost_row": "Honeywell 30lbin-3.4Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4604F1210/B",
+     "sequence": 33
+    },
+    {
+     "cost_row": "Honeywell 30lbin-3.4Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8104F1010/B",
+     "sequence": 34
+    },
+    {
+     "cost_row": "Honeywell 30lbin-3.4Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8104F1210/B",
+     "sequence": 35
+    },
+    {
+     "cost_row": "Honeywell 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8109F1010/B",
+     "sequence": 36
+    },
+    {
+     "cost_row": "Honeywell 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux MS8109F1210/B",
+     "sequence": 37
+    },
+    {
+     "cost_row": "Honeywell 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator w/o Aux MS4609F1010/B",
+     "sequence": 38
+    },
+    {
+     "cost_row": "Honeywell 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux MS4609F1210/B",
+     "sequence": 39
+    },
+    {
+     "cost_row": "Honeywell 175lbin-20Nm, 24V Fire & Smoke-On/Off , Actuator w/o Aux MS8120F1002/B",
+     "sequence": 40
+    },
+    {
+     "cost_row": "Siemens 90lbin-10Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GLB346.1E",
+     "sequence": 41
+    },
+    {
+     "cost_row": "Belimo 180lbin-20Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux SM230A",
+     "sequence": 42
+    },
+    {
+     "cost_row": "Belimo 180lbin-20Nm, 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux SM24A",
+     "sequence": 43
+    },
+    {
+     "cost_row": "Belimo 180lbin-20Nm, 230V Non Spring Return-On/Off + Floating , Actuator 2 Aux SM230A -S",
+     "sequence": 44
+    },
+    {
+     "cost_row": "Belimo 180lbin-20Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux SF24A-SR",
+     "sequence": 45
+    },
+    {
+     "cost_row": "Siemens 180lbin-20Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GEB341.1E",
+     "sequence": 46
+    },
+    {
+     "cost_row": "Siemens 180lbin-20Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GEB346.1E",
+     "sequence": 47
+    },
+    {
+     "cost_row": "Belimo 80lbin-9Nm, 24V Fire & Smoke-On/Off , Actuator 2 Aux FSNF24-S US",
+     "sequence": 48
+    },
+    {
+     "cost_row": "Belimo 80lbin-9Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSNF230-S US",
+     "sequence": 49
+    },
+    {
+     "cost_row": "Belimo 30lbin-3.5Nm, 230V Fire & Smoke-On/Off , Actuator 2 Aux FSLF230-S US",
+     "sequence": 50
+    },
+    {
+     "cost_row": "Belimo 45lbin-5Nm, 230V Non Spring Return-On/Off + Floating , Actuator 2 Aux LM230A -S",
+     "sequence": 51
+    },
+    {
+     "cost_row": "Belimo 45lbin-5Nm, 24V Non Spring Return-On/Off + Floating , Actuator 2 Aux LM24A -S",
+     "sequence": 52
+    },
+    {
+     "cost_row": "Siemens 45lbin-5Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GDB341.1E",
+     "sequence": 53
+    },
+    {
+     "cost_row": "Siemens 45lbin-5Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator 2 Aux GDB346.1E",
+     "sequence": 54
+    },
+    {
+     "cost_row": "Belimo 90lbin-10Nm, 230V Spring Return-On/Off , Actuator w/o Aux NF230A",
+     "sequence": 55
+    },
+    {
+     "cost_row": "Belimo 90lbin-10Nm, 24V Spring Return-On/Off , Actuator w/o Aux NF24A",
+     "sequence": 56
+    },
+    {
+     "cost_row": "Belimo 90lbin-10Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux NM230A",
+     "sequence": 57
+    },
+    {
+     "cost_row": "Belimo 90lbin-10Nm, 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux NM24A",
+     "sequence": 58
+    },
+    {
+     "cost_row": "Belimo 90lbin-10Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux NF24A-SR",
+     "sequence": 59
+    },
+    {
+     "cost_row": "Siemens 90lbin-10Nm, 100V-240V Non Spring Return-On/Off + Floating , Actuator w/o Aux GLB341.1E",
+     "sequence": 60
+    },
+    {
+     "cost_row": "Belimo 22lbin-2.5Nm, 230V Spring Return-On/Off , Actuator w/o Aux TF230",
+     "sequence": 61
+    },
+    {
+     "cost_row": "Belimo 22lbin-2.5Nm, 24V Spring Return-On/Off , Actuator w/o Aux TF24",
+     "sequence": 62
+    },
+    {
+     "cost_row": "Belimo 22lbin-2.5Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux TF24-SR",
+     "sequence": 63
+    },
+    {
+     "cost_row": "Belimo 35lbin-4Nm, 230V Spring Return-On/Off , Actuator w/o Aux LF230A",
+     "sequence": 64
+    },
+    {
+     "cost_row": "Belimo 35lbin-4Nm, 24V Spring Return-On/Off , Actuator w/o Aux LF24",
+     "sequence": 65
+    },
+    {
+     "cost_row": "Belimo 35lbin-4Nm, 24V Spring Return-Modulating 2-10V, Actuator w/o Aux LF24-SR",
+     "sequence": 66
+    },
+    {
+     "cost_row": "Belimo 45lbin-5Nm, 230V Non Spring Return-On/Off + Floating , Actuator w/o Aux LM230A",
+     "sequence": 67
+    },
+    {
+     "cost_row": "Belimo 45lbin-5Nm, 24V Non Spring Return-On/Off + Floating , Actuator w/o Aux LM24A",
+     "sequence": 68
+    },
+    {
+     "cost_row": "Frame Gasket",
+     "sequence": 69
+    },
+    {
+     "cost_row": "Bracket Cost",
+     "sequence": 70
+    },
+    {
+     "cost_row": "UL FNST Blade Seal - High Temperature",
+     "sequence": 71
+    },
+    {
+     "cost_row": "Blade Seal Standard",
+     "sequence": 72
+    },
+    {
+     "cost_row": "GI 10mm Round Bar",
+     "sequence": 73
+    },
+    {
+     "cost_row": "GI 12mm Round Bar",
+     "sequence": 74
+    },
+    {
+     "cost_row": "GI 19mm Round Bar",
+     "sequence": 75
+    },
+    {
+     "cost_row": "Blade Shaft - Square GI - 9.50X9.50X80mm 9148",
+     "sequence": 76
+    },
+    {
+     "cost_row": "AL 10mm Round Bar",
+     "sequence": 77
+    },
+    {
+     "cost_row": "AL 12mm Round Bar",
+     "sequence": 78
+    },
+    {
+     "cost_row": "AL 19mm Round Bar",
+     "sequence": 79
+    },
+    {
+     "cost_row": "AL 10mm Square Pin",
+     "sequence": 80
+    },
+    {
+     "cost_row": "SS304L 10mm Round Bar",
+     "sequence": 81
+    },
+    {
+     "cost_row": "SS304L 12mm Round Bar",
+     "sequence": 82
+    },
+    {
+     "cost_row": "SS304L 19mm Round Bar",
+     "sequence": 83
+    },
+    {
+     "cost_row": "SS304L 10mm Square Pin",
+     "sequence": 84
+    },
+    {
+     "cost_row": "SS316L 10mm Round Bar",
+     "sequence": 85
+    },
+    {
+     "cost_row": "SS316L 12mm Round Bar",
+     "sequence": 86
+    },
+    {
+     "cost_row": "SS316L 19mm Round Bar",
+     "sequence": 87
+    },
+    {
+     "cost_row": "SS316L 10mm Square Pin",
+     "sequence": 88
+    },
+    {
+     "cost_row": "Acetate 10mm Round Bar Bush",
+     "sequence": 89
+    },
+    {
+     "cost_row": "Acetate 12mm Round Bar Bush",
+     "sequence": 90
+    },
+    {
+     "cost_row": "Acetate 19mm Round Bar Bush",
+     "sequence": 91
+    },
+    {
+     "cost_row": "Acetate 10mm Square Pin Bush",
+     "sequence": 92
+    },
+    {
+     "cost_row": "Bronze Flanged Brass Shaft Bush-16x9.55x9.55x10mm",
+     "sequence": 93
+    },
+    {
+     "cost_row": "Bronze Oilite 12mm Round Bar Bush",
+     "sequence": 94
+    },
+    {
+     "cost_row": "Bronze Oilite 19mm Round Bar Bush",
+     "sequence": 95
+    },
+    {
+     "cost_row": "Bronze Oilite 10mm Square Pin Bush",
+     "sequence": 96
+    },
+    {
+     "cost_row": "Nylon 6/6 10mm Round Bar Bush",
+     "sequence": 97
+    },
+    {
+     "cost_row": "Nylon Flanged Bush Round - 16mmx12mmx10mm",
+     "sequence": 98
+    },
+    {
+     "cost_row": "Nylon 6/6 19mm Round Bar Bush",
+     "sequence": 99
+    },
+    {
+     "cost_row": "Square Nylon Bush ID 9.55x9.55, OD 15.88mm",
+     "sequence": 100
+    },
+    {
+     "cost_row": "Stainless Steel 10mm Round Bar Bush",
+     "sequence": 101
+    },
+    {
+     "cost_row": "Stainless Steel 12mm Round Bar Bush",
+     "sequence": 102
+    },
+    {
+     "cost_row": "Stainless Steel 19mm Round Bar Bush",
+     "sequence": 103
+    },
+    {
+     "cost_row": "Stainless Steel 10mm Square Pin Bush",
+     "sequence": 104
+    },
+    {
+     "cost_row": "10mm Quadrant",
+     "sequence": 105
+    },
+    {
+     "cost_row": "12mm Quadrant",
+     "sequence": 106
+    },
+    {
+     "cost_row": "19mm Quadrant",
+     "sequence": 107
+    },
+    {
+     "cost_row": "AMCA Label",
+     "sequence": 108
+    }
+   ]
+  },
+  {
+   "key": "FT53",
+   "existing": "FT53",
+   "label": "Actuator Brand",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT56",
+   "existing": "FT56",
+   "label": "Aux Switch",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT60",
+   "existing": "FT60",
+   "label": "YesNo",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT79",
+   "existing": "FT79",
+   "label": "VCD Material type",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT82",
+   "existing": "FT82",
+   "label": "VCD Thickness",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT87",
+   "existing": "FT87",
+   "label": "VCD Damper Operator",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT89",
+   "existing": "FT89",
+   "label": "Dampers",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FTY102326",
+   "label": "VCD-R Model Items",
+   "data_type": "Object List",
+   "object_type": "Item",
+   "data_text_field": "item_code",
+   "additional_fields": "item_code,description",
+   "objects": [
+    {
+     "object": "ED",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "RD",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "RI",
+     "sequence": 1,
+     "price_editable": 1
+    }
+   ]
+  },
+  {
+   "key": "FTY44090",
+   "label": "VCD Blade skin Thickness",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "0.80",
+     "sequence": 1
+    },
+    {
+     "value": "1.00",
+     "sequence": 1
+    },
+    {
+     "value": "1.20",
+     "sequence": 1
+    },
+    {
+     "value": "0.6 Double Skin",
+     "sequence": 1
+    },
+    {
+     "value": "0.7 Double Skin",
+     "sequence": 1
+    },
+    {
+     "value": "1.0 Double Skin",
+     "sequence": 1
+    }
+   ]
+  }
+ ],
+ "structures": [
+  {
+   "key": "Round Volume Control Dampers",
+   "label": "Round Volume Control Dampers",
+   "parent": null,
+   "sequence": 0.0
+  },
+  {
+   "key": "Actuator",
+   "label": "Actuator",
+   "parent": "Round Volume Control Dampers",
+   "sequence": 2.0
+  },
+  {
+   "key": "Frame",
+   "label": "Frame",
+   "parent": "Round Volume Control Dampers",
+   "sequence": 3.0
+  },
+  {
+   "key": "Blade",
+   "label": "Blade",
+   "parent": "Round Volume Control Dampers",
+   "sequence": 4.0
+  },
+  {
+   "key": "Frame Accessories",
+   "label": "Frame Accessories",
+   "parent": "Round Volume Control Dampers",
+   "sequence": 5.0
+  },
+  {
+   "key": "Total Blade Assembly",
+   "label": "Total Blade Assembly",
+   "parent": "Round Volume Control Dampers",
+   "sequence": 6.0
+  },
+  {
+   "key": "Motor Holding",
+   "label": "Motor Holding",
+   "parent": "Round Volume Control Dampers",
+   "sequence": 7.0
+  },
+  {
+   "key": "AMCA",
+   "label": "AMCA",
+   "parent": "Round Volume Control Dampers",
+   "sequence": 8.0
+  },
+  {
+   "key": "Processing Minutes",
+   "label": "Processing Minutes",
+   "parent": "Round Volume Control Dampers",
+   "sequence": 9.0
+  },
+  {
+   "key": "Cost",
+   "label": "Cost",
+   "parent": "Round Volume Control Dampers",
+   "sequence": 10.0
+  },
+  {
+   "key": "Factors",
+   "label": "Factors",
+   "parent": "Round Volume Control Dampers",
+   "sequence": 11.0
+  }
+ ],
+ "features": [
+  {
+   "structure": "Factors",
+   "field": "modelItem",
+   "label": "Model Item",
+   "control_type": "Dropdown",
+   "sequence": 0,
+   "feature_types": [
+    "FTY102326"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "subcategory",
+   "label": "Sub-Category",
+   "control_type": "Dropdown",
+   "sequence": 1,
+   "feature_types": [
+    "FT141"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "subCategoryCode",
+   "label": "Sub-Category Code",
+   "control_type": "Textbox",
+   "sequence": 2
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "modelNo",
+   "label": "Model No",
+   "control_type": "Textbox",
+   "sequence": 3
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "modelNoDescription",
+   "label": "Model No. & Description",
+   "control_type": "Dropdown",
+   "sequence": 4,
+   "feature_types": [
+    "FT142"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "bladeTypeLookup",
+   "label": "Blade Type Lookup",
+   "control_type": "Textbox",
+   "sequence": 5
+  },
+  {
+   "structure": "Factors",
+   "field": "countryWiseCost",
+   "label": "Country Wise Cost",
+   "control_type": "Dropdown",
+   "sequence": 6,
+   "settings": {
+    "displayFormat": "1.0-2"
+   },
+   "feature_types": [
+    "FT149"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "minDiameter",
+   "label": "Min Diameter",
+   "control_type": "Number",
+   "sequence": 6,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "frameStandoff",
+   "label": "Frame Standoff",
+   "control_type": "Textbox",
+   "sequence": 6
+  },
+  {
+   "structure": "Factors",
+   "field": "maxDiameter",
+   "label": "Max Diameter",
+   "control_type": "Number",
+   "sequence": 7,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "materialType",
+   "label": "Material Type",
+   "control_type": "Dropdown",
+   "sequence": 7,
+   "feature_types": [
+    "FT79"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "staticPressureClass",
+   "label": "Static Pressure Class",
+   "control_type": "Dropdown",
+   "sequence": 8,
+   "feature_types": [
+    "FT136"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "velocityRating",
+   "label": "Velocity Rating",
+   "control_type": "Dropdown",
+   "sequence": 9,
+   "feature_types": [
+    "FT137"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "diameter",
+   "label": "Diameter (DI)",
+   "control_type": "Number",
+   "sequence": 10,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "frameDepth",
+   "label": "Frame Depth (FDI)",
+   "control_type": "Number",
+   "sequence": 11,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "frameThickness",
+   "label": "Frame Thickness",
+   "control_type": "Dropdown",
+   "sequence": 12,
+   "feature_types": [
+    "FT82"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "unique",
+   "label": "Unique",
+   "control_type": "Dropdown",
+   "sequence": 13,
+   "feature_types": [
+    "FT148"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "bladeSkinThickness",
+   "label": "Blade Skin Thickness",
+   "control_type": "Dropdown",
+   "sequence": 13,
+   "feature_types": [
+    "FTY44090"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "frameClosure",
+   "label": "Frame Closure",
+   "control_type": "Dropdown",
+   "sequence": 14,
+   "feature_types": [
+    "FT144"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "axleType",
+   "label": "Axle Type",
+   "control_type": "Dropdown",
+   "sequence": 15,
+   "feature_types": [
+    "FT145"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "category",
+   "label": "Category",
+   "control_type": "Textbox",
+   "sequence": 16
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "axleBearing",
+   "label": "Axle Bearing",
+   "control_type": "Dropdown",
+   "sequence": 16,
+   "feature_types": [
+    "FT146"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "bladeSeal",
+   "label": "Blade Seal",
+   "control_type": "Dropdown",
+   "sequence": 17,
+   "feature_types": [
+    "FT147"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "amcaLabel",
+   "label": "AMCA Label",
+   "control_type": "Dropdown",
+   "sequence": 18,
+   "feature_types": [
+    "FT60"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "operator",
+   "label": "Operator",
+   "control_type": "Dropdown",
+   "sequence": 19,
+   "feature_types": [
+    "FT87"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "quadrantOption",
+   "label": "Quadrant Option",
+   "control_type": "Textbox",
+   "sequence": 20
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "actuatorBrand",
+   "label": "Actuator Brand",
+   "control_type": "Dropdown",
+   "sequence": 21,
+   "feature_types": [
+    "FT53"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "actuatorType",
+   "label": "Actuator Type",
+   "control_type": "Dropdown",
+   "sequence": 22,
+   "feature_types": [
+    "FT132"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "actuatorMounting",
+   "label": "Actuator Mounting",
+   "control_type": "Dropdown",
+   "sequence": 23,
+   "feature_types": [
+    "FT103"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "actuatorControls",
+   "label": "Actuator Controls",
+   "control_type": "Dropdown",
+   "sequence": 24,
+   "feature_types": [
+    "FT133"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "actuatorAuxSwitch",
+   "label": "Actuator Aux Switch",
+   "control_type": "Dropdown",
+   "sequence": 25,
+   "feature_types": [
+    "FT56"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "actuatorFeedback",
+   "label": "Actuator Feedback",
+   "control_type": "Dropdown",
+   "sequence": 26,
+   "feature_types": [
+    "FT134"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "actuatorPowerSupply",
+   "label": "Actuator Power Supply",
+   "control_type": "Dropdown",
+   "sequence": 27,
+   "feature_types": [
+    "FT135"
+   ]
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "tagRef",
+   "label": "Tag Ref",
+   "control_type": "Textbox",
+   "sequence": 28
+  },
+  {
+   "structure": "Round Volume Control Dampers",
+   "field": "notes",
+   "label": "Notes",
+   "control_type": "Textbox",
+   "sequence": 29
+  },
+  {
+   "structure": "Factors",
+   "field": "modelDescription",
+   "label": "Model Description",
+   "control_type": "Textbox",
+   "sequence": 32
+  },
+  {
+   "structure": "Factors",
+   "field": "barCost",
+   "label": "Bar Cost",
+   "control_type": "Dropdown",
+   "sequence": 33,
+   "settings": {
+    "displayFormat": "1.0-2"
+   },
+   "feature_types": [
+    "FT149"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "materialCost",
+   "label": "Material Cost",
+   "control_type": "Number",
+   "sequence": 34,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "bushCostLookup",
+   "label": "Bush Cost Lookup",
+   "control_type": "Dropdown",
+   "sequence": 34,
+   "settings": {
+    "displayFormat": "1.0-2"
+   },
+   "feature_types": [
+    "FT149"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "materialDensity",
+   "label": "Material Density",
+   "control_type": "Number",
+   "sequence": 35,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "quadrantCostLookup",
+   "label": "Quadrant Cost Lookup",
+   "control_type": "Dropdown",
+   "sequence": 35,
+   "settings": {
+    "displayFormat": "1.0-2"
+   },
+   "feature_types": [
+    "FT149"
+   ]
+  },
+  {
+   "structure": "Actuator",
+   "field": "flowCorrectionFactor",
+   "label": "Flow Correction Factor",
+   "control_type": "Number",
+   "sequence": 36,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "dampers",
+   "label": "Dampers",
+   "control_type": "Dropdown",
+   "sequence": 36,
+   "feature_types": [
+    "FT89"
+   ]
+  },
+  {
+   "structure": "Actuator",
+   "field": "damperArea",
+   "label": "Damper Area",
+   "control_type": "Number",
+   "sequence": 37,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuator",
+   "field": "actuatorShortUnique",
+   "label": "Actuator Short Unique",
+   "control_type": "Dropdown",
+   "sequence": 38,
+   "feature_types": [
+    "FT140"
+   ]
+  },
+  {
+   "structure": "Actuator",
+   "field": "torque1Area",
+   "label": "Torque 1 Area",
+   "control_type": "Number",
+   "sequence": 39,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuator",
+   "field": "torque2Area",
+   "label": "Torque 2 Area",
+   "control_type": "Number",
+   "sequence": 40,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuator",
+   "field": "torque3Area",
+   "label": "Torque 3 Area",
+   "control_type": "Number",
+   "sequence": 41,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuator",
+   "field": "torque4Area",
+   "label": "Torque 4 Area",
+   "control_type": "Number",
+   "sequence": 42,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuator",
+   "field": "torque1NoOfAct",
+   "label": "Torque 1 No of Act",
+   "control_type": "Number",
+   "sequence": 43,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuator",
+   "field": "torque2NoOfAct",
+   "label": "Torque 2 No of Act",
+   "control_type": "Number",
+   "sequence": 44,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuator",
+   "field": "torque3NoOfAct",
+   "label": "Torque 3 No of Act",
+   "control_type": "Number",
+   "sequence": 45,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuator",
+   "field": "torque4NoOfAct",
+   "label": "Torque 4 No of Act",
+   "control_type": "Number",
+   "sequence": 46,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuator",
+   "field": "actuatorUnique",
+   "label": "Actuator Unique",
+   "control_type": "Dropdown",
+   "sequence": 47,
+   "feature_types": [
+    "FT138"
+   ]
+  },
+  {
+   "structure": "Actuator",
+   "field": "noOfActuators",
+   "label": "No. of Actuators",
+   "control_type": "Number",
+   "sequence": 48,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame",
+   "field": "frameThicknessLookup",
+   "label": "Frame Thickness Lookup",
+   "control_type": "Number",
+   "sequence": 49,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame",
+   "field": "frameArea",
+   "label": "Frame Area",
+   "control_type": "Number",
+   "sequence": 50,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame",
+   "field": "frameWeight",
+   "label": "Frame Weight",
+   "control_type": "Number",
+   "sequence": 51,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame",
+   "field": "frameCost",
+   "label": "Frame Cost",
+   "control_type": "Number",
+   "sequence": 52,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Blade",
+   "field": "bladeThickness",
+   "label": "Blade Thickness",
+   "control_type": "Number",
+   "sequence": 53,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Blade",
+   "field": "bladeArea",
+   "label": "Blade Area",
+   "control_type": "Number",
+   "sequence": 54,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Blade",
+   "field": "bladeWeight",
+   "label": "Blade Weight",
+   "control_type": "Number",
+   "sequence": 55,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Blade",
+   "field": "bladeCost",
+   "label": "Blade Cost",
+   "control_type": "Number",
+   "sequence": 56,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame Accessories",
+   "field": "frameGasket",
+   "label": "Frame Gasket",
+   "control_type": "Number",
+   "sequence": 57,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame Accessories",
+   "field": "frameGasketCost",
+   "label": "Frame Gasket Cost",
+   "control_type": "Number",
+   "sequence": 58,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame Accessories",
+   "field": "standardBracket",
+   "label": "Standard Bracket",
+   "control_type": "Number",
+   "sequence": 59,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame Accessories",
+   "field": "standardBracketCost",
+   "label": "Standard Bracket Cost",
+   "control_type": "Number",
+   "sequence": 60,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frame Accessories",
+   "field": "frameAccessoriesCost",
+   "label": "Frame Accessories Cost",
+   "control_type": "Number",
+   "sequence": 61,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "bladeSealArea",
+   "label": "Blade Seal Area",
+   "control_type": "Number",
+   "sequence": 62,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "bladeSealCost",
+   "label": "Blade Seal Cost",
+   "control_type": "Number",
+   "sequence": 63,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "axleRoundBar",
+   "label": "Axle Round Bar",
+   "control_type": "Number",
+   "sequence": 64,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "axleRoundBarCost",
+   "label": "Axle Round Bar Cost",
+   "control_type": "Number",
+   "sequence": 65,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "axle10mmSquarePin",
+   "label": "Axle 3/8 Inch 10mm Square Pin",
+   "control_type": "Number",
+   "sequence": 66,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "axleSquarePinCost",
+   "label": "Axle Square Pin Cost",
+   "control_type": "Number",
+   "sequence": 67,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "bushes",
+   "label": "Bushes",
+   "control_type": "Number",
+   "sequence": 69,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "bushCost",
+   "label": "Bush Cost",
+   "control_type": "Number",
+   "sequence": 70,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "axleRetainerArea",
+   "label": "Axle Retainer Area",
+   "control_type": "Number",
+   "sequence": 71,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "axleRetainerWeight",
+   "label": "Axle Retainer Weight",
+   "control_type": "Number",
+   "sequence": 72,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "axleRetainerCost",
+   "label": "Axle Retainer Cost",
+   "control_type": "Number",
+   "sequence": 73,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "manualQuadrant",
+   "label": "Manual Quadrant",
+   "control_type": "Number",
+   "sequence": 74,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "manualQuadrantCost",
+   "label": "Manual Quadrant Cost",
+   "control_type": "Number",
+   "sequence": 75,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Total Blade Assembly",
+   "field": "totalBladeAssembly",
+   "label": "Total Blade Assembly",
+   "control_type": "Number",
+   "sequence": 76,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Motor Holding",
+   "field": "motorHoldingPlateArea",
+   "label": "Motor Holding Plate Area",
+   "control_type": "Number",
+   "sequence": 77,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Motor Holding",
+   "field": "motorHoldingPlateWeight",
+   "label": "Motor Holding Plate Weight",
+   "control_type": "Number",
+   "sequence": 78,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Motor Holding",
+   "field": "motorHoldingPlateCost",
+   "label": "Motor Holding Plate Cost",
+   "control_type": "Number",
+   "sequence": 79,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "AMCA",
+   "field": "amcaLabelNumber",
+   "label": "AMCA Label Number",
+   "control_type": "Number",
+   "sequence": 80,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "AMCA",
+   "field": "amcaLabelCost",
+   "label": "AMCA Label Cost",
+   "control_type": "Number",
+   "sequence": 81,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalMaterialCostBeforeMotors",
+   "label": "Total Material Cost before Motors",
+   "control_type": "Number",
+   "sequence": 82,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuator",
+   "field": "actuatorModel",
+   "label": "Actuator Model",
+   "control_type": "Dropdown",
+   "sequence": 83,
+   "feature_types": [
+    "FT139"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "actuatorCost",
+   "label": "Actuator Cost",
+   "control_type": "Number",
+   "sequence": 84,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalMaterialCostWithMotors",
+   "label": "Total Material Cost with Motors",
+   "control_type": "Number",
+   "sequence": 85,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "damperProcessingMinutes",
+   "label": "Damper Processing Minutes",
+   "control_type": "Number",
+   "sequence": 86,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "transitionProcessingMinutes",
+   "label": "Transition Processing Minutes",
+   "control_type": "Number",
+   "sequence": 87,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "actuatorProcessingMinutes",
+   "label": "Actuator Processing Minutes",
+   "control_type": "Number",
+   "sequence": 88,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Processing Minutes",
+   "field": "totalProcessingMinutes",
+   "label": "Total Processing Minutes",
+   "control_type": "Number",
+   "sequence": 89,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalAssemblyCost",
+   "label": "Total Assembly Cost",
+   "control_type": "Number",
+   "sequence": 90,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "weldingCost",
+   "label": "Welding Cost",
+   "control_type": "Number",
+   "sequence": 91,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "overhead",
+   "label": "Overhead",
+   "control_type": "Number",
+   "sequence": 92,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalCost",
+   "label": "Total Cost",
+   "control_type": "Number",
+   "sequence": 93,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "listPrice",
+   "label": "List Price (Per Unit)",
+   "control_type": "Number",
+   "sequence": 94,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Actuator",
+   "field": "torque1",
+   "label": "Torque 1",
+   "control_type": "Dropdown",
+   "sequence": 95,
+   "feature_types": [
+    "FT138"
+   ]
+  },
+  {
+   "structure": "Actuator",
+   "field": "torque2",
+   "label": "Torque 2",
+   "control_type": "Dropdown",
+   "sequence": 96,
+   "feature_types": [
+    "FT138"
+   ]
+  },
+  {
+   "structure": "Actuator",
+   "field": "torque3",
+   "label": "Torque 3",
+   "control_type": "Dropdown",
+   "sequence": 97,
+   "feature_types": [
+    "FT138"
+   ]
+  },
+  {
+   "structure": "Actuator",
+   "field": "torque4",
+   "label": "Torque 4",
+   "control_type": "Dropdown",
+   "sequence": 98,
+   "feature_types": [
+    "FT138"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "productDescription",
+   "label": "Product Description",
+   "control_type": "Textbox",
+   "sequence": 99
+  }
+ ],
+ "lookups": [
+  {
+   "field": "isCartLocked",
+   "path": "cart.locked"
+  }
+ ],
+ "groups": [
+  {
+   "key": "Section Detail",
+   "label": "Section Detail",
+   "features": [
+    "actuatorModel",
+    "minDiameter",
+    "maxDiameter",
+    "actuatorUnique"
+   ],
+   "properties": "feature.label,featureTypeItem.value",
+   "show_summary": 0,
+   "sequence": 1
+  },
+  {
+   "key": "Cost",
+   "label": "Cost",
+   "features": [
+    "frameCost",
+    "bladeCost",
+    "frameAccessoriesCost",
+    "totalBladeAssembly",
+    "motorHoldingPlateCost",
+    "amcaLabelCost",
+    "totalMaterialCostBeforeMotors",
+    "actuatorCost",
+    "totalMaterialCostWithMotors",
+    "totalAssemblyCost",
+    "weldingCost",
+    "overhead",
+    "totalCost",
+    "listPrice"
+   ],
+   "properties": "feature.label,featureTypeItem.value",
+   "show_summary": 0,
+   "sequence": 2,
+   "template": "@if(ecomStore.userInfo().roles.indexOf(\"OneCPQ Admin\") != -1){\n    @if(bundleGroup(); as bg){\n                @if(toggleable()){    \n                <div class=\"pt-2\">\n                    <p-panel class=\"pt-2\" [collapsed]=\"collapsed()\" [toggleable]=\"toggleable()\" collapseIcon=\"pi pi-angle-left\"\n                        expandIcon=\"pi pi-angle-down\">\n                        <ng-template #header>\n                            <div class=\"flex align-items-center gap-2\">\n                                <span class=\"font-bold\">\n                                    {{bg.label}}\n                                </span>\n                            </div>\n                        </ng-template>\n                        @if(toggleable()){\n                        <ng-template #icons>\n                            <button\n                                class=\"p-0 p-ripple p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text p-panel-header-icon p-panel-toggler p-link\"\n                                (click)=\"setExpanded()\">\n                                <span [class]=\"'pi pi-angle-double-'+(collapsed() ? 'left':'down')\"></span>\n                            </button>\n                        </ng-template>\n                        }\n                        <ng-container *ngTemplateOutlet=\"table\"></ng-container>\n                    </p-panel>\n                </div>\n            }\n            @else {\n                <ng-container *ngTemplateOutlet=\"table\"></ng-container>\n            }\n            <ng-template #table>\n    @if(bundleGroup(); as bg){\n    @if(cartItemFeatureModels(); as cifs){\n    <p-table size=\"small\" styleClass=\"text-base \" paginatorDropdownAppendTo=\"body\"\n        [paginator]=\"cifs.length >5?true:false\" [rows]=\"10\" [rowsPerPageOptions]=\"[5,10,20,50,75,100]\" #dt\n        responsiveLayout=\"stack\" [value]=\"cifs\">\n\n        <ng-template #header>\n            <tr>\n                @for(property of bg.properties; track property){\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                <th\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    {{_.get(AppConst.bundleGroupColumns,property)?.label}}</th>\n                }\n            </tr>\n        </ng-template>\n        <ng-template #body let-item let-rowIndex=\"rowIndex\">\n            <tr class=\"bundleGroupTable\" (click)=\"navigate(item)\">\n                @for(property of bg.properties; track property){\n\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                @if(md?.editable && editable()) {\n                <td [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\"\n                    [pEditableColumn]=\"property\" [pEditableColumnField]=\"property\">\n                    <span class=\"p-column-title\">{{md.label}}</span>\n                    @if(property === 'unitPrice'){\n\n                    @let ftip = this.bundleGroupInterface()?.getPriceListDetail(item.featureTypeItem.id,'One Time');\n\n\n                    @if(ftip?.isMatrix){\n                    <span>\n\n                        <p-button (click)=\"handleToggleMatrix(item.featureTypeItem,$event)\" title=\"Matrix Detail\"\n                            styleClass=\"btb-rotate-45\" icon=\"pi pi-thumbtack\" [rounded]=\"true\" [text]=\"true\" />\n                        <btb-shared-matrix-price-detail [cartItemFeature]=\"item\"\n                            [headerTitle]=\"(ftip?.matrixType ?? '') +' pricing - '+item.featureTypeItem.value\"\n                            [items]=\"ftip?.entries\" [displayModal]=\"toggleViewModel()[item.featureTypeItem.id]\">\n                        </btb-shared-matrix-price-detail>\n                    </span>\n                    }\n                    }\n                    <p-cellEditor class=\"align-content-end\">\n                        <ng-template pTemplate=\"input\">\n                            @if(md.type === 'currency' || md.type === 'number'|| md.type === 'percentage') {\n                            <input pInputText type=\"number\" [(ngModel)]=\"item[property]\">\n                            }\n                        </ng-template>\n                        <ng-template pTemplate=\"output\">\n                            <span class=\"ref-link cursor-pointer\">\n                                {{getValue(item, property)}}\n                            </span>\n                        </ng-template>\n                    </p-cellEditor>\n                </td>    \n                \n                }\n                @else {\n                <td\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    <span class=\"p-column-title\">{{md?.label}}</span>\n                    {{getValue(item, property)}}\n                </td>\n                }\n                }\n            </tr>\n        </ng-template>\n        <ng-template #footer *ngIf=\"bg.showSummary\">\n            <tr>\n                @for(property of bg.properties; track property){\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                <td\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    @if (md?.showSummary) {\n                    {{_.get(summary(),property)}}\n                    }\n\n                </td>\n                }\n            </tr>\n        </ng-template>\n    </p-table>\n    }\n    }\n</ng-template>\n        }\n}"
+  }
+ ],
+ "constraints": [
+  {
+   "key": "IMC202176",
+   "label": null,
+   "parent": "1097",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(dampers) == 0)",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "dampers"
+     ],
+     "options": [
+      "Round Volume Control Dampers"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC225290",
+   "label": null,
+   "parent": null,
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "ISCHANGED(subcategory) && NOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameDepth"
+     ],
+     "expr": "IIF(\nCONTAINS(subcategory,'$[Round Double Skin Control Damper]'),\n250,\nIIF(CONTAINS(subcategory,'$[Round Balancing Damper]'),\n150,\nIIF(CONTAINS(subcategory,'$[Round Seal Stop Damper]'),\n200,\n0)\n)\n)"
+    },
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "operator"
+     ],
+     "options": [
+      "Quadrant"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "materialType",
+      "staticPressureClass",
+      "velocityRating",
+      "axleType"
+     ],
+     "options": [
+      "GI",
+      "2Inch w.c (500Pa)",
+      "1200 fpm (6m/s)",
+      "10mm Round Bar"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC254888",
+   "label": null,
+   "parent": "1097",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "NOT(CONTAINS(operator, '$[Motorized]'))\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Reset Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorBrand",
+      "actuatorType",
+      "actuatorMounting",
+      "actuatorControls",
+      "actuatorAuxSwitch",
+      "actuatorFeedback",
+      "actuatorPowerSupply"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC254889",
+   "label": null,
+   "parent": "1097",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "NOT(CONTAINS(actuatorControls, '$[Modulating]')\n&&\nCONTAINS(actuatorBrand, '$[Belimo]')\n&&\nCONTAINS(actuatorPowerSupply, '$[24V]')\n&&\n(\n( CONTAINS(actuatorType, '$[Spring Return]')\n&& CONTAINS(actuatorAuxSwitch, '$[w/o Aux]')\n)\n||\n( CONTAINS(actuatorType, '$[Fire & Smoke]','$[Spring Return]') ) )\n)\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Reset Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorFeedback"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC254890",
+   "label": null,
+   "parent": "1097",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "NOT(CONTAINS(operator,'$[Quadrant]'))",
+   "actions": [
+    {
+     "type": "Show Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleType"
+     ],
+     "options": [
+      "10mm Square Pin"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC304821",
+   "label": null,
+   "parent": "1097",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "REFERENCE(isCartLocked)",
+   "actions": [
+    {
+     "type": "Hide Bundle Property",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "save"
+     ]
+    },
+    {
+     "type": "Lock",
+     "sequence": 0,
+     "active": 1,
+     "result": 1
+    }
+   ]
+  },
+  {
+   "key": "IMC39212",
+   "label": null,
+   "parent": "1097",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(operator, '$[Motorized]')",
+   "actions": [
+    {
+     "type": "Show Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorAuxSwitch",
+      "actuatorBrand",
+      "actuatorControls",
+      "actuatorFeedback",
+      "actuatorMounting",
+      "actuatorPowerSupply",
+      "actuatorType"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "actuatorAuxSwitch",
+      "actuatorBrand",
+      "actuatorControls",
+      "actuatorFeedback",
+      "actuatorMounting",
+      "actuatorPowerSupply",
+      "actuatorType"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC39220",
+   "label": null,
+   "parent": "1097",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(actuatorControls, '$[Modulating]')\n&&\nCONTAINS(actuatorBrand, '$[Belimo]')\n&&\nCONTAINS(actuatorPowerSupply, '$[24V]')\n&&\n(\n(\nCONTAINS(actuatorType, '$[Spring Return]')\n&&\nCONTAINS(actuatorAuxSwitch, '$[w/o Aux]')\n)\n||\n(\nCONTAINS(actuatorType, '$[Fire & Smoke]','$[Spring Return]')\n)\n)",
+   "actions": [
+    {
+     "type": "Show Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorFeedback"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "actuatorFeedback"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC44089",
+   "label": null,
+   "parent": "1097",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(subcategory, '$[Round Balancing Damper]','$[Round Seal Stop Damper]')",
+   "actions": [
+    {
+     "type": "Show Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "bladeSeal"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSeal"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC44198",
+   "label": null,
+   "parent": null,
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(NUMBER(diameter) == 0)\n||\nISNULLORBLANK(diameter)",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "listPrice",
+      "totalCost"
+     ],
+     "expr": "0"
+    },
+    {
+     "type": "Change Value Price",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "dampers"
+     ],
+     "options": [
+      "Round Volume Control Dampers"
+     ],
+     "expr": "0"
+    }
+   ]
+  },
+  {
+   "key": "IMC6626912",
+   "label": null,
+   "parent": "1097",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(NUMBER(listPrice) >0) || (NUMBER(listPrice) ==0)",
+   "actions": [
+    {
+     "type": "Change Value Price",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "dampers"
+     ],
+     "options": [
+      "Round Volume Control Dampers"
+     ],
+     "expr": "NUMBER(listPrice)"
+    }
+   ]
+  },
+  {
+   "key": "IMC82497",
+   "label": null,
+   "parent": "1097",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "((NUMBER(actuatorCost)==0) || ISNULLORBLANK(actuatorCost)) && CONTAINS(operator, '$[Motorized]')",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "'Actuator cost not found for the given actuator input.'"
+    }
+   ]
+  },
+  {
+   "key": "1100",
+   "label": null,
+   "parent": null,
+   "sequence": 1,
+   "active": 1,
+   "result": 0,
+   "when": "LOADDEFAULTS()",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "dampers"
+     ],
+     "options": [
+      "Round Volume Control Dampers"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleType",
+      "materialType",
+      "staticPressureClass",
+      "velocityRating"
+     ],
+     "options": [
+      "10mm Round Bar",
+      "1200 fpm (6m/s)",
+      "2Inch w.c (500Pa)",
+      "GI"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1102",
+   "label": null,
+   "parent": "1097",
+   "sequence": 1,
+   "active": 1,
+   "result": 1,
+   "when": "(NUMBER(diameter) < NUMBER(minDiameter)) || (NUMBER(diameter) > NUMBER(maxDiameter))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Diameter exceeds the limit'"
+    }
+   ]
+  },
+  {
+   "key": "1097",
+   "label": "Default Disabled fields",
+   "parent": null,
+   "sequence": 2,
+   "active": 1,
+   "result": 0,
+   "when": "true",
+   "actions": [
+    {
+     "type": "Hide Bundle Property",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "basePrice",
+      "search",
+      "return"
+     ]
+    },
+    {
+     "type": "Lock Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelItem",
+      "subcategory",
+      "modelNoDescription",
+      "countryWiseCost",
+      "materialType",
+      "staticPressureClass",
+      "velocityRating",
+      "frameThickness",
+      "unique",
+      "bladeSkinThickness",
+      "frameClosure",
+      "axleType",
+      "axleBearing",
+      "bladeSeal",
+      "amcaLabel",
+      "operator",
+      "actuatorBrand",
+      "actuatorType",
+      "actuatorMounting",
+      "actuatorControls",
+      "actuatorAuxSwitch",
+      "actuatorFeedback",
+      "actuatorPowerSupply",
+      "barCost",
+      "bushCostLookup",
+      "quadrantCostLookup",
+      "dampers",
+      "actuatorShortUnique",
+      "actuatorUnique",
+      "actuatorModel",
+      "torque1",
+      "torque2",
+      "torque3",
+      "torque4"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "flowCorrectionFactor",
+      "damperArea",
+      "actuatorShortUnique",
+      "torque1Area",
+      "torque2Area",
+      "torque3Area",
+      "torque4Area",
+      "torque1NoOfAct",
+      "torque2NoOfAct",
+      "torque3NoOfAct",
+      "torque4NoOfAct",
+      "actuatorUnique",
+      "noOfActuators",
+      "actuatorModel",
+      "torque1",
+      "torque2",
+      "torque3",
+      "torque4"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameThicknessLookup",
+      "frameArea",
+      "frameWeight",
+      "frameCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeThickness",
+      "bladeArea",
+      "bladeWeight",
+      "bladeCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameGasket",
+      "frameGasketCost",
+      "standardBracket",
+      "standardBracketCost",
+      "frameAccessoriesCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSealArea",
+      "bladeSealCost",
+      "axleRoundBar",
+      "axleRoundBarCost",
+      "axle10mmSquarePin",
+      "axleSquarePinCost",
+      "bushes",
+      "bushCost",
+      "axleRetainerArea",
+      "axleRetainerWeight",
+      "axleRetainerCost",
+      "manualQuadrant",
+      "manualQuadrantCost",
+      "totalBladeAssembly"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "motorHoldingPlateArea",
+      "motorHoldingPlateWeight",
+      "motorHoldingPlateCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "amcaLabelCost",
+      "amcaLabelNumber"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "damperProcessingMinutes",
+      "transitionProcessingMinutes",
+      "actuatorProcessingMinutes",
+      "totalProcessingMinutes"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalMaterialCostBeforeMotors",
+      "actuatorCost",
+      "totalMaterialCostWithMotors",
+      "totalAssemblyCost",
+      "weldingCost",
+      "overhead",
+      "totalCost",
+      "listPrice"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelItem",
+      "countryWiseCost",
+      "minDiameter",
+      "maxDiameter",
+      "unique",
+      "category",
+      "modelDescription",
+      "barCost",
+      "materialCost",
+      "bushCostLookup",
+      "materialDensity",
+      "quadrantCostLookup",
+      "dampers",
+      "productDescription"
+     ]
+    },
+    {
+     "type": "Disable Bundle Property",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "title"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeTypeLookup",
+      "frameStandoff",
+      "modelNo",
+      "subCategoryCode",
+      "quadrantOption"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelNo",
+      "modelNoDescription"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1107",
+   "label": null,
+   "parent": null,
+   "sequence": 2,
+   "active": 1,
+   "result": 0,
+   "when": "ISCHANGED(subcategory) && NOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameClosure"
+     ],
+     "expr": "IIF(\nCONTAINS(subcategory,'$[Round Double Skin Control Damper]'),\n'Spot Welded',\n'Clinch'\n)"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 4,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSeal"
+     ],
+     "expr": "IIF( CONTAINS(subcategory,'$[Round Double Skin Control Damper]'), 'Silicone Standard', 'None' )"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 5,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleBearing"
+     ],
+     "expr": "IIF( CONTAINS(subcategory,'$[Round Double Skin Control Damper]'), 'Bronze Oilite', 'Nylon 6/6' )"
+    }
+   ]
+  },
+  {
+   "key": "1103",
+   "label": null,
+   "parent": "1097",
+   "sequence": 3,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(subcategory) == 0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select Sub-Category Option.'"
+    }
+   ]
+  },
+  {
+   "key": "1098",
+   "label": null,
+   "parent": null,
+   "sequence": 4,
+   "active": 1,
+   "result": 0,
+   "when": "COUNT(subcategory) > 0",
+   "actions": [
+    {
+     "type": "Include Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelItem"
+     ],
+     "expr": "TEXT(modelNo)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "subCategoryCode"
+     ],
+     "expr": "IIF(CONTAINS(subcategory,'$[Round Balancing Damper]'),'RBD',IIF(CONTAINS(subcategory,'$[Round Seal Stop Damper]'),'RSD',IIF(CONTAINS(subcategory,'$[Round Double Skin Control Damper]'),'RDS','')))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelNo"
+     ],
+     "expr": "IIF(CONTAINS(subcategory,'$[Round Balancing Damper]'),'ED',IIF(CONTAINS(subcategory,'$[Round Seal Stop Damper]'),'RD',IIF(CONTAINS(subcategory,'$[Round Double Skin Control Damper]'),'RI','')))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelNoDescription"
+     ],
+     "expr": "CONCAT(TEXT(modelNo),' - ',SELECTEDVALUE(subcategory))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 4,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeTypeLookup"
+     ],
+     "expr": "IIF(CONTAINS(subcategory,'$[Round Double Skin Control Damper]'),'Double Skin','Single Skin')"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 5,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "minDiameter"
+     ],
+     "expr": "IIF(CONTAINS(subcategory,'$[Round Double Skin Control Damper]'),150,100)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 6,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "maxDiameter"
+     ],
+     "expr": "IIF(CONTAINS(subcategory,'$[Round Double Skin Control Damper]'),1220,IIF(CONTAINS(subcategory,'$[Round Seal Stop Damper]'),910,610))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 7,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameStandoff"
+     ],
+     "expr": "IIF(CONTAINS(subcategory,'$[Round Seal Stop Damper]'),'Neoprene','Bracket')"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 8,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelDescription"
+     ],
+     "expr": "CONCAT(TEXT(modelNo),' - ',SELECTEDVALUE(subcategory))"
+    }
+   ]
+  },
+  {
+   "key": "1104",
+   "label": null,
+   "parent": "1097",
+   "sequence": 5,
+   "active": 1,
+   "result": 1,
+   "when": "COUNT(modelNoDescription)==0",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select a Model.'"
+    }
+   ]
+  },
+  {
+   "key": "1106",
+   "label": null,
+   "parent": "1097",
+   "sequence": 5,
+   "active": 1,
+   "result": 1,
+   "when": "((NUMBER(frameDepth) < 200) || (NUMBER(frameDepth) > 1250)) && CONTAINS(subcategory,'$[Round Double Skin Control Damper]')",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Frame Depth not in the limit between 200 and 1250'"
+    }
+   ]
+  },
+  {
+   "key": "1109",
+   "label": null,
+   "parent": null,
+   "sequence": 5,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(subcategory,'$[Round Double Skin Control Damper]') \n&& (CONTAINS(velocityRating,'$[3000 fpm (15m/s)]','$[4000 fpm (20m/s)]') \n|| CONTAINS(staticPressureClass,'$[6Inch w.c (1500Pa)]'))",
+   "actions": [
+    {
+     "type": "Disable Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameClosure"
+     ]
+    },
+    {
+     "type": "Enable Field",
+     "sequence": 2,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "frameClosure"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameClosure"
+     ],
+     "options": [
+      "Fully Welded"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1105",
+   "label": null,
+   "parent": "1097",
+   "sequence": 6,
+   "active": 1,
+   "result": 1,
+   "when": "((NUMBER(frameDepth) < 150) || (NUMBER(frameDepth) > NUMBER(diameter)) && CONTAINS(subcategory,'$[Round Balancing Damper]','$[Round Seal Stop Damper]')",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 0,
+     "result": 1,
+     "expr": "'Frame Depth not in the limit between 150 and diameter'"
+    }
+   ]
+  },
+  {
+   "key": "1108",
+   "label": null,
+   "parent": "1097",
+   "sequence": 6,
+   "active": 1,
+   "result": 1,
+   "when": "CFLOAT(SELECTEDVALUE(frameThickness))<CFLOAT(OBJECTATTRIBUTEF(unique,'min_frame_thickness'))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "CONCAT('Frame Thickness Must be greater than minimum Frame thickness(',OBJECTATTRIBUTEF(unique,'min_frame_thickness'),')')"
+    }
+   ]
+  },
+  {
+   "key": "1113",
+   "label": null,
+   "parent": null,
+   "sequence": 6,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(subcategory,'$[Round Double Skin Control Damper]') \n&& \n(CONTAINS(staticPressureClass,'$[4Inch w.c. (1000Pa)]','$[6Inch w.c (1500Pa)]') || CONTAINS(velocityRating,'$[2400 fpm (12m/s)]','$[3000 fpm (15m/s)]','$[4000 fpm (20m/s)]'))",
+   "actions": [
+    {
+     "type": "Hide Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorMounting"
+     ],
+     "options": [
+      "Internal"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorMounting"
+     ],
+     "options": [
+      "External"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorMounting"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1112",
+   "label": null,
+   "parent": null,
+   "sequence": 7,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(operator,'$[Motorized]') && ISCHANGED(operator)\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorAuxSwitch",
+      "actuatorBrand",
+      "actuatorControls",
+      "actuatorMounting",
+      "actuatorPowerSupply",
+      "actuatorType"
+     ],
+     "options": [
+      "100V-240V",
+      "2 Aux",
+      "Siemens",
+      "External",
+      "Non Spring Return",
+      "On/Off + Floating"
+     ]
+    },
+    {
+     "type": "Hide Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleType"
+     ],
+     "options": [
+      "10mm Square Pin"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1114",
+   "label": null,
+   "parent": "1097",
+   "sequence": 7,
+   "active": 1,
+   "result": 1,
+   "when": "(NUMBER(damperArea) > NUMBER(torque1Area))\n&&\n(NUMBER(damperArea) > NUMBER(torque2Area))\n&&\n(NUMBER(damperArea) > NUMBER(torque3Area))\n&&\n(NUMBER(damperArea) > NUMBER(torque4Area))\n&&\n(CONTAINS(operator,'$[Motorized]'))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Select different Actuator Specs'"
+    }
+   ]
+  },
+  {
+   "key": "1110",
+   "label": "n",
+   "parent": "1097",
+   "sequence": 9,
+   "active": 1,
+   "result": 1,
+   "when": "NOT(CONTAINS(operator,'$[Quadrant]'))\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Hide Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "quadrantOption"
+     ]
+    },
+    {
+     "type": "Change Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "quadrantOption"
+     ],
+     "expr": "'NA'"
+    }
+   ]
+  },
+  {
+   "key": "1099",
+   "label": null,
+   "parent": null,
+   "sequence": 10,
+   "active": 1,
+   "result": 0,
+   "when": "(NUMBER(diameter)>0 && COUNT(subcategory) > 0 )|| (\tISCHANGED(actuatorBrand) || ISCHANGED(actuatorType) || ISCHANGED(actuatorControls) || ISCHANGED(actuatorAuxSwitch) || ISCHANGED(actuatorPowerSupply) || ISCHANGED(actuatorFeedback))",
+   "actions": [
+    {
+     "type": "Reset Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorModel",
+      "actuatorShortUnique",
+      "actuatorUnique",
+      "barCost",
+      "bushCostLookup",
+      "quadrantCostLookup",
+      "torque1",
+      "torque2",
+      "torque3",
+      "torque4",
+      "unique"
+     ]
+    },
+    {
+     "type": "Change Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "category"
+     ],
+     "expr": "IIF((NUMBER(diameter)<=254),'100-254',IIF((NUMBER(diameter)<=356),'255-356',IIF((NUMBER(diameter)<=508),'357-508',CONCAT('509-',NUMBER(maxDiameter)))))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "quadrantOption"
+     ],
+     "expr": "IIF(\n((COUNT(axleType)>0) && CONTAINS(operator, '$[Quadrant]')),\nEVALUATE('return input.arg1.split(\" \")[0]',\nSELECTEDVALUE(axleType)),\n'NA')\n"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 4,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "materialCost"
+     ],
+     "expr": "CFLOAT(\nIIF(\nCONTAINS(materialType,'$[SS304L]'),\nOBJECTATTRIBUTEV(countryWiseCost,'$[SS304L]','cost'),\nIIF(CONTAINS(materialType,'$[SS316L]'),\nOBJECTATTRIBUTEV(countryWiseCost,'$[SS316L]','cost'),\nOBJECTATTRIBUTEV(countryWiseCost,'$[GI]','cost')\n)\n)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 5,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "materialDensity"
+     ],
+     "expr": "IIF(CONTAINS(materialType, '$[AL]','$[EAL]'),\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[AL/EALDensityFactor]','cost')),\nIIF(CONTAINS(materialType, '$[SS304L]','$[SS316L]'),\n     CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Density Factor]','cost')),\n     CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI Density Factor]','cost'))\n ))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 6,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "flowCorrectionFactor"
+     ],
+     "expr": "IIF(\nCONTAINS(operator,'$[Quadrant]'),\n1,\nEVALUATE('\nvar staticPre = input.arg1;\nvar velocity = input.arg2;\nvar staticOut=0;\nif(staticPre.indexOf(\"2Inch\")!=-1) staticOut = 1;\nif(staticPre.indexOf(\"4Inch\")!=-1)  staticOut = 1.35;\nif(staticPre.indexOf(\"6Inch\")!=-1) staticOut = 1.45;\n\nvar valocityOut=0;\nif(velocity.indexOf(\"1200\")!=-1)  valocityOut = 1;\nif(velocity.indexOf(\"2400\")!=-1)  valocityOut = 1.25;\nif(velocity.indexOf(\"3000\")!=-1)  valocityOut = 1.35;\nif(velocity.indexOf(\"4000\")!=-1) valocityOut = 1.45;\nreturn Math.max(staticOut,valocityOut);\n',\nSELECTEDVALUE(staticPressureClass),\nSELECTEDVALUE(velocityRating)\n)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 7,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "damperArea"
+     ],
+     "expr": "3.14*(NUMBER(diameter)*NUMBER(diameter))/(4*1000000)*NUMBER(flowCorrectionFactor)"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 8,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorShortUnique"
+     ],
+     "expr": "CONCAT(SELECTEDVALUE(actuatorBrand),SELECTEDVALUE(actuatorType),SELECTEDVALUE(actuatorControls),\nSELECTEDVALUE(actuatorAuxSwitch),\nIIF(CONTAINS(actuatorControls, '$[Modulating]'),SELECTEDVALUE(actuatorFeedback),''),SELECTEDVALUE(actuatorPowerSupply))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 9,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "torque1"
+     ],
+     "expr": "CONCAT(SELECTEDVALUE(actuatorShortUnique),OBJECTATTRIBUTEF(actuatorShortUnique,'torque1'))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 10,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "torque2"
+     ],
+     "expr": "CONCAT(SELECTEDVALUE(actuatorShortUnique),OBJECTATTRIBUTEF(actuatorShortUnique,'torque2'))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 11,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "torque3"
+     ],
+     "expr": "CONCAT(SELECTEDVALUE(actuatorShortUnique),OBJECTATTRIBUTEF(actuatorShortUnique,'torque3'))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 12,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "torque4"
+     ],
+     "expr": "CONCAT(SELECTEDVALUE(actuatorShortUnique),OBJECTATTRIBUTEF(actuatorShortUnique,'torque4'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 13,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "torque1Area"
+     ],
+     "expr": "IIF((COUNT(torque1) >0),\nCFLOAT(\n    OBJECTATTRIBUTEF(\n        torque1,IIF(CONTAINS(bladeSeal,'$[None]'),'none','silicone')\n        )\n    )\n,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 14,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "torque2Area"
+     ],
+     "expr": "IIF((COUNT(torque2) >0),\nCFLOAT(\n    OBJECTATTRIBUTEF(\n        torque2,IIF(CONTAINS(bladeSeal,'$[None]'),'none','silicone')\n        )\n    )\n,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 15,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "torque3Area"
+     ],
+     "expr": "\tIIF((COUNT(torque3) >0), CFLOAT( OBJECTATTRIBUTEF( torque3,IIF(CONTAINS(bladeSeal,'$[None]'),'none','silicone') ) ) ,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 16,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "torque4Area"
+     ],
+     "expr": "\tIIF((COUNT(torque4) >0), CFLOAT( OBJECTATTRIBUTEF( torque4,IIF(CONTAINS(bladeSeal,'$[None]'),'none','silicone') ) ) ,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 17,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "torque1NoOfAct"
+     ],
+     "expr": "IIF(((NUMBER(damperArea)>0) && (NUMBER(damperArea)<=NUMBER(torque1Area))),1,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 18,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "torque2NoOfAct"
+     ],
+     "expr": "IIF(((NUMBER(damperArea)>NUMBER(torque1Area)) && (NUMBER(damperArea)<=NUMBER(torque2Area))),1,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 19,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "torque3NoOfAct"
+     ],
+     "expr": "IIF(((NUMBER(damperArea)>NUMBER(torque2Area)) && (NUMBER(damperArea)<=NUMBER(torque3Area))),1,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 20,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "torque4NoOfAct"
+     ],
+     "expr": "IIF(((NUMBER(damperArea)>NUMBER(torque3Area)) && (NUMBER(damperArea)<=NUMBER(torque4Area))),1,0)"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 21,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorUnique"
+     ],
+     "expr": "IIF( (NUMBER(torque1NoOfAct)+NUMBER(torque2NoOfAct)+NUMBER(torque3NoOfAct)+NUMBER(torque4NoOfAct) >0 ), IIF(NUMBER(torque1NoOfAct)>0,SELECTEDVALUE(torque1),IIF(NUMBER(torque2NoOfAct)>0,SELECTEDVALUE(torque2),IIF(NUMBER(torque3NoOfAct)>0,SELECTEDVALUE(torque3),IIF(NUMBER(torque4NoOfAct)>0,SELECTEDVALUE(torque4),'')))) , '' )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 22,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "noOfActuators"
+     ],
+     "expr": "IIF(CONTAINS(operator,'$[Motorized]'),1,0)"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 23,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "unique"
+     ],
+     "expr": "CONCAT(TEXT(modelNo),SELECTEDVALUE(staticPressureClass),SELECTEDVALUE(velocityRating),TEXT(category))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 24,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameThicknessLookup"
+     ],
+     "expr": "EVALUATE('return Math.max(input.arg1,input.arg2);',IIF((COUNT(frameThickness) > 0), CFLOAT(SELECTEDVALUE(frameThickness)),0),CFLOAT(OBJECTATTRIBUTEF(unique,'min_frame_thickness')))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 25,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeThickness"
+     ],
+     "expr": "EVALUATE('\nvar inpThickness = input.arg1;\nvar seleThickness = 0;\nif(inpThickness != \"\") seleThickness = parseFloat(inpThickness.split(\" \")[0]);\nreturn Math.max(seleThickness,input.arg2);\n',\nIIF((COUNT(bladeSkinThickness)>0),SELECTEDVALUE(bladeSkinThickness),''),\nCFLOAT(OBJECTATTRIBUTEF(unique,'min_blade_thickness'))\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 26,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameArea"
+     ],
+     "expr": "((NUMBER(diameter)*3.14)+20)*(NUMBER(frameDepth))/1000000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 27,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameWeight"
+     ],
+     "expr": "NUMBER(frameThicknessLookup)*NUMBER(frameArea)*NUMBER(materialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 28,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameCost"
+     ],
+     "expr": "NUMBER(frameWeight)*NUMBER(materialCost)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Frame Wastage (VCDR)]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 29,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeArea"
+     ],
+     "expr": "IIF((TEXT(bladeTypeLookup)=='Single Skin'),\n((NUMBER(diameter) - 5)*(NUMBER(diameter) - 5))*3.14/4/1000000,\n((NUMBER(diameter) - 5)*(NUMBER(diameter) - 5))*3.14*2/4/1000000)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 30,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeWeight"
+     ],
+     "expr": "NUMBER(bladeThickness)*NUMBER(bladeArea)*NUMBER(materialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 31,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeCost"
+     ],
+     "expr": "NUMBER(bladeWeight)\n*\nNUMBER(materialCost)\n*\n(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Blade Wastage (VCDR)]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 32,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameGasket"
+     ],
+     "expr": "IIF((TEXT(frameStandoff)=='Bracket'),0,3.14*((NUMBER(diameter)*NUMBER(diameter))/1000000)/4)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 33,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameGasketCost"
+     ],
+     "expr": "NUMBER(frameGasket)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Frame Gasket]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 34,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "standardBracket"
+     ],
+     "expr": "IIF((TEXT(frameStandoff)=='Bracket'),1,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 35,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "standardBracketCost"
+     ],
+     "expr": "NUMBER(standardBracket)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Bracket Cost]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 36,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameAccessoriesCost"
+     ],
+     "expr": "NUMBER(frameGasketCost)+NUMBER(standardBracketCost)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 37,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSealArea"
+     ],
+     "expr": "IIF((TEXT(bladeTypeLookup)=='Double Skin'),3.14*NUMBER(diameter)/1000,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 38,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeSealCost"
+     ],
+     "expr": "NUMBER(bladeSealArea)*IIF(CONTAINS(bladeSeal,'$[Silicone Standard]'),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Blade Seal Standard]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[UL FNST Blade Seal - High Temperature]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 39,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleRoundBar"
+     ],
+     "expr": "IIF(CONTAINS(axleType,'$[10mm Square Pin]'),0,IIF(CONTAINS(operator,'$[Quadrant]'),(NUMBER(diameter)+75),(NUMBER(diameter)+150)))/1000"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 40,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "barCost"
+     ],
+     "expr": "CONCAT(SELECTEDVALUE(materialType),' ',SELECTEDVALUE(axleType))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 41,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleRoundBarCost"
+     ],
+     "expr": "IIF(CONTAINS(axleType,'$[10mm Square Pin]'),0,NUMBER(axleRoundBar)*CFLOAT(OBJECTATTRIBUTEF(barCost,'cost')))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 42,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axle10mmSquarePin"
+     ],
+     "expr": "IIF(CONTAINS(axleType,'$[10mm Square Pin]'),2,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 43,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleSquarePinCost"
+     ],
+     "expr": "IIF(CONTAINS(axleType,'$[10mm Square Pin]'),(NUMBER(axle10mmSquarePin)*CFLOAT(OBJECTATTRIBUTEF(barCost,'cost'))),0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 44,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bushes"
+     ],
+     "expr": "2"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 45,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bushCostLookup"
+     ],
+     "expr": "CONCAT(SELECTEDVALUE(axleBearing),' ',SELECTEDVALUE(axleType),' Bush')"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 46,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bushCost"
+     ],
+     "expr": "NUMBER(bushes)*CFLOAT(OBJECTATTRIBUTEF(bushCostLookup,'cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 47,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleRetainerArea"
+     ],
+     "expr": "NUMBER(diameter)*75/1000000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 48,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleRetainerWeight"
+     ],
+     "expr": "1.2*NUMBER(axleRetainerArea)*NUMBER(materialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 49,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "axleRetainerCost"
+     ],
+     "expr": "NUMBER(axleRetainerWeight)*NUMBER(materialCost)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 50,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "manualQuadrant"
+     ],
+     "expr": "IIF(CONTAINS(operator,'$[Quadrant]'),1,0)"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 51,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "quadrantCostLookup"
+     ],
+     "expr": "CONCAT(TEXT(quadrantOption),' Quadrant')"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 52,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "manualQuadrantCost"
+     ],
+     "expr": "IIF(CONTAINS(operator,'$[Quadrant]'),(NUMBER(manualQuadrant)*CFLOAT(OBJECTATTRIBUTEF(quadrantCostLookup,'cost'))),0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 53,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalBladeAssembly"
+     ],
+     "expr": "NUMBER(bladeSealCost)\n+\nNUMBER(axleRoundBarCost)\n+\nNUMBER(axleSquarePinCost)\n+\nNUMBER(bushCost)\n+\nNUMBER(axleRetainerCost)\n+\nNUMBER(manualQuadrantCost)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 54,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "motorHoldingPlateArea"
+     ],
+     "expr": "125*150/1000000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 55,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "motorHoldingPlateWeight"
+     ],
+     "expr": "1.2*NUMBER(motorHoldingPlateArea)*NUMBER(materialDensity)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 56,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "motorHoldingPlateCost"
+     ],
+     "expr": "NUMBER(motorHoldingPlateWeight)*NUMBER(materialCost)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 57,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "amcaLabelNumber"
+     ],
+     "expr": "IIF(CONTAINS(amcaLabel,'$[Yes]'),1,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 58,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "amcaLabelCost"
+     ],
+     "expr": "NUMBER(amcaLabelNumber)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[AMCA Label]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 59,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalMaterialCostBeforeMotors"
+     ],
+     "expr": "NUMBER(frameCost)\n+\nNUMBER(bladeCost)\n+\nNUMBER(frameAccessoriesCost)\n+\nNUMBER(totalBladeAssembly)\n+\nNUMBER(motorHoldingPlateCost)\n+\nNUMBER(amcaLabelCost)"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 60,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorModel"
+     ],
+     "expr": "IIF(CONTAINS(operator,'$[Quadrant]'),'',\nCONCAT( OBJECTATTRIBUTEF(actuatorUnique,'erp_itemode'), '-', OBJECTATTRIBUTEF(actuatorUnique,'model_name') )\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 61,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorCost"
+     ],
+     "expr": "IIF((COUNT(actuatorModel) >0),CFLOAT(OBJECTATTRIBUTEF(actuatorModel,'cost')),0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 62,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalMaterialCostWithMotors"
+     ],
+     "expr": "NUMBER(totalMaterialCostBeforeMotors)\n+\nNUMBER(actuatorCost)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 63,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "damperProcessingMinutes"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Damper Processing Minutes (VCDR)]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 65,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorProcessingMinutes"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Actuator Installation Minutes per Actuator (VCDR)]','cost'))\n*\nNUMBER(noOfActuators)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 66,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalProcessingMinutes"
+     ],
+     "expr": "NUMBER(damperProcessingMinutes)\n+\n\nNUMBER(actuatorProcessingMinutes)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 67,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalAssemblyCost"
+     ],
+     "expr": "(NUMBER(totalProcessingMinutes)/60)*\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Cost per Hour (VCDR)]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 68,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "weldingCost"
+     ],
+     "expr": "IIF(CONTAINS(frameClosure,'$[Fully Welded]'),\n(NUMBER(frameDepth)/1000*IIF(CONTAINS(materialType,'$[GI]'),\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI Welding Cost]','cost'))\n,\nIIF(CONTAINS(materialType,'$[AL]'),\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[AL Welding Cost (VCDR)]','cost')),\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Welding Cost (VCDR)]','cost'))\n)))\n,\n0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 69,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "overhead"
+     ],
+     "expr": "((NUMBER(totalMaterialCostBeforeMotors)+NUMBER(totalAssemblyCost)+NUMBER(weldingCost))\n*\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Overhead Percentage (VCDR)]','cost'))\n)\n+\n(NUMBER(actuatorCost)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Overhead Percentage on Actuator (VCDR)]','cost'))\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 70,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalCost"
+     ],
+     "expr": "NUMBER(totalMaterialCostWithMotors)\n+\nNUMBER(totalAssemblyCost)\n+\nNUMBER(overhead)\n+\nNUMBER(weldingCost)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 71,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "listPrice"
+     ],
+     "expr": "EVALUATE(\n'return Math.ceil(input.arg1);'\n,\nNUMBER(totalCost)/(1-CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Profit (VCDR)]','cost')))\n)"
+    },
+    {
+     "type": "Change Value Price",
+     "sequence": 72,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "dampers"
+     ],
+     "options": [
+      "Round Volume Control Dampers"
+     ],
+     "expr": "NUMBER(listPrice)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 73,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "productDescription"
+     ],
+     "expr": "IIF(CONTAINS(operator,'$[Motorized]'),\nCONCAT('D:',NUMBER(diameter),' ',SELECTEDVALUE(modelNoDescription),' ',SELECTEDVALUE(actuatorBrand),' ',SELECTEDVALUE(actuatorPowerSupply),' ',SELECTEDVALUE(actuatorAuxSwitch)),\nCONCAT('D:',NUMBER(diameter),' ',SELECTEDVALUE(modelNoDescription)))"
+    },
+    {
+     "type": "Change Bundle Title",
+     "sequence": 74,
+     "active": 1,
+     "result": 1,
+     "expr": "CONCAT(\n    IIF((NUMBER(diameter) > 0), CONCAT( 'D:' , NUMBER(diameter)) , ''),\n    IIF((NUMBER(frameDepth) > 0), CONCAT( ' L:' , NUMBER(frameDepth)) , ''),\n    IIF((COUNT(materialType) > 0), CONCAT( ' - ' ,SELECTEDVALUE(materialType)) , ''),\n    ' ',\n    TEXT(modelNo),\n    IIF(CONTAINS(operator, '$[Motorized]'),' Motorized',''),\n    ' Round Volume Control Damper'\n)"
+    }
+   ]
+  },
+  {
+   "key": "1101",
+   "label": null,
+   "parent": null,
+   "sequence": 11,
+   "active": 1,
+   "result": 0,
+   "when": "EVALUATE(' var roles = input.arg1.split(\",\"); if(roles.indexOf(\"OneCPQ Admin\") != -1) return false; return true; ',USERINFO('roles'))",
+   "actions": [
+    {
+     "type": "Show List View",
+     "sequence": 1,
+     "active": 1,
+     "result": 1
+    },
+    {
+     "type": "Hide Structure",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "@structure:Actuator",
+      "@structure:Frame",
+      "@structure:Blade",
+      "@structure:Frame Accessories",
+      "@structure:Total Blade Assembly",
+      "@structure:Motor Holding",
+      "@structure:AMCA",
+      "@structure:Processing Minutes",
+      "@structure:Cost",
+      "@structure:Factors"
+     ]
+    },
+    {
+     "type": "Hide Group",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "@group:Cost"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1111",
+   "label": "Hide ",
+   "parent": "",
+   "sequence": 12,
+   "active": 0,
+   "result": 0,
+   "when": "CONTAINS(operator, '$[Motorized]')",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "'Hi'"
+    },
+    {
+     "type": "Show Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "actuatorAuxSwitch",
+      "actuatorBrand",
+      "actuatorControls",
+      "actuatorFeedback",
+      "actuatorMounting",
+      "actuatorPowerSupply",
+      "actuatorType"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 2,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "actuatorAuxSwitch",
+      "actuatorBrand",
+      "actuatorControls",
+      "actuatorFeedback",
+      "actuatorMounting",
+      "actuatorPowerSupply",
+      "actuatorType"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 3,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "actuatorBrand"
+     ],
+     "options": [
+      "NA"
+     ]
+    }
+   ]
+  }
+ ],
+ "mappings": [
+  {
+   "key": "120",
+   "mode": "feature_type",
+   "left": "FT53",
+   "right": "FT132",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "Siemens",
+     "Non Spring Return"
+    ],
+    [
+     "Honeywell",
+     "Fire & Smoke"
+    ],
+    [
+     "Belimo",
+     "Fire & Smoke"
+    ],
+    [
+     "Belimo",
+     "Non Spring Return"
+    ],
+    [
+     "Belimo",
+     "Spring Return"
+    ]
+   ]
+  },
+  {
+   "key": "121",
+   "mode": "feature_type",
+   "left": "FT132",
+   "right": "FT133",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "Fire & Smoke",
+     "Modulating"
+    ],
+    [
+     "Fire & Smoke",
+     "On/Off"
+    ],
+    [
+     "Spring Return",
+     "Modulating"
+    ],
+    [
+     "Spring Return",
+     "On/Off"
+    ],
+    [
+     "Non Spring Return",
+     "On/Off + Floating"
+    ]
+   ]
+  },
+  {
+   "key": "122",
+   "mode": "feature_type",
+   "left": "FT132",
+   "right": "FT56",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "Fire & Smoke",
+     "2 Aux"
+    ],
+    [
+     "Non Spring Return",
+     "2 Aux"
+    ],
+    [
+     "Fire & Smoke",
+     "w/o Aux"
+    ],
+    [
+     "Non Spring Return",
+     "w/o Aux"
+    ],
+    [
+     "Spring Return",
+     "w/o Aux"
+    ]
+   ]
+  },
+  {
+   "key": "123",
+   "mode": "feature_type",
+   "left": "FT133",
+   "right": "FT134",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "Modulating",
+     "2-10V"
+    ]
+   ]
+  },
+  {
+   "key": "124",
+   "mode": "feature_type",
+   "left": "FT53",
+   "right": "FT135",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "Belimo",
+     "230V"
+    ],
+    [
+     "Belimo",
+     "24V"
+    ],
+    [
+     "Honeywell",
+     "230V"
+    ],
+    [
+     "Honeywell",
+     "24V"
+    ],
+    [
+     "Siemens",
+     "100V-240V"
+    ]
+   ]
+  },
+  {
+   "key": "125",
+   "mode": "feature",
+   "left": "modelNoDescription",
+   "right": "materialType",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "RI - Round Double Skin Control Damper",
+     "GI"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "SS304L"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "SS316L"
+    ],
+    [
+     "ED - Round Balancing Damper",
+     "AL"
+    ],
+    [
+     "ED - Round Balancing Damper",
+     "GI"
+    ],
+    [
+     "ED - Round Balancing Damper",
+     "SS304L"
+    ],
+    [
+     "ED - Round Balancing Damper",
+     "SS316L"
+    ],
+    [
+     "RD - Round Seal Stop Damper",
+     "AL"
+    ],
+    [
+     "RD - Round Seal Stop Damper",
+     "GI"
+    ],
+    [
+     "RD - Round Seal Stop Damper",
+     "SS304L"
+    ],
+    [
+     "RD - Round Seal Stop Damper",
+     "SS316L"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "AL"
+    ]
+   ]
+  },
+  {
+   "key": "126",
+   "mode": "feature",
+   "left": "modelNoDescription",
+   "right": "staticPressureClass",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "ED - Round Balancing Damper",
+     "2Inch w.c (500Pa)"
+    ],
+    [
+     "RD - Round Seal Stop Damper",
+     "2Inch w.c (500Pa)"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "2Inch w.c (500Pa)"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "4Inch w.c. (1000Pa)"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "6Inch w.c (1500Pa)"
+    ]
+   ]
+  },
+  {
+   "key": "127",
+   "mode": "feature",
+   "left": "modelNoDescription",
+   "right": "velocityRating",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "ED - Round Balancing Damper",
+     "1200 fpm (6m/s)"
+    ],
+    [
+     "RD - Round Seal Stop Damper",
+     "1200 fpm (6m/s)"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "1200 fpm (6m/s)"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "2400 fpm (12m/s)"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "3000 fpm (15m/s)"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "4000 fpm (20m/s)"
+    ]
+   ]
+  },
+  {
+   "key": "128",
+   "mode": "feature",
+   "left": "modelNoDescription",
+   "right": "frameClosure",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "ED - Round Balancing Damper",
+     "Clinch"
+    ],
+    [
+     "ED - Round Balancing Damper",
+     "Spot Welded"
+    ],
+    [
+     "RD - Round Seal Stop Damper",
+     "Clinch"
+    ],
+    [
+     "RD - Round Seal Stop Damper",
+     "Spot Welded"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "Fully Welded"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "Spot Welded"
+    ]
+   ]
+  },
+  {
+   "key": "130",
+   "mode": "feature",
+   "left": "modelNoDescription",
+   "right": "operator",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "RD - Round Seal Stop Damper",
+     "Motorized"
+    ],
+    [
+     "RD - Round Seal Stop Damper",
+     "Quadrant"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "Motorized"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "Quadrant"
+    ],
+    [
+     "ED - Round Balancing Damper",
+     "Quadrant"
+    ]
+   ]
+  },
+  {
+   "key": "131",
+   "mode": "feature",
+   "left": "unique",
+   "right": "frameThickness",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "0.80"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "1.00"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "1.20"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "1.50"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "0.80"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "1.00"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "1.20"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "1.50"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "0.70"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "0.70"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "0.80"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "1.00"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)100-254",
+     "0.80"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)100-254",
+     "1.00"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)100-254",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)100-254",
+     "1.50"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)255-356",
+     "1.00"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)255-356",
+     "1.20"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)255-356",
+     "1.50"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)255-356",
+     "1.00"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)255-356",
+     "1.20"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)255-356",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)255-356",
+     "1.00"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)255-356",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)255-356",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)255-356",
+     "1.00"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)255-356",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)255-356",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)3000 fpm (15m/s)100-254",
+     "1.00"
+    ],
+    [
+     "RI2Inch w.c (500Pa)3000 fpm (15m/s)100-254",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)3000 fpm (15m/s)100-254",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)3000 fpm (15m/s)255-356",
+     "1.00"
+    ],
+    [
+     "RI2Inch w.c (500Pa)3000 fpm (15m/s)255-356",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)3000 fpm (15m/s)255-356",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)4000 fpm (20m/s)100-254",
+     "1.00"
+    ],
+    [
+     "RI2Inch w.c (500Pa)4000 fpm (20m/s)100-254",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)4000 fpm (20m/s)100-254",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)4000 fpm (20m/s)255-356",
+     "1.00"
+    ],
+    [
+     "RI2Inch w.c (500Pa)4000 fpm (20m/s)255-356",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)4000 fpm (20m/s)255-356",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)1200 fpm (6m/s)100-254",
+     "1.00"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)1200 fpm (6m/s)100-254",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)1200 fpm (6m/s)100-254",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)1200 fpm (6m/s)255-356",
+     "1.00"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)1200 fpm (6m/s)255-356",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)1200 fpm (6m/s)255-356",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)2400 fpm (12m/s)100-254",
+     "1.00"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)2400 fpm (12m/s)100-254",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)2400 fpm (12m/s)100-254",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)2400 fpm (12m/s)255-356",
+     "1.00"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)2400 fpm (12m/s)255-356",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)2400 fpm (12m/s)255-356",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)3000 fpm (15m/s)100-254",
+     "1.00"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)3000 fpm (15m/s)100-254",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)3000 fpm (15m/s)100-254",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)3000 fpm (15m/s)255-356",
+     "1.00"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)3000 fpm (15m/s)255-356",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)3000 fpm (15m/s)255-356",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)4000 fpm (20m/s)100-254",
+     "1.00"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)4000 fpm (20m/s)100-254",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)4000 fpm (20m/s)100-254",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)4000 fpm (20m/s)255-356",
+     "1.00"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)4000 fpm (20m/s)255-356",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)4000 fpm (20m/s)255-356",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)1200 fpm (6m/s)100-254",
+     "1.00"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)1200 fpm (6m/s)100-254",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)1200 fpm (6m/s)100-254",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)1200 fpm (6m/s)255-356",
+     "1.00"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)1200 fpm (6m/s)255-356",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)1200 fpm (6m/s)255-356",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)2400 fpm (12m/s)100-254",
+     "1.00"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)2400 fpm (12m/s)100-254",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)2400 fpm (12m/s)100-254",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)2400 fpm (12m/s)255-356",
+     "1.00"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)2400 fpm (12m/s)255-356",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)2400 fpm (12m/s)255-356",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)3000 fpm (15m/s)100-254",
+     "1.00"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)3000 fpm (15m/s)100-254",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)3000 fpm (15m/s)100-254",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)3000 fpm (15m/s)255-356",
+     "1.00"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)3000 fpm (15m/s)255-356",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)3000 fpm (15m/s)255-356",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)4000 fpm (20m/s)100-254",
+     "1.00"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)4000 fpm (20m/s)100-254",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)4000 fpm (20m/s)100-254",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)4000 fpm (20m/s)255-356",
+     "1.00"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)4000 fpm (20m/s)255-356",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)4000 fpm (20m/s)255-356",
+     "1.50"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)357-508",
+     "1.20"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)357-508",
+     "1.50"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)357-508",
+     "1.20"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)357-508",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)357-508",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)357-508",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)357-508",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)357-508",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)3000 fpm (15m/s)357-508",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)3000 fpm (15m/s)357-508",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)4000 fpm (20m/s)357-508",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)4000 fpm (20m/s)357-508",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)1200 fpm (6m/s)357-508",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)1200 fpm (6m/s)357-508",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)2400 fpm (12m/s)357-508",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)2400 fpm (12m/s)357-508",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)3000 fpm (15m/s)357-508",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)3000 fpm (15m/s)357-508",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)4000 fpm (20m/s)357-508",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)4000 fpm (20m/s)357-508",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)1200 fpm (6m/s)357-508",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)1200 fpm (6m/s)357-508",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)2400 fpm (12m/s)357-508",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)2400 fpm (12m/s)357-508",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)3000 fpm (15m/s)357-508",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)3000 fpm (15m/s)357-508",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)4000 fpm (20m/s)357-508",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)4000 fpm (20m/s)357-508",
+     "1.50"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)509-610",
+     "1.50"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)509-910",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)509-1220",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)509-1220",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)3000 fpm (15m/s)509-1220",
+     "1.50"
+    ],
+    [
+     "RI2Inch w.c (500Pa)4000 fpm (20m/s)509-1220",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)1200 fpm (6m/s)509-1220",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)2400 fpm (12m/s)509-1220",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)3000 fpm (15m/s)509-1220",
+     "1.50"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)4000 fpm (20m/s)509-1220",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)1200 fpm (6m/s)509-1220",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)2400 fpm (12m/s)509-1220",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)3000 fpm (15m/s)509-1220",
+     "1.50"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)4000 fpm (20m/s)509-1220",
+     "1.50"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "0.60"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "0.60"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)100-254",
+     "0.70"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)100-254",
+     "0.70"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)3000 fpm (15m/s)100-254",
+     "0.80"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)2400 fpm (12m/s)100-254",
+     "0.80"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)255-356",
+     "0.80"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)1200 fpm (6m/s)100-254",
+     "0.80"
+    ],
+    [
+     "RI2Inch w.c (500Pa)3000 fpm (15m/s)100-254",
+     "0.80"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)2400 fpm (12m/s)255-356",
+     "0.80"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)255-356",
+     "0.80"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)1200 fpm (6m/s)255-356",
+     "0.80"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)1200 fpm (6m/s)255-356",
+     "0.80"
+    ],
+    [
+     "RI2Inch w.c (500Pa)3000 fpm (15m/s)255-356",
+     "0.80"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)1200 fpm (6m/s)100-254",
+     "0.80"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)255-356",
+     "0.80"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)255-356",
+     "0.80"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)3000 fpm (15m/s)255-356",
+     "0.80"
+    ],
+    [
+     "RI2Inch w.c (500Pa)4000 fpm (20m/s)255-356",
+     "0.80"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)4000 fpm (20m/s)255-356",
+     "0.80"
+    ],
+    [
+     "RI2Inch w.c (500Pa)4000 fpm (20m/s)100-254",
+     "0.80"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)4000 fpm (20m/s)100-254",
+     "0.80"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)4000 fpm (20m/s)100-254",
+     "0.80"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)3000 fpm (15m/s)255-356",
+     "0.80"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)2400 fpm (12m/s)255-356",
+     "0.80"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)3000 fpm (15m/s)100-254",
+     "0.80"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)4000 fpm (20m/s)255-356",
+     "0.80"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)2400 fpm (12m/s)100-254",
+     "0.80"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)357-508",
+     "1.00"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)357-508",
+     "1.00"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)2400 fpm (12m/s)357-508",
+     "1.00"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)1200 fpm (6m/s)357-508",
+     "1.00"
+    ],
+    [
+     "RI2Inch w.c (500Pa)4000 fpm (20m/s)357-508",
+     "1.00"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)357-508",
+     "1.00"
+    ],
+    [
+     "RI2Inch w.c (500Pa)3000 fpm (15m/s)357-508",
+     "1.00"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)357-508",
+     "1.00"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)4000 fpm (20m/s)357-508",
+     "1.00"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)1200 fpm (6m/s)357-508",
+     "1.00"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)3000 fpm (15m/s)357-508",
+     "1.00"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)4000 fpm (20m/s)357-508",
+     "1.00"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)2400 fpm (12m/s)357-508",
+     "1.00"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)3000 fpm (15m/s)357-508",
+     "1.00"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)1200 fpm (6m/s)509-1220",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)4000 fpm (20m/s)509-1220",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)2400 fpm (12m/s)509-1220",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)3000 fpm (15m/s)509-1220",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)1200 fpm (6m/s)509-1220",
+     "1.20"
+    ],
+    [
+     "RI2Inch w.c (500Pa)1200 fpm (6m/s)509-1220",
+     "1.20"
+    ],
+    [
+     "ED2Inch w.c (500Pa)1200 fpm (6m/s)509-610",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)3000 fpm (15m/s)509-1220",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)2400 fpm (12m/s)509-1220",
+     "1.20"
+    ],
+    [
+     "RD2Inch w.c (500Pa)1200 fpm (6m/s)509-910",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)3000 fpm (15m/s)509-1220",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)2400 fpm (12m/s)509-1220",
+     "1.20"
+    ],
+    [
+     "RI4Inch w.c (1000Pa)4000 fpm (20m/s)509-1220",
+     "1.20"
+    ],
+    [
+     "RI6Inch w.c (1500Pa)4000 fpm (20m/s)509-1220",
+     "1.20"
+    ]
+   ]
+  },
+  {
+   "key": "134",
+   "mode": "feature",
+   "left": "subcategory",
+   "right": "axleType",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "Round Double Skin Control Damper",
+     "10mm Round Bar"
+    ],
+    [
+     "Round Double Skin Control Damper",
+     "10mm Square Pin"
+    ],
+    [
+     "Round Double Skin Control Damper",
+     "12mm Round Bar"
+    ],
+    [
+     "Round Double Skin Control Damper",
+     "19mm Round Bar"
+    ],
+    [
+     "Round Balancing Damper",
+     "10mm Round Bar"
+    ],
+    [
+     "Round Balancing Damper",
+     "10mm Square Pin"
+    ],
+    [
+     "Round Balancing Damper",
+     "12mm Round Bar"
+    ],
+    [
+     "Round Seal Stop Damper",
+     "10mm Round Bar"
+    ],
+    [
+     "Round Seal Stop Damper",
+     "10mm Square Pin"
+    ],
+    [
+     "Round Seal Stop Damper",
+     "12mm Round Bar"
+    ]
+   ]
+  },
+  {
+   "key": "p4ff1r0cgd",
+   "mode": "feature",
+   "left": "modelNoDescription",
+   "right": "bladeSkinThickness",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 1,
+   "entries": [
+    [
+     "RI - Round Double Skin Control Damper",
+     "0.6 Double Skin"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "0.7 Double Skin"
+    ],
+    [
+     "RI - Round Double Skin Control Damper",
+     "1.0 Double Skin"
+    ],
+    [
+     "ED - Round Balancing Damper",
+     "0.80"
+    ],
+    [
+     "RD - Round Seal Stop Damper",
+     "1.20"
+    ],
+    [
+     "ED - Round Balancing Damper",
+     "1.00"
+    ],
+    [
+     "RD - Round Seal Stop Damper",
+     "1.00"
+    ],
+    [
+     "RD - Round Seal Stop Damper",
+     "0.80"
+    ],
+    [
+     "ED - Round Balancing Damper",
+     "1.20"
+    ]
+   ]
+  },
+  {
+   "key": "q7hk6qe2b7",
+   "mode": "feature",
+   "left": "operator",
+   "right": "actuatorBrand",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 1,
+   "entries": [
+    [
+     "Motorized",
+     "Honeywell"
+    ],
+    [
+     "Motorized",
+     "Siemens"
+    ],
+    [
+     "Motorized",
+     "Belimo"
+    ],
+    [
+     "Motorized",
+     "Pneumatic"
+    ],
+    [
+     "Quadrant",
+     "Honeywell"
+    ],
+    [
+     "Quadrant",
+     "Belimo"
+    ],
+    [
+     "Quadrant",
+     "NA"
+    ],
+    [
+     "Quadrant",
+     "Siemens"
+    ],
+    [
+     "Quadrant",
+     "Pneumatic"
+    ]
+   ]
+  }
+ ]
+}

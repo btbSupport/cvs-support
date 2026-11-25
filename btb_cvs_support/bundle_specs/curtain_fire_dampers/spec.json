@@ -1,0 +1,5567 @@
+{
+ "bundle": {
+  "label": "Curtain Fire Dampers",
+  "external_id": "01tQo000007apzFIAQ",
+  "export_template": [
+   "subcategory",
+   "width",
+   "height",
+   "diameter",
+   "modelDescription",
+   "materialType",
+   "mountingAndRating",
+   "fusibleLinkTemp",
+   "sleeveRequired",
+   "limitSwitchRequired",
+   "sectionframeThickness",
+   "sleeveSelection",
+   "tagRef",
+   "notes",
+   "sectionSleeveThickness"
+  ]
+ },
+ "items": {
+  "anchor": [
+   "SKU37"
+  ],
+  "catalog_categories": [
+   "CAT3"
+  ]
+ },
+ "cost_objects": {
+  "doctype": "FTOCountryWiseCost",
+  "label_field": "product_name",
+  "rows": [
+   {
+    "product_name": "GI",
+    "item_code": "GI",
+    "unit": "Kg",
+    "cost": 4.0,
+    "category": "Coil",
+    "boq_identifier": "GI",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost1"
+   },
+   {
+    "product_name": "Fixed Frame Minutes",
+    "item_code": "Fixed Frame Minutes",
+    "unit": "Minutes",
+    "cost": 10.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Fixed Frame Minutes",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost119"
+   },
+   {
+    "product_name": "Variable Frame Minutes",
+    "item_code": "Variable Frame Minutes",
+    "unit": "Minutes",
+    "cost": 2.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Variable Frame Minutes",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost120"
+   },
+   {
+    "product_name": "Sleeve Fixed Cost",
+    "item_code": "Sleeve Fixed Cost",
+    "unit": "Minutes",
+    "cost": 5.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Sleeve Fixed Cost",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost121"
+   },
+   {
+    "product_name": "Sleeve Fixing Cost",
+    "item_code": "Sleeve Fixing Cost",
+    "unit": "Minutes",
+    "cost": 2.5,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Sleeve Fixing Cost",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost122"
+   },
+   {
+    "product_name": "Fixed Blade Minutes",
+    "item_code": "Fixed Blade Minutes",
+    "unit": "Minutes",
+    "cost": 1.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Fixed Blade Minutes",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost123"
+   },
+   {
+    "product_name": "Variable Blade Minutes",
+    "item_code": "Variable Blade Minutes",
+    "unit": "Minutes",
+    "cost": 2.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Variable Blade Minutes",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost124"
+   },
+   {
+    "product_name": "Fixed Switch Minutes",
+    "item_code": "Fixed Switch Minutes",
+    "unit": "Minutes",
+    "cost": 10.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Fixed Switch Minutes",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost125"
+   },
+   {
+    "product_name": "Fixed Joints Minutes",
+    "item_code": "Fixed Joints Minutes",
+    "unit": "Minutes",
+    "cost": 10.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Fixed Joints Minutes",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost126"
+   },
+   {
+    "product_name": "Joints Minutes for Multi-Section",
+    "item_code": "Joints Minutes for Multi-Section",
+    "unit": "Minutes",
+    "cost": 5.0,
+    "category": "Labour & Assembly",
+    "boq_identifier": "Joints Minutes for Multi-Section",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost127"
+   },
+   {
+    "product_name": "Cost per Hour",
+    "item_code": "Processing Cost per Hour",
+    "unit": "Currency",
+    "cost": 15.0,
+    "category": "Hourly Rate",
+    "boq_identifier": "Cost per Hour (CFD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost131"
+   },
+   {
+    "product_name": "Overhead Percentage where Height <= 500",
+    "item_code": "Overhead Percentage where Height <= 500",
+    "unit": "%",
+    "cost": 0.2,
+    "category": "Overhead",
+    "boq_identifier": "Overhead Percentage where Height <= 500 (CFD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost132"
+   },
+   {
+    "product_name": "Overhead Percentage where Height > 500",
+    "item_code": "Overhead Percentage where Height > 500",
+    "unit": "%",
+    "cost": 0.4,
+    "category": "Overhead",
+    "boq_identifier": "Overhead Percentage where Height > 500 (CFD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost133"
+   },
+   {
+    "product_name": "Sleeve Wastage",
+    "item_code": "Sleeve Wastage",
+    "unit": "%",
+    "cost": 0.05,
+    "category": "Wastage",
+    "boq_identifier": "Sleeve Wastage (CFD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost134"
+   },
+   {
+    "product_name": "Cutting Waste",
+    "item_code": "Cutting Waste",
+    "unit": "%",
+    "cost": 0.02,
+    "category": "Wastage",
+    "boq_identifier": "Cutting Waste",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost135"
+   },
+   {
+    "product_name": "Profit",
+    "item_code": "Profit",
+    "unit": "%",
+    "cost": 0.4,
+    "category": "Factor",
+    "boq_identifier": "Profit (CFD)",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost136"
+   },
+   {
+    "product_name": "SS304L",
+    "item_code": "SS304L",
+    "unit": "Kg",
+    "cost": 9.5,
+    "category": "Coil",
+    "boq_identifier": "SS304L",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost2"
+   },
+   {
+    "product_name": "Sealant Dow Corning 732 - 310ml",
+    "item_code": "2250004",
+    "unit": "Tube",
+    "cost": 18.0,
+    "category": "Sealant",
+    "boq_identifier": "Sealant Dow Corning 732 - 310ml",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost238"
+   },
+   {
+    "product_name": "LHS & RHS Static Spring Bracket Latch GI G90 JNDL 50X87X1.5mm 9249",
+    "item_code": "2290113 & 2290114",
+    "unit": "Ea",
+    "cost": 1.76,
+    "category": "Accessories",
+    "boq_identifier": "LHS & RHS Static Spring Bracket Latch GI G90 JNDL 50X87X1.5mm 9249",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost271"
+   },
+   {
+    "product_name": "LHS & RHS - Static Spring Bracket Latch SS304",
+    "item_code": "2290284 & 2290285",
+    "unit": "Ea",
+    "cost": 4.4,
+    "category": "Accessories",
+    "boq_identifier": "LHS & RHS - Static Spring Bracket Latch SS304",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost272"
+   },
+   {
+    "product_name": "LHS & RHS Dynamic Spring Bracket Latch Big GI G90 54X85X1.5mm 9002",
+    "item_code": "2290116 & 2290117",
+    "unit": "Ea",
+    "cost": 3.3,
+    "category": "Accessories",
+    "boq_identifier": "LHS & RHS Dynamic Spring Bracket Latch Big GI G90 54X85X1.5mm 9002",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost273"
+   },
+   {
+    "product_name": "LHS & RHS - Dynamic Spring Bracket Latch SS304",
+    "item_code": "2290286 & 2290287",
+    "unit": "Ea",
+    "cost": 11.0,
+    "category": "Accessories",
+    "boq_identifier": "LHS & RHS - Dynamic Spring Bracket Latch SS304",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost274"
+   },
+   {
+    "product_name": "Fusible Link Holding Strip",
+    "item_code": "TBD",
+    "unit": "Ea",
+    "cost": 0.81,
+    "category": "Accessories",
+    "boq_identifier": "Fusible Link Holding Strip",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost275"
+   },
+   {
+    "product_name": "Rivet",
+    "item_code": "3030104",
+    "unit": "Ea",
+    "cost": 0.14,
+    "category": "Accessories",
+    "boq_identifier": "Rivet",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost276"
+   },
+   {
+    "product_name": "Limit Switch (Balde Position Switch)",
+    "item_code": "2290035",
+    "unit": "Ea",
+    "cost": 1.73,
+    "category": "Switches",
+    "boq_identifier": "Limit Switch (Balde Position Switch)",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost278"
+   },
+   {
+    "product_name": "UL Sticker (AED/Pc), CVS Labels, etc",
+    "item_code": "3430004",
+    "unit": "Ea",
+    "cost": 8.0,
+    "category": "Sticker",
+    "boq_identifier": "UL Sticker (AED/Pc), CVS Labels, etc",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost279"
+   },
+   {
+    "product_name": "Fusible Link 73C (165F) Globe - JS 2.75\" Hook",
+    "item_code": "2290013",
+    "unit": "Ea",
+    "cost": 3.84,
+    "category": "Fuse Link",
+    "boq_identifier": "MFL 165F",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost280"
+   },
+   {
+    "product_name": "Fusible Link 73C (165F) - Globe GS",
+    "item_code": "2290081",
+    "unit": "Ea",
+    "cost": 7.2,
+    "category": "Fuse Link",
+    "boq_identifier": "Fusible Link 73C (165F) - Globe GS",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost281"
+   },
+   {
+    "product_name": "Fusible Link 100C (212F) Globe - JS 2.75\" Hook",
+    "item_code": "2290080",
+    "unit": "Ea",
+    "cost": 3.84,
+    "category": "Fuse Link",
+    "boq_identifier": "MFL 212F",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost282"
+   },
+   {
+    "product_name": "Fusible Link 100C (212F) - Globe GS",
+    "item_code": "2290082",
+    "unit": "Ea",
+    "cost": 7.2,
+    "category": "Fuse Link",
+    "boq_identifier": "Fusible Link 100C (212F) - Globe GS",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost283"
+   },
+   {
+    "product_name": "SS316L",
+    "item_code": "SS316L",
+    "unit": "Kg",
+    "cost": 16.5,
+    "category": "Coil",
+    "boq_identifier": "SS316L",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost3"
+   },
+   {
+    "product_name": "Conversion Inch to mm",
+    "item_code": "Conversion Inch to mm",
+    "unit": "mm",
+    "cost": 25.0,
+    "category": "Conversion",
+    "boq_identifier": "Conversion Inch to mm",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost32"
+   },
+   {
+    "product_name": "Thermal Blanket Cost",
+    "item_code": "Thermal Blanket",
+    "unit": "Sqm",
+    "cost": 32.0,
+    "category": "Insulation",
+    "boq_identifier": "Thermal Blanket Cost",
+    "custom_cost_type": "% of UAE",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost396"
+   },
+   {
+    "product_name": "SS Density Factor",
+    "item_code": "SSDensityFactor",
+    "cost": 8.0,
+    "category": "Density",
+    "boq_identifier": "SS Density Factor",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost388"
+   },
+   {
+    "product_name": "GI Density Factor",
+    "item_code": "GIDensityFactor",
+    "cost": 7.85,
+    "category": "Density",
+    "boq_identifier": "GI Density Factor",
+    "custom_cost_type": "Country Specific",
+    "custom_country": "United Arab Emirates",
+    "existing": "FTOCountryWiseCost389"
+   }
+  ]
+ },
+ "feature_types": [
+  {
+   "key": "FT126",
+   "label": "CD Model",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "FD-A Curtain Fire Damper Type A - Static - Optional Sleeve",
+     "sequence": 1
+    },
+    {
+     "value": "FD-A-I Curtain Fire Damper Type A - Static - Integral Sleeve",
+     "sequence": 2
+    },
+    {
+     "value": "FD-A-OW Curtain Fire Damper Type A - Static - Out-of-Wall",
+     "sequence": 3
+    },
+    {
+     "value": "FD-AR Curtain Fire Damper Type A - Static - Round",
+     "sequence": 4
+    },
+    {
+     "value": "FD-AR-I Curtain Fire Damper Type A - Static - Integral Sleeve - Round",
+     "sequence": 5
+    },
+    {
+     "value": "FD-B Curtain Fire Damper Type B - Static - Optional Sleeve",
+     "sequence": 6
+    },
+    {
+     "value": "FD-B-I Curtain Fire Damper Type B - Static - Integral Sleeve",
+     "sequence": 7
+    },
+    {
+     "value": "FD-B-OW Curtain Fire Damper Type B - Static - Out-of-Wall",
+     "sequence": 8
+    },
+    {
+     "value": "FD-C-OV Curtain Fire Damper Type C - Static - Oval",
+     "sequence": 9
+    },
+    {
+     "value": "FD-C-OV-I Curtain Fire Damper Type C - Static - Integral Sleeve - Oval",
+     "sequence": 10
+    },
+    {
+     "value": "FD-C-OW Curtain Fire Damper Type C - Static - Out-of-Wall",
+     "sequence": 11
+    },
+    {
+     "value": "FD-C-R Curtain Fire Damper Type C - Static - Round",
+     "sequence": 12
+    },
+    {
+     "value": "FD-C-R-I Curtain Fire Damper Type C - Static - Integral Sleeve - Round",
+     "sequence": 13
+    },
+    {
+     "value": "FD-C-S/R Curtain Fire Damper Type C - Static - Rect",
+     "sequence": 14
+    },
+    {
+     "value": "FD-C-S/R-I Curtain Fire Damper Type C - Static - Integral Sleeve - Rect",
+     "sequence": 15
+    },
+    {
+     "value": "FDD-A Curtain Fire Damper Type A - Dynamic - Optional Sleeve",
+     "sequence": 16
+    },
+    {
+     "value": "FDD-A-I Curtain Fire Damper Type A - Dynamic - Integral Sleeve",
+     "sequence": 17
+    },
+    {
+     "value": "FDD-A-OW Curtain Fire Damper Type A - Dynamic - Out-of-Wall",
+     "sequence": 18
+    },
+    {
+     "value": "FDD-AR Curtain Fire Damper Type A - Dynamic - Round",
+     "sequence": 19
+    },
+    {
+     "value": "FDD-AR-I Curtain Fire Damper Type A - Dynamic - Integral Sleeve - Round",
+     "sequence": 20
+    },
+    {
+     "value": "FDD-B Curtain Fire Damper Type B - Dynamic - Optional Sleeve",
+     "sequence": 21
+    },
+    {
+     "value": "FDD-B-I Curtain Fire Damper Type B - Dynamic - Integral Sleeve",
+     "sequence": 22
+    },
+    {
+     "value": "FDD-B-OW Curtain Fire Damper Type B - Dynamic - Out-of-Wall",
+     "sequence": 23
+    },
+    {
+     "value": "FDD-C-OV Curtain Fire Damper Type C - Dynamic - Oval",
+     "sequence": 24
+    },
+    {
+     "value": "FDD-C-OV-I Curtain Fire Damper Type C - Dynamic - Integral Sleeve - Oval",
+     "sequence": 25
+    },
+    {
+     "value": "FDD-C-OW Curtain Fire Damper Type C - Dynamic - Out-of-Wall",
+     "sequence": 26
+    },
+    {
+     "value": "FDD-C-R Curtain Fire Damper Type C - Dynamic - Round",
+     "sequence": 27
+    },
+    {
+     "value": "FDD-C-R-I Curtain Fire Damper Type C - Dynamic - Integral Sleeve - Round",
+     "sequence": 28
+    },
+    {
+     "value": "FDD-C-S/R Curtain Fire Damper Type C - Dynamic - Rect",
+     "sequence": 29
+    },
+    {
+     "value": "FDD-C-S/R-I Curtain Fire Damper Type C - Dynamic - Integral Sleeve - Rect",
+     "sequence": 30
+    },
+    {
+     "value": "FDD-SL-A Slimline Curtain Fire Damper Type A - Dynamic - Optional Sleeve",
+     "sequence": 31
+    },
+    {
+     "value": "FDD-SL-B Slimline Curtain Fire Damper Type B - Dynamic - Optional Sleeve",
+     "sequence": 32
+    },
+    {
+     "value": "FDD-SL-OW-A Slimline Curtain Fire Damper Type A - Dynamic - Out-of-Wall",
+     "sequence": 33
+    },
+    {
+     "value": "FDD-SL-OW-B Slimline Curtain Fire Damper Type B - Dynamic - Out-of-Wall",
+     "sequence": 34
+    },
+    {
+     "value": "FDD-SL-OW-C Slimline Curtain Fire Damper Type C - Dynamic - Out-of-Wall",
+     "sequence": 35
+    },
+    {
+     "value": "FD-SL-A Slimline Curtain Fire Damper Type A - Static - Optional Sleeve",
+     "sequence": 36
+    },
+    {
+     "value": "FD-SL-B Slimline Curtain Fire Damper Type B - Static - Optional Sleeve",
+     "sequence": 37
+    },
+    {
+     "value": "FD-SL-OW-A Slimline Curtain Fire Damper Type A - Static - Out-of-Wall",
+     "sequence": 38
+    },
+    {
+     "value": "FD-SL-OW-B Slimline Curtain Fire Damper Type B - Static - Out-of-Wall",
+     "sequence": 39
+    },
+    {
+     "value": "FD-SL-OW-C Slimline Curtain Fire Damper Type C - Static - Out-of-Wall",
+     "sequence": 40
+    }
+   ]
+  },
+  {
+   "key": "FT127",
+   "label": "CD Fittings",
+   "data_type": "Value List",
+   "values": [
+    {
+     "value": "Rect",
+     "sequence": 1
+    },
+    {
+     "value": "Round",
+     "sequence": 2
+    },
+    {
+     "value": "Oval",
+     "sequence": 3
+    },
+    {
+     "value": "NA",
+     "sequence": 4
+    }
+   ]
+  },
+  {
+   "key": "FT131",
+   "label": "CD CVS Uniq",
+   "data_type": "Object List",
+   "object_type": "FTOCVSUnique",
+   "data_text_field": "custom_unique_id",
+   "additional_fields": "blade_movement,blade_thickness,blade_type,name,flow,frameoil_width,frame_thickness,frame_width,jackshafting_sections,max_height,max_single_section_height,max_single_section_width,max_width,max_damper_section_height1,max_damper_section_height2,max_damper_section_width1,max_damper_section_width2,max_multi_section_diameter1,max_multi_section_height2,max_multi_section_width2,max_single_section_diameter,min_diameter,min_height,min_width,no_of_brackets,no_of_springs,product_family,sleeve_option,sleeve_thickness",
+   "objects": [
+    {
+     "object": "FTOCVSUnique312",
+     "sequence": 1
+    },
+    {
+     "object": "FTOCVSUnique313",
+     "sequence": 2
+    },
+    {
+     "object": "FTOCVSUnique314",
+     "sequence": 3
+    },
+    {
+     "object": "FTOCVSUnique315",
+     "sequence": 4
+    },
+    {
+     "object": "FTOCVSUnique316",
+     "sequence": 5
+    },
+    {
+     "object": "FTOCVSUnique317",
+     "sequence": 6
+    },
+    {
+     "object": "FTOCVSUnique318",
+     "sequence": 7
+    },
+    {
+     "object": "FTOCVSUnique319",
+     "sequence": 8
+    },
+    {
+     "object": "FTOCVSUnique320",
+     "sequence": 9
+    },
+    {
+     "object": "FTOCVSUnique321",
+     "sequence": 10
+    },
+    {
+     "object": "FTOCVSUnique322",
+     "sequence": 11
+    },
+    {
+     "object": "FTOCVSUnique323",
+     "sequence": 12
+    },
+    {
+     "object": "FTOCVSUnique324",
+     "sequence": 13
+    },
+    {
+     "object": "FTOCVSUnique325",
+     "sequence": 14
+    },
+    {
+     "object": "FTOCVSUnique326",
+     "sequence": 15
+    },
+    {
+     "object": "FTOCVSUnique327",
+     "sequence": 16
+    },
+    {
+     "object": "FTOCVSUnique328",
+     "sequence": 17
+    },
+    {
+     "object": "FTOCVSUnique329",
+     "sequence": 18
+    },
+    {
+     "object": "FTOCVSUnique330",
+     "sequence": 19
+    },
+    {
+     "object": "FTOCVSUnique331",
+     "sequence": 20
+    },
+    {
+     "object": "FTOCVSUnique332",
+     "sequence": 21
+    },
+    {
+     "object": "FTOCVSUnique333",
+     "sequence": 22
+    },
+    {
+     "object": "FTOCVSUnique334",
+     "sequence": 23
+    },
+    {
+     "object": "FTOCVSUnique335",
+     "sequence": 24
+    },
+    {
+     "object": "FTOCVSUnique336",
+     "sequence": 25
+    },
+    {
+     "object": "FTOCVSUnique337",
+     "sequence": 26
+    },
+    {
+     "object": "FTOCVSUnique338",
+     "sequence": 27
+    },
+    {
+     "object": "FTOCVSUnique339",
+     "sequence": 28
+    },
+    {
+     "object": "FTOCVSUnique340",
+     "sequence": 29
+    },
+    {
+     "object": "FTOCVSUnique341",
+     "sequence": 30
+    },
+    {
+     "object": "FTOCVSUnique342",
+     "sequence": 31
+    },
+    {
+     "object": "FTOCVSUnique343",
+     "sequence": 32
+    },
+    {
+     "object": "FTOCVSUnique344",
+     "sequence": 33
+    },
+    {
+     "object": "FTOCVSUnique345",
+     "sequence": 34
+    },
+    {
+     "object": "FTOCVSUnique346",
+     "sequence": 35
+    },
+    {
+     "object": "FTOCVSUnique347",
+     "sequence": 36
+    },
+    {
+     "object": "FTOCVSUnique348",
+     "sequence": 37
+    },
+    {
+     "object": "FTOCVSUnique349",
+     "sequence": 38
+    },
+    {
+     "object": "FTOCVSUnique350",
+     "sequence": 39
+    },
+    {
+     "object": "FTOCVSUnique351",
+     "sequence": 40
+    },
+    {
+     "object": "FTOCVSUnique352",
+     "sequence": 41
+    },
+    {
+     "object": "FTOCVSUnique353",
+     "sequence": 42
+    },
+    {
+     "object": "FTOCVSUnique354",
+     "sequence": 43
+    },
+    {
+     "object": "FTOCVSUnique355",
+     "sequence": 44
+    },
+    {
+     "object": "FTOCVSUnique356",
+     "sequence": 45
+    },
+    {
+     "object": "FTOCVSUnique357",
+     "sequence": 46
+    },
+    {
+     "object": "FTOCVSUnique358",
+     "sequence": 47
+    },
+    {
+     "object": "FTOCVSUnique359",
+     "sequence": 48
+    },
+    {
+     "object": "FTOCVSUnique360",
+     "sequence": 49
+    },
+    {
+     "object": "FTOCVSUnique361",
+     "sequence": 50
+    },
+    {
+     "object": "FTOCVSUnique362",
+     "sequence": 51
+    },
+    {
+     "object": "FTOCVSUnique363",
+     "sequence": 52
+    },
+    {
+     "object": "FTOCVSUnique364",
+     "sequence": 53
+    },
+    {
+     "object": "FTOCVSUnique365",
+     "sequence": 54
+    },
+    {
+     "object": "FTOCVSUnique366",
+     "sequence": 55
+    },
+    {
+     "object": "FTOCVSUnique367",
+     "sequence": 56
+    },
+    {
+     "object": "FTOCVSUnique368",
+     "sequence": 57
+    },
+    {
+     "object": "FTOCVSUnique369",
+     "sequence": 58
+    },
+    {
+     "object": "FTOCVSUnique370",
+     "sequence": 59
+    },
+    {
+     "object": "FTOCVSUnique371",
+     "sequence": 60
+    },
+    {
+     "object": "FTOCVSUnique372",
+     "sequence": 61
+    },
+    {
+     "object": "FTOCVSUnique373",
+     "sequence": 62
+    },
+    {
+     "object": "FTOCVSUnique374",
+     "sequence": 63
+    },
+    {
+     "object": "FTOCVSUnique375",
+     "sequence": 64
+    },
+    {
+     "object": "FTOCVSUnique376",
+     "sequence": 65
+    },
+    {
+     "object": "FTOCVSUnique377",
+     "sequence": 66
+    },
+    {
+     "object": "FTOCVSUnique378",
+     "sequence": 67
+    },
+    {
+     "object": "FTOCVSUnique379",
+     "sequence": 68
+    },
+    {
+     "object": "FTOCVSUnique380",
+     "sequence": 69
+    },
+    {
+     "object": "FTOCVSUnique381",
+     "sequence": 70
+    },
+    {
+     "object": "FTOCVSUnique382",
+     "sequence": 71
+    },
+    {
+     "object": "FTOCVSUnique383",
+     "sequence": 72
+    },
+    {
+     "object": "FTOCVSUnique384",
+     "sequence": 73
+    },
+    {
+     "object": "FTOCVSUnique385",
+     "sequence": 74
+    },
+    {
+     "object": "FTOCVSUnique386",
+     "sequence": 75
+    },
+    {
+     "object": "FTOCVSUnique387",
+     "sequence": 76
+    },
+    {
+     "object": "FTOCVSUnique388",
+     "sequence": 77
+    },
+    {
+     "object": "FTOCVSUnique389",
+     "sequence": 78
+    },
+    {
+     "object": "FTOCVSUnique390",
+     "sequence": 79
+    },
+    {
+     "object": "FTOCVSUnique391",
+     "sequence": 80
+    },
+    {
+     "object": "FTOCVSUnique392",
+     "sequence": 81
+    },
+    {
+     "object": "FTOCVSUnique393",
+     "sequence": 82
+    },
+    {
+     "object": "FTOCVSUnique394",
+     "sequence": 83
+    },
+    {
+     "object": "FTOCVSUnique395",
+     "sequence": 84
+    },
+    {
+     "object": "FTOCVSUnique396",
+     "sequence": 85
+    },
+    {
+     "object": "FTOCVSUnique397",
+     "sequence": 86
+    },
+    {
+     "object": "FTOCVSUnique398",
+     "sequence": 87
+    },
+    {
+     "object": "FTOCVSUnique399",
+     "sequence": 88
+    },
+    {
+     "object": "FTOCVSUnique400",
+     "sequence": 89
+    },
+    {
+     "object": "FTOCVSUnique401",
+     "sequence": 90
+    },
+    {
+     "object": "FTOCVSUnique402",
+     "sequence": 91
+    },
+    {
+     "object": "FTOCVSUnique403",
+     "sequence": 92
+    },
+    {
+     "object": "FTOCVSUnique404",
+     "sequence": 93
+    },
+    {
+     "object": "FTOCVSUnique405",
+     "sequence": 94
+    },
+    {
+     "object": "FTOCVSUnique406",
+     "sequence": 95
+    },
+    {
+     "object": "FTOCVSUnique407",
+     "sequence": 96
+    },
+    {
+     "object": "FTOCVSUnique408",
+     "sequence": 97
+    },
+    {
+     "object": "FTOCVSUnique409",
+     "sequence": 98
+    },
+    {
+     "object": "FTOCVSUnique410",
+     "sequence": 99
+    },
+    {
+     "object": "FTOCVSUnique411",
+     "sequence": 100
+    },
+    {
+     "object": "FTOCVSUnique412",
+     "sequence": 101
+    },
+    {
+     "object": "FTOCVSUnique413",
+     "sequence": 102
+    },
+    {
+     "object": "FTOCVSUnique414",
+     "sequence": 103
+    },
+    {
+     "object": "FTOCVSUnique415",
+     "sequence": 104
+    },
+    {
+     "object": "FTOCVSUnique416",
+     "sequence": 105
+    },
+    {
+     "object": "FTOCVSUnique417",
+     "sequence": 106
+    },
+    {
+     "object": "FTOCVSUnique418",
+     "sequence": 107
+    },
+    {
+     "object": "FTOCVSUnique419",
+     "sequence": 108
+    },
+    {
+     "object": "FTOCVSUnique420",
+     "sequence": 109
+    },
+    {
+     "object": "FTOCVSUnique421",
+     "sequence": 110
+    },
+    {
+     "object": "FTOCVSUnique422",
+     "sequence": 111
+    },
+    {
+     "object": "FTOCVSUnique423",
+     "sequence": 112
+    },
+    {
+     "object": "FTOCVSUnique424",
+     "sequence": 113
+    },
+    {
+     "object": "FTOCVSUnique425",
+     "sequence": 114
+    },
+    {
+     "object": "FTOCVSUnique426",
+     "sequence": 115
+    },
+    {
+     "object": "FTOCVSUnique427",
+     "sequence": 116
+    },
+    {
+     "object": "FTOCVSUnique428",
+     "sequence": 117
+    },
+    {
+     "object": "FTOCVSUnique429",
+     "sequence": 118
+    },
+    {
+     "object": "FTOCVSUnique430",
+     "sequence": 119
+    },
+    {
+     "object": "FTOCVSUnique431",
+     "sequence": 120
+    },
+    {
+     "object": "FTOCVSUnique432",
+     "sequence": 121
+    },
+    {
+     "object": "FTOCVSUnique433",
+     "sequence": 122
+    },
+    {
+     "object": "FTOCVSUnique434",
+     "sequence": 123
+    },
+    {
+     "object": "FTOCVSUnique435",
+     "sequence": 124
+    },
+    {
+     "object": "FTOCVSUnique436",
+     "sequence": 125
+    },
+    {
+     "object": "FTOCVSUnique437",
+     "sequence": 126
+    },
+    {
+     "object": "FTOCVSUnique438",
+     "sequence": 127
+    },
+    {
+     "object": "FTOCVSUnique439",
+     "sequence": 128
+    },
+    {
+     "object": "FTOCVSUnique440",
+     "sequence": 129
+    },
+    {
+     "object": "FTOCVSUnique441",
+     "sequence": 130
+    },
+    {
+     "object": "FTOCVSUnique442",
+     "sequence": 131
+    },
+    {
+     "object": "FTOCVSUnique443",
+     "sequence": 132
+    },
+    {
+     "object": "FTOCVSUnique444",
+     "sequence": 133
+    },
+    {
+     "object": "FTOCVSUnique445",
+     "sequence": 134
+    },
+    {
+     "object": "FTOCVSUnique446",
+     "sequence": 135
+    },
+    {
+     "object": "FTOCVSUnique447",
+     "sequence": 136
+    }
+   ]
+  },
+  {
+   "key": "FT15",
+   "existing": "FT15",
+   "label": "CD - Base Model",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT16",
+   "existing": "FT16",
+   "label": "CD - Type",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT17",
+   "existing": "FT17",
+   "label": "CD - Mounting",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT20",
+   "existing": "FT20",
+   "label": "Material Type",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT21",
+   "existing": "FT21",
+   "label": "CD - Fusible Link Temperature",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT22",
+   "existing": "FT22",
+   "label": "CD - Sleeve Required",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT23",
+   "existing": "FT23",
+   "label": "CD - Frame Thickness",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT24",
+   "existing": "FT24",
+   "label": "CD - Sleeve Length",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT25",
+   "existing": "FT25",
+   "label": "CD - Section",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT26",
+   "existing": "FT26",
+   "label": "CD - Sleeve Type",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT27",
+   "existing": "FT27",
+   "label": "Blade Type",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT28",
+   "existing": "FT28",
+   "label": "CVS Springs",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT29",
+   "existing": "FT29",
+   "label": "CVS Curtain Dampers",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT30",
+   "existing": "FT30",
+   "label": "CVS Offset",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT32",
+   "existing": "FT32",
+   "label": "CVS Blades",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT34",
+   "existing": "FT34",
+   "label": "Mounting and Rating",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT35",
+   "existing": "FT35",
+   "label": "Link Type",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT36",
+   "existing": "FT36",
+   "label": "Spring Force-N",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT38",
+   "existing": "FT38",
+   "label": "Sleeve Selection",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT39",
+   "existing": "FT39",
+   "label": "Integral Sleeve Slit Add",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT40",
+   "existing": "FT40",
+   "label": "CFD Cost",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT41",
+   "existing": "FT41",
+   "label": "Subcategory",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FT74",
+   "existing": "FT74",
+   "label": "Rating",
+   "_note": "shared with other bundles - reused, not copied"
+  },
+  {
+   "key": "FTY102323",
+   "label": "Curtain Dampers  Model Items",
+   "data_type": "Object List",
+   "object_type": "Item",
+   "data_text_field": "item_code",
+   "additional_fields": "item_code,description",
+   "objects": [
+    {
+     "object": "FD-A",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-A-I",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-A-OW",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-AR",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-AR-I",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-B",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-B-I",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-B-OW",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-C-OV",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-C-OV-I",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-C-OW",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-C-R",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-C-R-I",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-C-S/R",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-C-S/R-I",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-A",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-A-I",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-A-OW",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-AR",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-AR-I",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-B",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-B-I",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-B-OW",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-C-OV",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-C-OV-I",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-C-OW",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-C-R",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-C-R-I",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-C-S/R",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-C-S/R-I",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-SL-A",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-SL-B",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-SL-OW-A",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-SL-OW-B",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FDD-SL-OW-C",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-SL-A",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-SL-B",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-SL-OW-A",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-SL-OW-B",
+     "sequence": 1,
+     "price_editable": 1
+    },
+    {
+     "object": "FD-SL-OW-C",
+     "sequence": 1,
+     "price_editable": 1
+    }
+   ]
+  }
+ ],
+ "structures": [
+  {
+   "key": "Curtain Fire Dampers",
+   "label": "Curtain Fire Dampers",
+   "parent": null,
+   "sequence": 0.0
+  },
+  {
+   "key": "Duct Specs",
+   "label": "Duct Specs",
+   "parent": "Curtain Fire Dampers",
+   "sequence": 1.0
+  },
+  {
+   "key": "Damper Specs",
+   "label": "Damper Specs",
+   "parent": "Curtain Fire Dampers",
+   "sequence": 2.0
+  },
+  {
+   "key": "Frames & Fittings",
+   "label": "Frames & Fittings",
+   "parent": "Curtain Fire Dampers",
+   "sequence": 3.0
+  },
+  {
+   "key": "Blade",
+   "label": "Blade",
+   "parent": "Curtain Fire Dampers",
+   "sequence": 4.0
+  },
+  {
+   "key": "Springs",
+   "label": "Springs",
+   "parent": "Curtain Fire Dampers",
+   "sequence": 5.0
+  },
+  {
+   "key": "Sleeve",
+   "label": "Sleeve",
+   "parent": "Curtain Fire Dampers",
+   "sequence": 6.0
+  },
+  {
+   "key": "Cost",
+   "label": "Cost",
+   "parent": "Curtain Fire Dampers",
+   "sequence": 7.0
+  },
+  {
+   "key": "Factors",
+   "label": "Factors",
+   "parent": "Curtain Fire Dampers",
+   "sequence": 8.0
+  }
+ ],
+ "features": [
+  {
+   "structure": "Factors",
+   "field": "modelItem",
+   "label": "Model Item",
+   "control_type": "Dropdown",
+   "sequence": 0,
+   "feature_types": [
+    "FTY102323"
+   ]
+  },
+  {
+   "structure": "Sleeve",
+   "field": "sleeveThickness",
+   "label": "SleeveThickness",
+   "control_type": "Number",
+   "sequence": 1,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "materialCostUnit",
+   "label": "Material Cost (Unit)",
+   "control_type": "Number",
+   "sequence": 1,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameThickness",
+   "label": "Frame Thickness",
+   "control_type": "Number",
+   "sequence": 1,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Damper Specs",
+   "field": "damperWidth",
+   "label": "Width (Y)",
+   "control_type": "Number",
+   "sequence": 1,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "stickerCost",
+   "label": "Sticker Cost",
+   "control_type": "Number",
+   "sequence": 1,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Blade",
+   "field": "bladeType",
+   "label": "Blade Type",
+   "control_type": "Dropdown",
+   "sequence": 1,
+   "feature_types": [
+    "FT27"
+   ]
+  },
+  {
+   "structure": "Springs",
+   "field": "springs",
+   "label": "Springs",
+   "control_type": "Dropdown",
+   "sequence": 1,
+   "feature_types": [
+    "FT28"
+   ]
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "subcategory",
+   "label": "Sub-Category",
+   "control_type": "Dropdown",
+   "sequence": 1,
+   "feature_types": [
+    "FT41"
+   ]
+  },
+  {
+   "structure": "Sleeve",
+   "field": "sleeveArea",
+   "label": "Sleeve Area",
+   "control_type": "Number",
+   "sequence": 2,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameSlitSize",
+   "label": "Frame Slit Size",
+   "control_type": "Number",
+   "sequence": 2,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Damper Specs",
+   "field": "damperHeight",
+   "label": "Height (X)",
+   "control_type": "Number",
+   "sequence": 2,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "profit",
+   "label": "Profit",
+   "control_type": "Number",
+   "sequence": 2,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Blade",
+   "field": "bladeThickness",
+   "label": "Blade Thickness",
+   "control_type": "Number",
+   "sequence": 2,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Springs",
+   "field": "noofSprings",
+   "label": "# of Springs",
+   "control_type": "Number",
+   "sequence": 2,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "modelDescription",
+   "label": "Model No and Model Name",
+   "control_type": "Dropdown",
+   "sequence": 2,
+   "feature_types": [
+    "FT126"
+   ]
+  },
+  {
+   "structure": "Sleeve",
+   "field": "sleeveWeight",
+   "label": "Sleeve Weight",
+   "control_type": "Number",
+   "sequence": 3,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameLength",
+   "label": "Frame Length",
+   "control_type": "Number",
+   "sequence": 3,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Damper Specs",
+   "field": "assemblyWidthWa",
+   "label": "Assembly Width (WA)",
+   "control_type": "Number",
+   "sequence": 3,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Blade",
+   "field": "noofBlades",
+   "label": "# of Blades",
+   "control_type": "Number",
+   "sequence": 3,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Springs",
+   "field": "springsCost",
+   "label": "Springs Cost",
+   "control_type": "Number",
+   "sequence": 3,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "mountingAndRating",
+   "label": "Mounting and Rating",
+   "control_type": "Dropdown",
+   "sequence": 3,
+   "feature_types": [
+    "FT34"
+   ]
+  },
+  {
+   "structure": "Duct Specs",
+   "field": "ofWidthSections",
+   "label": "# of Width Sections",
+   "control_type": "Number",
+   "sequence": 4,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Sleeve",
+   "field": "sleeveCost",
+   "label": "Sleeve Cost",
+   "control_type": "Number",
+   "sequence": 4,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "integralSleeveSlitAdd",
+   "label": "Int. sleeve Add",
+   "control_type": "Dropdown",
+   "sequence": 4,
+   "feature_types": [
+    "FT39"
+   ]
+  },
+  {
+   "structure": "Damper Specs",
+   "field": "assemblyHeightHa",
+   "label": "Assembly Height (HA)",
+   "control_type": "Number",
+   "sequence": 4,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Blade",
+   "field": "bladeCoilWidth",
+   "label": "Blade Coil Width",
+   "control_type": "Number",
+   "sequence": 4,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Springs",
+   "field": "noofBrackets",
+   "label": "# of Brackets",
+   "control_type": "Number",
+   "sequence": 4,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "materialType",
+   "label": "Material Type",
+   "control_type": "Dropdown",
+   "sequence": 4,
+   "feature_types": [
+    "FT20"
+   ]
+  },
+  {
+   "structure": "Duct Specs",
+   "field": "ofHeightSections",
+   "label": "# of Height Sections",
+   "control_type": "Number",
+   "sequence": 5,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "totalCost",
+   "label": "Total Cost",
+   "control_type": "Number",
+   "sequence": 5,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameArea",
+   "label": "Frame Area",
+   "control_type": "Number",
+   "sequence": 5,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Blade",
+   "field": "bladeLength",
+   "label": "Blade Length",
+   "control_type": "Number",
+   "sequence": 5,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Springs",
+   "field": "bracketsCost",
+   "label": "Brackets Cost",
+   "control_type": "Number",
+   "sequence": 5,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "fittingType",
+   "label": "Fitting Type",
+   "control_type": "Dropdown",
+   "sequence": 5,
+   "feature_types": [
+    "FT127"
+   ]
+  },
+  {
+   "structure": "Cost",
+   "field": "profitCost",
+   "label": "Profit Cost",
+   "control_type": "Number",
+   "sequence": 6,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameWeight",
+   "label": "Frame Weight",
+   "control_type": "Number",
+   "sequence": 6,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Blade",
+   "field": "totalBladeArea",
+   "label": "Total Blade Area",
+   "control_type": "Number",
+   "sequence": 6,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Springs",
+   "field": "forceOfSpring",
+   "label": "Force of Spring",
+   "control_type": "Dropdown",
+   "sequence": 6,
+   "feature_types": [
+    "FT36"
+   ]
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "width",
+   "label": "Width (mm)",
+   "control_type": "Number",
+   "sequence": 6,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Cost",
+   "field": "productCost",
+   "label": "Product Cost",
+   "control_type": "Dropdown",
+   "sequence": 7,
+   "settings": {
+    "displayFormat": "1.0-2"
+   },
+   "feature_types": [
+    "FT29"
+   ]
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "frameCost",
+   "label": "Frame Cost",
+   "control_type": "Number",
+   "sequence": 7,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Blade",
+   "field": "totalBladeWeight",
+   "label": "Total Blade Weight",
+   "control_type": "Number",
+   "sequence": 7,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Springs",
+   "field": "linkType",
+   "label": "Link Type",
+   "control_type": "Dropdown",
+   "sequence": 7,
+   "feature_types": [
+    "FT35"
+   ]
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "height",
+   "label": "Height (mm)",
+   "control_type": "Number",
+   "sequence": 7,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "fittingsThickness",
+   "label": "Fittings Thickness",
+   "control_type": "Number",
+   "sequence": 8,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Blade",
+   "field": "bladeCost",
+   "label": "Blade Cost",
+   "control_type": "Number",
+   "sequence": 8,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Springs",
+   "field": "noofFusibleLink",
+   "label": "# of Fusible Link",
+   "control_type": "Number",
+   "sequence": 8,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "diameter",
+   "label": "Diameter (mm)",
+   "control_type": "Number",
+   "sequence": 8,
+   "settings": {
+    "displayFormat": "1.0-0"
+   }
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "fittingsArea",
+   "label": "Fittings Area",
+   "control_type": "Number",
+   "sequence": 9,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Springs",
+   "field": "fusibleLinkCost",
+   "label": "Fusible Link Cost",
+   "control_type": "Number",
+   "sequence": 9,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "sectionframeThickness",
+   "label": "Frame Thickness (only if different from standard)",
+   "control_type": "Dropdown",
+   "sequence": 9,
+   "feature_types": [
+    "FT23"
+   ]
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "totalFittingsWeight",
+   "label": "Total Fittings Weight",
+   "control_type": "Number",
+   "sequence": 10,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Blade",
+   "field": "bladeWidth",
+   "label": "Blade Width",
+   "control_type": "Number",
+   "sequence": 10,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Springs",
+   "field": "fusibleLinkHoldingStripCost",
+   "label": "Fusible Link Holding Strip Cost",
+   "control_type": "Number",
+   "sequence": 10,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "fusibleLinkTemp",
+   "label": "Fusible Link Temperature",
+   "control_type": "Dropdown",
+   "sequence": 10,
+   "feature_types": [
+    "FT21"
+   ]
+  },
+  {
+   "structure": "Frames & Fittings",
+   "field": "fittingsCost",
+   "label": "Fittings Cost",
+   "control_type": "Number",
+   "sequence": 11,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "materialCost",
+   "label": "Material Cost",
+   "control_type": "Number",
+   "sequence": 11,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Springs",
+   "field": "rivetQty",
+   "label": "Rivet Qty",
+   "control_type": "Number",
+   "sequence": 11,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "section",
+   "label": "Section",
+   "control_type": "Dropdown",
+   "sequence": 11,
+   "feature_types": [
+    "FT25"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "density",
+   "label": "Density",
+   "control_type": "Number",
+   "sequence": 12,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Springs",
+   "field": "rivertCost",
+   "label": "Rivert Cost",
+   "control_type": "Number",
+   "sequence": 12,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "sleeveRequired",
+   "label": "External Sleeve Required",
+   "control_type": "Dropdown",
+   "sequence": 12,
+   "feature_types": [
+    "FT22"
+   ]
+  },
+  {
+   "structure": "Springs",
+   "field": "dowCorningSealantQty",
+   "label": "Dow Corning Sealant Qty",
+   "control_type": "Number",
+   "sequence": 13,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "sleeveType",
+   "label": "Sleeve Type",
+   "control_type": "Dropdown",
+   "sequence": 13,
+   "feature_types": [
+    "FT26"
+   ]
+  },
+  {
+   "structure": "Springs",
+   "field": "dowCorningSealantCost",
+   "label": "Dow Corning Sealant Cost",
+   "control_type": "Number",
+   "sequence": 14,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "sleeveSelection",
+   "label": "Sleeve Selection",
+   "control_type": "Dropdown",
+   "sequence": 14,
+   "feature_types": [
+    "FT38"
+   ]
+  },
+  {
+   "structure": "Springs",
+   "field": "limitSwitchCost",
+   "label": "Limit Switch Cost",
+   "control_type": "Number",
+   "sequence": 15,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "sectionSleeveThickness",
+   "label": "Sleeve Thickness",
+   "control_type": "Dropdown",
+   "sequence": 15,
+   "feature_types": [
+    "FT23"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "modelNo",
+   "label": "Base Model",
+   "control_type": "Dropdown",
+   "sequence": 16,
+   "feature_types": [
+    "FT15"
+   ]
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "sleeveLength",
+   "label": "Sleeve Length",
+   "control_type": "Dropdown",
+   "sequence": 16,
+   "feature_types": [
+    "FT24"
+   ]
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "limitSwitchRequired",
+   "label": "Limit Switch Required",
+   "control_type": "Dropdown",
+   "sequence": 17,
+   "feature_types": [
+    "FT22"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "type",
+   "label": "Type",
+   "control_type": "Dropdown",
+   "sequence": 18,
+   "feature_types": [
+    "FT16"
+   ]
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "tagRef",
+   "label": "Tag Ref",
+   "control_type": "Textbox",
+   "sequence": 18
+  },
+  {
+   "structure": "Factors",
+   "field": "mounting",
+   "label": "Mounting",
+   "control_type": "Dropdown",
+   "sequence": 19,
+   "feature_types": [
+    "FT17"
+   ]
+  },
+  {
+   "structure": "Curtain Fire Dampers",
+   "field": "notes",
+   "label": "Notes",
+   "control_type": "Textbox",
+   "sequence": 19
+  },
+  {
+   "structure": "Factors",
+   "field": "rating",
+   "label": "Rating",
+   "control_type": "Dropdown",
+   "sequence": 20,
+   "feature_types": [
+    "FT74"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "maxSingleSectionWidth",
+   "label": "Max single Section Width",
+   "control_type": "Number",
+   "sequence": 21,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "maxSingleSectionHeight",
+   "label": "Max Single Section Height",
+   "control_type": "Number",
+   "sequence": 22,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "maxMultiSectionWidth",
+   "label": "Max Multi Section Width (1)",
+   "control_type": "Number",
+   "sequence": 23,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "maxMultiSectionWidth2",
+   "label": "Max Multi Section Width (2)",
+   "control_type": "Number",
+   "sequence": 24,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "maxMultiSectionHeight",
+   "label": "Max Multi Section Height",
+   "control_type": "Number",
+   "sequence": 25,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "maxMultiSectionDiameter",
+   "label": "Max Multi Section Diameter 1",
+   "control_type": "Number",
+   "sequence": 26,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "damperHeightOffset",
+   "label": "Damper Height Offset",
+   "control_type": "Dropdown",
+   "sequence": 28,
+   "feature_types": [
+    "FT30"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "modelNum",
+   "label": "model Num",
+   "control_type": "Textbox",
+   "sequence": 29
+  },
+  {
+   "structure": "Factors",
+   "field": "cvsuniqueId",
+   "label": "Unique Id",
+   "control_type": "Dropdown",
+   "sequence": 30,
+   "feature_types": [
+    "FT131"
+   ]
+  },
+  {
+   "structure": "Duct Specs",
+   "field": "noofSections",
+   "label": "# of Sections",
+   "control_type": "Number",
+   "sequence": 31,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "blades",
+   "label": "Blades",
+   "control_type": "Dropdown",
+   "sequence": 31,
+   "feature_types": [
+    "FT32"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "countryWiseCost",
+   "label": "Country Wise Cost",
+   "control_type": "Dropdown",
+   "sequence": 32,
+   "settings": {
+    "displayFormat": "1.0-2"
+   },
+   "feature_types": [
+    "FT40"
+   ]
+  },
+  {
+   "structure": "Factors",
+   "field": "manufacturingOh",
+   "label": "Manufacturing OH",
+   "control_type": "Number",
+   "sequence": 33,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "totalProcessingCost",
+   "label": "Total Processing Cost",
+   "control_type": "Number",
+   "sequence": 34,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "totalProcessingMinutes",
+   "label": "Total Processing Minutes",
+   "control_type": "Number",
+   "sequence": 35,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "multisectionProcessingMinutes",
+   "label": "Multi-Section Processing Minutes",
+   "control_type": "Number",
+   "sequence": 36,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "switchProcessingMinutes",
+   "label": "Switch Processing Minutes",
+   "control_type": "Number",
+   "sequence": 37,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "sleeveProcessingMinutes",
+   "label": "Sleeve Processing Minutes",
+   "control_type": "Number",
+   "sequence": 38,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "bladeProcessingMinutes",
+   "label": "Blade Processing Minutes",
+   "control_type": "Number",
+   "sequence": 39,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "frameProcessingMinutes",
+   "label": "Frame Processing Minutes",
+   "control_type": "Number",
+   "sequence": 40,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "hourlyRate",
+   "label": "Hourly Rate",
+   "control_type": "Number",
+   "sequence": 49,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "category",
+   "label": "Category",
+   "control_type": "Textbox",
+   "sequence": 54
+  },
+  {
+   "structure": "Factors",
+   "field": "heightLookupValueXl",
+   "label": "Height Lookup Value (XL)",
+   "control_type": "Number",
+   "sequence": 55,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "thermalBlanketArea",
+   "label": "Thermal Blanket Area",
+   "control_type": "Number",
+   "sequence": 56,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "thermalBlanketCost",
+   "label": "Thermal Blanket Cost",
+   "control_type": "Number",
+   "sequence": 57,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "maxUlSingleSectionWidth",
+   "label": "Max UL Single Section Width",
+   "control_type": "Number",
+   "sequence": 58,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "maxUlSingleSectionHeight",
+   "label": "Max UL Single Section Height",
+   "control_type": "Number",
+   "sequence": 59,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  },
+  {
+   "structure": "Factors",
+   "field": "maxUlSingleSectionDiameter",
+   "label": "Max UL Single Section Diameter",
+   "control_type": "Number",
+   "sequence": 60,
+   "settings": {
+    "displayFormat": "1.2-2"
+   }
+  }
+ ],
+ "lookups": [
+  {
+   "field": "isCartLocked",
+   "path": "cart.locked"
+  }
+ ],
+ "groups": [
+  {
+   "key": "Section Detail",
+   "label": "Section Detail",
+   "features": [
+    "cvsuniqueId",
+    "sleeveType",
+    "noofSections",
+    "damperWidth",
+    "damperHeight",
+    "assemblyWidthWa",
+    "assemblyHeightHa",
+    "maxMultiSectionWidth",
+    "maxMultiSectionWidth2",
+    "maxMultiSectionHeight",
+    "maxMultiSectionDiameter",
+    "maxSingleSectionWidth",
+    "frameThickness",
+    "maxUlSingleSectionWidth",
+    "maxUlSingleSectionHeight",
+    "maxUlSingleSectionDiameter",
+    "sleeveLength"
+   ],
+   "properties": "feature.label,featureTypeItem.value",
+   "show_summary": 0,
+   "sequence": 1
+  },
+  {
+   "key": "Cost",
+   "label": "Cost",
+   "features": [
+    "frameCost",
+    "fittingsCost",
+    "bladeCost",
+    "springsCost",
+    "bracketsCost",
+    "fusibleLinkCost",
+    "fusibleLinkHoldingStripCost",
+    "rivertCost",
+    "dowCorningSealantCost",
+    "limitSwitchCost",
+    "sleeveCost",
+    "thermalBlanketCost",
+    "materialCostUnit",
+    "totalProcessingCost",
+    "manufacturingOh"
+   ],
+   "properties": "feature.label,featureTypeItem.value",
+   "show_summary": 0,
+   "sequence": 2,
+   "template": "@if(ecomStore.userInfo().roles.indexOf(\"OneCPQ Admin\") != -1){\n    @if(bundleGroup(); as bg){\n                @if(toggleable()){    \n                <div class=\"pt-2\">\n                    <p-panel class=\"pt-2\" [collapsed]=\"collapsed()\" [toggleable]=\"toggleable()\" collapseIcon=\"pi pi-angle-left\"\n                        expandIcon=\"pi pi-angle-down\">\n                        <ng-template #header>\n                            <div class=\"flex align-items-center gap-2\">\n                                <span class=\"font-bold\">\n                                    {{bg.label}}\n                                </span>\n                            </div>\n                        </ng-template>\n                        @if(toggleable()){\n                        <ng-template #icons>\n                            <button\n                                class=\"p-0 p-ripple p-button p-component p-button-icon-only p-button-secondary p-button-rounded p-button-text p-panel-header-icon p-panel-toggler p-link\"\n                                (click)=\"setExpanded()\">\n                                <span [class]=\"'pi pi-angle-double-'+(collapsed() ? 'left':'down')\"></span>\n                            </button>\n                        </ng-template>\n                        }\n                        <ng-container *ngTemplateOutlet=\"table\"></ng-container>\n                    </p-panel>\n                </div>\n            }\n            @else {\n                <ng-container *ngTemplateOutlet=\"table\"></ng-container>\n            }\n            <ng-template #table>\n    @if(bundleGroup(); as bg){\n    @if(cartItemFeatureModels(); as cifs){\n    <p-table size=\"small\" styleClass=\"text-base \" paginatorDropdownAppendTo=\"body\"\n        [paginator]=\"cifs.length >5?true:false\" [rows]=\"10\" [rowsPerPageOptions]=\"[5,10,20,50,75,100]\" #dt\n        responsiveLayout=\"stack\" [value]=\"cifs\">\n\n        <ng-template #header>\n            <tr>\n                @for(property of bg.properties; track property){\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                <th\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    {{_.get(AppConst.bundleGroupColumns,property)?.label}}</th>\n                }\n            </tr>\n        </ng-template>\n        <ng-template #body let-item let-rowIndex=\"rowIndex\">\n            <tr class=\"bundleGroupTable\" (click)=\"navigate(item)\">\n                @for(property of bg.properties; track property){\n\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                @if(md?.editable && editable()) {\n                <td [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\"\n                    [pEditableColumn]=\"property\" [pEditableColumnField]=\"property\">\n                    <span class=\"p-column-title\">{{md.label}}</span>\n                    @if(property === 'unitPrice'){\n\n                    @let ftip = this.bundleGroupInterface()?.getPriceListDetail(item.featureTypeItem.id,'One Time');\n\n\n                    @if(ftip?.isMatrix){\n                    <span>\n\n                        <p-button (click)=\"handleToggleMatrix(item.featureTypeItem,$event)\" title=\"Matrix Detail\"\n                            styleClass=\"btb-rotate-45\" icon=\"pi pi-thumbtack\" [rounded]=\"true\" [text]=\"true\" />\n                        <btb-shared-matrix-price-detail [cartItemFeature]=\"item\"\n                            [headerTitle]=\"(ftip?.matrixType ?? '') +' pricing - '+item.featureTypeItem.value\"\n                            [items]=\"ftip?.entries\" [displayModal]=\"toggleViewModel()[item.featureTypeItem.id]\">\n                        </btb-shared-matrix-price-detail>\n                    </span>\n                    }\n                    }\n                    <p-cellEditor class=\"align-content-end\">\n                        <ng-template pTemplate=\"input\">\n                            @if(md.type === 'currency' || md.type === 'number'|| md.type === 'percentage') {\n                            <input pInputText type=\"number\" [(ngModel)]=\"item[property]\">\n                            }\n                        </ng-template>\n                        <ng-template pTemplate=\"output\">\n                            <span class=\"ref-link cursor-pointer\">\n                                {{getValue(item, property)}}\n                            </span>\n                        </ng-template>\n                    </p-cellEditor>\n                </td>    \n                \n                }\n                @else {\n                <td\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    <span class=\"p-column-title\">{{md?.label}}</span>\n                    {{getValue(item, property)}}\n                </td>\n                }\n                }\n            </tr>\n        </ng-template>\n        <ng-template #footer *ngIf=\"bg.showSummary\">\n            <tr>\n                @for(property of bg.properties; track property){\n                @let md = _.get(AppConst.bundleGroupColumns,property);\n                <td\n                    [class]=\"(md.type === 'number' ||md.type === 'currency' || md.type === 'percentage') ? 'text-right':''\">\n                    @if (md?.showSummary) {\n                    {{_.get(summary(),property)}}\n                    }\n\n                </td>\n                }\n            </tr>\n        </ng-template>\n    </p-table>\n    }\n    }\n</ng-template>\n        }\n}"
+  }
+ ],
+ "constraints": [
+  {
+   "key": "IMC1216",
+   "label": null,
+   "parent": null,
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "LOADDEFAULTS()",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "productCost"
+     ],
+     "options": [
+      "Curtain Damper"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC202175",
+   "label": null,
+   "parent": "968",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(productCost) == 0)",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "productCost"
+     ],
+     "options": [
+      "Curtain Damper"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC211908",
+   "label": null,
+   "parent": "968",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "((NUMBER(height) < OBJECTATTRIBUTEF(cvsuniqueId,'min_height')) || (NUMBER(height) > NUMBER(maxMultiSectionHeight))) && CONTAINS(fittingType, '$[Rect]','$[NA]')",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "\t'Height entered is outside the size range for this model. Please check height.'"
+    }
+   ]
+  },
+  {
+   "key": "IMC211909",
+   "label": null,
+   "parent": "968",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "((NUMBER(diameter) < OBJECTATTRIBUTEF(cvsuniqueId,'min_diameter')) || (NUMBER(diameter) > OBJECTATTRIBUTEF(cvsuniqueId,'max_multi_section_diameter1'))) && CONTAINS(fittingType,'$[Round]')",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "'Diameter entered is outside the size range for this model. Please check diameter.'"
+    }
+   ]
+  },
+  {
+   "key": "IMC246849",
+   "label": null,
+   "parent": null,
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(CONTAINS(subcategory, '$[Static Curtain Damper]')\n&&\n(ISCHANGED(modelDescription) || ISCHANGED(subcategory)))\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "mountingAndRating"
+     ],
+     "options": [
+      "V-1.5 Hrs"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "IMC249513",
+   "label": null,
+   "parent": "968",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(fittingType, '$[Round]') && NOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "width",
+      "height"
+     ],
+     "expr": "0"
+    }
+   ]
+  },
+  {
+   "key": "IMC249515",
+   "label": null,
+   "parent": "968",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "NOT(CONTAINS(fittingType, '$[Round]')) && NOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "diameter"
+     ],
+     "expr": "0"
+    }
+   ]
+  },
+  {
+   "key": "IMC304819",
+   "label": null,
+   "parent": "968",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "REFERENCE(isCartLocked)",
+   "actions": [
+    {
+     "type": "Hide Bundle Property",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "save"
+     ]
+    },
+    {
+     "type": "Lock",
+     "sequence": 0,
+     "active": 1,
+     "result": 1
+    }
+   ]
+  },
+  {
+   "key": "IMC30622",
+   "label": null,
+   "parent": "968",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "( CONTAINS(fittingType, '$[Rect]','$[NA]') && CONTAINS(sleeveType,'$[Integral]') ) && ( (NUMBER(width)>NUMBER(maxUlSingleSectionWidth)) || (NUMBER(height)>NUMBER(maxUlSingleSectionHeight)) )\n\n",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "'Warning : For integral sleeve models, please select sizes within single section range'"
+    }
+   ]
+  },
+  {
+   "key": "IMC30623",
+   "label": null,
+   "parent": "968",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(fittingType,'$[Round]')&& CONTAINS(sleeveType,'$[Integral]') && (NUMBER(diameter)>NUMBER(maxUlSingleSectionDiameter))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "'Warning : For integral sleeve models, please select sizes within single section range'"
+    }
+   ]
+  },
+  {
+   "key": "IMC30624",
+   "label": null,
+   "parent": "968",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "( CONTAINS(fittingType, '$[Rect]','$[NA]') && CONTAINS(sleeveType,'$[Optional]','$[Required]') ) && ( (TEXT(category) =='AboveUL' ) || (NUMBER(height)>NUMBER(maxMultiSectionHeight)) )\r\n\r\n",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "'Warning : Sizes entered exceed UL maximum sizes for Multi-Section damper.'"
+    }
+   ]
+  },
+  {
+   "key": "IMC30625",
+   "label": null,
+   "parent": "968",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "CONTAINS(fittingType,'$[Round]') && CONTAINS(sleeveType,'$[Optional]','$[Required]') && (NUMBER(diameter)>CFLOAT(OBJECTATTRIBUTEF(cvsuniqueId,'max_multi_section_diameter1')))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "'Warning : Sizes entered exceed UL maximum sizes for Multi-Section damper.'"
+    },
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "'Warning : Sizes entered exceed UL maximum sizes for Multi-Section damper.'"
+    },
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "'Warning : Sizes entered exceed UL maximum sizes for Multi-Section damper.'"
+    }
+   ]
+  },
+  {
+   "key": "IMC30652",
+   "label": null,
+   "parent": "968",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(NUMBER(width) < OBJECTATTRIBUTEF(cvsuniqueId,'min_width') || (TEXT(category) == 'AboveUL')) && CONTAINS(fittingType, '$[Rect]','$[NA]')\r\n",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "'Width entered is outside the size range for this model. Please check width.'"
+    }
+   ]
+  },
+  {
+   "key": "IMC55443",
+   "label": null,
+   "parent": "968",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "NUMBER(frameThickness) < SELECTEDVALUE(sectionframeThickness)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "expr": "'Frame thickness should be higher than thickness value'"
+    }
+   ]
+  },
+  {
+   "key": "IMC6626909",
+   "label": null,
+   "parent": "968",
+   "sequence": 0,
+   "active": 1,
+   "result": 1,
+   "when": "(NUMBER(totalCost) >0) || (NUMBER(totalCost) ==0)",
+   "actions": [
+    {
+     "type": "Change Value Price",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "productCost"
+     ],
+     "options": [
+      "Curtain Damper"
+     ],
+     "expr": "EVALUATE(' return Math.ceil(input.arg1);', (NUMBER(totalCost) / ( 1 - CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Profit (CFD)]','cost')) )) )"
+    }
+   ]
+  },
+  {
+   "key": "961",
+   "label": "Diameter show hide",
+   "parent": "968",
+   "sequence": 1,
+   "active": 1,
+   "result": 1,
+   "when": "(SELECTEDVALUE(fittingType) =='Round')\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Show Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "diameter"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 2,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "diameter"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "height",
+      "width"
+     ]
+    },
+    {
+     "type": "Show Field",
+     "sequence": 6,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "height",
+      "width"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "967",
+   "label": "Width range - error",
+   "parent": "969",
+   "sequence": 1,
+   "active": 1,
+   "result": 1,
+   "when": "(NUMBER(width) < OBJECTATTRIBUTEF(cvsuniqueId,'min_width') || (TEXT(category) == 'AboveUL'))\n&&\nCONTAINS(fittingType, '$[Rect]','$[NA]')",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Width entered is outside the size range for this model. Please check width.'"
+    }
+   ]
+  },
+  {
+   "key": "953",
+   "label": "Height range - error",
+   "parent": "969",
+   "sequence": 2,
+   "active": 1,
+   "result": 1,
+   "when": "((NUMBER(height) < OBJECTATTRIBUTEF(cvsuniqueId,'min_height')) || \n(NUMBER(height) > NUMBER(maxMultiSectionHeight)))\n&&\nCONTAINS(fittingType, '$[Rect]','$[NA]')",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Height entered is outside the size range for this model. Please check height.'"
+    }
+   ]
+  },
+  {
+   "key": "968",
+   "label": "Product Cost",
+   "parent": null,
+   "sequence": 2,
+   "active": 1,
+   "result": 0,
+   "when": "true",
+   "actions": [
+    {
+     "type": "Hide Bundle Property",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "search",
+      "basePrice",
+      "return"
+     ]
+    },
+    {
+     "type": "Lock Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelItem",
+      "bladeType",
+      "springs",
+      "subcategory",
+      "integralSleeveSlitAdd",
+      "modelDescription",
+      "mountingAndRating",
+      "forceOfSpring",
+      "materialType",
+      "productCost",
+      "linkType",
+      "fittingType",
+      "sectionframeThickness",
+      "fusibleLinkTemp",
+      "section",
+      "sleeveRequired",
+      "modelNo",
+      "sleeveType",
+      "sleeveSelection",
+      "type",
+      "sectionSleeveThickness",
+      "mounting",
+      "sleeveLength",
+      "rating",
+      "limitSwitchRequired",
+      "damperHeightOffset",
+      "cvsuniqueId",
+      "blades",
+      "countryWiseCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "ofWidthSections",
+      "ofHeightSections"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fusibleLinkHoldingStripCost",
+      "rivetQty",
+      "rivertCost",
+      "dowCorningSealantQty",
+      "dowCorningSealantCost",
+      "limitSwitchCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "productCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelItem",
+      "stickerCost",
+      "profit",
+      "materialCost",
+      "density",
+      "maxMultiSectionWidth2",
+      "maxMultiSectionDiameter",
+      "damperHeightOffset",
+      "countryWiseCost",
+      "manufacturingOh",
+      "totalProcessingCost",
+      "totalProcessingMinutes",
+      "multisectionProcessingMinutes",
+      "switchProcessingMinutes",
+      "sleeveProcessingMinutes",
+      "bladeProcessingMinutes",
+      "frameProcessingMinutes",
+      "hourlyRate",
+      "category",
+      "heightLookupValueXl",
+      "thermalBlanketArea",
+      "thermalBlanketCost",
+      "maxUlSingleSectionWidth",
+      "maxUlSingleSectionHeight",
+      "maxUlSingleSectionDiameter"
+     ]
+    },
+    {
+     "type": "Disable Bundle Property",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "title"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 4,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeCoilWidth",
+      "bladeCost",
+      "bladeLength",
+      "bladeThickness",
+      "bladeType",
+      "bladeWidth",
+      "maxMultiSectionHeight",
+      "maxMultiSectionWidth",
+      "maxSingleSectionHeight",
+      "maxSingleSectionWidth",
+      "noofBlades",
+      "noofSections",
+      "section"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 5,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "assemblyHeightHa",
+      "assemblyWidthWa",
+      "damperHeight",
+      "damperWidth",
+      "fittingsArea",
+      "fittingsCost",
+      "fittingsThickness",
+      "frameArea",
+      "frameCost",
+      "frameLength",
+      "frameSlitSize",
+      "frameThickness",
+      "frameWeight",
+      "totalBladeArea",
+      "totalBladeWeight",
+      "totalFittingsWeight"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 6,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bracketsCost",
+      "fusibleLinkCost",
+      "materialCostUnit",
+      "noofBrackets",
+      "noofFusibleLink",
+      "noofSprings",
+      "profitCost",
+      "sleeveArea",
+      "sleeveCost",
+      "sleeveThickness",
+      "sleeveWeight",
+      "springs",
+      "springsCost",
+      "totalCost"
+     ]
+    },
+    {
+     "type": "Freeze Field",
+     "sequence": 7,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "productCost"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 8,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "blades",
+      "fittingType",
+      "forceOfSpring",
+      "integralSleeveSlitAdd",
+      "linkType",
+      "modelNo",
+      "sleeveLength",
+      "springs",
+      "type"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 9,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "cvsuniqueId",
+      "maxMultiSectionHeight",
+      "maxMultiSectionWidth",
+      "maxSingleSectionHeight",
+      "maxSingleSectionWidth",
+      "modelNum",
+      "mounting",
+      "noofSections",
+      "rating",
+      "section",
+      "sleeveLength",
+      "sleeveType",
+      "type",
+      "fittingType"
+     ]
+    },
+    {
+     "type": "Change Value",
+     "sequence": 42,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "hourlyRate"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Cost per Hour (CFD)]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 43,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "profit"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Profit (CFD)]','cost'))"
+    },
+    {
+     "type": "Hide Field Price",
+     "sequence": 55,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fittingType",
+      "fusibleLinkTemp",
+      "limitSwitchRequired",
+      "materialType",
+      "modelDescription",
+      "mountingAndRating",
+      "section",
+      "sectionframeThickness",
+      "sectionSleeveThickness",
+      "sleeveLength",
+      "sleeveRequired",
+      "sleeveSelection",
+      "sleeveType",
+      "subcategory"
+     ]
+    },
+    {
+     "type": "Disable Field Quantity",
+     "sequence": 56,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fittingType",
+      "fusibleLinkTemp",
+      "limitSwitchRequired",
+      "materialType",
+      "modelDescription",
+      "mountingAndRating",
+      "section",
+      "sectionframeThickness",
+      "sectionSleeveThickness",
+      "sleeveLength",
+      "sleeveRequired",
+      "sleeveSelection",
+      "sleeveType",
+      "subcategory"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "987",
+   "label": null,
+   "parent": "968",
+   "sequence": 2,
+   "active": 1,
+   "result": 1,
+   "when": "(SELECTEDVALUE(fittingType) =='Round') && (ISNULLORBLANK(diameter))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please enter the Diameter.'"
+    }
+   ]
+  },
+  {
+   "key": "993",
+   "label": null,
+   "parent": null,
+   "sequence": 3,
+   "active": 1,
+   "result": 0,
+   "when": "LOADDEFAULTS()\n|| \n(\n    (ISCHANGED(subcategory)\n||\nISCHANGED(modelDescription))\n    &&\n    NOT(ISIMPORT())\n)\n",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fusibleLinkTemp",
+      "materialType",
+      "mountingAndRating"
+     ],
+     "options": [
+      "GI",
+      "V-1.5 Hrs",
+      "Standard 165F (74C)"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sectionframeThickness"
+     ],
+     "options": [
+      "0.80"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 4,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "limitSwitchRequired"
+     ],
+     "options": [
+      "No"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "994",
+   "label": null,
+   "parent": "968",
+   "sequence": 3,
+   "active": 1,
+   "result": 1,
+   "when": "(CONTAINS(sleeveType,'$[Integral]')) && (COUNT(sleeveSelection) == 0) \n||\n(CONTAINS(sleeveRequired,'$[Yes]')) && (COUNT(sleeveSelection) == 0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select Sleeve Selection Option.'"
+    }
+   ]
+  },
+  {
+   "key": "996",
+   "label": null,
+   "parent": "968",
+   "sequence": 4,
+   "active": 1,
+   "result": 1,
+   "when": "((CONTAINS(sleeveType,'$[Optional]') ) && (COUNT(sleeveRequired) == 0))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select one option from Sleeve Required.'"
+    }
+   ]
+  },
+  {
+   "key": "998",
+   "label": "Cloned 1",
+   "parent": "968",
+   "sequence": 5,
+   "active": 1,
+   "result": 1,
+   "when": "(CONTAINS(sleeveRequired,'$[Yes]')) && (COUNT(sectionSleeveThickness) == 0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select Section Sleeve Thickness Option.'"
+    }
+   ]
+  },
+  {
+   "key": "1001",
+   "label": null,
+   "parent": "968",
+   "sequence": 6,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(subcategory) == 0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select Sub-Category Option.'"
+    }
+   ]
+  },
+  {
+   "key": "972",
+   "label": "Model Number and Model Name change",
+   "parent": null,
+   "sequence": 6,
+   "active": 1,
+   "result": 0,
+   "when": "COUNT(modelDescription) > 0",
+   "actions": [
+    {
+     "type": "Include Value",
+     "sequence": 0,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelItem"
+     ],
+     "expr": "EVALUATE(' var mNo = input.arg1; return mNo.split(\" \")[0]',\nSELECTEDVALUE(modelDescription))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "type"
+     ],
+     "expr": "EVALUATE('\nvar mNo = input.arg1;\nvar result = mNo.split(\" \")[0];\nconsole.log(\"Type \",mNo);\nconsole.log(\"Type result \",result);\nif(result.indexOf(\"-AR\") != -1) return \"TypeAR\";\nif(result.indexOf(\"-A\") != -1) return \"TypeA\";\nif(result.indexOf(\"-B\") != -1) return \"TypeB\";\nif(result.indexOf(\"-C\") != -1) return \"TypeC\";\nreturn \"\";\n',SELECTEDVALUE(modelDescription))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelNo"
+     ],
+     "expr": "EVALUATE('\nvar mNo = input.arg1;\nvar result = mNo.split(\" \")[0];\nif(result.indexOf(\"FDD-SL\") != -1) {\nif(result.indexOf(\"-OW\") != -1) return \"FDD-SL-OW\";\nreturn \"FDD-SL\";\n}\nif(result.indexOf(\"FDD\") != -1) {\nif(result.indexOf(\"-AR\") != -1) return \"FDD-AR\";\nif(result.indexOf(\"-OW\") != -1) return \"FDD-OW\";\nreturn \"FDD\";\n}\nif(result.indexOf(\"FD-SL\") != -1) {\nif(result.indexOf(\"-OW\") != -1) return \"FD-SL-OW\";\n return \"FD-SL\";\n}\n\nif(result.indexOf(\"-AR\") != -1) return \"FD-AR\";\nif(result.indexOf(\"-OW\") != -1) return \"FD-OW\";\nreturn \"FD\";\n',SELECTEDVALUE(modelDescription))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fittingType"
+     ],
+     "expr": "EVALUATE('\nvar mNo = input.arg1;\nconsole.log(\" Model description : \",mNo);\nvar result = mNo.split(\" \")[0];\nconsole.log(\"Type \",mNo);\nconsole.log(\"Type result \",result);\nif(result.indexOf(\"-AR\") != -1) return \"Round\";\nif(result.indexOf(\"-A\") != -1) return \"NA\";\nif(result.indexOf(\"-B\") != -1) return \"Rect\";\nif(result.indexOf(\"-C\") != -1) {\nif(result.indexOf(\"-OV\") != -1) return \"Oval\";\nif(result.indexOf(\"-R\") != -1) return \"Round\";\nreturn \"Rect\";\n}\nreturn \"NA\";\n',SELECTEDVALUE(modelDescription))"
+    }
+   ]
+  },
+  {
+   "key": "1002",
+   "label": null,
+   "parent": "968",
+   "sequence": 7,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(modelDescription) ==0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select a Model.'"
+    }
+   ]
+  },
+  {
+   "key": "1003",
+   "label": null,
+   "parent": "968",
+   "sequence": 8,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(materialType) == 0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select a Material Type.'"
+    }
+   ]
+  },
+  {
+   "key": "1004",
+   "label": null,
+   "parent": "968",
+   "sequence": 9,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(mountingAndRating) == 0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select a Mounting and Rating option.'"
+    }
+   ]
+  },
+  {
+   "key": "1005",
+   "label": null,
+   "parent": "968",
+   "sequence": 10,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(fusibleLinkTemp) == 0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select a Fusible Link Temperature option.'"
+    }
+   ]
+  },
+  {
+   "key": "1006",
+   "label": null,
+   "parent": "968",
+   "sequence": 11,
+   "active": 1,
+   "result": 1,
+   "when": "(CONTAINS(fittingType,'$[Rect]') || CONTAINS(modelDescription,'$[FD-SL-A Slimline Curtain Fire Damper Type A - Static - Optional Sleeve]','$[FD-A Curtain Fire Damper Type A - Static - Optional Sleeve]','$[FD-A-I Curtain Fire Damper Type A - Static - Integral Sleeve]','$[FDD-SL-A Slimline Curtain Fire Damper Type A - Dynamic - Optional Sleeve]','$[FDD-A Curtain Fire Damper Type A - Dynamic - Optional Sleeve]','$[FDD-A-I Curtain Fire Damper Type A - Dynamic - Integral Sleeve]')) && ((ISNULLORBLANK(width)) || ISNULLORBLANK(height) )",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please enter Width and Height.'"
+    }
+   ]
+  },
+  {
+   "key": "1007",
+   "label": null,
+   "parent": "968",
+   "sequence": 12,
+   "active": 1,
+   "result": 1,
+   "when": "(COUNT(limitSwitchRequired) == 0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select a Micro Switch Indicator Package option.'"
+    }
+   ]
+  },
+  {
+   "key": "954",
+   "label": "Material Cost and density",
+   "parent": null,
+   "sequence": 12,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(materialType,'$[GI]','$[SS304L]','$[SS316L]')",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "materialCost"
+     ],
+     "expr": "\tIIF(SELECTEDVALUE(materialType)=='SS304L', CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS304L]','cost')), IIF(SELECTEDVALUE(materialType)=='SS316L', CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS316L]','cost')), CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI]','cost')) ) )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "density"
+     ],
+     "expr": " IIF((SELECTEDVALUE(materialType)=='SS304L' || SELECTEDVALUE(materialType)=='SS316L'),\n     CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[SS Density Factor]','cost')),\n     CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[GI Density Factor]','cost'))\n )"
+    }
+   ]
+  },
+  {
+   "key": "947",
+   "label": "Spring selection error",
+   "parent": "968",
+   "sequence": 13,
+   "active": 1,
+   "result": 1,
+   "when": "(SELECTEDVALUE(springs) =='NA') || (COUNT(springs) ==0)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Please select the correct size'"
+    }
+   ]
+  },
+  {
+   "key": "990",
+   "label": null,
+   "parent": null,
+   "sequence": 13,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(subcategory, '$[Static Curtain Damper]')\n&&\n(ISCHANGED(modelDescription)\n||\nISCHANGED(subcategory))\n&& NOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fusibleLinkTemp",
+      "limitSwitchRequired",
+      "materialType"
+     ],
+     "options": [
+      "GI",
+      "Standard 165F (74C)"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1014",
+   "label": null,
+   "parent": "968",
+   "sequence": 14,
+   "active": 0,
+   "result": 1,
+   "when": "CONTAINS(fittingType,'$[Round]')\n&&\nCONTAINS(sleeveType,'$[Optional]','$[Required]')\n&&\n (NUMBER(diameter)>CFLOAT(OBJECTATTRIBUTEF(cvsuniqueId,'max_multi_section_diameter1')))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Warning : Sizes entered exceed UL maximum sizes for Multi-Section damper.'"
+    }
+   ]
+  },
+  {
+   "key": "973",
+   "label": null,
+   "parent": null,
+   "sequence": 14,
+   "active": 1,
+   "result": 0,
+   "when": "(COUNT(modelDescription) > 0) && (COUNT(mountingAndRating) > 0 )",
+   "actions": [
+    {
+     "type": "Change Value",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "modelNum"
+     ],
+     "expr": "EVALUATE('\nvar mNo = input.arg1;\nvar mountingRating = input.arg2;\nvar fittingType = input.arg3;\n\nif(mountingRating == \"V-1.5 Hrs\") mountingRating = \"V1.5 HR\";\nif(mountingRating == \"V-3 Hrs\") mountingRating = \"V3 HR\";\nif(mountingRating == \"H-1.5 Hrs\") mountingRating = \"H1.5 HR\";\nif(mountingRating == \"H-3 Hrs\") mountingRating = \"H3 HR\";\nconsole.log(\"mNo.split [0] \",mNo.split(\" \")[0] );\nconsole.log(\"fittingType  \",fittingType );\nvar result = mNo.split(\" \")[0]+mountingRating+fittingType;\n\nreturn result;\n',\nSELECTEDVALUE(modelDescription),\nSELECTEDVALUE(mountingAndRating),\nSELECTEDVALUE(fittingType))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "mounting"
+     ],
+     "expr": "EVALUATE('\nvar mar = input.arg1;\nreturn mar.split(\"-\")[0];\n',\nSELECTEDVALUE(mountingAndRating))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "rating"
+     ],
+     "expr": "EVALUATE('\nvar mar = input.arg1;\nreturn mar.split(\"-\")[1];\n',\nSELECTEDVALUE(mountingAndRating))"
+    }
+   ]
+  },
+  {
+   "key": "1047",
+   "label": null,
+   "parent": "968",
+   "sequence": 15,
+   "active": 0,
+   "result": 1,
+   "when": "(\nCONTAINS(fittingType,'$[Rect]') && \nCONTAINS(sleeveType,'$[Optional]','$[Required]')\n)\n && \n(\n(TEXT(category) =='AboveUL' )\n || (NUMBER(height)>NUMBER(maxMultiSectionHeight))\n)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Warning : Sizes entered exceed UL maximum sizes for Multi-Section damper.'"
+    }
+   ]
+  },
+  {
+   "key": "962",
+   "label": null,
+   "parent": null,
+   "sequence": 15,
+   "active": 1,
+   "result": 0,
+   "when": "(COUNT(modelDescription) > 0) && (COUNT(mountingAndRating) > 0)",
+   "actions": [
+    {
+     "type": "Reset Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "cvsuniqueId"
+     ]
+    },
+    {
+     "type": "Include Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "cvsuniqueId"
+     ],
+     "expr": "TEXT(modelNum)"
+    }
+   ]
+  },
+  {
+   "key": "1048",
+   "label": "Integral - Rect",
+   "parent": "968",
+   "sequence": 16,
+   "active": 0,
+   "result": 1,
+   "when": "(\nCONTAINS(fittingType,'$[Rect]') && \nCONTAINS(sleeveType,'$[Integral]')\n)\n && \n(\n(NUMBER(width)>NUMBER(maxUlSingleSectionWidth))\n || (NUMBER(height)>NUMBER(maxUlSingleSectionHeight))\n)",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Warning : For integral sleeve models, please select sizes within single section range'"
+    }
+   ]
+  },
+  {
+   "key": "974",
+   "label": null,
+   "parent": null,
+   "sequence": 16,
+   "active": 1,
+   "result": 0,
+   "when": "COUNT(sleeveSelection) > 0",
+   "actions": [
+    {
+     "type": "Reset Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "sleeveLength"
+     ]
+    },
+    {
+     "type": "Include Value",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sleeveLength"
+     ],
+     "expr": "EVALUATE( ' console.log( input.arg1); \nvar val = input.arg1.replace(\"mm\",\"\").split(\" \");\n return val[2]; ', SELECTEDVALUE(sleeveSelection) )"
+    }
+   ]
+  },
+  {
+   "key": "1049",
+   "label": "Integral - Round",
+   "parent": "968",
+   "sequence": 17,
+   "active": 0,
+   "result": 1,
+   "when": "CONTAINS(fittingType,'$[Round]')&& \nCONTAINS(sleeveType,'$[Integral]') && \n(NUMBER(diameter)>NUMBER(maxUlSingleSectionDiameter))",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Warning : Sizes entered exceed UL maximum sizes for Multi-Section damper.'"
+    }
+   ]
+  },
+  {
+   "key": "969",
+   "label": "error Messages",
+   "parent": null,
+   "sequence": 18,
+   "active": 0,
+   "result": 0,
+   "when": "((NUMBER(width) > 0) || (NUMBER(height) > 0) || (NUMBER(diameter) > 0 ))&& (COUNT(cvsuniqueId) > 0 )",
+   "actions": []
+  },
+  {
+   "key": "995",
+   "label": null,
+   "parent": null,
+   "sequence": 19,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(sleeveType,'$[Integral]')",
+   "actions": [
+    {
+     "type": "Hide Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sleeveRequired"
+     ]
+    },
+    {
+     "type": "Show Field",
+     "sequence": 2,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "sleeveRequired"
+     ]
+    },
+    {
+     "type": "Reset Field",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sleeveRequired"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1046",
+   "label": null,
+   "parent": null,
+   "sequence": 20,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(sleeveType,'$[Required]')",
+   "actions": [
+    {
+     "type": "Enable Field",
+     "sequence": 0,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "sleeveRequired"
+     ]
+    },
+    {
+     "type": "Disable Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sleeveRequired"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sleeveRequired"
+     ],
+     "options": [
+      "Yes"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1000",
+   "label": "Cloned 1",
+   "parent": null,
+   "sequence": 21,
+   "active": 1,
+   "result": 0,
+   "when": "(CONTAINS(sleeveRequired,'$[Yes]') && CONTAINS(sleeveType,'$[Optional]','$[Required]'))\n|| CONTAINS(sleeveType,'$[Integral]')",
+   "actions": [
+    {
+     "type": "Show Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sleeveSelection"
+     ]
+    },
+    {
+     "type": "Hide Field",
+     "sequence": 2,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "sleeveSelection"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "999",
+   "label": "Cloned 1",
+   "parent": null,
+   "sequence": 22,
+   "active": 1,
+   "result": 0,
+   "when": "CONTAINS(sleeveRequired, '$[Yes]')\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Include",
+     "sequence": 4,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sectionSleeveThickness",
+      "sleeveSelection"
+     ],
+     "options": [
+      "1.00",
+      "12 Inch 305mm"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "997",
+   "label": "Cloned 1",
+   "parent": null,
+   "sequence": 23,
+   "active": 1,
+   "result": 0,
+   "when": "((CONTAINS(sleeveType,'$[Integral]')) \n|| \n(CONTAINS(sleeveType,'$[Optional]') \n&& CONTAINS(sleeveRequired,'$[No]'))\n)\n&&\nNOT(ISIMPORT())",
+   "actions": [
+    {
+     "type": "Hide Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sectionSleeveThickness"
+     ]
+    },
+    {
+     "type": "Show Field",
+     "sequence": 2,
+     "active": 1,
+     "result": 0,
+     "fields": [
+      "sectionSleeveThickness"
+     ]
+    },
+    {
+     "type": "Reset Field",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sectionSleeveThickness"
+     ]
+    }
+   ]
+  },
+  {
+   "key": "1011",
+   "label": null,
+   "parent": null,
+   "sequence": 24,
+   "active": 1,
+   "result": 0,
+   "when": "EVALUATE(' var roles = input.arg1.split(\",\"); if(roles.indexOf(\"OneCPQ Admin\") != -1) return false; return true; ',USERINFO('roles'))",
+   "actions": [
+    {
+     "type": "Hide Structure",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "@structure:Duct Specs",
+      "@structure:Damper Specs",
+      "@structure:Frames & Fittings",
+      "@structure:Blade",
+      "@structure:Springs",
+      "@structure:Sleeve",
+      "@structure:Cost",
+      "@structure:Factors"
+     ]
+    },
+    {
+     "type": "Hide Group",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "@group:Cost"
+     ]
+    },
+    {
+     "type": "Show List View",
+     "sequence": 3,
+     "active": 1,
+     "result": 1
+    }
+   ]
+  },
+  {
+   "key": "965",
+   "label": "populate related data from modelcode uniq",
+   "parent": null,
+   "sequence": 25,
+   "active": 1,
+   "result": 0,
+   "when": "(COUNT(cvsuniqueId)>0) || (NUMBER(width) > 0) || (NUMBER(height) > 0) || (NUMBER(diameter) >0)",
+   "actions": [
+    {
+     "type": "Reset Field",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "blades",
+      "springs"
+     ]
+    },
+    {
+     "type": "Include",
+     "sequence": 2,
+     "active": 0,
+     "result": 1,
+     "fields": [
+      "springs"
+     ],
+     "options": [
+      "NA"
+     ]
+    },
+    {
+     "type": "Change Value",
+     "sequence": 3,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "maxUlSingleSectionWidth"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEF(cvsuniqueId,'max_single_section_width'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 4,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "maxUlSingleSectionHeight"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEF(cvsuniqueId,'max_single_section_height'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 5,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "maxUlSingleSectionDiameter"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEF(cvsuniqueId,'max_single_section_diameter'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 6,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "maxSingleSectionWidth"
+     ],
+     "expr": "CFLOAT( IIF( (NUMBER(width)<=OBJECTATTRIBUTEF(cvsuniqueId,'max_width')) , OBJECTATTRIBUTEF(cvsuniqueId,'max_damper_section_width1'), OBJECTATTRIBUTEF(cvsuniqueId,'max_damper_section_width2') ) )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 7,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "maxSingleSectionHeight"
+     ],
+     "expr": "CFLOAT( IIF( (NUMBER(width)<=OBJECTATTRIBUTEF(cvsuniqueId,'max_width')) , OBJECTATTRIBUTEF(cvsuniqueId,'max_damper_section_height1'), OBJECTATTRIBUTEF(cvsuniqueId,'max_damper_section_height2') ) )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 8,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "maxMultiSectionWidth"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEF(cvsuniqueId,'max_width'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 9,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "maxMultiSectionWidth2"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEF(cvsuniqueId,'max_multi_section_width2'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 10,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "maxMultiSectionHeight"
+     ],
+     "expr": "CFLOAT(\nIIF(\n(NUMBER(width)<=OBJECTATTRIBUTEF(cvsuniqueId,'max_width'))\n,OBJECTATTRIBUTEF(cvsuniqueId,'max_height'),OBJECTATTRIBUTEF(cvsuniqueId,'max_multi_section_height2'))\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 11,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "maxMultiSectionDiameter"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEF(cvsuniqueId,'max_multi_section_diameter1'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 12,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "category"
+     ],
+     "expr": "IIF( (NUMBER(width)<=CFLOAT(OBJECTATTRIBUTEF(cvsuniqueId,'max_width'))),'Cat1',\nIIF( (NUMBER(width)<=CFLOAT(OBJECTATTRIBUTEF(cvsuniqueId,'max_multi_section_width2'))),'Cat2','AboveUL'))"
+    },
+    {
+     "type": "Change Field Price Picker",
+     "sequence": 13,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "damperHeightOffset"
+     ],
+     "expr": "IIF((SELECTEDVALUE(fittingType) == 'Round'), NUMBER(diameter),NUMBER(height))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 14,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "assemblyHeightHa"
+     ],
+     "expr": "(EVALUATE(' var type = input.arg1; \nvar fittingType = input.arg2; \nvar HI = input.arg3; \nvar diameter = input.arg4; \nvar mm = input.arg5; \nvar picker = input.arg6;\nvar baseModel = input.arg7;\n var offset = 0; \n if(picker>0 && picker<=500) offset = 50;\n if(picker>500 && picker<=800) offset = 75;\n if(picker>800 && picker<=1500) offset = 100;\n if(picker>1500 && picker<=1375) offset = 125;\n if(picker>1375 && picker<=1600) offset = 75;\n if(picker>1600 && picker<=2100) offset = 100;\n if(picker>2100 && picker<=3000) offset = 125;\n if(baseModel == \"FDD-OW\" && picker>500 && picker<=800) offset = 100;\nvar convFactor = input.arg8; \nvar output = 0;\nif(type == \"TypeAR\" ) return diameter+50;\n if(type == \"TypeA\" ) return HI;\n return picker+offset+convFactor;\n ', \n SELECTEDVALUE(type), \n SELECTEDVALUE(fittingType), \n NUMBER(height), \n NUMBER(diameter),\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Conversion Inch to mm]','cost')), \nIIF((SELECTEDVALUE(fittingType) == 'Round'), NUMBER(diameter),NUMBER(height)), \nSELECTEDVALUE(modelNo), \nIIF(SELECTEDVALUE(type)=='TypeC',25,0) \n)) - 6"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 15,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "assemblyWidthWa"
+     ],
+     "expr": "CFLOAT(EVALUATE('\n    var type = input.arg1;\n    var fittingType = input.arg2; \n    var width = input.arg3; \n    var HA = input.arg4; \n    var mm = input.arg5;\n    var output = 0; \n   if(type == \"TypeA\" || type == \"TypeB\") return width;\n    if(fittingType ==\"Round\")  return HA;\n    return width+25; \n', \nSELECTEDVALUE(type),\nSELECTEDVALUE(fittingType),\nNUMBER(width),\nNUMBER(assemblyHeightHa),\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Conversion Inch to mm]','cost'))\n)) - 6"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 16,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "ofWidthSections"
+     ],
+     "expr": "EVALUATE(' return Math.ceil(input.arg1);', NUMBER(assemblyWidthWa)/NUMBER(maxSingleSectionWidth) )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 17,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "ofHeightSections"
+     ],
+     "expr": "EVALUATE(' return Math.ceil(input.arg1);', NUMBER(assemblyHeightHa)/NUMBER(maxSingleSectionHeight) )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 18,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "noofSections"
+     ],
+     "expr": "NUMBER(ofWidthSections) * NUMBER(ofHeightSections)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 19,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "damperWidth"
+     ],
+     "expr": "EVALUATE('\nreturn Math.round(input.arg1);',\n(NUMBER(assemblyWidthWa)/NUMBER(ofWidthSections)))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 20,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "damperHeight"
+     ],
+     "expr": "EVALUATE(' return Math.round(input.arg1);', (NUMBER(assemblyHeightHa)/NUMBER(ofHeightSections)))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 21,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "heightLookupValueXl"
+     ],
+     "expr": "EVALUATE('return Math.round(input.arg1);', NUMBER(damperHeight)/25) *25"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 22,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameThickness"
+     ],
+     "expr": "IIF(\n((COUNT(sectionframeThickness) > 0) && \nCFLOAT(SELECTEDVALUE(sectionframeThickness)) > CFLOAT(OBJECTATTRIBUTEF(cvsuniqueId,'frame_thickness')) ),\nCFLOAT(SELECTEDVALUE(sectionframeThickness)),CFLOAT(OBJECTATTRIBUTEF(cvsuniqueId,'frame_thickness')))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 23,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sleeveType"
+     ],
+     "expr": "OBJECTATTRIBUTEF(cvsuniqueId,'sleeve_option')"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 24,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "integralSleeveSlitAdd"
+     ],
+     "expr": "IIF(\n((COUNT(sleeveLength)==0) || CONTAINS(sleeveType, '$[Optional]','$[N/A]','$[Required]'))\n,'0',IIF(\nCONTAINS(sleeveLength,'$[406]','$[356]'),\nCSTR(CFLOAT(SELECTEDVALUE(sleeveLength)) - 93),\nCSTR(CFLOAT(SELECTEDVALUE(sleeveLength)) - 94)\n))\n\n"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 25,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameSlitSize"
+     ],
+     "expr": "CFLOAT(OBJECTATTRIBUTEF(cvsuniqueId,'frameoil_width')) + \nIIF((COUNT(integralSleeveSlitAdd)>0),CFLOAT(SELECTEDVALUE(integralSleeveSlitAdd)),0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 26,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameLength"
+     ],
+     "expr": "(((NUMBER(damperHeight)+NUMBER(damperWidth))*2) + (50)) * (NUMBER(noofSections))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 27,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameArea"
+     ],
+     "expr": "NUMBER(frameLength)*NUMBER(frameSlitSize)/1000000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 28,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameWeight"
+     ],
+     "expr": "NUMBER(frameThickness)*NUMBER(frameArea)*NUMBER(density)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 29,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameCost"
+     ],
+     "expr": "(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Cutting Waste]','cost'))) * NUMBER(materialCost) * NUMBER(frameWeight)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 30,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sleeveThickness"
+     ],
+     "expr": "IIF(CONTAINS(sleeveRequired,'$[Yes]'), CFLOAT(IIF( 0.8>SELECTEDVALUE(sectionSleeveThickness), 0.8, SELECTEDVALUE(sectionSleeveThickness) )), 0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 31,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fittingsThickness"
+     ],
+     "expr": "IIF(\n(SELECTEDVALUE(sleeveRequired) == 'Yes'),\nNUMBER(sleeveThickness),\nNUMBER(frameThickness)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 32,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fittingsArea"
+     ],
+     "expr": "EVALUATE('\nvar type = input.arg1;\nvar fitting = input.arg2;\nvar ha = input.arg3;\nvar hi = input.arg4;\nvar wa = input.arg5;\nvar di = input.arg6;\nvar wi = input.arg7;\nvar output = 0;\nif(type==\"TypeB\") return (((ha-hi) + 30*2)*wa*2)/1000000;\nif(type==\"TypeAR\") return (((wa+50)*(ha+50)+(100*3.14*di))*2/1000000);\nif(type==\"TypeC\"){\n if(fitting==\"Round\") return (((wa+50)*(ha+50)+(100*3.14*di))*2/1000000);\n if(fitting==\"Rect\" || fitting==\"Oval\") return (((wa+50)*(ha+50)+((hi+wi)*2*100))*(2/1000000));\n}\nreturn output;\n',\nSELECTEDVALUE(type),\nSELECTEDVALUE(fittingType),\nNUMBER(assemblyHeightHa),\nNUMBER(height),\nNUMBER(assemblyWidthWa),\nNUMBER(diameter),\nNUMBER(width)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 33,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalFittingsWeight"
+     ],
+     "expr": "NUMBER(fittingsThickness)*NUMBER(fittingsArea)*NUMBER(density)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 34,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fittingsCost"
+     ],
+     "expr": "\tNUMBER(totalFittingsWeight) * NUMBER(materialCost) * (1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Cutting Waste]','cost')))"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 35,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeType"
+     ],
+     "expr": "OBJECTATTRIBUTEF(cvsuniqueId,'blade_type')"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 36,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeThickness"
+     ],
+     "expr": "IIF(CONTAINS(bladeType,'$[Standard]'),0.8,0.8)"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 37,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "blades"
+     ],
+     "expr": "CSTR(NUMBER(heightLookupValueXl))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 38,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "noofBlades"
+     ],
+     "expr": "IIF(CONTAINS(bladeType,'$[Standard]'),CFLOAT(OBJECTATTRIBUTEF(blades,'standard_noof_blades')),CFLOAT(OBJECTATTRIBUTEF(blades,'usl_noof_blades')))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 39,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeCoilWidth"
+     ],
+     "expr": "IIF(CONTAINS(bladeType,'$[Standard]'),70,55)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 40,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeLength"
+     ],
+     "expr": "NUMBER(damperWidth) - 8"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 41,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalBladeArea"
+     ],
+     "expr": "NUMBER(noofBlades)*NUMBER(bladeCoilWidth)*NUMBER(bladeLength)*NUMBER(noofSections)/1000000"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 42,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalBladeWeight"
+     ],
+     "expr": "NUMBER(totalBladeArea)*NUMBER(density)*NUMBER(bladeThickness)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 43,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeCost"
+     ],
+     "expr": "NUMBER(materialCost)*NUMBER(totalBladeWeight)*(1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Cutting Waste]','cost')))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 44,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "noofSprings"
+     ],
+     "expr": "CINT(OBJECTATTRIBUTEF(cvsuniqueId,'no_of_springs'))*NUMBER(noofSections)"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 45,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "springs"
+     ],
+     "expr": "EVALUATE('\n var baseModel = input.arg1;\n var mountingAndRating = input.arg2; \nvar mounting = mountingAndRating.substring(0, mountingAndRating.lastIndexOf(\"-\") );\nvar model = baseModel.substring(0, baseModel.indexOf(\"-\") );\nif(model==\"\") model = baseModel;\nvar result = model.concat(mounting);\nif(input.arg3 == null && input.arg4 == null && input.arg5 == null && input.arg6 == null ) return \"NA\";\nvar output =\"\";\nif(result ==\"FDH\") output = input.arg3; \nif(result ==\"FDDV\") output =  input.arg4;\n if(result ==\"FDDH\") output =  input.arg5;\n if(result == \"FDV\") output =  input.arg6;\nif(output ==null) output = \"NA\";\n return output;', \nSELECTEDVALUE(modelNo),\nSELECTEDVALUE(mountingAndRating), \nOBJECTATTRIBUTEF(blades,'static_damper_spring_size'), \nOBJECTATTRIBUTEF(blades,'dynamic_damper_vertical_spring'), \nOBJECTATTRIBUTEF(blades,'dynamic_damper_horizontal_spring') ,\nOBJECTATTRIBUTEF(blades,'static_damper_vertical_spring') \n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 46,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "springsCost"
+     ],
+     "expr": "EVALUATE('\nvar cost = input.arg1;\nvar noofSprings = input.arg2;\nconsole.log(\"cost \",Math.ceil(cost));\nreturn cost*noofSprings;\n',\nCFLOAT(OBJECTATTRIBUTEF(springs,'cost')),\nNUMBER(noofSprings)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 47,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bracketsCost"
+     ],
+     "expr": "EVALUATE('\nvar baseModel = input.arg1;\n\nvar model = baseModel.substring(0, baseModel.indexOf(\"-\") );\n\nif(model==\"\") model = baseModel;\nvar materialType = input.arg2;\nif(model ==\"FD\"){\nif(materialType==\"GI\" || materialType ==\"MS\") return input.arg3 * input.arg7;\n else return input.arg4 * input.arg7;\n}\nif(model ==\"FDD\"){\nif(materialType==\"GI\" || materialType ==\"MS\")  return input.arg5 * input.arg7;\n else return input.arg6 * input.arg7;\n}\nreturn 0;\n',\nSELECTEDVALUE(modelNo),\nSELECTEDVALUE(materialType),\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[LHS & RHS Static Spring Bracket Latch GI G90 JNDL 50X87X1.5mm 9249]','cost')),\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[LHS & RHS - Static Spring Bracket Latch SS304]','cost')),\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[LHS & RHS Dynamic Spring Bracket Latch Big GI G90 54X85X1.5mm 9002]','cost')),\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[LHS & RHS - Dynamic Spring Bracket Latch SS304]','cost'))\n,\nNUMBER(noofBrackets)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 47,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "noofBrackets"
+     ],
+     "expr": "CINT(OBJECTATTRIBUTEF(cvsuniqueId,'no_of_brackets'))*NUMBER(noofSections)"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 49,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "forceOfSpring"
+     ],
+     "expr": "OBJECTATTRIBUTEF(springs,'spring_force')"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 50,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "linkType"
+     ],
+     "expr": "IIF(((COUNT(mountingAndRating) > 0) && (COUNT(modelDescription) > 0) && ((COUNT(forceOfSpring) > 0) || NOT(ISNULLORBLANK(totalBladeWeight)))),\nEVALUATE('\nvar mar = input.arg1;\nvar fos = input.arg2;\nvar tbw = input.arg3;\nvar mounting= mar.split(\"-\")[0];\nvar linkType=\"\";\n\nif(mounting == \"H\" ) linkType = ( (fos * 2) <= 50)  ? \"JS\" : \"GS\";\nif(mounting == \"V\" ) linkType = ( Number((tbw )) <=5)  ? \"JS\" : \"GS\";\n\nreturn linkType;\n',\nSELECTEDVALUE(mountingAndRating),\nCFLOAT(OBJECTATTRIBUTEF(springs,'spring_force')),\nNUMBER(totalBladeWeight)),\n'')"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 51,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "noofFusibleLink"
+     ],
+     "expr": "NUMBER(noofSections)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 52,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fusibleLinkCost"
+     ],
+     "expr": "\nIIF(\n((SELECTEDVALUE(fusibleLinkTemp) =='High Temperature 212F (100C)' )&& (SELECTEDVALUE(linkType) == 'JS')),\nNUMBER(noofFusibleLink)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[MFL 212F]','cost')),\nIIF(\n((SELECTEDVALUE(fusibleLinkTemp) =='High Temperature 212F (100C)') && (SELECTEDVALUE(linkType) == 'GS' )),\nNUMBER(noofFusibleLink)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fusible Link 100C (212F) - Globe GS]','cost')),\nIIF(\n((SELECTEDVALUE(fusibleLinkTemp) =='Standard 165F (74C)') && (SELECTEDVALUE(linkType) == 'JS')),\nNUMBER(noofFusibleLink)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[MFL 165F]','cost')), \nIIF(\n((SELECTEDVALUE(fusibleLinkTemp) =='Standard 165F (74C)') && (SELECTEDVALUE(linkType) == 'GS' )),\nNUMBER(noofFusibleLink)*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fusible Link 73C (165F) - Globe GS]','cost')),0\n)\n)\n)\n)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 53,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "fusibleLinkHoldingStripCost"
+     ],
+     "expr": "NUMBER(noofSections) * CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fusible Link Holding Strip]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 54,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "rivetQty"
+     ],
+     "expr": "IIF( ((CONTAINS(sleeveRequired,'$[Yes]')) && (NUMBER(noofSections) > 1)), CFLOAT(EVALUATE(' var assemblyWidthWa= input.arg1; var assemblyHeightHa = input.arg2; var result = Math.ceil(( (assemblyWidthWa + assemblyHeightHa) * 2*2 /130)+8); return result; ', NUMBER(assemblyWidthWa), NUMBER(assemblyHeightHa) )),8)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 55,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "rivertCost"
+     ],
+     "expr": "NUMBER(rivetQty)\n*\nCFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Rivet]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 56,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "dowCorningSealantQty"
+     ],
+     "expr": "IIF( COUNT(sleeveLength) > 0, (1/50 * (((CFLOAT(SELECTEDVALUE(sleeveLength)) + 80)/1000) * NUMBER(noofSections))) ,(1/50 * ((80/1000) * NUMBER(noofSections))) )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 57,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "dowCorningSealantCost"
+     ],
+     "expr": "NUMBER(dowCorningSealantQty) * CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Sealant Dow Corning 732 - 310ml]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 57,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "limitSwitchCost"
+     ],
+     "expr": "IIF( CONTAINS(limitSwitchRequired,'$[Yes]'),(NUMBER(noofSections) * CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Limit Switch (Balde Position Switch)]','cost'))),0 )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 59,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sleeveArea"
+     ],
+     "expr": "IIF(CONTAINS(sleeveRequired,'$[Yes]'), ((2*SELECTEDVALUE(sleeveLength))/1000000) * (NUMBER(assemblyWidthWa)+NUMBER(assemblyHeightHa)), 0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 60,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sleeveWeight"
+     ],
+     "expr": "NUMBER(sleeveThickness)*NUMBER(sleeveArea)*NUMBER(density)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 61,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sleeveCost"
+     ],
+     "expr": "IIF( CONTAINS(sleeveRequired,'$[Yes]'),(NUMBER(sleeveWeight)*NUMBER(materialCost) * (1+CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Sleeve Wastage (CFD)]','cost')))),0 )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 62,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "thermalBlanketArea"
+     ],
+     "expr": "IIF(CONTAINS(sleeveType,'$[Required]'),NUMBER(sleeveArea),0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 63,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "thermalBlanketCost"
+     ],
+     "expr": "NUMBER(thermalBlanketArea) * CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Thermal Blanket Cost]','cost'))"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 64,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "stickerCost"
+     ],
+     "expr": "IIF((COUNT(modelDescription) > 0),7,0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 65,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "materialCostUnit"
+     ],
+     "expr": "NUMBER(fittingsCost)+NUMBER(frameCost) +NUMBER(bladeCost)+NUMBER(springsCost)+NUMBER(bracketsCost)+NUMBER(fusibleLinkCost)+NUMBER(fusibleLinkHoldingStripCost)+NUMBER(rivertCost)+NUMBER(dowCorningSealantCost)+NUMBER(limitSwitchCost)+NUMBER(sleeveCost)+NUMBER(stickerCost)\n+ NUMBER(thermalBlanketCost)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 66,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "frameProcessingMinutes"
+     ],
+     "expr": "(CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fixed Frame Minutes]','cost')) + ((NUMBER(damperHeight) + NUMBER(damperWidth) ) *2/1000 * CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Variable Frame Minutes]','cost')))) * NUMBER(noofSections)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 67,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeProcessingMinutes"
+     ],
+     "expr": "( (NUMBER(noofBlades) *CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fixed Blade Minutes]','cost')) ) + ((NUMBER(damperWidth) / 1000)*NUMBER(noofBlades) *CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Variable Blade Minutes]','cost'))) ) *NUMBER(noofSections)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 68,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "sleeveProcessingMinutes"
+     ],
+     "expr": "IIF(\n    ((SELECTEDVALUE(sleeveRequired) == 'Yes') && CONTAINS(sleeveType,'$[Optional]') )\n    \n    , ((CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Sleeve Fixed Cost]','cost')) + (( ( NUMBER(damperHeight) + NUMBER(damperWidth) ) * 2 / 1000) * CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Sleeve Fixing Cost]','cost'))))*NUMBER(noofSections)), 0 )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 69,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "switchProcessingMinutes"
+     ],
+     "expr": "IIF(SELECTEDVALUE(limitSwitchRequired) == 'Yes',(CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fixed Switch Minutes]','cost')) * NUMBER(noofSections)),0)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 70,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "multisectionProcessingMinutes"
+     ],
+     "expr": "IIF( (((NUMBER(noofSections)) >= 1) && NOT(ISNULLORBLANK(height)) && NOT(ISNULLORBLANK(width))), ( ( ( ( (NUMBER(ofWidthSections) - 1) * NUMBER(height) ) + ( (NUMBER(ofHeightSections) - 1) * NUMBER(width) ) ) / 1000*CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Joints Minutes for Multi-Section]','cost')) ) + ( CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Fixed Joints Minutes]','cost'))* (NUMBER(noofSections) - 1)) ) ,0 )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 71,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalProcessingMinutes"
+     ],
+     "expr": "NUMBER(frameProcessingMinutes) + NUMBER(bladeProcessingMinutes) + NUMBER(sleeveProcessingMinutes) + NUMBER(switchProcessingMinutes) + NUMBER(multisectionProcessingMinutes)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 72,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalProcessingCost"
+     ],
+     "expr": "(NUMBER(totalProcessingMinutes) / 60) * NUMBER(hourlyRate)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 73,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "manufacturingOh"
+     ],
+     "expr": "(NUMBER(materialCostUnit) + (NUMBER(totalProcessingMinutes) / 60) * NUMBER(hourlyRate)) * IIF( (NUMBER(damperHeight) > 500), CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Overhead Percentage where Height > 500 (CFD)]','cost')),CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Overhead Percentage where Height <= 500 (CFD)]','cost')) )"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 74,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "totalCost"
+     ],
+     "expr": "NUMBER(materialCostUnit)+((NUMBER(totalProcessingMinutes) / 60) * NUMBER(hourlyRate))+ NUMBER(manufacturingOh)"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 75,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "profitCost"
+     ],
+     "expr": "(NUMBER(totalCost)) / (1-CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Profit (CFD)]','cost')))"
+    },
+    {
+     "type": "Change Value Price",
+     "sequence": 76,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "productCost"
+     ],
+     "options": [
+      "Curtain Damper"
+     ],
+     "expr": "EVALUATE(' return Math.ceil(input.arg1);', (NUMBER(totalCost) / ( 1 - CFLOAT(OBJECTATTRIBUTEV(countryWiseCost,'$[Profit (CFD)]','cost')) )) )"
+    },
+    {
+     "type": "Include Value",
+     "sequence": 78,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "section"
+     ],
+     "expr": "IIF(NUMBER(noofSections)>1,'Multi','Single')"
+    },
+    {
+     "type": "Change Value",
+     "sequence": 79,
+     "active": 1,
+     "result": 1,
+     "fields": [
+      "bladeWidth"
+     ],
+     "expr": "IIF(CONTAINS(bladeType,'$[Standard]'),47,32)"
+    }
+   ]
+  },
+  {
+   "key": "966",
+   "label": "Change bundle title and Type C Conversion factor",
+   "parent": null,
+   "sequence": 26,
+   "active": 1,
+   "result": 0,
+   "when": "(COUNT(cvsuniqueId) > 0 )\n&&\n(\n(NOT(ISNULLORBLANK(width))\n&&\nNOT(ISNULLORBLANK(height)))\n||\nNOT(ISNULLORBLANK(diameter))\n)",
+   "actions": [
+    {
+     "type": "Change Bundle Title",
+     "sequence": 2,
+     "active": 1,
+     "result": 1,
+     "expr": "CONCAT(\n IIF((NUMBER(width) > 0), CONCAT( ' W: ' , NUMBER(width)) , ''),\n IIF((NUMBER(height) > 0), CONCAT( ' H: ' , NUMBER(height)) , ''),\n IIF((NUMBER(diameter) > 0), CONCAT( ' D: ' , NUMBER(diameter)) , ''),\n IIF((COUNT(sleeveLength) > 0) && (CONTAINS(sleeveRequired, '$[Yes]') || CONTAINS(sleeveType, '$[Integral]')) , CONCAT( ' L: ' , SELECTEDVALUE(sleeveLength)) ,IIF(COUNT(cvsuniqueId)>0,CONCAT( ' L: ' , OBJECTATTRIBUTEF(cvsuniqueId,'frame_width')),'')),\n IIF((COUNT(materialType) > 0), CONCAT( ' - ' ,SELECTEDVALUE(materialType),' ') , ''),\n IIF((COUNT(modelDescription) > 0), EVALUATE('\nvar mNo = input.arg1;\nvar result = mNo.split(\" \")[0];\nreturn result ;\n',SELECTEDVALUE(modelDescription)) , ''),\n' Curtain Fire Damper',\nIIF((SELECTEDVALUE(sleeveType) == 'Integral'),' Integral Sleeve','')\n)"
+    }
+   ]
+  },
+  {
+   "key": "1012",
+   "label": "Diameter range - error",
+   "parent": "969",
+   "sequence": 54,
+   "active": 1,
+   "result": 1,
+   "when": "((NUMBER(diameter) < OBJECTATTRIBUTEF(cvsuniqueId,'min_diameter')) \n|| (NUMBER(diameter) > OBJECTATTRIBUTEF(cvsuniqueId,'max_multi_section_diameter1'))) \n&& CONTAINS(fittingType,'$[Round]')",
+   "actions": [
+    {
+     "type": "Show Error",
+     "sequence": 1,
+     "active": 1,
+     "result": 1,
+     "expr": "'Diameter entered is outside the size range for this model. Please check diameter.'"
+    }
+   ]
+  }
+ ],
+ "mappings": [
+  {
+   "key": "106",
+   "mode": "feature",
+   "left": "modelNo",
+   "right": "mountingAndRating",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "FD-OW",
+     "H-1.5 Hrs"
+    ],
+    [
+     "FD-OW",
+     "V-1.5 Hrs"
+    ],
+    [
+     "FD-SL-OW",
+     "H-1.5 Hrs"
+    ],
+    [
+     "FD-SL-OW",
+     "V-1.5 Hrs"
+    ],
+    [
+     "FDD-OW",
+     "H-1.5 Hrs"
+    ],
+    [
+     "FDD-OW",
+     "V-1.5 Hrs"
+    ],
+    [
+     "FDD-SL-OW",
+     "H-1.5 Hrs"
+    ],
+    [
+     "FDD-SL-OW",
+     "V-1.5 Hrs"
+    ],
+    [
+     "FD",
+     "H-1.5 Hrs"
+    ],
+    [
+     "FD",
+     "H-3 Hrs"
+    ],
+    [
+     "FD",
+     "V-1.5 Hrs"
+    ],
+    [
+     "FD",
+     "V-3 Hrs"
+    ],
+    [
+     "FD-AR",
+     "H-1.5 Hrs"
+    ],
+    [
+     "FD-AR",
+     "H-3 Hrs"
+    ],
+    [
+     "FD-AR",
+     "V-1.5 Hrs"
+    ],
+    [
+     "FD-AR",
+     "V-3 Hrs"
+    ],
+    [
+     "FD-SL",
+     "H-1.5 Hrs"
+    ],
+    [
+     "FD-SL",
+     "H-3 Hrs"
+    ],
+    [
+     "FD-SL",
+     "V-1.5 Hrs"
+    ],
+    [
+     "FD-SL",
+     "V-3 Hrs"
+    ],
+    [
+     "FDD",
+     "H-1.5 Hrs"
+    ],
+    [
+     "FDD",
+     "H-3 Hrs"
+    ],
+    [
+     "FDD",
+     "V-1.5 Hrs"
+    ],
+    [
+     "FDD",
+     "V-3 Hrs"
+    ],
+    [
+     "FDD-AR",
+     "H-1.5 Hrs"
+    ],
+    [
+     "FDD-AR",
+     "H-3 Hrs"
+    ],
+    [
+     "FDD-AR",
+     "V-1.5 Hrs"
+    ],
+    [
+     "FDD-AR",
+     "V-3 Hrs"
+    ],
+    [
+     "FDD-SL",
+     "H-1.5 Hrs"
+    ],
+    [
+     "FDD-SL",
+     "H-3 Hrs"
+    ],
+    [
+     "FDD-SL",
+     "V-1.5 Hrs"
+    ],
+    [
+     "FDD-SL",
+     "V-3 Hrs"
+    ]
+   ]
+  },
+  {
+   "key": "90",
+   "mode": "feature",
+   "left": "sleeveType",
+   "right": "sectionframeThickness",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "Integral",
+     "1.00"
+    ],
+    [
+     "Integral",
+     "1.20"
+    ],
+    [
+     "Integral",
+     "1.50"
+    ],
+    [
+     "Optional",
+     "0.80"
+    ],
+    [
+     "Optional",
+     "1.00"
+    ],
+    [
+     "Optional",
+     "1.20"
+    ],
+    [
+     "Optional",
+     "1.50"
+    ],
+    [
+     "Required",
+     "0.80"
+    ],
+    [
+     "Required",
+     "1.00"
+    ],
+    [
+     "Required",
+     "1.20"
+    ],
+    [
+     "Required",
+     "1.50"
+    ]
+   ]
+  },
+  {
+   "key": "92",
+   "mode": "feature",
+   "left": "subcategory",
+   "right": "modelDescription",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "Static Curtain Damper",
+     "FD-A Curtain Fire Damper Type A - Static - Optional Sleeve"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-A-I Curtain Fire Damper Type A - Static - Integral Sleeve"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-A-OW Curtain Fire Damper Type A - Static - Out-of-Wall"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-AR Curtain Fire Damper Type A - Static - Round"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-AR-I Curtain Fire Damper Type A - Static - Integral Sleeve - Round"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-B Curtain Fire Damper Type B - Static - Optional Sleeve"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-B-I Curtain Fire Damper Type B - Static - Integral Sleeve"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-B-OW Curtain Fire Damper Type B - Static - Out-of-Wall"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-C-OV Curtain Fire Damper Type C - Static - Oval"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-C-OV-I Curtain Fire Damper Type C - Static - Integral Sleeve - Oval"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-C-OW Curtain Fire Damper Type C - Static - Out-of-Wall"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-C-R Curtain Fire Damper Type C - Static - Round"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-C-R-I Curtain Fire Damper Type C - Static - Integral Sleeve - Round"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-C-S/R Curtain Fire Damper Type C - Static - Rect"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-C-S/R-I Curtain Fire Damper Type C - Static - Integral Sleeve - Rect"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-SL-A Slimline Curtain Fire Damper Type A - Static - Optional Sleeve"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-SL-B Slimline Curtain Fire Damper Type B - Static - Optional Sleeve"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-SL-OW-A Slimline Curtain Fire Damper Type A - Static - Out-of-Wall"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-SL-OW-B Slimline Curtain Fire Damper Type B - Static - Out-of-Wall"
+    ],
+    [
+     "Static Curtain Damper",
+     "FD-SL-OW-C Slimline Curtain Fire Damper Type C - Static - Out-of-Wall"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-A Curtain Fire Damper Type A - Dynamic - Optional Sleeve"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-A-I Curtain Fire Damper Type A - Dynamic - Integral Sleeve"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-A-OW Curtain Fire Damper Type A - Dynamic - Out-of-Wall"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-AR Curtain Fire Damper Type A - Dynamic - Round"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-AR-I Curtain Fire Damper Type A - Dynamic - Integral Sleeve - Round"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-B Curtain Fire Damper Type B - Dynamic - Optional Sleeve"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-B-I Curtain Fire Damper Type B - Dynamic - Integral Sleeve"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-B-OW Curtain Fire Damper Type B - Dynamic - Out-of-Wall"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-C-OV Curtain Fire Damper Type C - Dynamic - Oval"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-C-OV-I Curtain Fire Damper Type C - Dynamic - Integral Sleeve - Oval"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-C-OW Curtain Fire Damper Type C - Dynamic - Out-of-Wall"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-C-R Curtain Fire Damper Type C - Dynamic - Round"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-C-R-I Curtain Fire Damper Type C - Dynamic - Integral Sleeve - Round"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-C-S/R Curtain Fire Damper Type C - Dynamic - Rect"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-C-S/R-I Curtain Fire Damper Type C - Dynamic - Integral Sleeve - Rect"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-SL-A Slimline Curtain Fire Damper Type A - Dynamic - Optional Sleeve"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-SL-B Slimline Curtain Fire Damper Type B - Dynamic - Optional Sleeve"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-SL-OW-A Slimline Curtain Fire Damper Type A - Dynamic - Out-of-Wall"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-SL-OW-B Slimline Curtain Fire Damper Type B - Dynamic - Out-of-Wall"
+    ],
+    [
+     "Dynamic Curtain Damper",
+     "FDD-SL-OW-C Slimline Curtain Fire Damper Type C - Dynamic - Out-of-Wall"
+    ]
+   ]
+  },
+  {
+   "key": "97",
+   "mode": "feature",
+   "left": "sleeveType",
+   "right": "sleeveSelection",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "Required",
+     "12 Inch 305mm"
+    ],
+    [
+     "Required",
+     "14 Inch 356mm"
+    ],
+    [
+     "Required",
+     "16 Inch 406mm"
+    ],
+    [
+     "Integral",
+     "10 Inch 254mm"
+    ],
+    [
+     "Integral",
+     "12 Inch 305mm"
+    ],
+    [
+     "Integral",
+     "14 Inch 356mm"
+    ],
+    [
+     "Integral",
+     "16 Inch 406mm"
+    ],
+    [
+     "Integral",
+     "8 Inch 203mm"
+    ],
+    [
+     "Optional",
+     "10 Inch 254mm"
+    ],
+    [
+     "Optional",
+     "12 Inch 305mm"
+    ],
+    [
+     "Optional",
+     "14 Inch 356mm"
+    ],
+    [
+     "Optional",
+     "16 Inch 406mm"
+    ],
+    [
+     "Optional",
+     "8 Inch 203mm"
+    ],
+    [
+     "Required",
+     "18 Inch 457mm"
+    ],
+    [
+     "Integral",
+     "18 Inch 457mm"
+    ],
+    [
+     "Integral",
+     "20 Inch 508mm"
+    ],
+    [
+     "Required",
+     "20 Inch 508mm"
+    ],
+    [
+     "Optional",
+     "22 Inch 559mm"
+    ],
+    [
+     "Optional",
+     "20 Inch 508mm"
+    ],
+    [
+     "Required",
+     "22 Inch 559mm"
+    ],
+    [
+     "Integral",
+     "22 Inch 559mm"
+    ],
+    [
+     "Optional",
+     "18 Inch 457mm"
+    ],
+    [
+     "Optional",
+     "26 Inch 660mm"
+    ],
+    [
+     "Optional",
+     "24 Inch 610mm"
+    ],
+    [
+     "Optional",
+     "30 Inch 762mm"
+    ],
+    [
+     "Integral",
+     "24 Inch 610mm"
+    ],
+    [
+     "Optional",
+     "28 Inch 711mm"
+    ],
+    [
+     "Integral",
+     "26 Inch 660mm"
+    ],
+    [
+     "Required",
+     "26 Inch 660mm"
+    ],
+    [
+     "Required",
+     "30 Inch 762mm"
+    ],
+    [
+     "Integral",
+     "30 Inch 762mm"
+    ],
+    [
+     "Required",
+     "28 Inch 711mm"
+    ],
+    [
+     "Integral",
+     "28 Inch 711mm"
+    ],
+    [
+     "Required",
+     "24 Inch 610mm"
+    ]
+   ]
+  },
+  {
+   "key": "99",
+   "mode": "feature",
+   "left": "sleeveType",
+   "right": "sectionSleeveThickness",
+   "two_way": 0,
+   "active": 1,
+   "sequence": 0,
+   "entries": [
+    [
+     "Integral",
+     "0.80"
+    ],
+    [
+     "Integral",
+     "1.00"
+    ],
+    [
+     "Integral",
+     "1.20"
+    ],
+    [
+     "Integral",
+     "1.50"
+    ],
+    [
+     "Optional",
+     "0.80"
+    ],
+    [
+     "Optional",
+     "1.00"
+    ],
+    [
+     "Optional",
+     "1.20"
+    ],
+    [
+     "Optional",
+     "1.50"
+    ],
+    [
+     "Required",
+     "1.00"
+    ],
+    [
+     "Required",
+     "1.20"
+    ],
+    [
+     "Required",
+     "1.50"
+    ]
+   ]
+  }
+ ]
+}
