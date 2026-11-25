@@ -16,15 +16,22 @@ class FTOCountryWiseCost(Document):
 		self.custom_product_family_description = ", ".join(labels)
 
 	def validate_boq_identifier(self):
-		"""Uniqueness is enforced here rather than by a database index.
+		"""Required and unique, checked here rather than by the field's reqd flag or a database index.
 
-		Frappe stores an empty Data field as '' and not NULL, so a unique index
-		would collide across every row that carries no identifier - which is
-		most of them. Checking in code lets blanks stay blank.
+		Cost feature types show rows by this identifier and rules and the BOQ name rows by it, so every
+		row needs one (fto_boq_identifiers filled all rows). The field is set_only_once: renames go through
+		a repo patch that also rewrites the rules.
+
+		Required is not a doctype flag because older patches (fto_cost_*) still save cost rows that have
+		no identifier yet on a site that migrates them before fto_boq_identifiers runs; a reqd flag synced
+		with the doctype would stop those patches. Patches are let through here for the same reason.
 		"""
 		identifier = (self.boq_identifier or "").strip()
 		self.boq_identifier = identifier
-		if(not identifier): return
+		if(not identifier):
+			if(frappe.flags.in_patch): return
+			frappe.throw(_("BOQ Identifier is required: cost options show the row by it and rules name the row by it."),
+						 frappe.MandatoryError, title=_("Missing BOQ Identifier"))
 
 		clash = frappe.db.get_value(
 			"FTOCountryWiseCost",

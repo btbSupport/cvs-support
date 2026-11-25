@@ -45,11 +45,12 @@
    "label": "Product Name"
   },
   {
-   "description": "Stable key the BOQ resolves this row by. Unique where set; blank on rows the BOQ does not name.",
+   "description": "Stable key of this row: cost options show it, rules and the BOQ name the row by it. Required and unique; cannot be changed after the first save (renames only by a repo patch).",
    "fieldname": "boq_identifier",
    "fieldtype": "Data",
    "in_standard_filter": 1,
-   "label": "BOQ Identifier"
+   "label": "BOQ Identifier",
+   "set_only_once": 1
   },
   {
    "fieldname": "category",
@@ -101,7 +102,7 @@
  ],
  "grid_page_length": 50,
  "links": [],
- "modified": "2026-11-23 10:00:00.000000",
+ "modified": "2026-11-25 10:00:00.000000",
  "modified_by": "Administrator",
  "module": "Btb Cvs Support",
  "name": "FTOCountryWiseCost",
