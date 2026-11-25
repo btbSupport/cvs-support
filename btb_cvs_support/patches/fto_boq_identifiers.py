@@ -11,8 +11,14 @@ Steps, all in the migrate's transaction (any stop leaves the site unchanged):
    '$[Profit]' -> '$[Profit (SIL)]'. The compiled `formula` names options by id and does not change, so prices
    are not affected; this keeps the readable text compiling to the same formula when a rule is saved in the UI.
 4. Identifiers are written, and every feature type over FTOCountryWiseCost shows boq_identifier.
-5. SIL: the corner options no longer share the flange text ('GI 20mm' -> 'GI 20mm (Corners)'), so the two
-   actions that pick the corner from the flange add the suffix (decision O1).
+5. SIL actions that build the text of a cost option follow the new keys:
+   - the corner options no longer share the flange text ('GI 20mm' -> 'GI 20mm (Corners)'), so the two actions
+     that pick the corner from the flange add the suffix (decision O1);
+   - the angle rows are shared with VCDA, whose rule builds 'GI 50 mm Angle'; the SIL angle action built
+     'GI 50' and now adds ' mm Angle' too (decision 2026-11-25).
+6. Rows that a rule finds by a text it builds (CONCAT: angles 'GI 50 mm Angle', VCDR bushes/bars, ULRD 'MFL 165F')
+   carry that text as identifier, not the product name the cost cleanup gave them. Those rules are re-run on
+   recent carts; a text that no longer finds its row stops the migrate (decision Q14, 2026-11-25).
 
 Safe to run again: a second run finds nothing to change.
 """
@@ -22,11 +28,19 @@ import json
 import frappe
 
 from btb_cvs_support.onecpq_rule_text import TOKEN, norm, relabel
+from btb_cvs_support.onecpq_text_lookups import lost_texts
 
 COST = "FTOCountryWiseCost"
 DATA = ("patches", "fto_boq_identifiers.json")
 FLANGE = "SELECTEDVALUE(flangeSizeLookup)"
-CORNER_SUFFIX = {"cornersUniq": " (Corners)", "fireRatedCorners": " (Fire rated Corners)"}
+ANGLE = "CONCAT(SELECTEDVALUE(materialType),' ',NUMBER(angleSize))"
+# SIL actions whose built text changes with the keys: impact field -> (text today, text after this patch).
+# Matched by what they do, not by name.
+TEXT_ACTIONS = {
+	"cornersUniq": (FLANGE, f"IIF((COUNT(flangeSizeLookup) > 0), CONCAT({FLANGE}, ' (Corners)'), '')"),
+	"fireRatedCorners": (FLANGE, f"IIF((COUNT(flangeSizeLookup) > 0), CONCAT({FLANGE}, ' (Fire rated Corners)'), '')"),
+	"AngleUniq": (ANGLE, "CONCAT(SELECTEDVALUE(materialType),' ',NUMBER(angleSize),' mm Angle')"),
+}
 
 
 def log(msg):
@@ -55,13 +69,14 @@ def execute():
 		if ft.data_text_field != "boq_identifier":
 			frappe.db.set_value("BtbFeatureType", ft.name, "data_text_field", "boq_identifier", update_modified=False)
 			switched.append(f"{ft.name} {ft.label} ({ft.data_text_field})")
-	corners = fix_corner_actions()
+	actions = fix_text_actions()
 
 	check_unique()
+	check_text_lookups()
 	frappe.clear_cache()
 	log(f"{len(identifiers)} cost rows checked, {filled} identifiers set; {len(switched)} feature types now show "
 		f"boq_identifier; {len(changed)} option texts changed; {tokens} rule tokens rewritten in {rules} rules; "
-		f"{corners} SIL corner actions updated")
+		f"{actions} SIL corner/angle actions updated")
 	if switched:
 		log("feature types switched: " + "; ".join(switched))
 	for msg in skipped:
@@ -120,20 +135,35 @@ def rewrite_rules(changed, old_text):
 	return rules, tokens, skipped
 
 
-def fix_corner_actions():
-	"""O1: the corner option = flange text + suffix. Matches the action by what it does, not by its name."""
+def fix_text_actions():
+	"""SIL corner (O1) and angle actions build the new keys. Matches an action by what it does, not by its name."""
 	done = 0
-	for a in frappe.get_all("BtbImplementationConstraintAction", filters={"impact_fields": ["in", list(CORNER_SUFFIX)]},
+	for a in frappe.get_all("BtbImplementationConstraintAction", filters={"impact_fields": ["in", list(TEXT_ACTIONS)]},
 			fields=["name", "impact_fields", "constraint", "formula"]):
-		if norm(a.formula) != norm(FLANGE) or norm(a.constraint) != norm(FLANGE):
+		today, expr = TEXT_ACTIONS[a.impact_fields]
+		if norm(a.formula) != norm(today) or norm(a.constraint) != norm(today):
 			continue
-		expr = (f"IIF((COUNT(flangeSizeLookup) > 0), "
-			f"CONCAT({FLANGE}, '{CORNER_SUFFIX[a.impact_fields]}'), '')")
 		frappe.db.set_value("BtbImplementationConstraintAction", a.name, {"constraint": expr, "formula": expr},
 			update_modified=False)
-		log(f"SIL corner action {a.name} ({a.impact_fields}): {expr}")
+		log(f"SIL action {a.name} ({a.impact_fields}): {expr}")
 		done += 1
 	return done
+
+
+def check_text_lookups():
+	"""Rules that build a text to pick a cost row ('GI 50', 'Nylon 6/6 12mm Round Bar Bush') must still find it.
+
+	Re-runs those rules on the carts of the last 12 months (see onecpq_text_lookups). A row whose key
+	is not the text its rule builds would price at 0 and drop off the BOQ on every new configuration.
+	"""
+	lost = lost_texts()
+	if(lost):
+		frappe.throw("fto_boq_identifiers: rules build texts that no cost option carries any more (the row's "
+			"identifier must be that text): " + "; ".join(
+				f"action {action} ({bundle} {field}) builds {text!r} on {carts} carts, {had} of them used "
+				f"{row} whose identifier is {key!r}"
+				for action, bundle, field, text, carts, had, row, key in lost))
+	log("rules that build a text to pick a cost row: every text used on carts of the last 12 months finds its row")
 
 
 def check_unique():
