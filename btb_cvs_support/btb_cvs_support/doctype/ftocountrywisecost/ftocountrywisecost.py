@@ -1,6 +1,14 @@
 import frappe
 from frappe import _
 from frappe.model.document import Document
+from frappe.modules.patch_handler import executed
+
+IDENTIFIER_PATCH = "btb_cvs_support.patches.fto_boq_identifiers"
+
+
+def identifiers_live():
+	"""True once this site has run the patch that gives every cost row its identifier."""
+	return bool(executed(IDENTIFIER_PATCH))
 
 
 class FTOCountryWiseCost(Document):
@@ -24,12 +32,13 @@ class FTOCountryWiseCost(Document):
 
 		Required is not a doctype flag because older patches (fto_cost_*) still save cost rows that have
 		no identifier yet on a site that migrates them before fto_boq_identifiers runs; a reqd flag synced
-		with the doctype would stop those patches. Patches are let through here for the same reason.
+		with the doctype would stop those patches. Patches are let through here for the same reason, and
+		so is a site that has the code but has not migrated yet (one bench serves several sites).
 		"""
 		identifier = (self.boq_identifier or "").strip()
 		self.boq_identifier = identifier
 		if(not identifier):
-			if(frappe.flags.in_patch): return
+			if(frappe.flags.in_patch or not identifiers_live()): return
 			frappe.throw(_("BOQ Identifier is required: cost options show the row by it and rules name the row by it."),
 						 frappe.MandatoryError, title=_("Missing BOQ Identifier"))
 
