@@ -1,0 +1,64 @@
+{
+ "_about": "Hand-written SIL rules for JSON lines no generated shape expresses (read by api/_boq_convert.py). Baffle frames: a silencer has half and full baffles; a frame size (87..337) can come from either slot, and one line sums both slots (JSON lines 17/18 etc.). One pooled dimension halfBaffleSlit|fullBaffleSlit does that for every size. Sealant (line 114): JSON item code 2050001 has no cost row; the sealant SIL prices with is row 238.",
+ "overrides": [
+  {
+   "lines": [
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ],
+   "rule": {
+    "source_type": "Templated",
+    "uom": "Kg",
+    "identifier_template": "{materialType} Baffle Frame 0.8 X {halfBaffleSlit|fullBaffleSlit}",
+    "dimensions": [
+     {
+      "field": "materialType",
+      "value_format": "As is",
+      "value_order": "GI,SS304L,SS316L"
+     },
+     {
+      "field": "halfBaffleSlit|fullBaffleSlit",
+      "value_format": "As is",
+      "value_order": "87,112,137,187,237,337"
+     }
+    ],
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"slot\": \"fullBaffleSlit\", \"logic\": \"MUL\", \"fields\": [\"baffleFrameWeight\", \"cartQty\"]}, {\"slot\": \"halfBaffleSlit\", \"logic\": \"MUL\", \"fields\": [\"halfBaffleFrameWeight\", \"cartQty\"]}]}",
+    "notes": "18 JSON lines (15-32); a size found in either baffle slot, both slots summed"
+   }
+  },
+  {
+   "lines": [
+    114
+   ],
+   "rule": {
+    "source_type": "Sourced",
+    "identifier_literal": "Sealant Dow Corning 732 - 310ml",
+    "conditions": [
+     {
+      "field": "productCategory",
+      "operator": "eq",
+      "value": "Normal"
+     }
+    ],
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"sealant\", \"cartQty\"]}]}",
+    "notes": "JSON line 114 (2050001 Sealant): the SIL sealant cost row (decision O3)"
+   }
+  }
+ ]
+}

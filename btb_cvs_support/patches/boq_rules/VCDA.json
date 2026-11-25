@@ -1,0 +1,789 @@
+{
+ "_about": "BOQ Rules of Rectangular Volume Control Dampers (VCDA, BUN8), made by api/_boq_convert.py from boq_format.JSON (536 lines -> 38 rules) on 2026-11-25 and checked on the carts of all four sites (same quantities and order). Seeded once by patches/seed_boq_rules_vcda.py.",
+ "family": "VCDA",
+ "bundle": "BUN8",
+ "rules": [
+  {
+   "sequence": 10,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"frameWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L,MS,AL,EAL"
+    },
+    {
+     "field": "frameSlitSize",
+     "value_format": "As is",
+     "value_order": "159,165,200,225,245,243,260,265,280,300,164"
+    },
+    {
+     "field": "frameThicknessLookup",
+     "value_format": "One decimal",
+     "value_order": "1.0,1.2,1.5,1.6,2.0,3.0,0.6,0.8,1.4,2.5"
+    }
+   ],
+   "identifier_template": "{frameMaterialType} Frame {frameThicknessLookup} X {frameSlitSize}",
+   "notes": "202 JSON lines | replaces JSON: GI Frame 1.0 X 159, GI Frame 1.2 X 159, GI Frame 1.5 X 159, GI Frame 1.6 X 159, GI Frame 2.0 X 159, GI Frame 1.5 X 165, GI Frame 1.6 X 165, GI Frame 2.0 X 165, GI Frame 3.0 X 165, GI Frame 0.6 X 200, GI Frame 0.8 X 200, GI Frame 1.0 X 200, GI Frame 1.5 X 200, GI Frame 1.6 X 200, GI Frame 2.0 X 200, GI Frame 3.0 X 200, GI Frame 1.5 X 225, GI Frame 1.6 X 225, GI Frame 2.0 X 225, GI Frame 3.0 X 225, GI Frame 1.5 X 245, GI Frame 1.6 X 245, GI Frame 2.0 X 245, GI Frame 2.0 X 243, GI Frame 3.0 X 245, GI Frame 1.0 X 243, GI Frame 1.2 X 243, GI Frame 1.5 X 243, GI Frame 1.6 X 243, GI Frame 1.5 X 260, GI Frame 1.6 X 260, GI Frame 2.0 X 260, GI Frame 3.0 X 260, GI Frame 1.5 X 265, GI Frame 1.6 X 265, GI Frame 2.0 X 265, GI Frame 3.0 X 265, GI Frame 1.5 X 280, GI Frame 1.6 X 280, GI Frame 2.0 X 280, GI Frame 3.0 X 280, GI Frame 1.5 X 300, GI Frame 1.6 X 300, GI Frame 2.0 X 300, GI Frame 3.0 X 300, SS304L Frame 1.0 X 243, SS304L Frame 1.2 X 243, SS304L Frame 0.8 X 1"
+  },
+  {
+   "sequence": 20,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"quadrantBracketWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L,MS,AL,EAL"
+    }
+   ],
+   "identifier_template": "{frameMaterialType} Quadrant Bracket Weight 1.2",
+   "notes": "6 JSON lines | replaces JSON: GI Quadrant Bracket Weight 1.2, SS304L Quadrant Bracket Weight 1.2, SS316L Quadrant Bracket Weight 1.2, MS Quadrant Bracket Weight 1.2, AL Quadrant Bracket Weight 1.2, EAL Quadrant Bracket Weight 1.2"
+  },
+  {
+   "sequence": 30,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"linkageCoverWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L,MS,AL,EAL"
+    }
+   ],
+   "identifier_template": "{frameMaterialType} Linkage Cover Weight 1.2",
+   "notes": "6 JSON lines | replaces JSON: GI Linkage Cover Weight 1.2, SS304L Linkage Cover Weight 1.2, SS316L Linkage Cover Weight 1.2, MS Linkage Cover Weight 1.2, AL Linkage Cover Weight 1.2, EAL Linkage Cover Weight 1.2"
+  },
+  {
+   "sequence": 40,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bladeStopperWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L,MS,AL,EAL"
+    }
+   ],
+   "identifier_template": "{frameMaterialType} Blade Stopper Weight 1.0",
+   "notes": "6 JSON lines | replaces JSON: GI Blade Stopper Weight 1.0, SS304L Blade Stopper Weight 1.0, SS316L Blade Stopper Weight 1.0, MS Blade Stopper Weight 1.0, AL Blade Stopper Weight 1.0, EAL Blade Stopper Weight 1.0"
+  },
+  {
+   "sequence": 50,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"motorHoldingPlateWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L,MS,AL,EAL"
+    }
+   ],
+   "identifier_template": "{frameMaterialType} Motor Holding Plate Weight 1.2",
+   "notes": "6 JSON lines | replaces JSON: GI Motor Holding Plate Weight 1.2, SS304L Motor Holding Plate Weight 1.2, SS316L Motor Holding Plate Weight 1.2, MS Motor Holding Plate Weight 1.2, AL Motor Holding Plate Weight 1.2, EAL Motor Holding Plate Weight 1.2"
+  },
+  {
+   "sequence": 60,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"multiSectionJoiningStripWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L,MS,AL,EAL"
+    },
+    {
+     "field": "frameThicknessLookup",
+     "value_format": "One decimal",
+     "value_order": "1.0,1.2,1.5,2.0,3.0,0.8,2.5"
+    }
+   ],
+   "identifier_template": "{frameMaterialType} Multi Section Joining Strip Weight {frameThicknessLookup}",
+   "notes": "23 JSON lines | replaces JSON: GI Multi Section Joining Strip Weight 1.0, GI Multi Section Joining Strip Weight 1.2, GI Multi Section Joining Strip Weight 1.5, GI Multi Section Joining Strip Weight 2.0, GI Multi Section Joining Strip Weight 3.0, SS304L Multi Section Joining Strip Weight 0.8, SS304L Multi Section Joining Strip Weight 3.0, SS304L Multi Section Joining Strip Weight 1.0, SS304L Multi Section Joining Strip Weight 1.2, SS304L Multi Section Joining Strip Weight 1.5, SS304L Multi Section Joining Strip Weight 2.0, SS316L Multi Section Joining Strip Weight 0.8, SS316L Multi Section Joining Strip Weight 3.0, SS316L Multi Section Joining Strip Weight 1.0, SS316L Multi Section Joining Strip Weight 1.2, SS316L Multi Section Joining Strip Weight 1.5, SS316L Multi Section Joining Strip Weight 2.0, MS Multi Section Joining Strip Weight 1.5, MS Multi Section Joining Strip Weight 2.0, AL Multi Section Joining Strip Weight 1.5, AL Multi Section Joining Strip Weight 2.0, AL Multi Section J"
+  },
+  {
+   "sequence": 70,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"totalTransitionWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L,MS,AL,EAL"
+    },
+    {
+     "field": "frameThicknessLookup",
+     "value_format": "One decimal",
+     "value_order": "1.0,1.2,1.5,1.6,2.0,3.0,0.8,1.4,2.5"
+    }
+   ],
+   "identifier_template": "{frameMaterialType} Transition {frameThicknessLookup}",
+   "notes": "29 JSON lines | replaces JSON: GI Transition 1.0, GI Transition 1.2, GI Transition 1.5, GI Transition 1.6, GI Transition 2.0, GI Transition 3.0, SS304L Transition 0.8, SS304L Transition 1.0, SS304L Transition 1.2, SS304L Transition 1.5, SS304L Transition 1.6, SS304L Transition 2.0, SS304L Transition 3.0, SS316L Transition 0.8, SS316L Transition 1.0, SS316L Transition 1.2, SS316L Transition 1.5, SS316L Transition 1.6, SS316L Transition 2.0, SS316L Transition 3.0, MS Transition 1.5, MS Transition 1.6, MS Transition 1.4, MS Transition 2.0, MS Transition 3.0, AL Transition 1.5, AL Transition 2.0, AL Transition 2.5, EAL Transition 2.5"
+  },
+  {
+   "sequence": 80,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"sleeveWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "sleeveThicknessLookup",
+     "value_format": "One decimal",
+     "value_order": "0.8,2.0,1.0,1.2,1.5"
+    }
+   ],
+   "identifier_template": "{frameMaterialType} Sleeve {sleeveThicknessLookup}",
+   "notes": "15 JSON lines | replaces JSON: GI Sleeve 0.8, GI Sleeve 2.0, GI Sleeve 1.0, GI Sleeve 1.2, GI Sleeve 1.5, SS304L Sleeve 1.0, SS304L Sleeve 2.0, SS304L Sleeve 0.8, SS304L Sleeve 1.2, SS304L Sleeve 1.5, SS316L Sleeve 1.0, SS316L Sleeve 2.0, SS316L Sleeve 0.8, SS316L Sleeve 1.2, SS316L Sleeve 1.5"
+  },
+  {
+   "sequence": 90,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"linkageBar\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "GI Linkage Bar Weight 3.5",
+   "notes": "1 JSON lines | replaces JSON: GI Linkage Bar Weight 3.5"
+  },
+  {
+   "sequence": 100,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bush\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "bladeAxleType",
+     "value_format": "As is",
+     "value_order": "Square,Round"
+    },
+    {
+     "field": "bladeBushOption",
+     "value_format": "As is",
+     "value_order": "Brass,SS,Bronze"
+    }
+   ],
+   "identifier_template": "{bladeAxleType} {bladeBushOption} Bush",
+   "notes": "5 JSON lines; item code, name and unit from the cost row | replaces JSON: 2610914, Sq SS Bush, 2610909, Rd Bronze Bush, Rd SS Bush"
+  },
+  {
+   "sequence": 110,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bush\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "bladeAxleType",
+     "operator": "eq",
+     "value": "Square"
+    },
+    {
+     "field": "bladeBushOption",
+     "operator": "eq",
+     "value": "Nylon"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2610902",
+   "description_template": "Square Nylon Bush",
+   "notes": "1 JSON lines | replaces JSON: 2610902"
+  },
+  {
+   "sequence": 120,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bush\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "bladeAxleType",
+     "operator": "eq",
+     "value": "Square"
+    },
+    {
+     "field": "bladeBushOption",
+     "operator": "eq",
+     "value": "Bronze"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Sq Bronze Bush",
+   "description_template": "Square Bronze Bush",
+   "notes": "1 JSON lines | replaces JSON: Sq Bronze Bush"
+  },
+  {
+   "sequence": 130,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bush\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "bladeAxleType",
+     "operator": "eq",
+     "value": "Round"
+    },
+    {
+     "field": "bladeBushOption",
+     "operator": "eq",
+     "value": "Nylon"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Nylon 6/6 12mm Round Bar Bush",
+   "notes": "cost row FTOCountryWiseCost503 | replaces JSON: 2290293"
+  },
+  {
+   "sequence": 140,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"roundBladeLever\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "bladeAxleType",
+     "operator": "eq",
+     "value": "Round"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Round Blade Lever",
+   "notes": "cost row FTOCountryWiseCost18 | replaces JSON: 2290478"
+  },
+  {
+   "sequence": 150,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"roundBladeLever\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "bladeAxleType",
+     "operator": "eq",
+     "value": "Square"
+    },
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "3V"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290105",
+   "description_template": "For Square Bush-3V",
+   "notes": "cost row FTOCountryWiseCost21 | replaces JSON: 2290105"
+  },
+  {
+   "sequence": 160,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"roundBladeLever\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "bladeAxleType",
+     "operator": "eq",
+     "value": "Square"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290107",
+   "filter_json": "{\"logic\": \"or\", \"conditions\": [{\"field\": \"bladeType\", \"operator\": \"eq\", \"value\": \"AF\"}, {\"field\": \"bladeType\", \"operator\": \"eq\", \"value\": \"EAL\"}]}",
+   "description_template": "For Square Bush-AF",
+   "notes": "cost row FTOCountryWiseCost17 | replaces JSON: 2290107"
+  },
+  {
+   "sequence": 170,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"knurlingPinWithRetainerRing\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Knurled Linkage Pin with Retaining Ring",
+   "notes": "cost row FTOCountryWiseCost171 | replaces JSON: 2290007 & 2290196"
+  },
+  {
+   "sequence": 180,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"jambSeal\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Side Seal / Jamb Seal / SS304 50X0.25mm",
+   "notes": "cost row FTOCountryWiseCost22 | replaces JSON: 2290247"
+  },
+  {
+   "sequence": 190,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"vcdHandle\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "GI VCD Handle (V) Square 10x10",
+   "notes": "cost row FTOCountryWiseCost23 | replaces JSON: 2230101"
+  },
+  {
+   "sequence": 200,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"smallSpindle\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "bladeAxleType",
+     "operator": "eq",
+     "value": "Round"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Small Spindle-Round Bush 12mm GI Round Shaft",
+   "notes": "cost row FTOCountryWiseCost24 | replaces JSON: 2290200"
+  },
+  {
+   "sequence": 210,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"smallSpindle\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "bladeAxleType",
+     "operator": "eq",
+     "value": "Square"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "GI 10mm Square Pin",
+   "notes": "cost row FTOCountryWiseCost481 | replaces JSON: 2290104"
+  },
+  {
+   "sequence": 220,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bigSpindle\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "bladeAxleType",
+     "operator": "eq",
+     "value": "Round"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Big Spindle-Round Bush 12mm GI Round Shaft",
+   "notes": "cost row FTOCountryWiseCost26 | replaces JSON: 2290290"
+  },
+  {
+   "sequence": 230,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bigSpindle\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "bladeAxleType",
+     "operator": "eq",
+     "value": "Square"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Big Spindle-Round BushGI Blade Shaft Square 9.50x9.50x120mm",
+   "notes": "cost row FTOCountryWiseCost27 | replaces JSON: 2290292"
+  },
+  {
+   "sequence": 240,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bladeSeal\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "bladeSealInput",
+     "operator": "eq",
+     "value": "Neoprene"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Neoprene Blade Seal 3x10mm",
+   "notes": "cost row FTOCountryWiseCost28 | replaces JSON: 2290110"
+  },
+  {
+   "sequence": 250,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bladeSeal\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "bladeSealInput",
+     "value_format": "As is",
+     "value_order": "Foam,Rubber"
+    }
+   ],
+   "identifier_template": "{bladeSealInput} Blade Seal",
+   "notes": "2 JSON lines; item code, name and unit from the cost row | replaces JSON: Foam Blade Seal, Rubber Blade Seal"
+  },
+  {
+   "sequence": 260,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"amcaLabel\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "AMCA Label",
+   "notes": "cost row FTOCountryWiseCost30 | replaces JSON: 2290494"
+  },
+  {
+   "sequence": 270,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"totalBladeWeight4\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "3V"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "bladeMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L,MS,AL"
+    },
+    {
+     "field": "bladeThicknessLookup",
+     "value_format": "One decimal",
+     "value_order": "1.0,1.2,1.5,1.6,2.0,0.8,1.4,3.0,2.5"
+    }
+   ],
+   "identifier_template": "{bladeMaterialType} Blade 3V4\" {bladeThicknessLookup} X 127",
+   "notes": "26 JSON lines | replaces JSON: GI Blade 3V4\" 1.0 X 127, GI Blade 3V4\" 1.2 X 127, GI Blade 3V4\" 1.5 X 127, GI Blade 3V4\" 1.6 X 127, GI Blade 3V4\" 2.0 X 127, SS304L Blade 3V4\" 0.8 X 127, SS304L Blade 3V4\" 1.0 X 127, SS304L Blade 3V4\" 1.2 X 127, SS304L Blade 3V4\" 1.5 X 127, SS304L Blade 3V4\" 1.6 X 127, SS316L Blade 3V4\" 0.8 X 127, SS316L Blade 3V4\" 1.0 X 127, SS316L Blade 3V4\" 1.2 X 127, SS316L Blade 3V4\" 1.5 X 127, SS316L Blade 3V4\" 1.6 X 127, MS Blade 3V4\" 1.5 X 127, MS Blade 3V4\" 1.4 X 127, MS Blade 3V4\" 1.6 X 127, MS Blade 3V4\" 2.0 X 127, MS Blade 3V4\" 3.0 X 127, AL Blade 3V4\" 1.0 X 127, AL Blade 3V4\" 1.2 X 127, AL Blade 3V4\" 1.5 X 127, AL Blade 3V4\" 2.0 X 127, AL Blade 3V4\" 2.5 X 127, AL Blade 3V4\" 3.0 X 127"
+  },
+  {
+   "sequence": 280,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"totalBladeWeight5\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "3V"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "bladeMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L,MS,AL"
+    },
+    {
+     "field": "bladeThicknessLookup",
+     "value_format": "One decimal",
+     "value_order": "1.0,1.2,1.5,1.6,2.0,3.0,0.8,2.5"
+    }
+   ],
+   "identifier_template": "{bladeMaterialType} Blade 3V5\" {bladeThicknessLookup} X 153",
+   "notes": "28 JSON lines | replaces JSON: GI Blade 3V5\" 1.0 X 153, GI Blade 3V5\" 1.2 X 153, GI Blade 3V5\" 1.5 X 153, GI Blade 3V5\" 1.6 X 153, GI Blade 3V5\" 2.0 X 153, GI Blade 3V5\" 3.0 X 153, SS304L Blade 3V5\" 0.8 X 153, SS304L Blade 3V5\" 1.0 X 153, SS304L Blade 3V5\" 1.2 X 153, SS304L Blade 3V5\" 1.5 X 153, SS304L Blade 3V5\" 1.6 X 153, SS304L Blade 3V5\" 2.0 X 153, SS316L Blade 3V5\" 0.8 X 153, SS316L Blade 3V5\" 1.0 X 153, SS316L Blade 3V5\" 1.2 X 153, SS316L Blade 3V5\" 1.5 X 153, SS316L Blade 3V5\" 1.6 X 153, SS316L Blade 3V5\" 2.0 X 153, MS Blade 3V5\" 1.5 X 153, MS Blade 3V5\" 1.6 X 153, MS Blade 3V5\" 2.0 X 153, MS Blade 3V5\" 3.0 X 153, AL Blade 3V5\" 1.0 X 153, AL Blade 3V5\" 1.2 X 153, AL Blade 3V5\" 1.5 X 153, AL Blade 3V5\" 2.0 X 153, AL Blade 3V5\" 2.5 X 153, AL Blade 3V5\" 3.0 X 153"
+  },
+  {
+   "sequence": 290,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"totalBladeWeight6\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "3V"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "bladeMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L,MS,AL"
+    },
+    {
+     "field": "bladeThicknessLookup",
+     "value_format": "One decimal",
+     "value_order": "1.0,1.2,1.5,1.6,2.0,3.0,0.8,1.4,2.5"
+    }
+   ],
+   "identifier_template": "{bladeMaterialType} Blade 3V6\" {bladeThicknessLookup} X 178",
+   "notes": "29 JSON lines | replaces JSON: GI Blade 3V6\" 1.0 X 178, GI Blade 3V6\" 1.2 X 178, GI Blade 3V6\" 1.5 X 178, GI Blade 3V6\" 1.6 X 178, GI Blade 3V6\" 2.0 X 178, GI Blade 3V6\" 3.0 X 178, SS304L Blade 3V6\" 0.8 X 178, SS304L Blade 3V6\" 1.0 X 178, SS304L Blade 3V6\" 1.2 X 178, SS304L Blade 3V6\" 1.5 X 178, SS304L Blade 3V6\" 1.6 X 178, SS304L Blade 3V6\" 2.0 X 178, SS316L Blade 3V6\" 0.8 X 178, SS316L Blade 3V6\" 1.0 X 178, SS316L Blade 3V6\" 1.2 X 178, SS316L Blade 3V6\" 1.5 X 178, SS316L Blade 3V6\" 1.6 X 178, SS316L Blade 3V6\" 2.0 X 178, MS Blade 3V6\" 1.5 X 178, MS Blade 3V6\" 1.4 X 178, MS Blade 3V6\" 1.6 X 178, MS Blade 3V6\" 2.0 X 178, MS Blade 3V6\" 3.0 X 178, AL Blade 3V6\" 1.0 X 178, AL Blade 3V6\" 1.2 X 178, AL Blade 3V6\" 1.5 X 178, AL Blade 3V6\" 2.0 X 178, AL Blade 3V6\" 2.5 X 178, AL Blade 3V6\" 3.0 X 178"
+  },
+  {
+   "sequence": 300,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"totalBladeWeight7\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "3V"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "bladeMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L,MS,AL"
+    },
+    {
+     "field": "bladeThicknessLookup",
+     "value_format": "One decimal",
+     "value_order": "1.0,1.2,1.5,1.6,2.0,3.0,0.8,1.4,2.5"
+    }
+   ],
+   "identifier_template": "{bladeMaterialType} Blade 3V7\" {bladeThicknessLookup} X 203",
+   "notes": "29 JSON lines | replaces JSON: GI Blade 3V7\" 1.0 X 203, GI Blade 3V7\" 1.2 X 203, GI Blade 3V7\" 1.5 X 203, GI Blade 3V7\" 1.6 X 203, GI Blade 3V7\" 2.0 X 203, GI Blade 3V7\" 3.0 X 203, SS304L Blade 3V7\" 0.8 X 203, SS304L Blade 3V7\" 1.0 X 203, SS304L Blade 3V7\" 1.2 X 203, SS304L Blade 3V7\" 1.5 X 203, SS304L Blade 3V7\" 2.0 X 203, SS316L Blade 3V7\" 0.8 X 203, SS316L Blade 3V7\" 1.0 X 203, SS316L Blade 3V7\" 1.2 X 203, SS316L Blade 3V7\" 1.5 X 203, SS316L Blade 3V7\" 1.6 X 203, SS316L Blade 3V7\" 2.0 X 203, MS Blade 3V7\" 1.4 X 203, MS Blade 3V7\" 1.5 X 203, MS Blade 3V7\" 3.0 X 203, MS Blade 3V7\" 1.6 X 203, MS Blade 3V7\" 2.0 X 203, AL Blade 3V7\" 1.0 X 203, AL Blade 3V7\" 1.2 X 203, AL Blade 3V7\" 1.5 X 203, AL Blade 3V7\" 1.6 X 203, AL Blade 3V7\" 2.0 X 203, AL Blade 3V7\" 2.5 X 203, AL Blade 3V7\" 3.0 X 203"
+  },
+  {
+   "sequence": 310,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"totalBladeWeight5\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [
+    {
+     "field": "bladeMaterialType",
+     "operator": "eq",
+     "value": "EAL"
+    },
+    {
+     "field": "bladeThicknessLookup",
+     "operator": "eq",
+     "value": "1.40"
+    },
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "EAL"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "EAL Blade EAL5\" 1.4 X 263",
+   "notes": "1 JSON lines | replaces JSON: EAL Blade EAL5\" 1.4 X 263"
+  },
+  {
+   "sequence": 320,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"totalBladeWeight6\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [
+    {
+     "field": "bladeMaterialType",
+     "operator": "eq",
+     "value": "EAL"
+    },
+    {
+     "field": "bladeThicknessLookup",
+     "operator": "eq",
+     "value": "1.40"
+    },
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "EAL"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "EAL Blade EAL6\" 1.4 X 304",
+   "notes": "1 JSON lines | replaces JSON: EAL Blade EAL6\" 1.4 X 304"
+  },
+  {
+   "sequence": 330,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"totalBladeWeight7\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [
+    {
+     "field": "bladeMaterialType",
+     "operator": "eq",
+     "value": "EAL"
+    },
+    {
+     "field": "bladeThicknessLookup",
+     "operator": "eq",
+     "value": "1.40"
+    },
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "EAL"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "EAL Blade EAL7\" 1.4 X 352",
+   "notes": "1 JSON lines | replaces JSON: EAL Blade EAL7\" 1.4 X 352"
+  },
+  {
+   "sequence": 340,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"totalBladeWeight5\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "AF"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "bladeThicknessLookup",
+     "value_format": "One decimal",
+     "value_order": "0.6,0.7,0.8"
+    },
+    {
+     "field": "bladeMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{bladeMaterialType} Blade AF5\" {bladeThicknessLookup} X 127",
+   "notes": "5 JSON lines | replaces JSON: GI Blade AF5\" 0.6 X 127, GI Blade AF5\" 0.7 X 127, GI Blade AF5\" 0.8 X 127, SS304L Blade AF5\" 0.8 X 127, SS316L Blade AF5\" 0.8 X 127"
+  },
+  {
+   "sequence": 350,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"totalBladeWeight6\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "AF"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "bladeThicknessLookup",
+     "value_format": "One decimal",
+     "value_order": "0.6,0.7,0.8"
+    },
+    {
+     "field": "bladeMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{bladeMaterialType} Blade AF6\" {bladeThicknessLookup} X 152",
+   "notes": "5 JSON lines | replaces JSON: GI Blade AF6\" 0.6 X 152, GI Blade AF6\" 0.7 X 152, GI Blade AF6\" 0.8 X 152, SS304L Blade AF6\" 0.8 X 152, SS316L Blade AF6\" 0.8 X 152"
+  },
+  {
+   "sequence": 360,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"totalBladeWeight7\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "AF"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "bladeThicknessLookup",
+     "value_format": "One decimal",
+     "value_order": "0.6,0.7,0.8"
+    },
+    {
+     "field": "bladeMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{bladeMaterialType} Blade AF7\" {bladeThicknessLookup} X 175",
+   "notes": "5 JSON lines | replaces JSON: GI Blade AF7\" 0.6 X 175, GI Blade AF7\" 0.7 X 175, GI Blade AF7\" 0.8 X 175, SS304L Blade AF7\" 0.8 X 175, SS316L Blade AF7\" 0.8 X 175"
+  },
+  {
+   "sequence": 370,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"angleLength\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "frameMaterialType",
+     "value_format": "As is",
+     "value_order": "GI,AL,MS,SS304L,SS316L"
+    },
+    {
+     "field": "smfAngleSize",
+     "value_format": "As is",
+     "value_order": "30,40,50"
+    }
+   ],
+   "identifier_template": "{frameMaterialType} {smfAngleSize} mm Angle",
+   "notes": "15 JSON lines; item code, name and unit from the cost row | replaces JSON: 2010104, 2010105, 2010108, 2010401, 2010402, 2010403, 2010303, 2010306, 2010308, 2010204, 2010206, 2010208, 2010213, 2010232, 2010216"
+  },
+  {
+   "source_type": "Sourced",
+   "identifier_template": "{actModel1|actModel2}",
+   "dimensions": [
+    {
+     "field": "actModel1|actModel2",
+     "value_format": "As is",
+     "value_order": "2290517-TF230,2290516-TF24,2290515-TF24-SR,2290514-LF230A,2290513-LF24,2290512-LF24-SR,2290511-LM230A,2290510-LM24A,229096-LM230A -S,2290465-LM24A -S,2290341-GDB341.1E,2290495-GDB346.1E,2290509-NF230A,2290508-NF24A,2290270-NM230A,2290507-NM24A,2290506-NF24A-SR,2290499-GLB341.1E,2290496-GLB346.1E,2290276-SM230A,2290505-SM24A,229098-SM230A -S,2290504-SF24A-SR,2290500-GEB341.1E,2290497-GEB346.1E,229088-FSNF24-S US,229089-FSNF230-S US,229090-FSLF230-S US,229091-FSLF24-S US,229100-MS4604F1010/B,229101-MS4604F1210/B,229102-MS8104F1010/B,229103-MS8104F1210/B,229104-MS8109F1010/B,229105-MS8109F1210/B,229106-MS4609F1010/B,229107-MS4609F1210/B,229108-MS8120F1002/B,229109-MS8120F1200/B,229110-MS4620F1203/B,229111-MS4620F1005/B,2290263-FSLF230 US,2290280-FSNF230 US,2290281-FSNF24 US,2290283-FSLF24 US,229093-FSTF24-S US,229092-FSTF230-S US,2290501-FSTF230 US,2290502-FSTF24 US,2290468-FSAFB24-SR-S,2290503-FSAFB24-SR,2290540-FSNF120 US,2290541-FSTF120-S US,2290542-FSLF120-US,2290543-NMV-D3-MP,2290544-SMV-D3-MP,2290560-MS4109F1210/B,2290561-MS4109F1010/B,2290562-MS4104F1210/B,2290563-MS4104F1010/B,2290564-MS4120F1204,2290565-CN4605A1001,2290566-CN4610A1001,2290567-CN4620A1001,2290568-CN4634A1001,2290569-CN6105A1011,2290570-CN6110A1003,2290571-CN6110A1201,2290572-CN6120A1002,2290573-CN7220A2007,2290574-CN7234A2008,2290531-GDB146.1E,2290532-GLB146.1E,2290533-GEB146.1E,2290534-GDB181.1E/3"
+    }
+   ],
+   "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"slot\": \"actModel1\", \"logic\": \"MUL\", \"fields\": [\"noOfActuators1\", \"cartQty\"]}, {\"slot\": \"actModel2\", \"logic\": \"MUL\", \"fields\": [\"noOfActuators2\", \"cartQty\"]}]}",
+   "notes": "75 JSON lines (461-535); an actuator model found in either slot, both slots summed; item code, name and unit from the cost row | replaces JSON: 2290517-TF230, 2290516-TF24, 2290515-TF24-SR, 2290514-LF230A, 2290513-LF24, 2290512-LF24-SR, 2290511-LM230A, 2290510-LM24A, 229096-LM230A -S, 2290465-LM24A -S, 2290341-GDB341.1E, 2290495-GDB346.1E, 2290509-NF230A, 2290508-NF24A, 2290270-NM230A, 2290507-NM24A, 2290506-NF24A-SR, 2290499-GLB341.1E, 2290496-GLB346.1E, 2290276-SM230A, 2290505-SM24A, 229098-SM230A -S, 2290504-SF24A-SR, 2290500-GEB341.1E, 2290497-GEB346.1E, 229088-FSNF24-S US, 229089-FSNF230-S US, 229090-FSLF230-S US, 229091-FSLF24-S US, 229100-MS4604F1010/B, 229101-MS4604F1210/B, 229102-MS8104F1010/B, 229103-MS8104F1210/B, 229104-MS8109F1010/B, 229105-MS8109F1210/B, 229106-MS4609F1010/B, 229107-MS4609F1210/B, 229108-MS8120F1002/B, 229109-MS8120F1200/B, 229110-MS4620F1203/B, 229111-MS4620F1005/B, 2290263-FSLF230 US, 2290280-FSNF230 US, 2290281-FSNF24 US, 2290283-FSLF24 US, 229093-FSTF",
+   "sequence": 380,
+   "conditions": [],
+   "condition_logic": "and"
+  }
+ ]
+}

@@ -1,0 +1,860 @@
+{
+ "_about": "BOQ Rules of Fire & Smoke Dampers (MSFD, BUN5), made by api/_boq_convert.py from boq_format.JSON (206 lines -> 57 rules) on 2026-11-25 and checked on the carts of all four sites (same quantities and order). Seeded once by patches/seed_boq_rules_msfd.py.",
+ "family": "MSFD",
+ "bundle": "BUN5",
+ "rules": [
+  {
+   "sequence": 10,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"frameWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "frameSlitSize",
+     "value_format": "As is",
+     "value_order": "164,243"
+    },
+    {
+     "field": "frameThickness",
+     "value_format": "One decimal",
+     "value_order": "0.8,1.0,1.2,1.5,1.6"
+    }
+   ],
+   "identifier_template": "{materialType} Frame {frameThickness} X {frameSlitSize}",
+   "notes": "16 JSON lines | replaces JSON: GI Frame 0.8 X 164, GI Frame 1.0 X 164, GI Frame 1.2 X 164, GI Frame 1.5 X 164, SS304L Frame 0.8 X 164, SS304L Frame 1.0 X 164, SS304L Frame 1.2 X 164, SS304L Frame 1.5 X 164, SS304L Frame 1.5 X 243, SS304L Frame 1.6 X 164, SS316L Frame 0.8 X 164, SS316L Frame 1.0 X 164, SS316L Frame 1.2 X 164, SS316L Frame 1.5 X 164, SS316L Frame 1.5 X 243, SS316L Frame 1.6 X 243"
+  },
+  {
+   "sequence": 20,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"totalTransitionWeight\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "transitionThickness",
+     "value_format": "One decimal",
+     "value_order": "0.8,1.0,1.2,1.5"
+    }
+   ],
+   "identifier_template": "{materialType} Fittings {transitionThickness}",
+   "notes": "12 JSON lines | replaces JSON: GI Fittings 0.8, GI Fittings 1.0, GI Fittings 1.2, GI Fittings 1.5, SS304L Fittings 0.8, SS304L Fittings 1.0, SS304L Fittings 1.2, SS304L Fittings 1.5, SS316L Fittings 0.8, SS316L Fittings 1.0, SS316L Fittings 1.2, SS316L Fittings 1.5"
+  },
+  {
+   "sequence": 30,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"bladeStopperWeight\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{materialType} Blade Stopper 1.2",
+   "notes": "3 JSON lines | replaces JSON: GI Blade Stopper 1.2, SS304L Blade Stopper 1.2, SS316L Blade Stopper 1.2"
+  },
+  {
+   "sequence": 40,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"totalBladeWeight1\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch1\", \"operator\": \"eq\", \"value\": \"5\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}, {\"fields\": [\"cartQty\", \"totalBladeWeight2\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch2\", \"operator\": \"eq\", \"value\": \"5\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "AF"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{materialType} Blade AF 5\" 0.8 X 263",
+   "notes": "3 JSON lines | replaces JSON: GI Blade AF 5\" 0.8 X 263, SS304L Blade AF 5\" 0.8 X 263, SS316L Blade AF 5\" 0.8 X 263"
+  },
+  {
+   "sequence": 50,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"totalBladeWeight1\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch1\", \"operator\": \"eq\", \"value\": \"6\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}, {\"fields\": [\"cartQty\", \"totalBladeWeight2\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch2\", \"operator\": \"eq\", \"value\": \"6\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "AF"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{materialType} Blade AF 6\" 0.8 X 312",
+   "notes": "3 JSON lines | replaces JSON: GI Blade AF 6\" 0.8 X 312, SS304L Blade AF 6\" 0.8 X 312, SS316L Blade AF 6\" 0.8 X 312"
+  },
+  {
+   "sequence": 60,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"totalBladeWeight1\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch1\", \"operator\": \"eq\", \"value\": \"7\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}, {\"fields\": [\"cartQty\", \"totalBladeWeight2\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch2\", \"operator\": \"eq\", \"value\": \"7\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "AF"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{materialType} Blade AF 7\" 0.8 X 359",
+   "notes": "3 JSON lines | replaces JSON: GI Blade AF 7\" 0.8 X 359, SS304L Blade AF 7\" 0.8 X 359, SS316L Blade AF 7\" 0.8 X 359"
+  },
+  {
+   "sequence": 70,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"totalBladeWeight1\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch1\", \"operator\": \"eq\", \"value\": \"4\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}, {\"fields\": [\"cartQty\", \"totalBladeWeight2\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch2\", \"operator\": \"eq\", \"value\": \"4\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "3V"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{materialType} Blade 3V 4\" 1.5 X 127",
+   "notes": "3 JSON lines | replaces JSON: GI Blade 3V 4\" 1.5 X 127, SS304L Blade 3V 4\" 1.5 X 127, SS316L Blade 3V 4\" 1.5 X 127"
+  },
+  {
+   "sequence": 80,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"totalBladeWeight1\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch1\", \"operator\": \"eq\", \"value\": \"5\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}, {\"fields\": [\"cartQty\", \"totalBladeWeight2\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch2\", \"operator\": \"eq\", \"value\": \"5\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "3V"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{materialType} Blade 3V 5\" 1.5 X 153",
+   "notes": "3 JSON lines | replaces JSON: GI Blade 3V 5\" 1.5 X 153, SS304L Blade 3V 5\" 1.5 X 153, SS316L Blade 3V 5\" 1.5 X 153"
+  },
+  {
+   "sequence": 90,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"totalBladeWeight1\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch1\", \"operator\": \"eq\", \"value\": \"6\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}, {\"fields\": [\"cartQty\", \"totalBladeWeight2\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch2\", \"operator\": \"eq\", \"value\": \"6\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "3V"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{materialType} Blade 3V 6\" 1.5 X 178",
+   "notes": "3 JSON lines | replaces JSON: GI Blade 3V 6\" 1.5 X 178, SS304L Blade 3V 6\" 1.5 X 178, SS316L Blade 3V 6\" 1.5 X 178"
+  },
+  {
+   "sequence": 100,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"totalBladeWeight1\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch1\", \"operator\": \"eq\", \"value\": \"7\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}, {\"fields\": [\"cartQty\", \"totalBladeWeight2\"], \"filter\": {\"conditions\": [{\"field\": \"bladeInch2\", \"operator\": \"eq\", \"value\": \"7\"}], \"logic\": \"and\"}, \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "3V"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{materialType} Blade 3V 7\" 1.5 X 203",
+   "notes": "3 JSON lines | replaces JSON: GI Blade 3V 7\" 1.5 X 203, SS304L Blade 3V 7\" 1.5 X 203, SS316L Blade 3V 7\" 1.5 X 203"
+  },
+  {
+   "sequence": 110,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"sleeveWeight\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "sleeveLength",
+     "value_format": "As is",
+     "value_order": "355,406,457,508"
+    },
+    {
+     "field": "sleeveThickness",
+     "value_format": "One decimal",
+     "value_order": "0.8,1.0,1.2,1.5"
+    }
+   ],
+   "identifier_template": "{materialType} Sleeve {sleeveThickness} X {sleeveLength}",
+   "notes": "48 JSON lines | replaces JSON: GI Sleeve 0.8 X 355, GI Sleeve 1.0 X 355, GI Sleeve 1.2 X 355, GI Sleeve 1.5 X 355, GI Sleeve 0.8 X 406, GI Sleeve 1.0 X 406, GI Sleeve 1.2 X 406, GI Sleeve 1.5 X 406, GI Sleeve 0.8 X 457, GI Sleeve 1.0 X 457, GI Sleeve 1.2 X 457, GI Sleeve 1.5 X 457, GI Sleeve 0.8 X 508, GI Sleeve 1.0 X 508, GI Sleeve 1.2 X 508, GI Sleeve 1.5 X 508, SS304L Sleeve 0.8 X 355, SS304L Sleeve 1.0 X 355, SS304L Sleeve 1.2 X 355, SS304L Sleeve 1.5 X 355, SS304L Sleeve 0.8 X 406, SS304L Sleeve 1.0 X 406, SS304L Sleeve 1.2 X 406, SS304L Sleeve 1.5 X 406, SS304L Sleeve 0.8 X 457, SS304L Sleeve 1.0 X 457, SS304L Sleeve 1.2 X 457, SS304L Sleeve 1.5 X 457, SS304L Sleeve 0.8 X 508, SS304L Sleeve 1.0 X 508, SS304L Sleeve 1.2 X 508, SS304L Sleeve 1.5 X 508, SS316L Sleeve 0.8 X 355, SS316L Sleeve 1.0 X 355, SS316L Sleeve 1.2 X 355, SS316L Sleeve 1.5 X 355, SS316L Sleeve 0.8 X 406, SS316L Sleeve 1.0 X 406, SS316L Sleeve 1.2 X 406, SS316L Sleeve 1.5 X 406, SS316L Sleeve 0.8 X 457, SS316L S"
+  },
+  {
+   "sequence": 120,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"ssJambSealLength\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Side Seal / Jamb Seal / SS304 50X0.25mm",
+   "notes": "cost row FTOCountryWiseCost22 | replaces JSON: 2290247"
+  },
+  {
+   "sequence": 130,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"ofScrews\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Screws (Self-Hex head Screw 4.2X13 MM)",
+   "notes": "cost row FTOCountryWiseCost146 | replaces JSON: 2290427"
+  },
+  {
+   "sequence": 140,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"bladeStopSeals\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Blade Stop Seal",
+   "notes": "cost row FTOCountryWiseCost249 | replaces JSON: 2291209"
+  },
+  {
+   "sequence": 150,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"bladeKit\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "GI 10mm Square Pin",
+   "notes": "cost row FTOCountryWiseCost481 | replaces JSON: 2290104"
+  },
+  {
+   "sequence": 160,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"bladeKit\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Bronze Oilite 10mm Round Bar Bush",
+   "notes": "cost row FTOCountryWiseCost498 | replaces JSON: 2610913"
+  },
+  {
+   "sequence": 170,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"bladeKit\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "3V"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "3V Axle Strap (Blade Axle Strap 3V GI G90 58X44X1.5mm 9007)",
+   "notes": "cost row FTOCountryWiseCost149 | replaces JSON: 2290101"
+  },
+  {
+   "sequence": 180,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"bladeKit\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "AF"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "AF Axle Strap",
+   "notes": "cost row FTOCountryWiseCost150 | replaces JSON: 2290102 & 2290103"
+  },
+  {
+   "sequence": 190,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"bladeSeal\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "bladeType",
+     "value_format": "As is",
+     "value_order": "3V,AF"
+    }
+   ],
+   "identifier_template": "Blade Seal {bladeType}",
+   "notes": "2 JSON lines; item code, name and unit from the cost row | replaces JSON: 2291211 or 2291212, 2291208 or 2291213"
+  },
+  {
+   "sequence": 200,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"aggregate\": [{\"fields\": [\"transitionSealant\", \"sealantDowRing\"], \"logic\": \"SUM\"}], \"fields\": [\"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Sealant Dow Corning 732 - 310ml",
+   "notes": "cost row FTOCountryWiseCost238 | replaces JSON: 2250004/2290023"
+  },
+  {
+   "sequence": 210,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"ulListedConduit\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "UL Listed Conduit",
+   "notes": "cost row FTOCountryWiseCost98 | replaces JSON: 2290041"
+  },
+  {
+   "sequence": 220,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"ulListedConduitConnector\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "3/8\" Metal Conduit Connector - Elbow-UL listed",
+   "notes": "cost row FTOCountryWiseCost153 | replaces JSON: 2290043"
+  },
+  {
+   "sequence": 230,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"neopreneShaftSeal\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Neoprene Shaft Seal 50mm X 50mm",
+   "notes": "cost row FTOCountryWiseCost154 | replaces JSON: 2209116"
+  },
+  {
+   "sequence": 240,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"antishortBushing\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Anti-short Bushing",
+   "notes": "cost row FTOCountryWiseCost99 | replaces JSON: 2290195"
+  },
+  {
+   "sequence": 250,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"jackShaftBracketBearing\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "applyJackShafting",
+     "operator": "neq",
+     "value": "Yes"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Jack Shaft Bearing 12mm",
+   "notes": "cost row FTOCountryWiseCost156 | replaces JSON: 229113"
+  },
+  {
+   "sequence": 260,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"jackShaftRod\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "applyJackShafting",
+     "operator": "neq",
+     "value": "Yes"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Jack Shaft Rod 12mm",
+   "notes": "cost row FTOCountryWiseCost92 | replaces JSON: 2290111"
+  },
+  {
+   "sequence": 270,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"jackShaftBracketBearing\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "applyJackShafting",
+     "operator": "eq",
+     "value": "Yes"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Jack Shaft Bearing 19mm",
+   "notes": "1 JSON lines; item code, name and unit from the cost row | replaces JSON: Jack Shaft Bearing 19mm"
+  },
+  {
+   "sequence": 280,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"jackShaftRod\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "applyJackShafting",
+     "operator": "eq",
+     "value": "Yes"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Jack Shaft Rod 19mm",
+   "notes": "1 JSON lines; item code, name and unit from the cost row | replaces JSON: Jack Shaft Rod 19mm"
+  },
+  {
+   "sequence": 290,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"jackShaftBracketBearing\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Jack Shaft Bearing Bracket 12mm",
+   "notes": "1 JSON lines; item code, name and unit from the cost row | replaces JSON: Jack Shaft Bearing Bracket 12mm"
+  },
+  {
+   "sequence": 300,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"jackShaftKit\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Zeb Drive Pin Steel 15.87X21.46mm 9146",
+   "notes": "cost row FTOCountryWiseCost83 | replaces JSON: 2290005"
+  },
+  {
+   "sequence": 310,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"jackShaftKit\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Jack Shaft Drive GI G90 110X25mm 9008",
+   "notes": "cost row FTOCountryWiseCost84 | replaces JSON: 2290109"
+  },
+  {
+   "sequence": 320,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"jackShaftKit\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "5/16 - 18 x 1 1/2 Carriage Bolt",
+   "notes": "cost row FTOCountryWiseCost85 | replaces JSON: 2290190"
+  },
+  {
+   "sequence": 330,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"jackShaftKit\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "5/16 -18 Flange Whiz Nut",
+   "notes": "cost row FTOCountryWiseCost86 | replaces JSON: 2290191"
+  },
+  {
+   "sequence": 340,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"jackShaftKit\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "1/4 - 20 Lock Nut",
+   "notes": "cost row FTOCountryWiseCost87 | replaces JSON: 2290192"
+  },
+  {
+   "sequence": 350,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"jackShaftKit\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Zeb Drive Link CRS 12.7X150mm 9006",
+   "notes": "cost row FTOCountryWiseCost88 | replaces JSON: 2290009"
+  },
+  {
+   "sequence": 360,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"jackShaftKit\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Fuse Link Retainer Pin",
+   "notes": "cost row FTOCountryWiseCost78 | replaces JSON: 2290006"
+  },
+  {
+   "sequence": 370,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"ofLinkageBracket\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "m",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "3V"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290105",
+   "description_template": "3V Linkage Bracket (Blade Lever 3V-A GI G90 3.5mm 9005)",
+   "notes": "cost row FTOCountryWiseCost21 | replaces JSON: 2290105"
+  },
+  {
+   "sequence": 380,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"ofLinkageDriveBracket\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "3V"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "3V Linkage Drive Bracket (Blade Lever 3V-B GI G90 74mmX3.5mm 9009)",
+   "notes": "cost row FTOCountryWiseCost168 | replaces JSON: 2290106"
+  },
+  {
+   "sequence": 390,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"ofLinkageBracket\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "AF"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290107",
+   "description_template": "AF Linkage Bracket (Blade Lever Airfoil C GI G90 3.5mm 9003)",
+   "notes": "cost row FTOCountryWiseCost17 | replaces JSON: 2290107"
+  },
+  {
+   "sequence": 400,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"ofLinkageDriveBracket\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "bladeType",
+     "operator": "eq",
+     "value": "AF"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "AF Linkage Drive Bracket (Blade Lever Airfoil D GI G90 74mmX3.5mm 9004)",
+   "notes": "cost row FTOCountryWiseCost170 | replaces JSON: 2290108"
+  },
+  {
+   "sequence": 410,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"ofLinkagePins\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Knurled Linkage Pin with Retaining Ring",
+   "notes": "cost row FTOCountryWiseCost171 | replaces JSON: 2290007 & 2290196"
+  },
+  {
+   "sequence": 420,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"nylonBushing\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Nylon Bushing 6.35DiaX3.175mm",
+   "notes": "cost row FTOCountryWiseCost172 | replaces JSON: 2290029"
+  },
+  {
+   "sequence": 430,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"linkageBar\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "AF-FD Linkage Bar GI CVSS 12.7X367X3.5mm 9169",
+   "notes": "cost row FTOCountryWiseCost255 | replaces JSON: 2290128/2290129"
+  },
+  {
+   "sequence": 440,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"fields\": [\"cartQty\"], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "UL Sticker",
+   "description_template": "UL Stickers",
+   "notes": "1 JSON lines | replaces JSON: UL Sticker"
+  },
+  {
+   "sequence": 450,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "bladeSwitchPackage",
+     "operator": "eq",
+     "value": "Yes"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Blade Switch",
+   "description_template": "Blade Switches",
+   "notes": "1 JSON lines | replaces JSON: Blade Switch"
+  },
+  {
+   "sequence": 460,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"mts\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Momemtory Test Switch (MTS)",
+   "notes": "cost row FTOCountryWiseCost284 | replaces JSON: MTS"
+  },
+  {
+   "sequence": 470,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"vcdHandle\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "GI VCD Handle (V) Square 10x10",
+   "notes": "cost row FTOCountryWiseCost23 | replaces JSON: 2230101"
+  },
+  {
+   "sequence": 480,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"fusibleLinkWithSpringMechanism\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Fuse Link Hexa Stud Pin Steel 11X30.6mm 9145",
+   "notes": "cost row FTOCountryWiseCost55 | replaces JSON: 2290008"
+  },
+  {
+   "sequence": 490,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"fusibleLinkWithSpringMechanism\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Spring Retainer Bushing Steel 31.75mmX6.35mmDia",
+   "notes": "cost row FTOCountryWiseCost56 | replaces JSON: 2290010"
+  },
+  {
+   "sequence": 500,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"fusibleLinkWithSpringMechanism\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "3/16 Inch x 2 Inch Lg. Solid Roll Pin",
+   "notes": "cost row FTOCountryWiseCost57 | replaces JSON: 229112"
+  },
+  {
+   "sequence": 510,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"fusibleLinkClosureSpring\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Damper Closer Spring SS304 55.5mmX3.2mmDia",
+   "notes": "cost row FTOCountryWiseCost81 | replaces JSON: 2290217"
+  },
+  {
+   "sequence": 520,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"junctionBox\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "2 Way Junction Box with Cover 100x50x48-Ul Listed",
+   "notes": "cost row FTOCountryWiseCost95 | replaces JSON: 2290044"
+  },
+  {
+   "sequence": 530,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"twisterWireConnector\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Twister Wire Connector",
+   "notes": "cost row FTOCountryWiseCost96 | replaces JSON: 229123"
+  },
+  {
+   "sequence": 540,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"thermalInsulation\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Thermal Insulation",
+   "notes": "cost row FTOCountryWiseCost256 | replaces JSON: 2290073/2290060"
+  },
+  {
+   "sequence": 550,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\", \"fuseLink\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "fuseLinkLookup",
+     "value_format": "As is",
+     "value_order": "MFL 165F,MFL 212F,STOR 165F,STOR 212F,STOR 250F,STOR 350F,STOR PFL,DTOR 165/212F,DTOR 165/250F,DTOR 165/350F,DTOR 212/250F,DTOR 212/350F"
+    }
+   ],
+   "identifier_template": "{fuseLinkLookup}",
+   "notes": "12 JSON lines; item code, name and unit from the cost row | replaces JSON: 165F, 212F, 165F, 212F, 250F, 350F, PFL, 165/212F, 165/250F, 165/350F, 212/250F, 212/350F"
+  },
+  {
+   "sequence": 560,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "linkTemperature",
+     "value_format": "As is",
+     "value_order": "HS-100N 230VAC,HS-100N 24VDC,HS-100N 24VAC,HS-100N 120VAC,HS-100P 230VAC,HS-100P 24VDC,HS-100P 24VAC,HS-100P 120VAC,SL-2000N 230VAC,SL-2000N 24VDC,SL-2000N 24VAC,SL-2000N 120VAC,SL-2000P 230VAC,SL-2000P 24VDC,SL-2000P 24VAC,SL-2000P 120VAC,SM-501N 230VAC,SM-501N 24VDC,SM-501N 24VAC,SM-501N 120VAC,SM-501P 230VAC,SM-501P 24VDC,SM-501P 24VAC,SM-501P 120VAC"
+    }
+   ],
+   "identifier_template": "{linkTemperature}",
+   "notes": "24 JSON lines; item code, name and unit from the cost row | replaces JSON: HS-100N 230VAC, HS-100N 24VDC, HS-100N 24VAC, HS-100N 120VAC, HS-100P 230VAC, HS-100P 24VDC, HS-100P 24VAC, HS-100P 120VAC, SL-2000N 230VAC, SL-2000N 24VDC, SL-2000N 24VAC, SL-2000N 120VAC, SL-2000P 230VAC, SL-2000P 24VDC, SL-2000P 24VAC, SL-2000P 120VAC, SM-501N 230VAC, SM-501N 24VDC, SM-501N 24VAC, SM-501N 120VAC, SM-501P 230VAC, SM-501P 24VDC, SM-501P 24VAC, SM-501P 120VAC"
+  },
+  {
+   "source_type": "Sourced",
+   "identifier_template": "{actModel1|actModel2}",
+   "dimensions": [
+    {
+     "field": "actModel1|actModel2",
+     "value_format": "As is",
+     "value_order": "229100-MS4604F1010/B,229101-MS4604F1210/B,229102-MS8104F1010/B,229103-MS8104F1210/B,229104-MS8109F1010/B,229105-MS8109F1210/B,229106-MS4609F1010/B,229107-MS4609F1210/B,229108-MS8120F1002/B,229109-MS8120F1200/B,229111-MS4620F1005/B,229110-MS4620F1203/B,2290501-FSTF230 US,229092-FSTF230-S US,2290502-FSTF24 US,229093-FSTF24-S US,2290263-FSLF230 US,229090-FSLF230-S US,2290283-FSLF24 US,229091-FSLF24-S US,2290281-FSNF24 US,229088-FSNF24-S US,2290280-FSNF230 US,229089-FSNF230-S US,2290503-FSAFB24-SR,2290468-FSAFB24-SR-S"
+    }
+   ],
+   "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"slot\": \"actModel1\", \"logic\": \"MUL\", \"fields\": [\"cartQty\"], \"aggregate\": [{\"logic\": \"SUM\", \"fields\": [\"noOfActuators1No\", \"noOfActuators1\"]}]}, {\"slot\": \"actModel2\", \"logic\": \"MUL\", \"fields\": [\"cartQty\"], \"aggregate\": [{\"logic\": \"SUM\", \"fields\": [\"noOfActuators1No\", \"noOfActuators2\"]}]}]}",
+   "notes": "26 JSON lines (180-205); an actuator model found in either slot, both slots summed; item code, name and unit from the cost row | replaces JSON: MS4604F1010/B, MS4604F1210/B, MS8104F1010/B, MS8104F1210/B, MS8109F1010/B, MS8109F1210/B, MS4609F1010/B, MS4609F1210/B, MS8120F1002/B, MS8120F1200/B, MS4620F1005/B, MS4620F1203/B, FSTF230US, FSTF230-SUS, FSTF24US, FSTF24-SUS, FSLF230US, FSLF230-SUS, FSLF24US, FSLF24-SUS, FSNF24US, FSNF24-SUS, FSNF230US, FSNF230-SUS, FSAFB-24-SR, FSAFB-24-SR-S",
+   "sequence": 570,
+   "conditions": [],
+   "condition_logic": "and"
+  }
+ ]
+}

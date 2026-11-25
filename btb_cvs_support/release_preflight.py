@@ -30,6 +30,11 @@ RELEASE_PATCHES = [
 	"btb_cvs_support.patches.add_fire_rated_access_doors",
 	"btb_cvs_support.patches.fto_boq_identifiers",
 	"btb_cvs_support.patches.seed_boq_rules_ulrd",
+	"btb_cvs_support.patches.seed_boq_rules_sil",
+	"btb_cvs_support.patches.seed_boq_rules_vcdr",
+	"btb_cvs_support.patches.seed_boq_rules_cfd",
+	"btb_cvs_support.patches.seed_boq_rules_msfd",
+	"btb_cvs_support.patches.seed_boq_rules_vcda",
 ]
 SITE_COUNTRY = {"cvsuae": "UAE", "cvsqatar": "Qatar", "cvsksa": "KSA", "badregypt": "Egypt"}
 PLAN_OF_COUNTRY = {"UAE": "cvsuae", "Qatar": "cvsqatar", "KSA": "cvsksa", "Egypt": "badregypt"}

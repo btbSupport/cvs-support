@@ -1,0 +1,387 @@
+{
+ "_about": "BOQ Rules of Silencers (SIL, BUN6), made by api/_boq_convert.py from boq_format.JSON (119 lines -> 21 rules) on 2026-11-25 and checked on the carts of all four sites (same quantities and order). Seeded once by patches/seed_boq_rules_sil.py.",
+ "family": "SIL",
+ "bundle": "BUN6",
+ "rules": [
+  {
+   "sequence": 10,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"casingWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "casingThickness",
+     "value_format": "One decimal",
+     "value_order": "0.6,0.8,1.0,1.2,1.5"
+    }
+   ],
+   "identifier_template": "{materialType} Casing {casingThickness}",
+   "notes": "15 JSON lines | replaces JSON: GI Casing 0.6, GI Casing 0.8, GI Casing 1.0, GI Casing 1.2, GI Casing 1.5, SS304L Casing 0.6, SS304L Casing 0.8, SS304L Casing 1.0, SS304L Casing 1.2, SS304L Casing 1.5, SS316L Casing 0.6, SS316L Casing 0.8, SS316L Casing 1.0, SS316L Casing 1.2, SS316L Casing 1.5"
+  },
+  {
+   "source_type": "Templated",
+   "uom": "Kg",
+   "identifier_template": "{materialType} Baffle Frame 0.8 X {halfBaffleSlit|fullBaffleSlit}",
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "halfBaffleSlit|fullBaffleSlit",
+     "value_format": "As is",
+     "value_order": "87,112,137,187,237,337"
+    }
+   ],
+   "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"slot\": \"fullBaffleSlit\", \"logic\": \"MUL\", \"fields\": [\"baffleFrameWeight\", \"cartQty\"]}, {\"slot\": \"halfBaffleSlit\", \"logic\": \"MUL\", \"fields\": [\"halfBaffleFrameWeight\", \"cartQty\"]}]}",
+   "notes": "18 JSON lines (15-32); a size found in either baffle slot, both slots summed | replaces JSON: GI Baffle Frame 0.8 X 87, GI Baffle Frame 0.8 X 112, GI Baffle Frame 0.8 X 137, GI Baffle Frame 0.8 X 187, GI Baffle Frame 0.8 X 237, GI Baffle Frame 0.8 X 337, SS304L Baffle Frame 0.8 X 87, SS304L Baffle Frame 0.8 X 112, SS304L Baffle Frame 0.8 X 137, SS304L Baffle Frame 0.8 X 187, SS304L Baffle Frame 0.8 X 237, SS304L Baffle Frame 0.8 X 337, SS316L Baffle Frame 0.8 X 87, SS316L Baffle Frame 0.8 X 112, SS316L Baffle Frame 0.8 X 137, SS316L Baffle Frame 0.8 X 187, SS316L Baffle Frame 0.8 X 237, SS316L Baffle Frame 0.8 X 337",
+   "sequence": 20,
+   "conditions": [],
+   "condition_logic": "and"
+  },
+  {
+   "sequence": 30,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"baffleBullnoseWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "casingThickness",
+     "value_format": "One decimal",
+     "value_order": "0.6,0.8,1.0,1.2,1.5"
+    }
+   ],
+   "identifier_template": "{materialType} Baffle Bullnose {casingThickness}",
+   "notes": "15 JSON lines | replaces JSON: GI Baffle Bullnose 0.6, GI Baffle Bullnose 0.8, GI Baffle Bullnose 1.0, GI Baffle Bullnose 1.2, GI Baffle Bullnose 1.5, SS304L Baffle Bullnose 0.6, SS304L Baffle Bullnose 0.8, SS304L Baffle Bullnose 1.0, SS304L Baffle Bullnose 1.2, SS304L Baffle Bullnose 1.5, SS316L Baffle Bullnose 0.6, SS316L Baffle Bullnose 0.8, SS316L Baffle Bullnose 1.0, SS316L Baffle Bullnose 1.2, SS316L Baffle Bullnose 1.5"
+  },
+  {
+   "sequence": 40,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bafflePerforatedSheetArea\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "perfThickness",
+     "value_format": "One decimal",
+     "value_order": "0.6,0.7"
+    }
+   ],
+   "identifier_template": "{materialType} {perfThickness}",
+   "notes": "6 JSON lines; item code, name and unit from the cost row | replaces JSON: 1020102, 1020101, 1020201, SS304L Perf Sheet 0.7, 1020210, SS316L Perf Sheet 0.7"
+  },
+  {
+   "sequence": 50,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"a100mmInfillArea\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "infillType",
+     "operator": "eq",
+     "value": "Standard-Fibreglass"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Fibreglass Infill 100mm",
+   "notes": "1 JSON lines; item code, name and unit from the cost row | replaces JSON: Fibreglass Infill 100mm"
+  },
+  {
+   "sequence": 60,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"a50mmInfillArea\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "infillType",
+     "operator": "eq",
+     "value": "Standard-Fibreglass"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Fibreglass Infill 50mm",
+   "notes": "1 JSON lines; item code, name and unit from the cost row | replaces JSON: Fibreglass Infill 50mm"
+  },
+  {
+   "sequence": 70,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"a25mmInfillArea\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "infillType",
+     "operator": "eq",
+     "value": "Standard-Fibreglass"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Fibreglass Infill 25mm",
+   "notes": "1 JSON lines; item code, name and unit from the cost row | replaces JSON: Fibreglass Infill 25mm"
+  },
+  {
+   "sequence": 80,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"a100mmInfillArea\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "infillType",
+     "operator": "neq",
+     "value": "Standard-Fibreglass"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Mineral Wool Infill 100mm",
+   "notes": "1 JSON lines; item code, name and unit from the cost row | replaces JSON: Mineral Wool Infill 100mm"
+  },
+  {
+   "sequence": 90,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"a50mmInfillArea\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "infillType",
+     "operator": "neq",
+     "value": "Standard-Fibreglass"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Mineral Wool Infill 50mm",
+   "notes": "1 JSON lines; item code, name and unit from the cost row | replaces JSON: Mineral Wool Infill 50mm"
+  },
+  {
+   "sequence": 100,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"a25mmInfillArea\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "infillType",
+     "operator": "neq",
+     "value": "Standard-Fibreglass"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Mineral Wood Infill 25mm",
+   "notes": "1 JSON lines; item code, name and unit from the cost row | replaces JSON: Mineral Wood Infill 25mm"
+  },
+  {
+   "sequence": 110,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"infillProtectionArea\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "infillProtection",
+     "value_format": "As is",
+     "value_order": "Tissue Facing,Mylar Plastic"
+    }
+   ],
+   "identifier_template": "{infillProtection}",
+   "notes": "2 JSON lines; item code, name and unit from the cost row | replaces JSON: Tissue Facing, Mylar Plastic"
+  },
+  {
+   "sequence": 120,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"flangeQuantity\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "flangeSizeLookup",
+     "value_format": "As is",
+     "value_order": "GI 20mm,GI 30mm,GI 40mm,GI S4 20mm,GI S4 30mm,GI S4 40mm,SS304L 20mm,SS304L 30mm,SS304L 40mm,SS304L S4 20mm,SS304L S4 30mm,SS304L S4 40mm,SS316L 20mm,SS316L 30mm,SS316L 40mm,SS316L S4 20mm,SS316L S4 30mm,SS316L S4 40mm"
+    }
+   ],
+   "identifier_template": "{flangeSizeLookup}",
+   "notes": "18 JSON lines; item code, name and unit from the cost row | replaces JSON: 2020101, 2020102, 2020104, 2020108, 2020109, 2020110, 2020201, 2020202, SS304L 40mm, 2020201(B), 2020202(B), SS304L S4 40mm, 2020213, 2020214, SS316L 40mm, 2020213 (B), 2020214 (B), SS316L S4 40mm"
+  },
+  {
+   "sequence": 130,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"angleQty\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "angleSize",
+     "value_format": "As is",
+     "value_order": "25,30,40,50,60"
+    }
+   ],
+   "identifier_template": "{materialType} {angleSize} mm Angle",
+   "notes": "13 JSON lines; item code, name and unit from the cost row | replaces JSON: GI Angle 25, 2010112, 2010113, 2010108, GI Angle 60, 2010221, 2010223, 2010208, SS304L Angle 60, 2010230, 2010232, 2010234, SS316L Angle 60"
+  },
+  {
+   "sequence": 140,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"aggregate\": [{\"fields\": [\"flangeAngleRiveting\", \"rivets\", \"baffleRiveting\"], \"logic\": \"SUM\"}], \"fields\": [\"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "materialType",
+     "operator": "eq",
+     "value": "GI"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "3030421",
+   "notes": "cost row FTOCountryWiseCost359 | replaces JSON: 3030421"
+  },
+  {
+   "sequence": 150,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"aggregate\": [{\"fields\": [\"flangeAngleRiveting\", \"rivets\", \"baffleRiveting\"], \"logic\": \"SUM\"}], \"fields\": [\"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "materialType",
+     "operator": "eq",
+     "value": "SS304L"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "3030203",
+   "notes": "cost row FTOCountryWiseCost360 | replaces JSON: 3030203"
+  },
+  {
+   "sequence": 160,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"aggregate\": [{\"fields\": [\"flangeAngleRiveting\", \"rivets\", \"baffleRiveting\"], \"logic\": \"SUM\"}], \"fields\": [\"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "materialType",
+     "operator": "eq",
+     "value": "SS316L"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "SS316L Rivets",
+   "notes": "1 JSON lines | replaces JSON: SS316L Rivets"
+  },
+  {
+   "sequence": 170,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"corners\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "flangeSizeLookup",
+     "value_format": "As is",
+     "value_order": "GI 20mm,GI 30mm,GI 40mm,SS304L 20mm,SS304L 30mm,SS304L 40mm,SS316L 20mm,SS316L 30mm,SS316L 40mm"
+    }
+   ],
+   "identifier_template": "{flangeSizeLookup} (Corners)",
+   "notes": "9 JSON lines; item code, name and unit from the cost row | replaces JSON: 2025112, 2025113, 2025115, 2025210, 2025211, 2025212, 2025230, 2025231, 2025232"
+  },
+  {
+   "sequence": 180,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"corners\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "flangeSizeLookup",
+     "value_format": "As is",
+     "value_order": "GI S4 20mm,GI S4 30mm,GI S4 40mm,SS304L S4 20mm,SS304L S4 30mm,SS304L S4 40mm,SS316L S4 20mm,SS316L S4 30mm,SS316L S4 40mm"
+    }
+   ],
+   "identifier_template": "{flangeSizeLookup} (Fire rated Corners)",
+   "notes": "9 JSON lines; item code, name and unit from the cost row | replaces JSON: 2025116, 2025118, 2025111, 2025201, 2025202, 2025203, 2025221, 2025222, 2025223"
+  },
+  {
+   "source_type": "Sourced",
+   "identifier_literal": "Sealant Dow Corning 732 - 310ml",
+   "conditions": [
+    {
+     "field": "productCategory",
+     "operator": "eq",
+     "value": "Normal"
+    }
+   ],
+   "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"logic\": \"MUL\", \"fields\": [\"sealant\", \"cartQty\"]}]}",
+   "notes": "JSON line 114 (2050001 Sealant): the SIL sealant cost row (decision O3) | replaces JSON: 2050001",
+   "sequence": 190,
+   "condition_logic": "and"
+  },
+  {
+   "sequence": 200,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"sealant\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "productCategory",
+     "operator": "neq",
+     "value": "Normal"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Fire Rated Sealant",
+   "notes": "cost row FTOCountryWiseCost387 | replaces JSON: 2050002"
+  },
+  {
+   "sequence": 210,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"removableBafleTrayWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{materialType} Removable Baffle Tray 1.5",
+   "notes": "3 JSON lines | replaces JSON: GI Removable Baffle Tray 1.5, SS304L Removable Baffle Tray 1.5, SS316L Removable Baffle Tray 1.5"
+  }
+ ]
+}

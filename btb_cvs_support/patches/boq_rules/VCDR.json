@@ -1,0 +1,225 @@
+{
+ "_about": "BOQ Rules of Round Volume Control Dampers (VCDR, BUN9), made by api/_boq_convert.py from boq_format.JSON (139 lines -> 13 rules) on 2026-11-25 and checked on the carts of all four sites (same quantities and order). Seeded once by patches/seed_boq_rules_vcdr.py.",
+ "family": "VCDR",
+ "bundle": "BUN9",
+ "rules": [
+  {
+   "sequence": 10,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"frameWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,AL,SS304L,SS316L"
+    },
+    {
+     "field": "frameThicknessLookup",
+     "value_format": "One decimal",
+     "value_order": "0.6,0.8,1.0,1.2,1.5"
+    }
+   ],
+   "identifier_template": "{materialType} Frame {frameThicknessLookup}",
+   "notes": "20 JSON lines | replaces JSON: GI Frame 0.6, GI Frame 0.8, GI Frame 1.0, GI Frame 1.2, GI Frame 1.5, AL Frame 0.6, AL Frame 0.8, AL Frame 1.0, AL Frame 1.2, AL Frame 1.5, SS304L Frame 0.6, SS304L Frame 0.8, SS304L Frame 1.0, SS304L Frame 1.2, SS304L Frame 1.5, SS316L Frame 0.6, SS316L Frame 0.8, SS316L Frame 1.0, SS316L Frame 1.2, SS316L Frame 1.5"
+  },
+  {
+   "sequence": 20,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bladeWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,AL,SS304L,SS316L"
+    },
+    {
+     "field": "bladeThickness",
+     "value_format": "One decimal",
+     "value_order": "0.6,0.7,0.8,1.0,1.2"
+    }
+   ],
+   "identifier_template": "{materialType} Blade {bladeThickness}",
+   "notes": "20 JSON lines | replaces JSON: GI Blade 0.6, GI Blade 0.7, GI Blade 0.8, GI Blade 1.0, GI Blade 1.2, AL Blade 0.6, AL Blade 0.7, AL Blade 0.8, AL Blade 1.0, AL Blade 1.2, SS304L Blade 0.6, SS304L Blade 0.7, SS304L Blade 0.8, SS304L Blade 1.0, SS304L Blade 1.2, SS316L Blade 0.6, SS316L Blade 0.7, SS316L Blade 0.8, SS316L Blade 1.0, SS316L Blade 1.2"
+  },
+  {
+   "sequence": 30,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"motorHoldingPlateWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,AL,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{materialType} Motor Holding Plate 1.2",
+   "notes": "4 JSON lines | replaces JSON: GI Motor Holding Plate 1.2, AL Motor Holding Plate 1.2, SS304L Motor Holding Plate 1.2, SS316L Motor Holding Plate 1.2"
+  },
+  {
+   "sequence": 40,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"axleRetainerWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,AL,SS304L,SS316L"
+    }
+   ],
+   "identifier_template": "{materialType} Axle Retainer 1.2",
+   "notes": "4 JSON lines | replaces JSON: GI Axle Retainer 1.2, AL Axle Retainer 1.2, SS304L Axle Retainer 1.2, SS316L Axle Retainer 1.2"
+  },
+  {
+   "sequence": 50,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"frameGasket\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Frame Gasket",
+   "notes": "1 JSON lines; item code, name and unit from the cost row | replaces JSON: Frame Gasket"
+  },
+  {
+   "sequence": 60,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"standardBracket\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Bracket Cost",
+   "notes": "1 JSON lines; item code, name and unit from the cost row | replaces JSON: Bracket Cost"
+  },
+  {
+   "sequence": 70,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bladeSealArea\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "bladeSeal",
+     "operator": "eq",
+     "value": "Silicone High Temp"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "UL FNST Blade Seal - High Temperature",
+   "notes": "cost row FTOCountryWiseCost77 | replaces JSON: 2290018"
+  },
+  {
+   "sequence": 80,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bladeSealArea\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "bladeSeal",
+     "operator": "eq",
+     "value": "Silicone Standard"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Blade Seal Standard",
+   "notes": "1 JSON lines; item code, name and unit from the cost row | replaces JSON: Blade Seal Standard"
+  },
+  {
+   "sequence": 90,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"aggregate\": [{\"fields\": [\"axleRoundBar\", \"cartQty\"], \"logic\": \"MUL\"}], \"filter\": {\"conditions\": [{\"field\": \"axleType\", \"operator\": \"eq\", \"value\": \"10mm Round Bar\"}, {\"field\": \"axleType\", \"operator\": \"eq\", \"value\": \"12mm Round Bar\"}, {\"field\": \"axleType\", \"operator\": \"eq\", \"value\": \"19mm Round Bar\"}], \"logic\": \"or\"}, \"logic\": \"SUM\"}, {\"aggregate\": [{\"fields\": [\"axle3_8Inch10mmSquarePin\", \"cartQty\"], \"logic\": \"MUL\"}], \"filter\": {\"conditions\": [{\"field\": \"axleType\", \"operator\": \"eq\", \"value\": \"10mm Square Pin\"}], \"logic\": \"or\"}, \"logic\": \"SUM\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,AL,SS304L,SS316L"
+    },
+    {
+     "field": "axleType",
+     "value_format": "As is",
+     "value_order": "10mm Round Bar,12mm Round Bar,19mm Round Bar,10mm Square Pin"
+    }
+   ],
+   "identifier_template": "{materialType} {axleType}",
+   "notes": "16 JSON lines; item code, name and unit from the cost row | replaces JSON: GI 10mm Round Bar, 2290200/2290290, GI 19mm Round Bar, GI 10mm Square Pin, AL 10mm Round Bar, AL 12mm Round Bar, AL 19mm Round Bar, AL 10mm Square Pin, SS304L 10mm Round Bar, SS304L 12mm Round Bar, SS304L 19mm Round Bar, SS304L 10mm Square Pin, SS316L 10mm Round Bar, SS316L 12mm Round Bar, SS316L 19mm Round Bar, SS316L 10mm Square Pin"
+  },
+  {
+   "sequence": 100,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"bushes\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "bushCostLookup",
+     "value_format": "As is",
+     "value_order": "Acetate 10mm Round Bar Bush,Acetate 12mm Round Bar Bush,Acetate 19mm Round Bar Bush,Acetate 10mm Square Pin Bush,Bronze Oilite 10mm Round Bar Bush,Bronze Oilite 12mm Round Bar Bush,Bronze Oilite 19mm Round Bar Bush,Bronze Oilite 10mm Square Pin Bush,Nylon 6/6 10mm Round Bar Bush,Nylon 6/6 12mm Round Bar Bush,Nylon 6/6 19mm Round Bar Bush,Nylon 6/6 10mm Square Pin Bush,Stainless Steel 10mm Round Bar Bush,Stainless Steel 12mm Round Bar Bush,Stainless Steel 19mm Round Bar Bush,Stainless Steel 10mm Square Pin Bush"
+    }
+   ],
+   "identifier_template": "{bushCostLookup}",
+   "notes": "16 JSON lines; item code, name and unit from the cost row | replaces JSON: Acetate 10mm Round Bar Bush, Acetate 12mm Round Bar Bush, Acetate 19mm Round Bar Bush, Acetate 10mm Square Pin Bush, Bronze Oilite 10mm Round Bar Bush, Bronze Oilite 12mm Round Bar Bush, Bronze Oilite 19mm Round Bar Bush, Bronze Oilite 10mm Square Pin Bush, Nylon 6/6 10mm Round Bar Bush, 2290293, Nylon 6/6 19mm Round Bar Bush, 2290294, Stainless Steel 10mm Round Bar Bush, Stainless Steel 12mm Round Bar Bush, Stainless Steel 19mm Round Bar Bush, Stainless Steel 10mm Square Pin Bush"
+  },
+  {
+   "sequence": 110,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"manualQuadrant\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "quadrantOption",
+     "value_format": "As is",
+     "value_order": "10mm,12mm,19mm"
+    }
+   ],
+   "identifier_template": "{quadrantOption} Quadrant",
+   "notes": "3 JSON lines; item code, name and unit from the cost row | replaces JSON: 10mm Quadrant, 12mm Quadrant, 19mm Quadrant"
+  },
+  {
+   "sequence": 120,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"amcaLabelNumber\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "AMCA Label",
+   "notes": "1 JSON lines; item code, name and unit from the cost row | replaces JSON: AMCA Label"
+  },
+  {
+   "sequence": 130,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noOfActuators\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "actuatorModel",
+     "value_format": "As is",
+     "value_order": "2290517-TF230,2290516-TF24,2290515-TF24-SR,2290514-LF230A,2290513-LF24,2290512-LF24-SR,2290511-LM230A,2290510-LM24A,229096-LM230A -S,2290465-LM24A -S,2290341-GDB341.1E,2290495-GDB346.1E,2290509-NF230A,2290508-NF24A,2290270-NM230A,2290507-NM24A,2290506-NF24A-SR,2290499-GLB341.1E,2290496-GLB346.1E,2290276-SM230A,2290505-SM24A,229098-SM230A -S,2290504-SF24A-SR,2290500-GEB341.1E,2290497-GEB346.1E,229088-FSNF24-S US,229089-FSNF230-S US,229090-FSLF230-S US,229091-FSLF24-S US,229100-MS4604F1010/B,229101-MS4604F1210/B,229102-MS8104F1010/B,229103-MS8104F1210/B,229104-MS8109F1010/B,229105-MS8109F1210/B,229106-MS4609F1010/B,229107-MS4609F1210/B,229108-MS8120F1002/B,229109-MS8120F1200/B,229110-MS4620F1203/B,229111-MS4620F1005/B,2290263-FSLF230 US,2290280-FSNF230 US,2290281-FSNF24 US,2290283-FSLF24 US,229093-FSTF24-S US,229092-FSTF230-S US,2290501-FSTF230 US,2290502-FSTF24 US,2290468-FSAFB24-SR-S,2290503-FSAFB24-SR"
+    }
+   ],
+   "identifier_template": "{actuatorModel}",
+   "notes": "51 JSON lines; item code, name and unit from the cost row | replaces JSON: 2290517-TF230, 2290516-TF24, 2290515-TF24-SR, 2290514-LF230A, 2290513-LF24, 2290512-LF24-SR, 2290511-LM230A, 2290510-LM24A, 229096-LM230A -S, 2290465-LM24A -S, 2290341-GDB341.1E, 2290495-GDB346.1E, 2290509-NF230A, 2290508-NF24A, 2290270-NM230A, 2290507-NM24A, 2290506-NF24A-SR, 2290499-GLB341.1E, 2290496-GLB346.1E, 2290276-SM230A, 2290505-SM24A, 229098-SM230A -S, 2290504-SF24A-SR, 2290500-GEB341.1E, 2290497-GEB346.1E, 229088-FSNF24-S US, 229089-FSNF230-S US, 229090-FSLF230-S US, 229091-FSLF24-S US, 229100-MS4604F1010/B, 229101-MS4604F1210/B, 229102-MS8104F1010/B, 229103-MS8104F1210/B, 229104-MS8109F1010/B, 229105-MS8109F1210/B, 229106-MS4609F1010/B, 229107-MS4609F1210/B, 229108-MS8120F1002/B, 229109-MS8120F1200/B, 229110-MS4620F1203/B, 229111-MS4620F1005/B, 2290263-FSLF230 US, 2290280-FSNF230 US, 2290281-FSNF24 US, 2290283-FSLF24 US, 229093-FSTF24-S US, 229092-FSTF230-S US, 2290501-FSTF230 US, 2290502-FSTF24 US, "
+  }
+ ]
+}

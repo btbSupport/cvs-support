@@ -1,0 +1,615 @@
+{
+ "_about": "BOQ Rules of Curtain Fire Dampers (CFD, BUN7), made by api/_boq_convert.py from boq_format.JSON (145 lines -> 30 rules) on 2026-11-25 and checked on the carts of all four sites (same quantities and order). Seeded once by patches/seed_boq_rules_cfd.py.",
+ "family": "CFD",
+ "bundle": "BUN7",
+ "rules": [
+  {
+   "sequence": 10,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"frameWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "frameSlitSize",
+     "value_format": "As is",
+     "value_order": "145,91,356"
+    },
+    {
+     "field": "frameThickness",
+     "value_format": "One decimal",
+     "value_order": "0.8,1.0,1.2,1.5"
+    }
+   ],
+   "identifier_template": "{materialType} Frame {frameThickness} X {frameSlitSize}",
+   "notes": "36 JSON lines | replaces JSON: GI Frame 0.8 X 145, GI Frame 1.0 X 145, GI Frame 1.2 X 145, GI Frame 1.5 X 145, GI Frame 0.8 X 91, GI Frame 1.0 X 91, GI Frame 1.2 X 91, GI Frame 1.5 X 91, GI Frame 0.8 X 356, GI Frame 1.0 X 356, GI Frame 1.2 X 356, GI Frame 1.5 X 356, SS304L Frame 0.8 X 145, SS304L Frame 1.0 X 145, SS304L Frame 1.2 X 145, SS304L Frame 1.5 X 145, SS304L Frame 0.8 X 91, SS304L Frame 1.0 X 91, SS304L Frame 1.2 X 91, SS304L Frame 1.5 X 91, SS304L Frame 0.8 X 356, SS304L Frame 1.0 X 356, SS304L Frame 1.2 X 356, SS304L Frame 1.5 X 356, SS316L Frame 0.8 X 145, SS316L Frame 1.0 X 145, SS316L Frame 1.2 X 145, SS316L Frame 1.5 X 145, SS316L Frame 0.8 X 91, SS316L Frame 1.0 X 91, SS316L Frame 1.2 X 91, SS316L Frame 1.5 X 91, SS316L Frame 0.8 X 356, SS316L Frame 1.0 X 356, SS316L Frame 1.2 X 356, SS316L Frame 1.5 X 356"
+  },
+  {
+   "sequence": 20,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"totalFittingsWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "fittingsThickness",
+     "value_format": "One decimal",
+     "value_order": "0.8,1.0,1.2,1.5"
+    }
+   ],
+   "identifier_template": "{materialType} Fittings {fittingsThickness}",
+   "notes": "12 JSON lines | replaces JSON: GI Fittings 0.8, GI Fittings 1.0, GI Fittings 1.2, GI Fittings 1.5, SS304L Fittings 0.8, SS304L Fittings 1.0, SS304L Fittings 1.2, SS304L Fittings 1.5, SS316L Fittings 0.8, SS316L Fittings 1.0, SS316L Fittings 1.2, SS316L Fittings 1.5"
+  },
+  {
+   "sequence": 30,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"totalBladeWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [
+    {
+     "field": "bladeThickness",
+     "operator": "eq",
+     "value": "0.8"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "bladeCoilWidth",
+     "value_format": "As is",
+     "value_order": "55,70"
+    }
+   ],
+   "identifier_template": "{materialType} Blade 0.8 X {bladeCoilWidth}",
+   "notes": "6 JSON lines | replaces JSON: GI Blade 0.8 X 55, GI Blade 0.8 X 70, SS304L Blade 0.8 X 55, SS304L Blade 0.8 X 70, SS316L Blade 0.8 X 55, SS316L Blade 0.8 X 70"
+  },
+  {
+   "sequence": 40,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"sleeveWeight\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Kg",
+   "conditions": [],
+   "dimensions": [
+    {
+     "field": "materialType",
+     "value_format": "As is",
+     "value_order": "GI,SS304L,SS316L"
+    },
+    {
+     "field": "sleeveLength",
+     "value_format": "As is",
+     "value_order": "203,254,305,356,406"
+    },
+    {
+     "field": "sleeveThickness",
+     "value_format": "One decimal",
+     "value_order": "0.8,1.0,1.2,1.5"
+    }
+   ],
+   "identifier_template": "{materialType} Sleeve {sleeveThickness} X {sleeveLength}",
+   "notes": "60 JSON lines | replaces JSON: GI Sleeve 0.8 X 203, GI Sleeve 1.0 X 203, GI Sleeve 1.2 X 203, GI Sleeve 1.5 X 203, GI Sleeve 0.8 X 254, GI Sleeve 1.0 X 254, GI Sleeve 1.2 X 254, GI Sleeve 1.5 X 254, GI Sleeve 0.8 X 305, GI Sleeve 1.0 X 305, GI Sleeve 1.2 X 305, GI Sleeve 1.5 X 305, GI Sleeve 0.8 X 356, GI Sleeve 1.0 X 356, GI Sleeve 1.2 X 356, GI Sleeve 1.5 X 356, GI Sleeve 0.8 X 406, GI Sleeve 1.0 X 406, GI Sleeve 1.2 X 406, GI Sleeve 1.5 X 406, SS304L Sleeve 0.8 X 203, SS304L Sleeve 1.0 X 203, SS304L Sleeve 1.2 X 203, SS304L Sleeve 1.5 X 203, SS304L Sleeve 0.8 X 254, SS304L Sleeve 1.0 X 254, SS304L Sleeve 1.2 X 254, SS304L Sleeve 1.5 X 254, SS304L Sleeve 0.8 X 305, SS304L Sleeve 1.0 X 305, SS304L Sleeve 1.2 X 305, SS304L Sleeve 1.5 X 305, SS304L Sleeve 0.8 X 356, SS304L Sleeve 1.0 X 356, SS304L Sleeve 1.2 X 356, SS304L Sleeve 1.5 X 356, SS304L Sleeve 0.8 X 406, SS304L Sleeve 1.0 X 406, SS304L Sleeve 1.2 X 406, SS304L Sleeve 1.5 X 406, SS316L Sleeve 0.8 X 203, SS316L Sleeve 1.0 X 203,"
+  },
+  {
+   "sequence": 50,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofBrackets\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "materialType",
+     "operator": "eq",
+     "value": "GI"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "LHS & RHS Static Spring Bracket Latch GI G90 JNDL 50X87X1.5mm 9249",
+   "filter_json": "{\"logic\": \"or\", \"conditions\": [{\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FD\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FD-SL\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FD-AR\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FD-OW\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FD-SL-OW\"}]}",
+   "notes": "cost row FTOCountryWiseCost271 | replaces JSON: 2290113 & 2290114"
+  },
+  {
+   "sequence": 60,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofBrackets\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "materialType",
+     "operator": "eq",
+     "value": "GI"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "LHS & RHS Dynamic Spring Bracket Latch Big GI G90 54X85X1.5mm 9002",
+   "filter_json": "{\"logic\": \"or\", \"conditions\": [{\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FDD\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FDD-SL\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FDD-AR\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FDD-OW\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FDD-SL-OW\"}]}",
+   "notes": "cost row FTOCountryWiseCost273 | replaces JSON: 2290116 & 2290117"
+  },
+  {
+   "sequence": 70,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofBrackets\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "materialType",
+     "operator": "neq",
+     "value": "GI"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "LHS & RHS - Static Spring Bracket Latch SS304",
+   "filter_json": "{\"logic\": \"or\", \"conditions\": [{\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FD\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FD-SL\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FD-AR\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FD-OW\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FD-SL-OW\"}]}",
+   "notes": "cost row FTOCountryWiseCost272 | replaces JSON: 2290284 & 2290285"
+  },
+  {
+   "sequence": 80,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofBrackets\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "materialType",
+     "operator": "neq",
+     "value": "GI"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "LHS & RHS - Dynamic Spring Bracket Latch SS304",
+   "filter_json": "{\"logic\": \"or\", \"conditions\": [{\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FDD\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FDD-SL\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FDD-AR\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FDD-OW\"}, {\"field\": \"modelNo\", \"operator\": \"eq\", \"value\": \"FDD-SL-OW\"}]}",
+   "notes": "cost row FTOCountryWiseCost274 | replaces JSON: 2290286 & 2290287"
+  },
+  {
+   "sequence": 90,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSections\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Fusible Link Holding Strip",
+   "notes": "cost row FTOCountryWiseCost275 | replaces JSON: TBD"
+  },
+  {
+   "sequence": 100,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"rivetQty\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Rivet",
+   "notes": "cost row FTOCountryWiseCost276 | replaces JSON: 3030104"
+  },
+  {
+   "sequence": 110,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"dowCorningSealantQty\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Sealant Dow Corning 732 - 310ml",
+   "notes": "cost row FTOCountryWiseCost238 | replaces JSON: 2250004"
+  },
+  {
+   "sequence": 120,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSections\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "limitSwitchRequired",
+     "operator": "eq",
+     "value": "Yes"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Limit Switch (Balde Position Switch)",
+   "notes": "cost row FTOCountryWiseCost278 | replaces JSON: 2290035"
+  },
+  {
+   "sequence": 130,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"fields\": [\"cartQty\"], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "UL Sticker (AED/Pc), CVS Labels, etc",
+   "notes": "cost row FTOCountryWiseCost279 | replaces JSON: 3430004"
+  },
+  {
+   "sequence": 140,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofFusibleLink\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "fusibleLinkTemp",
+     "operator": "eq",
+     "value": "Standard 165F (74C)"
+    },
+    {
+     "field": "linkType",
+     "operator": "eq",
+     "value": "JS"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "MFL 165F",
+   "notes": "cost row FTOCountryWiseCost280 | replaces JSON: 2290013"
+  },
+  {
+   "sequence": 150,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofFusibleLink\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "fusibleLinkTemp",
+     "operator": "eq",
+     "value": "Standard 165F (74C)"
+    },
+    {
+     "field": "linkType",
+     "operator": "eq",
+     "value": "GS"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Fusible Link 73C (165F) - Globe GS",
+   "notes": "cost row FTOCountryWiseCost281 | replaces JSON: 2290047"
+  },
+  {
+   "sequence": 160,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofFusibleLink\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "fusibleLinkTemp",
+     "operator": "eq",
+     "value": "High Temperature 212F (100C)"
+    },
+    {
+     "field": "linkType",
+     "operator": "eq",
+     "value": "JS"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290046",
+   "description_template": "Fusible Link 100C (212F) - Globe JS",
+   "notes": "1 JSON lines | replaces JSON: 2290046"
+  },
+  {
+   "sequence": 170,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofFusibleLink\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [
+    {
+     "field": "fusibleLinkTemp",
+     "operator": "eq",
+     "value": "High Temperature 212F (100C)"
+    },
+    {
+     "field": "linkType",
+     "operator": "eq",
+     "value": "GS"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "Fusible Link 100C (212F) - Globe GS",
+   "notes": "cost row FTOCountryWiseCost283 | replaces JSON: 2290048"
+  },
+  {
+   "sequence": 180,
+   "source_type": "Sourced",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"thermalBlanketArea\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": null,
+   "conditions": [],
+   "dimensions": [],
+   "identifier_literal": "Thermal Blanket Cost",
+   "notes": "cost row FTOCountryWiseCost396 | replaces JSON: Thermal Blanket"
+  },
+  {
+   "sequence": 190,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "springs",
+     "operator": "eq",
+     "value": "H10J14"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290225",
+   "description_template": "H10J14",
+   "notes": "1 JSON lines | replaces JSON: 2290225"
+  },
+  {
+   "sequence": 200,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "springs",
+     "operator": "eq",
+     "value": "H10J26"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290226",
+   "description_template": "H10J26",
+   "notes": "1 JSON lines | replaces JSON: 2290226"
+  },
+  {
+   "sequence": 210,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "springs",
+     "operator": "eq",
+     "value": "H10J36"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290227",
+   "description_template": "H10J36",
+   "notes": "1 JSON lines | replaces JSON: 2290227"
+  },
+  {
+   "sequence": 220,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "springs",
+     "operator": "eq",
+     "value": "H10J42"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290228",
+   "description_template": "H10J42",
+   "notes": "1 JSON lines | replaces JSON: 2290228"
+  },
+  {
+   "sequence": 230,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "springs",
+     "operator": "eq",
+     "value": "H12J50"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290229",
+   "description_template": "H12J50",
+   "notes": "1 JSON lines | replaces JSON: 2290229"
+  },
+  {
+   "sequence": 240,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "springs",
+     "operator": "eq",
+     "value": "H12K14"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290222",
+   "description_template": "H12K14",
+   "notes": "1 JSON lines | replaces JSON: 2290222"
+  },
+  {
+   "sequence": 250,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "springs",
+     "operator": "eq",
+     "value": "H12K26"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290223",
+   "description_template": "H12K26",
+   "notes": "1 JSON lines | replaces JSON: 2290223"
+  },
+  {
+   "sequence": 260,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "springs",
+     "operator": "eq",
+     "value": "H12K36"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290224",
+   "description_template": "H12K36",
+   "notes": "1 JSON lines | replaces JSON: 2290224"
+  },
+  {
+   "sequence": 270,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "springs",
+     "operator": "eq",
+     "value": "H12P14"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290230",
+   "description_template": "H12P14",
+   "notes": "1 JSON lines | replaces JSON: 2290230"
+  },
+  {
+   "sequence": 280,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "springs",
+     "operator": "eq",
+     "value": "H12P26"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290231",
+   "description_template": "H12P26",
+   "notes": "1 JSON lines | replaces JSON: 2290231"
+  },
+  {
+   "sequence": 290,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "springs",
+     "operator": "eq",
+     "value": "H12P36"
+    }
+   ],
+   "dimensions": [],
+   "identifier_literal": "2290232",
+   "description_template": "H12P36",
+   "notes": "1 JSON lines | replaces JSON: 2290232"
+  },
+  {
+   "sequence": 300,
+   "source_type": "Templated",
+   "condition_logic": "and",
+   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+   "uom": "Ea",
+   "conditions": [
+    {
+     "field": "springs",
+     "operator": "neq",
+     "value": "H10J14"
+    },
+    {
+     "field": "springs",
+     "operator": "neq",
+     "value": "H10J26"
+    },
+    {
+     "field": "springs",
+     "operator": "neq",
+     "value": "H10J36"
+    },
+    {
+     "field": "springs",
+     "operator": "neq",
+     "value": "H10J42"
+    },
+    {
+     "field": "springs",
+     "operator": "neq",
+     "value": "H12J50"
+    },
+    {
+     "field": "springs",
+     "operator": "neq",
+     "value": "H12K14"
+    },
+    {
+     "field": "springs",
+     "operator": "neq",
+     "value": "H12K26"
+    },
+    {
+     "field": "springs",
+     "operator": "neq",
+     "value": "H12K36"
+    },
+    {
+     "field": "springs",
+     "operator": "neq",
+     "value": "H12P14"
+    },
+    {
+     "field": "springs",
+     "operator": "neq",
+     "value": "H12P26"
+    },
+    {
+     "field": "springs",
+     "operator": "neq",
+     "value": "H12P36"
+    }
+   ],
+   "dimensions": [
+    {
+     "field": "springs",
+     "value_format": "As is",
+     "value_order": "VSpring1,VSpring2,VSpring3,VSpring4,VSpring5,VSpring6"
+    }
+   ],
+   "identifier_template": "{springs}",
+   "notes": "6 JSON lines | replaces JSON: VSpring1, VSpring2, VSpring3, VSpring4, VSpring5, VSpring6"
+  }
+ ]
+}

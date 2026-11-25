@@ -1,0 +1,48 @@
+{
+ "_about": "Hand-written MSFD rules for JSON lines no generated shape expresses (read by api/_boq_convert.py). Actuators: a damper has two actuator slots (actModel1, actModel2); one line per model found in either slot, quantities of both slots summed (JSON lines 180-205). Decision P5.",
+ "overrides": [
+  {
+   "lines": [
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205
+   ],
+   "rule": {
+    "source_type": "Sourced",
+    "identifier_template": "{actModel1|actModel2}",
+    "dimensions": [
+     {
+      "field": "actModel1|actModel2",
+      "value_format": "As is",
+      "value_order": "229100-MS4604F1010/B,229101-MS4604F1210/B,229102-MS8104F1010/B,229103-MS8104F1210/B,229104-MS8109F1010/B,229105-MS8109F1210/B,229106-MS4609F1010/B,229107-MS4609F1210/B,229108-MS8120F1002/B,229109-MS8120F1200/B,229111-MS4620F1005/B,229110-MS4620F1203/B,2290501-FSTF230 US,229092-FSTF230-S US,2290502-FSTF24 US,229093-FSTF24-S US,2290263-FSLF230 US,229090-FSLF230-S US,2290283-FSLF24 US,229091-FSLF24-S US,2290281-FSNF24 US,229088-FSNF24-S US,2290280-FSNF230 US,229089-FSNF230-S US,2290503-FSAFB24-SR,2290468-FSAFB24-SR-S"
+     }
+    ],
+    "aggregate": "{\"logic\": \"SUM\", \"aggregate\": [{\"slot\": \"actModel1\", \"logic\": \"MUL\", \"fields\": [\"cartQty\"], \"aggregate\": [{\"logic\": \"SUM\", \"fields\": [\"noOfActuators1No\", \"noOfActuators1\"]}]}, {\"slot\": \"actModel2\", \"logic\": \"MUL\", \"fields\": [\"cartQty\"], \"aggregate\": [{\"logic\": \"SUM\", \"fields\": [\"noOfActuators1No\", \"noOfActuators2\"]}]}]}",
+    "notes": "26 JSON lines (180-205); an actuator model found in either slot, both slots summed; item code, name and unit from the cost row"
+   }
+  }
+ ]
+}

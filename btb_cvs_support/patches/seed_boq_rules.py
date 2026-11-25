@@ -14,8 +14,8 @@ import json
 import frappe
 
 DATA = ("patches", "boq_rules")
-SPEC_KEYS = ("sequence", "source_type", "identifier_template", "identifier_literal", "uom", "condition_logic",
-	"aggregate", "notes")
+SPEC_KEYS = ("sequence", "source_type", "identifier_template", "identifier_literal", "description_template", "uom",
+	"condition_logic", "filter_json", "aggregate", "notes")
 
 
 def log(family, msg):
