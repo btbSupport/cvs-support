@@ -45999,7 +45999,7 @@
             {
               "field": "fuseLink",
               "operator": "eq",
-              "value": "DTOR 212/350F"
+              "value": "DTOR 212/250F"
             }
           ]
         },
@@ -46057,7 +46057,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229100"
+              "value": "229100-MS4604F1010/B"
             }
           ]
         },
@@ -46086,7 +46086,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229101"
+              "value": "229101-MS4604F1210/B"
             }
           ]
         },
@@ -46115,7 +46115,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229102"
+              "value": "229102-MS8104F1010/B"
             }
           ]
         },
@@ -46144,7 +46144,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229103"
+              "value": "229103-MS8104F1210/B"
             }
           ]
         },
@@ -46173,7 +46173,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229104"
+              "value": "229104-MS8109F1010/B"
             }
           ]
         },
@@ -46202,7 +46202,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229105"
+              "value": "229105-MS8109F1210/B"
             }
           ]
         },
@@ -46231,7 +46231,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229106"
+              "value": "229106-MS4609F1010/B"
             }
           ]
         },
@@ -46260,7 +46260,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229107"
+              "value": "229107-MS4609F1210/B"
             }
           ]
         },
@@ -46289,7 +46289,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229108"
+              "value": "229108-MS8120F1002/B"
             }
           ]
         },
@@ -46318,7 +46318,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229109"
+              "value": "229109-MS8120F1200/B"
             }
           ]
         },
@@ -46347,7 +46347,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229110"
+              "value": "229110-MS4620F1203/B"
             }
           ]
         },
@@ -46376,7 +46376,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229111"
+              "value": "229111-MS4620F1005/B"
             }
           ]
         },
@@ -46405,7 +46405,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "2290263"
+              "value": "2290263-FSLF230 US"
             }
           ]
         },
@@ -46434,7 +46434,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229090"
+              "value": "229090-FSLF230-S US"
             }
           ]
         },
@@ -46463,7 +46463,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "2290283"
+              "value": "2290283-FSLF24 US"
             }
           ]
         },
@@ -46492,7 +46492,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229091"
+              "value": "229091-FSLF24-S US"
             }
           ]
         },
@@ -46521,7 +46521,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "2290281"
+              "value": "2290281-FSNF24 US"
             }
           ]
         },
@@ -46550,7 +46550,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229088"
+              "value": "229088-FSNF24-S US"
             }
           ]
         },
@@ -46579,7 +46579,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "2290280"
+              "value": "2290280-FSNF230 US"
             }
           ]
         },
@@ -46608,7 +46608,7 @@
             {
               "field": "actuatorItemCode",
               "operator": "eq",
-              "value": "229089"
+              "value": "229089-FSNF230-S US"
             }
           ]
         },
