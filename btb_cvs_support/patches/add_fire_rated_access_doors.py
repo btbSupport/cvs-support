@@ -50,8 +50,13 @@ def execute():
 			if frappe.db.exists(rec["doctype"], rec["name"]):
 				done["items kept"] += 1
 			else:
-				frappe.get_doc(dict(site_uoms(dict(rec["doc"]), uoms), doctype=rec["doctype"])).insert(
+				item = frappe.get_doc(dict(site_uoms(dict(rec["doc"]), uoms), doctype=rec["doctype"])).insert(
 					set_name=rec["name"], ignore_permissions=True)
+				# Inserted under a fixed name, the item gets that name as item code too (SKU41, not FRAD) on
+				# sites that name items by series; the outputs are keyed by the product code, so set it back.
+				code = rec["doc"].get("item_code")
+				if code and item.item_code != code:
+					frappe.db.set_value("Item", item.name, "item_code", code, update_modified=False)
 				done["items created"] += 1
 		elif op == "insert":
 			doc = site_uoms(dict(rec["doc"]), uoms)
