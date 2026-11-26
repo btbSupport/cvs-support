@@ -106,7 +106,7 @@ def check_code(r):
 		fixtures = [l for l in changed if "/fixtures/" in l]
 		if fixtures:
 			r.add("STOP", "code", f"{app}: {len(fixtures)} uncommitted fixture files - discard them "
-				"(git checkout -- btb_cvs_support/fixtures) and pull again")
+				f"(in apps/{app}: git checkout -- {app}/fixtures) and pull again")
 		other = [l for l in changed if l not in fixtures and "/public/dist/" not in l]
 		if other:
 			r.add("WARN", "code", f"{app}: {len(other)} other uncommitted changes, e.g. {other[0].strip()}")

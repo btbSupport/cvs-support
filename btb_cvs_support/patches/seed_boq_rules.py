@@ -10,6 +10,7 @@ edits made in the UI (decision Q7). Each family has its own patch line (seed_boq
 """
 
 import json
+import os
 
 import frappe
 
@@ -26,7 +27,9 @@ def seed(family):
 	if frappe.db.count("BOQ Rule", {"product_family": family}):
 		log(family, "BOQ rules for this family already exist on this site - nothing seeded")
 		return
-	with open(frappe.get_app_path("btb_cvs_support", *DATA, f"{family}.json")) as f:
+	# os.path.join, not get_app_path(..., name): get_app_path lowercases every part, and the files are
+	# named in capitals (ULRD.json), which a case-sensitive filesystem does not find as ulrd.json.
+	with open(os.path.join(frappe.get_app_path("btb_cvs_support", *DATA), f"{family}.json")) as f:
 		rules = json.load(f)["rules"]
 	uoms = {u.lower(): u for u in frappe.get_all("UOM", pluck="name")}
 

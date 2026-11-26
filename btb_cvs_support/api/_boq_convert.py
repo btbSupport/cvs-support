@@ -40,12 +40,12 @@ COST = "FTOCountryWiseCost"
 
 
 def family_lines(family: str) -> List[Dict]:
-	with open(frappe.get_app_path("btb_cvs_support", "api", "boq_format.JSON")) as f:
+	with open(os.path.join(frappe.get_app_path("btb_cvs_support", "api"), "boq_format.JSON")) as f:
 		return json.load(f)[family]
 
 
 def overrides_for(family: str) -> List[Dict]:
-	path = frappe.get_app_path("btb_cvs_support", "patches", "boq_rules", f"{family}.overrides.json")
+	path = os.path.join(frappe.get_app_path("btb_cvs_support", "patches", "boq_rules"), f"{family}.overrides.json")
 	if(not os.path.exists(path)): return []
 	with open(path) as f:
 		return json.load(f)["overrides"]
