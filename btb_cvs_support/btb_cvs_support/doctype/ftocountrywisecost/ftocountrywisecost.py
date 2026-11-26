@@ -35,8 +35,12 @@ class FTOCountryWiseCost(Document):
 		with the doctype would stop those patches. Patches are let through here for the same reason, and
 		so is a site that has the code but has not migrated yet (one bench serves several sites).
 		"""
+		# Trim only a value being entered now. The field is set_only_once: rewriting a stored value -
+		# even None to "" on a row that never had one - counts as a change and stops the save.
+		before = self.get_doc_before_save()
+		if(self.boq_identifier and (not before or self.boq_identifier != before.boq_identifier)):
+			self.boq_identifier = self.boq_identifier.strip()
 		identifier = (self.boq_identifier or "").strip()
-		self.boq_identifier = identifier
 		if(not identifier):
 			if(frappe.flags.in_patch or not identifiers_live()): return
 			frappe.throw(_("BOQ Identifier is required: cost options show the row by it and rules name the row by it."),
