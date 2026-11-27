@@ -5573,16 +5573,6 @@
   {
    "op": "insert",
    "doctype": "BtbMappingConstraintEntry",
-   "name": "47uu137ek9",
-   "doc": {
-    "mapping_constraint": "47u2001njb",
-    "left": "FTI00076",
-    "right": "FTI00020"
-   }
-  },
-  {
-   "op": "insert",
-   "doctype": "BtbMappingConstraintEntry",
    "name": "47umhh8btt",
    "doc": {
     "mapping_constraint": "47u2001njb",
@@ -5618,16 +5608,6 @@
     "mapping_constraint": "47u2001njb",
     "left": "FTI00078",
     "right": "FTI00019"
-   }
-  },
-  {
-   "op": "insert",
-   "doctype": "BtbMappingConstraintEntry",
-   "name": "47vi66brdu",
-   "doc": {
-    "mapping_constraint": "47u2001njb",
-    "left": "FTI00078",
-    "right": "FTI00020"
    }
   },
   {
@@ -5673,16 +5653,6 @@
   {
    "op": "insert",
    "doctype": "BtbMappingConstraintEntry",
-   "name": "47vrrlolr4",
-   "doc": {
-    "mapping_constraint": "47u2001njb",
-    "left": "FTI00079",
-    "right": "FTI00020"
-   }
-  },
-  {
-   "op": "insert",
-   "doctype": "BtbMappingConstraintEntry",
    "name": "47v2kcaaut",
    "doc": {
     "mapping_constraint": "47u2001njb",
@@ -5718,16 +5688,6 @@
     "mapping_constraint": "47u2001njb",
     "left": "FTI00080",
     "right": "FTI00019"
-   }
-  },
-  {
-   "op": "insert",
-   "doctype": "BtbMappingConstraintEntry",
-   "name": "47v36j925l",
-   "doc": {
-    "mapping_constraint": "47u2001njb",
-    "left": "FTI00080",
-    "right": "FTI00020"
    }
   },
   {
@@ -5773,16 +5733,6 @@
   {
    "op": "insert",
    "doctype": "BtbMappingConstraintEntry",
-   "name": "47vtdonr98",
-   "doc": {
-    "mapping_constraint": "47u2001njb",
-    "left": "FTI00082",
-    "right": "FTI00020"
-   }
-  },
-  {
-   "op": "insert",
-   "doctype": "BtbMappingConstraintEntry",
    "name": "47vs4d0bo5",
    "doc": {
     "mapping_constraint": "47u2001njb",
@@ -5818,16 +5768,6 @@
     "mapping_constraint": "47u2001njb",
     "left": "FTI00083",
     "right": "FTI00019"
-   }
-  },
-  {
-   "op": "insert",
-   "doctype": "BtbMappingConstraintEntry",
-   "name": "47v2a2co57",
-   "doc": {
-    "mapping_constraint": "47u2001njb",
-    "left": "FTI00083",
-    "right": "FTI00020"
    }
   },
   {

@@ -29,6 +29,7 @@ RELEASE_PATCHES = [
 	"btb_cvs_support.patches.fix_onecpq_bundle_rule_drift",
 	"btb_cvs_support.patches.add_fire_rated_access_doors",
 	"btb_cvs_support.patches.fix_frad_item_code",
+	"btb_cvs_support.patches.frad_no_5mm_frame_rapi_rapb",
 	"btb_cvs_support.patches.fto_boq_identifiers",
 	"btb_cvs_support.patches.fix_cart_sleeve_length_inch",
 	"btb_cvs_support.patches.seed_boq_rules_ulrd",
