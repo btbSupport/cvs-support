@@ -38,6 +38,7 @@ RELEASE_PATCHES = [
 	"btb_cvs_support.patches.seed_boq_rules_cfd",
 	"btb_cvs_support.patches.seed_boq_rules_msfd",
 	"btb_cvs_support.patches.seed_boq_rules_vcda",
+	"btb_cvs_support.patches.cfd_spring_costs",
 ]
 SITE_COUNTRY = {"cvsuae": "UAE", "cvsqatar": "Qatar", "cvsksa": "KSA", "badregypt": "Egypt"}
 PLAN_OF_COUNTRY = {"UAE": "cvsuae", "Qatar": "cvsqatar", "KSA": "cvsksa", "Egypt": "badregypt"}
@@ -67,6 +68,7 @@ def run():
 		survivors = check_cost_rows(r, country)
 		check_identifiers(r)
 		check_final_prices(r, country, survivors)
+		check_springs(r)
 	check_backup(r)
 	info(r)
 
@@ -203,6 +205,34 @@ def check_final_prices(r, country, survivors):
 		r.add("STOP", "final prices", f"rows with a final cost would not exist after the cleanup: {', '.join(lost)}")
 	else:
 		r.add("GO", "final prices", f"{len(rows)} final costs for {country}, all rows survive the cleanup")
+
+
+def check_springs(r):
+	"""cfd_spring_costs: the spring rows and CFD actions it changes are as planned, the names it creates are free."""
+	from btb_cvs_support.patches import cfd_spring_costs as p
+	if not frappe.db.exists("BtbFeature", p.SPRINGS_FEATURE):
+		r.add("INFO", "springs", "no Curtain Fire Dampers springs on this site: cfd_spring_costs has nothing to do")
+		return
+	labels = dict(frappe.db.sql(f"select name, custom_label from `tab{p.SPRING}`"))
+	wrong = [f"{n}: {labels.get(n)!r} (expected {label!r})" for n, label, _c, _r, _o in p.ROWS if labels.get(n) != label]
+	taken = [n for _s, _l, _c, row, option in p.ROWS for dt, n in ((COST, row), ("BtbFeatureTypeItem", option))
+		if frappe.db.exists(dt, n)]
+	taken += [n for dt, n in (("BtbFeature", p.FEATURE), ("BtbImplementationConstraintAction", p.ACTION)) if frappe.db.exists(dt, n)]
+	taken += frappe.get_all(COST, {"boq_identifier": ["like", "% (Spring)"]}, pluck="name")
+	cost = frappe.db.get_value("BtbImplementationConstraintAction", p.SPRINGS_COST, ["formula", "sequence"], as_dict=True)
+	pick = frappe.db.get_value("BtbImplementationConstraintAction", p.PICK, ["implementation_constraint", "sequence"])
+	seq_taken = frappe.db.get_value("BtbImplementationConstraintAction",
+		{"implementation_constraint": p.RULE, "sequence": p.NEW_SEQ, "name": ("!=", p.SPRINGS_COST)})
+	actions_ok = (cost and (cost.formula or "").count(p.OLD_COST_READ) == 1 and tuple(pick or ()) == (p.RULE, p.PICK_SEQ)
+		and not seq_taken)
+	if wrong:
+		r.add("STOP", "springs", f"spring rows differ from the plan: {'; '.join(wrong[:5])}")
+	if taken:
+		r.add("STOP", "springs", f"names or identifiers cfd_spring_costs creates exist already: {', '.join(taken[:10])}")
+	if not actions_ok:
+		r.add("STOP", "springs", f"CFD spring actions differ from the plan (4880 at {pick}, 4682 {cost}, sequence 48 taken by {seq_taken})")
+	if not (wrong or taken or not actions_ok):
+		r.add("GO", "springs", f"{len(p.ROWS)} spring rows as planned; their cost rows, options and the springCost feature are free to create")
 
 
 def check_backup(r):

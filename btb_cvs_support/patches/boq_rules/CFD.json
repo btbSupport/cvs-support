@@ -1,5 +1,5 @@
 {
- "_about": "BOQ Rules of Curtain Fire Dampers (CFD, BUN7), made by api/_boq_convert.py from boq_format.JSON (145 lines -> 30 rules) on 2026-11-25 and checked on the carts of all four sites (same quantities and order). Seeded once by patches/seed_boq_rules_cfd.py.",
+ "_about": "BOQ Rules of Curtain Fire Dampers (CFD, BUN7), made by api/_boq_convert.py from boq_format.JSON (145 lines -> 30 rules) on 2026-11-25 and checked on the carts of all four sites (same quantities and order). Seeded once by patches/seed_boq_rules_cfd.py. Springs: the 12 spring rules became one Sourced rule on the spring's cost row (2026-11-27, CFD.overrides.json); later rules keep their sequence.",
  "family": "CFD",
  "bundle": "BUN7",
  "rules": [
@@ -342,274 +342,26 @@
   },
   {
    "sequence": 190,
-   "source_type": "Templated",
+   "source_type": "Sourced",
    "condition_logic": "and",
    "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
-   "uom": "Ea",
-   "conditions": [
-    {
-     "field": "springs",
-     "operator": "eq",
-     "value": "H10J14"
-    }
-   ],
-   "dimensions": [],
-   "identifier_literal": "2290225",
-   "description_template": "H10J14",
-   "notes": "1 JSON lines | replaces JSON: 2290225"
-  },
-  {
-   "sequence": 200,
-   "source_type": "Templated",
-   "condition_logic": "and",
-   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
-   "uom": "Ea",
-   "conditions": [
-    {
-     "field": "springs",
-     "operator": "eq",
-     "value": "H10J26"
-    }
-   ],
-   "dimensions": [],
-   "identifier_literal": "2290226",
-   "description_template": "H10J26",
-   "notes": "1 JSON lines | replaces JSON: 2290226"
-  },
-  {
-   "sequence": 210,
-   "source_type": "Templated",
-   "condition_logic": "and",
-   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
-   "uom": "Ea",
-   "conditions": [
-    {
-     "field": "springs",
-     "operator": "eq",
-     "value": "H10J36"
-    }
-   ],
-   "dimensions": [],
-   "identifier_literal": "2290227",
-   "description_template": "H10J36",
-   "notes": "1 JSON lines | replaces JSON: 2290227"
-  },
-  {
-   "sequence": 220,
-   "source_type": "Templated",
-   "condition_logic": "and",
-   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
-   "uom": "Ea",
-   "conditions": [
-    {
-     "field": "springs",
-     "operator": "eq",
-     "value": "H10J42"
-    }
-   ],
-   "dimensions": [],
-   "identifier_literal": "2290228",
-   "description_template": "H10J42",
-   "notes": "1 JSON lines | replaces JSON: 2290228"
-  },
-  {
-   "sequence": 230,
-   "source_type": "Templated",
-   "condition_logic": "and",
-   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
-   "uom": "Ea",
-   "conditions": [
-    {
-     "field": "springs",
-     "operator": "eq",
-     "value": "H12J50"
-    }
-   ],
-   "dimensions": [],
-   "identifier_literal": "2290229",
-   "description_template": "H12J50",
-   "notes": "1 JSON lines | replaces JSON: 2290229"
-  },
-  {
-   "sequence": 240,
-   "source_type": "Templated",
-   "condition_logic": "and",
-   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
-   "uom": "Ea",
-   "conditions": [
-    {
-     "field": "springs",
-     "operator": "eq",
-     "value": "H12K14"
-    }
-   ],
-   "dimensions": [],
-   "identifier_literal": "2290222",
-   "description_template": "H12K14",
-   "notes": "1 JSON lines | replaces JSON: 2290222"
-  },
-  {
-   "sequence": 250,
-   "source_type": "Templated",
-   "condition_logic": "and",
-   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
-   "uom": "Ea",
-   "conditions": [
-    {
-     "field": "springs",
-     "operator": "eq",
-     "value": "H12K26"
-    }
-   ],
-   "dimensions": [],
-   "identifier_literal": "2290223",
-   "description_template": "H12K26",
-   "notes": "1 JSON lines | replaces JSON: 2290223"
-  },
-  {
-   "sequence": 260,
-   "source_type": "Templated",
-   "condition_logic": "and",
-   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
-   "uom": "Ea",
-   "conditions": [
-    {
-     "field": "springs",
-     "operator": "eq",
-     "value": "H12K36"
-    }
-   ],
-   "dimensions": [],
-   "identifier_literal": "2290224",
-   "description_template": "H12K36",
-   "notes": "1 JSON lines | replaces JSON: 2290224"
-  },
-  {
-   "sequence": 270,
-   "source_type": "Templated",
-   "condition_logic": "and",
-   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
-   "uom": "Ea",
-   "conditions": [
-    {
-     "field": "springs",
-     "operator": "eq",
-     "value": "H12P14"
-    }
-   ],
-   "dimensions": [],
-   "identifier_literal": "2290230",
-   "description_template": "H12P14",
-   "notes": "1 JSON lines | replaces JSON: 2290230"
-  },
-  {
-   "sequence": 280,
-   "source_type": "Templated",
-   "condition_logic": "and",
-   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
-   "uom": "Ea",
-   "conditions": [
-    {
-     "field": "springs",
-     "operator": "eq",
-     "value": "H12P26"
-    }
-   ],
-   "dimensions": [],
-   "identifier_literal": "2290231",
-   "description_template": "H12P26",
-   "notes": "1 JSON lines | replaces JSON: 2290231"
-  },
-  {
-   "sequence": 290,
-   "source_type": "Templated",
-   "condition_logic": "and",
-   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
-   "uom": "Ea",
-   "conditions": [
-    {
-     "field": "springs",
-     "operator": "eq",
-     "value": "H12P36"
-    }
-   ],
-   "dimensions": [],
-   "identifier_literal": "2290232",
-   "description_template": "H12P36",
-   "notes": "1 JSON lines | replaces JSON: 2290232"
-  },
-  {
-   "sequence": 300,
-   "source_type": "Templated",
-   "condition_logic": "and",
-   "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
-   "uom": "Ea",
+   "uom": null,
    "conditions": [
     {
      "field": "springs",
      "operator": "neq",
-     "value": "H10J14"
-    },
-    {
-     "field": "springs",
-     "operator": "neq",
-     "value": "H10J26"
-    },
-    {
-     "field": "springs",
-     "operator": "neq",
-     "value": "H10J36"
-    },
-    {
-     "field": "springs",
-     "operator": "neq",
-     "value": "H10J42"
-    },
-    {
-     "field": "springs",
-     "operator": "neq",
-     "value": "H12J50"
-    },
-    {
-     "field": "springs",
-     "operator": "neq",
-     "value": "H12K14"
-    },
-    {
-     "field": "springs",
-     "operator": "neq",
-     "value": "H12K26"
-    },
-    {
-     "field": "springs",
-     "operator": "neq",
-     "value": "H12K36"
-    },
-    {
-     "field": "springs",
-     "operator": "neq",
-     "value": "H12P14"
-    },
-    {
-     "field": "springs",
-     "operator": "neq",
-     "value": "H12P26"
-    },
-    {
-     "field": "springs",
-     "operator": "neq",
-     "value": "H12P36"
+     "value": "NA"
     }
    ],
    "dimensions": [
     {
      "field": "springs",
      "value_format": "As is",
-     "value_order": "VSpring1,VSpring2,VSpring3,VSpring4,VSpring5,VSpring6"
+     "value_order": "H10J14,H10J26,H10J36,H10J42,H12J50,H12K14,H12K26,H12K36,H12P14,H12P26,H12P36,VSpring1,VSpring2,VSpring3,VSpring4,VSpring5,VSpring6"
     }
    ],
-   "identifier_template": "{springs}",
-   "notes": "6 JSON lines | replaces JSON: VSpring1, VSpring2, VSpring3, VSpring4, VSpring5, VSpring6"
+   "identifier_template": "{springs} (Spring)",
+   "notes": "17 JSON lines; item code, name and unit from the spring's cost row | replaces JSON: 2290225-2290232, VSpring1-VSpring6"
   }
  ]
 }

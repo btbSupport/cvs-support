@@ -30,3 +30,4 @@ btb_cvs_support.patches.seed_boq_rules_vcdr
 btb_cvs_support.patches.seed_boq_rules_cfd
 btb_cvs_support.patches.seed_boq_rules_msfd
 btb_cvs_support.patches.seed_boq_rules_vcda
+btb_cvs_support.patches.cfd_spring_costs

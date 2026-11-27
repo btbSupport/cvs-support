@@ -1,0 +1,47 @@
+{
+ "_about": "Hand-written CFD rules for JSON lines no generated shape expresses (read by api/_boq_convert.py). Springs (decided 2026-11-27, S7): the 17 spring lines (11 H springs with their item codes, VSpring1-6) are one Sourced rule on the spring's cost row '<label> (Spring)', so item code, name and unit come from the cost table; NA prints no line, as in the JSON.",
+ "overrides": [
+  {
+   "lines": [
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144
+   ],
+   "rule": {
+    "source_type": "Sourced",
+    "identifier_template": "{springs} (Spring)",
+    "uom": null,
+    "aggregate": "{\"aggregate\": [{\"fields\": [\"noofSprings\", \"cartQty\"], \"logic\": \"MUL\"}], \"logic\": \"SUM\"}",
+    "conditions": [
+     {
+      "field": "springs",
+      "operator": "neq",
+      "value": "NA"
+     }
+    ],
+    "dimensions": [
+     {
+      "field": "springs",
+      "value_format": "As is",
+      "value_order": "H10J14,H10J26,H10J36,H10J42,H12J50,H12K14,H12K26,H12K36,H12P14,H12P26,H12P36,VSpring1,VSpring2,VSpring3,VSpring4,VSpring5,VSpring6"
+     }
+    ],
+    "notes": "17 JSON lines; item code, name and unit from the spring's cost row | replaces JSON: 2290225-2290232, VSpring1-VSpring6"
+   }
+  }
+ ]
+}

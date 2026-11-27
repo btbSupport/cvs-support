@@ -1,35 +1,11 @@
-"""Replaces the Cost Type 'Country Specific-Currency' on FTOCountryWiseCost with
-'Country Specific'.
+"""Kept as a no-op (decision 2026-11-27): Cost Type 'Country Specific-Currency' is a valid option again.
 
-'Country Specific-Currency' is not one of the field's options (Country Specific,
-% of UAE), so every row carrying it failed validation and could not be saved
-from the form. Nothing reads the value - no feature type, constraint or code -
-so the rows simply take the listed option they mean.
-
-Runs before fto_cost_fill_blank_item_code so those rows can be saved normally
-there. Each row is saved as a document so the change lands in its Version
-history. Idempotent.
+This patch used to rewrite 'Country Specific-Currency' to 'Country Specific', because the field listed only
+Country Specific and % of UAE and such rows could not be saved. The field now lists all three values
+(Country Specific, Country Specific-Currency, % of UAE), so the rows keep what they say. The patch stays in
+patches.txt so sites that ran it and sites that haven't share one patch list.
 """
-
-import frappe
-
-OLD, NEW = "Country Specific-Currency", "Country Specific"
 
 
 def execute():
-	names = frappe.get_all("FTOCountryWiseCost", filters={"custom_cost_type": OLD}, pluck="name")
-	changed, failed = 0, []
-	for name in names:
-		try:
-			doc = frappe.get_doc("FTOCountryWiseCost", name)
-			doc.custom_cost_type = NEW
-			doc.flags.ignore_links = True
-			doc.flags.ignore_permissions = True
-			doc.save()
-			changed += 1
-		except Exception as e:
-			failed.append((name, str(e)))
-
-	print(f"FTOCountryWiseCost: Cost Type set to {NEW!r} on {changed} row(s)")
-	for name, error in failed:
-		print(f"  NOT CHANGED {name}: {error}")
+	print("FTOCountryWiseCost: Cost Type 'Country Specific-Currency' is an option again - no rows changed")
